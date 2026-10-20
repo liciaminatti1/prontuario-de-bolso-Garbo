@@ -1,0 +1,16 @@
+{
+  "name": "Prontuário de Bolso",
+  "short_name": "Prontuário",
+  "description": "Fichas clínicas de raciocínio rápido para UBS e Pronto-Socorro.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7f6",
+  "theme_color": "#0b6e55",
+  "icons": [
+    { "src": "icons/icone.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "icons/icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icone-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

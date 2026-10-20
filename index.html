@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Prontuário de Bolso</title>
+  <meta name="description" content="Fichas clínicas de raciocínio rápido para UBS e Pronto-Socorro.">
+  <meta name="theme-color" content="#0b6e55">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icone.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icone-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@500;600&display=swap">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Prontuário de Bolso <small>Raciocínio rápido · UBS e Pronto-Socorro</small></h1>
+      </div>
+      <div class="paths" role="group" aria-label="Caminho de atendimento">
+        <button class="path" data-p="todos" aria-pressed="true" id="p-todos"><i class="dot"></i>Todos</button>
+        <button class="path" data-p="ubs" aria-pressed="false" id="p-ubs"><i class="dot"></i>UBS / APS</button>
+        <button class="path" data-p="ps" aria-pressed="false" id="p-ps"><i class="dot"></i>PS / Emergência</button>
+      </div>
+      <input class="search" id="q" type="search" placeholder="Buscar queixa, diagnóstico ou droga (ex.: dor torácica, adrenalina)" autocomplete="off">
+    </div>
+  </header>
+
+  <main class="wrap" id="app"><p class="empty">Carregando fichas…</p></main>
+
+  <!-- 1. Registro (precisa vir antes das fichas) -->
+  <script src="js/registro.js"></script>
+
+  <!-- 2. Fichas: uma por arquivo. Para criar uma nova, copie fichas/_modelo.js e adicione a linha aqui. -->
+  <script src="fichas/ps/sca.js"></script>
+  <script src="fichas/ps/sepse.js"></script>
+  <script src="fichas/ps/avc.js"></script>
+  <script src="fichas/ps/anafilaxia.js"></script>
+  <script src="fichas/ps/asma-ps.js"></script>
+  <script src="fichas/ps/has-emerg.js"></script>
+  <script src="fichas/ubs/dor-toracica-ubs.js"></script>
+  <script src="fichas/ubs/has-ubs.js"></script>
+  <script src="fichas/ubs/dengue.js"></script>
+  <script src="fichas/ubs/cistite.js"></script>
+  <script src="fichas/ubs/asma-ubs.js"></script>
+
+  <!-- 3. Aplicação -->
+  <script src="js/app.js"></script>
+</body>
+</html>
