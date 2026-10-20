@@ -1,6 +1,7 @@
 // Dor torácica na UBS
 registrarFicha({
   id: "dor-toracica-ubs",
+  especialidade: "cardiologia",
   caminho: "ubs",
   titulo: "Dor torácica na UBS",
   resumo: "Paciente com dor torácica na unidade. O papel da UBS é reconhecer, iniciar a primeira conduta e transferir.",

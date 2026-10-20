@@ -1,6 +1,7 @@
 // Crise de asma no adulto
 registrarFicha({
   id: "asma-ps",
+  especialidade: "pneumologia",
   caminho: "ps",
   titulo: "Crise de asma no adulto",
   resumo: "Dispneia, sibilância, tosse e aperto torácico em asmático conhecido ou com padrão compatível.",

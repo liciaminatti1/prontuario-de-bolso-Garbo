@@ -1,6 +1,7 @@
 // Infecção urinária baixa (cistite)
 registrarFicha({
   id: "cistite",
+  especialidade: "infectologia",
   caminho: "ubs",
   titulo: "Infecção urinária baixa (cistite)",
   resumo: "Disúria, polaciúria, urgência e dor suprapúbica, sem febre ou dor lombar, em mulher não gestante.",

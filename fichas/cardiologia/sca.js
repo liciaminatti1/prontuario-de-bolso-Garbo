@@ -1,6 +1,7 @@
 // Dor torácica / Síndrome coronariana aguda
 registrarFicha({
   id: "sca",
+  especialidade: "cardiologia",
   caminho: "ps",
   titulo: "Dor torácica / Síndrome coronariana aguda",
   resumo: "Dor ou desconforto torácico, epigástrico, em mandíbula ou membro superior; equivalentes anginosos (dispneia, síncope, sudorese).",

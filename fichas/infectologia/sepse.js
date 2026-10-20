@@ -1,6 +1,7 @@
 // Sepse e choque séptico
 registrarFicha({
   id: "sepse",
+  especialidade: "infectologia",
   caminho: "ps",
   titulo: "Sepse e choque séptico",
   resumo: "Infecção suspeita com disfunção orgânica. Reconhecer cedo e iniciar o pacote da 1ª hora.",

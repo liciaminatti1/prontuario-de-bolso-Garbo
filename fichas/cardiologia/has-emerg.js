@@ -1,6 +1,7 @@
 // Crise hipertensiva
 registrarFicha({
   id: "has-emerg",
+  especialidade: "cardiologia",
   caminho: "ps",
   titulo: "Crise hipertensiva",
   resumo: "PA ≥ 180/120 mmHg. A conduta depende de haver ou não lesão aguda de órgão-alvo.",

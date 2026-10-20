@@ -1,8 +1,9 @@
-// MODELO DE FICHA — copie este arquivo para fichas/ps/ ou fichas/ubs/, renomeie
-// (ex.: fichas/ps/cetoacidose.js), preencha e adicione uma linha <script> no index.html.
-// Depois rode: node ferramentas/validar.js
+// MODELO DE FICHA — copie este arquivo para a pasta da especialidade
+// (ex.: fichas/neurologia/vertigem.js). O nome do arquivo deve ser igual ao id.
+// Depois rode:  node ferramentas/gerar-indice.js   e   node ferramentas/validar.js
 registrarFicha({
   id: "nome-da-ficha",            // só minúsculas, números e hífen; vira o link (#nome-da-ficha)
+  especialidade: "neurologia",     // nome da pasta (lista em js/registro.js)
   caminho: "ps",                   // "ps" (Pronto-Socorro/Emergência) ou "ubs" (UBS/APS)
   titulo: "Nome da queixa ou síndrome",
   resumo: "Uma ou duas frases que definem quando usar esta ficha.",

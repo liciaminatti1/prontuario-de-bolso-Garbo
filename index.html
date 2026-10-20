@@ -25,6 +25,7 @@
         <button class="path" data-p="ubs" aria-pressed="false" id="p-ubs"><i class="dot"></i>UBS / APS</button>
         <button class="path" data-p="ps" aria-pressed="false" id="p-ps"><i class="dot"></i>PS / Emergência</button>
       </div>
+      <div class="esp" id="esp" role="group" aria-label="Especialidade"></div>
       <input class="search" id="q" type="search" placeholder="Buscar queixa, diagnóstico ou droga (ex.: dor torácica, adrenalina)" autocomplete="off">
     </div>
   </header>
@@ -34,18 +35,55 @@
   <!-- 1. Registro (precisa vir antes das fichas) -->
   <script src="js/registro.js"></script>
 
-  <!-- 2. Fichas: uma por arquivo. Para criar uma nova, copie fichas/_modelo.js e adicione a linha aqui. -->
-  <script src="fichas/ps/sca.js"></script>
-  <script src="fichas/ps/sepse.js"></script>
-  <script src="fichas/ps/avc.js"></script>
-  <script src="fichas/ps/anafilaxia.js"></script>
-  <script src="fichas/ps/asma-ps.js"></script>
-  <script src="fichas/ps/has-emerg.js"></script>
-  <script src="fichas/ubs/dor-toracica-ubs.js"></script>
-  <script src="fichas/ubs/has-ubs.js"></script>
-  <script src="fichas/ubs/dengue.js"></script>
-  <script src="fichas/ubs/cistite.js"></script>
-  <script src="fichas/ubs/asma-ubs.js"></script>
+  <!-- 2. Fichas: geradas por "node ferramentas/gerar-indice.js". Não edite à mão entre os marcadores. -->
+  <!-- FICHAS:INICIO -->
+  <!-- Cardiologia -->
+  <script src="fichas/cardiologia/dislipidemia.js"></script>
+  <script src="fichas/cardiologia/dor-toracica-ubs.js"></script>
+  <script src="fichas/cardiologia/fibrilacao-atrial.js"></script>
+  <script src="fichas/cardiologia/has-emerg.js"></script>
+  <script src="fichas/cardiologia/has-ubs.js"></script>
+  <script src="fichas/cardiologia/ic-descompensada.js"></script>
+  <script src="fichas/cardiologia/sca.js"></script>
+  <!-- Pneumologia -->
+  <script src="fichas/pneumologia/asma-ps.js"></script>
+  <script src="fichas/pneumologia/asma-ubs.js"></script>
+  <script src="fichas/pneumologia/dpoc.js"></script>
+  <script src="fichas/pneumologia/pneumonia.js"></script>
+  <script src="fichas/pneumologia/tep.js"></script>
+  <!-- Neurologia -->
+  <script src="fichas/neurologia/avc.js"></script>
+  <script src="fichas/neurologia/cefaleia-ps.js"></script>
+  <script src="fichas/neurologia/convulsao.js"></script>
+  <script src="fichas/neurologia/enxaqueca.js"></script>
+  <!-- Infectologia -->
+  <script src="fichas/infectologia/cistite.js"></script>
+  <script src="fichas/infectologia/dengue.js"></script>
+  <script src="fichas/infectologia/ivas-sinusite.js"></script>
+  <script src="fichas/infectologia/sepse.js"></script>
+  <!-- Endócrino e metabólico -->
+  <script src="fichas/endocrinologia/cetoacidose.js"></script>
+  <script src="fichas/endocrinologia/diabetes-tipo-2.js"></script>
+  <script src="fichas/endocrinologia/hipercalemia.js"></script>
+  <script src="fichas/endocrinologia/hipoglicemia.js"></script>
+  <script src="fichas/endocrinologia/hipotireoidismo.js"></script>
+  <!-- Pediatria -->
+  <script src="fichas/pediatria/bronquiolite.js"></script>
+  <script src="fichas/pediatria/diarreia-desidratacao.js"></script>
+  <script src="fichas/pediatria/febre-lactente.js"></script>
+  <script src="fichas/pediatria/otite-media.js"></script>
+  <!-- Dermatologia -->
+  <script src="fichas/dermatologia/celulite-erisipela.js"></script>
+  <script src="fichas/dermatologia/escabiose.js"></script>
+  <!-- Saúde mental -->
+  <script src="fichas/saude-mental/depressao-ansiedade.js"></script>
+  <!-- Musculoesquelético -->
+  <script src="fichas/musculoesqueletico/lombalgia.js"></script>
+  <!-- Trauma -->
+  <script src="fichas/trauma/tce-leve.js"></script>
+  <!-- Alergia e imunologia -->
+  <script src="fichas/alergia/anafilaxia.js"></script>
+  <!-- FICHAS:FIM -->
 
   <!-- 3. Aplicação -->
   <script src="js/app.js"></script>

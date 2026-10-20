@@ -1,6 +1,7 @@
 // AVC agudo / déficit neurológico súbito
 registrarFicha({
   id: "avc",
+  especialidade: "neurologia",
   caminho: "ps",
   titulo: "AVC agudo / déficit neurológico súbito",
   resumo: "Déficit focal súbito: fraqueza ou dormência unilateral, desvio de rima, alteração de fala ou visão, ataxia.",

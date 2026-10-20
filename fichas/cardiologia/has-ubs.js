@@ -1,6 +1,7 @@
 // Hipertensão arterial
 registrarFicha({
   id: "has-ubs",
+  especialidade: "cardiologia",
   caminho: "ubs",
   titulo: "Hipertensão arterial",
   resumo: "Diagnóstico, estratificação de risco, início e ajuste do tratamento na atenção primária.",

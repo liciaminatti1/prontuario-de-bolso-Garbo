@@ -1,6 +1,7 @@
 // Dengue
 registrarFicha({
   id: "dengue",
+  especialidade: "infectologia",
   caminho: "ubs",
   titulo: "Dengue",
   resumo: "Febre aguda (2–7 dias) com 2 ou mais de: náusea/vômito, exantema, mialgia/artralgia, cefaleia/dor retro-orbital, petéquias ou prova do laço positiva, leucopenia.",

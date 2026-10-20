@@ -1,6 +1,7 @@
 // Anafilaxia
 registrarFicha({
   id: "anafilaxia",
+  especialidade: "alergia",
   caminho: "ps",
   titulo: "Anafilaxia",
   resumo: "Reação alérgica grave de início rápido envolvendo pele/mucosas com comprometimento respiratório, cardiovascular ou gastrointestinal.",

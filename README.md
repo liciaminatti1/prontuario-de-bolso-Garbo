@@ -19,13 +19,17 @@ Cada ficha tem duas experiências:
 prontuario-de-bolso/
 ├── index.html              Página única; carrega o registro, as fichas e o app
 ├── css/estilo.css          Visual (tema claro e escuro, layout de celular)
-├── js/registro.js          registrarFicha() e validação dos campos
+├── js/registro.js          Lista de especialidades, registrarFicha() e validação
 ├── js/app.js               Interface: lista, vista rápida, ficha completa, busca
 ├── fichas/
 │   ├── _modelo.js          Modelo comentado para criar uma ficha nova
-│   ├── ps/                 Fichas do Pronto-Socorro (uma por arquivo)
-│   └── ubs/                Fichas da UBS / APS
-├── ferramentas/validar.js  Confere as fichas antes de publicar (Node.js)
+│   ├── cardiologia/        Uma pasta por especialidade, uma ficha por arquivo
+│   ├── pneumologia/
+│   ├── neurologia/
+│   └── ...                 (11 especialidades — ver tabela abaixo)
+├── ferramentas/
+│   ├── gerar-indice.js     Atualiza a lista de fichas no index.html
+│   └── validar.js          Confere as fichas antes de publicar (Node.js)
 ├── sw.js                   Service worker (uso offline)
 ├── manifest.webmanifest    Instalação como app (PWA)
 └── icons/                  Ícones do app
@@ -65,34 +69,47 @@ O endereço precisa ser **HTTPS** (todos esses são) para o modo offline e a ins
 
 ## Criar ou editar uma ficha
 
-1. Copie `fichas/_modelo.js` para `fichas/ps/` ou `fichas/ubs/` com um nome curto, por exemplo `fichas/ps/cetoacidose.js`.
-2. Preencha os campos. O `id` vira o link direto da ficha (`.../#cetoacidose`).
-3. Adicione a linha no `index.html`, junto das outras fichas:
-   ```html
-   <script src="fichas/ps/cetoacidose.js"></script>
-   ```
-4. Confira:
+As fichas ficam em pastas por especialidade (`fichas/cardiologia/`, `fichas/pediatria/`...).
+Cada ficha também diz se é do caminho **UBS** ou **PS** (campo `caminho`). No app, os dois filtros se combinam.
+
+1. Copie `fichas/_modelo.js` para a pasta da especialidade com o nome igual ao `id`, por exemplo `fichas/neurologia/vertigem.js`.
+2. Preencha os campos. O `id` vira o link direto da ficha (`.../#vertigem`).
+3. Atualize a lista de fichas do `index.html` e confira:
    ```bash
+   node ferramentas/gerar-indice.js
    node ferramentas/validar.js
    ```
-   Ele aponta campo faltando, id repetido, ficha fora do `index.html` e revisões com mais de 12 meses.
-5. Ao alterar conteúdo clínico, atualize `revisao` (AAAA-MM-DD) e aumente `versao`. As duas aparecem no topo da ficha e na aba Fontes.
+   O validador aponta campo faltando, id repetido, pasta diferente da especialidade, ficha fora do `index.html` e revisões com mais de 12 meses.
+4. Ao alterar conteúdo clínico, atualize `revisao` (AAAA-MM-DD) e aumente `versao`. As duas aparecem no topo da ficha e na aba Fontes.
 
 No campo `linha` de cada tratamento use: `l1` (1ª escolha), `alt` (alternativa), `adj` (adjuvante) ou `ci` (não usar).
 Os 4 primeiros tratamentos `l1` aparecem como "Doses de 1ª linha" na vista rápida.
 
 Uma ficha com campo faltando **não quebra o sistema**: ela é ignorada e o erro aparece no console do navegador (F12).
 
-## Fichas incluídas (versão 1.0, revisão 20/10/2026)
+### Criar uma especialidade nova
 
-| PS / Emergência | UBS / APS |
-|---|---|
-| Dor torácica / SCA | Dor torácica na UBS |
-| Sepse e choque séptico | Hipertensão arterial |
-| AVC agudo | Dengue (grupos A–D) |
-| Anafilaxia | Cistite |
-| Crise de asma no adulto | Crise de asma na UBS |
-| Crise hipertensiva | |
+1. Crie a pasta, por exemplo `fichas/ginecologia/`.
+2. Acrescente uma linha em `ESPECIALIDADES` no `js/registro.js`: `"ginecologia": "Ginecologia e obstetrícia",`
+3. Rode `node ferramentas/gerar-indice.js`.
+
+## Fichas incluídas (revisão 20/10/2026)
+
+| Especialidade | PS / Emergência | UBS / APS |
+|---|---|---|
+| Cardiologia | Dor torácica / SCA · Crise hipertensiva · IC descompensada / EAP · Fibrilação atrial | Dor torácica na UBS · Hipertensão arterial · Dislipidemia |
+| Pneumologia | Crise de asma no adulto · TEP · Pneumonia comunitária | Crise de asma na UBS · DPOC |
+| Neurologia | AVC agudo · Crise convulsiva / estado de mal · Cefaleia no PS | Enxaqueca e cefaleia tensional |
+| Infectologia | Sepse e choque séptico | Dengue · Cistite · IVAS (resfriado, faringite, sinusite) |
+| Endócrino e metabólico | Cetoacidose diabética · Hipoglicemia · Hipercalemia | Diabetes tipo 2 · Hipotireoidismo |
+| Pediatria | Febre sem foco no lactente · Bronquiolite | Diarreia e desidratação · Otite média aguda |
+| Dermatologia | — | Celulite e erisipela · Escabiose |
+| Saúde mental | — | Depressão e ansiedade |
+| Musculoesquelético | — | Lombalgia aguda |
+| Trauma | TCE leve | — |
+| Alergia e imunologia | Anafilaxia | — |
+
+**35 fichas** · 18 PS · 17 UBS
 
 ## Fluxo sugerido de revisão de conteúdo
 

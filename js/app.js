@@ -4,8 +4,12 @@
 
 const $app = document.getElementById("app");
 const $busca = document.getElementById("q");
-const estado = { caminho: "todos", busca: "" };
-try { estado.caminho = localStorage.getItem("pb-caminho") || "todos"; } catch (e) {}
+const $esp = document.getElementById("esp");
+const estado = { caminho: "todos", especialidade: "todas", busca: "" };
+try {
+  estado.caminho = localStorage.getItem("pb-caminho") || "todos";
+  estado.especialidade = localStorage.getItem("pb-especialidade") || "todas";
+} catch (e) {}
 
 const NOME_CAMINHO = { ubs: "UBS / APS", ps: "PS / Emergência" };
 const DESC_CAMINHO = {
@@ -28,22 +32,43 @@ function definirCaminho(c) {
   estado.caminho = c;
   try { localStorage.setItem("pb-caminho", c); } catch (e) {}
   document.querySelectorAll(".path").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.p === c)));
+  desenharEspecialidades();
+}
+
+function definirEspecialidade(e) {
+  estado.especialidade = e;
+  try { localStorage.setItem("pb-especialidade", e); } catch (err) {}
+  desenharEspecialidades();
+}
+
+/* Filtros de especialidade: só aparecem as que têm fichas no caminho escolhido. */
+function desenharEspecialidades() {
+  const noCaminho = FICHAS.filter(f => estado.caminho === "todos" || f.caminho === estado.caminho);
+  const usadas = Object.keys(ESPECIALIDADES).filter(k => noCaminho.some(f => f.especialidade === k));
+  if (estado.especialidade !== "todas" && !usadas.includes(estado.especialidade)) estado.especialidade = "todas";
+  const chip = (k, nome, n) => `<button class="esp-chip" data-e="${k}" id="e-${k}" aria-pressed="${estado.especialidade === k}">${nome} <small>${n}</small></button>`;
+  $esp.innerHTML = chip("todas", "Todas", noCaminho.length) +
+    usadas.map(k => chip(k, ESPECIALIDADES[k], noCaminho.filter(f => f.especialidade === k).length)).join("");
+  $esp.querySelectorAll(".esp-chip").forEach(b => b.onclick = () => { definirEspecialidade(b.dataset.e); ir(""); });
 }
 
 /* ---------- lista de fichas ---------- */
 function telaLista() {
   const q = normalizar(estado.busca.trim());
-  const combina = f => !q || normalizar([f.titulo, f.resumo, f.palavrasChave, ...f.tratamento.map(t => t.droga)].join(" ")).includes(q);
+  const combina = f => (estado.especialidade === "todas" || f.especialidade === estado.especialidade) &&
+    (!q || normalizar([f.titulo, f.resumo, f.palavrasChave, ESPECIALIDADES[f.especialidade], ...f.tratamento.map(t => t.droga)].join(" ")).includes(q));
+  const ordem = Object.keys(ESPECIALIDADES);
+  const ordenar = (a, b) => ordem.indexOf(a.especialidade) - ordem.indexOf(b.especialidade) || a.titulo.localeCompare(b.titulo, "pt-BR");
   const caminhos = estado.caminho === "todos" ? ["ps", "ubs"] : [estado.caminho];
 
   const grupos = caminhos.map(c => {
-    const itens = FICHAS.filter(f => f.caminho === c && combina(f));
+    const itens = FICHAS.filter(f => f.caminho === c && combina(f)).sort(ordenar);
     if (!itens.length) return "";
     return `<section class="group">
       <div class="group-h"><h2>${NOME_CAMINHO[c]}</h2><p>${DESC_CAMINHO[c]}</p></div>
       <div class="list">${itens.map(f => `
         <button class="item" data-p="${f.caminho}" data-id="${f.id}" id="it-${f.id}">
-          <b>${esc(f.titulo)}</b><span>${esc(f.resumo)}</span><em class="crit">${esc(f.critico.tempo)}</em>
+          <i class="esp-label">${ESPECIALIDADES[f.especialidade]}</i><b>${esc(f.titulo)}</b><span>${esc(f.resumo)}</span><em class="crit">${esc(f.critico.tempo)}</em>
         </button>`).join("")}
       </div></section>`;
   }).join("");
@@ -60,7 +85,7 @@ function telaFicha(f, modo = "rapida", aba = "clinica") {
   $app.innerHTML = `<div class="view">
     <button class="back" id="voltar">← Todas as fichas</button>
     <div class="f-head">
-      <div class="chips"><span class="chip ${f.caminho}">${NOME_CAMINHO[f.caminho]}</span><span class="chip">v${esc(f.versao)} · ${dataBR(f.revisao)}</span></div>
+      <div class="chips"><span class="chip ${f.caminho}">${NOME_CAMINHO[f.caminho]}</span><span class="chip">${ESPECIALIDADES[f.especialidade]}</span><span class="chip">v${esc(f.versao)} · ${dataBR(f.revisao)}</span></div>
       <h2>${esc(f.titulo)}</h2><p>${esc(f.resumo)}</p>
     </div>
     <div class="switch" role="tablist" aria-label="Modo de visualização">
@@ -165,6 +190,7 @@ function abaFontes(f) {
     <div><span>Revisão</span><b>${dataBR(f.revisao)}</b></div>
     <div><span>Versão</span><b>${esc(f.versao)}</b></div>
     <div><span>Caminho</span><b>${NOME_CAMINHO[f.caminho]}</b></div>
+    <div><span>Especialidade</span><b>${ESPECIALIDADES[f.especialidade]}</b></div>
   </div>
   <p class="note">Conteúdo de apoio. Valide com o protocolo da sua instituição e com a versão mais recente de cada diretriz.</p>`;
 }

@@ -1,6 +1,7 @@
 // Crise de asma na UBS
 registrarFicha({
   id: "asma-ubs",
+  especialidade: "pneumologia",
   caminho: "ubs",
   titulo: "Crise de asma na UBS",
   resumo: "Crise leve a moderada pode ser tratada na unidade; crise grave exige primeiro tratamento e remoção.",
