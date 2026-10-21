@@ -212,6 +212,7 @@ registrarFicha({
     "Retorno em 4–6 semanas para avaliar a resposta"
   ],
   fontes: [
+    "Ministério da Saúde/CONITEC — Diretrizes Brasileiras para o tratamento não cirúrgico da osteoartrite de joelho e de quadril (relatórios CONITEC, 2024)",
     "ACR/Arthritis Foundation — Guideline for the Management of Osteoarthritis of the Hand, Hip, and Knee (2019)",
     "OARSI — Guidelines for the non-surgical management of knee, hip, and polyarticular osteoarthritis (2019)",
     "NICE NG226 — Osteoarthritis in over 16s: diagnosis and management (2022)",

@@ -131,7 +131,7 @@ registrarFicha({
       duracao: "Reavaliar em 8–12 semanas",
       monitorizacao: "Náusea, insônia, sudorese, PA",
       contraindicacoes: "ClCr < 30, hepatopatia, etilismo, IMAO",
-      ajustes: "Boa opção com depressão ou ansiedade associadas. Não disponível no SUS; alternativa no SUS com depressão: fluoxetina 20–40 mg/dia (pode associar a amitriptilina em dose baixa)"
+      ajustes: "Boa opção com depressão ou ansiedade associadas. Não disponível no SUS; alternativa no SUS com depressão: fluoxetina 20–40 mg/dia (pode associar a amitriptilina em dose baixa; a fluoxetina eleva o nível do tricíclico: manter dose baixa e vigiar sonolência, arritmia e síndrome serotoninérgica)"
     },
     {
       droga: "Pregabalina",
@@ -142,7 +142,7 @@ registrarFicha({
       duracao: "Reavaliar em 8 semanas",
       monitorizacao: "Tontura, sonolência, edema, ganho de peso",
       contraindicacoes: "Hipersensibilidade",
-      ajustes: "Reduzir se ClCr < 60. Não disponível no SUS na maioria dos municípios; gabapentina é alternativa com menor evidência"
+      ajustes: "Reduzir se ClCr < 60. Não incorporada ao SUS (CONITEC); gabapentina é alternativa com menor evidência"
     },
     {
       droga: "Tramadol",
@@ -186,7 +186,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "FIBROMIALGIA\nUSO ORAL\n1. Amitriptilina 25 mg --------------------------- 30 comprimidos\n   Tomar ½ comprimido (12,5 mg) 1 a 2 horas antes de deitar. Após 2 semanas, se tolerar e ainda houver dor ou sono ruim, tomar 1 comprimido à noite (máx 2 comprimidos).\n   (Alternativa fora do SUS: Ciclobenzaprina 5 mg — 1 comprimido à noite, podendo aumentar para 10 mg.)\n\nSE DEPRESSÃO OU ANSIEDADE ASSOCIADA\n2. Fluoxetina 20 mg ------------------------------ 30 cápsulas\n   Tomar 1 cápsula pela manhã. (Ou, fora do SUS: Duloxetina 30 mg 1 cápsula pela manhã por 7 dias, depois 60 mg; não associar à fluoxetina.)\n\nSE DOR FORTE OCASIONAL\n3. Paracetamol 750 mg ---------------------------- 20 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas se dor, por no máximo 5 dias seguidos.\n\nATIVIDADE FÍSICA (prescrição)\n4. Caminhada ou hidroginástica 10–15 minutos, 3 vezes por semana, aumentando 5 minutos por semana até 30 minutos na maioria dos dias. Alongamento diário. Encaminhamento ao grupo de atividade física / eMulti.\n\nSONO\n5. Horário regular para dormir e acordar; evitar telas, café e bebida alcoólica à noite; não cochilar à tarde por mais de 30 minutos.\n\nPEDIDO DE EXAMES\nHemograma, VHS, PCR, TSH, CPK, glicemia de jejum, creatinina, TGO, TGP."
+    ambulatorial: "FIBROMIALGIA\nUSO ORAL\n1. Amitriptilina 25 mg --------------------------- 30 comprimidos\n   Tomar ½ comprimido (12,5 mg) 1 a 2 horas antes de deitar. Após 2 semanas, se tolerar e ainda houver dor ou sono ruim, tomar 1 comprimido à noite (máx 2 comprimidos).\n   (Alternativa fora do SUS: Ciclobenzaprina 5 mg — 1 comprimido à noite, podendo aumentar para 10 mg.)\n\nSE DEPRESSÃO OU ANSIEDADE ASSOCIADA\n2. Fluoxetina 20 mg ------------------------------ 30 cápsulas\n   Tomar 1 cápsula pela manhã. Se associada à amitriptilina, manter a amitriptilina em até 25 mg. (Ou, fora do SUS: Duloxetina 30 mg 1 cápsula pela manhã por 7 dias, depois 60 mg; não associar à fluoxetina.)\n\nSE DOR FORTE OCASIONAL\n3. Paracetamol 750 mg ---------------------------- 20 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas se dor, por no máximo 5 dias seguidos.\n\nATIVIDADE FÍSICA (prescrição)\n4. Caminhada ou hidroginástica 10–15 minutos, 3 vezes por semana, aumentando 5 minutos por semana até 30 minutos na maioria dos dias. Alongamento diário. Encaminhamento ao grupo de atividade física / eMulti.\n\nSONO\n5. Horário regular para dormir e acordar; evitar telas, café e bebida alcoólica à noite; não cochilar à tarde por mais de 30 minutos.\n\nPEDIDO DE EXAMES\nHemograma, VHS, PCR, TSH, CPK, glicemia de jejum, creatinina, TGO, TGP."
   },
   orientacoesRetorno: [
     "Sua dor é real; não há lesão nos músculos ou articulações, e sim um aumento da sensibilidade do sistema nervoso à dor",
@@ -199,8 +199,8 @@ registrarFicha({
   fontes: [
     "ACR — 2016 Revisions to the 2010/2011 fibromyalgia diagnostic criteria (Wolfe et al., Semin Arthritis Rheum, 2016)",
     "EULAR — Revised recommendations for the management of fibromyalgia (Ann Rheum Dis, 2017)",
-    "SBR — Recomendações para o diagnóstico e tratamento da fibromialgia (versão vigente)",
-    "Ministério da Saúde — PCDT Dor Crônica (2012) e RENAME (versão vigente)"
+    "SBR — Novas diretrizes para o diagnóstico da fibromialgia (Heymann et al., Rev Bras Reumatol, 2017) e Consenso brasileiro do tratamento da fibromialgia (2010)",
+    "Ministério da Saúde — PCDT Dor Crônica (Portaria Conjunta SAES/SAPS/SECTICS nº 1/2024) e RENAME (versão vigente). CONITEC não incorporou pregabalina e duloxetina para fibromialgia"
   ],
   revisao: "2026-10-21",
   versao: "1.0"

@@ -83,7 +83,7 @@ registrarFicha({
       pedido: "Índice tornozelo-braquial com doppler bilateral.",
       porQue: "Garantir perfusão antes de compressão forte, sobretudo em úlcera, diabéticos, idosos e pulsos fracos.",
       esperar: "0,9–1,3.",
-      interpretacao: "< 0,9: doença arterial associada → compressão só reduzida e com orientação vascular; ITB muito baixo (abaixo de cerca de 0,5–0,6) contraindica compressão. > 1,3: artérias incompressíveis (calcificação), resultado não confiável.",
+      interpretacao: "≥ 0,8 (até 1,3): compressão plena é segura na maioria das diretrizes. < 0,8 ou < 0,9: doença arterial associada → só compressão modificada (reduzida) com orientação da vascular. ESVS 2022: em úlcera mista, compressão só se a pressão sistólica no tornozelo for > 60 mmHg; abaixo disso, não comprimir e encaminhar. > 1,3: artérias incompressíveis (calcificação), resultado não confiável.",
       limitacoes: "Diabéticos e DRC podem ter ITB falsamente normal."
     },
     {
@@ -104,8 +104,8 @@ registrarFicha({
       intervalo: "Durante o dia; retirar para dormir",
       duracao: "Contínuo; trocar a meia a cada 4–6 meses",
       monitorizacao: "Pele, adesão, tamanho correto (medir tornozelo e panturrilha pela manhã)",
-      contraindicacoes: "Doença arterial grave (ITB muito baixo, pressão de tornozelo baixa), IC descompensada, neuropatia grave sem vigilância, dermatite aguda extensa",
-      ajustes: "ITB entre 0,5–0,6 e 0,9: só compressão reduzida com orientação da vascular. Meia de pressão menor bem usada é melhor que meia forte não usada"
+      contraindicacoes: "Doença arterial grave (pressão sistólica de tornozelo ≤ 60 mmHg, isquemia crítica), IC descompensada, neuropatia grave sem vigilância, dermatite aguda extensa",
+      ajustes: "ITB < 0,8: só compressão modificada (reduzida) com orientação da vascular. Meia de pressão menor bem usada é melhor que meia forte não usada"
     },
     {
       droga: "Diosmina + hesperidina (fração flavonoica purificada micronizada)",
@@ -143,7 +143,7 @@ registrarFicha({
     {
       droga: "Tromboflebite superficial",
       linha: "adj",
-      dose: "Calor local, AINE oral por 7–10 dias, meia compressiva; ≥ 5 cm de extensão ou a < 3 cm da junção safeno-femoral: doppler e anticoagulação (fondaparinux 2,5 mg SC/dia por 45 dias ou enoxaparina) conforme vascular",
+      dose: "Calor local, AINE oral por 7–10 dias, meia compressiva. Fazer doppler. Trombo ≥ 5 cm e a > 3 cm da junção safeno-femoral: fondaparinux 2,5 mg SC 1×/dia por 45 dias (alternativa: enoxaparina 40 mg SC 1×/dia). A ≤ 3 cm da junção: anticoagulação em dose terapêutica, como TVP",
       via: "VO/SC",
       intervalo: "Conforme droga",
       duracao: "Conforme extensão",
@@ -184,7 +184,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "INSUFICIÊNCIA VENOSA CRÔNICA\n\nORIENTAÇÕES / USO EXTERNO\n1. Meia elástica de compressão graduada até o joelho, ___ mmHg (sintomas/C2–C3: 20–30 mmHg; C4–C5: 30–40 mmHg), tamanho conforme medidas do tornozelo e da panturrilha ------ 1 par\n   Vestir pela manhã, ao levantar, e retirar para dormir. Trocar a cada 4–6 meses.\n2. Elevar as pernas acima do nível do coração por 30 minutos, 3 a 4 vezes ao dia. Caminhar diariamente. Exercício da panturrilha (ficar na ponta dos pés) várias vezes ao dia.\n3. Creme hidratante (ureia 10% ou creme neutro) --- 1 frasco\n   Aplicar nas pernas 1 vez ao dia, fora de feridas.\n\nUSO ORAL\n4. Diosmina 900 mg + hesperidina 100 mg ----------- 60 comprimidos\n   Tomar 1 comprimido 1 vez ao dia por 60 dias.\n\nSE ECZEMA DE ESTASE (USO TÓPICO)\n5. Dexametasona creme 0,1% ------------------------ 1 bisnaga\n   Aplicar fina camada na área avermelhada e com coceira 2 vezes ao dia por 10 dias.\n\nSE ÚLCERA VENOSA (ITB ≥ 0,9)\n6. Curativo na UBS com SF 0,9% e cobertura conforme exsudato + bandagem compressiva (multicamada ou bota de Unna), trocar conforme protocolo.\n7. Pentoxifilina 400 mg --------------------------- 90 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após as refeições, por 30 dias (renovar até cicatrizar).\n\nSE SANGRAMENTO DE VARIZ: deitar, elevar a perna e comprimir o local com pano limpo por 10 minutos; procurar atendimento.\n\nPEDIDO DE EXAMES\nUltrassonografia com doppler venoso de membros inferiores com pesquisa de refluxo (C2 sintomático, C4–C6 ou plano de intervenção). Índice tornozelo-braquial se pulsos fracos, diabetes ou úlcera."
+    ambulatorial: "INSUFICIÊNCIA VENOSA CRÔNICA\n\nORIENTAÇÕES / USO EXTERNO\n1. Meia elástica de compressão graduada até o joelho, ___ mmHg (sintomas/C2–C3: 20–30 mmHg; C4–C5: 30–40 mmHg), tamanho conforme medidas do tornozelo e da panturrilha ------ 1 par\n   Vestir pela manhã, ao levantar, e retirar para dormir. Trocar a cada 4–6 meses.\n2. Elevar as pernas acima do nível do coração por 30 minutos, 3 a 4 vezes ao dia. Caminhar diariamente. Exercício da panturrilha (ficar na ponta dos pés) várias vezes ao dia.\n3. Creme hidratante (ureia 10% ou creme neutro) --- 1 frasco\n   Aplicar nas pernas 1 vez ao dia, fora de feridas.\n\nUSO ORAL\n4. Diosmina 900 mg + hesperidina 100 mg ----------- 60 comprimidos\n   Tomar 1 comprimido 1 vez ao dia por 60 dias.\n\nSE ECZEMA DE ESTASE (USO TÓPICO)\n5. Dexametasona creme 0,1% ------------------------ 1 bisnaga\n   Aplicar fina camada na área avermelhada e com coceira 2 vezes ao dia por 10 dias.\n\nSE ÚLCERA VENOSA (ITB ≥ 0,8; se menor, compressão só com orientação da vascular)\n6. Curativo na UBS com SF 0,9% e cobertura conforme exsudato + bandagem compressiva (multicamada ou bota de Unna), trocar conforme protocolo.\n7. Pentoxifilina 400 mg --------------------------- 90 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após as refeições, por 30 dias (renovar até cicatrizar).\n\nSE SANGRAMENTO DE VARIZ: deitar, elevar a perna e comprimir o local com pano limpo por 10 minutos; procurar atendimento.\n\nPEDIDO DE EXAMES\nUltrassonografia com doppler venoso de membros inferiores com pesquisa de refluxo (C2 sintomático, C4–C6 ou plano de intervenção). Índice tornozelo-braquial se pulsos fracos, diabetes ou úlcera."
   },
   orientacoesRetorno: [
     "Varizes não têm cura com remédio; meia elástica, caminhada e elevar as pernas aliviam e evitam complicações",

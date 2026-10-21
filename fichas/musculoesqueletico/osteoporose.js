@@ -175,7 +175,7 @@ registrarFicha({
       duracao: "Seguir com antirreabsortivo após",
       monitorizacao: "Especialista",
       contraindicacoes: "Teriparatida: doença de Paget, radioterapia óssea, hipercalcemia. Romosozumabe: IAM ou AVC no último ano",
-      ajustes: "Critérios restritos do PCDT 2023 (falha a outros tratamentos e risco muito alto; romosozumabe só mulheres > 70 anos). Prescrição pelo especialista. Denosumabe não foi incorporado ao SUS para osteoporose"
+      ajustes: "Critérios restritos do PCDT 2023 (falha a outros tratamentos e risco muito alto; romosozumabe só em mulheres pós-menopausa > 70 anos). Prescrição pelo especialista; a dispensação pelo CEAF varia por estado. Denosumabe não foi incorporado ao SUS (CONITEC, Portaria SCTIE/MS nº 62/2022). A CONITEC aprovou novo PCDT ainda não publicado em 2025: conferir a versão vigente"
     }
   ],
   destino: {
@@ -199,7 +199,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "OSTEOPOROSE — TRATAMENTO INICIAL\nUSO ORAL\n1. Alendronato de sódio 70 mg ---------------------- 4 comprimidos/mês (uso contínuo)\n   Tomar 1 comprimido 1 vez por semana, sempre no mesmo dia, em jejum, com 1 copo cheio de água pura. Ficar sentado ou em pé e sem comer, beber ou tomar outros remédios por 30 minutos.\n2. Colecalciferol (vitamina D3) 1.000 UI ---------- 60 cápsulas/gotas equivalentes\n   Tomar 1 a 2 cápsulas (1.000 a 2.000 UI) 1 vez ao dia, com a refeição principal. Uso contínuo.\n   (Se 25-OH-vitamina D < 20 ng/mL: Colecalciferol 50.000 UI — 1 cápsula por semana por 8 semanas; depois a dose acima.)\n3. Carbonato de cálcio 1.250 mg (500 mg de cálcio) -- 30 comprimidos\n   Tomar 1 comprimido após o almoço, se a dieta tiver menos de 3 porções de leite e derivados por dia. Não tomar junto com o alendronato.\n\nSE NÃO PUDER USAR BIFOSFONATO ORAL (PCDT — Componente Especializado)\nÁcido zoledrônico 5 mg/100 mL — infundir IV em no mínimo 15 minutos, 1 vez por ano. Hidratar antes (2 copos de água). Paracetamol 750 mg de 6/6 h por até 3 dias se febre ou dor no corpo.\n\nANTES DE INICIAR: cálcio, creatinina, 25-OH-vitamina D; avaliação odontológica se possível.\n\nPEDIDO DE EXAMES\nDensitometria óssea de coluna lombar e fêmur proximal. Cálcio, albumina, fósforo, fosfatase alcalina, creatinina, 25-OH-vitamina D, TSH, hemograma. Radiografia de coluna torácica e lombar em perfil se perda de altura ou dor dorsal."
+    ambulatorial: "OSTEOPOROSE — TRATAMENTO INICIAL\nUSO ORAL\n1. Alendronato de sódio 70 mg ---------------------- 4 comprimidos/mês (uso contínuo)\n   Tomar 1 comprimido 1 vez por semana, sempre no mesmo dia, em jejum, com 1 copo cheio de água pura. Ficar sentado ou em pé e sem comer, beber ou tomar outros remédios por 30 minutos.\n2. Colecalciferol (vitamina D3) 1.000 UI ---------- 60 cápsulas\n   Tomar 1 a 2 cápsulas (1.000 a 2.000 UI) 1 vez ao dia, com a refeição principal. Uso contínuo.\n   (Se 25-OH-vitamina D < 20 ng/mL: Colecalciferol 50.000 UI — 1 cápsula por semana por 8 semanas; depois a dose acima.)\n3. Carbonato de cálcio 1.250 mg (500 mg de cálcio) -- 30 comprimidos\n   Tomar 1 comprimido após o almoço, se a dieta tiver menos de 3 porções de leite e derivados por dia. Não tomar junto com o alendronato.\n\nSE NÃO PUDER USAR BIFOSFONATO ORAL (PCDT — Componente Especializado)\nÁcido zoledrônico 5 mg/100 mL — infundir IV em no mínimo 15 minutos, 1 vez por ano. Hidratar antes (2 copos de água). Paracetamol 750 mg de 6/6 h por até 3 dias se febre ou dor no corpo.\n\nANTES DE INICIAR: cálcio, creatinina, 25-OH-vitamina D; avaliação odontológica se possível.\n\nPEDIDO DE EXAMES\nDensitometria óssea de coluna lombar e fêmur proximal. Cálcio, albumina, fósforo, fosfatase alcalina, creatinina, 25-OH-vitamina D, TSH, hemograma. Radiografia de coluna torácica e lombar em perfil se perda de altura ou dor dorsal."
   },
   orientacoesRetorno: [
     "O alendronato só funciona e só é seguro se tomado do jeito certo: em jejum, com água pura, e sem deitar por 30 minutos",
@@ -228,7 +228,8 @@ registrarFicha({
     "ABRASSO — FRAX Brasil 2.0 (2024)",
     "SBEM/ABRASSO — Consenso sobre risco muito alto de fratura em mulheres na pós-menopausa (2023)",
     "FEBRASGO — Osteoporose na pós-menopausa (protocolo, versão vigente)",
-    "SBPC/ML–SBEM — Intervalos de referência da vitamina D (25-OH-D) (2017, atualização 2020)"
+    "SBPC/ML–SBEM — Intervalos de referência da vitamina D (25-OH-D) (2017, atualização 2020)",
+    "SBEM — Recomendações para o diagnóstico e tratamento da hipovitaminose D (Arq Bras Endocrinol Metab, 2014)"
   ],
   revisao: "2026-10-21",
   versao: "1.0"

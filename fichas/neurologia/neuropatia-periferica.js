@@ -138,7 +138,7 @@ registrarFicha({
       duracao: "Avaliar após 4–6 semanas na dose eficaz",
       monitorizacao: "Tontura, sonolência, edema, ganho de peso; risco de dependência e depressão respiratória com opioide",
       contraindicacoes: "Hipersensibilidade",
-      ajustes: "Ajuste renal (bula): ClCr 30–59: 400–1.400 mg/dia; 15–29: 200–700 mg/dia; < 15: 100–300 mg/dia. Disponível no SUS pelo Componente Especializado (PCDT Dor Crônica)"
+      ajustes: "Ajuste renal (bula): ClCr 30–59: 400–1.400 mg/dia; 15–29: 200–700 mg/dia; < 15: 100–300 mg/dia. Disponível no SUS pelo Componente Especializado (PCDT Dor Crônica 2024), conforme os CID contemplados"
     },
     {
       droga: "Pregabalina",
@@ -149,7 +149,7 @@ registrarFicha({
       duracao: "Avaliar após 4–6 semanas",
       monitorizacao: "Tontura, sonolência, edema, ganho de peso",
       contraindicacoes: "Hipersensibilidade",
-      ajustes: "Não disponível no SUS na maioria dos municípios. Reduzir dose se ClCr < 60"
+      ajustes: "Não incorporada ao SUS (CONITEC). Reduzir dose se ClCr < 60"
     },
     {
       droga: "Duloxetina",
@@ -160,18 +160,18 @@ registrarFicha({
       duracao: "Avaliar após 4–6 semanas",
       monitorizacao: "Náusea, sudorese, PA; síndrome serotoninérgica com tramadol e outros serotoninérgicos",
       contraindicacoes: "ClCr < 30, hepatopatia, etilismo pesado, glaucoma de ângulo fechado não controlado, uso de IMAO",
-      ajustes: "Não disponível no SUS. Útil se depressão ou ansiedade associadas ou se tricíclico contraindicado"
+      ajustes: "Não incorporada ao SUS para dor (CONITEC). Útil se depressão ou ansiedade associadas ou se tricíclico contraindicado"
     },
     {
-      droga: "Capsaicina creme 0,075% ou lidocaína 5% tópica",
+      droga: "Capsaicina creme 0,075% ou lidocaína tópica",
       linha: "adj",
-      dose: "Capsaicina: fina camada na área dolorosa; lidocaína adesivo/gel na área",
+      dose: "Capsaicina: fina camada na área dolorosa; lidocaína (adesivo 5% ou gel/pomada) na área",
       via: "Tópica",
       intervalo: "Capsaicina 3–4×/dia; lidocaína até 12 h por dia",
       duracao: "Avaliar após 4–8 semanas",
       monitorizacao: "Ardência local (capsaicina) que melhora com o uso",
       contraindicacoes: "Pele lesada, mucosas, olhos",
-      ajustes: "2ª linha (NeuPSIG 2025). Útil em dor localizada e em idosos. Lavar as mãos após aplicar"
+      ajustes: "2ª linha, recomendação fraca (NeuPSIG 2025), só para dor periférica localizada; evidência de certeza muito baixa para creme de capsaicina e lidocaína 5% (moderada para o adesivo de capsaicina 8%, de uso em serviço especializado). Lavar as mãos após aplicar"
     },
     {
       droga: "Carbamazepina",
@@ -193,7 +193,7 @@ registrarFicha({
       duracao: "Curto prazo, em crises",
       monitorizacao: "Náusea, tontura, constipação, convulsão, síndrome serotoninérgica",
       contraindicacoes: "Epilepsia não controlada, uso de IMAO; cautela com tricíclico e IRSN",
-      ajustes: "3ª linha (NeuPSIG 2025). Evitar uso crônico; opioides fortes não são recomendados de rotina"
+      ajustes: "3ª linha (NeuPSIG 2025). Evitar uso crônico; opioides fortes não são recomendados de rotina. Opioide + gabapentinoide aumenta o risco de depressão respiratória e morte"
     },
     {
       droga: "Cianocobalamina (se deficiência de B12)",
@@ -230,7 +230,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "DOR NEUROPÁTICA — ESCOLHER 1 OPÇÃO E TITULAR\n\nOPÇÃO A — TRICÍCLICO (RENAME)\nUSO ORAL\n1. Amitriptilina 25 mg --------------------------- 30 comprimidos\n   Tomar ½ comprimido (12,5 mg) à noite por 1 semana; depois 1 comprimido à noite. Se ainda houver dor após 2 semanas, aumentar para 2 comprimidos à noite (máx 3 comprimidos = 75 mg).\n   (Idoso: preferir Nortriptilina 10 mg, 1 cápsula à noite, aumentando de 10 em 10 mg a cada 1–2 semanas até 25–50 mg.)\n\nOPÇÃO B — GABAPENTINOIDE (SUS: Componente Especializado)\nUSO ORAL\n1. Gabapentina 300 mg ---------------------------- 90 cápsulas\n   Dia 1: 1 cápsula à noite. Dia 2: 1 cápsula de 12 em 12 horas. Dia 3 em diante: 1 cápsula de 8 em 8 horas. Se necessário, aumentar 1 cápsula a cada 3 dias até 2 cápsulas de 8 em 8 horas (1.800 mg/dia).\n   (Ajustar se ClCr < 60.)\n\nOPÇÃO C — FORA DO SUS (alternativas)\n1. Duloxetina 30 mg ------------------------------ 30 cápsulas\n   Tomar 1 cápsula pela manhã por 7 dias; depois 60 mg 1 vez ao dia.\n   ou Pregabalina 75 mg ----------------------------- 60 cápsulas\n   Tomar 1 cápsula de 12 em 12 horas; aumentar para 150 mg de 12 em 12 horas após 1 semana se necessário.\n\nUSO TÓPICO (dor localizada, adjuvante)\n2. Capsaicina creme 0,075% ------------------------ 1 bisnaga\n   Aplicar fina camada na área dolorosa 3 a 4 vezes ao dia. Lavar as mãos após aplicar.\n\nSE DEFICIÊNCIA DE B12\nUSO INTRAMUSCULAR\n3. Cianocobalamina 1.000 mcg/mL ------------------- ampolas\n   Aplicar 1 ampola IM por dia por 7 dias, depois 1 por semana por 4 semanas, depois 1 por mês.\n\nPEDIDO DE EXAMES\nGlicemia de jejum, HbA1c, vitamina B12, TSH, creatinina, hemograma, VDRL, anti-HIV, TGO, TGP, GGT. Se > 50 anos ou sem causa: eletroforese de proteínas séricas."
+    ambulatorial: "DOR NEUROPÁTICA — ESCOLHER 1 OPÇÃO E TITULAR\n\nOPÇÃO A — TRICÍCLICO (RENAME)\nUSO ORAL\n1. Amitriptilina 25 mg --------------------------- 30 comprimidos\n   Tomar ½ comprimido (12,5 mg) à noite por 1 semana; depois 1 comprimido à noite. Se ainda houver dor após 2 semanas, aumentar para 2 comprimidos à noite (máx 3 comprimidos = 75 mg).\n   (Idoso: preferir Nortriptilina 10 mg, 1 cápsula à noite, aumentando de 10 em 10 mg a cada 1–2 semanas até 25–50 mg.)\n\nOPÇÃO B — GABAPENTINOIDE (SUS: Componente Especializado)\nUSO ORAL\n1. Gabapentina 300 mg ---------------------------- 90 cápsulas\n   Dia 1: 1 cápsula à noite. Dia 2: 1 cápsula de 12 em 12 horas. Dia 3 em diante: 1 cápsula de 8 em 8 horas. Se necessário, aumentar 1 cápsula a cada 3 dias até 2 cápsulas de 8 em 8 horas (1.800 mg/dia).\n   (Ajustar se ClCr < 60.)\n\nOPÇÃO C — FORA DO SUS (alternativas)\n1. Duloxetina 30 mg ------------------------------ 7 cápsulas\n   Tomar 1 cápsula pela manhã por 7 dias.\n   Duloxetina 60 mg ------------------------------ 30 cápsulas\n   Depois, tomar 1 cápsula pela manhã. Uso contínuo.\n   ou Pregabalina 75 mg ----------------------------- 60 cápsulas\n   Tomar 1 cápsula de 12 em 12 horas; aumentar para 150 mg de 12 em 12 horas após 1 semana se necessário.\n\nUSO TÓPICO (dor localizada, adjuvante)\n2. Capsaicina creme 0,075% ------------------------ 1 bisnaga\n   Aplicar fina camada na área dolorosa 3 a 4 vezes ao dia. Lavar as mãos após aplicar.\n\nSE DEFICIÊNCIA DE B12\nUSO INTRAMUSCULAR\n3. Cianocobalamina 1.000 mcg/mL ------------------- ampolas\n   Aplicar 1 ampola IM por dia por 7 dias, depois 1 por semana por 4 semanas, depois 1 por mês.\n\nPEDIDO DE EXAMES\nGlicemia de jejum, HbA1c, vitamina B12, TSH, creatinina, hemograma, VDRL, anti-HIV, TGO, TGP, GGT. Se > 50 anos ou sem causa: eletroforese de proteínas séricas."
   },
   orientacoesRetorno: [
     "O remédio para dor de nervo começa em dose baixa e sobe aos poucos; o efeito completo leva de 2 a 6 semanas",
@@ -254,7 +254,7 @@ registrarFicha({
   ],
   fontes: [
     "NeuPSIG/IASP — Pharmacotherapy and non-invasive neuromodulation for neuropathic pain: systematic review and meta-analysis (Lancet Neurol, 2025)",
-    "Ministério da Saúde — PCDT Dor Crônica (Portaria SAS/MS nº 1.083/2012) e RENAME (versão vigente)",
+    "Ministério da Saúde — PCDT Dor Crônica (Portaria Conjunta SAES/SAPS/SECTICS nº 1, de 22/08/2024) e RENAME (versão vigente). CONITEC não incorporou pregabalina e duloxetina para dor neuropática",
     "SBD — Diretriz Oficial da Sociedade Brasileira de Diabetes: Diagnóstico e tratamento da neuropatia diabética (2024)",
     "ADA — Standards of Care in Diabetes (2026): Retinopathy, Neuropathy, and Foot Care",
     "Ministério da Saúde — Protocolo Clínico e Diretrizes Terapêuticas da Hanseníase (2022)"

@@ -175,7 +175,7 @@ registrarFicha({
       duracao: "Contínuo",
       monitorizacao: "Enzimas hepáticas (hepatotoxicidade), litíase",
       contraindicacoes: "Litíase renal, hepatopatia, TFG muito reduzida",
-      ajustes: "Uso por especialista; ingerir ≥ 2 L de água por dia"
+      ajustes: "Uso por especialista; ingerir ≥ 2 L de água por dia. Conferir disponibilidade no Brasil (não está na RENAME)"
     }
   ],
   destino: {
@@ -224,7 +224,7 @@ registrarFicha({
   fontes: [
     "ACR — Guideline for the Management of Gout (Arthritis Care Res, 2020)",
     "EULAR — Updated evidence-based recommendations for the management of gout (2016) e recomendações de diagnóstico (2018)",
-    "SBR — Recomendações da Sociedade Brasileira de Reumatologia para o diagnóstico e tratamento da gota (versão vigente)",
+    "SBPC/ML–SBR — Diretriz conjunta sobre meta terapêutica do ácido úrico sérico na gota (2025): conferir o valor proposto no documento original",
     "Ministério da Saúde — RENAME (versão vigente)"
   ],
   revisao: "2026-10-21",

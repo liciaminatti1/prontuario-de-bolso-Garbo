@@ -26,7 +26,8 @@ registrarFicha({
     "Pulsos ausentes ou duvidosos: índice tornozelo-braquial (ITB) com doppler; ITB < 0,9 ou > 1,3 sugere doença arterial",
     "Descarga da pressão (retirar apoio da área ulcerada), desbridamento de calo e tecido desvitalizado, curativo que mantenha umidade adequada",
     "Infecção: classificar (leve, moderada, grave), colher cultura de tecido profundo após limpeza (não swab superficial) e iniciar antibiótico",
-    "Controle glicêmico, cessação do tabagismo, estatina e antiagregante se doença arterial"
+    "Controle glicêmico, cessação do tabagismo, estatina e antiagregante se doença arterial",
+    "Ferida: conferir a vacinação antitetânica e atualizar se necessário"
   ],
   fataisExcluir: [
     "Infecção grave com sepse (fasciite, abscesso profundo, gangrena gasosa)",
@@ -218,7 +219,7 @@ registrarFicha({
     "Corte as unhas retas; não corte calos nem use calicida; procure a UBS para isso",
     "Se tiver ferida: não pise com o pé ferido, faça o curativo como orientado e tome o antibiótico até o fim",
     "Volte imediatamente se: febre, vermelhidão que aumenta, pus, mau cheiro, pé frio ou roxo, dor forte nova, pé quente e inchado, glicemia muito alta",
-    "Retorno em 48–72 h se infecção; semanal se ferida; e conforme seu risco (anual a cada 1–3 meses) mesmo sem ferida"
+    "Retorno em 48–72 h se infecção; semanal se ferida; e, mesmo sem ferida, conforme seu risco (de 1 vez ao ano até a cada 1–3 meses)"
   ],
   tabelas: [
     {

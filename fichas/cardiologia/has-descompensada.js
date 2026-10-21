@@ -27,7 +27,7 @@ registrarFicha({
     "Procurar a causa da descompensação: má adesão, falta do remédio, dose insuficiente, sal, álcool, AINE, descongestionante nasal, corticoide, anticoncepcional, dor, ansiedade, apneia do sono",
     "Tratar dor ou ansiedade se presentes e remedir",
     "Ajustar o esquema oral: aumentar dose ou associar classe (BRA ou IECA + bloqueador de canal de cálcio + tiazídico); preferir combinação a dose máxima de uma só droga",
-    "Sem tratamento prévio e PA ≥ 160/100: iniciar já com combinação de 2 drogas",
+    "Sem tratamento prévio: a diretriz SBC 2025 prefere iniciar com combinação de 2 drogas na maioria dos pacientes (sobretudo PA ≥ 160/100 ou alto risco); monoterapia em estágio 1 de baixo risco, idoso frágil ou muito idoso",
     "Exames básicos se não houver recentes; ECG na UBS se disponível",
     "Retorno em até 7 dias com medidas domiciliares (MRPA); meta de longo prazo < 130/80 mmHg (individualizar em idoso frágil)"
   ],
@@ -65,7 +65,7 @@ registrarFicha({
       intervalo: "1 vez ao dia",
       duracao: "Uso contínuo",
       monitorizacao: "Edema maleolar (dose-dependente)",
-      contraindicacoes: "IC com fração de ejeção reduzida (preferir outras classes)",
+      contraindicacoes: "Hipersensibilidade. Na IC com fração de ejeção reduzida o anlodipino é neutro (pode ser usado para controle da PA); evitar verapamil e diltiazem",
       ajustes: "Idoso: iniciar 2,5–5 mg"
     },
     {
@@ -125,7 +125,8 @@ registrarFicha({
     "Retorno na UBS em até 7 dias com as medidas anotadas; depois a cada 4 semanas até atingir a meta"
   ],
   encaminhar: [
-    "PS no mesmo dia: qualquer sinal de lesão aguda de órgão-alvo ou gestante com PA ≥ 160/110 ou sintomas",
+    "PS no mesmo dia: qualquer sinal de lesão aguda de órgão-alvo",
+    "Gestante (≥ 20 semanas) ou puérpera com PA ≥ 140/90: avaliação obstétrica no mesmo dia (maternidade ou PS obstétrico)",
     "Cardiologia ou nefrologia: hipertensão resistente (fora da meta com 3 drogas em dose plena incluindo diurético) ou suspeita de hipertensão secundária",
     "Nefrologia: TFG < 30 ou queda rápida da função renal"
   ],
