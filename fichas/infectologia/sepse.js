@@ -164,7 +164,7 @@ registrarFicha({
       duracao: "Até suspensão do vasopressor",
       monitorizacao: "Glicemia",
       contraindicacoes: "—",
-      ajustes: "SSC 2026 sugere corticoide IV no choque séptico. Bolus IV de 50 mg (frasco 100 mg reconstituído) a cada 6 h. Fludrocortisona 50 mcg VO/SNG 1×/dia é associação opcional (esquema APROCCHSS)"
+      ajustes: "SSC 2026 sugere corticoide IV no choque séptico. Bolus IV de 50 mg (frasco 100 mg reconstituído) a cada 6 h. Fludrocortisona 50 mcg VO/SNG 1×/dia pode ser associada (esquema APROCCHSS); posição da SSC 2026 sobre fludrocortisona não confirmada"
     },
     {
       droga: "Ceftriaxona ± azitromicina (foco pulmonar comunitário)",
@@ -186,7 +186,7 @@ registrarFicha({
       duracao: "Conforme foco",
       monitorizacao: "Função renal",
       contraindicacoes: "Alergia a penicilinas",
-      ajustes: "Diluir em 100 mL SF 0,9%. ClCr < 20: 4,5 g 8/8h. ESBL: meropeném 1 g 8/8h (infusão de 3 h). Risco de MRSA: vancomicina 25 mg/kg ataque (máx 3 g), diluída a ≤ 5 mg/mL em ≥ 1–2 h, depois conforme nível sérico"
+      ajustes: "Diluir em 100 mL SF 0,9%. Ajuste renal pela bula brasileira (ClCr 20–40: 4,5 g 8/8h; < 20: 4,5 g 12/12h); 1ª dose sempre cheia. ESBL: meropeném 1 g 8/8h (infusão de 3 h). Risco de MRSA: vancomicina 25 mg/kg ataque (máx 3 g), diluída a ≤ 5 mg/mL em ≥ 1–2 h, depois conforme nível sérico"
     }
   ],
   destino: {
@@ -233,5 +233,5 @@ registrarFicha({
     "ASHP/IDSA/PIDS/SIDP — Therapeutic monitoring of vancomycin (2020)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

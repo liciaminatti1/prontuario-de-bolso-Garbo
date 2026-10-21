@@ -87,7 +87,7 @@ registrarFicha({
       duracao: "6–12 meses após remissão (1º episódio); 2 anos ou mais se recorrente",
       monitorizacao: "Náusea, diarreia, insônia, disfunção sexual, ideação suicida (< 25 anos)",
       contraindicacoes: "Uso de IMAO; mania",
-      ajustes: "Boa opção em cardiopatas e na gestação/lactação. Também 1ª linha em TAG e pânico (iniciar 25 mg). Não consta na RENAME em todas as redes; conferir REMUME"
+      ajustes: "Boa opção em cardiopatas e na gestação/lactação. Também 1ª linha em TAG e pânico (iniciar 25 mg). Não aparece entre os antidepressivos do componente básico da RENAME nas edições consultadas (fluoxetina e tricíclicos sim); conferir REMUME e RENAME vigente"
     },
     {
       droga: "Fluoxetina",
@@ -179,5 +179,5 @@ registrarFicha({
     "NICE CG113 — Generalised anxiety disorder and panic disorder in adults (2011, atualizado 2020)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

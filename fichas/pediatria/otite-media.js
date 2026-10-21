@@ -145,7 +145,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "CRIANÇA (exemplo 15 kg)\nUSO ORAL\n1. Amoxicilina 400 mg/5 mL suspensão ----------------- 2 frascos de 100 mL\n   Dar 8,5 mL (≈ 90 mg/kg/dia) de 12 em 12 horas por 10 dias (< 2 anos ou grave) ou 7 dias (2–5 anos).\n2. Paracetamol 200 mg/mL gotas ------------------------ 1 frasco\n   Dar 15 gotas (1 gota/kg; máx 35 gotas) de 6 em 6 horas se dor ou febre.\n   OU Ibuprofeno 50 mg/mL gotas: 1 a 2 gotas por kg (máx 40 gotas) de 8 em 8 horas se dor (> 6 meses).\n\nOBSERVAÇÃO VIGIADA (prescrição de segurança)\n- Analgesia como acima e iniciar a amoxicilina só se não melhorar em 48–72 horas ou se piorar.\n\nFALHA / AMOXICILINA RECENTE\n3. Amoxicilina + clavulanato 400/57 mg por 5 mL --- 2 frascos\n   Dar 8,5 mL de 12 em 12 horas por 10 dias.\n\nADULTO\n1. Amoxicilina 500 mg ------------------------------- 21 cápsulas\n   Tomar 1 cápsula de 8 em 8 horas por 7 dias.\n2. Dipirona 500 mg ---------------------------------- 1 caixa\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor."
+    ambulatorial: "CRIANÇA (exemplo 15 kg)\nUSO ORAL\n1. Amoxicilina 400 mg/5 mL suspensão ----------------- frascos para 170 mL\n   Dar 8,5 mL (≈ 90 mg/kg/dia) de 12 em 12 horas por 10 dias (< 2 anos ou grave) ou 7 dias (2–5 anos).\n2. Paracetamol 200 mg/mL gotas ------------------------ 1 frasco\n   Dar 15 gotas (1 gota/kg; máx 35 gotas) de 6 em 6 horas se dor ou febre.\n   OU Ibuprofeno 50 mg/mL gotas: 1 a 2 gotas por kg (máx 40 gotas) de 8 em 8 horas se dor (> 6 meses).\n\nOBSERVAÇÃO VIGIADA (prescrição de segurança)\n- Analgesia como acima e iniciar a amoxicilina só se não melhorar em 48–72 horas ou se piorar.\n\nFALHA / AMOXICILINA RECENTE\n3. Amoxicilina + clavulanato 400/57 mg por 5 mL --- frascos para 170 mL\n   Dar 8,5 mL de 12 em 12 horas por 10 dias.\n\nADULTO\n1. Amoxicilina 500 mg ------------------------------- 21 cápsulas\n   Tomar 1 cápsula de 8 em 8 horas por 7 dias.\n2. Dipirona 500 mg ---------------------------------- 1 caixa\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor."
   },
   orientacoesRetorno: [
     "A dor costuma melhorar em 24 a 72 horas; dar o analgésico nos horários enquanto houver dor",
@@ -162,5 +162,5 @@ registrarFicha({
     "NICE NG91 — Otitis media (acute): antimicrobial prescribing (2018, atualizado 2022)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

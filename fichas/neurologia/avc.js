@@ -32,7 +32,7 @@ registrarFicha({
     "Dissecção arterial cervical",
     "Meningoencefalite, abscesso, tumor com sangramento"
   ],
-  proximaDecisao: "TC sem sangramento + janela ≤ 4,5 h + déficit incapacitante + sem contraindicação → trombolisar (porta-agulha ≤ 60 min), independentemente do NIHSS. Suspeita de grande vaso → angio-TC e acionar trombectomia. Sem trombólise e AVC menor (NIHSS ≤ 3) ou AIT de alto risco → AAS + clopidogrel.",
+  proximaDecisao: "TC sem sangramento + janela ≤ 4,5 h + déficit incapacitante + sem contraindicação → trombolisar (porta-agulha ≤ 60 min), independentemente do NIHSS. Suspeita de grande vaso → angio-TC e acionar trombectomia. Sem trombólise e AVC menor (NIHSS ≤ 3) ou AIT de alto risco → AAS + clopidogrel em até 24 h (NIHSS 4–5 ou 24–72 h com causa aterosclerótica presumida: considerar).",
   clinica: {
     anamnese: [
       "Hora exata do início ou do último momento visto bem (testemunha!)",
@@ -144,7 +144,7 @@ registrarFicha({
       duracao: "—",
       monitorizacao: "Igual à alteplase",
       contraindicacoes: "Igual à alteplase",
-      ajustes: "AHA 2026: opção equivalente à alteplase em até 4,5 h. Frasco 50 mg + 10 mL de água = 5 mg/mL → 0,05 mL/kg (70 kg = 17,5 mg = 3,5 mL) em bolus de 5 s. Dose diferente da do IAM. Aprovada pela Anvisa para AVC (2025); conferir disponibilidade no SUS e protocolo local"
+      ajustes: "AHA 2026: opção equivalente à alteplase em até 4,5 h. Frasco 50 mg + 10 mL de água = 5 mg/mL → 0,05 mL/kg (70 kg = 17,5 mg = 3,5 mL) em bolus de 5 s. Dose diferente da do IAM. Indicação para AVC na bula brasileira relatada em dez/2025 (fonte secundária); conferir registro, disponibilidade no SUS e protocolo local"
     },
     {
       droga: "Controle pressórico pré-trombólise",
@@ -166,7 +166,7 @@ registrarFicha({
       duracao: "Contínuo",
       monitorizacao: "Deglutição antes da VO",
       contraindicacoes: "Nas 24 h após trombólise",
-      ajustes: "AVC menor não cardioembólico (NIHSS ≤ 3) ou AIT de alto risco, sem trombólise: AAS + clopidogrel (ataque 300–600 mg, depois 75 mg/dia) iniciados em até 24 h, por 21 dias, depois antiagregante único"
+      ajustes: "AVC menor não cardioembólico (NIHSS ≤ 3) ou AIT de alto risco, sem trombólise: AAS + clopidogrel (ataque 300–600 mg, depois 75 mg/dia) iniciados em até 24 h, por 21 dias, depois antiagregante único. AHA 2026 (recomendação mais fraca, estudo INSPIRES): considerar também em NIHSS 4–5 ou chegada entre 24 e 72 h, se causa aterosclerótica presumida"
     },
     {
       droga: "Glicose 50%",
@@ -220,5 +220,5 @@ registrarFicha({
     "ESO — Guideline on intravenous thrombolysis (2021) e recomendação sobre tenecteplase (2023)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

@@ -76,7 +76,7 @@ registrarFicha({
       intervalo: "Dose única no início da dor; pode repetir após 2–4 h",
       duracao: "Limitar a < 10–15 dias/mês",
       monitorizacao: "Dias de uso por mês",
-      contraindicacoes: "AINE: úlcera, DRC, gestação 3º tri",
+      contraindicacoes: "AINE: úlcera, DRC, gestação (evitar a partir de 20 semanas)",
       ajustes: "Associar metoclopramida 10 mg se náusea"
     },
     {
@@ -168,7 +168,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "TRATAMENTO DA CRISE (USO ORAL)\n1. Dipirona 500 mg ---------------------------------- 1 caixa\n   Tomar 2 comprimidos (1 g) no início da dor; pode repetir após 4 horas (máx 4 g/dia).\n   OU Ibuprofeno 600 mg, 1 comprimido no início da dor, após comer; pode repetir após 8 horas.\n2. Metoclopramida 10 mg ------------------------------ 10 comprimidos\n   Tomar 1 comprimido junto com o analgésico se náusea (máx 3 por dia).\n3. (Crise forte sem resposta ao analgésico) Sumatriptana 50 mg ---- 6 comprimidos\n   Tomar 1 comprimido no início da dor; se voltar, repetir após 2 horas (máx 200 mg/dia).\n   Usar remédio para crise no máximo 2 a 3 dias por semana.\n\nPROFILAXIA (USO ORAL — escolher uma)\n4. Propranolol 40 mg -------------------------------- 60 comprimidos\n   Tomar meio comprimido (20 mg) de 12 em 12 horas na 1ª semana; depois 1 comprimido de 12 em 12 horas. Uso contínuo.\n   OU Amitriptilina 25 mg ----------------------------- 30 comprimidos\n   Tomar meio comprimido (12,5 mg) à noite por 1 semana; depois 1 comprimido à noite. Uso contínuo.\n   OU Topiramato 25 mg ------------------------------- 60 comprimidos\n   Tomar 1 comprimido à noite; aumentar 25 mg por semana até 50 mg de 12 em 12 horas. Usar método contraceptivo eficaz."
+    ambulatorial: "TRATAMENTO DA CRISE (USO ORAL)\n1. Dipirona 500 mg ---------------------------------- 1 caixa\n   Tomar 2 comprimidos (1 g) no início da dor; pode repetir após 4 horas (máx 4 g/dia).\n   OU Ibuprofeno 600 mg, 1 comprimido no início da dor, após comer; pode repetir após 8 horas.\n2. Metoclopramida 10 mg ------------------------------ 10 comprimidos\n   Tomar 1 comprimido junto com o analgésico se náusea (máx 3 por dia).\n3. (Crise forte sem resposta ao analgésico) Sumatriptana 50 mg ---- 6 comprimidos\n   Tomar 1 comprimido no início da dor; se voltar, repetir após 2 horas (máx 200 mg/dia).\n   Usar remédio para crise no máximo 2 a 3 dias por semana.\n\nPROFILAXIA (USO ORAL — escolher uma)\n4. Propranolol 40 mg -------------------------------- 60 comprimidos\n   Tomar meio comprimido (20 mg) de 12 em 12 horas na 1ª semana; depois 1 comprimido de 12 em 12 horas. Uso contínuo.\n   OU Amitriptilina 25 mg ----------------------------- 30 comprimidos\n   Tomar meio comprimido (12,5 mg) à noite por 1 semana; depois 1 comprimido à noite. Uso contínuo.\n   OU Topiramato 25 mg ------------------------------- 70 comprimidos\n   Tomar 1 comprimido à noite; aumentar 25 mg por semana até 50 mg de 12 em 12 horas. Usar método contraceptivo eficaz."
   },
   orientacoesRetorno: [
     "Anotar no diário de cefaleia os dias de dor, a intensidade e os remédios tomados",
@@ -187,5 +187,5 @@ registrarFicha({
     "AHS Consensus Statement (2021)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

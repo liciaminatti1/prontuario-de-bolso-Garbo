@@ -88,7 +88,7 @@ registrarFicha({
       intervalo: "8/8h",
       duracao: "5–7 dias (menor tempo possível)",
       monitorizacao: "Dor epigástrica, PA, função renal",
-      contraindicacoes: "Úlcera, DRC, IC, anticoagulação, gestação 3º tri",
+      contraindicacoes: "Úlcera, DRC, IC, anticoagulação, gestação (evitar a partir de 20 semanas; contraindicado no 3º trimestre)",
       ajustes: "Naproxeno 500 mg 12/12h é alternativa. Idoso/risco GI: associar omeprazol 20 mg"
     },
     {
@@ -164,5 +164,5 @@ registrarFicha({
     "OMS — Guideline for non-surgical management of chronic primary low back pain in adults (2023)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

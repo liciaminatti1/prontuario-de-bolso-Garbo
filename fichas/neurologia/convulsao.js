@@ -67,7 +67,7 @@ registrarFicha({
       pedido: "Glicemia capilar imediata. Sódio, potássio, cálcio iônico, magnésio, glicemia, ureia, creatinina, gasometria venosa, CPK.",
       porQue: "Causas tratáveis.",
       esperar: "Acidose lática transitória pós-crise é esperada.",
-      interpretacao: "Na < 120 com crise → salina hipertônica 3% 100 mL IV.",
+      interpretacao: "Na < 120 com crise → salina hipertônica 3% 100 mL IV em 10 min (pode repetir até 3×, sem elevar o sódio mais que o limite seguro de 24 h).",
       limitacoes: "—"
     },
     {
@@ -222,9 +222,9 @@ registrarFicha({
     "American Epilepsy Society — Guideline for the Treatment of Convulsive Status Epilepticus in Children and Adults (2016)",
     "ESETT trial (N Engl J Med 2019; Lancet 2020 — análise pediátrica) — levetiracetam, fosfenitoína e valproato",
     "RAMPART (N Engl J Med 2012) — midazolam IM",
-    "Ministério da Saúde — PCDT Epilepsia (2019)",
+    "Ministério da Saúde — PCDT Epilepsia (Portaria Conjunta nº 17/2018; atualização aprovada pela Conitec em 2025 aguardando publicação)",
     "AHA — PALS (2025) para hipoglicemia pediátrica"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

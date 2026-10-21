@@ -152,7 +152,7 @@ registrarFicha({
       duracao: "Prematuros: ao longo do ano, de preferência na maternidade; comorbidades: no início da sazonalidade",
       monitorizacao: "—",
       contraindicacoes: "—",
-      ajustes: "SUS (NT nº 89/2026): prematuros ≤ 36 semanas e 6 dias, independentemente do peso, e < 24 meses com comorbidades (cardiopatia congênita, broncodisplasia, síndrome de Down, entre outras). Nirsevimabe substitui o palivizumabe. Vacina VSR para gestantes conforme o PNI"
+      ajustes: "Doses conforme bula. SUS (Portaria SCTIE/MS nº 14/2026 e notas técnicas do PNI de 2026): prematuros ≤ 36 semanas e 6 dias, independentemente do peso, e < 24 meses com comorbidades (cardiopatia congênita, broncodisplasia, síndrome de Down, entre outras). Nirsevimabe substitui o palivizumabe. Fora da sazonalidade, seguir a nota técnica vigente do PNI (NT nº 89/2026). Vacina VSR para gestantes conforme o PNI"
     }
   ],
   destino: {
@@ -179,7 +179,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "PRESCRIÇÃO — INTERNAÇÃO (LACTENTE, exemplo 6 kg — ajustar ao peso)\n1. Dieta: leite materno ou fórmula em livre demanda, fracionada. Se aceitação < 50% ou desconforto moderado: dieta por SNG (mesmo volume, fracionado de 3 em 3 horas).\n2. Se SNG impossível: solução isotônica IV — SG 5% 500 mL + NaCl 20% 20 mL — a 25 mL/h (100 mL/kg/dia; 2/3 = 17 mL/h se risco de SIADH). Acrescentar KCl 19,1% 5 mL por frasco após diurese.\n3. Lavagem nasal com SF 0,9% 1–2 mL em cada narina e aspiração nasal superficial antes das mamadas e se obstrução.\n4. O₂ por cateter nasal 0,5–2 L/min se SpO₂ < 90–92%; alvo SpO₂ ≥ 90–92%. Falha: cânula nasal de alto fluxo 2 L/kg/min.\n5. Salina hipertônica 3% 4 mL por nebulização de 8 em 8 horas (opcional, internados com previsão de > 72 h).\n6. Paracetamol 200 mg/mL: 1 gota/kg (10 mg/kg) VO de 6 em 6 horas se febre ≥ 37,8 °C ou dor (máx 75 mg/kg/dia).\n7. Cabeceira elevada 30°.\n8. Cuidados: SpO₂ contínua se em O₂, FR e esforço a cada 2–4 horas, balanço hídrico, peso diário, sódio se em soro IV. Isolamento de contato e gotículas.\n9. NÃO prescrever salbutamol, corticoide, antibiótico ou fisioterapia respiratória de rotina.",
+    hospitalar: "PRESCRIÇÃO — INTERNAÇÃO (LACTENTE, exemplo 6 kg — ajustar ao peso)\n1. Dieta: leite materno ou fórmula em livre demanda, fracionada. Se aceitação < 50% ou desconforto moderado: dieta por SNG (mesmo volume, fracionado de 3 em 3 horas).\n2. Se SNG impossível: solução isotônica IV — SG 5% 500 mL + NaCl 20% 20 mL — a 25 mL/h (100 mL/kg/dia; 2/3 = 17 mL/h se risco de SIADH). Acrescentar KCl 19,1% 5 mL por frasco após diurese.\n3. Lavagem nasal com SF 0,9% 1–2 mL em cada narina e aspiração nasal superficial antes das mamadas e se obstrução.\n4. O₂ por cateter nasal 0,5–2 L/min se SpO₂ < 90–92%; alvo SpO₂ ≥ 90–92%. Falha: cânula nasal de alto fluxo 2 L/kg/min.\n5. Salina hipertônica 3% 4 mL por nebulização de 8 em 8 horas (opcional, internados com previsão de > 72 h).\n6. Paracetamol 200 mg/mL: 1 gota/kg (10–15 mg/kg, conforme o conta-gotas da apresentação) VO de 6 em 6 horas se febre ≥ 37,8 °C ou dor (máx 75 mg/kg/dia).\n7. Cabeceira elevada 30°.\n8. Cuidados: SpO₂ contínua se em O₂, FR e esforço a cada 2–4 horas, balanço hídrico, peso diário, sódio se em soro IV. Isolamento de contato e gotículas.\n9. NÃO prescrever salbutamol, corticoide, antibiótico ou fisioterapia respiratória de rotina.",
     ambulatorial: "USO NASAL\n1. Soro fisiológico 0,9% -------------------------- 1 frasco\n   Pingar 1 a 2 mL em cada narina antes das mamadas e quando o nariz estiver entupido; aspirar com aspirador nasal.\n\nUSO ORAL\n2. Paracetamol 200 mg/mL gotas --------------------- 1 frasco\n   Dar 1 gota por kg de peso (máx 35 gotas) de 6 em 6 horas se febre ou dor."
   },
   orientacoesRetorno: [
@@ -191,11 +191,11 @@ registrarFicha({
     "Manter o bebê longe de fumaça de cigarro; lavar as mãos antes de pegá-lo; manter aleitamento materno"
   ],
   fontes: [
-    "Ministério da Saúde — Nota Técnica nº 89/2026: nirsevimabe para prevenção de VSR em prematuros e crianças com comorbidades (2026)",
+    "Ministério da Saúde — Portaria SCTIE/MS nº 14/2026 (protocolo de uso do nirsevimabe) e Estratégia de imunização contra o VSR para prematuros e crianças com comorbidades; Notas Técnicas nº 31/2026 e nº 89/2026-CGICI/DPNI/SVSA/MS",
     "AAP — Clinical Practice Guideline: Diagnosis, Management and Prevention of Bronchiolitis (2014, reafirmado)",
     "NICE NG9 — Bronchiolitis in children (2015, atualizado 2021)",
     "SBP — Diretrizes para o manejo da infecção causada pelo VSR (2017 e atualizações)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

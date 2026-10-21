@@ -57,7 +57,7 @@ registrarFicha({
     gravidade: [
       "CURB-65: Confusão, Ureia > 50 mg/dL, FR ≥ 30, PAS < 90 ou PAD ≤ 60, idade ≥ 65 — 1 ponto cada",
       "Critérios maiores de PAC grave (ATS/IDSA): choque com vasopressor ou ventilação mecânica",
-      "≥ 3 critérios menores (FR ≥ 30, PaO₂/FiO₂ ≤ 250, multilobar, confusão, ureia ≥ 40, leucócitos < 4 mil, plaquetas < 100 mil, hipotermia, hipotensão com volume) → UTI"
+      "≥ 3 critérios menores (FR ≥ 30, PaO₂/FiO₂ ≤ 250, multilobar, confusão, BUN ≥ 20 mg/dL (ureia ≥ 43 mg/dL), leucócitos < 4 mil, plaquetas < 100 mil, hipotermia, hipotensão com volume) → UTI"
     ]
   },
   exames: [
@@ -187,5 +187,5 @@ registrarFicha({
     "Dequin PF et al. CAPE COD — hidrocortisona na PAC grave (N Engl J Med, 2023)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

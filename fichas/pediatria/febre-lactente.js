@@ -8,7 +8,7 @@ registrarFicha({
   resumo: "Temperatura ≥ 38°C em lactente de até 90 dias sem foco aparente após história e exame. Risco de infecção bacteriana grave (ITU, bacteremia, meningite).",
   palavrasChave: "febre lactente recem-nascido neonato sem foco infeccao bacteriana grave sepse meningite itu procalcitonina ampicilina ceftriaxona pediatria",
   critico: {
-    tempo: "< 28 dias = investigação completa",
+    tempo: "≤ 28 dias = investigação completa",
     texto: "Até 21 dias (AAP 2021) e, na prática brasileira, até 28 dias: hemograma, hemocultura, urina por cateterismo com urocultura, líquor, internação e antibiótico IV, mesmo com bom estado geral."
   },
   alarmes: [
@@ -104,7 +104,7 @@ registrarFicha({
       duracao: "Até culturas negativas em 24–36 h ou conforme diagnóstico",
       monitorizacao: "Culturas",
       contraindicacoes: "—",
-      ajustes: "Associar cefotaxima 50 mg/kg 8/8h (6/6h se meningite) ou gentamicina 4 mg/kg 24/24h (sem suspeita de meningite). 22–28 dias sem suspeita de meningite: ampicilina 50 mg/kg 8/8h + ceftriaxona 50 mg/kg 24/24h (AAP 2021), se sem hiperbilirrubinemia"
+      ajustes: "Associar cefotaxima 50 mg/kg 8/8h (6/6h se meningite) ou gentamicina 4 mg/kg 24/24h (sem suspeita de meningite). 22–28 dias com líquor normal ou não colhido: a AAP 2021 aceita ceftriaxona 50 mg/kg 24/24h isolada (sem hiperbilirrubinemia); muitos serviços brasileiros mantêm ampicilina associada"
     },
     {
       droga: "Ceftriaxona (29–90 dias)",
@@ -189,10 +189,10 @@ registrarFicha({
   ],
   fontes: [
     "AAP — Clinical Practice Guideline: Evaluation and Management of Well-Appearing Febrile Infants 8 to 60 Days Old (Pediatrics, 2021)",
-    "SBP — Departamento de Infectologia: febre sem sinais localizatórios (documento científico vigente)",
+    "SBP — Departamentos de Pediatria Ambulatorial e Infectologia: Documento científico Manejo da febre aguda (2021)",
     "Gomez B et al. Step-by-Step approach (Pediatrics 2016)",
     "Kuppermann N et al. PECARN febrile infant rule (JAMA Pediatr 2019)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

@@ -194,9 +194,9 @@ registrarFicha({
   ],
   fontes: [
     "Global Initiative for Asthma (GINA) — Global Strategy for Asthma Management and Prevention (2026)",
-    "Ministério da Saúde — PCDT Asma (2023)",
+    "Ministério da Saúde — PCDT Asma (Portaria Conjunta SAES/SECTICS nº 32/2023; atualização de 2026 relatada por nota estadual, conferir no DOU)",
     "SBPT — Recomendações para o manejo da asma (2020)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

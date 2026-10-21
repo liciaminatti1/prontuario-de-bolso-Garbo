@@ -126,13 +126,13 @@ registrarFicha({
     {
       droga: "Sintomáticos",
       linha: "l1",
-      dose: "Dipirona 500–1.000 mg ou paracetamol 500–750 mg ou ibuprofeno 400 mg",
+      dose: "Adulto: dipirona 500–1.000 mg ou paracetamol 500–750 mg ou ibuprofeno 400 mg · criança: dipirona 15 mg/kg/dose (máx 1 g) ou paracetamol 10–15 mg/kg/dose (máx 750 mg) ou ibuprofeno 5–10 mg/kg/dose (máx 400 mg; > 6 meses)",
       via: "VO",
       intervalo: "6/6h ou 8/8h se necessário",
       duracao: "Enquanto sintomas",
       monitorizacao: "—",
       contraindicacoes: "AAS em < 18 anos (Reye)",
-      ajustes: "Mel para tosse em > 1 ano. Evitar antitussígenos e descongestionantes em < 6 anos"
+      ajustes: "Dipirona: evitar em < 3 meses ou < 5 kg. Mel para tosse em > 1 ano. Evitar antitussígenos e descongestionantes em < 6 anos"
     },
     {
       droga: "Influenza com risco: oseltamivir",
@@ -189,5 +189,5 @@ registrarFicha({
     "ABORL-CCF — Diretrizes Brasileiras de Rinossinusites (2015)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

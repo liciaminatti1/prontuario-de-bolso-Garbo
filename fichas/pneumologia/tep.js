@@ -190,12 +190,12 @@ registrarFicha({
       colunas: ["Categoria", "Definição resumida", "Equivalente ESC", "Destino"],
       linhas: [
         ["A", "TEP subclínico, incidental, assintomático", "—", "Tratamento ambulatorial"],
-        ["B", "Sintomático, escore de gravidade baixo (PESI I–II, sPESI 0 ou Hestia 0); B1 subsegmentar, B2 segmentar ou mais proximal", "Baixo risco", "Ambulatorial se anticoagulação e retorno garantidos"],
+        ["B", "Sintomático, escore de gravidade baixo (PESI I–II, sPESI 0 ou Hestia 0)", "Baixo risco", "Ambulatorial se anticoagulação e retorno garantidos"],
         ["C", "Sintomático com escore elevado, biomarcadores e/ou disfunção de VD", "Intermediário (baixo ou alto)", "Internação"],
         ["D", "Falência cardiopulmonar incipiente: D1 hipotensão transitória responsiva a volume; D2 choque normotenso", "Intermediário-alto", "UTI; discutir terapia avançada"],
         ["E", "Falência cardiopulmonar: hipotensão persistente/choque ou parada", "Alto risco", "Trombólise ou terapia por cateter; UTI"]
       ],
-      nota: "Resumo de fontes secundárias; conferir subcategorias C1–C3 e E1–E2 no texto completo (Circulation 2026)."
+      nota: "Resumo de fontes secundárias. Modificador R (respiratório) pode ser somado se hipoxemia ou taquipneia. Conferir subcategorias B, C e E no texto completo (Circulation 2026)."
     }
   ],
   prescricao: {
@@ -217,5 +217,5 @@ registrarFicha({
     "SBPT — Recomendações para manejo do TEP (2010)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });

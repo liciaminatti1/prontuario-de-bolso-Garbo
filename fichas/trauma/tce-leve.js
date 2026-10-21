@@ -112,7 +112,7 @@ registrarFicha({
     {
       droga: "Reversão de DOAC",
       linha: "l1",
-      dose: "Dabigatrana: idarucizumabe 5 g IV · anti-Xa (rivaroxabana, apixabana): andexanete ou complexo protrombínico 50 U/kg",
+      dose: "Dabigatrana: idarucizumabe 5 g IV · anti-Xa (rivaroxabana, apixabana): complexo protrombínico 50 U/kg (andexanete só se disponível; registro no Brasil não confirmado)",
       via: "IV",
       intervalo: "Dose única",
       duracao: "—",
@@ -186,5 +186,5 @@ registrarFicha({
     "CRASH-3 Trial Collaborators — ácido tranexâmico no TCE (Lancet 2019)"
   ],
   revisao: "2026-10-21",
-  versao: "1.1"
+  versao: "1.2"
 });
