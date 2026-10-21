@@ -93,7 +93,7 @@ registrarFicha({
     }
   ],
   prescricao: {
-    ambulatorial: "SÍFILIS NA GESTAÇÃO (teste rápido reagente)\nUSO INTRAMUSCULAR\n1. Benzilpenicilina benzatina 1.200.000 UI ------- 2 frascos-ampola (por dose)\n   Aplicar 2.400.000 UI IM (1.200.000 UI em cada glúteo) hoje.\n   Latente tardia ou de duração ignorada: repetir 2.400.000 UI IM após 7 e 14 dias (total 3 doses).\n\nTOXOPLASMOSE AGUDA SUSPEITA (IgM reagente)\nUSO ORAL\n2. Espiramicina 500 mg (1,5 milhão UI) ----------- 6 comprimidos/dia\n   Tomar 2 comprimidos (1 g) de 8 em 8 horas, sem interrupção, até a avaliação no pré-natal de alto risco.\n\nANEMIA (Hb 8 a < 11 g/dL)\n3. Sulfato ferroso 40 mg de ferro elementar ---- 90 comprimidos\n   Tomar 1 comprimido 3 vezes ao dia, entre as refeições, com suco cítrico. Não tomar junto com cálcio ou leite."
+    ambulatorial: "SÍFILIS NA GESTAÇÃO (teste rápido reagente)\nUSO INTRAMUSCULAR\n1. Benzilpenicilina benzatina 1.200.000 UI ------- 2 frascos-ampola (por dose)\n   Aplicar 2.400.000 UI IM (1.200.000 UI em cada glúteo) hoje.\n   Latente tardia ou de duração ignorada: repetir 2.400.000 UI IM após 7 e 14 dias (total 3 doses).\n\nTOXOPLASMOSE AGUDA SUSPEITA (IgM reagente)\nUSO ORAL\n2. Espiramicina 500 mg (1,5 milhão UI) ----------- 84 comprimidos\n   Tomar 2 comprimidos (1 g) de 8 em 8 horas, sem interrupção, por 14 dias e renovar até a avaliação no pré-natal de alto risco (não suspender sem orientação).\n\nANEMIA (Hb 8 a < 11 g/dL)\n3. Sulfato ferroso 40 mg de ferro elementar ---- 90 comprimidos\n   Tomar 1 comprimido 3 vezes ao dia, entre as refeições, com suco cítrico. Não tomar junto com cálcio ou leite."
   },
   orientacoesRetorno: [
     "Fazer os exames pedidos e trazer os resultados na próxima consulta, junto com a Caderneta da Gestante",

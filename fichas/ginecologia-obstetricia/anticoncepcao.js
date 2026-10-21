@@ -58,7 +58,7 @@ registrarFicha({
     ],
     gravidade: [
       "MEC categoria 1: sem restrição · 2: vantagens superam riscos · 3: riscos geralmente superam vantagens · 4: risco inaceitável",
-      "Combinados categoria 4 (exemplos): ≥ 35 anos fumante ≥ 15 cigarros/dia; PA ≥ 160/100 ou doença vascular; enxaqueca com aura; TEV atual ou prévio; trombofilia; AVC/DAC; valvopatia complicada; câncer de mama atual; tumor hepático/cirrose descompensada; LES com antifosfolípide positivo; pós-parto imediato",
+      "Combinados categoria 4 (exemplos): ≥ 35 anos fumante ≥ 15 cigarros/dia; PA ≥ 160/100 ou doença vascular; enxaqueca com aura; TEV atual ou prévio; trombofilia; AVC/DAC; valvopatia complicada; câncer de mama atual; tumor hepático/cirrose descompensada; LES com antifosfolípide positivo; pós-parto < 21 dias sem amamentar ou < 6 semanas amamentando (MEC 5ª ed.; conferir na tabela da 6ª ed.)",
       "DIU categoria 4: gravidez; sepse puerperal ou pós-aborto séptico; DIP ou cervicite purulenta/clamídia/gonorreia atual; sangramento vaginal inexplicado; câncer de colo ou endométrio aguardando tratamento; cavidade uterina distorcida; tuberculose pélvica",
       "DIU no pós-parto (MEC 2025): até 48 h cobre categoria 1 (SIU-LNG 2); de 48 h a < 4 semanas categoria 3; ≥ 4 semanas categoria 1"
     ]
@@ -118,7 +118,7 @@ registrarFicha({
       dose: "1 dispositivo",
       via: "Intrauterina",
       intervalo: "—",
-      duracao: "Até 8 anos para contracepção (conforme bula); 5 anos se uso para fluxo intenso",
+      duracao: "Conforme a bula do produto registrado (5 anos; estudos e FDA: até 8 anos para contracepção); 5 anos se uso para fluxo intenso",
       monitorizacao: "Revisão em 4–12 semanas",
       contraindicacoes: "Semelhantes ao DIU de cobre; câncer de mama atual",
       ajustes: "Reduz fluxo e cólica. Disponibilidade no SUS limitada a indicações específicas conforme local. Até o 7º dia do ciclo sem apoio; depois, 7 dias de preservativo"
@@ -139,7 +139,7 @@ registrarFicha({
       linha: "alt",
       dose: "1 ampola",
       via: "IM profunda",
-      intervalo: "A cada 30 dias (± 3 dias)",
+      intervalo: "A cada 4 semanas (OMS: pode ser aplicada até 7 dias antes ou depois da data)",
       duracao: "Contínuo",
       monitorizacao: "PA",
       contraindicacoes: "As mesmas dos combinados (contém estrogênio)",
@@ -197,7 +197,7 @@ registrarFicha({
       intervalo: "—",
       duracao: "—",
       monitorizacao: "—",
-      contraindicacoes: "Enxaqueca com aura, ≥ 35 anos fumante, PA ≥ 160/100, TEV, trombofilia, AVC/DAC, câncer de mama, pós-parto imediato",
+      contraindicacoes: "Enxaqueca com aura, ≥ 35 anos fumante de ≥ 15 cigarros/dia, PA ≥ 160/100, TEV, trombofilia, AVC/DAC, câncer de mama, pós-parto recente (< 21 dias sem amamentar; < 6 semanas amamentando)",
       ajustes: "Trocar por DIU, implante, AMPD ou pílula só de progestagênio"
     }
   ],
@@ -225,7 +225,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "PÍLULA COMBINADA\nUSO ORAL\n1. Levonorgestrel 0,15 mg + etinilestradiol 0,03 mg ---- 3 cartelas\n   Tomar 1 comprimido ao dia, no mesmo horário, por 21 dias; fazer pausa de 7 dias e iniciar nova cartela no 8º dia. Começar hoje; se já passou o 5º dia da menstruação, usar camisinha nos primeiros 7 dias.\n\nPÍLULA SÓ DE PROGESTAGÊNIO (amamentação ou contraindicação a estrogênio)\n2. Noretisterona 0,35 mg ------------------------------ 3 cartelas\n   Tomar 1 comprimido ao dia, sempre no mesmo horário, sem pausa entre as cartelas.\n\nINJETÁVEL TRIMESTRAL (USO INTRAMUSCULAR)\n3. Acetato de medroxiprogesterona 150 mg/mL ----------- 1 ampola\n   Aplicar 1 mL IM profundo hoje e a cada 3 meses (próxima: ___/___/___).\n\nINJETÁVEL MENSAL (USO INTRAMUSCULAR)\n4. Enantato de noretisterona 50 mg + valerato de estradiol 5 mg -- 1 ampola\n   Aplicar 1 ampola IM a cada 30 dias (mesmo dia do mês).\n\nCONTRACEPÇÃO DE EMERGÊNCIA (USO ORAL)\n5. Levonorgestrel 1,5 mg ------------------------------- 1 comprimido\n   Tomar 1 comprimido o quanto antes, até 5 dias após a relação (melhor nas primeiras 72 horas).\n   (Se só houver 0,75 mg: tomar 2 comprimidos juntos.)\n\nPRESERVATIVOS\n6. Preservativo masculino ou feminino ------------------ ___ unidades\n   Usar em todas as relações.\n\nAPÓS INSERÇÃO DE DIU (SE CÓLICA)\n7. Ibuprofeno 400 mg ----------------------------------- 12 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, com alimento, se cólica, por até 3 dias."
+    ambulatorial: "PÍLULA COMBINADA\nUSO ORAL\n1. Levonorgestrel 0,15 mg + etinilestradiol 0,03 mg ---- 3 cartelas\n   Tomar 1 comprimido ao dia, no mesmo horário, por 21 dias; fazer pausa de 7 dias e iniciar nova cartela no 8º dia. Começar hoje; se já passou o 5º dia da menstruação, usar camisinha nos primeiros 7 dias.\n\nPÍLULA SÓ DE PROGESTAGÊNIO (amamentação ou contraindicação a estrogênio)\n2. Noretisterona 0,35 mg ------------------------------ 3 cartelas\n   Tomar 1 comprimido ao dia, sempre no mesmo horário, sem pausa entre as cartelas.\n\nINJETÁVEL TRIMESTRAL (USO INTRAMUSCULAR)\n3. Acetato de medroxiprogesterona 150 mg/mL ----------- 1 ampola\n   Aplicar 1 mL IM profundo hoje e a cada 3 meses (próxima: ___/___/___).\n\nINJETÁVEL MENSAL (USO INTRAMUSCULAR)\n4. Enantato de noretisterona 50 mg + valerato de estradiol 5 mg -- 1 ampola\n   Aplicar 1 ampola IM a cada 4 semanas (próxima: ___/___/___).\n\nCONTRACEPÇÃO DE EMERGÊNCIA (USO ORAL)\n5. Levonorgestrel 1,5 mg ------------------------------- 1 comprimido\n   Tomar 1 comprimido o quanto antes, até 5 dias após a relação (melhor nas primeiras 72 horas).\n   (Se só houver 0,75 mg: tomar 2 comprimidos juntos.)\n\nPRESERVATIVOS\n6. Preservativo masculino ou feminino ------------------ ___ unidades\n   Usar em todas as relações.\n\nAPÓS INSERÇÃO DE DIU (SE CÓLICA)\n7. Ibuprofeno 400 mg ----------------------------------- 12 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, com alimento, se cólica, por até 3 dias."
   },
   orientacoesRetorno: [
     "Nenhum método é 100%; DIU e implante são os mais eficazes porque não dependem de lembrar",

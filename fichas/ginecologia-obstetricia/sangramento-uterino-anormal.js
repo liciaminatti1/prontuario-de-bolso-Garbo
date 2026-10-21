@@ -10,7 +10,7 @@ registrarFicha({
   palavrasChave: "sangramento uterino anormal sua hemorragia uterina disfuncional menorragia metrorragia sangramento menstrual intenso palm coein polipo adenomiose mioma leiomioma hiperplasia endometrio coagulopatia von willebrand anovulacao acido tranexamico medroxiprogesterona anticoncepcional diu levonorgestrel",
   critico: {
     tempo: "Beta-hCG e estabilidade",
-    texto: "Excluir gravidez (ectópica, abortamento) e avaliar instabilidade hemodinâmica antes de tudo. Sangramento agudo intenso estável: anticoncepcional combinado 3×/dia ou medroxiprogesterona 3×/dia, mais ácido tranexâmico, por 7 dias."
+    texto: "Excluir gravidez (ectópica, abortamento) e avaliar instabilidade hemodinâmica antes de tudo. Sangramento agudo intenso estável: anticoncepcional combinado 3×/dia ou medroxiprogesterona 3×/dia por 7 dias; ácido tranexâmico como alternativa ou adjuvante (cautela ao associar com estrogênio)."
   },
   alarmes: [
     "Instabilidade hemodinâmica: PAS < 90, FC > 100–120, síncope, palidez intensa",
@@ -26,7 +26,7 @@ registrarFicha({
     "Beta-hCG em toda mulher em idade reprodutiva",
     "Exame especular: origem do sangramento (colo, vagina, uretra, ânus), lesões, corpo estranho, pólipo",
     "Instável: 2 acessos, cristaloide, tipagem e prova cruzada, transfusão, ácido tranexâmico IV e ginecologia de urgência",
-    "Estável com sangramento agudo intenso: tratamento hormonal em altas doses + ácido tranexâmico por 7 dias",
+    "Estável com sangramento agudo intenso: tratamento hormonal em altas doses por 7 dias; ácido tranexâmico como alternativa ou adjuvante (cautela com estrogênio)",
     "Investigar a causa (PALM-COEIN): USG transvaginal, TSH, coagulograma se suspeita, biópsia endometrial se indicada",
     "Tratar anemia (ferro) e planejar tratamento de manutenção"
   ],
@@ -175,7 +175,7 @@ registrarFicha({
     {
       droga: "AMPD 150 mg IM trimestral / progestogênio oral contínuo",
       linha: "alt",
-      dose: "AMPD 150 mg a cada 3 meses · Noretisterona 5 mg 3×/dia do 5º ao 26º dia do ciclo",
+      dose: "AMPD 150 mg a cada 3 meses · Progestogênio oral cíclico longo (NICE: noretisterona 15 mg/dia do 5º ao 26º dia; verificar disponibilidade da apresentação de 5 mg no Brasil)",
       via: "IM · VO",
       intervalo: "—",
       duracao: "Manutenção",
@@ -186,7 +186,7 @@ registrarFicha({
     {
       droga: "Sulfato ferroso",
       linha: "adj",
-      dose: "40 mg de ferro elementar 1–3 vezes ao dia (60–120 mg/dia)",
+      dose: "80–120 mg de ferro elementar ao dia (2–3 comprimidos de 40 mg) em tomada única",
       via: "VO",
       intervalo: "1×/dia ou em dias alternados (melhor absorção)",
       duracao: "3 meses após normalizar a Hb",
@@ -209,7 +209,7 @@ registrarFicha({
   destino: {
     agora: [
       "Instável: estabilizar e transferir/encaminhar à emergência ginecológica",
-      "Estável: iniciar esquema hormonal em dose alta + ácido tranexâmico e solicitar exames"
+      "Estável: iniciar esquema hormonal em dose alta (± ácido tranexâmico) e solicitar exames"
     ],
     reavaliar: [
       "Sangramento agudo: em 24–48 h (redução do fluxo) e ao fim dos 7 dias",
@@ -231,7 +231,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "SANGRAMENTO AGUDO INTENSO, ESTÁVEL (beta-hCG negativo)\nUSO ORAL\n1. Levonorgestrel 0,15 mg + etinilestradiol 0,03 mg ---- 2 cartelas\n   Tomar 1 comprimido de 8 em 8 horas por 7 dias; depois 1 comprimido ao dia até terminar a cartela e seguir com 1 ao dia por pelo menos 3 meses.\n   OU (se estrogênio contraindicado) Acetato de medroxiprogesterona 10 mg --- 42 comprimidos\n   Tomar 2 comprimidos (20 mg) de 8 em 8 horas por 7 dias.\n2. Ácido tranexâmico 250 mg ------------------------- 60 comprimidos\n   Tomar 4 comprimidos (1 g) de 8 em 8 horas por até 5 dias.\n3. Metoclopramida 10 mg ----------------------------- 10 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas se enjoo.\n4. Sulfato ferroso 40 mg de ferro elementar -------- 90 comprimidos\n   Tomar 1 comprimido 2 a 3 vezes ao dia, entre as refeições, por 3 meses.\n\nSANGRAMENTO MENSTRUAL INTENSO CRÔNICO (sem lesão estrutural)\n5. Ácido tranexâmico 250 mg ------------------------- 60 comprimidos\n   Tomar 4 comprimidos (1 g) de 8 em 8 horas nos dias de maior fluxo, por até 5 dias a cada menstruação.\n6. Ácido mefenâmico 500 mg -------------------------- 15 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas durante a menstruação, por até 5 dias.",
+    ambulatorial: "SANGRAMENTO AGUDO INTENSO, ESTÁVEL (beta-hCG negativo)\nUSO ORAL\n1. Levonorgestrel 0,15 mg + etinilestradiol 0,03 mg ---- 4 cartelas\n   Tomar 1 comprimido de 8 em 8 horas por 7 dias (usa a 1ª cartela inteira); depois iniciar nova cartela e tomar 1 comprimido ao dia por pelo menos 3 meses.\n   OU (se estrogênio contraindicado) Acetato de medroxiprogesterona 10 mg --- 42 comprimidos\n   Tomar 2 comprimidos (20 mg) de 8 em 8 horas por 7 dias.\n2. Ácido tranexâmico 250 mg ------------------------- 60 comprimidos\n   Tomar 4 comprimidos (1 g) de 8 em 8 horas por até 5 dias. (Cautela se associado ao anticoncepcional combinado: risco trombótico teórico; não usar se TEV prévio.)\n3. Metoclopramida 10 mg ----------------------------- 10 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas se enjoo.\n4. Sulfato ferroso 40 mg de ferro elementar -------- 180 comprimidos\n   Tomar 2 comprimidos juntos (80 mg de ferro elementar) 1 vez ao dia, 30 minutos antes do almoço, com suco cítrico, por 3 meses. Se enjoo, tomar em dias alternados.\n\nSANGRAMENTO MENSTRUAL INTENSO CRÔNICO (sem lesão estrutural)\n5. Ácido tranexâmico 250 mg ------------------------- 60 comprimidos\n   Tomar 4 comprimidos (1 g) de 8 em 8 horas nos dias de maior fluxo, por até 5 dias a cada menstruação.\n6. Ácido mefenâmico 500 mg -------------------------- 15 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas durante a menstruação, por até 5 dias.",
     hospitalar: "SANGRAMENTO UTERINO AGUDO INTENSO — SALA DE EMERGÊNCIA (peso: ___ kg)\n1. Dieta zero se instável ou possibilidade de procedimento.\n2. Monitor, oximetria, 2 acessos venosos calibrosos; decúbito dorsal; O₂ se SpO₂ < 94%.\n3. Coletar: hemograma, tipagem ABO-Rh e prova cruzada, beta-hCG, TP/INR, TTPa, fibrinogênio, plaquetas, creatinina.\n4. Ringer lactato ou SF 0,9% 500–1.000 mL IV rápido se hipotensa; reavaliar após cada alíquota.\n5. Concentrado de hemácias se instabilidade persistente ou Hb < 7 g/dL.\n6. Ácido tranexâmico 10 mg/kg (máx. 600 mg) + SF 0,9% 100 mL IV em 10–15 min de 8/8 h (ampola 250 mg/5 mL; 600 mg = 12 mL).\n7. Se estável e sem contraindicação: levonorgestrel 0,15 mg + etinilestradiol 0,03 mg 1 comprimido VO de 8/8 h por 7 dias (ou acetato de medroxiprogesterona 20 mg VO de 8/8 h).\n8. Metoclopramida 10 mg + SF 0,9% 20 mL IV lento de 8/8 h se náusea.\n9. Sem resposta em 24 h ou instável: ginecologia — tamponamento com sonda Foley (balão com 30 mL), AMIU/curetagem com histopatológico, embolização ou cirurgia.\n10. Controles: sinais vitais de 1/1 h até estabilizar; contagem de absorventes; diurese; Hb de 6/6 h a 12/12 h."
   },
   orientacoesRetorno: [

@@ -145,7 +145,7 @@ registrarFicha({
     {
       droga: "Metformina",
       linha: "alt",
-      dose: "500 mg 1–2×/dia, aumentar até 2.000–2.500 mg/dia",
+      dose: "500 mg 1–2×/dia, aumentar até 2.000 mg/dia (máx. 2.500 mg/dia)",
       via: "VO, com refeições",
       intervalo: "12/12 h ou 8/8 h",
       duracao: "Até o parto",
@@ -201,7 +201,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "DMG — INÍCIO DE INSULINA (exemplo: 70 kg × 0,5 UI/kg = 35 UI/dia; ajustar)\nUSO SUBCUTÂNEO\n1. Insulina humana NPH 100 UI/mL ----------------- 1 frasco (ou canetas)\n   Aplicar ___ UI antes do café da manhã e ___ UI às 22 horas (ex.: 14 UI + 10 UI). Ajustar a cada 3 a 7 dias pelas glicemias.\n2. Insulina humana regular 100 UI/mL ------------- 1 frasco (se pós-prandial alta)\n   Aplicar ___ UI 30 minutos antes de ___ (refeição com glicemia 1 h > 140 mg/dL).\n3. Seringas de insulina, agulhas curtas, glicosímetro, tiras e lancetas (SUS).\n\nMONITORIZAÇÃO\nGlicemia capilar em jejum e 1 hora após café, almoço e jantar; anotar e trazer em 1 semana.\nMetas: jejum < 95; 1 hora após refeição < 140; 2 horas < 120 mg/dL.\n\nALTERNATIVA SE INSULINA INVIÁVEL (USO ORAL)\n4. Metformina 500 mg ---------------------------- 60 comprimidos\n   Tomar 1 comprimido no jantar por 1 semana; depois 1 no almoço e 1 no jantar; aumentar conforme glicemias até 2 comprimidos 2 a 3 vezes ao dia.\n\nDM PRÉVIO\n5. Ácido acetilsalicílico 100 mg ---------------- 30 comprimidos\n   Tomar 1 comprimido à noite, de 12 a 36 semanas.\n\nHIPOGLICEMIA (glicemia < 70 mg/dL ou sintomas)\nTomar 15 g de açúcar (1 colher de sopa de açúcar em água ou 150 mL de suco ou refrigerante comum), medir em 15 minutos e repetir se ainda < 70."
+    ambulatorial: "DMG — INÍCIO DE INSULINA (exemplo: 70 kg × 0,5 UI/kg = 35 UI/dia; menor se só o jejum estiver alterado; ajustar)\nUSO SUBCUTÂNEO\n1. Insulina humana NPH 100 UI/mL ----------------- 1 frasco (ou canetas)\n   Aplicar ___ UI antes do café da manhã e ___ UI às 22 horas (ex.: dose total de 35 UI = 20 UI antes do café + 15 UI às 22 h; se só o jejum alto, começar só com a dose das 22 h). Ajustar a cada 3 a 7 dias pelas glicemias.\n2. Insulina humana regular 100 UI/mL ------------- 1 frasco (se pós-prandial alta)\n   Aplicar ___ UI 30 minutos antes de ___ (refeição com glicemia 1 h > 140 mg/dL).\n3. Seringas de insulina, agulhas curtas, glicosímetro, tiras e lancetas (SUS).\n\nMONITORIZAÇÃO\nGlicemia capilar em jejum e 1 hora após café, almoço e jantar; anotar e trazer em 1 semana.\nMetas: jejum < 95; 1 hora após refeição < 140; 2 horas < 120 mg/dL.\n\nALTERNATIVA SE INSULINA INVIÁVEL (USO ORAL)\n4. Metformina 500 mg ---------------------------- 60 comprimidos\n   Tomar 1 comprimido no jantar por 1 semana; depois 1 no almoço e 1 no jantar; aumentar conforme glicemias até no máximo 2 comprimidos 2 vezes ao dia (2.000 mg/dia).\n\nDM PRÉVIO\n5. Ácido acetilsalicílico 100 mg ---------------- 30 comprimidos\n   Tomar 1 comprimido à noite, de 12 a 36 semanas.\n\nHIPOGLICEMIA (glicemia < 70 mg/dL ou sintomas)\nTomar 15 g de açúcar (1 colher de sopa de açúcar em água ou 150 mL de suco ou refrigerante comum), medir em 15 minutos e repetir se ainda < 70."
   },
   orientacoesRetorno: [
     "Diabetes gestacional é comum e controlável; a alimentação e as glicemias são o tratamento principal",
