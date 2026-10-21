@@ -252,7 +252,7 @@ registrarFicha({
   fontes: [
     "EAU — Guidelines on Management of Non-neurogenic Male LUTS (edição 2025)",
     "AUA — Management of Lower Urinary Tract Symptoms Attributed to BPH (2021, emenda 2023)",
-    "INCA / Ministério da Saúde — Detecção precoce do câncer de próstata: nota técnica sobre rastreamento (posição vigente consultada em 2026)",
+    "Ministério da Saúde / INCA — Nota técnica conjunta sobre rastreamento do câncer de próstata (2023): não recomenda rastreamento populacional (posição mantida em 2026)",
     "Sociedade Brasileira de Urologia — posicionamento sobre rastreamento do câncer de próstata (Novembro Azul)",
     "Ministério da Saúde — RENAME 2024 (doxazosina, finasterida)",
     "American Geriatrics Society — Beers Criteria (2023)"
