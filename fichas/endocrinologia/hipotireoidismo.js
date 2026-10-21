@@ -22,7 +22,7 @@ registrarFicha({
     "Confirmar TSH alterado em nova dosagem com T4 livre (4–12 semanas, exceto se TSH muito alto ou gestante)",
     "Anti-TPO para definir etiologia autoimune",
     "Clínico: levotiroxina",
-    "Subclínico: tratar se TSH ≥ 10, gestação ou desejo de gestar; individualizar se 4,5–10",
+    "Subclínico: tratar se TSH ≥ 10; na gestação ou desejo de gestar, confirmar o TSH e seguir o pré-natal (gestante eutireoidiana com anti-TPO positivo não recebe levotiroxina — ATA 2026); individualizar se 4,5–10",
     "Orientar tomada em jejum e interações"
   ],
   fataisExcluir: [
@@ -144,7 +144,8 @@ registrarFicha({
   fontes: [
     "SBEM — Consenso Brasileiro para Abordagem Clínica e Tratamento do Hipotireoidismo Subclínico em Adultos (Arq Bras Endocrinol Metab, 2013)",
     "ATA — Guidelines for the Treatment of Hypothyroidism (2014)",
-    "ATA — Guidelines for the Diagnosis and Management of Thyroid Disease During Pregnancy and the Postpartum (2017)"
+    "SBEM — Posicionamento sobre hipotireoidismo primário em situações especiais (Arch Endocrinol Metab, 2022)",
+    "ATA — 2026 Guidelines for Thyroid Disease in Preconception, Pregnancy, and the Postpartum (Thyroid, 2026): não tratar com levotiroxina a gestante eutireoidiana, mesmo com anti-TPO positivo"
   ],
   revisao: "2026-10-21",
   versao: "1.1"

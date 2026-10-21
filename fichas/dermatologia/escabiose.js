@@ -102,7 +102,7 @@ registrarFicha({
     {
       droga: "Anti-histamínico para prurido",
       linha: "adj",
-      dose: "Ex.: dexclorfeniramina 2 mg 8/8h (criança 0,15 mg/kg/dia) ou hidroxizina 25 mg à noite",
+      dose: "Ex.: dexclorfeniramina 2 mg 8/8h, máx 12 mg/dia (criança 0,15 mg/kg/dia; máx 3 mg/dia de 2 a 6 anos e 6 mg/dia de 6 a 12 anos) ou hidroxizina 25 mg à noite",
       via: "VO",
       intervalo: "Conforme droga",
       duracao: "Enquanto prurido",
@@ -133,7 +133,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "ADULTO E CRIANÇA ≥ 2 MESES — 1ª ESCOLHA (paciente e cada contato)\nUSO TÓPICO\n1. Permetrina 5% loção ou creme ------------------ 1 frasco/bisnaga por pessoa\n   Aplicar à noite em todo o corpo, do pescoço até a sola dos pés, inclusive entre os dedos, sob as unhas, umbigo e genitais. Em criança < 2 anos e idoso, incluir couro cabeludo e rosto (sem olhos e boca). Deixar 8 a 12 horas e tomar banho. Repetir após 7 dias.\n\nALTERNATIVA ORAL (≥ 15 kg, não gestante, não lactante)\nUSO ORAL\n2. Ivermectina 6 mg ------------------------------ ___ comprimidos\n   Tomar 200 mcg/kg em dose única, com alimento; repetir após 7 a 14 dias. (15–24 kg: ½ cp; 25–35 kg: 1 cp; 36–50 kg: 1½ cp; 51–65 kg: 2 cp; 66–79 kg: 2½ cp; ≥ 80 kg: 3 cp.)\n\nGESTANTE OU LACTENTE < 2 MESES (se permetrina não indicada/indisponível)\nUSO TÓPICO\n3. Enxofre precipitado 5% (lactente/gestante) a 10% em vaselina — manipulado ---- 1 pote\n   Aplicar em todo o corpo à noite por 3 noites seguidas; tomar banho 24 h após cada aplicação. Repetir após 7 dias.\n\nPARA COCEIRA\nUSO ORAL\n4. Dexclorfeniramina 2 mg ------------------------ 20 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas se coceira, por até 7 dias.\n   Criança 2–12 anos: dexclorfeniramina 0,4 mg/mL solução, 0,15 mg/kg/dia divididos de 8/8 h (respeitar a dose máxima da bula para a idade)."
+    ambulatorial: "ADULTO E CRIANÇA ≥ 2 MESES — 1ª ESCOLHA (paciente e cada contato)\nUSO TÓPICO\n1. Permetrina 5% loção ou creme ------------------ 1 frasco/bisnaga por pessoa\n   Aplicar à noite em todo o corpo, do pescoço até a sola dos pés, inclusive entre os dedos, sob as unhas, umbigo e genitais. Em criança < 2 anos e idoso, incluir couro cabeludo e rosto (sem olhos e boca). Deixar 8 a 12 horas e tomar banho. Repetir após 7 dias.\n\nALTERNATIVA ORAL (≥ 15 kg, não gestante, não lactante)\nUSO ORAL\n2. Ivermectina 6 mg ------------------------------ ___ comprimidos\n   Tomar 200 mcg/kg em dose única, com alimento; repetir após 7 a 14 dias. (15–24 kg: ½ cp; 25–35 kg: 1 cp; 36–50 kg: 1½ cp; 51–65 kg: 2 cp; 66–79 kg: 2½ cp; ≥ 80 kg: 200 mcg/kg, arredondar para o ½ comprimido mais próximo.)\n\nGESTANTE OU LACTENTE < 2 MESES (se permetrina não indicada/indisponível)\nUSO TÓPICO\n3. Enxofre precipitado 5% (lactente/gestante) a 10% em vaselina — manipulado ---- 1 pote\n   Aplicar em todo o corpo à noite por 3 noites seguidas; tomar banho 24 h após cada aplicação. Repetir após 7 dias.\n\nPARA COCEIRA\nUSO ORAL\n4. Dexclorfeniramina 2 mg ------------------------ 21 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas se coceira, por até 7 dias.\n   Criança 2–12 anos: dexclorfeniramina 0,4 mg/mL solução, 0,15 mg/kg/dia divididos de 8/8 h, por até 7 dias (máx 3 mg/dia de 2 a 6 anos; 6 mg/dia de 6 a 12 anos)."
   },
   orientacoesRetorno: [
     "Tratar todos da casa e parcerias sexuais no mesmo dia, mesmo quem não tem coceira",

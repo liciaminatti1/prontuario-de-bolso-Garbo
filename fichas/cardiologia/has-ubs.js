@@ -9,7 +9,7 @@ registrarFicha({
   palavrasChave: "hipertensao has pressao alta pre-hipertensao losartana enalapril captopril anlodipino hidroclorotiazida clortalidona espironolactona mapa mrpa risco cardiovascular",
   critico: {
     tempo: "Confirme fora do consultório",
-    texto: "PA ≥ 140/90 em consultório deve ser confirmada por MRPA ou MAPA, salvo PA ≥ 180/110 ou lesão de órgão-alvo."
+    texto: "PA ≥ 140/90 em consultório deve ser confirmada por MRPA/MAPA ou por medidas repetidas em 2 ou mais consultas, salvo PA ≥ 180/110 ou lesão de órgão-alvo."
   },
   alarmes: [
     "PA ≥ 180/110 com sintomas de órgão-alvo → ficha Crise hipertensiva",
@@ -20,7 +20,7 @@ registrarFicha({
   ],
   condutaInicial: [
     "Medir corretamente: repouso 5 min, manguito adequado, 2–3 medidas, ambos os braços na 1ª consulta",
-    "Confirmar com MRPA (7 dias) ou MAPA",
+    "Confirmar com MRPA (5–7 dias) ou MAPA; sem acesso, repetir medidas em 2 ou mais consultas",
     "Exames iniciais e ECG",
     "Calcular risco cardiovascular",
     "Mudança de estilo de vida para todos + medicamento conforme estágio e risco"
@@ -99,7 +99,7 @@ registrarFicha({
     },
     {
       nome: "MRPA / MAPA",
-      pedido: "MRPA (7 dias, 2 medidas manhã e noite) ou MAPA de 24 h.",
+      pedido: "MRPA (5–7 dias, 3 medidas pela manhã e 3 à noite) ou MAPA de 24 h.",
       porQue: "Confirmar diagnóstico e excluir avental branco.",
       esperar: "—",
       interpretacao: "Hipertensão: MRPA ≥ 130/80; MAPA 24 h ≥ 130/80, vigília ≥ 135/85, sono ≥ 120/70.",

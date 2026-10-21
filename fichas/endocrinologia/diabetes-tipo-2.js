@@ -120,7 +120,7 @@ registrarFicha({
       duracao: "Contínuo",
       monitorizacao: "Infecção genital, volemia, cetoacidose euglicêmica",
       contraindicacoes: "DM1, cetoacidose prévia",
-      ajustes: "Prioridade se DCV, IC ou DRC (benefício independente da glicemia). No SUS (Componente Especializado), conforme critérios do PCDT DM2 (idade e risco/doença cardiovascular). Suspender 3 dias antes de cirurgia e em doença aguda com desidratação ou jejum"
+      ajustes: "Prioridade se DCV, IC ou DRC (benefício independente da glicemia). No SUS (Componente Especializado, PCDT DM2 2024): como intensificação após metformina + sulfonilureia, em ≥ 65 anos com DCV estabelecida ou 40–64 anos com DCV estabelecida ou alto risco cardiovascular (conferir critérios atuais de dispensação). Suspender 3 dias antes de cirurgia e em doença aguda com desidratação ou jejum"
     },
     {
       droga: "Gliclazida MR",

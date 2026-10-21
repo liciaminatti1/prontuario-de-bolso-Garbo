@@ -110,7 +110,7 @@ registrarFicha({
     {
       droga: "Cloreto de potássio",
       linha: "l1",
-      dose: "K < 3,5: 10–20 mEq/h até K ≥ 3,5 (antes da insulina) · K 3,5–5,0: 10–30 mEq em cada litro de soro, para manter K 4–5 · K > 5,0: não repor",
+      dose: "K < 3,5: 10–20 mEq/h até K ≥ 3,5 (antes da insulina) · K 3,5–5,0: 10–20 mEq em cada litro de soro, para manter K 4–5 · K > 5,0: não repor",
       via: "IV",
       intervalo: "Conforme K a cada 2 h",
       duracao: "Durante todo o tratamento",
@@ -194,14 +194,14 @@ registrarFicha({
     ],
     internacao: [
       "Quase todos os casos",
-      "UTI: pH < 7,0, rebaixamento, choque, K < 3,3 ou > 6, gestante"
+      "UTI: pH < 7,0, rebaixamento, choque, K < 3,5 ou > 6, gestante"
     ],
     transferencia: [
       "Sem bomba de infusão, gasometria ou leito monitorizado → regulação após início de volume e potássio"
     ]
   },
   prescricao: {
-    hospitalar: "CETOACIDOSE DIABÉTICA — ADULTO (peso: ___ kg)\n1. Dieta zero enquanto houver vômitos/rebaixamento; liberar dieta para diabético quando acordado e sem náuseas.\n2. Monitor cardíaco, 2 acessos venosos, cabeceira elevada 30°.\n3. SF 0,9% (ou Ringer lactato) 1.000 mL IV na 1ª hora; depois 500 mL/h por 2–4 h; depois 250 mL/h conforme volemia e sódio corrigido (Na corrigido normal/alto: NaCl 0,45%).\n4. Potássio (conferir antes da insulina):\n   - K < 3,5: KCl 19,1% (2,5 mEq/mL) 4 mL (10 mEq) em 100 mL de SF 0,9% IV em 1 h em veia periférica; 20 mEq/h (8 mL em 100 mL/h) só em acesso central com monitor. Repetir e dosar K a cada 1–2 h até K ≥ 3,5. NÃO iniciar insulina.\n   - K 3,5–5,0: KCl 19,1% 8–10 mL (20–25 mEq) em cada 1.000 mL de soro.\n   - K > 5,0: não repor; dosar K em 2 h.\n5. Insulina regular 100 UI/mL — 100 UI (1 mL) + SF 0,9% 99 mL (1 UI/mL), IV em bomba de infusão a 0,1 UI/kg/h (70 kg = 7 mL/h). Lavar o equipo com 20 mL da solução. Ajustar para queda de glicemia de 50–75 mg/dL/h.\n6. Quando glicemia < 250 mg/dL: SG 5% (ou SG 10%) 150–250 mL/h em Y e reduzir insulina para 0,05 UI/kg/h (70 kg = 3,5 mL/h); manter glicemia 150–200 mg/dL até a resolução.\n7. Se pH < 7,0: bicarbonato de sódio 8,4% 100 mL (100 mEq) + água destilada 400 mL + KCl 19,1% 8 mL (20 mEq) IV em 2 h; repetir a cada 2 h até pH ≥ 7,0.\n8. Ondansetrona 4 mg IV lento de 8/8 h se náusea ou vômito.\n9. Enoxaparina 40 mg SC 1 vez ao dia (profilaxia de TEV), se sem contraindicação.\n10. Controles: glicemia capilar de 1/1 h; K, Na, Cl e gasometria venosa (pH, HCO₃, ânion gap) de 2/2 h a 4/4 h; cetonemia de 2/2 h a 4/4 h se disponível; diurese horária; Glasgow de 2/2 h.\n11. Transição: resolvida a CAD e paciente comendo, aplicar insulina NPH SC (ou basal) e regular SC antes de uma refeição; desligar a bomba 1–2 h depois.",
+    hospitalar: "CETOACIDOSE DIABÉTICA — ADULTO (peso: ___ kg)\n1. Dieta zero enquanto houver vômitos/rebaixamento; liberar dieta para diabético quando acordado e sem náuseas.\n2. Monitor cardíaco, 2 acessos venosos, cabeceira elevada 30°.\n3. SF 0,9% (ou Ringer lactato) 1.000 mL IV na 1ª hora; depois 500 mL/h por 2–4 h; depois 250 mL/h conforme volemia e sódio corrigido (Na corrigido normal/alto: NaCl 0,45%).\n4. Potássio (conferir antes da insulina):\n   - K < 3,5: KCl 19,1% (2,5 mEq/mL) 4 mL (10 mEq) em 100 mL de SF 0,9% IV em 1 h em veia periférica; 20 mEq/h (8 mL em 100 mL/h) só em acesso central com monitor. Repetir e dosar K a cada 1–2 h até K ≥ 3,5. NÃO iniciar insulina.\n   - K 3,5–5,0: KCl 19,1% 4–8 mL (10–20 mEq) em cada 1.000 mL de soro; ajustar pelo K de 2/2 h para manter 4–5.\n   - K > 5,0: não repor; dosar K em 2 h.\n5. Insulina regular 100 UI/mL — 100 UI (1 mL) + SF 0,9% 99 mL (1 UI/mL), IV em bomba de infusão a 0,1 UI/kg/h (70 kg = 7 mL/h). Lavar o equipo com 20 mL da solução. Ajustar para queda de glicemia de 50–75 mg/dL/h.\n6. Quando glicemia < 250 mg/dL: SG 5% (ou SG 10%) 150–250 mL/h em Y e reduzir insulina para 0,05 UI/kg/h (70 kg = 3,5 mL/h); manter glicemia 150–200 mg/dL até a resolução.\n7. Se pH < 7,0: bicarbonato de sódio 8,4% 100 mL (100 mEq) + água destilada 400 mL + KCl 19,1% 8 mL (20 mEq) IV em 2 h; repetir a cada 2 h até pH ≥ 7,0.\n8. Ondansetrona 4 mg IV lento de 8/8 h se náusea ou vômito.\n9. Enoxaparina 40 mg SC 1 vez ao dia (profilaxia de TEV), se sem contraindicação.\n10. Controles: glicemia capilar de 1/1 h; K, Na, Cl e gasometria venosa (pH, HCO₃, ânion gap) de 2/2 h a 4/4 h; cetonemia de 2/2 h a 4/4 h se disponível; diurese horária; Glasgow de 2/2 h.\n11. Transição: resolvida a CAD e paciente comendo, aplicar insulina NPH SC (ou basal) e regular SC antes de uma refeição; desligar a bomba 1–2 h depois.",
     ambulatorial: "ALTA — ESQUEMA SC (exemplo com insulinas do SUS; dose total 0,5–0,6 UI/kg/dia ou dose prévia)\nUSO SUBCUTÂNEO\n1. Insulina humana NPH 100 UI/mL ------------------ ___ frascos\n   Aplicar ___ UI antes do café e ___ UI às 22 h (metade da dose total diária, dividida em 2/3 manhã e 1/3 noite ou conforme ajuste).\n2. Insulina humana regular 100 UI/mL -------------- ___ frascos\n   Aplicar ___ UI 30 minutos antes do café, do almoço e do jantar (outra metade da dose total, dividida nas refeições).\n3. Seringas para insulina 100 UI com agulha curta, tiras e lancetas para glicemia capilar (SUS).\n\nMONITORIZAÇÃO\nGlicemia capilar antes das refeições e ao deitar; anotar e trazer no retorno."
   },
   orientacoesRetorno: [
@@ -217,7 +217,7 @@ registrarFicha({
       colunas: ["K sérico (mEq/L)", "Insulina", "Potássio"],
       linhas: [
         ["< 3,5", "Adiar", "10–20 mEq/h até K ≥ 3,5"],
-        ["3,5–5,0", "Iniciar", "No soro, para manter K 4–5"],
+        ["3,5–5,0", "Iniciar", "10–20 mEq por litro de soro, para manter K 4–5"],
         ["> 5,0", "Iniciar", "Não repor; dosar K a cada 2 h"]
       ],
       nota: "Diretrizes anteriores (ADA 2009/SBD) usavam corte de 3,3 e 5,2 mEq/L. KCl 19,1% = 2,5 mEq/mL."

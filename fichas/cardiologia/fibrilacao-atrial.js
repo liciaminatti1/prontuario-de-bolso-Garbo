@@ -33,7 +33,7 @@ registrarFicha({
     "Tireotoxicose",
     "AVC cardioembólico"
   ],
-  proximaDecisao: "Estável: preferir controle de frequência e aguardar reversão espontânea (\"esperar e ver\"). Cardioversão precoce só se início claramente recente (ESC 2024: ≤ 24 h) e anticoagulação iniciada. Duração maior ou desconhecida → 3 semanas de anticoagulação antes (ou ETE sem trombo) e 4 semanas depois.",
+  proximaDecisao: "Estável: preferir controle de frequência e aguardar reversão espontânea (\"esperar e ver\"). Cardioversão precoce só se início claramente recente (< 24 h — ESC 2024 e SBC/SOBRAC 2025), sem alto risco tromboembólico (AVC/AIT prévio, estenose mitral, prótese mecânica) e com anticoagulação iniciada antes (DOAC, enoxaparina 1 mg/kg ou heparina IV em bolus). Duração maior ou desconhecida → 3 semanas de anticoagulação antes (ou ETE sem trombo) e 4 semanas depois.",
   clinica: {
     anamnese: [
       "Início dos sintomas (define estratégia), episódios prévios",

@@ -135,7 +135,7 @@ registrarFicha({
     {
       droga: "Cefazolina / oxacilina (IV)",
       linha: "alt",
-      dose: "Cefazolina 1–2 g 8/8h (criança 100 mg/kg/dia de 8/8h) · oxacilina 2 g 4/4h (criança 150–200 mg/kg/dia de 6/6h)",
+      dose: "Cefazolina 1–2 g 8/8h (criança 50–100 mg/kg/dia de 8/8h, máx 2 g/dose) · oxacilina 2 g 4/4h (criança 100–200 mg/kg/dia de 6/6h, máx 2 g/dose)",
       via: "IV",
       intervalo: "Conforme droga",
       duracao: "Até melhora, depois VO",
@@ -177,7 +177,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "ADULTO — CELULITE NÃO PURULENTA, SEM SINAIS SISTÊMICOS\nUSO ORAL\n1. Cefalexina 500 mg ----------------------------- 20 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas por 5 dias (obeso: 2 cápsulas de 6/6 h).\n2. Dipirona 500 mg ------------------------------- 1 caixa\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor ou febre.\n\nADULTO — ERISIPELA (alternativas)\n1. Amoxicilina 500 mg ---------------------------- 15 cápsulas\n   Tomar 1 cápsula de 8 em 8 horas por 5 dias.\n   OU\n1. Penicilina G benzatina 1.200.000 UI ----------- 1 frasco-ampola\n   Aplicar 1.200.000 UI IM profundo, dose única (na UBS, com material para anafilaxia).\n\nALERGIA A BETALACTÂMICO\n1. Clindamicina 300 mg ---------------------------- 20 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas por 5 dias.\n\nPORTA DE ENTRADA (tinea pedis) — USO TÓPICO\n3. Miconazol 2% creme ----------------------------- 1 bisnaga\n   Aplicar entre os dedos, 2 vezes ao dia, por 4 semanas.\n\nCRIANÇA (por kg)\n- Cefalexina 250 mg/5 mL suspensão: 25–50 mg/kg/dia divididos de 6/6 h, por 5 dias (máx 500 mg/dose).\n- Amoxicilina 250 mg/5 mL: 50 mg/kg/dia divididos de 8/8 h, por 5 dias (máx 500 mg/dose).\n- Clindamicina (alergia): 30–40 mg/kg/dia divididos de 6/6 h ou 8/8 h (máx 450 mg/dose).\n- Dipirona: 10–15 mg/kg/dose até de 6/6 h (máx 1 g/dose)."
+    ambulatorial: "ADULTO — CELULITE NÃO PURULENTA, SEM SINAIS SISTÊMICOS\nUSO ORAL\n1. Cefalexina 500 mg ----------------------------- 20 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas por 5 dias (obeso: 2 cápsulas de 6/6 h).\n2. Dipirona 500 mg ------------------------------- 40 comprimidos\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor ou febre, por até 5 dias.\n\nADULTO — ERISIPELA (alternativas)\n1. Amoxicilina 500 mg ---------------------------- 15 cápsulas\n   Tomar 1 cápsula de 8 em 8 horas por 5 dias.\n   OU\n1. Penicilina G benzatina 1.200.000 UI ----------- 1 frasco-ampola\n   Aplicar 1.200.000 UI IM profundo, dose única (na UBS, com material para anafilaxia).\n\nALERGIA A BETALACTÂMICO\n1. Clindamicina 300 mg ---------------------------- 20 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas por 5 dias.\n\nPORTA DE ENTRADA (tinea pedis) — USO TÓPICO\n3. Miconazol 2% creme ----------------------------- 1 bisnaga\n   Aplicar entre os dedos, 2 vezes ao dia, por 4 semanas.\n\nCRIANÇA (por kg)\n- Cefalexina 250 mg/5 mL suspensão: 25–50 mg/kg/dia divididos de 6/6 h, por 5 dias (máx 500 mg/dose).\n- Amoxicilina 250 mg/5 mL: 50 mg/kg/dia divididos de 8/8 h, por 5 dias (máx 500 mg/dose).\n- Clindamicina (alergia): 30–40 mg/kg/dia divididos de 6/6 h ou 8/8 h (máx 450 mg/dose).\n- Dipirona: 10–15 mg/kg/dose até de 6/6 h (máx 1 g/dose)."
   },
   orientacoesRetorno: [
     "Manter a perna (ou o braço) elevada sempre que possível; repouso relativo nos primeiros dias",

@@ -51,7 +51,7 @@ registrarFicha({
       { dx: "Hipercolesterolemia familiar", pista: "LDL ≥ 190, xantomas, família" }
     ],
     gravidade: [
-      "Extremo: múltiplos eventos ateroscleróticos maiores, ou 1 evento maior + ≥ 2 condições de alto risco (idade ≥ 65, hipercolesterolemia familiar, DM, HAS, DRC, tabagismo, LDL persistentemente alto apesar de tratamento otimizado, evento há < 2 anos, revascularização prévia fora de evento agudo)",
+      "Extremo: eventos ateroscleróticos recorrentes, progressão da aterosclerose apesar do tratamento, ou 1 evento maior associado a ≥ 2 condições de alto risco (ex.: DM, DRC, tabagismo, hipercolesterolemia familiar). Conferir a lista completa de condições na diretriz",
       "Muito alto: doença aterosclerótica clínica estabelecida (IAM, AVC isquêmico, DAOP, revascularização) que não preenche critério de extremo",
       "Alto: DM com estratificador de risco, DRC, LDL ≥ 190 mg/dL, aterosclerose subclínica significativa ou escore alto",
       "Intermediário e baixo: pelo escore de risco (PREVENT, 30–79 anos sem DCV)"
@@ -162,7 +162,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "RISCO INTERMEDIÁRIO / ALTO (moderada intensidade)\nUSO ORAL\n1. Sinvastatina 40 mg ---------------------------- 30 comprimidos\n   Tomar 1 comprimido à noite, todos os dias. Uso contínuo.\n\nRISCO ALTO / MUITO ALTO / EXTREMO (alta intensidade)\nUSO ORAL\n1. Atorvastatina 40 mg -------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, em qualquer horário. Uso contínuo (pode subir para 80 mg).\n2. Ezetimiba 10 mg (se fora da meta com estatina máxima tolerada) ---- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo.\n\nHIPERTRIGLICERIDEMIA ≥ 500 mg/dL (após dieta, álcool zero e controle glicêmico)\n3. Ciprofibrato 100 mg ------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo.\n   (Alternativa: fenofibrato 200 mg 1 vez ao dia. Não associar genfibrozila a estatina.)\n\nPEDIDO DE EXAMES (controle em 4–12 semanas)\nColesterol total e frações, triglicerídeos, não-HDL-c; TGO, TGP; CPK se dor muscular."
+    ambulatorial: "RISCO BAIXO / INTERMEDIÁRIO (moderada intensidade; meta de redução ≥ 30%)\nUSO ORAL\n1. Sinvastatina 40 mg ---------------------------- 30 comprimidos\n   Tomar 1 comprimido à noite, todos os dias. Uso contínuo.\n\nRISCO ALTO / MUITO ALTO / EXTREMO (alta intensidade; meta de redução ≥ 50%)\nUSO ORAL\n1. Atorvastatina 40 mg -------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, em qualquer horário. Uso contínuo (pode subir para 80 mg).\n2. Ezetimiba 10 mg (se fora da meta com estatina máxima tolerada) ---- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo.\n\nHIPERTRIGLICERIDEMIA ≥ 500 mg/dL (após dieta, álcool zero e controle glicêmico)\n3. Ciprofibrato 100 mg ------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo.\n   (Alternativa: fenofibrato 200 mg 1 vez ao dia. Não associar genfibrozila a estatina.)\n\nPEDIDO DE EXAMES (controle em 4–12 semanas)\nColesterol total e frações, triglicerídeos, não-HDL-c; TGO, TGP; CPK se dor muscular."
   },
   orientacoesRetorno: [
     "Remédio do colesterol é de uso contínuo; não parar quando o exame melhorar",
@@ -183,7 +183,7 @@ registrarFicha({
         ["Intermediário", "< 100", "< 130", "≥ 30%"],
         ["Baixo", "< 115", "< 145", "≥ 30%"]
       ],
-      nota: "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose — SBC 2025. Atingir a meta absoluta e a redução percentual. ApoB é meta secundária (extremo < 45; muito alto < 55 mg/dL)."
+      nota: "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose — SBC 2025. Atingir a meta absoluta e a redução percentual. ApoB é meta secundária (ex.: extremo < 45; intermediário < 90; baixo < 100 mg/dL)."
     },
     {
       titulo: "Intensidade das estatinas",
