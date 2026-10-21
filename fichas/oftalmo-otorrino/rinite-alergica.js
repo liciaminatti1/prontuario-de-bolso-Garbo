@@ -116,7 +116,7 @@ registrarFicha({
       duracao: "Contínuo nos períodos sintomáticos ou sob demanda na intermitente",
       monitorizacao: "Sonolência leve (rara)",
       contraindicacoes: "< 2 anos",
-      ajustes: "RENAME/SUS: comprimido 10 mg e xarope 1 mg/mL. Insuficiência hepática grave: dose em dias alternados"
+      ajustes: "Apresentações: comprimido 10 mg e xarope 1 mg/mL (conferir a disponibilidade na lista municipal/RENAME). Insuficiência hepática grave: dose em dias alternados"
     },
     {
       droga: "Outros anti-histamínicos de 2ª geração",

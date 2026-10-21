@@ -117,7 +117,7 @@ registrarFicha({
       dose: "≥ 2 meses: 40 mg/kg/dia de SMX + 8 mg/kg/dia de TMP · Adulto: 800/160 mg",
       via: "VO",
       intervalo: "12/12 h",
-      duracao: "14 dias (referência CDC; conferir prazo no Guia de Vigilância vigente)",
+      duracao: "7 dias (tabela do MS reproduzida pela SBP/SBIm 2025; o CDC usa 14 dias)",
       monitorizacao: "Exantema, citopenias",
       contraindicacoes: "< 2 meses; gestante no 3º trimestre e lactante de RN (kernicterus); deficiência de G6PD",
       ajustes: "Suspensão 200/40 mg por 5 mL"
@@ -150,7 +150,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "COQUELUCHE — CRIANÇA ≥ 6 MESES (exemplo 10 kg)\nUSO ORAL\n1. Azitromicina 200 mg/5 mL suspensão ------------ 1 frasco\n   1º dia: dar 2,5 mL (100 mg = 10 mg/kg).\n   2º ao 5º dia: dar 1,25 mL (50 mg = 5 mg/kg) 1 vez ao dia.\n\nLACTENTE < 6 MESES (exemplo 5 kg)\n1. Azitromicina 200 mg/5 mL suspensão ------------ 1 frasco\n   Dar 1,25 mL (50 mg = 10 mg/kg) 1 vez ao dia por 5 dias.\n\nADULTO / ADOLESCENTE (tratamento ou quimioprofilaxia)\n1. Azitromicina 500 mg ---------------------------- 3 comprimidos (ou 500 mg + 4 × 250 mg)\n   Tomar 500 mg no 1º dia e 250 mg (meio comprimido de 500 mg) 1 vez ao dia do 2º ao 5º dia.\n\nALTERNATIVA (macrolídeo contraindicado, ≥ 2 meses)\n1. Sulfametoxazol + trimetoprima 200/40 mg por 5 mL — 0,5 mL/kg/dose (20 mg/kg de SMX) de 12 em 12 horas por 14 dias.\n   Adulto: 800/160 mg 1 comprimido de 12 em 12 horas por 14 dias.\n\nQUIMIOPROFILAXIA DE CONTATOS: mesmas doses e duração do tratamento.",
+    ambulatorial: "COQUELUCHE — CRIANÇA ≥ 6 MESES (exemplo 10 kg)\nUSO ORAL\n1. Azitromicina 200 mg/5 mL suspensão ------------ 1 frasco\n   1º dia: dar 2,5 mL (100 mg = 10 mg/kg).\n   2º ao 5º dia: dar 1,25 mL (50 mg = 5 mg/kg) 1 vez ao dia.\n\nLACTENTE < 6 MESES (exemplo 5 kg)\n1. Azitromicina 200 mg/5 mL suspensão ------------ 1 frasco\n   Dar 1,25 mL (50 mg = 10 mg/kg) 1 vez ao dia por 5 dias.\n\nADULTO / ADOLESCENTE (tratamento ou quimioprofilaxia)\n1. Azitromicina 500 mg ---------------------------- 3 comprimidos (ou 500 mg + 4 × 250 mg)\n   Tomar 500 mg no 1º dia e 250 mg (meio comprimido de 500 mg) 1 vez ao dia do 2º ao 5º dia.\n\nALTERNATIVA (macrolídeo contraindicado, ≥ 2 meses)\n1. Sulfametoxazol + trimetoprima 200/40 mg por 5 mL — 0,5 mL/kg/dose (20 mg/kg de SMX) de 12 em 12 horas por 7 dias.\n   Adulto: 800/160 mg 1 comprimido de 12 em 12 horas por 7 dias.\n\nQUIMIOPROFILAXIA DE CONTATOS: mesmas doses e duração do tratamento.",
     hospitalar: "COQUELUCHE — LACTENTE INTERNADO (peso: ___ kg)\n1. Isolamento para gotículas até completar 5 dias de antibiótico.\n2. Dieta: leite materno/fórmula em volumes menores e mais frequentes; sonda nasogástrica se não consegue mamar; hidratação venosa de manutenção se necessário.\n3. Monitor cardíaco e oximetria contínua (alarmes para apneia e bradicardia).\n4. O₂ por cateter nasal se SpO₂ < 92% ou cianose nas crises; aspiração suave de secreções de vias aéreas superiores durante as crises.\n5. Azitromicina 10 mg/kg VO (ou por sonda) 1 vez ao dia por 5 dias (< 6 meses); ≥ 6 meses: 10 mg/kg no D1 e 5 mg/kg D2–D5. Se via oral impossível: azitromicina IV na mesma dose, diluída em SF 0,9% a 2 mg/mL (infundir em 1 h) ou a 1 mg/mL (infundir em 3 h).\n6. Se pneumonia associada: acrescentar antibiótico conforme ficha pneumonia-crianca.\n7. Evitar estímulos que desencadeiam crises (manipulação excessiva).\n8. Controles: SpO₂ e FC contínuas; registrar número de crises, cianose e apneias; peso diário; hemograma a cada 24–48 h se leucocitose acentuada.\n9. Notificar e acionar a vigilância para os contatos."
   },
   orientacoesRetorno: [
@@ -176,6 +176,7 @@ registrarFicha({
     }
   ],
   fontes: [
+    "Ministério da Saúde — Nota Técnica Conjunta nº 165/2025-DPNI/SVSA/MS: tratamento, quimioprofilaxia e medidas de controle da coqueluche (2025)",
     "Ministério da Saúde — Guia de Vigilância em Saúde, 6ª ed.: Coqueluche (2023–2024)",
     "Ministério da Saúde — Nota Técnica nº 65/2025-CGLAB/SVSA (coleta e transporte de amostras para coqueluche, 2025) e notas técnicas sobre coqueluche (2024–2025)",
     "Sociedade Brasileira de Pediatria / SBIm — Nota Técnica: Coqueluche, atualização (2025)",

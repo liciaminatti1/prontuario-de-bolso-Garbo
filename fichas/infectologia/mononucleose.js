@@ -10,7 +10,7 @@ registrarFicha({
   palavrasChave: "mononucleose doenca do beijo epstein barr ebv monoteste anticorpos heterofilos linfocitose atipica esplenomegalia faringite amoxicilina rash",
   critico: {
     tempo: "Sem amoxicilina; afastar esporte",
-    texto: "Tratamento é de suporte. Amoxicilina/ampicilina causam exantema na maioria. Sem esporte de contato ou esforço intenso por no mínimo 3–4 semanas do início."
+    texto: "Tratamento é de suporte. Amoxicilina/ampicilina causam exantema com frequência. Sem esporte de contato ou esforço intenso por no mínimo 3–4 semanas do início."
   },
   alarmes: [
     "Estridor, dificuldade para engolir saliva ou respirar (obstrução de via aérea por hipertrofia amigdaliana)",
@@ -64,7 +64,7 @@ registrarFicha({
       intervalo: "—",
       duracao: "—",
       monitorizacao: "—",
-      contraindicacoes: "Provocam exantema maculopapular na maioria dos pacientes com mononucleose (não é alergia verdadeira, mas evita confusão)",
+      contraindicacoes: "Provocam exantema maculopapular com frequência na mononucleose (não é alergia verdadeira, mas evita confusão)",
       ajustes: "Se faringite estreptocócica confirmada: penicilina benzatina ou cefalexina"
     },
     {

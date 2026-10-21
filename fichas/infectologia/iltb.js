@@ -68,7 +68,7 @@ registrarFicha({
       pedido: "IGRA (ensaio de liberação de interferon-gama) para diagnóstico de ILTB.",
       porQue: "Alternativa à PT nos grupos definidos pelo MS (ex.: PVHIV, crianças contatos, imunossuprimidos, candidatos a imunobiológicos, conforme disponibilidade local).",
       esperar: "Reagente / não reagente / indeterminado.",
-      interpretacao: "Reagente = ILTB (se TB ativa excluída). Indeterminado: repetir ou usar PT; criança de 2 a < 10 anos com IGRA indeterminado pode ser tratada como ILTB provável.",
+      interpretacao: "Reagente = ILTB (se TB ativa excluída). Indeterminado: repetir o IGRA ou usar a PT.",
       limitacoes: "Disponibilidade restrita; não diferencia TB ativa de latente."
     },
     {
@@ -125,13 +125,13 @@ registrarFicha({
     {
       droga: "3RH — rifampicina + isoniazida (dispersível 75/50 mg) em criança",
       linha: "alt",
-      dose: "Por faixa de peso, conforme a tabela do MS para comprimidos dispersíveis RH 75/50 mg",
+      dose: "4–7 kg: 1 comp · 8–11 kg: 2 comp · 12–15 kg: 3 comp · 16–24 kg: 4 comp (RH 75/50 mg dispersível; faixa de 4 a < 25 kg)",
       via: "VO, dissolvido em água",
       intervalo: "1 vez ao dia",
       duracao: "3 meses",
       monitorizacao: "Adesão, peso",
       contraindicacoes: "Interações da rifampicina",
-      ajustes: "Opção para crianças < 10 anos (Nota Informativa MS 2024). Conferir a faixa de peso na tabela oficial"
+      ajustes: "Opção para crianças < 10 anos com 4 a < 25 kg (Nota Informativa nº 6/2024-CGTM). Faixas iguais às da OMS para o RH dispersível; conferir na nota oficial"
     },
     {
       droga: "1HP — isoniazida + rifapentina diária",
@@ -194,7 +194,7 @@ registrarFicha({
       linhas: [
         ["Contatos (adultos e crianças)", "PT ≥ 5 mm ou IGRA reagente ou conversão"],
         ["PVHIV", "CD4 ≤ 350 ou contato de TB pulmonar: tratar sem PT; demais: PT ≥ 5 mm ou IGRA reagente; cicatriz radiológica sem tratamento prévio"],
-        ["Imunossuprimidos, anti-TNF, transplantados, corticoide > 15 mg/dia por > 1 mês", "PT ≥ 5 mm ou IGRA reagente"],
+        ["Imunossuprimidos, anti-TNF, pré-transplante, corticoide > 15 mg/dia de prednisona por > 1 mês, RX com sequela fibrótica de TB sem tratamento prévio", "PT ≥ 5 mm ou IGRA reagente"],
         ["Diabetes, silicose, diálise, neoplasias, tabagismo, baixo peso", "PT ≥ 10 mm ou IGRA reagente"],
         ["Profissionais de saúde e prisionais", "Conversão (aumento ≥ 10 mm)"]
       ],
@@ -204,7 +204,7 @@ registrarFicha({
   fontes: [
     "Ministério da Saúde — Protocolo de vigilância da infecção latente pelo Mycobacterium tuberculosis no Brasil, 2ª ed. (2022)",
     "Ministério da Saúde — Manual de Recomendações para o Controle da Tuberculose no Brasil, 2ª ed. (2019)",
-    "Ministério da Saúde — Nota Técnica nº 399/2021 e Nota Informativa nº 5/2021 (rifapentina para ILTB); Nota Informativa 2024 sobre ILTB em crianças",
+    "Ministério da Saúde — Nota Técnica nº 399/2021 e Nota Informativa nº 5/2021 (rifapentina para ILTB); Nota Informativa nº 6/2024-CGTM/DATHI/SVSA (3RH em crianças < 10 anos, 2024)",
     "Secretaria Municipal da Saúde de São Paulo — Nota Informativa 05/2024: ILTB (atualizada 12/2024)",
     "OMS — WHO consolidated guidelines on tuberculosis, Module 1: Prevention — TB preventive treatment (2024)"
   ],

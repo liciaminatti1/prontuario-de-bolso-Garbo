@@ -104,7 +104,7 @@ registrarFicha({
     "Na transferência: fazer a 1ª dose de ceftriaxona antes da remoção"
   ],
   fontes: [
-    "ABORL-CCF / SBP — Otite média aguda e complicações: recomendações (2023)",
+    "Sociedade Brasileira de Pediatria — Tratado de Pediatria, 5ª ed.: otite média aguda e complicações (2022)",
     "American Academy of Pediatrics — Clinical Practice Guideline: Diagnosis and Management of Acute Otitis Media (2013) e Red Book (2024–2027)",
     "Revisões: Loh R et al., Management of paediatric acute mastoiditis, J Laryngol Otol (2018); NICE CKS Otitis media — complications (2024)"
   ],

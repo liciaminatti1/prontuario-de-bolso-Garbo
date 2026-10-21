@@ -20,7 +20,7 @@ registrarFicha({
     "PVHIV com CD4 baixo, desnutrição grave, criança pequena com doença extensa"
   ],
   condutaInicial: [
-    "Busca ativa: tosse ≥ 3 semanas na população geral; tosse de qualquer duração em PVHIV, privados de liberdade, população em situação de rua, indígenas e contatos",
+    "Busca ativa: tosse ≥ 3 semanas na população geral; tosse de qualquer duração em PVHIV, população em situação de rua, indígenas e contatos; nos privados de liberdade e em outros grupos de risco o tempo de tosse exigido é menor (conferir o quadro de populações especiais do Manual MS)",
     "Escarro (1 amostra) para TRM-TB + cultura com teste de sensibilidade; RX de tórax",
     "Testar HIV (teste rápido) em todo caso; glicemia, função hepática e renal",
     "Confirmado e sensível à rifampicina: esquema básico 2RHZE/4RH por faixa de peso, em tratamento diretamente observado (TDO)",
@@ -134,12 +134,12 @@ registrarFicha({
       duracao: "4 meses (10 meses na TB meníngea e osteoarticular)",
       monitorizacao: "Baciloscopia mensal; adesão; peso",
       contraindicacoes: "—",
-      ajustes: "Prolongar a manutenção só com indicação da referência (ex.: cavitação extensa com cultura positiva no 2º mês, conforme avaliação)"
+      ajustes: "Adolescente de 10 a 16 anos com TB pulmonar não grave e sensível: pode receber o esquema encurtado de 4 meses (2RHZE/2RH, nota informativa MS 2024), com reavaliação no 4º mês. Prolongar a manutenção só com indicação da referência (ex.: cavitação extensa com cultura positiva no 2º mês, conforme avaliação)"
     },
     {
       droga: "Criança < 10 anos — RHZ dispersível 75/50/150 mg (2 meses) + RH dispersível 75/50 mg",
       linha: "l1",
-      dose: "4–7 kg: 1 comp · 8–11 kg: 2 comp · 12–15 kg: 3 comp · 16–24 kg: 4 comp (mesmo número de comprimidos nas duas fases). ≥ 25 kg: seguir a tabela do MS para essa faixa",
+      dose: "4–7 kg: 1 comp · 8–11 kg: 2 comp · 12–15 kg: 3 comp · 16–24 kg: 4 comp (mesmo número de comprimidos nas duas fases). ≥ 25 kg: não usar o dispersível (sem estudos nessa faixa); usar as doses do MS para ≥ 25 kg, com apoio da referência",
       via: "VO — dissolver o comprimido em água (cerca de 10–50 mL) e dar logo",
       intervalo: "1 vez ao dia",
       duracao: "TB pulmonar não grave e sensível, 3 meses a 16 anos: 2 meses RHZ + 2 meses RH (4 meses, nota informativa MS 2024). Forma grave, < 3 meses ou < 4 kg: 2 meses + 4 meses (6 meses)",

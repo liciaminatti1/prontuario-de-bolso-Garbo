@@ -9,7 +9,7 @@ registrarFicha({
   palavrasChave: "asma crianca pediatria sibilancia chiado bronquite crise broncoespasmo salbutamol espacador beclometasona budesonida formoterol montelucaste prednisolona gina etapas controle",
   critico: {
     tempo: "Salbutamol com espaçador já",
-    texto: "Crise: salbutamol 100 mcg com espaçador a cada 20 min na 1ª hora (≤ 5 anos 2–6 jatos; 6–11 anos 4–10 jatos), O₂ se SpO₂ < 94% e prednisolona 1–2 mg/kg. SABA isolado sem corticoide inalatório não é mais tratamento de manutenção (GINA 2026)."
+    texto: "Crise: salbutamol 100 mcg com espaçador a cada 20 min na 1ª hora (≤ 5 anos 2–6 jatos; 6–11 anos 4–10 jatos), O₂ se SpO₂ < 94% e prednisolona 1–2 mg/kg. Em ≥ 6 anos, SABA isolado sem corticoide inalatório não é tratamento de manutenção (GINA 2026)."
   },
   alarmes: [
     "Não consegue falar ou mamar, agitação ou sonolência, confusão",

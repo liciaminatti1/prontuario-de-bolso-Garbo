@@ -88,7 +88,7 @@ registrarFicha({
     }
   ],
   prescricao: {
-    ambulatorial: "ESCARLATINA — CRIANÇA (exemplo 20 kg)\nUSO ORAL\n1. Amoxicilina 250 mg/5 mL suspensão ------------- 2 frascos de 150 mL\n   Dar 10 mL (500 mg = 25 mg/kg) de 12 em 12 horas por 10 dias.\n   (Cálculo: 50 mg/kg/dia, máx 1 g/dia; ou a dose diária inteira 1 vez ao dia.)\n2. Dipirona 500 mg/mL gotas (25 mg/gota) -------- 1 frasco\n   Dar 8 a 12 gotas (10–15 mg/kg) de 6 em 6 horas se febre ou dor.\n   ou Paracetamol 200 mg/mL gotas — 1 gota/kg/dose (máx 35 gotas) de 6 em 6 horas.\n\nOU (dose única, na UBS)\nUSO INTRAMUSCULAR\n1. Penicilina G benzatina 600.000 UI (< 27 kg) ou 1.200.000 UI (≥ 27 kg) — aplicar IM profunda, dose única.\n\nALERGIA À PENICILINA (não grave)\n1. Cefalexina 250 mg/5 mL suspensão — 8 mL (400 mg = 20 mg/kg) de 12 em 12 horas por 10 dias.\nALERGIA GRAVE\n1. Azitromicina 200 mg/5 mL suspensão — 6 mL (240 mg = 12 mg/kg) 1 vez ao dia por 5 dias."
+    ambulatorial: "ESCARLATINA — CRIANÇA (exemplo 20 kg)\nUSO ORAL\n1. Amoxicilina 250 mg/5 mL suspensão ------------- 2 frascos de 150 mL\n   Dar 10 mL (500 mg = 25 mg/kg) de 12 em 12 horas por 10 dias.\n   (Cálculo: 50 mg/kg/dia, máx 1 g/dia; ou a dose diária inteira 1 vez ao dia.)\n2. Dipirona 500 mg/mL gotas (25 mg/gota) -------- 1 frasco\n   Dar 8 a 12 gotas (10–15 mg/kg) de 6 em 6 horas se febre ou dor.\n   ou Paracetamol 200 mg/mL gotas — 1 gota/kg/dose (máx 35 gotas) de 6 em 6 horas.\n\nOU (dose única, na UBS)\nUSO INTRAMUSCULAR\n1. Penicilina G benzatina 600.000 UI (< 27 kg) ou 1.200.000 UI (≥ 27 kg) — aplicar IM profunda, dose única.\n\nALERGIA À PENICILINA (não grave)\n1. Cefalexina 250 mg/5 mL suspensão ------------- 2 frascos de 100 mL\n   Dar 8 mL (400 mg = 20 mg/kg) de 12 em 12 horas por 10 dias.\nALERGIA GRAVE\n1. Azitromicina 200 mg/5 mL suspensão ----------- 30 mL (1 frasco de 37,5 mL ou 2 de 15 mL)\n   Dar 6 mL (240 mg = 12 mg/kg) 1 vez ao dia por 5 dias."
   },
   orientacoesRetorno: [
     "Dar o antibiótico até o último dia, mesmo que a criança melhore antes (evita febre reumática)",
@@ -102,7 +102,7 @@ registrarFicha({
     "Surtos em escola ou creche: comunicar a vigilância epidemiológica municipal (escarlatina isolada não é de notificação compulsória nacional)"
   ],
   fontes: [
-    "Sociedade Brasileira de Pediatria — Documento científico: Faringoamigdalites/estreptococo do grupo A e escarlatina (2023)",
+    "Sociedade Brasileira de Pediatria — Tratado de Pediatria, 5ª ed.: faringoamigdalites e escarlatina (2022)",
     "IDSA — Clinical Practice Guideline for Group A Streptococcal Pharyngitis (2012)",
     "AHA — Prevention of Rheumatic Fever and Diagnosis and Treatment of Acute Streptococcal Pharyngitis (2009)",
     "American Academy of Pediatrics — Red Book: Group A Streptococcal Infections (2024–2027)"

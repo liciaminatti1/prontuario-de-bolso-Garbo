@@ -105,7 +105,7 @@ registrarFicha({
   ],
   fontes: [
     "AAO-HNS — Clinical Practice Guideline: Acute Otitis Externa, update (2014)",
-    "ABORL-CCF — Tratado de Otorrinolaringologia / recomendações sobre otites externas (2023)",
+    "ABORL-CCF — Tratado de Otorrinolaringologia, 3ª ed.: otites externas (2018)",
     "Bulas ANVISA: ciprofloxacino + hidrocortisona suspensão otológica; polimixina B + neomicina + hidrocortisona solução otológica"
   ],
   revisao: "2026-10-21",

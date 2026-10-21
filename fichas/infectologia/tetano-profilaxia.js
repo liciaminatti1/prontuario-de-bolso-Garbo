@@ -83,7 +83,7 @@ registrarFicha({
   encaminhar: [
     "IGHAT: CRIE ou hospital de referência (pedido conforme fluxo local)",
     "Ferimento extenso, fratura exposta, queimadura grave → PS/cirurgia",
-    "Suspeita de tétano instalado → emergência hospitalar/UTI, notificação compulsória imediata"
+    "Suspeita de tétano instalado → emergência hospitalar/UTI e notificação compulsória (SINAN)"
   ],
   tabelas: [
     {

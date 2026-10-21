@@ -46,7 +46,7 @@ registrarFicha({
       linha: "l1",
       dose: "Adulto e > 40 kg: 75 mg · Criança ≥ 1 ano: ≤ 15 kg 30 mg; > 15–23 kg 45 mg; > 23–40 kg 60 mg; > 40 kg 75 mg · < 1 ano: 0–8 meses 3 mg/kg; 9–11 meses 3,5 mg/kg",
       via: "VO",
-      intervalo: "Tratamento: 12/12 h · Quimioprofilaxia: 1 vez ao dia (mesma dose; < 1 ano: 3 mg/kg 1×/dia a partir de 3 meses)",
+      intervalo: "Tratamento: 12/12 h · Quimioprofilaxia: 1 vez ao dia (mesma dose por peso/idade da tabela; < 3 meses só em situação crítica)",
       duracao: "Tratamento 5 dias · Quimioprofilaxia 10 dias",
       monitorizacao: "Náuseas e vômitos (tomar com alimento); se vomitar até 1 h após a dose, repetir",
       contraindicacoes: "Hipersensibilidade",
