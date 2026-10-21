@@ -22,7 +22,7 @@ registrarFicha({
     "ECG de 12 derivações, monitor, acesso",
     "Instável: sedação + cardioversão sincronizada 120–200 J bifásico",
     "Estável: tratar a causa e controlar frequência (alvo inicial < 110 bpm)",
-    "Definir tempo de início (< 48 h ou > 48 h/desconhecido)",
+    "Definir tempo de início (≤ 24 h, 24–48 h, > 48 h ou desconhecido)",
     "Calcular CHA₂DS₂-VA e risco de sangramento; iniciar anticoagulação quando indicada"
   ],
   fataisExcluir: [
@@ -33,7 +33,7 @@ registrarFicha({
     "Tireotoxicose",
     "AVC cardioembólico"
   ],
-  proximaDecisao: "Estável, < 48 h e anticoagulação adequada → considerar cardioversão (química ou elétrica). > 48 h ou desconhecido → controle de frequência e anticoagular por 3 semanas antes (ou ETE).",
+  proximaDecisao: "Estável: preferir controle de frequência e aguardar reversão espontânea (\"esperar e ver\"). Cardioversão precoce só se início claramente recente (ESC 2024: ≤ 24 h) e anticoagulação iniciada. Duração maior ou desconhecida → 3 semanas de anticoagulação antes (ou ETE sem trombo) e 4 semanas depois.",
   clinica: {
     anamnese: [
       "Início dos sintomas (define estratégia), episódios prévios",
@@ -178,11 +178,39 @@ registrarFicha({
       "FA pré-excitada ou necessidade de ETE/ablação sem estrutura local"
     ]
   },
-  fontes: [
-    "ESC 2024 Guidelines for the management of atrial fibrillation (CHA₂DS₂-VA)",
-    "SBC — II Diretrizes Brasileiras de Fibrilação Atrial (2016) e atualização",
-    "AHA/ACC/ACCP/HRS 2023 Guideline for Atrial Fibrillation"
+  prescricao: {
+    hospitalar: "FA ESTÁVEL COM RESPOSTA VENTRICULAR RÁPIDA (peso: ___ kg)\n1. Dieta livre (jejum se cardioversão programada). Monitor cardíaco contínuo, PA e FC de 15/15 min na 1ª hora.\n2. Metoprolol (tartarato) 1 mg/mL — 5 mg (5 mL) IV lento em 2 min; repetir a cada 5 min se FC > 110 e PAS > 100, até 15 mg. Não usar se IC descompensada, broncoespasmo, hipotensão ou pré-excitação.\n   OU, se FE reduzida/hipotensão limítrofe:\n3. Amiodarona 50 mg/mL — 300 mg (6 mL) + SG 5% 250 mL IV em 1 h (bomba de infusão). Manutenção: 900 mg (18 mL) + SG 5% 500 mL IV em 24 h (≈ 21 mL/h). Usar SG 5% e, se possível, acesso calibroso (flebite).\n4. Deslanosídeo 0,2 mg/mL — 0,4 mg (2 mL) IV lento, pode repetir 0,2–0,4 mg (máx 0,8 mg/24 h) — associar na IC com FE reduzida.\n5. Anticoagulação (se CHA₂DS₂-VA ≥ 2, ou antes/depois de cardioversão): enoxaparina 1 mg/kg SC de 12/12 h (ClCr 15–30: 1 mg/kg 1×/dia) até iniciar anticoagulante oral.\n6. Corrigir potássio (alvo ≥ 4,0) e magnésio antes de antiarrítmicos.\n7. Tratar o gatilho (infecção, tireotoxicose, TEP, álcool, hipoxemia).\n\nFA INSTÁVEL — CARDIOVERSÃO ELÉTRICA SINCRONIZADA\n1. O₂, acesso, material de via aérea e aspirador à mão.\n2. Sedação: etomidato 2 mg/mL — 0,15–0,3 mg/kg IV (70 kg: 10–20 mg = 5–10 mL) ou propofol 10 mg/mL — 0,5–1 mg/kg IV lento.\n3. Choque sincronizado 120–200 J bifásico; aumentar a energia se falhar (até 3 tentativas).\n4. Enoxaparina 1 mg/kg SC (ou heparina IV) antes ou logo após, se não anticoagulado.",
+    ambulatorial: "ALTA — CONTROLE DE FREQUÊNCIA E ANTICOAGULAÇÃO\nUSO ORAL\n1. Succinato de metoprolol 50 mg ----------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo. (Alternativa SUS: atenolol 25–50 mg 1 vez ao dia.)\n\nANTICOAGULANTE (escolher um)\n2. Varfarina 5 mg ------------------------------ 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, sempre no mesmo horário. Fazer INR em 3–5 dias (alvo 2,0–3,0). Manter enoxaparina até INR ≥ 2 em 2 dosagens se cardioversão programada/alto risco.\n   OU\n2. Apixabana 5 mg ------------------------------ 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas. Uso contínuo. (2,5 mg de 12/12 h se ≥ 2 de: idade ≥ 80 anos, peso ≤ 60 kg, creatinina ≥ 1,5 mg/dL.) Não disponível no Componente Básico do SUS.\n   OU\n2. Rivaroxabana 20 mg --------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, junto com o jantar (15 mg se ClCr 15–49).\n\nNão usar anticoagulante direto em prótese valvar mecânica ou estenose mitral moderada/grave (usar varfarina)."
+  },
+  orientacoesRetorno: [
+    "Tomar o anticoagulante todos os dias, no horário certo; não suspender por conta própria, nem antes de dentista ou cirurgia sem orientação",
+    "Varfarina: fazer o INR nas datas marcadas; evitar mudanças bruscas na alimentação (folhas verdes) e não usar anti-inflamatório ou chás sem orientação",
+    "Voltar imediatamente se: fraqueza ou dormência de um lado do corpo, boca torta, fala enrolada, desmaio, falta de ar, dor no peito ou palpitação que não passa",
+    "Voltar se sangramento: fezes pretas, urina com sangue, vômito com sangue, sangramento de gengiva ou nariz que não para",
+    "Reduzir álcool; tratar apneia do sono, pressão alta e excesso de peso",
+    "Consulta na UBS ou cardiologia em 1–2 semanas (INR em 3–5 dias se varfarina)"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  tabelas: [
+    {
+      titulo: "CHA₂DS₂-VA (ESC 2024 / SBC-SOBRAC 2025)",
+      colunas: ["Item", "Pontos"],
+      linhas: [
+        ["C — Insuficiência cardíaca ou disfunção de VE", "1"],
+        ["H — Hipertensão", "1"],
+        ["A₂ — Idade ≥ 75 anos", "2"],
+        ["D — Diabetes", "1"],
+        ["S₂ — AVC, AIT ou embolia prévia", "2"],
+        ["V — Doença vascular (IAM, DAOP, placa aórtica)", "1"],
+        ["A — Idade 65–74 anos", "1"]
+      ],
+      nota: "Sexo feminino não pontua. ≥ 2: anticoagulação recomendada; 1: considerar. Prótese mecânica e estenose mitral moderada/grave: anticoagular sempre (varfarina). Reavaliar pelo menos 1 vez ao ano."
+    }
+  ],
+  fontes: [
+    "SOBRAC/SBC — Diretriz Brasileira de Fibrilação Atrial (Arq Bras Cardiol, 2025)",
+    "ESC/EACTS 2024 Guidelines for the management of atrial fibrillation (CHA₂DS₂-VA; cardioversão > 24 h só após 3 semanas de anticoagulação ou ETE)",
+    "ACC/AHA/ACCP/HRS 2023 Guideline for the Diagnosis and Management of Atrial Fibrillation"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

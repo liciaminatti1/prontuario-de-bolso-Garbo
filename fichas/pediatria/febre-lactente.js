@@ -9,7 +9,7 @@ registrarFicha({
   palavrasChave: "febre lactente recem-nascido neonato sem foco infeccao bacteriana grave sepse meningite itu procalcitonina ampicilina ceftriaxona pediatria",
   critico: {
     tempo: "< 28 dias = investigação completa",
-    texto: "Até 28 dias: hemograma, hemocultura, urina por cateterismo com urocultura, líquor, internação e antibiótico IV, mesmo com bom estado geral."
+    texto: "Até 21 dias (AAP 2021) e, na prática brasileira, até 28 dias: hemograma, hemocultura, urina por cateterismo com urocultura, líquor, internação e antibiótico IV, mesmo com bom estado geral."
   },
   alarmes: [
     "Idade ≤ 28 dias",
@@ -32,7 +32,7 @@ registrarFicha({
     "Herpes neonatal (vesículas, convulsão, mãe com lesões)",
     "Cardiopatia ou erro inato do metabolismo descompensado"
   ],
-  proximaDecisao: "29–90 dias, bem, urina normal e marcadores baixos (PCT ≤ 0,5 ng/mL, neutrófilos ≤ 4.000, PCR ≤ 20) → baixo risco: observação ou alta com reavaliação em 24 h. Qualquer alteração → líquor, internação e antibiótico.",
+  proximaDecisao: "29–60 dias (AAP 2021; extrapolado até 90 dias), bem, urina normal e marcadores baixos (PCT ≤ 0,5 ng/mL; ou, sem PCT, PCR ≤ 20 mg/L, neutrófilos ≤ 4.000 e T ≤ 38,5°C) → baixo risco: alta com reavaliação em 24 h, sem antibiótico. Qualquer marcador alterado → considerar líquor, internar e antibiótico.",
   clinica: {
     anamnese: [
       "Idade exata (dias), idade gestacional, intercorrências neonatais",
@@ -74,7 +74,7 @@ registrarFicha({
       pedido: "Hemograma completo, PCR, procalcitonina, hemocultura.",
       porQue: "Estratificar risco de bacteremia/meningite.",
       esperar: "—",
-      interpretacao: "PCT > 0,5 ng/mL, neutrófilos > 4.000 ou PCR > 20 mg/L → alto risco.",
+      interpretacao: "AAP 2021: marcador alterado = PCT > 0,5 ng/mL; ou PCR > 20 mg/L, neutrófilos > 4.000–5.200/mm³ ou T > 38,5°C → maior risco de infecção bacteriana invasiva.",
       limitacoes: "Procalcitonina pode estar baixa nas primeiras horas de febre."
     },
     {
@@ -104,12 +104,12 @@ registrarFicha({
       duracao: "Até culturas negativas em 24–36 h ou conforme diagnóstico",
       monitorizacao: "Culturas",
       contraindicacoes: "—",
-      ajustes: "Associar cefotaxima 50 mg/kg 8/8h (ou 6/6h se meningite) ou gentamicina 4 mg/kg 24/24h"
+      ajustes: "Associar cefotaxima 50 mg/kg 8/8h (6/6h se meningite) ou gentamicina 4 mg/kg 24/24h (sem suspeita de meningite). 22–28 dias sem suspeita de meningite: ampicilina 50 mg/kg 8/8h + ceftriaxona 50 mg/kg 24/24h (AAP 2021), se sem hiperbilirrubinemia"
     },
     {
       droga: "Ceftriaxona (29–90 dias)",
       linha: "l1",
-      dose: "50 mg/kg 1×/dia (meningite: 100 mg/kg/dia ÷ 12/12h, máx 4 g)",
+      dose: "50 mg/kg 1×/dia (máx 2 g) · meningite: 100 mg/kg/dia ÷ 12/12h (máx 4 g/dia)",
       via: "IV ou IM",
       intervalo: "24/24h",
       duracao: "Conforme diagnóstico",
@@ -164,12 +164,35 @@ registrarFicha({
       "Toxemiado: SAMU"
     ]
   },
+  tabelas: [
+    {
+      titulo: "Lactente febril bem-aparente por faixa etária (AAP 2021)",
+      colunas: ["Idade", "Exames", "Líquor", "Antibiótico / destino"],
+      linhas: [
+        ["8–21 dias", "Urina (cateterismo) + urocultura, hemocultura, PCT/PCR/hemograma", "Sempre", "Internar; ampicilina + gentamicina (ou cefotaxima)"],
+        ["22–28 dias", "Urina + urocultura, hemocultura, marcadores inflamatórios", "Se marcadores alterados (pode fazer em todos)", "Marcadores alterados: internar + ATB. Normais: observar no hospital (prática brasileira: internar)"],
+        ["29–60 dias", "Urina + urocultura, marcadores inflamatórios; hemocultura se marcador alterado", "Se marcadores alterados (pode fazer)", "Tudo normal: alta com retorno em 24 h. Urina alterada isolada: ATB oral/IM e seguimento. Marcadores alterados: ATB e considerar internar"],
+        ["61–90 dias", "Urina + urocultura; hemograma, PCR conforme aparência", "Se toxemiado ou marcadores muito alterados", "Fora do escopo da AAP 2021: individualizar"]
+      ],
+      nota: "Toxemiado em qualquer idade: investigação completa + antibiótico imediato. Bronquiolite ou COVID confirmados não excluem ITU."
+    }
+  ],
+  prescricao: {
+    hospitalar: "PRESCRIÇÃO — INTERNAÇÃO (RECÉM-NASCIDO ≤ 28 DIAS, exemplo 3,5 kg)\n1. Aleitamento materno em livre demanda (se bom estado); jejum se toxemiado.\n2. Se toxemiado ou não aceita: SG 10% 500 mL + NaCl 20% 10 mL a 15 mL/h (≈ 100 mL/kg/dia; ajustar à idade em dias e ao sódio).\n3. Ampicilina 175 mg (50 mg/kg) IV de 6 em 6 horas (≤ 7 dias de vida: de 8 em 8 horas), diluída em SF 0,9% a 100 mg/mL, em 15–30 min. Meningite: 75 mg/kg de 6 em 6 horas.\n4. Gentamicina 14 mg (4 mg/kg) IV 1 vez ao dia, diluída em SF 0,9% 5 mL, em 30 min.\n   OU (suspeita de meningite) cefotaxima 175 mg (50 mg/kg) IV de 8 em 8 horas (6 em 6 horas se meningite), em SF 0,9% em 30 min.\n5. Se vesículas, convulsão, transaminases altas ou mãe com herpes: aciclovir 70 mg (20 mg/kg) IV de 8 em 8 horas em SF 0,9% (≤ 5 mg/mL) em 1 h.\n6. Paracetamol 200 mg/mL: 10 mg/kg (≈ 1 gota/kg) VO de 6 em 6 horas se febre com desconforto (máx 60 mg/kg/dia).\n7. Cuidados: temperatura, FC, FR, SpO₂ e perfusão de 4 em 4 horas; glicemia capilar; peso diário; isolamento de contato até exclusão de enterovírus/HSV. Reavaliar culturas em 24–36 h para suspender antibiótico se negativas.\n\n29–90 DIAS COM MARCADOR ALTERADO OU ITU\n- Ceftriaxona 50 mg/kg IV ou IM 1 vez ao dia (máx 2 g); meningite: 50 mg/kg de 12 em 12 horas (máx 4 g/dia). Diluir em SF 0,9% e infundir em 30 min; não misturar com soluções com cálcio."
+  },
+  orientacoesRetorno: [
+    "Lactente liberado do PS precisa ser reavaliado por médico em 24 horas, mesmo que esteja bem",
+    "Medir a temperatura com termômetro (axilar) 3 a 4 vezes ao dia; não agasalhar demais",
+    "Antitérmico só se a criança estiver desconfortável; não usar dipirona ou ibuprofeno em menor de 3 meses sem orientação",
+    "Voltar imediatamente se: dificuldade para mamar, vômitos repetidos, sonolência excessiva ou choro inconsolável, gemido, respiração difícil, pele pálida, roxa ou com manchas, moleira estufada, convulsão ou temperatura abaixo de 36°C",
+    "Trazer o resultado das culturas na reavaliação; se a urocultura vier positiva, a equipe vai chamar a família"
+  ],
   fontes: [
     "AAP — Clinical Practice Guideline: Evaluation and Management of Well-Appearing Febrile Infants 8 to 60 Days Old (Pediatrics, 2021)",
+    "SBP — Departamento de Infectologia: febre sem sinais localizatórios (documento científico vigente)",
     "Gomez B et al. Step-by-Step approach (Pediatrics 2016)",
-    "Kuppermann N et al. PECARN febrile infant rule (JAMA Pediatr 2019)",
-    "SBP — Documento científico: febre sem sinais localizatórios"
+    "Kuppermann N et al. PECARN febrile infant rule (JAMA Pediatr 2019)"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

@@ -5,8 +5,8 @@ registrarFicha({
   caminho: "ps",
   publico: "adulto",
   titulo: "Crise hipertensiva",
-  resumo: "PA ≥ 180/120 mmHg. A conduta depende de haver ou não lesão aguda de órgão-alvo.",
-  palavrasChave: "pressao alta crise hipertensiva emergencia urgencia nitroprussiato captopril clonidina edema agudo disseccao eclampsia",
+  resumo: "PAS ≥ 180 e/ou PAD ≥ 110 mmHg. Emergência hipertensiva se houver lesão aguda de órgão-alvo; sem lesão, a diretriz 2025 chama de elevação importante da PA sem lesão de órgão-alvo (antiga urgência).",
+  palavrasChave: "pressao alta crise hipertensiva emergencia urgencia elevacao importante da pa nitroprussiato nitroglicerina captopril clonidina hidralazina sulfato de magnesio edema agudo disseccao eclampsia pre-eclampsia",
   critico: {
     tempo: "Procure a lesão de órgão-alvo",
     texto: "Sem lesão aguda: reduzir PA em horas a dias com VO. Com lesão: droga IV, redução ≤ 25% na 1ª hora."
@@ -32,7 +32,7 @@ registrarFicha({
     "Eclâmpsia",
     "Feocromocitoma, cocaína"
   ],
-  proximaDecisao: "Lesão aguda de órgão-alvo → emergência hipertensiva, droga IV e internação. Sem lesão → ajustar esquema oral e encaminhar à UBS em até 7 dias.",
+  proximaDecisao: "Lesão aguda de órgão-alvo → emergência hipertensiva, droga IV e internação (UTI). Sem lesão (elevação importante da PA) → repouso, tratar dor/ansiedade, ajustar esquema oral e encaminhar à UBS em até 7 dias; não buscar queda rápida.",
   clinica: {
     anamnese: [
       "Adesão ao tratamento, suspensão abrupta (clonidina, betabloqueador)",
@@ -48,7 +48,7 @@ registrarFicha({
     ],
     diferenciais: [
       {
-        dx: "Urgência / PA elevada assintomática",
+        dx: "Elevação importante da PA sem lesão de órgão-alvo (antiga urgência)",
         pista: "Sem lesão aguda; maioria dos casos"
       },
       {
@@ -213,11 +213,23 @@ registrarFicha({
       "Eclâmpsia → maternidade de alto risco após estabilização"
     ]
   },
-  fontes: [
-    "Diretrizes Brasileiras de Hipertensão Arterial — SBC/SBH/SBN (2025)",
-    "ESC 2024 Guidelines for elevated blood pressure and hypertension",
-    "FEBRASGO — Pré-eclâmpsia (protocolo)"
+  prescricao: {
+    hospitalar: "EMERGÊNCIA HIPERTENSIVA (peso: ___ kg) — leito monitorizado\n1. Dieta zero inicialmente. Cabeceira elevada 30–45°. Monitor, oximetria, PA a cada 5–15 min (PA invasiva se disponível).\n2. Nitroprussiato de sódio 50 mg/2 mL — 1 ampola + SG 5% 248 mL (200 mcg/mL), IV em bomba de infusão, equipo e frasco protegidos da luz. Iniciar 0,3–0,5 mcg/kg/min (70 kg a 0,5 mcg/kg/min ≈ 10,5 mL/h); aumentar a cada 5 min até a meta (máx 10 mcg/kg/min; usar a menor dose pelo menor tempo).\n   OU, se SCA ou edema agudo de pulmão:\n2. Nitroglicerina 5 mg/mL — 50 mg (10 mL) + SG 5% 240 mL (200 mcg/mL), IV em bomba. Iniciar 5–10 mcg/min (1,5–3 mL/h); aumentar 5–10 mcg/min a cada 3–5 min (máx 200 mcg/min).\n3. Se edema agudo de pulmão: furosemida 10 mg/mL — 40 mg (4 mL) IV em bolus.\n4. Se dissecção de aorta: metoprolol 1 mg/mL — 5 mg IV lento a cada 5 min (máx 15 mg) ANTES do vasodilatador; alvo FC < 60 e PAS < 120 em 20 min.\n5. Meta geral: reduzir a PAM no máximo 25% na 1ª hora; depois 160/100–110 em 2–6 h; normalizar em 24–48 h. Exceções: dissecção (meta rápida) e AVC (seguir ficha de AVC).\n6. Sonda vesical de demora se necessário para diurese horária.\n\nPRÉ-ECLÂMPSIA GRAVE / ECLÂMPSIA\n1. Sulfato de magnésio 50% — ataque 4 g: 8 mL + 12 mL de água destilada IV em 20 min. Manutenção 1 g/h: 10 mL (5 g) + SG 5% 490 mL IV em bomba a 100 mL/h (1 g/h), por 24 h após o parto ou a última crise.\n2. Hidralazina 20 mg/mL — 1 mL + 19 mL de água destilada (1 mg/mL): 5 mg (5 mL) IV lento a cada 20 min se PA ≥ 160/110 (máx 30 mg). Alvo PA 140–150/90–100.\n3. Controle de reflexo patelar, FR e diurese de 1/1 h. Antídoto: gluconato de cálcio 10% 10 mL IV lento.\n\nELEVAÇÃO IMPORTANTE DA PA SEM LESÃO DE ÓRGÃO-ALVO\n1. Repouso em ambiente calmo 30 min; analgesia se dor; repetir PA.\n2. Captopril 25 mg — 1 comprimido VO; repetir em 1 h se necessário. (Alternativa: clonidina 0,1 mg VO, repetir 0,1 mg/h, máx 0,6 mg.)\n3. Não usar nifedipino de liberação rápida sublingual.",
+    ambulatorial: "ALTA (sem lesão de órgão-alvo) — reiniciar/ajustar o esquema habitual\nSe sem tratamento prévio — USO ORAL\n1. Losartana 50 mg ------------------------------ 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo.\n2. Anlodipino 5 mg ------------------------------ 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo.\n(Gestante: não usar losartana/IECA; usar metildopa ou nifedipino de liberação lenta conforme ficha de pré-eclâmpsia.)\n\nRetorno na UBS em até 7 dias com registro de medidas da PA."
+  },
+  orientacoesRetorno: [
+    "Tomar os remédios de pressão todos os dias; não parar clonidina ou betabloqueador de repente",
+    "Reduzir sal, evitar álcool, anti-inflamatórios, descongestionantes nasais e drogas (cocaína, anfetaminas)",
+    "Voltar imediatamente se: dor no peito, falta de ar, dor forte nas costas, fraqueza ou dormência de um lado, fala enrolada, confusão, convulsão, visão borrada ou dor de cabeça muito forte",
+    "Gestante ou puérpera: voltar na hora se dor de cabeça, visão com pontos brilhantes, dor no estômago ou inchaço súbito",
+    "Medir a PA em casa ou na farmácia/UBS e anotar",
+    "Consulta na UBS em até 7 dias para ajustar o tratamento"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  fontes: [
+    "SBC/SBH/SBN — Diretriz Brasileira de Hipertensão Arterial (Arq Bras Cardiol, 2025)",
+    "ESC 2024 Guidelines for the management of elevated blood pressure and hypertension",
+    "Ministério da Saúde — Manual de Gestação de Alto Risco (2022) e FEBRASGO — Pré-eclâmpsia (protocolo)"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

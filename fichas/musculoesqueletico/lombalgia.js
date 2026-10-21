@@ -94,13 +94,13 @@ registrarFicha({
     {
       droga: "Ciclobenzaprina",
       linha: "adj",
-      dose: "5–10 mg",
+      dose: "5–10 mg (máx 30 mg/dia)",
       via: "VO, ao deitar",
       intervalo: "1×/dia (até 3×/dia)",
       duracao: "Até 1–2 semanas",
       monitorizacao: "Sonolência, boca seca",
       contraindicacoes: "Idoso, arritmia, glaucoma, IMAO",
-      ajustes: "Benefício modesto; orientar não dirigir"
+      ajustes: "Benefício modesto e de curto prazo; sem ganho claro somado ao AINE. Orientar não dirigir. Evitar com álcool e benzodiazepínicos"
     },
     {
       droga: "Dipirona / paracetamol",
@@ -111,7 +111,7 @@ registrarFicha({
       duracao: "Curto",
       monitorizacao: "—",
       contraindicacoes: "—",
-      ajustes: "Evidência limitada isoladamente; opção quando AINE contraindicado"
+      ajustes: "Paracetamol isolado não é recomendado pelo NICE para lombalgia; usar como opção quando AINE contraindicado. Paracetamol máx 3–4 g/dia (2 g se hepatopatia ou etilismo)"
     },
     {
       droga: "Medidas não farmacológicas",
@@ -147,11 +147,22 @@ registrarFicha({
       "Fisioterapia: dor persistente ou cronificação"
     ]
   },
-  fontes: [
-    "NICE NG59 — Low back pain and sciatica in over 16s (2016, atualizado 2020)",
-    "ACP Clinical Practice Guideline — Noninvasive treatments for low back pain (2017)",
-    "Ministério da Saúde — Protocolos de encaminhamento da APS para ortopedia (TelessaúdeRS)"
+  prescricao: {
+    ambulatorial: "USO ORAL\n1. Ibuprofeno 600 mg -------------------------------- 15 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após as refeições, por 5 dias.\n   (Alternativa: naproxeno 500 mg, 1 comprimido de 12 em 12 horas por 5 a 7 dias.)\n2. Ciclobenzaprina 5 mg ----------------------------- 10 comprimidos\n   Tomar 1 comprimido à noite, ao deitar, por até 10 dias, se espasmo muscular. Não dirigir após tomar.\n3. Dipirona 500 mg ---------------------------------- 1 caixa\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor.\n4. Omeprazol 20 mg ---------------------------------- 7 cápsulas\n   Tomar 1 cápsula em jejum enquanto usar o anti-inflamatório (se > 65 anos ou risco gastrointestinal).\n\nORIENTAÇÕES\n5. Calor local (bolsa morna) por 20 minutos, 3 vezes ao dia.\n6. Manter as atividades do dia a dia e caminhar conforme tolerar; evitar repouso na cama."
+  },
+  orientacoesRetorno: [
+    "A dor lombar comum melhora na maioria das pessoas em 2 a 6 semanas",
+    "Ficar ativo ajuda a melhorar mais rápido; repouso na cama atrasa a recuperação",
+    "Anti-inflamatório: tomar após comer e pelo menor tempo possível",
+    "Voltar imediatamente se perder o controle da urina ou das fezes, dormência na região entre as pernas (\"sela\"), fraqueza que piora nas pernas, febre ou dor muito forte que não melhora em repouso",
+    "Retornar em 2 a 4 semanas se não melhorar, para reavaliação e fisioterapia"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  fontes: [
+    "Ministério da Saúde / TelessaúdeRS-UFRGS — Protocolos de encaminhamento da APS para ortopedia e neurocirurgia",
+    "ACP Clinical Practice Guideline — Noninvasive treatments for acute, subacute and chronic low back pain (2017)",
+    "NICE NG59 — Low back pain and sciatica in over 16s (2016, atualizado 2020)",
+    "OMS — Guideline for non-surgical management of chronic primary low back pain in adults (2023)"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

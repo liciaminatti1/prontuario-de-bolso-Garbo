@@ -19,10 +19,10 @@ registrarFicha({
     "PaCO₂ normal ou elevada em crise (fadiga)"
   ],
   condutaInicial: [
-    "O₂ para SpO₂ 93–95%",
+    "O₂ se SpO₂ < 92%, alvo 92–95% (GINA 2026); sinais de anafilaxia → adrenalina IM primeiro",
     "Salbutamol 100 mcg 4–10 jatos com espaçador (ou NBZ 5 mg) a cada 20 min por 1 h",
     "Ipratrópio associado se crise grave",
-    "Prednisona 40–50 mg VO (ou metilprednisolona/hidrocortisona IV)",
+    "Prednisona 40–50 mg VO em até 1 h na crise moderada/grave (ou metilprednisolona/hidrocortisona IV); crise leve: ICS-formoterol ou SABA, sem corticoide oral obrigatório",
     "Medir PFE antes e 1 h após"
   ],
   fataisExcluir: [
@@ -109,7 +109,7 @@ registrarFicha({
       duracao: "Conforme resposta",
       monitorizacao: "FC, tremor, potássio",
       contraindicacoes: "—",
-      ajustes: "Espaçador é tão eficaz quanto nebulização"
+      ajustes: "Espaçador é tão eficaz quanto nebulização. NBZ: 5 mg = 1 mL (20 gotas) da solução 5 mg/mL em 3–4 mL de SF, com O₂ 6–8 L/min. Crise leve: budesonida-formoterol 200/6 mcg 1–2 inalações é alternativa ao SABA (GINA 2026)"
     },
     {
       droga: "Brometo de ipratrópio",
@@ -131,7 +131,7 @@ registrarFicha({
       duracao: "5–7 dias (sem desmame)",
       monitorizacao: "Glicemia em diabéticos",
       contraindicacoes: "—",
-      ajustes: "Se VO impossível: metilprednisolona 40–80 mg IV ou hidrocortisona 200 mg IV"
+      ajustes: "Se VO impossível: metilprednisolona 40–80 mg IV 1×/dia ou hidrocortisona 100 mg IV 6/6h (ou 200 mg dose inicial)"
     },
     {
       droga: "Sulfato de magnésio",
@@ -142,18 +142,18 @@ registrarFicha({
       duracao: "—",
       monitorizacao: "PA, reflexos",
       contraindicacoes: "Insuficiência renal grave",
-      ajustes: "Crise grave sem resposta inicial"
+      ajustes: "Crise grave sem resposta inicial ao SABA + ipratrópio + corticoide. Ampola 50% = 0,5 g/mL: 4 mL em 100 mL SF"
     },
     {
       droga: "Oxigênio",
       linha: "l1",
-      dose: "Alvo SpO₂ 93–95%",
+      dose: "Iniciar se SpO₂ < 92%; alvo 92–95%",
       via: "Cateter ou máscara",
       intervalo: "Contínuo",
       duracao: "—",
       monitorizacao: "SpO₂",
       contraindicacoes: "—",
-      ajustes: "Evitar hiperóxia"
+      ajustes: "Evitar hiperóxia (SpO₂ > 95%). Oximetria pode superestimar a saturação em pele escura"
     }
   ],
   destino: {
@@ -182,10 +182,21 @@ registrarFicha({
       "Sinais de falência (sonolência, PaCO₂ elevada) sem UTI local"
     ]
   },
-  fontes: [
-    "Global Initiative for Asthma (GINA) 2025",
-    "SBPT — Recomendações para o manejo da asma (2020 e atualizações)"
+  prescricao: {
+    hospitalar: "PRESCRIÇÃO — SALA DE EMERGÊNCIA (CRISE MODERADA A GRAVE, ADULTO)\n1. Dieta zero enquanto dispneia importante; depois dieta livre.\n2. O₂ por cateter nasal ou máscara se SpO₂ < 92%; alvo SpO₂ 92–95%.\n3. Salbutamol spray 100 mcg/jato: 4 a 10 jatos com espaçador a cada 20 minutos na 1ª hora (3 ciclos).\n   OU nebulização: salbutamol 5 mg (20 gotas de 5 mg/mL) + SF 0,9% 3 mL com O₂ 6–8 L/min a cada 20 minutos na 1ª hora.\n4. Brometo de ipratrópio: 4 a 8 jatos de 20 mcg com espaçador (ou 500 mcg = 40 gotas de 0,25 mg/mL na nebulização, junto ao salbutamol) a cada 20 minutos na 1ª hora.\n5. Prednisona 40 mg VO agora (ou metilprednisolona 40 mg IV, ou hidrocortisona 200 mg IV se VO impossível).\n6. Se grave sem resposta após 1 h: sulfato de magnésio 50% 4 mL (2 g) + SF 0,9% 100 mL IV em 20 minutos, dose única.\n7. Depois da 1ª hora: salbutamol 4–8 jatos de 1 em 1 hora até de 4 em 4 horas, conforme resposta.\n8. Cuidados: monitor, oximetria contínua, FR, FC e PFE antes e 1 h após; gasometria se SpO₂ < 90% ou piora; cabeceira elevada.\n9. Sinais de anafilaxia: adrenalina 0,5 mg IM (0,5 mL de 1 mg/mL) antes dos broncodilatadores.\n\nALTA (USO ORAL E INALATÓRIO)\n1. Prednisona 20 mg ------------------------------- 10 comprimidos\n   Tomar 2 comprimidos (40 mg) pela manhã por 5 dias.\n2. Budesonida + formoterol 200/6 mcg inalador ------ 1 unidade\n   Inalar 1 dose de 12 em 12 horas (manutenção) e 1 dose a mais se falta de ar (máx 12 doses/dia).\n   OU (se indisponível) Beclometasona 250 mcg spray: 1 jato de 12 em 12 horas com espaçador + salbutamol 100 mcg: 2 a 4 jatos com espaçador se falta de ar."
+  },
+  orientacoesRetorno: [
+    "Usar o corticoide oral até o fim e o inalador de manutenção todos os dias, mesmo sem sintomas",
+    "Usar sempre espaçador com bombinha; enxaguar a boca após o corticoide inalatório",
+    "Evitar fumaça, poeira e outros gatilhos; não usar AINE ou betabloqueador se já piorou com eles",
+    "Voltar imediatamente se falta de ar que não melhora com a bombinha, dificuldade para falar, lábios roxos, sonolência ou necessidade de bombinha de alívio com intervalos menores que 3–4 horas",
+    "Consulta na UBS em 2 a 7 dias para revisar técnica inalatória, plano de ação por escrito e tratamento de manutenção"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  fontes: [
+    "Global Initiative for Asthma (GINA) — Global Strategy for Asthma Management and Prevention (2026)",
+    "Ministério da Saúde — PCDT Asma (2023)",
+    "SBPT — Recomendações para o manejo da asma (2020)"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

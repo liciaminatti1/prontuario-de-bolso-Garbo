@@ -107,7 +107,7 @@ registrarFicha({
       duracao: "—",
       monitorizacao: "PA (hipotensão na infusão rápida)",
       contraindicacoes: "Alergia, discrasia sanguínea",
-      ajustes: "Cefaleia primária no PS"
+      ajustes: "Cefaleia primária no PS. Diluir 1 g (2 mL) em 10–20 mL de AD ou SF e injetar em 3–5 min, ou em 100 mL SF em 15 min"
     },
     {
       droga: "Metoclopramida",
@@ -118,12 +118,12 @@ registrarFicha({
       duracao: "—",
       monitorizacao: "Acatisia, distonia",
       contraindicacoes: "Parkinson, feocromocitoma",
-      ajustes: "Eficaz como analgésico na enxaqueca. Acatisia: difenidramina 25 mg IV"
+      ajustes: "Eficaz como analgésico na enxaqueca. Infundir em 15 min (diluída em 50–100 mL SF) reduz acatisia. Acatisia: difenidramina 25 mg IV (ou prometazina 25 mg IM)"
     },
     {
       droga: "Cetoprofeno",
       linha: "alt",
-      dose: "100 mg",
+      dose: "100 mg (em 100 mL de SF em 20 min)",
       via: "IV",
       intervalo: "Dose única",
       duracao: "—",
@@ -140,7 +140,7 @@ registrarFicha({
       duracao: "—",
       monitorizacao: "Glicemia",
       contraindicacoes: "—",
-      ajustes: "Reduz recorrência da enxaqueca nas 72 h seguintes"
+      ajustes: "Reduz recorrência da enxaqueca nas 72 h seguintes; não alivia a dor aguda. Associar à analgesia, não usar isolada"
     },
     {
       droga: "Clorpromazina",
@@ -162,7 +162,7 @@ registrarFicha({
       duracao: "Conforme agente (7–21 dias)",
       monitorizacao: "Consciência, crises",
       contraindicacoes: "—",
-      ajustes: "> 50 anos ou imunossuprimido: + ampicilina 2 g 4/4h (Listeria). Suspeita de herpes: + aciclovir 10 mg/kg 8/8h"
+      ajustes: "> 50 anos, etilista, gestante ou imunossuprimido: + ampicilina 2 g 4/4h (Listeria). Suspeita de herpes: + aciclovir 10 mg/kg 8/8h em 1 h. Notificação compulsória imediata; quimioprofilaxia de contatos íntimos (meningococo/Hib) conforme vigilância"
     },
     {
       droga: "Arterite de células gigantes: prednisona",
@@ -199,12 +199,23 @@ registrarFicha({
       "UBS: qualquer alarme → PS"
     ]
   },
+  prescricao: {
+    hospitalar: "PRESCRIÇÃO — SALA DE EMERGÊNCIA (CEFALEIA PRIMÁRIA / ENXAQUECA, ADULTO)\n1. SF 0,9% 500 mL IV em 30 min (se vômitos ou desidratação; obrigatório antes de clorpromazina).\n2. Dipirona 1 g (2 mL) + AD 8 mL IV lento em 5 min, agora.\n3. Metoclopramida 10 mg (2 mL) + SF 0,9% 50 mL IV em 15 min, agora.\n4. Cetoprofeno 100 mg + SF 0,9% 100 mL IV em 20 min, agora (se sem contraindicação a AINE).\n5. Dexametasona 10 mg IV, dose única (enxaqueca, para reduzir recorrência).\n6. Se acatisia ou distonia: difenidramina 25 mg IV lento (ou prometazina 25 mg IM).\n7. Refratária após 1 h: clorpromazina 0,1 mg/kg (máx 25 mg) + SF 0,9% 100 mL IV em 20–30 min, com PA a cada 15 min.\n8. Cuidados: sala com pouca luz, reavaliar dor e exame neurológico em 1 h.\n\nSUSPEITA DE MENINGITE BACTERIANA (não atrasar por TC ou LCR)\n1. Coletar 2 hemoculturas.\n2. Dexametasona 10 mg IV (0,15 mg/kg) 15–20 min antes ou junto do antibiótico, depois de 6 em 6 horas por 4 dias.\n3. Ceftriaxona 2 g + SF 0,9% 100 mL IV em 30 min de 12 em 12 horas.\n4. Se > 50 anos ou imunossuprimido: ampicilina 2 g + SF 0,9% 100 mL IV em 30 min de 4 em 4 horas.\n5. Se suspeita de encefalite herpética: aciclovir 10 mg/kg + SF 0,9% 250 mL IV em 1 h de 8 em 8 horas.\n6. Precaução para gotículas nas primeiras 24 h de antibiótico. Notificar.\n\nALTA (CEFALEIA PRIMÁRIA)\nUSO ORAL\n1. Dipirona 500 mg ---------------------------------- 1 caixa\n   Tomar 2 comprimidos no início da dor; repetir de 6 em 6 horas se necessário (máx 4 g/dia), no máximo 2 a 3 dias por semana.\n2. Metoclopramida 10 mg ------------------------------ 10 comprimidos\n   Tomar 1 comprimido até de 8 em 8 horas se náusea."
+  },
+  orientacoesRetorno: [
+    "Anotar as crises em um diário (dia, duração, gatilhos, remédios usados)",
+    "Analgésico em excesso (mais de 10–15 dias por mês) piora a dor de cabeça",
+    "Voltar imediatamente se dor de cabeça súbita e muito forte, febre com rigidez de nuca ou manchas na pele, fraqueza, dormência, fala enrolada, confusão, convulsão, alteração da visão ou vômitos repetidos",
+    "Procurar a UBS em até 2–4 semanas se crises frequentes, para avaliar tratamento preventivo"
+  ],
   fontes: [
-    "ACEP Clinical Policy: Acute Headache (2019)",
+    "ACEP Clinical Policy: Critical issues in adult patients with acute headache (2019, reconfirmada em 2024)",
+    "AHA/ASA — Guideline for the Management of Patients With Aneurysmal Subarachnoid Hemorrhage (2023)",
+    "Ministério da Saúde — Guia de Vigilância em Saúde, capítulo Meningites (6ª ed., 2024)",
     "Perry JJ et al. Ottawa Subarachnoid Hemorrhage Rule (JAMA 2013)",
     "Do TP et al. SNOOP10 (Neurology 2019)",
     "SBCe — Consenso para o tratamento das crises de enxaqueca no PS"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

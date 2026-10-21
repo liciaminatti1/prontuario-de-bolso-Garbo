@@ -129,11 +129,23 @@ registrarFicha({
       "PS: rebaixamento, hipotermia, bradicardia grave"
     ]
   },
-  fontes: [
-    "SBEM — Consenso Brasileiro para Abordagem Clínica e Tratamento do Hipotireoidismo em Adultos (2013) e atualizações",
-    "ATA — Guidelines for the Treatment of Hypothyroidism (2014)",
-    "ATA — Guidelines for Thyroid Disease During Pregnancy (2017)"
+  prescricao: {
+    ambulatorial: "ADULTO JOVEM SEM CARDIOPATIA — DOSE PLENA (1,6 mcg/kg/dia)\nUSO ORAL\n1. Levotiroxina sódica ___ mcg (ex.: 100 mcg para 60–65 kg) ---- 30 comprimidos\n   Tomar 1 comprimido em jejum, com água, 30 a 60 minutos antes do café da manhã, todos os dias. Uso contínuo.\n\nIDOSO, CARDIOPATA OU HIPOTIREOIDISMO SUBCLÍNICO\nUSO ORAL\n1. Levotiroxina sódica 25 mcg -------------------- 30 comprimidos\n   Tomar 1 comprimido em jejum, 30 a 60 minutos antes do café, todos os dias (idoso/cardiopata: pode iniciar com ½ comprimido = 12,5 mcg). Aumentar 12,5–25 mcg a cada 6–8 semanas conforme TSH.\n\nGESTANTE JÁ EM USO\n- Ao confirmar a gravidez, aumentar a dose em 25–30% (ex.: tomar 2 comprimidos extras por semana) e dosar TSH em 4 semanas.\n\nPEDIDO DE EXAMES (6–8 semanas após início ou ajuste)\nTSH e T4 livre."
+  },
+  orientacoesRetorno: [
+    "Tomar a levotiroxina todo dia em jejum, só com água, e esperar 30–60 min para comer",
+    "Separar por 4 horas de cálcio, ferro, antiácidos e polivitamínicos; manter sempre a mesma marca se possível",
+    "A melhora dos sintomas leva semanas; não mudar a dose por conta própria",
+    "Voltar logo se palpitação, dor no peito, tremor, insônia ou perda de peso rápida (dose alta)",
+    "Avisar imediatamente se engravidar ou planejar gravidez (a dose precisa subir)",
+    "Procurar o PS se sonolência excessiva, confusão, frio intenso ou batimentos muito lentos",
+    "Exame de TSH 6–8 semanas após cada mudança de dose; estável, 1 vez ao ano"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  fontes: [
+    "SBEM — Consenso Brasileiro para Abordagem Clínica e Tratamento do Hipotireoidismo Subclínico em Adultos (Arq Bras Endocrinol Metab, 2013)",
+    "ATA — Guidelines for the Treatment of Hypothyroidism (2014)",
+    "ATA — Guidelines for the Diagnosis and Management of Thyroid Disease During Pregnancy and the Postpartum (2017)"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

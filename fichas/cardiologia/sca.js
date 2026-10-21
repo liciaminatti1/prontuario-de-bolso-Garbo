@@ -257,12 +257,52 @@ registrarFicha({
       "Falha de trombólise → ICP de resgate imediata"
     ]
   },
+  prescricao: {
+    hospitalar: "SCA — SALA DE EMERGÊNCIA / UNIDADE CORONARIANA (peso: ___ kg; ClCr: ___)\n1. Jejum até definir cateterismo; depois dieta leve hipossódica. Repouso no leito nas primeiras 12–24 h.\n2. Monitor cardíaco contínuo, oximetria; O₂ por cateter 2–4 L/min só se SpO₂ < 90%.\n3. AAS 100 mg — 3 comprimidos (300 mg) VO mastigados (ataque); a partir do dia seguinte, 1 comprimido 1 vez ao dia.\n4. Clopidogrel 75 mg — ataque 4 comprimidos (300 mg) VO (8 comprimidos = 600 mg se ICP primária; com trombólise > 75 anos: 1 comprimido, sem ataque). Depois 75 mg 1 vez ao dia. (Ticagrelor 90 mg — 2 comprimidos de ataque e 1 de 12/12 h — é alternativa sem trombólise.)\n5. Enoxaparina 1 mg/kg SC de 12/12 h (ClCr < 30: 1 mg/kg 1 vez ao dia). Na trombólise ≤ 75 anos: 30 mg IV em bolus + 1 mg/kg SC 15 min depois e de 12/12 h (máx 100 mg nas 2 primeiras doses); > 75 anos: sem bolus, 0,75 mg/kg SC de 12/12 h (máx 75 mg nas 2 primeiras doses). Na ICP primária, a anticoagulação é feita na hemodinâmica.\n6. Atorvastatina 40 mg — 2 comprimidos (80 mg) VO 1 vez ao dia, à noite.\n7. Dinitrato de isossorbida 5 mg SL se dor e PAS ≥ 90 mmHg, a cada 5 min, até 3 doses.\n8. Se dor persistente, HAS ou congestão: nitroglicerina 5 mg/mL — 50 mg (10 mL) + SG 5% 240 mL (200 mcg/mL) IV em bomba; iniciar 5–10 mcg/min (1,5–3 mL/h), aumentar 5–10 mcg/min a cada 3–5 min.\n9. Metoprolol (tartarato) 25 mg VO de 12/12 h nas primeiras 24 h, se sem IC, choque, BAV ou broncoespasmo.\n10. Se dor refratária a nitrato: morfina 10 mg/mL — 1 mL + 9 mL de SF 0,9% (1 mg/mL): 2–4 mg IV lento, a cada 5–15 min se necessário.\n11. Pantoprazol 40 mg VO 1 vez ao dia em jejum (proteção gástrica durante dupla antiagregação).\n12. ECG de 12 derivações a cada 15–30 min se dor; troponina conforme algoritmo; controles de PA, FC e diurese.\n\nTROMBÓLISE — IAMCSST ≤ 12 h sem ICP possível em 120 min (checar contraindicações)\n- Tenecteplase IV em bolus único em 5–10 s, dose por peso (tabela). Idade ≥ 75 anos: considerar metade da dose.\n- Junto: AAS 300 mg + clopidogrel (300 mg se ≤ 75 anos; 75 mg se > 75 anos) + enoxaparina conforme item 5.\n- Avaliar critérios de reperfusão em 60–90 min; transferir para cateterismo em 2–24 h (resgate imediato se falha).",
+    ambulatorial: "ALTA PÓS-SCA (seguir orientação da cardiologia)\nUSO ORAL\n1. AAS 100 mg ----------------------------------- 30 comprimidos\n   Tomar 1 comprimido após o almoço. Uso contínuo.\n2. Clopidogrel 75 mg ----------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia por 12 meses (não suspender sem falar com o cardiologista).\n3. Atorvastatina 80 mg --------------------------- 30 comprimidos\n   Tomar 1 comprimido à noite. Uso contínuo.\n4. Succinato de metoprolol 25–50 mg -------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo.\n5. Enalapril 5 mg (se FE ≤ 40%, HAS, DM ou DRC) ---- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas.\n6. Dinitrato de isossorbida 5 mg ------------------ 10 comprimidos\n   Colocar 1 comprimido embaixo da língua se dor no peito; se não passar em 5 minutos, ligar 192."
+  },
+  orientacoesRetorno: [
+    "Dor no peito por mais de 5 minutos ou que não melhora com o comprimido embaixo da língua: ligar 192 imediatamente",
+    "Não parar o AAS e o clopidogrel por conta própria, nem antes de dentista ou cirurgia sem falar com o cardiologista",
+    "Voltar se fezes pretas, vômito com sangue ou sangramento que não para",
+    "Parar de fumar; dieta com pouco sal e gordura; caminhar conforme liberação médica (reabilitação cardíaca)",
+    "Não usar sildenafila ou tadalafila se estiver usando nitrato",
+    "Consulta com cardiologia em até 2–4 semanas e acompanhamento na UBS; trazer exames"
+  ],
+  tabelas: [
+    {
+      titulo: "Tenecteplase por peso (bolus IV único)",
+      colunas: ["Peso", "Dose", "Volume (5 mg/mL)"],
+      linhas: [
+        ["< 60 kg", "30 mg", "6 mL"],
+        ["60–69 kg", "35 mg", "7 mL"],
+        ["70–79 kg", "40 mg", "8 mL"],
+        ["80–89 kg", "45 mg", "9 mL"],
+        ["≥ 90 kg", "50 mg", "10 mL"]
+      ],
+      nota: "≥ 75 anos: considerar metade da dose (ESC 2023). Reconstituir o frasco de 50 mg com 10 mL de água para injeção."
+    },
+    {
+      titulo: "Escore HEART",
+      colunas: ["Item", "0", "1", "2"],
+      linhas: [
+        ["História", "Pouco suspeita", "Moderadamente suspeita", "Muito suspeita"],
+        ["ECG", "Normal", "Alteração inespecífica de repolarização", "Infra de ST significativo"],
+        ["Idade", "< 45", "45–64", "≥ 65"],
+        ["Fatores de risco", "Nenhum", "1–2", "≥ 3 ou aterosclerose conhecida"],
+        ["Troponina", "≤ limite normal", "1–3× o limite", "> 3× o limite"]
+      ],
+      nota: "0–3 baixo risco (alta com seguimento se troponinas seriadas negativas); 4–6 intermediário (observação); 7–10 alto (estratégia invasiva)."
+    }
+  ],
   fontes: [
-    "SBC — Diretrizes de Síndromes Coronarianas Agudas (SCA sem supra 2021; IAM com supra)",
+    "SBC — Diretriz Brasileira de Dor Torácica na Emergência (Arq Bras Cardiol, 2025)",
+    "ACC/AHA/ACEP/NAEMSP/SCAI — Guideline for the Management of Patients With Acute Coronary Syndromes (2025)",
     "ESC 2023 Guidelines for the management of acute coronary syndromes",
+    "SBC — Diretrizes de Angina Instável e IAM sem supra de ST (2021) e de IAM com supra de ST (2015)",
     "4ª Definição Universal de Infarto (2018)",
     "Backus BE et al. HEART score (2013)"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

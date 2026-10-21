@@ -87,7 +87,7 @@ registrarFicha({
       duracao: "6–12 meses após remissão (1º episódio); 2 anos ou mais se recorrente",
       monitorizacao: "Náusea, diarreia, insônia, disfunção sexual, ideação suicida (< 25 anos)",
       contraindicacoes: "Uso de IMAO; mania",
-      ajustes: "Boa opção em cardiopatas e na gestação/lactação"
+      ajustes: "Boa opção em cardiopatas e na gestação/lactação. Também 1ª linha em TAG e pânico (iniciar 25 mg). Não consta na RENAME em todas as redes; conferir REMUME"
     },
     {
       droga: "Fluoxetina",
@@ -98,7 +98,7 @@ registrarFicha({
       duracao: "Igual à sertralina",
       monitorizacao: "Ansiedade/insônia no início, interações (CYP2D6)",
       contraindicacoes: "IMAO, mania",
-      ajustes: "Meia-vida longa, menor síndrome de descontinuação. Disponível na RENAME"
+      ajustes: "Meia-vida longa, menor síndrome de descontinuação. Disponível na RENAME. Ansiedade/pânico: iniciar 10 mg por 1 semana"
     },
     {
       droga: "Escitalopram",
@@ -120,7 +120,7 @@ registrarFicha({
       duracao: "—",
       monitorizacao: "Sedação, anticolinérgico, hipotensão postural",
       contraindicacoes: "Risco de suicídio (letal em overdose), arritmia, IAM recente, glaucoma, idoso",
-      ajustes: "Prescrever quantidades pequenas se houver risco"
+      ajustes: "Prescrever quantidades pequenas se houver risco. Amitriptilina e nortriptilina estão na RENAME. ECG se > 40–50 anos ou cardiopata"
     },
     {
       droga: "Benzodiazepínicos",
@@ -131,7 +131,7 @@ registrarFicha({
       duracao: "Máximo 2–4 semanas, só no início do ISRS",
       monitorizacao: "Dependência, quedas, sedação",
       contraindicacoes: "Uso de álcool, idosos, apneia, gestação",
-      ajustes: "Não são tratamento de manutenção"
+      ajustes: "Não são tratamento de manutenção. Receita B (azul). Evitar em idosos (Beers)"
     }
   ],
   destino: {
@@ -158,11 +158,26 @@ registrarFicha({
       "CVV: 188 (24 h, gratuito)"
     ]
   },
+  prescricao: {
+    ambulatorial: "DEPRESSÃO OU ANSIEDADE MODERADA A GRAVE — RECEITA DE CONTROLE ESPECIAL (2 VIAS)\nUSO ORAL\n1. Fluoxetina 20 mg -------------------------------- 30 cápsulas\n   Tomar 1 cápsula pela manhã, todos os dias. (Ansiedade ou pânico: meia dose — 10 mg — na 1ª semana, se houver apresentação ou solução oral.)\n   OU Sertralina 50 mg ------------------------------ 30 comprimidos\n   Tomar meio comprimido (25 mg) por 7 dias; depois 1 comprimido por dia, todos os dias.\n\nSE INSÔNIA INTENSA OU ANSIEDADE NAS 2 PRIMEIRAS SEMANAS (RECEITA B)\n2. Clonazepam 0,5 mg ------------------------------ 15 comprimidos\n   Tomar meio a 1 comprimido à noite se necessário, por no máximo 2 a 4 semanas.\n\nPRESCREVER QUANTIDADE PARA 30 DIAS; SE RISCO DE SUICÍDIO, QUANTIDADE PARA 1–2 SEMANAS E MEDICAÇÃO GUARDADA POR FAMILIAR.\n\nNÃO FARMACOLÓGICO\n3. Atividade física: caminhada de 30 minutos, 5 vezes por semana.\n4. Higiene do sono: horários regulares, evitar telas, café e álcool à noite.\n5. Encaminhamento para psicoterapia (eMulti, CAPS ou serviço-escola) ou grupo terapêutico na UBS."
+  },
+  orientacoesRetorno: [
+    "O antidepressivo leva 2 a 4 semanas para começar a melhorar e 6 a 8 semanas para efeito completo",
+    "Enjoo, dor de cabeça e piora leve da ansiedade nos primeiros dias são comuns e costumam passar",
+    "Não parar o remédio por conta própria mesmo se melhorar; a retirada deve ser gradual e orientada",
+    "Evitar álcool e outras drogas",
+    "Se pensar em se machucar ou em tirar a própria vida, procurar imediatamente a UBS, o CAPS, o PS ou ligar para o SAMU (192) ou o CVV (188, 24 h, gratuito)",
+    "Voltar antes se agitação intensa, euforia, ideias de grandeza, pouca necessidade de sono ou piora importante",
+    "Retorno em 2 a 4 semanas (em 1 semana se risco) e depois mensal até melhorar"
+  ],
   fontes: [
     "Ministério da Saúde — Cadernos de Atenção Básica nº 34: Saúde Mental (2013)",
+    "Ministério da Saúde — RENAME (Relação Nacional de Medicamentos Essenciais, edição vigente)",
+    "OMS — mhGAP Guideline for mental, neurological and substance use conditions, 3ª ed. (2023)",
     "WHO — mhGAP Intervention Guide, version 2.0 (2016)",
-    "NICE NG222 — Depression in adults: treatment and management (2022)"
+    "NICE NG222 — Depression in adults: treatment and management (2022)",
+    "NICE CG113 — Generalised anxiety disorder and panic disorder in adults (2011, atualizado 2020)"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

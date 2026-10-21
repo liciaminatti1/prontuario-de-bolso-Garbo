@@ -22,7 +22,7 @@ registrarFicha({
     "Confirmar diagnóstico (2 exames alterados ou 1 com sintomas clássicos)",
     "Definir meta individual de HbA1c (em geral < 7%)",
     "Mudança de estilo de vida para todos",
-    "Metformina se sem contraindicação; considerar iSGLT2 se DCV, IC ou DRC",
+    "Metformina se sem contraindicação; iSGLT2 (ou agonista de GLP-1) se DCV, IC ou DRC, independentemente da HbA1c",
     "Rastrear complicações: pé, fundo de olho, albuminúria, TFG, lipídios"
   ],
   fataisExcluir: [
@@ -120,7 +120,7 @@ registrarFicha({
       duracao: "Contínuo",
       monitorizacao: "Infecção genital, volemia, cetoacidose euglicêmica",
       contraindicacoes: "DM1, cetoacidose prévia",
-      ajustes: "Prioridade se DCV, IC ou DRC (benefício independente da glicemia). Suspender 3 dias antes de cirurgia e em doença aguda"
+      ajustes: "Prioridade se DCV, IC ou DRC (benefício independente da glicemia). No SUS (Componente Especializado), conforme critérios do PCDT DM2 (idade e risco/doença cardiovascular). Suspender 3 dias antes de cirurgia e em doença aguda com desidratação ou jejum"
     },
     {
       droga: "Gliclazida MR",
@@ -182,11 +182,22 @@ registrarFicha({
       "PS: glicemia > 300 com sintomas, cetose ou rebaixamento"
     ]
   },
-  fontes: [
-    "SBD — Diretriz Oficial da Sociedade Brasileira de Diabetes (2024–2025)",
-    "ADA — Standards of Care in Diabetes 2025",
-    "Ministério da Saúde — PCDT Diabete Melito Tipo 2 (2024)"
+  prescricao: {
+    ambulatorial: "INÍCIO — METFORMINA (titular a cada 1–2 semanas)\nUSO ORAL\n1. Metformina 850 mg ----------------------------- 60 comprimidos\n   Tomar 1 comprimido após o jantar na 1ª semana; depois 1 comprimido após o café e 1 após o jantar. (Se intolerância: metformina 500 mg, subir mais devagar; máx 2.550 mg/dia; TFG 30–45: máx 1.000 mg/dia.)\n\nSEGUNDO FÁRMACO (HbA1c acima da meta após 3 meses)\n2. Gliclazida 30 mg de liberação modificada -------- 30 comprimidos\n   Tomar 1 comprimido no café da manhã; aumentar 30 mg a cada 2–4 semanas conforme glicemia (máx 120 mg/dia).\n   E/OU, se DCV, IC ou DRC (ou como 2º fármaco):\n3. Dapagliflozina 10 mg --------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Beber água; higiene íntima diária.\n\nINSULINA BASAL (HbA1c ≥ 10%, glicemia ≥ 300 com sintomas ou falha dos orais)\nUSO SUBCUTÂNEO\n4. Insulina humana NPH 100 UI/mL ------------------ 1 frasco/caneta ao mês (ajustar)\n   Aplicar 10 UI (ou 0,1–0,2 UI/kg) às 22 h. Aumentar 2 UI a cada 3 dias até glicemia de jejum 80–130 mg/dL; reduzir 10–20% se hipoglicemia.\n5. Seringas de insulina, tiras e lancetas para glicemia capilar (SUS).\n\nPEDIDO DE EXAMES (a cada 3–6 meses / anual)\nHbA1c, glicemia de jejum; anual: creatinina com TFG, relação albumina/creatinina urinária, perfil lipídico, TGO/TGP, vitamina B12 (metformina), retinografia/fundo de olho."
+  },
+  orientacoesRetorno: [
+    "Plano alimentar com menos açúcar, farinha branca e ultraprocessados; atividade física 150 min por semana; perder 5–10% do peso se acima do ideal",
+    "Hipoglicemia (tremor, suor frio, fome, confusão): tomar 1 colher de sopa de açúcar em água ou 150 mL de suco, medir de novo em 15 min",
+    "Examinar os pés todos os dias; não andar descalço; voltar logo se ferida, bolha, mudança de cor ou dor no pé",
+    "Voltar imediatamente se: muita sede e urina, vômitos, dor na barriga, respiração rápida, sonolência ou glicemia > 300 mg/dL",
+    "Dapagliflozina: suspender em vômitos, diarreia forte, jejum prolongado ou cirurgia e procurar a UBS",
+    "Retorno em 4–12 semanas após iniciar ou mudar remédio; HbA1c a cada 3 meses até a meta, depois a cada 6 meses; exame dos pés, olhos e urina 1 vez ao ano"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  fontes: [
+    "SBD — Diretriz Oficial da Sociedade Brasileira de Diabetes (2025)",
+    "ADA — Standards of Care in Diabetes 2026",
+    "Ministério da Saúde — PCDT Diabete Melito Tipo 2 (Portaria SECTICS/MS nº 7, 2024)"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

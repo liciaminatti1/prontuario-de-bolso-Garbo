@@ -22,7 +22,7 @@ registrarFicha({
     "Confirmar com espirometria e classificar sintomas (mMRC/CAT) e exacerbações",
     "Cessação do tabagismo em toda consulta",
     "Broncodilatador de longa ação conforme grupo GOLD",
-    "Vacinas: influenza, pneumocócica, covid-19; VSR se ≥ 60 anos quando disponível",
+    "Vacinas: influenza anual, pneumocócica, covid-19, dTpa; VSR conforme disponibilidade (GOLD 2026 atualizou VSR e influenza)",
     "Reabilitação pulmonar / atividade física; revisar técnica inalatória"
   ],
   fataisExcluir: [
@@ -33,7 +33,7 @@ registrarFicha({
     "IC descompensada",
     "Câncer de pulmão"
   ],
-  proximaDecisao: "Grupo A: um broncodilatador. B ou E: LABA + LAMA. Exacerbações frequentes com eosinófilos ≥ 300 → acrescentar corticoide inalatório.",
+  proximaDecisao: "Grupo A: um broncodilatador. B ou E: LABA + LAMA. Grupo E com eosinófilos ≥ 300 → LABA + LAMA + CI. GOLD 2026: uma única exacerbação moderada já justifica considerar escalonamento; meta = doença estável (sem exacerbações nem piora de sintomas).",
   clinica: {
     anamnese: [
       "Carga tabágica (anos-maço), fogão a lenha, exposição ocupacional",
@@ -56,9 +56,9 @@ registrarFicha({
     ],
     gravidade: [
       "GOLD 1–4 pela VEF₁ (≥ 80%, 50–79%, 30–49%, < 30%)",
-      "Grupo A: mMRC 0–1/CAT < 10, ≤ 1 exacerbação sem internação",
-      "Grupo B: mMRC ≥ 2/CAT ≥ 10, ≤ 1 exacerbação sem internação",
-      "Grupo E: ≥ 2 exacerbações ou ≥ 1 internação no último ano"
+      "Grupo A: mMRC 0–1/CAT < 10, sem exacerbação moderada/grave no último ano",
+      "Grupo B: mMRC ≥ 2/CAT ≥ 10, sem exacerbação moderada/grave no último ano",
+      "Grupo E (GOLD 2026): ≥ 1 exacerbação moderada (tratada com corticoide e/ou antibiótico) ou ≥ 1 internação no último ano — antes: ≥ 2 moderadas"
     ]
   },
   exames: [
@@ -97,7 +97,7 @@ registrarFicha({
       duracao: "Contínuo",
       monitorizacao: "Sintomas, exacerbações, técnica",
       contraindicacoes: "LAMA: glaucoma de ângulo fechado, retenção urinária",
-      ajustes: "Grupos B e E. Usar o disponível no PCDT/SUS"
+      ajustes: "Grupos B e E. SUS (CEAF, PCDT 2021): tiotrópio/olodaterol 2,5/2,5 mcg e umeclidínio/vilanterol 62,5/25 mcg"
     },
     {
       droga: "Broncodilatador isolado (formoterol, salmeterol ou tiotrópio)",
@@ -130,7 +130,7 @@ registrarFicha({
       duracao: "Contínuo",
       monitorizacao: "Pneumonia, candidíase oral",
       contraindicacoes: "Pneumonias de repetição, eosinófilos < 100",
-      ajustes: "Grupo E com eosinófilos ≥ 300 (ou ≥ 100 com exacerbações frequentes)"
+      ajustes: "Grupo E com eosinófilos ≥ 300 (ou ≥ 100 com exacerbações apesar de LABA + LAMA). Preferir tripla a LABA + CI. Fluticasona/umeclidínio/vilanterol 100/62,5/25 mcg 1×/dia foi incorporada ao SUS (2024) para DPOC grave exacerbadora; conferir disponibilidade"
     },
     {
       droga: "Exacerbação leve a moderada: prednisona",
@@ -141,7 +141,7 @@ registrarFicha({
       duracao: "5 dias",
       monitorizacao: "Glicemia",
       contraindicacoes: "—",
-      ajustes: "Associar aumento do broncodilatador de curta ação"
+      ajustes: "Associar aumento do broncodilatador de curta ação (salbutamol ± ipratrópio)"
     },
     {
       droga: "Exacerbação com escarro purulento: antibiótico",
@@ -152,7 +152,7 @@ registrarFicha({
       duracao: "5 dias",
       monitorizacao: "Resposta em 48–72 h",
       contraindicacoes: "Alergia",
-      ajustes: "Indicado com aumento de purulência + dispneia ou volume de escarro"
+      ajustes: "Indicado com aumento de purulência + dispneia ou volume de escarro. Doxiciclina: evitar em gestantes"
     }
   ],
   destino: {
@@ -178,11 +178,23 @@ registrarFicha({
       "Pneumologia: dúvida diagnóstica, < 40 anos, exacerbações frequentes apesar de tratamento, avaliação de O₂ domiciliar"
     ]
   },
+  prescricao: {
+    ambulatorial: "MANUTENÇÃO (USO INALATÓRIO)\n1. Tiotrópio + olodaterol 2,5/2,5 mcg (Respimat) ---- 1 unidade\n   Inalar 2 jatos 1 vez ao dia, sempre no mesmo horário. Uso contínuo.\n   (ou umeclidínio + vilanterol 62,5/25 mcg: 1 inalação 1 vez ao dia)\n   Grupo A: formoterol 12 mcg, 1 cápsula inalada de 12 em 12 horas.\n2. Salbutamol 100 mcg spray ------------------------ 1 frasco\n   Inalar 2 a 4 jatos com espaçador se falta de ar (até de 4 em 4 horas).\n\nEXACERBAÇÃO LEVE A MODERADA (USO ORAL)\n3. Prednisona 20 mg ------------------------------- 10 comprimidos\n   Tomar 2 comprimidos (40 mg) pela manhã por 5 dias.\n4. Se escarro purulento: Amoxicilina + clavulanato 875/125 mg ------ 10 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas por 5 dias.\n   OU Azitromicina 500 mg: 1 comprimido 1 vez ao dia por 3 dias.\n   OU Doxiciclina 100 mg: 1 comprimido de 12 em 12 horas por 5 dias.\n5. Salbutamol 100 mcg spray: 4 jatos com espaçador de 4 em 4 horas por 3 a 5 dias, depois se necessário."
+  },
+  orientacoesRetorno: [
+    "Parar de fumar é o tratamento que mais protege o pulmão; a UBS oferece apoio e medicamentos",
+    "Usar o inalador de manutenção todos os dias; trazer o inalador nas consultas para revisar a técnica",
+    "Manter vacinas em dia (gripe todo ano, pneumonia, covid-19)",
+    "Caminhar e manter atividade física; perguntar sobre reabilitação pulmonar",
+    "Plano de crise: se aumentar falta de ar, catarro ou mudar a cor do catarro, iniciar a receita de crise e avisar a UBS",
+    "Voltar imediatamente ou ligar 192 se falta de ar em repouso, lábios roxos, sonolência ou confusão, dor no peito, inchaço nas pernas novo, ou sem melhora em 48 horas",
+    "Retorno em 48–72 h após exacerbação e a cada 3–6 meses quando estável"
+  ],
   fontes: [
-    "GOLD — Global Strategy for the Diagnosis, Management and Prevention of COPD (2025)",
-    "Ministério da Saúde — PCDT Doença Pulmonar Obstrutiva Crônica (2021)",
+    "GOLD — Global Strategy for the Diagnosis, Management and Prevention of COPD (2026)",
+    "Ministério da Saúde — PCDT Doença Pulmonar Obstrutiva Crônica (Portaria Conjunta nº 19/2021) e Portaria SECTICS/MS nº 46/2024 (terapia tripla)",
     "SBPT — Recomendações para o tratamento farmacológico da DPOC (2022)"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

@@ -6,7 +6,7 @@ registrarFicha({
   publico: "adulto",
   titulo: "Hipertensão arterial",
   resumo: "Diagnóstico, estratificação de risco, início e ajuste do tratamento na atenção primária.",
-  palavrasChave: "hipertensao has pressao alta losartana enalapril anlodipino hidroclorotiazida clortalidona mapa mrpa risco cardiovascular",
+  palavrasChave: "hipertensao has pressao alta pre-hipertensao losartana enalapril captopril anlodipino hidroclorotiazida clortalidona espironolactona mapa mrpa risco cardiovascular",
   critico: {
     tempo: "Confirme fora do consultório",
     texto: "PA ≥ 140/90 em consultório deve ser confirmada por MRPA ou MAPA, salvo PA ≥ 180/110 ou lesão de órgão-alvo."
@@ -30,7 +30,7 @@ registrarFicha({
     "Pré-eclâmpsia",
     "Hipertensão secundária grave (feocromocitoma, coarctação)"
   ],
-  proximaDecisao: "Estágio 1 de baixo risco: MEV por até 3 meses. Estágio 1 de risco alto e estágios 2–3: iniciar medicação, em geral combinação em dose baixa. Meta habitual < 130/80.",
+  proximaDecisao: "Estágio 1 de baixo risco: MEV por até 3 meses. Estágio 1 de risco alto e estágios 2–3: iniciar medicação, em geral combinação em dose baixa. Meta < 130/80 mmHg para todos (SBC 2025), individualizando em idoso frágil e hipotensão postural.",
   clinica: {
     anamnese: [
       "Tempo de diagnóstico, tratamentos prévios e adesão",
@@ -64,6 +64,8 @@ registrarFicha({
       }
     ],
     gravidade: [
+      "Normal: < 120/80",
+      "Pré-hipertensão: 120–139 / 80–89 (SBC 2025) — MEV e reavaliação; risco CV alto pode exigir mais",
       "Estágio 1: 140–159 / 90–99",
       "Estágio 2: 160–179 / 100–109",
       "Estágio 3: ≥ 180 / ≥ 110",
@@ -193,14 +195,40 @@ registrarFicha({
     ],
     transferencia: [
       "Encaminhar à cardiologia/nefrologia: suspeita de secundária, resistente, < 30 anos, DRC avançada",
-      "PS: PA ≥ 180/120 com lesão aguda de órgão-alvo"
+      "PS: PA ≥ 180/110 com lesão aguda de órgão-alvo"
     ]
   },
-  fontes: [
-    "Diretrizes Brasileiras de Hipertensão Arterial — SBC/SBH/SBN (2025)",
-    "Ministério da Saúde — Linha de Cuidado do Adulto com Hipertensão Arterial Sistêmica",
-    "ESC 2024 Guidelines for elevated blood pressure and hypertension"
+  prescricao: {
+    ambulatorial: "INÍCIO — COMBINAÇÃO EM DOSE BAIXA (estágio 1 de alto risco, estágios 2–3)\nUSO ORAL\n1. Losartana 50 mg ------------------------------ 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo.\n2. Anlodipino 5 mg ------------------------------ 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo.\n   (Ou, no lugar do anlodipino: hidroclorotiazida 25 mg ½ comprimido pela manhã, ou clortalidona 12,5 mg 1 comprimido pela manhã.)\n\nINTENSIFICAÇÃO (fora da meta em 4 semanas, com boa adesão)\n- Losartana 50 mg 1 comprimido de 12 em 12 horas (100 mg/dia) e anlodipino 10 mg 1 vez ao dia.\n- Terceira droga: acrescentar tiazídico (hidroclorotiazida 25 mg ou clortalidona 12,5–25 mg pela manhã).\n- Quarta droga (resistente): espironolactona 25 mg 1 vez ao dia (se K < 5,0 e TFG ≥ 30).\n\nAlternativa ao BRA: enalapril 10 mg 1 comprimido de 12 em 12 horas (tosse seca é comum; não associar com losartana).\n\nPEDIDO DE EXAMES (1–2 semanas após iniciar BRA/IECA ou diurético)\nCreatinina, potássio, sódio.\n\nMONITORIZAÇÃO\nMRPA: 3 medidas pela manhã e 3 à noite por 5–7 dias, anotar e trazer na consulta."
+  },
+  orientacoesRetorno: [
+    "Pressão alta não dá sintoma; tomar os remédios todos os dias, mesmo com a pressão boa",
+    "Sal: no máximo 1 colher de chá rasa por dia (5 g) para toda a comida; evitar embutidos, temperos prontos e ultraprocessados",
+    "Caminhar ou fazer atividade física 150 min por semana; perder peso se acima do ideal; evitar álcool e cigarro",
+    "Não usar anti-inflamatórios e descongestionantes nasais sem orientação",
+    "Voltar imediatamente (ou procurar PS) se: dor no peito, falta de ar, fraqueza ou dormência de um lado, fala enrolada, visão turva ou dor de cabeça muito forte com pressão alta",
+    "Losartana/enalapril: avisar se engravidar (suspender); fazer o exame de sangue pedido em 1–2 semanas",
+    "Retorno em 4 semanas após começar ou mudar remédio; na meta, a cada 3–6 meses"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  tabelas: [
+    {
+      titulo: "Classificação da PA de consultório (adulto) — SBC 2025",
+      colunas: ["Categoria", "PAS (mmHg)", "PAD (mmHg)"],
+      linhas: [
+        ["Normal", "< 120", "< 80"],
+        ["Pré-hipertensão", "120–139", "80–89"],
+        ["Hipertensão estágio 1", "140–159", "90–99"],
+        ["Hipertensão estágio 2", "160–179", "100–109"],
+        ["Hipertensão estágio 3", "≥ 180", "≥ 110"]
+      ],
+      nota: "Quando PAS e PAD caem em categorias diferentes, vale a maior. Confirmar com MRPA ou MAPA."
+    }
+  ],
+  fontes: [
+    "SBC/SBH/SBN — Diretriz Brasileira de Hipertensão Arterial (Arq Bras Cardiol, 2025)",
+    "Ministério da Saúde — Linha de Cuidado do Adulto com Hipertensão Arterial Sistêmica (2021)",
+    "ESC 2024 Guidelines for the management of elevated blood pressure and hypertension"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

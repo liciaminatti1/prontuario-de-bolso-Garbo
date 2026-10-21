@@ -20,7 +20,7 @@ registrarFicha({
   ],
   condutaInicial: [
     "Diferenciar resfriado, faringite, sinusite, influenza",
-    "Faringite: aplicar Centor/McIsaac",
+    "Faringite: aplicar Centor/McIsaac (ou FeverPAIN) para decidir quem testar ou tratar",
     "Sinusite: critérios de bacteriana (> 10 dias, piora bifásica ou grave)",
     "Sintomáticos: analgésico/antitérmico, lavagem nasal com soro fisiológico, hidratação",
     "Orientar duração esperada (tosse pode durar 3 semanas) e sinais de retorno"
@@ -82,13 +82,13 @@ registrarFicha({
     {
       droga: "Faringite estreptocócica: amoxicilina",
       linha: "l1",
-      dose: "Adulto 500 mg 8/8h (ou 1 g 1×/dia) · criança 50 mg/kg/dia (máx 1 g/dia) em 1–2 tomadas",
+      dose: "Adulto 500 mg 12/12h ou 1 g 1×/dia · criança 50 mg/kg 1×/dia (máx 1.000 mg) ou 25 mg/kg 12/12h (máx 500 mg/dose)",
       via: "VO",
       intervalo: "Conforme dose",
       duracao: "10 dias",
       monitorizacao: "Melhora em 48–72 h",
       contraindicacoes: "Alergia a penicilina",
-      ajustes: "Alergia não grave: cefalexina 500 mg 12/12h 10 dias. Grave: azitromicina 500 mg/dia por 5 dias (criança 12 mg/kg/dia)"
+      ajustes: "Alergia não grave: cefalexina 500 mg 12/12h 10 dias (criança 20 mg/kg/dose 12/12h, máx 500 mg/dose). Alergia grave: azitromicina 500 mg 1×/dia por 5 dias (criança 12 mg/kg 1×/dia, máx 500 mg) ou clindamicina 300 mg 8/8h por 10 dias (criança 7 mg/kg/dose 8/8h, máx 300 mg/dose)"
     },
     {
       droga: "Penicilina G benzatina",
@@ -104,13 +104,13 @@ registrarFicha({
     {
       droga: "Sinusite bacteriana: amoxicilina",
       linha: "l1",
-      dose: "Adulto 500 mg 8/8h ou 875 mg 12/12h · criança 45–90 mg/kg/dia",
+      dose: "Adulto 500 mg 8/8h ou 875 mg 12/12h · criança 45 mg/kg/dia de 12/12h; dose alta 90 mg/kg/dia de 12/12h (máx 2 g/dose) se < 2 anos, creche, antibiótico nos últimos 30 dias ou região com pneumococo resistente",
       via: "VO",
       intervalo: "8/8h ou 12/12h",
       duracao: "5–7 dias (criança 10 dias)",
       monitorizacao: "Melhora em 72 h",
       contraindicacoes: "Alergia",
-      ajustes: "Antibiótico recente, > 65 anos, grave ou falha: amoxicilina-clavulanato 875/125 mg 12/12h. Alérgicos: doxiciclina 100 mg 12/12h"
+      ajustes: "Antibiótico recente, > 65 anos, grave ou falha: amoxicilina-clavulanato 875/125 mg 12/12h. Criança: amoxicilina-clavulanato 90 mg/kg/dia de amoxicilina de 12/12h. Alérgicos adultos: doxiciclina 100 mg 12/12h (não usar em < 8 anos nem em gestantes)"
     },
     {
       droga: "Lavagem nasal e corticoide nasal",
@@ -137,7 +137,7 @@ registrarFicha({
     {
       droga: "Influenza com risco: oseltamivir",
       linha: "adj",
-      dose: "75 mg 12/12h (ajustar por peso em crianças)",
+      dose: "Adulto 75 mg · criança ≥ 1 ano: ≤ 15 kg 30 mg; > 15–23 kg 45 mg; > 23–40 kg 60 mg; > 40 kg 75 mg · < 1 ano: 0–8 meses 3 mg/kg; 9–11 meses 3,5 mg/kg",
       via: "VO",
       intervalo: "12/12h",
       duracao: "5 dias",
@@ -168,12 +168,26 @@ registrarFicha({
       "Otorrino eletivo: amigdalites recorrentes (≥ 7 em 1 ano), sinusite crônica"
     ]
   },
-  fontes: [
-    "IDSA — Clinical Practice Guideline for Group A Streptococcal Pharyngitis (2012)",
-    "IDSA — Clinical Practice Guideline for Acute Bacterial Rhinosinusitis (2012)",
-    "ABORL-CCF — Diretrizes Brasileiras de Rinossinusites (2015)",
-    "Ministério da Saúde — Protocolo de Tratamento de Influenza (2023)"
+  prescricao: {
+    ambulatorial: "RESFRIADO / SINTOMÁTICOS (USO ORAL E NASAL)\n1. Dipirona 500 mg ---------------------------------- 1 caixa\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor ou febre (criança: 15 mg/kg/dose, máx 1 g/dose).\n2. Soro fisiológico 0,9% --------------------------- 1 frasco\n   Aplicar 5 a 10 mL em cada narina, 4 a 6 vezes ao dia, enquanto houver congestão.\n\nFARINGITE ESTREPTOCÓCICA (USO ORAL)\n3. Amoxicilina 500 mg ------------------------------ 20 cápsulas\n   Tomar 1 cápsula de 12 em 12 horas por 10 dias.\n   Criança: amoxicilina suspensão 250 mg/5 mL — 50 mg/kg 1 vez ao dia (máx 1.000 mg) por 10 dias.\n   OU (adesão duvidosa)\n   Penicilina G benzatina 1.200.000 UI ------------- 1 frasco-ampola\n   Aplicar 1.200.000 UI IM profunda, dose única (< 27 kg: 600.000 UI). Observar 30 minutos.\n\nSINUSITE BACTERIANA (USO ORAL)\n4. Amoxicilina 875 mg ------------------------------ 14 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas por 7 dias.\n   Criança: 45 mg/kg/dia (dose alta 90 mg/kg/dia) divididos de 12 em 12 horas por 10 dias.\n5. Budesonida spray nasal 64 mcg ------------------- 1 frasco\n   Aplicar 2 jatos em cada narina 1 vez ao dia por 2 a 4 semanas.\n\nSÍNDROME GRIPAL COM FATOR DE RISCO (USO ORAL)\n6. Oseltamivir 75 mg ------------------------------- 10 cápsulas\n   Tomar 1 cápsula de 12 em 12 horas por 5 dias (criança: dose por peso, ver tratamento)."
+  },
+  orientacoesRetorno: [
+    "Resfriado dura 7 a 10 dias; a tosse pode durar até 3 semanas",
+    "Beber bastante líquido, lavar o nariz com soro várias vezes ao dia, lavar as mãos",
+    "Se receber antibiótico, tomar até o fim mesmo que melhore antes",
+    "Voltar imediatamente se falta de ar, dificuldade para engolir a saliva, voz abafada, boca que não abre, inchaço ou vermelhidão ao redor do olho, visão dupla, dor de cabeça forte com rigidez de nuca ou sonolência",
+    "Voltar se a febre durar mais de 3 dias, se piorar depois de ter melhorado, ou se não melhorar em 72 horas de antibiótico",
+    "Sinusite sem antibiótico: retornar em 7 dias se não houver melhora"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  fontes: [
+    "Ministério da Saúde — Guia de Manejo e Tratamento de Influenza (2023)",
+    "IDSA — Guideline on the Diagnosis of Group A Streptococcal Pharyngitis, parte 1: diagnóstico (Clin Infect Dis, 2025)",
+    "IDSA — Clinical Practice Guideline for Group A Streptococcal Pharyngitis: tratamento (2012)",
+    "IDSA — Clinical Practice Guideline for Acute Bacterial Rhinosinusitis in Children and Adults (2012)",
+    "AAP — Clinical Practice Guideline for Acute Bacterial Sinusitis in Children 1 to 18 Years (2013)",
+    "EPOS — European Position Paper on Rhinosinusitis and Nasal Polyps (2020)",
+    "ABORL-CCF — Diretrizes Brasileiras de Rinossinusites (2015)"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

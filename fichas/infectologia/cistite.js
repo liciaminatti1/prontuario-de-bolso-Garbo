@@ -167,11 +167,23 @@ registrarFicha({
       "Sinais de sepse ou obstrução → PS"
     ]
   },
-  fontes: [
-    "IDSA — Guidelines for uncomplicated cystitis and pyelonephritis in women (2010; atualização 2025)",
-    "SBU / FEBRASGO — Infecção do trato urinário (protocolos)",
-    "EAU Guidelines on Urological Infections (2025)"
+  prescricao: {
+    ambulatorial: "CISTITE NÃO COMPLICADA — MULHER NÃO GESTANTE (escolher uma opção)\nUSO ORAL\n1. Nitrofurantoína 100 mg (macrocristais) -------- 20 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas, com alimento, por 5 dias.\n   OU\n1. Fosfomicina trometamol 3 g ------------------- 1 envelope\n   Dissolver em meio copo de água e tomar em dose única, à noite, após esvaziar a bexiga.\n   OU (alergia/intolerância às anteriores)\n1. Cefalexina 500 mg ----------------------------- 28 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas por 7 dias.\n\nSINTOMÁTICOS\n2. Fenazopiridina 200 mg ------------------------- 6 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas por até 2 dias se ardor forte (deixa a urina laranja).\n3. Dipirona 500 mg ------------------------------- 1 caixa\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor.\n\nGESTANTE: urocultura antes; cefalexina 500 mg de 6/6 h por 7 dias ou nitrofurantoína (evitar no termo), ajustar pelo antibiograma; urocultura de controle 1–2 semanas após."
+  },
+  orientacoesRetorno: [
+    "Beber bastante água e não segurar a urina",
+    "Os sintomas devem melhorar em 48–72 h; tomar o antibiótico até o fim",
+    "Voltar imediatamente se febre, calafrios, dor nas costas (lombar), vômitos ou piora do estado geral (pode ser infecção nos rins)",
+    "Voltar se não melhorar em 48–72 h ou se os sintomas voltarem em até 2 semanas (precisa de urocultura)",
+    "Se corrimento, coceira ou dor na relação, avisar: pode ser outra infecção",
+    "Não precisa repetir exame de urina se ficar sem sintomas (exceto gestante)"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  fontes: [
+    "IDSA/ESCMID — International Clinical Practice Guidelines for the Treatment of Acute Uncomplicated Cystitis and Pyelonephritis in Women (2010; atualização em andamento)",
+    "IDSA — Guideline on Management of Complicated Urinary Tract Infections (2025)",
+    "EAU Guidelines on Urological Infections (2025)",
+    "FEBRASGO — Infecção do trato urinário (protocolo)"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

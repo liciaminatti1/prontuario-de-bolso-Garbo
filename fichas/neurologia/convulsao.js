@@ -20,9 +20,9 @@ registrarFicha({
   ],
   condutaInicial: [
     "Proteger de trauma, decúbito lateral, aspirar, O₂, monitor",
-    "Glicemia capilar imediata; se < 60: tiamina 100 mg + glicose 50% 50 mL IV",
-    "Com acesso: diazepam 10 mg IV (ou midazolam 10 mg IM sem acesso); repetir 1× em 5 min",
-    "Sem resposta: fenitoína 20 mg/kg IV ou levetiracetam 60 mg/kg IV ou valproato 40 mg/kg IV",
+    "Glicemia capilar imediata; se < 60: adulto tiamina 100 mg IV + glicose 50% 50 mL IV; criança glicose 0,5–1 g/kg (SG 10% 5–10 mL/kg) IV",
+    "Com acesso: diazepam 0,15–0,2 mg/kg IV (máx 10 mg); sem acesso: midazolam IM (10 mg se > 40 kg; 5 mg se 13–40 kg) ou intranasal/bucal; repetir 1× em 5 min",
+    "Sem resposta: levetiracetam 60 mg/kg IV (máx 4.500 mg) ou fenitoína 20 mg/kg IV (máx 1.500 mg) ou valproato 40 mg/kg IV (máx 3.000 mg) — eficácia semelhante (ESETT)",
     "Refratário: intubação e infusão contínua (midazolam/propofol), EEG"
   ],
   fataisExcluir: [
@@ -107,68 +107,68 @@ registrarFicha({
     {
       droga: "Diazepam",
       linha: "l1",
-      dose: "Adulto 10 mg (0,15–0,2 mg/kg, máx 10 mg/dose) · criança 0,3 mg/kg IV ou 0,5 mg/kg retal",
+      dose: "Adulto e criança 0,15–0,2 mg/kg IV (máx 10 mg/dose) · retal 0,2–0,5 mg/kg (máx 20 mg)",
       via: "IV lento (sem diluir) ou retal",
       intervalo: "Repetir 1× após 5 min",
       duracao: "Máx 2 doses",
       monitorizacao: "Respiração, PA, SpO₂",
       contraindicacoes: "—",
-      ajustes: "Não usar IM (absorção errática)"
+      ajustes: "Ampola 10 mg/2 mL (5 mg/mL). Injetar sem diluir a até 5 mg/min. Não usar IM (absorção errática)"
     },
     {
       droga: "Midazolam",
       linha: "l1",
-      dose: "> 40 kg: 10 mg · 13–40 kg: 5 mg · ou 0,2 mg/kg intranasal/bucal",
+      dose: "IM: > 40 kg 10 mg · 13–40 kg 5 mg · intranasal/bucal 0,2 mg/kg (máx 10 mg) · IV 0,1–0,2 mg/kg (máx 10 mg)",
       via: "IM, intranasal ou bucal",
       intervalo: "Dose única; pode repetir 1×",
       duracao: "—",
       monitorizacao: "Respiração",
       contraindicacoes: "—",
-      ajustes: "Primeira escolha sem acesso venoso"
+      ajustes: "Primeira escolha sem acesso venoso. Ampola 5 mg/mL: usar sem diluir; intranasal com atomizador, metade em cada narina"
     },
     {
       droga: "Fenitoína",
       linha: "l1",
-      dose: "20 mg/kg (máx 1.500 mg); se persistir, +5–10 mg/kg",
+      dose: "Adulto e criança 20 mg/kg (máx 1.500 mg); se persistir, +5–10 mg/kg",
       via: "IV, diluída somente em SF 0,9%",
-      intervalo: "Infusão ≤ 50 mg/min (idoso/cardiopata ≤ 25 mg/min)",
-      duracao: "Manutenção 100 mg 8/8h após 12–24 h",
+      intervalo: "Infusão ≤ 50 mg/min (idoso/cardiopata ≤ 25 mg/min; criança ≤ 1 mg/kg/min)",
+      duracao: "Manutenção adulto 100 mg 8/8h (criança 5 mg/kg/dia em 2–3 doses) após 12–24 h",
       monitorizacao: "ECG e PA contínuos (bradiarritmia, hipotensão), flebite",
       contraindicacoes: "BAV, bradicardia sinusal",
-      ajustes: "Precipita em SG. Ex.: 70 kg → 1.400 mg em 250 mL SF em ≥ 30 min"
+      ajustes: "Ampola 250 mg/5 mL (50 mg/mL). Precipita em SG. Concentração final 1–10 mg/mL. Ex.: 70 kg → 1.400 mg (28 mL) em 250 mL SF em ≥ 30 min, com filtro se disponível"
     },
     {
       droga: "Levetiracetam",
       linha: "l1",
-      dose: "60 mg/kg (máx 4.500 mg)",
+      dose: "Adulto e criança 60 mg/kg (máx 4.500 mg)",
       via: "IV em 10–15 min",
-      intervalo: "Dose única; manutenção 500–1.500 mg 12/12h",
+      intervalo: "Dose única; manutenção adulto 500–1.500 mg 12/12h · criança 20 mg/kg 12/12h (máx 1.500 mg/dose)",
       duracao: "—",
       monitorizacao: "Sonolência, comportamento",
       contraindicacoes: "—",
-      ajustes: "Ajustar manutenção na DRC. Boa opção em cardiopatas e gestantes"
+      ajustes: "Frasco 500 mg/5 mL (100 mg/mL): diluir em 100 mL SF 0,9% (ou SG 5%). Ataque sem ajuste renal; ajustar manutenção na DRC. Boa opção em cardiopatas e gestantes"
     },
     {
       droga: "Valproato de sódio",
       linha: "alt",
-      dose: "40 mg/kg (máx 3.000 mg)",
+      dose: "Adulto e criança 40 mg/kg (máx 3.000 mg)",
       via: "IV em 10 min",
       intervalo: "Dose única",
       duracao: "—",
       monitorizacao: "Função hepática, amônia, plaquetas",
       contraindicacoes: "Gestação, hepatopatia, doença mitocondrial",
-      ajustes: "—"
+      ajustes: "Disponibilidade IV limitada no Brasil. Evitar em < 2 anos (hepatotoxicidade) e em mulheres em idade fértil"
     },
     {
       droga: "Fenobarbital",
       linha: "alt",
-      dose: "15–20 mg/kg (máx 1.000 mg)",
+      dose: "Adulto e criança 15–20 mg/kg (máx 1.000 mg)",
       via: "IV a 50–100 mg/min",
       intervalo: "Dose única",
       duracao: "—",
       monitorizacao: "Depressão respiratória e hipotensão (preparar via aérea)",
       contraindicacoes: "—",
-      ajustes: "Usar se outras opções indisponíveis"
+      ajustes: "Conferir a concentração da ampola disponível antes de calcular o volume. Diluir em 100 mL SF. Usar se outras opções indisponíveis; 2ª linha usual no recém-nascido"
     },
     {
       droga: "Estado de mal refratário: midazolam contínuo",
@@ -179,7 +179,7 @@ registrarFicha({
       duracao: "24–48 h sem crises antes de desmame",
       monitorizacao: "Ventilação mecânica, PA, EEG contínuo",
       contraindicacoes: "—",
-      ajustes: "Alternativas: propofol 1–2 mg/kg + 20–200 mcg/kg/min; cetamina"
+      ajustes: "Diluição: midazolam 150 mg (30 mL de 5 mg/mL) + SF 120 mL = 1 mg/mL. Alternativas: propofol 1–2 mg/kg + 20–200 mcg/kg/min (evitar infusão prolongada em criança); cetamina"
     }
   ],
   destino: {
@@ -206,11 +206,25 @@ registrarFicha({
       "UBS: crise em curso → benzodiazepínico (midazolam IM) e SAMU"
     ]
   },
-  fontes: [
-    "American Epilepsy Society — Guideline for the Treatment of Convulsive Status Epilepticus (2016)",
-    "ESETT trial (N Engl J Med 2019) — levetiracetam, fosfenitoína e valproato",
-    "ABN — Recomendações para manejo do estado de mal epiléptico"
+  prescricao: {
+    hospitalar: "PRESCRIÇÃO — SALA DE EMERGÊNCIA (ESTADO DE MAL, ADULTO 70 kg)\n1. Decúbito lateral, aspiração, O₂ por máscara 10 L/min, monitor e oximetria.\n2. Glicemia capilar agora. Se < 60 mg/dL: tiamina 100 mg IV + glicose 50% 50 mL IV.\n3. 0–5 min de crise: diazepam 10 mg (2 mL) IV sem diluir em 2 min. Sem acesso: midazolam 10 mg (2 mL) IM no vasto lateral.\n4. Persistindo após 5 min: repetir diazepam 10 mg IV (máx 2 doses).\n5. Persistindo (≈ 20 min): levetiracetam 4.200 mg (60 mg/kg; 42 mL de 100 mg/mL) + SF 0,9% 100 mL IV em 15 min.\n   OU fenitoína 1.400 mg (20 mg/kg; 28 mL de 50 mg/mL) + SF 0,9% 250 mL IV a ≤ 50 mg/min (≥ 30 min), com monitor cardíaco e PA.\n6. Persistindo após 2ª linha: chamar UTI, IOT e midazolam 0,2 mg/kg IV em bolus, depois midazolam 1 mg/mL IV em bomba a 0,05–2 mg/kg/h (70 kg: 3,5–140 mL/h), titular; EEG.\n7. Manutenção após controle: fenitoína 100 mg IV de 8 em 8 horas (em 50 mL de SF) OU levetiracetam 1.000 mg + SF 100 mL IV de 12 em 12 horas.\n8. Suspeita de eclâmpsia: sulfato de magnésio 4 g IV em 20 min (ataque), depois 1 g/h.\n9. Dipirona 1 g IV se febre.\n10. Cuidados: grades elevadas, cabeceira 30°, avaliação neurológica a cada 15–30 min, glicemia capilar de 4 em 4 horas.\n\nCRIANÇA (por kg)\n- Diazepam 0,15–0,2 mg/kg IV (máx 10 mg) ou 0,5 mg/kg retal (máx 20 mg); midazolam 0,2 mg/kg IN/bucal (máx 10 mg) ou IM 5 mg (13–40 kg).\n- Levetiracetam 60 mg/kg IV (máx 4.500 mg) em 15 min, ou fenitoína 20 mg/kg IV a ≤ 1 mg/kg/min (máx 1.500 mg), ou fenobarbital 20 mg/kg IV (máx 1.000 mg).\n- Hipoglicemia: SG 10% 5 mL/kg IV."
+  },
+  orientacoesRetorno: [
+    "Durante uma crise: deitar de lado, afastar objetos, não colocar nada na boca, marcar o tempo",
+    "Chamar o SAMU (192) se a crise durar mais de 5 minutos, se houver outra crise sem acordar, ou se houver lesão grave",
+    "Tomar o anticonvulsivante todos os dias no horário; não parar por conta própria",
+    "Evitar privação de sono, álcool e drogas",
+    "Não dirigir, não nadar sozinho, evitar alturas e máquinas perigosas até liberação médica",
+    "Voltar imediatamente se nova crise, febre com dor de cabeça, confusão que não melhora ou fraqueza de um lado do corpo",
+    "Primeira crise: consulta com neurologia e EEG/RM ambulatoriais; epiléptico conhecido: UBS em 1–2 semanas para revisar dose"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  fontes: [
+    "American Epilepsy Society — Guideline for the Treatment of Convulsive Status Epilepticus in Children and Adults (2016)",
+    "ESETT trial (N Engl J Med 2019; Lancet 2020 — análise pediátrica) — levetiracetam, fosfenitoína e valproato",
+    "RAMPART (N Engl J Med 2012) — midazolam IM",
+    "Ministério da Saúde — PCDT Epilepsia (2019)",
+    "AHA — PALS (2025) para hipoglicemia pediátrica"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

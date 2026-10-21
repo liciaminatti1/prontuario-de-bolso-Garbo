@@ -93,10 +93,10 @@ registrarFicha({
       dose: "1 g",
       via: "VO",
       intervalo: "8/8h",
-      duracao: "5 dias (se afebril há 48 h e estável)",
+      duracao: "3–5 dias: ATS 2025 sugere < 5 dias (mínimo 3) se estabilidade clínica (sinais vitais normais, comendo, mental normal)",
       monitorizacao: "Reavaliação em 48–72 h",
       contraindicacoes: "Alergia a penicilina",
-      ajustes: "Alternativas: azitromicina 500 mg/dia por 3 dias ou doxiciclina 100 mg 12/12h por 5 dias"
+      ajustes: "Alternativas: doxiciclina 100 mg 12/12h por 5 dias ou azitromicina 500 mg no 1º dia + 250 mg/dia por 4 dias (ou 500 mg/dia por 3 dias) — macrolídeo isolado só onde resistência pneumocócica < 25%"
     },
     {
       droga: "Amoxicilina-clavulanato + azitromicina (ambulatorial com comorbidades)",
@@ -115,10 +115,10 @@ registrarFicha({
       dose: "Ceftriaxona 1–2 g 1×/dia + azitromicina 500 mg 1×/dia",
       via: "IV (azitromicina VO ou IV)",
       intervalo: "24/24h",
-      duracao: "5–7 dias; transição para VO quando estável",
+      duracao: "Não grave: ≥ 3 dias até estabilidade clínica (ATS 2025); grave: ≥ 5 dias. Transição para VO quando estável",
       monitorizacao: "Febre, SpO₂, PCR",
       contraindicacoes: "Anafilaxia a betalactâmico",
-      ajustes: "PAC grave/UTI: ceftriaxona 2 g + azitromicina (ou levofloxacino). Risco de Pseudomonas/MRSA: ampliar conforme CCIH"
+      ajustes: "Ceftriaxona em 100 mL SF em 30 min; azitromicina 500 mg em 250 mL SF em ≥ 1 h. PAC grave/UTI: ceftriaxona 2 g + azitromicina (ou levofloxacino). Risco de Pseudomonas/MRSA: ampliar conforme CCIH. Aspiração: não cobrir anaeróbios de rotina (só se abscesso ou empiema)"
     },
     {
       droga: "Levofloxacino",
@@ -129,7 +129,18 @@ registrarFicha({
       duracao: "5 dias",
       monitorizacao: "QT, tendinopatia, disglicemia",
       contraindicacoes: "Gestação, QT longo, miastenia",
-      ajustes: "Para alérgicos a betalactâmicos. ClCr < 50: 750 mg a cada 48 h"
+      ajustes: "Para alérgicos a betalactâmicos. ClCr < 50: 750 mg a cada 48 h. Descartar tuberculose antes (mascara o diagnóstico)"
+    },
+    {
+      droga: "Hidrocortisona (PAC grave internada)",
+      linha: "adj",
+      dose: "200 mg/dia (infusão contínua ou 50 mg 6/6h)",
+      via: "IV",
+      intervalo: "Contínuo ou 6/6h",
+      duracao: "4–7 dias, depois redução (esquema CAPE COD: 8–14 dias no total)",
+      monitorizacao: "Glicemia, infecção secundária",
+      contraindicacoes: "PAC não grave (ATS 2025 recomenda não usar), pneumonia por influenza, aspergilose, uso recente de corticoide",
+      ajustes: "ATS 2025: sugerido em PAC grave em internados (ex.: UTI, critérios de gravidade). Iniciar em até 24 h da gravidade"
     }
   ],
   destino: {
@@ -157,10 +168,24 @@ registrarFicha({
       "UBS: CRB-65 ≥ 1 com fatores de risco, SpO₂ < 92% ou sinais de sepse → PS"
     ]
   },
-  fontes: [
-    "SBPT — Recomendações para o manejo da pneumonia adquirida na comunidade (2018)",
-    "ATS/IDSA — Diagnosis and Treatment of Adults with Community-acquired Pneumonia (2019)"
+  prescricao: {
+    ambulatorial: "SEM COMORBIDADES (USO ORAL)\n1. Amoxicilina 500 mg ------------------------------- 30 cápsulas\n   Tomar 2 cápsulas (1 g) de 8 em 8 horas por 5 dias.\n   Alérgico: doxiciclina 100 mg, 1 comprimido de 12 em 12 horas por 5 dias.\n\nCOM COMORBIDADES (DPOC, DM, IC, DRC, hepatopatia, etilismo)\n1. Amoxicilina + clavulanato 875/125 mg ------------ 14 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas por 5 a 7 dias.\n2. Azitromicina 500 mg ------------------------------ 3 comprimidos\n   Tomar 1 comprimido 1 vez ao dia por 3 dias.\n\nSINTOMÁTICOS\n3. Dipirona 500 mg ---------------------------------- 1 caixa\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se febre ou dor.",
+    hospitalar: "PRESCRIÇÃO — INTERNAÇÃO (PAC NÃO GRAVE / ENFERMARIA)\n1. Dieta livre conforme aceitação (branda se dispneia).\n2. SF 0,9% 500 mL IV em 30 min se desidratado; depois manutenção conforme aceitação.\n3. Ceftriaxona 1 g + SF 0,9% 100 mL IV em 30 min, 1 vez ao dia (grave: 2 g).\n4. Azitromicina 500 mg + SF 0,9% 250 mL IV em 1 h (ou VO), 1 vez ao dia por 3 a 5 dias.\n5. Dipirona 1 g IV lento de 6 em 6 horas se febre ou dor.\n6. Ondansetrona 4 mg IV lento de 8 em 8 horas se náusea.\n7. Enoxaparina 40 mg SC 1 vez ao dia (profilaxia de TEV; ClCr < 30: 20 mg).\n8. O₂ por cateter nasal se SpO₂ < 92% (alvo 92–96%; DPOC retentor 88–92%).\n9. PAC grave (UTI): ceftriaxona 2 g IV 1 vez ao dia + azitromicina 500 mg IV; hidrocortisona 50 mg IV de 6 em 6 horas (200 mg/dia) se sem influenza.\n10. Cuidados: sinais vitais e SpO₂ de 4 em 4 horas, cabeceira 30°, glicemia capilar se diabético, fisioterapia respiratória se secreção.\n11. Coletar antes do antibiótico (internados graves): 2 hemoculturas, escarro, antígenos urinários; teste para influenza/SARS-CoV-2.\n12. Transição para VO (amoxicilina-clavulanato 875/125 mg 12/12h) quando afebril 48 h, estável e aceitando dieta."
+  },
+  orientacoesRetorno: [
+    "Tomar o antibiótico nos horários certos até o fim",
+    "Beber bastante líquido e repousar; a tosse e o cansaço podem durar semanas",
+    "Febre deve melhorar em 48 a 72 horas",
+    "Voltar imediatamente se falta de ar, lábios roxos, confusão, febre que não cede após 72 horas, dor no peito forte, vômitos que impedem tomar o remédio ou tontura ao levantar",
+    "Reavaliação na UBS em 48–72 horas (presencial ou por telefone)",
+    "Vacinas: gripe anual, pneumocócica e covid-19 conforme o calendário; parar de fumar"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  fontes: [
+    "ATS — Clinical Practice Guideline Update: Diagnosis and Management of Community-acquired Pneumonia (Am J Respir Crit Care Med, 2025)",
+    "ATS/IDSA — Diagnosis and Treatment of Adults with Community-acquired Pneumonia (2019)",
+    "SBPT — Recomendações para o manejo da pneumonia adquirida na comunidade (J Bras Pneumol, 2018)",
+    "Dequin PF et al. CAPE COD — hidrocortisona na PAC grave (N Engl J Med, 2023)"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

@@ -188,10 +188,22 @@ registrarFicha({
       "Necessidade de diálise sem nefrologia local"
     ]
   },
+  prescricao: {
+    hospitalar: "HIPERCALEMIA GRAVE (K ≥ 6,5 ou ECG alterado) — ADULTO\n1. Monitor cardíaco contínuo; ECG de 12 derivações; acesso venoso calibroso.\n2. Gluconato de cálcio 10% — 30 mL (3 ampolas de 10 mL) + SF 0,9% 100 mL IV em 10 min. Repetir em 5–10 min se o ECG não melhorar (até 3 vezes). Em uso de digoxina: infundir em 20–30 min.\n3. Insulina regular 10 UI + glicose 50% 50 mL (25 g) IV em 15 min (ou insulina regular 10 UI em bolus + SG 10% 250 mL em 30 min).\n   - Glicemia pré-tratamento ≥ 250 mg/dL: insulina sem glicose.\n   - Glicemia pré-tratamento < 126 mg/dL: após o bolus, SG 10% 50 mL/h por 5 h.\n4. Salbutamol solução 5 mg/mL — 2 mL (10 mg) em nebulização (sem diluir ou com SF até 4 mL), em 10 min; pode chegar a 20 mg. Evitar se taquiarritmia ou coronariopatia instável.\n5. Se acidose metabólica (pH < 7,2) sem hipervolemia: bicarbonato de sódio 8,4% 50–100 mL (50–100 mEq) IV em 15–30 min, em acesso separado do cálcio.\n6. Se diurese preservada e sem hipovolemia: furosemida 10 mg/mL — 40–80 mg (4–8 mL) IV em bolus.\n7. Quelante intestinal disponível: ciclossilicato de zircônio sódico 10 g VO de 8/8 h (até 48 h) OU poliestirenossulfonato de cálcio 30 g VO em 100 mL de água, até de 8/8 h.\n8. Suspender KCl, IECA, BRA, espironolactona, AINE, trimetoprima, heparina e suplementos de potássio.\n9. Controles: glicemia capilar 0, 15, 30, 60 min e depois de 1/1 h por 6 h; K em 1 h, 2 h, 4 h e 6 h; ECG seriado; diurese.\n10. Hemodiálise de urgência se K refratário, LRA oligúrica, DRC dialítica ou lise celular grave — acionar nefrologia.",
+    ambulatorial: "ALTA (K < 6,0, ECG normal, causa corrigida)\nORIENTAÇÕES / AJUSTES\n1. Suspender ou reduzir o medicamento causador (ex.: espironolactona, IECA/BRA, AINE, suplemento de potássio) até reavaliação.\n2. Se hipervolemia/IC e TFG baixa (USO ORAL): furosemida 40 mg — 1 comprimido pela manhã, conforme orientação médica.\n3. Dieta com menos potássio por enquanto (evitar excesso de banana, laranja, feijão, tomate, frutas secas, sal light/substitutos de sal com potássio).\n\nPEDIDO DE EXAMES (em 24–72 h na UBS)\nPotássio, sódio, ureia, creatinina, glicemia."
+  },
+  orientacoesRetorno: [
+    "Não usar substitutos de sal (\"sal light\") nem suplementos de potássio",
+    "Não usar anti-inflamatórios (diclofenaco, ibuprofeno, nimesulida) sem orientação",
+    "Voltar imediatamente se fraqueza nas pernas, formigamento, palpitação, desmaio ou se urinar muito pouco",
+    "Paciente em diálise: não faltar às sessões",
+    "Repetir o exame de potássio em 24–72 h na UBS e levar a lista de remédios"
+  ],
   fontes: [
     "UK Kidney Association — Clinical Practice Guideline: Treatment of Acute Hyperkalaemia in Adults (2023)",
-    "KDIGO — Controversies Conference on potassium homeostasis (2020)"
+    "KDIGO — Controversies Conference on potassium homeostasis (2020)",
+    "European Resuscitation Council — Cardiac arrest in special circumstances: hiperpotassemia (2021)"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

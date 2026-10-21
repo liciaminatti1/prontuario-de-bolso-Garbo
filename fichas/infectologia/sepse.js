@@ -9,7 +9,7 @@ registrarFicha({
   palavrasChave: "sepse choque septico qsofa lactato antibiotico noradrenalina vasopressor hemocultura infeccao",
   critico: {
     tempo: "Pacote 1ª hora",
-    texto: "Lactato, hemoculturas, antibiótico, volume (se hipotensão ou lactato ≥ 4) e vasopressor se PAM < 65 após volume."
+    texto: "Lactato, hemoculturas, antibiótico imediato (ideal em até 1 h no choque ou sepse provável), cristaloide balanceado 30 mL/kg em 3 h se hipotensão ou lactato ≥ 4 e noradrenalina se PAM < 65 mmHg."
   },
   alarmes: [
     "PAS < 90 ou PAM < 65 mmHg",
@@ -21,9 +21,9 @@ registrarFicha({
   condutaInicial: [
     "2 acessos, monitor, O₂ se SpO₂ < 92%",
     "Lactato + 2 pares de hemoculturas (sem atrasar ATB)",
-    "Antibiótico IV em até 1 h",
-    "Ringer lactato / SF 30 mL/kg em 3 h se hipotensão ou lactato ≥ 4",
-    "Noradrenalina se PAM < 65 apesar do volume (pode iniciar em acesso periférico calibroso)"
+    "Antibiótico IV imediato, idealmente em até 1 h (choque ou sepse provável); infecção apenas possível sem choque: avaliação rápida e antibiótico em até 3 h se a suspeita persistir",
+    "Ringer lactato (preferir cristaloide balanceado ao SF) 30 mL/kg em até 3 h se hipotensão ou lactato ≥ 4; reavaliar a cada alíquota (enchimento capilar, responsividade a volume)",
+    "Noradrenalina se PAM < 65 apesar do volume — iniciar em acesso periférico calibroso em vez de esperar o acesso central"
   ],
   fataisExcluir: [
     "Choque séptico",
@@ -123,7 +123,7 @@ registrarFicha({
   ],
   tratamento: [
     {
-      droga: "Cristaloide (Ringer lactato ou SF 0,9%)",
+      droga: "Cristaloide balanceado (Ringer lactato); SF 0,9% se indisponível",
       linha: "l1",
       dose: "30 mL/kg (peso ideal se obeso)",
       via: "IV",
@@ -131,7 +131,7 @@ registrarFicha({
       duracao: "Guiar depois por responsividade a volume",
       monitorizacao: "Crepitações, SpO₂, PAM, diurese, POCUS (VCI, linhas B)",
       contraindicacoes: "Congestão franca",
-      ajustes: "IC grave, DRC dialítica: alíquotas menores (250 mL) e vasopressor precoce"
+      ajustes: "IC grave, DRC dialítica: alíquotas menores (250 mL) e vasopressor precoce. Albumina não é rotina na ressuscitação inicial (SSC 2026: cristaloide isolado)"
     },
     {
       droga: "Noradrenalina",
@@ -153,7 +153,7 @@ registrarFicha({
       duracao: "—",
       monitorizacao: "Isquemia digital/mesentérica",
       contraindicacoes: "—",
-      ajustes: "Associar quando noradrenalina ≥ 0,25–0,5 mcg/kg/min"
+      ajustes: "Associar em doses crescentes de noradrenalina (na prática 0,25–0,5 mcg/kg/min). Diluição: 20 U (1 mL) + 99 mL SF 0,9% = 0,2 U/mL → 0,03 U/min = 9 mL/h. Sem vasopressina: associar adrenalina"
     },
     {
       droga: "Hidrocortisona",
@@ -164,12 +164,12 @@ registrarFicha({
       duracao: "Até suspensão do vasopressor",
       monitorizacao: "Glicemia",
       contraindicacoes: "—",
-      ajustes: "Indicada em choque com necessidade persistente de vasopressor"
+      ajustes: "SSC 2026 sugere corticoide IV no choque séptico. Bolus IV de 50 mg (frasco 100 mg reconstituído) a cada 6 h. Fludrocortisona 50 mcg VO/SNG 1×/dia é associação opcional (esquema APROCCHSS)"
     },
     {
       droga: "Ceftriaxona ± azitromicina (foco pulmonar comunitário)",
       linha: "l1",
-      dose: "Ceftriaxona 2 g + azitromicina 500 mg",
+      dose: "Ceftriaxona 2 g + azitromicina 500 mg (diluir cada uma em 100–250 mL de SF; azitromicina em 1 h ou mais)",
       via: "IV",
       intervalo: "1×/dia",
       duracao: "5–7 dias (ajustar à resposta)",
@@ -186,7 +186,7 @@ registrarFicha({
       duracao: "Conforme foco",
       monitorizacao: "Função renal",
       contraindicacoes: "Alergia a penicilinas",
-      ajustes: "ClCr < 20: 4,5 g 8/8h. Considerar carbapenêmico se ESBL; vancomicina se risco de MRSA"
+      ajustes: "Diluir em 100 mL SF 0,9%. ClCr < 20: 4,5 g 8/8h. ESBL: meropeném 1 g 8/8h (infusão de 3 h). Risco de MRSA: vancomicina 25 mg/kg ataque (máx 3 g), diluída a ≤ 5 mg/mL em ≥ 1–2 h, depois conforme nível sérico"
     }
   ],
   destino: {
@@ -215,11 +215,23 @@ registrarFicha({
       "Sem UTI ou sem cirurgia para controle de foco → transferência via regulação após estabilização inicial (ATB já feito, vasopressor em curso)"
     ]
   },
-  fontes: [
-    "Surviving Sepsis Campaign: International Guidelines 2021",
-    "Sepsis-3 (Singer M et al., JAMA 2016)",
-    "ILAS — Instituto Latino-Americano de Sepse, protocolos gerenciados"
+  prescricao: {
+    hospitalar: "PRESCRIÇÃO — SALA DE EMERGÊNCIA (ADULTO, 70 kg — ajustar ao peso)\n1. Dieta zero até estabilização; depois dieta conforme aceitação.\n2. Ringer lactato 500 mL IV em 15–30 min; repetir até 30 mL/kg (cerca de 2.000 mL) em até 3 h, reavaliando perfusão e congestão após cada bolus.\n3. Ceftriaxona 2 g + SF 0,9% 100 mL IV em 30 min, 1 vez ao dia (foco comunitário — 1ª dose em até 1 h).\n4. Azitromicina 500 mg + SF 0,9% 250 mL IV em 1 h, 1 vez ao dia (se foco pulmonar).\n   OU foco hospitalar/abdominal grave: piperacilina-tazobactam 4,5 g + SF 0,9% 100 mL IV em 3–4 h, de 6 em 6 horas (1ª dose em 30 min).\n5. Noradrenalina 16 mg (4 ampolas de 4 mL) + SG 5% 234 mL (64 mcg/mL) IV em bomba de infusão, iniciar 0,05–0,1 mcg/kg/min (70 kg: 3–7 mL/h), titular a cada 5–10 min para PAM ≥ 65 mmHg. Pode iniciar em veia periférica calibrosa.\n6. Se noradrenalina em dose crescente (≥ 0,25 mcg/kg/min): vasopressina 20 U + SF 0,9% 99 mL (0,2 U/mL) IV a 9 mL/h (0,03 U/min), dose fixa.\n7. Se choque séptico: hidrocortisona 50 mg IV em bolus de 6 em 6 horas.\n8. Dipirona 1 g IV diluída em 10 mL de AD, lento, de 6 em 6 horas se febre ou dor.\n9. Ondansetrona 4 mg IV lento de 8 em 8 horas se náusea.\n10. Omeprazol 40 mg IV 1 vez ao dia (se choque, ventilação mecânica ou coagulopatia).\n11. Enoxaparina 40 mg SC 1 vez ao dia (profilaxia de TEV; ClCr < 30: 20 mg) — suspender se plaquetas < 50 mil ou sangramento.\n12. Insulina regular SC conforme glicemia capilar se > 180 mg/dL (alvo 144–180).\n13. O₂ por cateter nasal ou máscara se SpO₂ < 92%.\n14. Cuidados: monitor cardíaco, oximetria, PA a cada 15 min (PAI se vasopressor), sonda vesical com diurese horária (meta ≥ 0,5 mL/kg/h), cabeceira 30°, glicemia capilar de 4 em 4 horas.\n15. Coletar: lactato (repetir em 2–4 h), 2 pares de hemocultura antes do antibiótico, culturas do foco, gasometria, hemograma, função renal e hepática, coagulograma."
+  },
+  orientacoesRetorno: [
+    "Após a alta: tomar o antibiótico até o fim, nos horários certos",
+    "Fraqueza, cansaço, alteração do sono e da memória são comuns por semanas após a sepse",
+    "Voltar imediatamente se febre persistente, confusão, sonolência, falta de ar, tontura ao levantar, pele fria ou manchada, urina muito escassa",
+    "Consulta na UBS em até 7 dias após a alta: revisar remédios, função renal, vacinas e reabilitação",
+    "Infecção sem disfunção tratada em casa: reavaliação em 48–72 h"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  fontes: [
+    "Surviving Sepsis Campaign — International Guidelines for Management of Sepsis and Septic Shock (Crit Care Med / Intensive Care Med, 2026)",
+    "Surviving Sepsis Campaign — International Guidelines 2021 (doses de hidrocortisona e metas mantidas)",
+    "Sepsis-3 (Singer M et al., JAMA 2016)",
+    "ILAS — Instituto Latino-Americano de Sepse: Roteiro de implementação de protocolo assistencial gerenciado de sepse",
+    "ASHP/IDSA/PIDS/SIDP — Therapeutic monitoring of vancomycin (2020)"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

@@ -185,10 +185,24 @@ registrarFicha({
       "SCA com indicação de cateterismo, choque cardiogênico sem UTI"
     ]
   },
-  fontes: [
-    "SBC — Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda (2018) e atualização (2021)",
-    "ESC 2021 Guidelines for heart failure e Focused Update 2023"
+  prescricao: {
+    hospitalar: "IC DESCOMPENSADA / EAP — PERFIL QUENTE-ÚMIDO (peso: ___ kg)\n1. Dieta hipossódica, branda; restrição hídrica 1,5 L/dia se hiponatremia ou congestão refratária. Jejum se VNI.\n2. Cabeceira elevada 45° (sentado com pernas pendentes no EAP).\n3. O₂ se SpO₂ < 90%. VNI (CPAP 5–10 cmH₂O ou BiPAP IPAP 10–15 / EPAP 5–8) se desconforto respiratório ou SpO₂ baixa.\n4. Furosemida 10 mg/mL — 40 mg (4 mL) IV em bolus se virgem de diurético; em uso crônico, 1 a 2,5 vezes a dose oral diária IV. Repetir de 12/12 h (ou de 8/8 h) conforme diurese.\n5. Se PAS > 110 mmHg: nitroglicerina 5 mg/mL — 50 mg (10 mL) + SG 5% 240 mL (200 mcg/mL) IV em bomba. Iniciar 10–20 mcg/min (3–6 mL/h); aumentar 5–10 mcg/min a cada 3–5 min (máx 200 mcg/min). Sem bomba: dinitrato de isossorbida 5 mg SL a cada 5–10 min.\n6. Se perfil frio (baixo débito): dobutamina 12,5 mg/mL — 250 mg (20 mL) + SG 5% 230 mL (1 mg/mL) IV em bomba. Iniciar 2,5 mcg/kg/min (70 kg ≈ 10,5 mL/h); titular até 10 mcg/kg/min. Se PAS < 90 apesar disso: noradrenalina (ver ficha de choque) e UTI.\n7. Manter betabloqueador se estável (suspender só em choque/baixo débito). Manter IECA/BRA/sacubitril-valsartana se PA e função renal permitirem.\n8. Enoxaparina 40 mg SC 1 vez ao dia (profilaxia de TEV; 20 mg se ClCr < 30).\n9. Cloreto de potássio conforme K sérico (alvo 4,0–5,0). Repor magnésio se baixo.\n10. Controles: diurese horária nas primeiras 6 h (sonda se necessário), sódio urinário em 2 h, peso diário em jejum, balanço hídrico, creatinina, K e Mg diários.\n11. Resposta insuficiente (diurese < 100–150 mL/h ou Na urinário < 50–70 mEq/L): dobrar a furosemida; associar hidroclorotiazida 25–50 mg VO ou acetazolamida 500 mg IV 1 vez ao dia.",
+    ambulatorial: "ALTA — IC COM FE ≤ 40% (ajustar à PA, FC, K e TFG)\nUSO ORAL\n1. Furosemida 40 mg ----------------------------- 30 comprimidos\n   Tomar 1 comprimido pela manhã (ajustar pelo peso: dose extra se ganhar > 2 kg em 3 dias, conforme orientação).\n2. Carvedilol 3,125 mg -------------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas, com alimento. Dobrar a cada 2 semanas até 25 mg de 12/12 h se tolerar. (Alternativa: succinato de metoprolol 25 mg 1 vez ao dia.)\n3. Enalapril 5 mg ------------------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas (alvo 10–20 mg de 12/12 h). Ou losartana 25–50 mg 1 vez ao dia se tosse. Sacubitril-valsartana conforme critérios do PCDT.\n4. Espironolactona 25 mg ------------------------ 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia (se K < 5,0 e TFG ≥ 30).\n5. Dapagliflozina 10 mg -------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia (SUS conforme PCDT de IC).\n\nPEDIDO DE EXAMES (em 1–2 semanas)\nCreatinina, ureia, sódio, potássio."
+  },
+  orientacoesRetorno: [
+    "Pesar-se todo dia pela manhã, após urinar e antes do café; anotar",
+    "Voltar ou ligar para a equipe se ganhar mais de 2 kg em 3 dias, se a falta de ar piorar, se precisar de mais travesseiros para dormir ou se as pernas incharem",
+    "Procurar o PS imediatamente se falta de ar em repouso, dor no peito, desmaio ou palpitação forte",
+    "Pouco sal na comida; seguir a quantidade de líquidos combinada; evitar álcool",
+    "Não usar anti-inflamatórios (diclofenaco, ibuprofeno, nimesulida) nem remédios para gripe com descongestionante",
+    "Tomar todos os remédios do coração mesmo sem sintomas; vacinar contra gripe e pneumococo",
+    "Consulta em 7–14 dias após a alta (UBS ou cardiologia) com exames de sangue"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  fontes: [
+    "SBC — Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda (2018) e Atualização de Tópicos Emergentes (2021)",
+    "ESC 2021 Guidelines for heart failure e Focused Update 2023",
+    "Ministério da Saúde — PCDT Insuficiência Cardíaca com Fração de Ejeção Reduzida (versão vigente)"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });

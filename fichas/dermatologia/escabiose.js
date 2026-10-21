@@ -132,11 +132,24 @@ registrarFicha({
       "Vigilância em saúde: surtos institucionais"
     ]
   },
-  fontes: [
-    "WHO — Scabies fact sheet e recomendações de controle (2023)",
-    "SBD (Dermatologia) — Escabiose: atualização terapêutica",
-    "CDC — Scabies treatment guidelines (2024)"
+  prescricao: {
+    ambulatorial: "ADULTO E CRIANÇA ≥ 2 MESES — 1ª ESCOLHA (paciente e cada contato)\nUSO TÓPICO\n1. Permetrina 5% loção ou creme ------------------ 1 frasco/bisnaga por pessoa\n   Aplicar à noite em todo o corpo, do pescoço até a sola dos pés, inclusive entre os dedos, sob as unhas, umbigo e genitais. Em criança < 2 anos e idoso, incluir couro cabeludo e rosto (sem olhos e boca). Deixar 8 a 12 horas e tomar banho. Repetir após 7 dias.\n\nALTERNATIVA ORAL (≥ 15 kg, não gestante, não lactante)\nUSO ORAL\n2. Ivermectina 6 mg ------------------------------ ___ comprimidos\n   Tomar 200 mcg/kg em dose única, com alimento; repetir após 7 a 14 dias. (15–24 kg: ½ cp; 25–35 kg: 1 cp; 36–50 kg: 1½ cp; 51–65 kg: 2 cp; 66–79 kg: 2½ cp; ≥ 80 kg: 3 cp.)\n\nGESTANTE OU LACTENTE < 2 MESES (se permetrina não indicada/indisponível)\nUSO TÓPICO\n3. Enxofre precipitado 5% (lactente/gestante) a 10% em vaselina — manipulado ---- 1 pote\n   Aplicar em todo o corpo à noite por 3 noites seguidas; tomar banho 24 h após cada aplicação. Repetir após 7 dias.\n\nPARA COCEIRA\nUSO ORAL\n4. Dexclorfeniramina 2 mg ------------------------ 20 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas se coceira, por até 7 dias.\n   Criança 2–12 anos: dexclorfeniramina 0,4 mg/mL solução, 0,15 mg/kg/dia divididos de 8/8 h (respeitar a dose máxima da bula para a idade)."
+  },
+  orientacoesRetorno: [
+    "Tratar todos da casa e parcerias sexuais no mesmo dia, mesmo quem não tem coceira",
+    "No dia seguinte à 1ª aplicação, lavar roupas, toalhas e roupas de cama em água quente e secar ao sol/ferro quente; o que não puder lavar, guardar em saco plástico fechado por 3 dias",
+    "Se lavar as mãos durante as 8–12 horas, reaplicar o produto nas mãos",
+    "A coceira pode continuar por 2 a 4 semanas mesmo com o tratamento certo; não repetir o remédio por conta própria",
+    "Pode voltar à escola ou ao trabalho 24 h após a 1ª aplicação",
+    "Voltar se aparecerem feridas com pus, crostas grossas, febre, ou se surgirem lesões novas depois de 4 semanas",
+    "Retorno na UBS em 2–4 semanas"
   ],
-  revisao: "2026-10-20",
-  versao: "1.0"
+  fontes: [
+    "CDC — Clinical care of scabies / Scabies treatment guidelines (2024)",
+    "OMS — Scabies fact sheet (2023) e WHO Model List of Essential Medicines (2023)",
+    "Ministério da Saúde — RENAME 2024 (permetrina 5%, ivermectina 6 mg)",
+    "SBD — Escabiose: atualização terapêutica"
+  ],
+  revisao: "2026-10-21",
+  versao: "1.1"
 });
