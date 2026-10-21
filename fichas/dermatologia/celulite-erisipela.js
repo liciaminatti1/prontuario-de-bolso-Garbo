@@ -3,6 +3,7 @@ registrarFicha({
   id: "celulite-erisipela",
   especialidade: "dermatologia",
   caminho: "ubs",
+  publico: "ambos",
   titulo: "Celulite e erisipela",
   resumo: "Área de pele quente, vermelha, edemaciada e dolorosa, em geral em membro inferior. Erisipela é superficial e bem delimitada; celulite é mais profunda e de bordas imprecisas.",
   palavrasChave: "celulite erisipela infeccao de pele partes moles abscesso cefalexina amoxicilina clindamicina fasceite tinea",

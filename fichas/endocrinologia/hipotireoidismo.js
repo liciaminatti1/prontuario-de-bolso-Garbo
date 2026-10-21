@@ -3,6 +3,7 @@ registrarFicha({
   id: "hipotireoidismo",
   especialidade: "endocrinologia",
   caminho: "ubs",
+  publico: "adulto",
   titulo: "Hipotireoidismo",
   resumo: "TSH elevado com T4 livre baixo (clínico) ou normal (subclínico). Diagnóstico, início e ajuste de levotiroxina.",
   palavrasChave: "hipotireoidismo tireoide tsh t4 livre levotiroxina hashimoto bocio subclinico",

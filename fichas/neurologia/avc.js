@@ -3,6 +3,7 @@ registrarFicha({
   id: "avc",
   especialidade: "neurologia",
   caminho: "ps",
+  publico: "adulto",
   titulo: "AVC agudo / déficit neurológico súbito",
   resumo: "Déficit focal súbito: fraqueza ou dormência unilateral, desvio de rima, alteração de fala ou visão, ataxia.",
   palavrasChave: "avc acidente vascular cerebral derrame trombolise alteplase tenecteplase trombectomia nihss samu",

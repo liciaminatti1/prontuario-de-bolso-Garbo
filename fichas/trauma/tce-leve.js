@@ -3,6 +3,7 @@ registrarFicha({
   id: "tce-leve",
   especialidade: "trauma",
   caminho: "ps",
+  publico: "adulto",
   titulo: "Traumatismo cranioencefálico leve",
   resumo: "Trauma craniano com Glasgow 13–15. Decidir quem precisa de TC, quem observa e quem pode ir para casa.",
   palavrasChave: "tce trauma cranio cabeca queda concussao glasgow tomografia canadian ct head anticoagulado idoso",

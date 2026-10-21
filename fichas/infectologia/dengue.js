@@ -3,6 +3,7 @@ registrarFicha({
   id: "dengue",
   especialidade: "infectologia",
   caminho: "ubs",
+  publico: "ambos",
   titulo: "Dengue",
   resumo: "Febre aguda (2–7 dias) com 2 ou mais de: náusea/vômito, exantema, mialgia/artralgia, cefaleia/dor retro-orbital, petéquias ou prova do laço positiva, leucopenia.",
   palavrasChave: "dengue arbovirose febre hidratacao grupo a b c d sinais de alarme prova do laco chikungunya zika",

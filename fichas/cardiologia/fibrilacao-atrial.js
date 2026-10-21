@@ -3,6 +3,7 @@ registrarFicha({
   id: "fibrilacao-atrial",
   especialidade: "cardiologia",
   caminho: "ps",
+  publico: "adulto",
   titulo: "Fibrilação atrial no PS",
   resumo: "Ritmo irregularmente irregular sem onda P, com ou sem resposta ventricular rápida. Decidir entre cardioversão, controle de frequência e anticoagulação.",
   palavrasChave: "fa fibrilacao atrial flutter arritmia palpitacao cardioversao amiodarona metoprolol diltiazem anticoagulacao cha2ds2 apixabana",

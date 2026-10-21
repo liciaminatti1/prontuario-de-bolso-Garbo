@@ -3,6 +3,7 @@ registrarFicha({
   id: "escabiose",
   especialidade: "dermatologia",
   caminho: "ubs",
+  publico: "ambos",
   titulo: "Escabiose (sarna)",
   resumo: "Prurido intenso, pior à noite, com pápulas e sulcos em espaços interdigitais, punhos, axilas, cintura, mamas e genitais; frequentemente vários contatos acometidos.",
   palavrasChave: "escabiose sarna prurido coceira permetrina ivermectina acaro sulco crostosa",

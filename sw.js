@@ -1,7 +1,7 @@
 /* Service worker: guarda o app no aparelho para funcionar sem internet.
    Estratégia "rede primeiro": com internet, sempre busca a versão mais nova;
    sem internet, usa a última cópia salva. Ao mudar o conteúdo não é preciso mexer aqui. */
-const CACHE = "prontuario-de-bolso-v2";
+const CACHE = "prontuario-de-bolso-v3";
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(["./", "index.html", "css/estilo.css", "js/registro.js", "js/app.js", "manifest.webmanifest"])));

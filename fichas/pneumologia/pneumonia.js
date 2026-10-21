@@ -3,6 +3,7 @@ registrarFicha({
   id: "pneumonia",
   especialidade: "pneumologia",
   caminho: "ps",
+  publico: "adulto",
   titulo: "Pneumonia adquirida na comunidade",
   resumo: "Tosse, febre, dispneia ou dor pleurítica com achado focal ao exame ou infiltrado novo na radiografia, em paciente não hospitalizado recentemente.",
   palavrasChave: "pneumonia pac curb-65 crb-65 amoxicilina azitromicina ceftriaxona levofloxacino infiltrado tosse febre",

@@ -3,6 +3,7 @@ registrarFicha({
   id: "ic-descompensada",
   especialidade: "cardiologia",
   caminho: "ps",
+  publico: "adulto",
   titulo: "IC descompensada / edema agudo de pulmão",
   resumo: "Dispneia progressiva ou súbita com congestão (ortopneia, crepitações, edema, turgência jugular) em paciente com ou sem IC conhecida.",
   palavrasChave: "insuficiencia cardiaca ic eap edema agudo de pulmao congestao furosemida nitroglicerina vni cpap bnp dobutamina",

@@ -3,6 +3,7 @@ registrarFicha({
   id: "sca",
   especialidade: "cardiologia",
   caminho: "ps",
+  publico: "adulto",
   titulo: "Dor torácica / Síndrome coronariana aguda",
   resumo: "Dor ou desconforto torácico, epigástrico, em mandíbula ou membro superior; equivalentes anginosos (dispneia, síncope, sudorese).",
   palavrasChave: "infarto iam scacsst scassst troponina ecg angina aas clopidogrel nitrato heart trombolise tenecteplase",

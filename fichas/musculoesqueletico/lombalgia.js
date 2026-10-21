@@ -3,6 +3,7 @@ registrarFicha({
   id: "lombalgia",
   especialidade: "musculoesqueletico",
   caminho: "ubs",
+  publico: "adulto",
   titulo: "Lombalgia aguda",
   resumo: "Dor lombar com ou sem irradiação para membro inferior. A maioria é inespecífica e melhora em semanas; o essencial é identificar as bandeiras vermelhas.",
   palavrasChave: "lombalgia dor nas costas lombar ciatica radiculopatia hernia de disco cauda equina bandeira vermelha ibuprofeno ciclobenzaprina",

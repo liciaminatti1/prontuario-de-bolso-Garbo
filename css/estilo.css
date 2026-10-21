@@ -50,12 +50,16 @@ h1,h2,h3{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:
 .brand{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .brand h1{font-size:1.25rem;font-weight:800;letter-spacing:-.01em}
 .brand h1 small{display:block;font-family:var(--f-body);font-weight:400;font-size:.78rem;color:var(--muted);letter-spacing:0}
-.paths{display:flex;flex-wrap:wrap;gap:6px}
-.path{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-weight:700;font-size:.9rem;display:flex;align-items:center;gap:7px;white-space:nowrap}
-.path .dot{width:9px;height:9px;border-radius:50%;background:var(--muted)}
-.path[data-p="ubs"] .dot{background:var(--ubs)}
-.path[data-p="ps"] .dot{background:var(--ps)}
-.path[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.top-nav{display:flex;gap:6px}
+.nav-btn{border:1.5px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 11px;font-weight:700;font-size:.86rem}
+.nav-btn:hover{background:var(--surface-2)}
+.filtros{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.seg-row{display:flex;flex-wrap:wrap;gap:6px}
+.seg{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 13px;font-weight:700;font-size:.88rem;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.seg .dot{width:9px;height:9px;border-radius:50%;background:var(--muted)}
+.seg .dot.ubs{background:var(--ubs)}
+.seg .dot.ps{background:var(--ps)}
+.seg[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
 .esp{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-inline:-4px;padding:2px 4px}
 .esp::-webkit-scrollbar{display:none}
 .esp-chip{flex:none;border:1px solid var(--line);background:var(--surface-2);color:var(--muted);border-radius:7px;padding:5px 10px;font-weight:700;font-size:.82rem;white-space:nowrap}
@@ -158,9 +162,31 @@ td:first-child{font-weight:700}
 .meta div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px}
 .meta span{display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700}
 .meta b{font-family:var(--f-mono);font-size:.95rem}
+.rx{font-family:var(--f-mono);font-size:.86rem;line-height:1.5;background:var(--surface-2);border-radius:6px;padding:10px 12px;margin:0;white-space:pre-wrap;word-break:break-word}
+.link-btn{align-self:flex-start;border:0;background:none;color:var(--info);font-weight:700;padding:2px 0;font-size:.9rem}
+.gap-top{margin-top:18px}
+.dest .ret{grid-column:1/-1;background:var(--info-soft);border-color:transparent}.dest .ret h4{color:var(--info)}
+.item.doc{border-left-color:var(--info)}
+.form-doc{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+.campo{display:flex;flex-direction:column;gap:4px;min-width:0}
+.campo.largo{grid-column:1/-1}
+.campo span{font-size:.82rem;font-weight:700;color:var(--muted)}
+.campo input,.campo select,.campo textarea{font:inherit;color:var(--fg);background:var(--surface);border:1.5px solid var(--line);border-radius:8px;padding:8px 10px;width:100%}
+.campo textarea{font-family:var(--f-mono);font-size:.86rem;resize:vertical}
+.chk{grid-column:1/-1;display:flex;gap:8px;align-items:center;font-size:.92rem}
+.chk input{width:18px;height:18px}
+.medico-box{grid-column:1/-1;border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;background:var(--surface)}
+.medico-box summary{font-weight:700;cursor:pointer}
+.medico-box summary small{font-weight:400;color:var(--muted);margin-left:6px}
+.medico-box .form-doc{margin-top:10px}
+.importar{margin-bottom:12px}
+.aviso{margin:0;background:var(--warn-soft);color:var(--warn);border-radius:6px;padding:8px 10px;font-size:.88rem}
+.saida{min-height:120px}
 .note{font-size:.86rem;color:var(--muted);max-width:70ch}
 
 @media (max-width:640px){
+  .form-doc{grid-template-columns:1fr}
+  .brand{flex-wrap:wrap}
   .quick,.dest{grid-template-columns:1fr}
   .kv{grid-template-columns:1fr;gap:2px}
   .kv dd{margin-bottom:6px}

@@ -3,6 +3,7 @@ registrarFicha({
   id: "depressao-ansiedade",
   especialidade: "saude-mental",
   caminho: "ubs",
+  publico: "adulto",
   titulo: "Depressão e ansiedade",
   resumo: "Rastreamento, avaliação de risco de suicídio, início de antidepressivo e seguimento na atenção primária.",
   palavrasChave: "depressao ansiedade tag panico phq-9 gad-7 suicidio sertralina fluoxetina escitalopram isrs caps saude mental",

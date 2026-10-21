@@ -3,6 +3,7 @@ registrarFicha({
   id: "asma-ps",
   especialidade: "pneumologia",
   caminho: "ps",
+  publico: "adulto",
   titulo: "Crise de asma no adulto",
   resumo: "Dispneia, sibilância, tosse e aperto torácico em asmático conhecido ou com padrão compatível.",
   palavrasChave: "asma broncoespasmo sibilancia salbutamol ipratropio magnesio prednisona peak flow dpoc",

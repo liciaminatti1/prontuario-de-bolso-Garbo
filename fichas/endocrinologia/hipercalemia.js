@@ -3,6 +3,7 @@ registrarFicha({
   id: "hipercalemia",
   especialidade: "endocrinologia",
   caminho: "ps",
+  publico: "adulto",
   titulo: "Hipercalemia",
   resumo: "Potássio sérico ≥ 5,5 mEq/L. Risco de arritmia fatal, sobretudo com K ≥ 6,5 ou alterações no ECG.",
   palavrasChave: "hipercalemia potassio alto gluconato de calcio insulina glicose salbutamol dialise drc ieca espironolactona",

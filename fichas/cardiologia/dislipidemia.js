@@ -3,6 +3,7 @@ registrarFicha({
   id: "dislipidemia",
   especialidade: "cardiologia",
   caminho: "ubs",
+  publico: "adulto",
   titulo: "Dislipidemia",
   resumo: "Estratificação do risco cardiovascular, metas de LDL-c e escolha da estatina na atenção primária.",
   palavrasChave: "dislipidemia colesterol ldl triglicerides estatina sinvastatina atorvastatina rosuvastatina ezetimiba fibrato risco cardiovascular",

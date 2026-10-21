@@ -3,6 +3,7 @@ registrarFicha({
   id: "tep",
   especialidade: "pneumologia",
   caminho: "ps",
+  publico: "adulto",
   titulo: "Tromboembolismo pulmonar",
   resumo: "Dispneia súbita, dor pleurítica, taquicardia, hipoxemia ou síncope, sobretudo com fatores de risco para trombose venosa.",
   palavrasChave: "tep embolia pulmonar tvp trombose wells d-dimero angiotomografia anticoagulacao enoxaparina rivaroxabana apixabana trombolise",

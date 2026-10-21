@@ -3,6 +3,7 @@ registrarFicha({
   id: "cistite",
   especialidade: "infectologia",
   caminho: "ubs",
+  publico: "adulto",
   titulo: "Infecção urinária baixa (cistite)",
   resumo: "Disúria, polaciúria, urgência e dor suprapúbica, sem febre ou dor lombar, em mulher não gestante.",
   palavrasChave: "itu infeccao urinaria cistite disuria nitrofurantoina fosfomicina pielonefrite urocultura",

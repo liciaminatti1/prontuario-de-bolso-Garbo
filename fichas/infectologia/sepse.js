@@ -3,6 +3,7 @@ registrarFicha({
   id: "sepse",
   especialidade: "infectologia",
   caminho: "ps",
+  publico: "adulto",
   titulo: "Sepse e choque séptico",
   resumo: "Infecção suspeita com disfunção orgânica. Reconhecer cedo e iniciar o pacote da 1ª hora.",
   palavrasChave: "sepse choque septico qsofa lactato antibiotico noradrenalina vasopressor hemocultura infeccao",

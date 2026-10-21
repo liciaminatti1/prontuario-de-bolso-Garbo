@@ -3,6 +3,7 @@ registrarFicha({
   id: "dor-toracica-ubs",
   especialidade: "cardiologia",
   caminho: "ubs",
+  publico: "adulto",
   titulo: "Dor torácica na UBS",
   resumo: "Paciente com dor torácica na unidade. O papel da UBS é reconhecer, iniciar a primeira conduta e transferir.",
   palavrasChave: "dor no peito infarto sca samu ecg aas ubs transferencia",

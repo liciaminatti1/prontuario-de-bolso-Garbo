@@ -3,6 +3,7 @@ registrarFicha({
   id: "otite-media",
   especialidade: "pediatria",
   caminho: "ubs",
+  publico: "ambos",
   titulo: "Otite média aguda",
   resumo: "Otalgia (ou irritabilidade, levar a mão à orelha) com membrana timpânica abaulada ou otorreia recente, geralmente após quadro viral.",
   palavrasChave: "otite media aguda oma dor de ouvido otalgia membrana timpanica amoxicilina clavulanato mastoidite pediatria",

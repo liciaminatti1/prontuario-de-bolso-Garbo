@@ -3,6 +3,7 @@ registrarFicha({
   id: "cetoacidose",
   especialidade: "endocrinologia",
   caminho: "ps",
+  publico: "adulto",
   titulo: "Cetoacidose diabética",
   resumo: "Hiperglicemia (ou DM conhecido), acidose metabólica e cetose. Também pode ocorrer com glicemia normal ou pouco elevada (iSGLT2, gestação, jejum).",
   palavrasChave: "cad cetoacidose diabetes insulina cetonemia acidose potassio estado hiperosmolar hiperglicemia",

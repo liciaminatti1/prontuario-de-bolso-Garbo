@@ -3,6 +3,7 @@ registrarFicha({
   id: "bronquiolite",
   especialidade: "pediatria",
   caminho: "ps",
+  publico: "pediatrico",
   titulo: "Bronquiolite viral aguda",
   resumo: "Primeiro episódio de sibilância e/ou crepitações em criança < 2 anos, precedido por coriza e tosse. Principal agente: vírus sincicial respiratório (VSR).",
   palavrasChave: "bronquiolite vsr sincicial lactente sibilancia desconforto respiratorio oxigenio lavagem nasal cateter alto fluxo nirsevimabe pediatria",

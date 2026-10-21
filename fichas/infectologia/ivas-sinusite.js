@@ -3,6 +3,7 @@ registrarFicha({
   id: "ivas-sinusite",
   especialidade: "infectologia",
   caminho: "ubs",
+  publico: "ambos",
   titulo: "IVAS: resfriado, faringite e sinusite",
   resumo: "Coriza, dor de garganta, tosse, congestão ou dor facial. A maioria é viral; decidir quem precisa de antibiótico.",
   palavrasChave: "ivas resfriado gripe faringite amigdalite sinusite rinossinusite amoxicilina penicilina benzatina centor tosse coriza",

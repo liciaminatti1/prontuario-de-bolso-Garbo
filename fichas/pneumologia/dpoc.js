@@ -3,6 +3,7 @@ registrarFicha({
   id: "dpoc",
   especialidade: "pneumologia",
   caminho: "ubs",
+  publico: "adulto",
   titulo: "DPOC",
   resumo: "Dispneia progressiva, tosse e expectoração crônicas em tabagista ou exposto (lenha, poeira). Diagnóstico por espirometria, tratamento de manutenção e exacerbação leve na UBS.",
   palavrasChave: "dpoc enfisema bronquite cronica espirometria tiotropio formoterol salmeterol umeclidinio exacerbacao tabagismo",

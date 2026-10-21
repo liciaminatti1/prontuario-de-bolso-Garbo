@@ -3,6 +3,7 @@ registrarFicha({
   id: "diarreia-desidratacao",
   especialidade: "pediatria",
   caminho: "ubs",
+  publico: "pediatrico",
   titulo: "Diarreia aguda e desidratação na criança",
   resumo: "Três ou mais evacuações líquidas em 24 h por menos de 14 dias. Avaliar hidratação e aplicar os Planos A, B ou C do Ministério da Saúde.",
   palavrasChave: "diarreia gastroenterite desidratacao sro soro de reidratacao oral plano a b c zinco ondansetrona disenteria pediatria",

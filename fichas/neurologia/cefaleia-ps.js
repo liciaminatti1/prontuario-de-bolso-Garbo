@@ -3,6 +3,7 @@ registrarFicha({
   id: "cefaleia-ps",
   especialidade: "neurologia",
   caminho: "ps",
+  publico: "adulto",
   titulo: "Cefaleia no PS (sinais de alarme)",
   resumo: "Separar cefaleia primária de cefaleia secundária grave: hemorragia subaracnóidea, meningite, hipertensão intracraniana, arterite, dissecção.",
   palavrasChave: "cefaleia dor de cabeca hsa hemorragia subaracnoidea meningite snoop enxaqueca puncao lombar arterite temporal",

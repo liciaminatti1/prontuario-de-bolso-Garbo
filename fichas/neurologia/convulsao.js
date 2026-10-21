@@ -3,6 +3,7 @@ registrarFicha({
   id: "convulsao",
   especialidade: "neurologia",
   caminho: "ps",
+  publico: "ambos",
   titulo: "Crise convulsiva / estado de mal epiléptico",
   resumo: "Crise tônico-clônica em curso, crises repetidas sem recuperação da consciência entre elas, ou paciente pós-ictal no PS.",
   palavrasChave: "convulsao crise epileptica epilepsia estado de mal diazepam midazolam fenitoina levetiracetam fenobarbital",

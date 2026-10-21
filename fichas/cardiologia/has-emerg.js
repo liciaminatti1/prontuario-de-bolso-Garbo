@@ -3,6 +3,7 @@ registrarFicha({
   id: "has-emerg",
   especialidade: "cardiologia",
   caminho: "ps",
+  publico: "adulto",
   titulo: "Crise hipertensiva",
   resumo: "PA ≥ 180/120 mmHg. A conduta depende de haver ou não lesão aguda de órgão-alvo.",
   palavrasChave: "pressao alta crise hipertensiva emergencia urgencia nitroprussiato captopril clonidina edema agudo disseccao eclampsia",

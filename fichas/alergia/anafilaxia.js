@@ -3,6 +3,7 @@ registrarFicha({
   id: "anafilaxia",
   especialidade: "alergia",
   caminho: "ps",
+  publico: "ambos",
   titulo: "Anafilaxia",
   resumo: "Reação alérgica grave de início rápido envolvendo pele/mucosas com comprometimento respiratório, cardiovascular ou gastrointestinal.",
   palavrasChave: "anafilaxia alergia adrenalina choque anafilatico urticaria angioedema broncoespasmo",

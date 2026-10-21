@@ -3,6 +3,7 @@ registrarFicha({
   id: "diabetes-tipo-2",
   especialidade: "endocrinologia",
   caminho: "ubs",
+  publico: "adulto",
   titulo: "Diabetes mellitus tipo 2",
   resumo: "Diagnóstico, metas, início e intensificação do tratamento e rastreamento de complicações na atenção primária.",
   palavrasChave: "diabetes dm2 glicemia hba1c metformina gliclazida glibenclamida dapagliflozina insulina nph pe diabetico",

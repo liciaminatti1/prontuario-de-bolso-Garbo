@@ -3,6 +3,7 @@ registrarFicha({
   id: "has-ubs",
   especialidade: "cardiologia",
   caminho: "ubs",
+  publico: "adulto",
   titulo: "Hipertensão arterial",
   resumo: "Diagnóstico, estratificação de risco, início e ajuste do tratamento na atenção primária.",
   palavrasChave: "hipertensao has pressao alta losartana enalapril anlodipino hidroclorotiazida clortalidona mapa mrpa risco cardiovascular",

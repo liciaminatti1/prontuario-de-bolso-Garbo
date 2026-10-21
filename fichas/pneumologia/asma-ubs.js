@@ -3,6 +3,7 @@ registrarFicha({
   id: "asma-ubs",
   especialidade: "pneumologia",
   caminho: "ubs",
+  publico: "ambos",
   titulo: "Crise de asma na UBS",
   resumo: "Crise leve a moderada pode ser tratada na unidade; crise grave exige primeiro tratamento e remoção.",
   palavrasChave: "asma crise broncoespasmo salbutamol espacador prednisona ubs criança",

@@ -3,6 +3,7 @@ registrarFicha({
   id: "febre-lactente",
   especialidade: "pediatria",
   caminho: "ps",
+  publico: "pediatrico",
   titulo: "Febre sem foco no lactente (< 3 meses)",
   resumo: "Temperatura ≥ 38°C em lactente de até 90 dias sem foco aparente após história e exame. Risco de infecção bacteriana grave (ITU, bacteremia, meningite).",
   palavrasChave: "febre lactente recem-nascido neonato sem foco infeccao bacteriana grave sepse meningite itu procalcitonina ampicilina ceftriaxona pediatria",

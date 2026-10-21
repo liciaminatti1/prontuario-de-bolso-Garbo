@@ -3,6 +3,7 @@ registrarFicha({
   id: "enxaqueca",
   especialidade: "neurologia",
   caminho: "ubs",
+  publico: "adulto",
   titulo: "Enxaqueca e cefaleia tensional",
   resumo: "Diagnóstico das cefaleias primárias, tratamento da crise e indicação de profilaxia na atenção primária.",
   palavrasChave: "enxaqueca migranea cefaleia tensional dor de cabeca profilaxia propranolol amitriptilina topiramato triptano sumatriptana",

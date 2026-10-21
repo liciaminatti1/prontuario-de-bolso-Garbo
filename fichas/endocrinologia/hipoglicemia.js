@@ -3,6 +3,7 @@ registrarFicha({
   id: "hipoglicemia",
   especialidade: "endocrinologia",
   caminho: "ps",
+  publico: "ambos",
   titulo: "Hipoglicemia",
   resumo: "Glicemia < 70 mg/dL com sintomas adrenérgicos (tremor, sudorese, palpitação) ou neuroglicopênicos (confusão, convulsão, coma).",
   palavrasChave: "hipoglicemia glicose glucagon insulina sulfonilureia glibenclamida rebaixamento convulsao",
