@@ -44,7 +44,7 @@ registrarFicha({
     "Câncer de mama (raro como dor isolada)"
   ],
   prescricao: {
-    ambulatorial: "USO TÓPICO\n1. Diclofenaco dietilamônio gel 10 mg/g (1%) ------------- 1 bisnaga\n   Aplicar fina camada na área dolorida da mama, 3 vezes ao dia, por até 4 semanas. Não aplicar sobre o mamilo ou pele lesada.\n\nUSO ORAL (SE DOR)\n2. Paracetamol 500 mg ----------------------------------- 1 caixa\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor (máximo 4 g/dia).\n   OU\n   Ibuprofeno 400 mg ------------------------------------ 20 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após refeição, por até 5 dias nas crises.\n\nORIENTAÇÕES\n3. Usar sutiã firme, de boa sustentação, inclusive em atividade física; se a dor piora à noite, usar sutiã macio para dormir.\n4. Anotar em um diário os dias de dor durante 2 ciclos menstruais.\n\nCASOS GRAVES E REFRATÁRIOS (preferir após avaliação do mastologista)\n5. Tamoxifeno 10 mg ----------------------------------- 30 comprimidos\n   Tomar 1 comprimido ao dia por 3 a 6 meses (uso fora de bula). Exige contracepção não hormonal eficaz; risco de trombose e sintomas climatéricos."
+    ambulatorial: "USO TÓPICO\n1. Diclofenaco dietilamônio gel 10 mg/g (1%) ------------- 1 bisnaga\n   Aplicar fina camada na área dolorida da mama, 3 vezes ao dia, por até 4 semanas. Não aplicar sobre o mamilo ou pele lesada.\n\nUSO ORAL (SE DOR)\n2. Paracetamol 500 mg ----------------------------------- 1 caixa\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor (máximo 4 g/dia).\n   OU\n   Ibuprofeno 400 mg ------------------------------------ 20 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após refeição, por até 5 dias nas crises. Evitar na gestação.\n\nORIENTAÇÕES\n3. Usar sutiã firme, de boa sustentação, inclusive em atividade física; se a dor piora à noite, usar sutiã macio para dormir.\n4. Anotar em um diário os dias de dor durante 2 ciclos menstruais.\n\nCASOS GRAVES E REFRATÁRIOS (preferir após avaliação do mastologista)\n5. Tamoxifeno 10 mg ----------------------------------- 90 comprimidos (3 meses)\n   Tomar 1 comprimido ao dia por 3 meses; prolongar até 6 meses só após reavaliação (uso fora de bula). Exige contracepção não hormonal eficaz; risco de trombose e sintomas climatéricos."
   },
   orientacoesRetorno: [
     "Dor na mama é muito comum e quase nunca é câncer",
@@ -58,7 +58,7 @@ registrarFicha({
     "Mastologia com prioridade: qualquer achado suspeito ao exame ou BI-RADS 4 ou 5 na imagem"
   ],
   fontes: [
-    "ACR Appropriateness Criteria — Breast Pain (American College of Radiology, revisão 2018)",
+    "ACR Appropriateness Criteria — Breast Pain (American College of Radiology; J Am Coll Radiol 2017, revisado periodicamente — conferir a versão vigente no site do ACR)",
     "Ministério da Saúde/INCA — Diretrizes para a detecção precoce do câncer de mama no Brasil (2015) e Caderno de Atenção Básica nº 13: Controle dos cânceres do colo do útero e da mama (2013)",
     "FEBRASGO/SBM/CBR — Recomendações para rastreamento do câncer de mama (atualização 2023)",
     "Goyal A. Mastalgia. BMJ Clinical Evidence / revisões sistemáticas sobre tamoxifeno, danazol e AINE tópico (revisões até 2022)"

@@ -17,11 +17,11 @@ registrarFicha({
   conduta: [
     "Diagnóstico: exame a fresco (protozoários móveis), pH > 4,5; teste molecular (NAAT) quando disponível é o mais sensível",
     "Citologia oncótica com Trichomonas: considerar diagnóstico e tratar (confirmar se possível)",
-    "Mulher: metronidazol 500 mg VO de 12/12 h por 7 dias (preferido) ou 2 g VO dose única",
+    "Mulher: metronidazol 500 mg VO de 12/12 h por 7 dias (preferido pelo CDC 2021) ou 2 g VO dose única. O PCDT aceita os dois esquemas como 1ª opção, inclusive na gestação",
     "Homem / parceria: metronidazol 2 g VO dose única (ou 500 mg de 12/12 h por 7 dias)",
     "Tratar todas as parcerias sexuais, com ou sem sintomas; abster-se de relações até ambos completarem o tratamento e não terem sintomas",
     "Gestação e lactação: metronidazol oral pode ser usado em qualquer trimestre",
-    "Oferecer testes rápidos de HIV, sífilis, hepatites B e C; pesquisar gonorreia e clamídia se disponível; notificar não é compulsório",
+    "Oferecer testes rápidos de HIV, sífilis, hepatites B e C; pesquisar gonorreia e clamídia se disponível; não é doença de notificação compulsória",
     "Retestar a mulher em cerca de 3 meses (alta taxa de reinfecção), se disponível"
   ],
   exames: [
@@ -37,7 +37,7 @@ registrarFicha({
     "Vaginite inflamatória descamativa"
   ],
   tratamento: [
-    { droga: "Metronidazol 250 mg (mulher)", linha: "l1", dose: "500 mg (2 comprimidos)", via: "VO", intervalo: "12/12 h", duracao: "7 dias", monitorizacao: "Náusea, gosto metálico", contraindicacoes: "Álcool durante e até 24 h após; dissulfiram nas últimas 2 semanas", ajustes: "Esquema de 7 dias é mais eficaz que dose única em mulheres (CDC 2021). Gestação: pode usar" },
+    { droga: "Metronidazol 250 mg (mulher)", linha: "l1", dose: "500 mg (2 comprimidos)", via: "VO", intervalo: "12/12 h", duracao: "7 dias", monitorizacao: "Náusea, gosto metálico", contraindicacoes: "Álcool durante e até 24 h após; dissulfiram nas últimas 2 semanas", ajustes: "Esquema de 7 dias é mais eficaz que dose única em mulheres (CDC 2021); o PCDT aceita os dois. Gestação: pode usar" },
     { droga: "Metronidazol 2 g dose única", linha: "alt", dose: "2 g (8 comprimidos de 250 mg ou 5 de 400 mg)", via: "VO", intervalo: "Dose única", duracao: "—", monitorizacao: "Náusea e vômitos", contraindicacoes: "Álcool", ajustes: "Esquema preferido para homens e parcerias; opção para mulher com baixa adesão" }
   ],
   prescricao: {

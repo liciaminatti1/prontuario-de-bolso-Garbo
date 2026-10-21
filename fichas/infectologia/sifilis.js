@@ -28,7 +28,7 @@ registrarFicha({
     "Recente: penicilina G benzatina 2,4 milhões UI IM dose única. Tardia ou ignorada: 2,4 milhões UI IM 1 vez por semana por 3 semanas (total 7,2 milhões UI)",
     "Testar e tratar parcerias sexuais: parceria com teste reagente trata conforme fase; parceria não reagente recebe 2,4 milhões UI dose única (profilaxia)",
     "Testar HIV e hepatites; notificar (sífilis adquirida, em gestante e congênita)",
-    "Seguimento com VDRL: mensal na gestante; trimestral no 1º ano e semestral no 2º ano nos demais"
+    "Seguimento com VDRL (mesmo método do diagnóstico): gestante mensal até o parto e depois a cada 3 meses até 12 meses; demais (inclusive PVHIV) a cada 3 meses até 12 meses (3, 6, 9 e 12 meses)"
   ],
   fataisExcluir: [
     "Neurossífilis e sífilis ocular/otológica",
@@ -111,9 +111,9 @@ registrarFicha({
   ],
   tratamento: [
     { droga: "Penicilina G benzatina — sífilis recente", linha: "l1", dose: "Adulto: 2,4 milhões UI (1,2 milhão em cada glúteo). Criança/adolescente (adquirida): 50.000 UI/kg (máximo 2,4 milhões UI)", via: "IM", intervalo: "Dose única", duracao: "—", monitorizacao: "Jarisch-Herxheimer nas primeiras 24 h", contraindicacoes: "Anafilaxia a penicilina", ajustes: "Gestação: escolha. Pode ser aplicada na APS (adrenalina disponível)" },
-    { droga: "Penicilina G benzatina — sífilis tardia ou duração ignorada", linha: "l1", dose: "Adulto: 2,4 milhões UI. Criança/adolescente: 50.000 UI/kg/dose (máximo 2,4 milhões UI)", via: "IM", intervalo: "1 vez por semana", duracao: "3 semanas (adulto: total 7,2 milhões UI)", monitorizacao: "Datas das doses", contraindicacoes: "Anafilaxia", ajustes: "Gestante: intervalo ideal 7 dias, máximo 9 dias; se ultrapassar, reiniciar o esquema" },
+    { droga: "Penicilina G benzatina — sífilis tardia ou duração ignorada", linha: "l1", dose: "Adulto: 2,4 milhões UI. Criança/adolescente: 50.000 UI/kg/dose (máximo 2,4 milhões UI)", via: "IM", intervalo: "1 vez por semana", duracao: "3 semanas (adulto: total 7,2 milhões UI)", monitorizacao: "Datas das doses", contraindicacoes: "Anafilaxia", ajustes: "Gestante: intervalo ideal 7 dias, máximo 9 dias; se ultrapassar, reiniciar o esquema (NT 14/2023). Não gestante: reiniciar se intervalo > 14 dias" },
     { droga: "Doxiciclina (não gestante, alergia)", linha: "alt", dose: "100 mg", via: "VO", intervalo: "12/12 h", duracao: "15 dias (recente) ou 30 dias (tardia)", monitorizacao: "Adesão; seguimento sorológico rigoroso", contraindicacoes: "Gestação, < 8 anos", ajustes: "Não trata o feto" },
-    { droga: "Ceftriaxona (alternativa)", linha: "alt", dose: "1 g", via: "IV ou IM", intervalo: "24/24 h", duracao: "8 a 10 dias (recente); 10 a 14 dias (tardia)", monitorizacao: "—", contraindicacoes: "Anafilaxia a cefalosporina", ajustes: "Na gestante, não é considerado tratamento adequado para o RN; preferir dessensibilização à penicilina" },
+    { droga: "Ceftriaxona (alternativa de exceção, sífilis recente)", linha: "alt", dose: "1 g", via: "IV ou IM", intervalo: "24/24 h", duracao: "10 a 14 dias (CDC 2021)", monitorizacao: "Seguimento sorológico rigoroso", contraindicacoes: "Anafilaxia a cefalosporina", ajustes: "Usar só se penicilina e doxiciclina forem impossíveis; discutir com infectologia. Sífilis tardia: dados insuficientes. Na gestante, não é tratamento adequado para o RN; preferir dessensibilização à penicilina" },
     { droga: "Penicilina G cristalina (potássica) — neurossífilis/ocular", linha: "l1", dose: "18 a 24 milhões UI/dia (3 a 4 milhões UI a cada 4 h)", via: "IV", intervalo: "4/4 h ou infusão contínua", duracao: "14 dias", monitorizacao: "Potássio, sódio; LCR a cada 6 meses até normalizar", contraindicacoes: "Anafilaxia (dessensibilizar)", ajustes: "Diluir cada dose em 50–100 mL de SF 0,9% ou SG 5% e infundir em 30–60 min. Alternativa: ceftriaxona 2 g IV/dia por 10–14 dias" },
     { droga: "Sífilis congênita — penicilina cristalina", linha: "l1", dose: "50.000 UI/kg/dose", via: "IV", intervalo: "12/12 h na 1ª semana de vida; 8/8 h após 7 dias de vida", duracao: "10 dias", monitorizacao: "Seguimento com VDRL; LCR", contraindicacoes: "—", ajustes: "Obrigatória se neurossífilis. Se perder mais de 1 dia de tratamento, reiniciar" },
     { droga: "Sífilis congênita sem neurossífilis — penicilina procaína", linha: "alt", dose: "50.000 UI/kg/dose", via: "IM", intervalo: "24/24 h", duracao: "10 dias", monitorizacao: "Adesão diária", contraindicacoes: "Neurossífilis", ajustes: "Permite tratamento fora da internação em situações selecionadas" },
@@ -121,7 +121,7 @@ registrarFicha({
   ],
   destino: {
     agora: ["Aplicar penicilina na UBS (gestante no mesmo dia)", "Notificar", "Testar e tratar parcerias"],
-    reavaliar: ["Gestante: VDRL mensal até o parto", "Demais: VDRL a cada 3 meses no 1º ano e a cada 6 meses no 2º ano"],
+    reavaliar: ["Gestante: VDRL mensal até o parto; depois a cada 3 meses até completar 12 meses", "Demais: VDRL com 3, 6, 9 e 12 meses"],
     alta: ["Critério de cura sorológica atingido; manter rastreio se exposição contínua"],
     observacao: ["Gestante após penicilina no 3º trimestre: orientar sobre contrações/febre (Jarisch-Herxheimer)"],
     internacao: ["Neurossífilis, sífilis ocular ou otológica", "Gestante com alergia grave para dessensibilização", "RN com sífilis congênita"],

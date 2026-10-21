@@ -112,7 +112,7 @@ registrarFicha({
     { droga: "Zidovudina 300 mg + lamivudina 150 mg (AZT/3TC) + DTG", linha: "alt", dose: "1 comprimido de AZT/3TC 12/12 h + DTG 50 mg 1 vez ao dia", via: "VO", intervalo: "Ver dose", duracao: "28 dias", monitorizacao: "Hemograma (anemia), náusea, cefaleia", contraindicacoes: "Anemia grave", ajustes: "Quando tenofovir contraindicado (DRC)" },
     { droga: "TDF/3TC + darunavir 800 mg + ritonavir 100 mg", linha: "alt", dose: "TDF/3TC 1 comprimido + DRV 800 mg + RTV 100 mg", via: "VO", intervalo: "1 vez ao dia, com alimento", duracao: "28 dias", monitorizacao: "Interações do ritonavir", contraindicacoes: "Interações graves (consultar tabela de interações)", ajustes: "Quando DTG contraindicado" },
     { droga: "Vacina hepatite B + imunoglobulina humana anti-hepatite B (IGHAHB)", linha: "l1", dose: "Vacina: dose habitual para a idade, esquema 0–1–6 meses. IGHAHB: 0,06 mL/kg", via: "IM (locais diferentes)", intervalo: "Dose única de IGHAHB", duracao: "Até 14 dias da exposição sexual (ideal 24–48 h)", monitorizacao: "Anti-HBs 1–2 meses após o fim do esquema vacinal, se indicado", contraindicacoes: "—", ajustes: "IGHAHB: exposto suscetível e fonte HBsAg reagente ou de alto risco/desconhecida, e em toda vítima de violência sexual suscetível. Disponível no CRIE/serviços de referência" },
-    { droga: "Doxiciclina 100 mg — DoxiPEP", linha: "adj", dose: "200 mg (2 comprimidos) em dose única", via: "VO", intervalo: "Após cada exposição de risco (máximo 200 mg por 24 h)", duracao: "Até 72 h após a relação (ideal em 24 h)", monitorizacao: "Testagem de IST a cada 3 meses", contraindicacoes: "Gestação, < 8 anos", ajustes: "Incorporada ao SUS em 2026 para HSH, homens gays e bissexuais e mulheres trans adultos com IST bacteriana recente; implantação local em curso. Não substitui PEP-HIV nem preservativo" }
+    { droga: "Doxiciclina 100 mg — DoxiPEP", linha: "adj", dose: "200 mg (2 comprimidos) em dose única", via: "VO", intervalo: "Após cada exposição de risco (máximo 200 mg por 24 h)", duracao: "Até 72 h após a relação (ideal em 24 h)", monitorizacao: "Testagem de IST a cada 3 meses", contraindicacoes: "Gestação, < 8 anos", ajustes: "Incorporada ao SUS em 2026 para HSH, homens gays, bissexuais e pansexuais e mulheres trans adultos com IST bacteriana nos últimos 12 meses; implantação local em curso (conferir fluxo do município). Não substitui PEP-HIV nem preservativo" }
   ],
   destino: {
     agora: ["1ª dose no serviço", "Dispensar 28 dias de PEP", "Vacina hepatite B / IGHAHB", "Contracepção de emergência se indicada"],
@@ -146,15 +146,16 @@ registrarFicha({
         ["Dolutegravir 5 mg dispersível", "6 a < 10 kg", "< 6 meses: 10 mg; ≥ 6 meses: 15 mg, 1 vez ao dia"],
         ["Dolutegravir 5 mg dispersível", "10 a < 14 kg", "20 mg VO 1 vez ao dia"],
         ["Dolutegravir 5 mg dispersível", "14 a < 20 kg", "25 mg VO 1 vez ao dia"],
-        ["Dolutegravir", "≥ 20 kg", "30 mg (dispersível) ou 50 mg (comprimido revestido) 1 vez ao dia"]
+        ["Dolutegravir 50 mg revestido", "≥ 20 kg", "50 mg VO 1 vez ao dia"]
       ],
-      nota: "Comprimido dispersível e revestido de DTG não são intercambiáveis mg a mg. Menores de 4 semanas: discutir com especialista. Conferir doses no PCDT vigente antes de dispensar."
+      nota: "DTG 5 mg dispersível: crianças ≥ 4 semanas e 3 a 19 kg; DTG 50 mg: ≥ 20 kg (Ofício nº 1132/2023-CGAHV/DATHI). Comprimido dispersível e revestido não são intercambiáveis mg a mg. Menores de 4 semanas: discutir com especialista. Conferir doses no PCDT vigente antes de dispensar."
     }
   ],
   fontes: [
     "Ministério da Saúde — PCDT para Profilaxia Pós-Exposição de Risco (PEP) à Infecção pelo HIV, IST e Hepatites Virais (Portaria SECTICS/MS nº 14, de 8 de abril de 2024)",
     "Ministério da Saúde — PCDT para Manejo da Infecção pelo HIV em Crianças e Adolescentes, Módulo I e II (2024)",
-    "Ministério da Saúde — Incorporação da doxiciclina 100 mg para profilaxia pós-exposição às IST bacterianas (Conitec; portaria publicada em março de 2026)",
+    "Ministério da Saúde — Incorporação da doxiciclina 100 mg para profilaxia pós-exposição às IST bacterianas (Conitec; portaria publicada em março de 2026, prazo de 180 dias para oferta)",
+    "Ministério da Saúde — Ofício nº 1132/2023-CGAHV/DATHI/SVSA/MS (dolutegravir 5 mg dispersível em pediatria, inclusive PEP)",
     "Ministério da Saúde — Manual dos Centros de Referência para Imunobiológicos Especiais (6ª ed., 2023)"
   ],
   revisao: "2026-10-21",

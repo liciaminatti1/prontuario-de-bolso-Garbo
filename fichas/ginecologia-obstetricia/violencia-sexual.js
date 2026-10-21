@@ -28,6 +28,7 @@ registrarFicha({
     "Até 72 h com penetração (vaginal, anal ou oral) e agressor desconhecido ou de status desconhecido: PEP-HIV (TDF/3TC + DTG 28 dias)",
     "Profilaxia de IST independentemente do tempo: penicilina benzatina + ceftriaxona + azitromicina (+ metronidazol, que pode ser adiado)",
     "Hepatite B: vacinar se não imune + IGHAHB (até 14 dias)",
+    "Vacina HPV se não vacinada: grupo prioritário (NT 63/2023: 9 a 45 anos; nota técnica de setembro de 2026 ampliou a partir de 2 anos, segundo a imprensa — conferir com a sala de vacina)",
     "Contracepção de emergência (levonorgestrel 1,5 mg) até 5 dias, se risco de gestação",
     "Coleta de vestígios com consentimento (antes de banho/troca de roupa, quando possível), preservando a cadeia de custódia",
     "Notificar no SINAN (ficha de violência interpessoal/autoprovocada) em até 24 h; comunicar à rede de proteção"
@@ -118,6 +119,7 @@ registrarFicha({
     { droga: "Azitromicina (clamídia)", linha: "l1", dose: "Adulto e ≥ 45 kg: 1 g. < 45 kg: 20 mg/kg (máximo 1 g)", via: "VO", intervalo: "Dose única", duracao: "—", monitorizacao: "Náusea", contraindicacoes: "Alergia a macrolídeo", ajustes: "Suspensão 40 mg/mL para crianças" },
     { droga: "Metronidazol (tricomoníase)", linha: "l1", dose: "Adulto e ≥ 45 kg: 2 g dose única. < 45 kg: 15 mg/kg/dia divididos de 8/8 h por 7 dias (máximo 2 g/dia)", via: "VO", intervalo: "Ver dose", duracao: "Ver dose", monitorizacao: "Náusea e vômitos (pode adiar para o retorno)", contraindicacoes: "Álcool por 24 h", ajustes: "Pode ser postergado se muitos medicamentos ao mesmo tempo ou intolerância; usar suspensão 40 mg/mL em crianças" },
     { droga: "Vacina hepatite B + IGHAHB", linha: "l1", dose: "Vacina: dose para a idade (0–1–6 meses). IGHAHB 0,06 mL/kg", via: "IM (locais diferentes)", intervalo: "IGHAHB dose única", duracao: "Até 14 dias (ideal 24–48 h)", monitorizacao: "—", contraindicacoes: "—", ajustes: "Não indicada se vacinação completa com resposta conhecida ou HBsAg reagente" },
+    { droga: "Vacina HPV (papilomavírus humano)", linha: "l1", dose: "0,5 mL", via: "IM", intervalo: "9–14 anos: 2 doses (0 e 6 meses). 15–45 anos ou imunossuprimidos: 3 doses (0, 2 e 6 meses) — NT 63/2023", duracao: "—", monitorizacao: "—", contraindicacoes: "Gestação (adiar); anafilaxia a dose anterior", ajustes: "Não precisa ser no 1º atendimento; pode ser no retorno. Menores de 9 anos: conferir a nota técnica vigente de 2026" },
     { droga: "Levonorgestrel (contracepção de emergência)", linha: "l1", dose: "1,5 mg", via: "VO", intervalo: "Dose única", duracao: "Até 5 dias (quanto antes, mais eficaz)", monitorizacao: "Beta-hCG se atraso menstrual > 7 dias", contraindicacoes: "Gestação confirmada (não é abortivo, mas não há indicação)", ajustes: "Adolescente após a menarca: mesma dose. Pessoa com IMC elevado: considerar DIU de cobre (até 5 dias) se disponível" }
   ],
   destino: {
@@ -165,6 +167,7 @@ registrarFicha({
   ],
   fontes: [
     "Ministério da Saúde — PCDT para Profilaxia Pós-Exposição de Risco (PEP) à Infecção pelo HIV, IST e Hepatites Virais (2024)",
+    "Ministério da Saúde — Nota Técnica nº 63/2023-CGICI/DPNI/SVSA/MS (vacina HPV para vítimas de violência sexual) e nota técnica de ampliação (setembro de 2026)",
     "Ministério da Saúde — Norma técnica: Prevenção e tratamento dos agravos resultantes da violência sexual contra mulheres e adolescentes (3ª ed., 2012) e Atenção humanizada às pessoas em situação de violência sexual com registro de informações e coleta de vestígios (2015)",
     "Lei 12.845/2013; Lei 13.931/2019; Decreto 7.958/2013",
     "OMS — Responding to children and adolescents who have been sexually abused: WHO clinical guidelines (2017)"
