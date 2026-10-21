@@ -63,7 +63,7 @@ registrarFicha({
       linha: "adj",
       dose: "30–40 mg/kg/dia (máx. 2,7 g/dia)",
       via: "IV",
-      intervalo: "6/6 h a 8/8 h",
+      intervalo: "8/8 h (ou 6/6 h, sem passar de 2,7 g/dia)",
       duracao: "Primeiros dias, junto com a oxacilina",
       monitorizacao: "Diarreia (Clostridioides difficile)",
       contraindicacoes: "—",
@@ -72,7 +72,7 @@ registrarFicha({
     {
       droga: "Vancomicina",
       linha: "alt",
-      dose: "15 mg/kg/dose (60 mg/kg/dia)",
+      dose: "15 mg/kg/dose (60 mg/kg/dia); doses seguintes ajustadas pelo nível sérico",
       via: "IV em 1–2 h",
       intervalo: "6/6 h",
       duracao: "Conforme cultura",
@@ -93,7 +93,7 @@ registrarFicha({
     }
   ],
   prescricao: {
-    hospitalar: "SÍNDROME DA PELE ESCALDADA — CRIANÇA (peso: ___ kg)\n1. Dieta livre para a idade; manter aleitamento materno.\n2. Isolamento de contato. Manuseio mínimo; aquecimento; lençóis limpos.\n3. Soro de manutenção (Holliday-Segar) com SF 0,9% + SG 5% (ou solução isotônica) + perdas pela pele; ajustar pela diurese (meta ≥ 1 mL/kg/h).\n4. Oxacilina 200 mg/kg/dia: ___ mg (50 mg/kg/dose, máx. 3 g/dose) IV de 6/6 h, diluída em SF 0,9% (concentração 10–40 mg/mL), infundir em 30–60 min.\n5. Clindamicina 40 mg/kg/dia: ___ mg (10 mg/kg/dose, máx. 900 mg/dose) IV de 6/6 h, diluída em SF 0,9% até ≤ 18 mg/mL, infundir em 30–60 min.\n   (Se MRSA provável: trocar oxacilina por vancomicina 15 mg/kg/dose IV de 6/6 h, diluída a ≤ 5 mg/mL, em 1–2 h.)\n6. Dipirona 15 mg/kg/dose (máx. 1 g) IV de 6/6 h, fixa nas primeiras 48 h.\n7. Se dor intensa apesar da dipirona: morfina 0,05–0,1 mg/kg/dose (máx. 5 mg/dose) IV lento de 4/4 h se necessário, com oximetria.\n8. Vaselina líquida estéril nas áreas desnudas 2 vezes ao dia; curativo não aderente; não romper bolhas; não usar esparadrapo na pele.\n9. Colírio lubrificante se conjuntivite; tratar o foco (ex.: pomada de mupirocina nas narinas se colonização).\n10. Controles: sinais vitais de 4/4 h, temperatura, diurese, glicemia de 6/6 h nas primeiras 24 h em lactentes, balanço hídrico, escala de dor.\n11. Colher hemocultura e swabs antes da 1ª dose do antibiótico.",
+    hospitalar: "SÍNDROME DA PELE ESCALDADA — CRIANÇA (peso: ___ kg)\n1. Dieta livre para a idade; manter aleitamento materno.\n2. Isolamento de contato. Manuseio mínimo; aquecimento; lençóis limpos.\n3. Soro de manutenção (Holliday-Segar) com SF 0,9% + SG 5% (ou solução isotônica) + perdas pela pele; ajustar pela diurese (meta ≥ 1 mL/kg/h).\n4. Oxacilina 200 mg/kg/dia: ___ mg (50 mg/kg/dose, máx. 3 g/dose) IV de 6/6 h, diluída em SF 0,9% (concentração 10–40 mg/mL), infundir em 30–60 min.\n5. Clindamicina 30–40 mg/kg/dia: ___ mg (10–13 mg/kg/dose, máx. 900 mg/dose e 2,7 g/dia) IV de 8/8 h, diluída em SF 0,9% até ≤ 18 mg/mL, infundir em 30–60 min.\n   (Se MRSA provável: trocar oxacilina por vancomicina 15 mg/kg/dose IV de 6/6 h, diluída a ≤ 5 mg/mL, em 1–2 h.)\n6. Dipirona 15 mg/kg/dose (máx. 1 g) IV de 6/6 h, fixa nas primeiras 48 h (< 3 meses ou < 5 kg: usar paracetamol 10–15 mg/kg/dose VO de 6/6 h no lugar da dipirona).\n7. Se dor intensa apesar da dipirona: morfina 0,05–0,1 mg/kg/dose (máx. 5 mg/dose) IV lento de 4/4 h se necessário, com oximetria.\n8. Vaselina líquida estéril nas áreas desnudas 2 vezes ao dia; curativo não aderente; não romper bolhas; não usar esparadrapo na pele.\n9. Colírio lubrificante se conjuntivite; tratar o foco (ex.: pomada de mupirocina nas narinas se colonização).\n10. Controles: sinais vitais de 4/4 h, temperatura, diurese, glicemia de 6/6 h nas primeiras 24 h em lactentes, balanço hídrico, escala de dor.\n11. Colher hemocultura e swabs antes da 1ª dose do antibiótico.",
     ambulatorial: "ALTA — COMPLETAR TRATAMENTO (peso: ___ kg)\nUSO ORAL\n1. Cefalexina 250 mg/5 mL suspensão ------------------- ___ frascos\n   Dar 25 mg/kg por dose (máximo 1 g por dose) de 6 em 6 horas até completar ___ dias (total 7 a 10 dias).\n2. Paracetamol 200 mg/mL gotas ------------------------- 1 frasco\n   Dar 1 gota por kg (máximo 35 gotas) de 6 em 6 horas se dor.\n\nUSO TÓPICO\n3. Vaselina líquida ou creme hidratante sem perfume nas áreas descamando, 2 a 3 vezes ao dia."
   },
   orientacoesRetorno: [

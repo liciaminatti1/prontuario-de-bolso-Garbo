@@ -26,7 +26,7 @@ registrarFicha({
     "Notificar à vigilância municipal no mesmo dia (até 24 h), por telefone e ficha do SINAN",
     "Coletar no primeiro atendimento: sangue (IgM/IgG), swab de naso + orofaringe e urina para RT-PCR (LACEN)",
     "Vitamina A em toda criança com sarampo suspeito: 1ª dose no dia, 2ª dose no dia seguinte",
-    "Listar contatos dos 7 a 21 dias antes e durante a doença (casa, escola, trabalho, transporte, serviços de saúde); conferir vacinação",
+    "Investigar a fonte de infecção nos 7 a 21 dias antes do exantema (viagens, eventos, contato com caso); listar os contatos expostos no período de transmissão (casa, escola, trabalho, transporte, serviços de saúde) e conferir a vacinação",
     "Não vacinar o caso suspeito entre a 1ª e a 2ª coleta de soro"
   ],
   fataisExcluir: [
@@ -102,7 +102,7 @@ registrarFicha({
       duracao: "2 doses",
       monitorizacao: "Sinais oculares de deficiência (xeroftalmia): 3ª dose 2–4 semanas depois, conforme OMS",
       contraindicacoes: "—",
-      ajustes: "Cápsulas do SUS: 100.000 UI (6–11 meses) e 200.000 UI (≥ 12 meses). Aplicar mesmo se suplementação prévia ou vacina em dia (MS prioriza < 5 anos)"
+      ajustes: "Cápsulas do SUS: 100.000 UI (6–11 meses) e 200.000 UI (≥ 12 meses); não há cápsula de 50.000 UI — para < 6 meses, seguir a orientação da vigilância. Aplicar mesmo se suplementação prévia ou vacina em dia (MS prioriza < 5 anos)"
     },
     {
       droga: "Paracetamol",
@@ -171,7 +171,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "SARAMPO — CRIANÇA (peso: ___ kg; idade: ___)\nUSO ORAL\n1. Vitamina A (palmitato de retinol) cápsula ---------- 2 cápsulas\n   < 6 meses: 50.000 UI; 6 a 11 meses: 100.000 UI; ≥ 12 meses: 200.000 UI.\n   Dar 1 dose hoje (na unidade) e 1 dose amanhã. Cortar a ponta da cápsula e pingar o conteúdo na boca.\n2. Paracetamol 200 mg/mL gotas ------------------------- 1 frasco\n   Dar 1 gota por kg (10 mg/kg; máximo 35 gotas) de 6 em 6 horas se febre.\n3. Soro de reidratação oral --------------------------- 10 envelopes\n   Oferecer após cada evacuação líquida e ao longo do dia.\n4. Soro fisiológico 0,9% para limpeza dos olhos e do nariz várias vezes ao dia.\n\nADULTO\nUSO ORAL\n1. Paracetamol 500 mg --------------------------------- 20 comprimidos\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se febre (máximo 4 g por dia).\n\nATESTADO: isolamento domiciliar até 4 dias após o início das manchas (data: ___)."
+    ambulatorial: "SARAMPO — CRIANÇA (peso: ___ kg; idade: ___)\nUSO ORAL\n1. Vitamina A (palmitato de retinol) cápsula ---------- 2 cápsulas\n   < 6 meses: 50.000 UI (sem cápsula própria no SUS: seguir a vigilância); 6 a 11 meses: 100.000 UI; ≥ 12 meses: 200.000 UI.\n   Dar 1 dose hoje (na unidade) e 1 dose amanhã. Cortar a ponta da cápsula e pingar o conteúdo na boca.\n2. Paracetamol 200 mg/mL gotas ------------------------- 1 frasco\n   Dar 1 gota por kg (10 mg/kg; máximo 35 gotas) de 6 em 6 horas se febre.\n3. Soro de reidratação oral --------------------------- 10 envelopes\n   Oferecer após cada evacuação líquida e ao longo do dia.\n4. Soro fisiológico 0,9% para limpeza dos olhos e do nariz várias vezes ao dia.\n\nADULTO\nUSO ORAL\n1. Paracetamol 500 mg --------------------------------- 20 comprimidos\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se febre (máximo 4 g por dia).\n\nATESTADO: isolamento domiciliar até 4 dias após o início das manchas (data: ___)."
   },
   orientacoesRetorno: [
     "O sarampo passa pelo ar com muita facilidade: ficar em casa, em quarto separado se possível, até 4 dias após o início das manchas",

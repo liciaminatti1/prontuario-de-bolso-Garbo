@@ -66,7 +66,7 @@ registrarFicha({
     ],
     gravidade: [
       "Sepse (Phoenix): infecção suspeita + escore ≥ 2 pontos (respiratório, cardiovascular, coagulação, neurológico)",
-      "Choque séptico: sepse + ≥ 1 ponto cardiovascular (hipotensão grave para a idade, lactato ≥ 5 mmol/L ou uso de vasoativo)",
+      "Choque séptico: sepse + ≥ 1 ponto cardiovascular (PAM baixa para a idade, lactato ≥ 5 mmol/L ou uso de vasoativo)",
       "Phoenix não é ferramenta de triagem: no PS, suspeitar e tratar pela clínica (perfusão, estado mental, taquicardia) sem esperar exames",
       "Escore validado para crianças de até 18 anos (não para recém-nascidos prematuros no período perinatal)"
     ]
@@ -142,9 +142,9 @@ registrarFicha({
     {
       droga: "Clindamicina",
       linha: "adj",
-      dose: "40 mg/kg/dia (10 mg/kg/dose; máx. 900 mg/dose)",
+      dose: "30–40 mg/kg/dia (10–13 mg/kg/dose; máx. 900 mg/dose e 2,7 g/dia)",
       via: "IV em 30–60 min",
-      intervalo: "6/6 h",
+      intervalo: "8/8 h",
       duracao: "Primeiros dias",
       monitorizacao: "Diarreia",
       contraindicacoes: "—",
@@ -186,7 +186,7 @@ registrarFicha({
     {
       droga: "Hidrocortisona",
       linha: "adj",
-      dose: "2 mg/kg (máx. 100 mg) em bolus; manutenção conforme UTI",
+      dose: "Dose de estresse usada no PALS para insuficiência adrenal: 2 mg/kg (máx. 100 mg) em bolus; manutenção conforme UTI (a SSC 2026 não define dose)",
       via: "IV",
       intervalo: "Dose inicial, depois a critério da UTI",
       duracao: "—",
@@ -229,7 +229,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "CHOQUE SÉPTICO PEDIÁTRICO — 1ª HORA (peso: ___ kg)\n1. Dieta zero. Decúbito elevado se desconforto respiratório.\n2. O₂ por máscara não reinalante; após estabilização, titular para evitar hiperóxia.\n3. Monitor cardíaco, oximetria contínua, PA a cada 5–15 min; sonda vesical para diurese horária.\n4. Acesso venoso calibroso (ou intraósseo).\n5. Colher hemocultura, lactato, gasometria venosa com eletrólitos e cálcio iônico, hemograma, coagulograma, PCR, função renal e hepática — sem atrasar o item 6.\n6. Ceftriaxona 50 mg/kg = ___ mg (máx. 2 g) IV em 30 min, diluída em SF 0,9% (ex.: 20–50 mL), de 12/12 h.\n   + Vancomicina 15 mg/kg = ___ mg IV de 6/6 h, diluída em SF 0,9% até ≤ 5 mg/mL, em 1–2 h (se choque, cateter, MRSA ou pele/partes moles).\n   + Clindamicina 10 mg/kg = ___ mg (máx. 900 mg) IV de 6/6 h em 30–60 min (se suspeita de choque tóxico).\n   (< 28 dias: ampicilina + gentamicina ou cefotaxima, doses da neonatologia.)\n7. Ringer lactato 10–20 mL/kg = ___ mL IV em 5–20 min (seringa). Reavaliar após cada bolus; repetir até 40–60 mL/kg na 1ª hora se perfusão ainda inadequada e sem sinais de sobrecarga (hepatomegalia, estertores, piora da SpO₂). Sem UTI disponível e sem hipotensão: não fazer bolus.\n8. Se choque persistente após fluido ou sinais de sobrecarga: Epinefrina — diluir 0,3 mg × peso = ___ mg (___ mL da ampola 1 mg/mL) em SG 5% até 50 mL; infundir em bomba em veia periférica calibrosa ou IO a ___ mL/h (1 mL/h = 0,1 mcg/kg/min; iniciar 0,5–1 mL/h = 0,05–0,1 mcg/kg/min e titular até 3 mL/h = 0,3 mcg/kg/min). Choque quente: Norepinefrina com a mesma diluição e titulação.\n9. Glicemia capilar agora e de 1/1 h; se < 60 mg/dL: SG 10% 2–5 mL/kg IV.\n10. Se cálcio iônico baixo: gluconato de cálcio 10% 0,5–1 mL/kg (máx. 20 mL) IV em 10–20 min, com monitor, em via separada da ceftriaxona.\n11. Após ressuscitação: soro de manutenção isotônico com glicose (SG 5% + NaCl 0,9% ou solução isotônica pronta) a ___ mL/h.\n12. Dipirona 15 mg/kg (máx. 1 g) IV de 6/6 h se febre.\n13. Controles: FC, FR, PA, SpO₂, TEC e consciência a cada 15 min na 1ª hora; diurese horária (meta ≥ 1 mL/kg/h); lactato em 2–4 h; balanço hídrico.\n14. Solicitar vaga de UTI pediátrica."
+    hospitalar: "CHOQUE SÉPTICO PEDIÁTRICO — 1ª HORA (peso: ___ kg)\n1. Dieta zero. Decúbito elevado se desconforto respiratório.\n2. O₂ por máscara não reinalante; após estabilização, titular para evitar hiperóxia (SSC 2026: na criança intubada após a ressuscitação, alvo conservador de SpO₂ 88–92%).\n3. Monitor cardíaco, oximetria contínua, PA a cada 5–15 min; sonda vesical para diurese horária.\n4. Acesso venoso calibroso (ou intraósseo).\n5. Colher hemocultura, lactato, gasometria venosa com eletrólitos e cálcio iônico, hemograma, coagulograma, PCR, função renal e hepática — sem atrasar o item 6.\n6. Ceftriaxona 50 mg/kg = ___ mg (máx. 2 g) IV em 30 min, diluída em SF 0,9% (ex.: 20–50 mL), de 12/12 h.\n   + Vancomicina 15 mg/kg = ___ mg IV de 6/6 h, diluída em SF 0,9% até ≤ 5 mg/mL, em 1–2 h (se choque, cateter, MRSA ou pele/partes moles).\n   + Clindamicina 10–13 mg/kg = ___ mg (máx. 900 mg/dose) IV de 8/8 h, diluída em SF 0,9% até ≤ 18 mg/mL, em 30–60 min (se suspeita de choque tóxico).\n   (< 28 dias: ampicilina + gentamicina ou cefotaxima, doses da neonatologia.)\n7. Ringer lactato 10–20 mL/kg = ___ mL IV em 5–20 min (seringa). Reavaliar após cada bolus; repetir até 40–60 mL/kg na 1ª hora se perfusão ainda inadequada e sem sinais de sobrecarga (hepatomegalia, estertores, piora da SpO₂). Sem UTI disponível e sem hipotensão: não fazer bolus.\n8. Se choque persistente após fluido ou sinais de sobrecarga: Epinefrina — diluir 0,3 mg × peso = ___ mg (___ mL da ampola 1 mg/mL) em SG 5% até 50 mL; infundir em bomba em veia periférica calibrosa ou IO a ___ mL/h (1 mL/h = 0,1 mcg/kg/min; iniciar 0,5–1 mL/h = 0,05–0,1 mcg/kg/min e titular até 3 mL/h = 0,3 mcg/kg/min). Choque quente: Norepinefrina com a mesma diluição e titulação.\n9. Glicemia capilar agora e de 1/1 h; se < 60 mg/dL: SG 10% 2–5 mL/kg IV.\n10. Se cálcio iônico baixo: gluconato de cálcio 10% 0,5–1 mL/kg (máx. 20 mL) IV em 10–20 min, com monitor, em via separada da ceftriaxona.\n11. Após ressuscitação: soro de manutenção isotônico com glicose (SG 5% + NaCl 0,9% ou solução isotônica pronta) a ___ mL/h.\n12. Dipirona 15 mg/kg (máx. 1 g) IV de 6/6 h se febre.\n13. Controles: FC, FR, PA, SpO₂, TEC e consciência a cada 15 min na 1ª hora; diurese horária (meta ≥ 1 mL/kg/h); lactato em 2–4 h; balanço hídrico.\n14. Solicitar vaga de UTI pediátrica."
   },
   orientacoesRetorno: [
     "Explicar à família, em linguagem simples, que a infecção afetou a circulação e que a criança precisa de cuidados intensivos",
@@ -248,7 +248,7 @@ registrarFicha({
         ["Coagulação (0–2): 1 ponto por item, máx. 2", "Normal", "Plaquetas < 100.000/µL · INR > 1,3 · D-dímero > 2 mg/L FEU · fibrinogênio < 100 mg/dL", "Máximo da categoria", "—"],
         ["Neurológico (0–2)", "Glasgow > 10 e pupilas reativas", "Glasgow ≤ 10", "Pupilas fixas bilateralmente", "—"]
       ],
-      nota: "Sepse = infecção suspeita + escore total ≥ 2. Choque séptico = sepse + ≥ 1 ponto cardiovascular. Cortes de PAM (mmHg) — 1 ponto / 2 pontos: < 1 mês 17–30 / < 17; 1–11 meses 25–38 / < 25; 1 a < 2 anos 31–43 / < 31; 2 a < 5 anos 32–44 / < 32; 5 a < 12 anos 36–48 / < 36; 12–17 anos 38–51 / < 38. Usar o pior valor nas primeiras 24 h."
+      nota: "Sepse = infecção suspeita + escore total ≥ 2. Choque séptico = sepse + ≥ 1 ponto cardiovascular. Cortes de PAM (mmHg) — 1 ponto / 2 pontos: < 1 mês 17–30 / < 17; 1–11 meses 25–38 / < 25; 1 a < 2 anos 31–43 / < 31; 2 a < 5 anos 32–44 / < 32; 5 a < 12 anos 36–48 / < 36; 12–17 anos 38–51 / < 38. SpO₂/FiO₂ só vale se SpO₂ ≤ 97%. Usar o pior valor nas primeiras 24 h."
     },
     {
       titulo: "Bolus de fluido conforme disponibilidade de UTI (SSC 2026)",

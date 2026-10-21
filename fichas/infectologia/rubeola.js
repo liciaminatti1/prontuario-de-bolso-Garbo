@@ -20,7 +20,7 @@ registrarFicha({
     "Febre alta com tosse, coriza e conjuntivite (pensar em sarampo)"
   ],
   conduta: [
-    "Caso suspeito: febre e exantema maculopapular, com ou sem adenomegalia e artralgia, independentemente da idade e da vacinação (conferir a definição atualizada na NT Conjunta 344/2025-MS)",
+    "Caso suspeito (Guia de Vigilância 2024): febre e exantema maculopapular com linfadenopatia retroauricular, occipital e/ou cervical, independentemente da idade e da vacinação; ou febre e exantema com viagem recente ao exterior ou contato com viajante. A NT Conjunta 344/2025-MS acrescentou critérios: conferir o texto vigente. Febre e exantema isolados, sem outro critério, não indicam sorologia de rotina",
     "Isolar em sala separada com máscara cirúrgica; afastar de gestantes",
     "Notificar à vigilância municipal em até 24 h (ficha SINAN de doenças exantemáticas febris sarampo/rubéola)",
     "Coletar no primeiro atendimento: sangue para IgM/IgG e swab de naso/orofaringe + urina para RT-PCR (LACEN)",

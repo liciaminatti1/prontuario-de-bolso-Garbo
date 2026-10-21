@@ -118,7 +118,7 @@ registrarFicha({
     {
       droga: "Ampicilina",
       linha: "l1",
-      dose: "Neonato ≤ 7 dias: 100 mg/kg/dose 8/8 h · > 7 dias até 3 meses: 75 mg/kg/dose 6/6 h · Adulto > 50 anos, gestante, imunodeprimido, etilista: 2 g 4/4 h",
+      dose: "Neonato ≤ 7 dias: 100 mg/kg/dose 8/8 h · > 7 dias até 3 meses: 75 mg/kg/dose 6/6 h (máx. 2 g/dose) · Adulto > 50 anos, gestante, imunodeprimido, etilista: 2 g 4/4 h",
       via: "IV",
       intervalo: "Conforme idade",
       duracao: "Listeria: ≥ 21 dias",

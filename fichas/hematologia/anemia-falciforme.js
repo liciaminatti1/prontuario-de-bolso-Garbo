@@ -122,7 +122,7 @@ registrarFicha({
       duracao: "Contínuo",
       monitorizacao: "Hemograma com reticulócitos periódico (mais frequente no ajuste); função renal e hepática",
       contraindicacoes: "Gestação e amamentação; citopenias significativas",
-      ajustes: "Prescrição e ajuste pelo hematologista (componente especializado). Apresentações SUS: cápsula 500 mg e comprimido/cápsula 100 mg (a partir de 9 meses). Anticoncepção eficaz em idade fértil; ajuste renal"
+      ajustes: "Prescrição e ajuste pelo hematologista (componente especializado). Apresentações SUS: cápsula 500 mg e comprimido 100 mg (a partir de 9 meses). OMS 2026: oferecer a toda criança e adolescente com anemia falciforme de 9 meses a 19 anos, independentemente da gravidade. Anticoncepção eficaz em idade fértil; ajuste renal"
     },
     {
       droga: "Ácido fólico",
@@ -209,9 +209,9 @@ registrarFicha({
   ],
   fontes: [
     "Ministério da Saúde — PCDT Doença Falciforme (Portaria Conjunta SAES/SECTICS nº 16, de 1º/11/2024; Relatório Conitec nº 924/2024)",
-    "Conitec — Relatório nº 872/2024: hidroxiureia 100 mg e 1.000 mg para doença falciforme a partir de 9 meses",
+    "Conitec — Incorporação da hidroxiureia 100 mg (comprimido) para crianças com doença falciforme a partir de 9 meses (2024)",
     "Ministério da Saúde — Manual dos Centros de Referência para Imunobiológicos Especiais, 6ª ed. (2023)",
-    "OMS — Guideline on the management of sickle cell disease in children and adolescents (2026)",
+    "OMS — WHO guideline on management of sickle cell disease in children and adolescents (0–19 years) (maio de 2026)",
     "Adams RJ et al. — STOP trial (NEJM 1998) e American Society of Hematology 2020 Guidelines: Cerebrovascular Disease in SCD"
   ],
   revisao: "2026-10-21",
