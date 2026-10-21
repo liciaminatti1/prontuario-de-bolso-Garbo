@@ -71,6 +71,7 @@ h1,h2,h3{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:
 
 /* lista */
 main{padding-block:18px 48px}
+.view{overflow-wrap:break-word}
 .group{display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
 .group-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .group-h h2{font-size:1.1rem;font-weight:800}

@@ -3,10 +3,14 @@
 Sistema web de raciocínio clínico rápido para **UBS / Atenção Primária** e **Pronto-Socorro / Emergência**.
 Funciona no celular e no computador, pode ser instalado na tela inicial e continua funcionando sem internet depois do primeiro acesso.
 
-Cada ficha tem duas experiências:
+Há dois formatos de ficha:
 
-- **Vista rápida:** meta de tempo crítica, sinais de alarme, primeira conduta, diagnósticos fatais a excluir, doses de 1ª linha e próxima decisão.
-- **Ficha completa** em abas: Clínica · Exames (com texto do pedido para copiar) · Tratamento · Conduta e destino · Fontes, revisão e versão.
+- **Completo** (condições graves ou complexas): **vista rápida** com meta de tempo crítica, sinais de alarme, primeira conduta, diagnósticos fatais a excluir, doses de 1ª linha e próxima decisão; e **ficha completa** em abas: Clínica · Exames (pedido pronto para copiar) · Tratamento · Prescrição · Conduta e retorno · Fontes.
+- **Curto** (temas simples e referências): uma página com alarmes, conduta, prescrição pronta e orientações de retorno.
+
+Toda ficha traz **prescrição ambulatorial e/ou hospitalar pronta para copiar** e **orientações de retorno**. Filtros: UBS/PS, adulto/criança e especialidade.
+
+**Documentos** (botão no topo): atestado médico, declaração de comparecimento, receituário (importa a prescrição de qualquer ficha), prescrição hospitalar, admissão, evolução SOAP e passagem de caso (I-PASS/SBAR). Os dados do paciente não ficam salvos no aparelho; só nome, CRM e local do médico ficam lembrados no navegador.
 
 > ⚠️ Material de apoio para profissionais de saúde. Não substitui julgamento clínico nem protocolos institucionais.
 > Todo o conteúdo (doses, diluições, contraindicações) deve ser revisado por médico responsável antes do uso assistencial.
@@ -20,13 +24,17 @@ prontuario-de-bolso/
 ├── index.html              Página única; carrega o registro, as fichas e o app
 ├── css/estilo.css          Visual (tema claro e escuro, layout de celular)
 ├── js/registro.js          Lista de especialidades, registrarFicha() e validação
-├── js/app.js               Interface: lista, vista rápida, ficha completa, busca
+├── js/app.js               Interface: filtros, lista, fichas (completo e curto), busca
+├── js/documentos.js        Documentos médicos (atestado, receituário, evolução...)
+├── docs/
+│   ├── ESQUEMA-FICHAS.md   Formato de cada campo e regras de conteúdo
+│   └── PENDENCIAS-REVISAO.md  Pontos a conferir na revisão médica
 ├── fichas/
 │   ├── _modelo.js          Modelo comentado para criar uma ficha nova
 │   ├── cardiologia/        Uma pasta por especialidade, uma ficha por arquivo
 │   ├── pneumologia/
 │   ├── neurologia/
-│   └── ...                 (11 especialidades — ver tabela abaixo)
+│   └── ...                 (20 especialidades)
 ├── ferramentas/
 │   ├── gerar-indice.js     Atualiza a lista de fichas no index.html
 │   └── validar.js          Confere as fichas antes de publicar (Node.js)
@@ -93,23 +101,13 @@ Uma ficha com campo faltando **não quebra o sistema**: ela é ignorada e o erro
 2. Acrescente uma linha em `ESPECIALIDADES` no `js/registro.js`: `"ginecologia": "Ginecologia e obstetrícia",`
 3. Rode `node ferramentas/gerar-indice.js`.
 
-## Fichas incluídas (revisão 20/10/2026)
+## Fichas incluídas (revisão 21/10/2026)
 
-| Especialidade | PS / Emergência | UBS / APS |
-|---|---|---|
-| Cardiologia | Dor torácica / SCA · Crise hipertensiva · IC descompensada / EAP · Fibrilação atrial | Dor torácica na UBS · Hipertensão arterial · Dislipidemia |
-| Pneumologia | Crise de asma no adulto · TEP · Pneumonia comunitária | Crise de asma na UBS · DPOC |
-| Neurologia | AVC agudo · Crise convulsiva / estado de mal · Cefaleia no PS | Enxaqueca e cefaleia tensional |
-| Infectologia | Sepse e choque séptico | Dengue · Cistite · IVAS (resfriado, faringite, sinusite) |
-| Endócrino e metabólico | Cetoacidose diabética · Hipoglicemia · Hipercalemia | Diabetes tipo 2 · Hipotireoidismo |
-| Pediatria | Febre sem foco no lactente · Bronquiolite | Diarreia e desidratação · Otite média aguda |
-| Dermatologia | — | Celulite e erisipela · Escabiose |
-| Saúde mental | — | Depressão e ansiedade |
-| Musculoesquelético | — | Lombalgia aguda |
-| Trauma | TCE leve | — |
-| Alergia e imunologia | Anafilaxia | — |
+**191 fichas** em 20 especialidades: Emergência e suporte de vida (PCR adulto e pediátrica, pós-PCR, SRI, ventilação, choque, sepse pediátrica...), Cardiologia, Pneumologia, Neurologia, Infectologia (TB, ILTB, sífilis, hanseníase, PEP, exantemáticas...), Endócrino e metabólico, Ginecologia e obstetrícia (pré-natal, ITU e hipertensão na gestação, anticoncepção, IST...), Pediatria (puericultura, sinais vitais por idade, crupe, coqueluche...), Gastroenterologia, Hematologia (anemias, doença falciforme), Urologia e saúde do homem, Dermatologia, Olhos/ouvido/nariz/garganta, Ortopedia/reumatologia/dor, Saúde mental, Intoxicações e acidentes (antídotos, ofídicos, escorpião, aranhas, abelhas), Trauma, Alergia, Prevenção e rastreamento, Prescrição e referências (analgésicos, anti-histamínicos, vias e diluições, hidratação venosa).
 
-**35 fichas** · 18 PS · 17 UBS
+Para ver a lista atualizada com a contagem por especialidade: `node ferramentas/validar.js`.
+
+> ⚠️ **Antes do uso assistencial**, a revisão médica deve passar por `docs/PENDENCIAS-REVISAO.md`. Lá estão os pontos que a revisão automática não conseguiu confirmar no texto original das diretrizes e as correções que ela aplicou.
 
 ## Fluxo sugerido de revisão de conteúdo
 
