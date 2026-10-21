@@ -139,7 +139,7 @@ registrarFicha({
     {
       droga: "Bisacodil",
       linha: "adj",
-      dose: "Adulto: 5–10 mg à noite. Criança > 4 anos: 5 mg/dia (resgate)",
+      dose: "Adulto: 5–10 mg à noite. Criança 4–10 anos: 5 mg/dia; > 10 anos: 5–10 mg/dia (resgate)",
       via: "VO (ou supositório 10 mg no adulto)",
       intervalo: "1 vez ao dia",
       duracao: "Resgate ou curto prazo; uso contínuo só sob orientação",
@@ -161,7 +161,7 @@ registrarFicha({
     {
       droga: "Psyllium (fibra solúvel)",
       linha: "adj",
-      dose: "Adulto: iniciar 1 sachê (cerca de 3,5–5 g) 1 vez ao dia e aumentar gradualmente",
+      dose: "Adulto: iniciar 1 dose (sachê ou medida, conforme a apresentação) 1 vez ao dia e aumentar gradualmente",
       via: "VO com 1 copo grande de água",
       intervalo: "1 a 3 vezes ao dia",
       duracao: "Contínuo",
@@ -207,7 +207,7 @@ registrarFicha({
   },
   prescricao: {
     ambulatorial: "CONSTIPAÇÃO — ADULTO\nUSO ORAL\n1. Macrogol 3350 (polietilenoglicol) sachê ----------- 30 sachês\n   Dissolver 1 sachê em 1 copo de água e tomar 1 vez ao dia. Ajustar (meio a 2 sachês) para 1 evacuação macia por dia.\n   (Alternativa SUS) Lactulose 667 mg/mL ------------- 2 frascos\n   Tomar 15 a 30 mL 1 vez ao dia, de manhã. Ajustar a dose.\n2. Psyllium sachê --------------------------------- 30 sachês\n   Dissolver 1 sachê em 1 copo grande de água 1 vez ao dia.\n3. Se 3 dias sem evacuar: bisacodil 5 mg ------------- 1 caixa\n   Tomar 1 a 2 comprimidos à noite.\n\nCRIANÇA (peso: ___ kg)\nDESIMPACTAÇÃO (se fecaloma)\n1. Macrogol 3350 pó: ___ g (1 a 1,5 g/kg/dia) por dia, dissolvido em água ou suco, dividido em 2 tomadas, por 3 a 6 dias, até sair fezes líquidas claras.\nMANUTENÇÃO (após desimpactação, por pelo menos 2 meses)\n2. Macrogol 3350 pó: ___ g (0,4 g/kg/dia; ajustar entre 0,2 e 0,8 g/kg/dia) 1 vez ao dia.\n   OU Lactulose 667 mg/mL: ___ mL (1,5 a 3 mL/kg/dia) por dia, em 1 ou 2 tomadas.\n   OU (criança > 1 ano, sem problema para engolir) óleo mineral: ___ mL (1 a 3 mL/kg/dia, máx 90 mL/dia) 1 vez ao dia, longe das refeições e nunca deitada.\n\nORIENTAÇÕES\n- Sentar no vaso 5 a 10 minutos após o café, o almoço e o jantar, com apoio para os pés (banquinho).\n- Beber água ao longo do dia; comer frutas, verduras, feijão e cereais integrais.\n- Anotar as evacuações (diário) e trazer no retorno.",
-    hospitalar: "FECALOMA NO PS — DESIMPACTAÇÃO RETAL\n1. Dieta conforme aceitação.\n2. Adulto: enema de fosfato de sódio 133 mL via retal agora (contraindicado se insuficiência renal ou desidratação); alternativa: enema de glicerina 12% 250–500 mL via retal.\n3. Criança ≥ 2 anos: enema de fosfato de sódio 2,5 mL/kg (máx 133 mL) via retal, dose única. Lactente/criança < 2 anos: supositório de glicerina infantil ou SF 0,9% 5–10 mL/kg via retal.\n4. Se dor: dipirona 1 g IV (criança: 15–25 mg/kg/dose, máx 1 g).\n5. Se falha após 2 tentativas: desimpactação manual sob analgesia, e/ou macrogol oral em dose de desimpactação.\n6. Alta com manutenção (ver receita ambulatorial)."
+    hospitalar: "FECALOMA NO PS — DESIMPACTAÇÃO RETAL\n1. Dieta conforme aceitação.\n2. Adulto: enema de fosfato de sódio 133 mL via retal agora (contraindicado se insuficiência renal ou desidratação); alternativa: enema de glicerina 12% 250–500 mL via retal.\n3. Criança ≥ 2 anos: enema de fosfato de sódio 2,5 mL/kg (máx 133 mL) via retal, dose única. Lactente/criança < 2 anos: supositório de glicerina infantil ou SF 0,9% 5–10 mL/kg via retal.\n4. Se dor: dipirona 1 g IV (criança: 15–25 mg/kg/dose, máx 1 g; IV só a partir de 1 ano).\n5. Se falha após 2 tentativas: desimpactação manual sob analgesia, e/ou macrogol oral em dose de desimpactação.\n6. Alta com manutenção (ver receita ambulatorial)."
   },
   orientacoesRetorno: [
     "O laxativo é para usar todos os dias por meses, não só quando o intestino trava. Parar cedo é a principal causa de recaída",

@@ -21,7 +21,7 @@ registrarFicha({
   ],
   condutaInicial: [
     "Prevenção (todas as crianças): aleitamento materno exclusivo até 6 meses; clampeamento tardio do cordão; alimentação complementar rica em ferro (carnes, vísceras, feijão) com vitamina C; evitar leite de vaca integral antes de 12 meses e excesso de leite (> 500–600 mL/dia) depois",
-    "Suplementação profilática: PNSF/MS — 1 mg/kg/dia de ferro elementar dos 6 aos 24 meses (a termo, peso adequado); prematuro e baixo peso: início mais precoce e dose maior (ver tabela)",
+    "Suplementação profilática (PNSF/MS 2022 e SBP 2026, a termo com peso adequado): 10–12,5 mg/dia de ferro elementar por 3 meses, pausa de 3 meses e novo ciclo — 2 ciclos entre 6 e 24 meses (de preferência aos 6 e aos 12 meses). Prematuro e baixo peso: início aos 30 dias e dose por kg (ver tabela)",
     "Suspeita de anemia: hemograma com reticulócitos, ferritina e PCR",
     "Confirmada ferropriva (microcitose/hipocromia, RDW alto, ferritina baixa): ferro elementar 3–6 mg/kg/dia VO",
     "Investigar causa: dieta (excesso de leite de vaca, pouca carne), perdas (parasitoses — ancilostomíase, tricuríase; sangramento digestivo; menorragia), má absorção (doença celíaca)",
@@ -113,26 +113,26 @@ registrarFicha({
       ajustes: "SUS: solução oral 25 mg/mL de Fe elementar (1 gota ≈ 1,25 mg) e comprimido de 40 mg de Fe elementar. Não ultrapassar a dose de adulto em criança grande. Não tomar com leite, chá, café ou antiácidos. Vitamina C (suco de laranja) aumenta absorção. Intoxicação acidental por ferro é grave: guardar fora do alcance"
     },
     {
-      droga: "Sulfato ferroso — profilaxia (PNSF/Ministério da Saúde)",
+      droga: "Sulfato ferroso — profilaxia (PNSF/Ministério da Saúde 2022; SBP 2026)",
       linha: "l1",
-      dose: "1 mg/kg/dia de ferro elementar",
+      dose: "10–12,5 mg/dia de ferro elementar (dose fixa, sem cálculo por peso)",
       via: "VO",
       intervalo: "1 vez ao dia",
-      duracao: "Dos 6 aos 24 meses (a termo, peso adequado)",
+      duracao: "Ciclos de 3 meses diários seguidos de 3 meses de pausa: 2 ciclos entre 6 e 24 meses (de preferência iniciando aos 6 e aos 12 meses). A termo, peso adequado",
       monitorizacao: "Adesão; hemograma se suspeita clínica",
       contraindicacoes: "Em tratamento de anemia (usar dose terapêutica); hemoglobinopatias com sobrecarga",
-      ajustes: "SBP 2026: dose fixa de 10–12,5 mg/dia em 2 ciclos de 3 meses (6–9 meses e 12–15 meses), independentemente do peso, para a termo com peso adequado. Seguir o protocolo adotado pelo município"
+      ajustes: "Substitui o esquema antigo do PNSF (1 mg/kg/dia contínuo dos 6 aos 24 meses, manual de 2013). Solução 25 mg/mL: 8 a 10 gotas = 10–12,5 mg. SBP 2026: lactente que recebe leite de vaca pode precisar iniciar aos 4 meses. Criança em uso de NutriSUS: seguir a orientação local para não somar suplementos. Seguir o protocolo adotado pelo município"
     },
     {
       droga: "Sulfato ferroso — profilaxia em prematuros e baixo peso",
       linha: "l1",
-      dose: "2–4 mg/kg/dia de ferro elementar conforme peso ao nascer (quanto menor o peso, maior a dose) até 12 meses; depois 1 mg/kg/dia até 24 meses",
+      dose: "A termo < 2.500 g e pré-termo ≥ 1.500 g: 2 mg/kg/dia; pré-termo 1.000–1.500 g: 3 mg/kg/dia; pré-termo < 1.000 g: 4 mg/kg/dia — até 12 meses; depois 1 mg/kg/dia até 24 meses",
       via: "VO",
       intervalo: "1 vez ao dia",
       duracao: "Início a partir de 30 dias de vida até 24 meses",
       monitorizacao: "Hemograma e ferritina conforme seguimento do prematuro",
       contraindicacoes: "Transfusões múltiplas recentes (avaliar ferritina antes)",
-      ajustes: "SBP (consenso 2021 e atualização 2026): RN pré-termo ou < 2.500 g; conferir a faixa de dose por peso ao nascer no documento vigente"
+      ajustes: "SBP (consenso 2018/2021, mantido na atualização 2026). Conferir as faixas por peso ao nascer no documento vigente"
     },
     {
       droga: "Ferro parenteral (sacarato de hidróxido férrico) e transfusão",
@@ -169,7 +169,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "TRATAMENTO DA ANEMIA FERROPRIVA (peso: ___ kg)\nUSO ORAL\n1. Sulfato ferroso solução oral 25 mg/mL de ferro elementar (1 gota = 1,25 mg) ---- ___ frascos\n   Dar ___ gotas (3 mg/kg/dia = 2,4 gotas/kg/dia) 1 vez ao dia, 30 minutos antes do almoço, com um pouco de suco de laranja, por 3 a 6 meses.\n   Exemplo: 10 kg → 30 mg/dia = 24 gotas 1 vez ao dia.\n   Criança maior: Sulfato ferroso 40 mg de ferro elementar (comprimido) — ___ comprimido(s) por dia (3 mg/kg/dia), 30 minutos antes de uma refeição.\n\n2. Albendazol 400 mg (≥ 2 anos) ------------------- 1 comprimido\n   Mastigar 1 comprimido em dose única (se área de risco para verminose ou EPF positivo).\n\nPROFILAXIA (PNSF) — criança a termo, 6 a 24 meses\n1. Sulfato ferroso solução oral 25 mg/mL (1 gota = 1,25 mg) ---- 1 frasco\n   Dar 1 mg/kg por dia (≈ 1 gota a cada 1,25 kg; 8 kg = 6 a 7 gotas) 1 vez ao dia até completar 2 anos.\n\nORIENTAÇÕES\n- Não dar o ferro junto com leite, chá ou café.\n- Oferecer carne, frango, peixe, fígado ou ovo todos os dias; feijão com legumes e verduras verde-escuras; fruta cítrica após a refeição.\n- Leite de vaca: não antes de 1 ano; depois, no máximo 2 a 3 copos (500 mL) por dia.\n- As fezes ficam escuras (normal). Escovar os dentes após o ferro para não manchar."
+    ambulatorial: "TRATAMENTO DA ANEMIA FERROPRIVA (peso: ___ kg)\nUSO ORAL\n1. Sulfato ferroso solução oral 25 mg/mL de ferro elementar (1 gota = 1,25 mg) ---- ___ frascos\n   Dar ___ gotas (3 mg/kg/dia = 2,4 gotas/kg/dia) 1 vez ao dia, 30 minutos antes do almoço, com um pouco de suco de laranja, por 3 a 6 meses.\n   Exemplo: 10 kg → 30 mg/dia = 24 gotas 1 vez ao dia.\n   Criança maior: Sulfato ferroso 40 mg de ferro elementar (comprimido) — ___ comprimido(s) por dia (3 mg/kg/dia), 30 minutos antes de uma refeição.\n\n2. Albendazol 400 mg (≥ 2 anos) ------------------- 1 comprimido\n   Mastigar 1 comprimido em dose única (se área de risco para verminose ou EPF positivo).\n\nPROFILAXIA (PNSF 2022 / SBP 2026) — criança a termo com peso adequado, 6 a 24 meses\n1. Sulfato ferroso solução oral 25 mg/mL (1 gota = 1,25 mg) ---- 1 frasco\n   Dar 8 a 10 gotas (10 a 12,5 mg) 1 vez ao dia, todos os dias, por 3 meses. Depois, pausa de 3 meses e novo ciclo de 3 meses (2 ciclos entre 6 e 24 meses; de preferência aos 6 e aos 12 meses).\n\nORIENTAÇÕES\n- Não dar o ferro junto com leite, chá ou café.\n- Oferecer carne, frango, peixe, fígado ou ovo todos os dias; feijão com legumes e verduras verde-escuras; fruta cítrica após a refeição.\n- Leite de vaca: não antes de 1 ano; depois, no máximo 2 a 3 copos (500 mL) por dia.\n- As fezes ficam escuras (normal). Escovar os dentes após o ferro para não manchar."
   },
   orientacoesRetorno: [
     "O ferro precisa ser tomado todos os dias por meses, mesmo depois que a criança melhorar",
@@ -183,14 +183,14 @@ registrarFicha({
       titulo: "Suplementação profilática de ferro (ferro elementar)",
       colunas: ["Situação", "Ministério da Saúde (PNSF)", "SBP 2026"],
       linhas: [
-        ["A termo, peso adequado", "1 mg/kg/dia dos 6 aos 24 meses", "10–12,5 mg/dia (dose fixa) em 2 ciclos: 6–9 meses e 12–15 meses"],
-        ["Pré-termo ou baixo peso (< 2.500 g)", "Seguir orientação do serviço/SBP", "A partir de 30 dias: 2–4 mg/kg/dia conforme peso ao nascer até 12 meses; depois 1 mg/kg/dia até 24 meses"]
+        ["A termo, peso adequado", "10–12,5 mg/dia por 3 meses, pausa de 3 meses, novo ciclo: 2 ciclos entre 6 e 24 meses (Caderno dos Programas de Suplementação, 2022)", "10–12,5 mg/dia (dose fixa) em 2 ciclos de 3 meses, de preferência a partir dos 6 e dos 12 meses; com leite de vaca, pode iniciar aos 4 meses"],
+        ["Pré-termo ou baixo peso (< 2.500 g)", "Seguir orientação do serviço/SBP", "A partir de 30 dias: 2 mg/kg/dia (a termo < 2.500 g ou pré-termo ≥ 1.500 g), 3 mg/kg/dia (1.000–1.500 g), 4 mg/kg/dia (< 1.000 g) até 12 meses; depois 1 mg/kg/dia até 24 meses"]
       ],
-      nota: "Dados da SBP 2026 a partir de resumos secundários; conferir no documento original. Adotar o protocolo do município."
+      nota: "O esquema antigo do PNSF (1 mg/kg/dia contínuo dos 6 aos 24 meses) foi substituído em 2022. Dados da SBP 2026 a partir de resumos secundários; conferir no documento original. Adotar o protocolo do município."
     },
     {
       titulo: "Cálculo rápido com sulfato ferroso gotas 25 mg/mL (1 gota ≈ 1,25 mg de ferro elementar)",
-      colunas: ["Peso", "Profilaxia 1 mg/kg/dia", "Tratamento 3 mg/kg/dia"],
+      colunas: ["Peso", "1 mg/kg/dia (prematuro/baixo peso de 12 a 24 meses)", "Tratamento 3 mg/kg/dia"],
       linhas: [
         ["6 kg", "5 gotas", "14 gotas"],
         ["8 kg", "6 gotas", "19 gotas"],

@@ -87,8 +87,8 @@ registrarFicha({
       nome: "Triagens neonatais clínicas (olhinho, orelhinha, coraçãozinho, linguinha)",
       pedido: "Conferir na Caderneta: teste do reflexo vermelho, triagem auditiva neonatal (EOA ou PEATE-A), oximetria de pulso (teste do coraçãozinho) e avaliação do frênulo lingual. Se não realizados: solicitar triagem auditiva neonatal e realizar reflexo vermelho na consulta.",
       porQue: "Detectar catarata/retinoblastoma, perda auditiva, cardiopatia congênita crítica e anquiloglossia que prejudica a amamentação.",
-      esperar: "Reflexo vermelho presente e simétrico; EOA/PEATE-A 'passa' bilateral; oximetria ≥ 95% em membro superior direito e membro inferior com diferença ≤ 3%.",
-      interpretacao: "Reflexo vermelho alterado → oftalmologia com prioridade. Falha auditiva → reteste em até 30 dias e, se mantiver, diagnóstico audiológico até 3 meses. Oximetria alterada (< 95% ou diferença > 3%) após repetição em 1 h → ecocardiograma.",
+      esperar: "Reflexo vermelho presente e simétrico; EOA/PEATE-A 'passa' bilateral; oximetria ≥ 95% em membro superior direito e em membro inferior, com diferença < 3%.",
+      interpretacao: "Reflexo vermelho alterado → oftalmologia com prioridade. Falha auditiva → reteste em até 30 dias e, se mantiver, diagnóstico audiológico até 3 meses. Oximetria alterada (< 95% ou diferença ≥ 3%) → repetir em 1 h; se mantida → ecocardiograma em até 24 h.",
       limitacoes: "Triagem auditiva ideal até 30 dias; RN com indicador de risco para deficiência auditiva (UTI > 5 dias, infecções congênitas, ototóxicos, história familiar) deve fazer PEATE-A e acompanhamento."
     },
     {
@@ -123,13 +123,13 @@ registrarFicha({
     {
       droga: "Sulfato ferroso (profilaxia) — PNSF/Ministério da Saúde",
       linha: "l1",
-      dose: "1 mg/kg/dia de ferro elementar dos 6 aos 24 meses (a termo, peso adequado)",
+      dose: "10–12,5 mg/dia de ferro elementar (dose fixa), a termo com peso adequado",
       via: "VO",
       intervalo: "1 vez ao dia, longe do leite (30–60 min antes das refeições, com suco de fruta cítrica se possível)",
-      duracao: "Até completar 24 meses",
+      duracao: "3 meses diários, pausa de 3 meses e novo ciclo: 2 ciclos entre 6 e 24 meses (de preferência a partir dos 6 e dos 12 meses)",
       monitorizacao: "Hemograma se suspeita clínica de anemia",
       contraindicacoes: "Hemocromatose, anemia não ferropriva, hemólise",
-      ajustes: "SUS: sulfato ferroso solução oral 25 mg/mL de Fe elementar (1 gota ≈ 1,25 mg) ou xarope do PNSF. Prematuros e baixo peso: iniciar mais cedo e em dose maior (ver ficha anemia-ferropriva-crianca). SBP 2026 propôs dose fixa de 10–12,5 mg/dia em ciclos de 3 meses (6–9 e 12–15 meses) — ver ficha específica; seguir o protocolo local."
+      ajustes: "SUS: sulfato ferroso solução oral 25 mg/mL de Fe elementar (1 gota ≈ 1,25 mg) ou xarope do PNSF. Prematuros e baixo peso: iniciar mais cedo e em dose maior (ver ficha anemia-ferropriva-crianca). Esquema do Caderno dos Programas Nacionais de Suplementação de Micronutrientes (MS, 2022), que substituiu o antigo 1 mg/kg/dia contínuo; a SBP 2026 recomenda o mesmo esquema em ciclos. Seguir o protocolo local."
     },
     {
       droga: "Vitamina A (megadose) — Programa Nacional de Suplementação de Vitamina A",
@@ -164,7 +164,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "PUERICULTURA — SUPLEMENTAÇÃO (peso: ___ kg; idade: ___)\nUSO ORAL\n1. Colecalciferol (vitamina D) gotas ------------------- 1 frasco\n   Dar ___ gotas (= 400 UI) 1 vez ao dia, todos os dias, até 1 ano. De 1 a 2 anos: ___ gotas (= 600 UI) 1 vez ao dia.\n   (Conferir a concentração do frasco: há apresentações de 200 UI e de 400 UI por gota.)\n\n2. Sulfato ferroso solução oral 25 mg/mL de ferro elementar (1 gota = 1,25 mg) ------ 1 frasco\n   A partir dos 6 meses: dar 1 gota por kg de peso (= 1 mg/kg) 1 vez ao dia, 30 minutos antes do almoço, até completar 2 anos.\n   Exemplo: 8 kg = 8 gotas por dia.\n\nVITAMINA A (na UBS, regiões do programa)\n3. Vitamina A 100.000 UI (6 a 11 meses) ou 200.000 UI (12 a 59 meses) — 1 cápsula VO na unidade; repetir a cada 6 meses dos 12 aos 59 meses.\n\nORIENTAÇÕES\n- Aleitamento materno exclusivo até 6 meses (sem água, chás ou outros leites); manter até 2 anos ou mais.\n- A partir dos 6 meses: comida da família amassada, com feijão, carne/ovo, legumes, verduras e frutas; sem açúcar até 2 anos; sem mel até 1 ano; evitar ultraprocessados e sucos industrializados.\n- Dormir de barriga para cima, no berço, sem travesseiro, protetor ou bichos de pelúcia.\n- Sem telas antes dos 2 anos; de 2 a 5 anos, até 1 hora por dia, com supervisão."
+    ambulatorial: "PUERICULTURA — SUPLEMENTAÇÃO (peso: ___ kg; idade: ___)\nUSO ORAL\n1. Colecalciferol (vitamina D) gotas ------------------- 1 frasco\n   Dar ___ gotas (= 400 UI) 1 vez ao dia, todos os dias, até 1 ano. De 1 a 2 anos: ___ gotas (= 600 UI) 1 vez ao dia.\n   (Conferir a concentração do frasco: há apresentações de 200 UI e de 400 UI por gota.)\n\n2. Sulfato ferroso solução oral 25 mg/mL de ferro elementar (1 gota = 1,25 mg) ------ 1 frasco\n   A partir dos 6 meses: dar 8 a 10 gotas (10 a 12,5 mg) 1 vez ao dia, 30 minutos antes do almoço, por 3 meses. Depois, pausa de 3 meses e novo ciclo de 3 meses a partir dos 12 meses (2 ciclos até os 2 anos).\n   Prematuro ou baixo peso ao nascer: dose por kg desde os 30 dias (ver ficha anemia-ferropriva-crianca).\n\nVITAMINA A (na UBS, regiões do programa)\n3. Vitamina A 100.000 UI (6 a 11 meses) ou 200.000 UI (12 a 59 meses) — 1 cápsula VO na unidade; repetir a cada 6 meses dos 12 aos 59 meses.\n\nORIENTAÇÕES\n- Aleitamento materno exclusivo até 6 meses (sem água, chás ou outros leites); manter até 2 anos ou mais.\n- A partir dos 6 meses: comida da família amassada, com feijão, carne/ovo, legumes, verduras e frutas; sem açúcar até 2 anos; sem mel até 1 ano; evitar ultraprocessados e sucos industrializados.\n- Dormir de barriga para cima, no berço, sem travesseiro, protetor ou bichos de pelúcia.\n- Sem telas antes dos 2 anos; de 2 a 5 anos, até 1 hora por dia, com supervisão."
   },
   orientacoesRetorno: [
     "Trazer sempre a Caderneta da Criança em todas as consultas e vacinas",
@@ -187,7 +187,7 @@ registrarFicha({
         ["12–15 meses", "Mostra o que quer, coloca blocos na caneca, diz uma palavra, anda sem apoio"],
         ["15–18 meses", "Usa colher ou garfo, constrói torre de 2 cubos, fala 3 palavras, anda para trás"],
         ["18–24 meses", "Tira a roupa, torre de 3 cubos, aponta 2 figuras, chuta a bola"],
-        ["2–3 anos", "Veste-se com supervisão, torre de 6 cubos, frases com 2 palavras, pula com ambos os pés"]
+        ["24–30 meses", "Veste-se com supervisão, torre de 6 cubos, frases com 2 palavras, pula com ambos os pés"]
       ],
       nota: "Se a criança não faz os marcos da sua faixa: alerta (orientar estimulação e reavaliar em 30 dias). Se não faz os marcos da faixa anterior ou há regressão: encaminhar. M-CHAT-R/F aos 18 meses (Caderneta). Conferir a edição vigente da Caderneta (6ª edição)."
     },
@@ -216,7 +216,7 @@ registrarFicha({
         ["Pezinho (biológica)", "3º ao 5º dia de vida", "Convocação e serviço de referência estadual"],
         ["Olhinho (reflexo vermelho)", "Antes da alta e nas consultas de puericultura dos primeiros anos", "Oftalmologia com prioridade"],
         ["Orelhinha (EOA/PEATE-A)", "Até 30 dias (idealmente antes da alta)", "Reteste até 30 dias; diagnóstico até 3 meses; intervenção até 6 meses"],
-        ["Coraçãozinho (oximetria)", "Entre 24 e 48 h, antes da alta (RN ≥ 34 semanas)", "< 95% ou diferença > 3%: repetir em 1 h; mantida → ecocardiograma"],
+        ["Coraçãozinho (oximetria)", "Entre 24 e 48 h, antes da alta (RN > 34 semanas)", "< 95% ou diferença ≥ 3%: repetir em 1 h; mantida → ecocardiograma"],
         ["Linguinha (frênulo)", "Na maternidade (Lei 13.002/2014)", "Avaliar impacto na amamentação; encaminhar se necessário"]
       ]
     }

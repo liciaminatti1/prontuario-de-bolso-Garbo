@@ -53,7 +53,7 @@ registrarFicha({
     {
       droga: "Ondansetrona",
       linha: "l1",
-      dose: "Adulto: 4–8 mg. Criança (> 6 meses): 0,15 mg/kg (máx 4 mg IV; VO por peso: 8–15 kg 2 mg, 15–30 kg 4 mg, > 30 kg 6 mg)",
+      dose: "Adulto: 4–8 mg. Criança (> 6 meses): IV 0,15 mg/kg (máx 4 mg); VO por peso (Freedman 2006): 8–15 kg 2 mg, > 15–30 kg 4 mg, > 30 kg 8 mg",
       via: "VO (comprimido orodispersível), IV lento (em 2–5 min ou diluída em 50 mL de SF em 15 min) ou IM",
       intervalo: "8/8 h (adulto); criança: dose única no PS costuma bastar",
       duracao: "1–3 dias",
@@ -86,8 +86,8 @@ registrarFicha({
     {
       droga: "Dimenidrinato (+ piridoxina)",
       linha: "alt",
-      dose: "Adulto: 50–100 mg (máx 400 mg/dia). Criança ≥ 2 anos: 1,25 mg/kg/dose (máx 75 mg/dia de 2 a 6 anos; 150 mg/dia de 6 a 12 anos)",
-      via: "VO; IV (adulto: 50 mg diluídos em 10 mL de SF, em pelo menos 2 min) ou IM",
+      dose: "Adulto: 50–100 mg (máx 400 mg/dia). Criança ≥ 2 anos: 1,25 mg/kg/dose (gotas 25 mg/mL: 1 gota/kg); máx 75 mg/dia (60 gotas) de 2 a 6 anos e 150 mg/dia (120 gotas) de 6 a 12 anos",
+      via: "VO; IV (ampola 'DL' de 10 mL = 30 mg de dimenidrinato + piridoxina, IV lento em pelo menos 2 min ou diluída em SF 0,9%) ou IM (ampola de 1 mL = 50 mg; conferir a apresentação)",
       intervalo: "4/4 a 6/6 h (adulto); 6/6 a 8/8 h (criança)",
       duracao: "1–3 dias",
       monitorizacao: "Sonolência, efeitos anticolinérgicos",
@@ -118,8 +118,8 @@ registrarFicha({
     }
   ],
   prescricao: {
-    ambulatorial: "ADULTO\nUSO ORAL / SUBLINGUAL\n1. Ondansetrona 4 mg comprimido orodispersível ---- 10 comprimidos\n   Dissolver 1 comprimido na boca (ou sob a língua) de 8 em 8 horas se náuseas ou vômitos, por até 3 dias.\n2. Sais para reidratação oral (SRO) --------------- 5 envelopes\n   Diluir 1 envelope em 1 litro de água filtrada ou fervida (fria). Beber em pequenos goles após cada vômito ou evacuação líquida.\n\nCRIANÇA > 6 MESES (peso: ___ kg)\n1. Ondansetrona 4 mg comprimido orodispersível ou solução oral ---- 1 caixa/frasco\n   8 a 15 kg: 2 mg (meio comprimido de 4 mg); 15 a 30 kg: 4 mg; acima de 30 kg: 6 mg (1 comprimido e meio de 4 mg) — dose única; se necessário, repetir de 8 em 8 horas por no máximo 1 a 2 dias.\n2. Sais para reidratação oral (SRO): oferecer 5 mL (1 colher de chá) a cada 1 a 2 minutos; aumentar se não vomitar. Após cada vômito ou evacuação: 50–100 mL (< 2 anos) ou 100–200 mL (2 a 10 anos).",
-    hospitalar: "VÔMITOS NO PS — ADULTO\n1. Dieta zero por 1–2 h; depois líquidos claros em pequenos volumes conforme tolerância.\n2. Acesso venoso periférico se desidratação ou falha da via oral.\n3. SF 0,9% ou Ringer lactato 500–1.000 mL IV em 30–60 min; repetir conforme hidratação (cautela em cardiopatas e DRC).\n4. Ondansetrona 8 mg (4 mL de 2 mg/mL) diluída em SF 0,9% 50 mL IV em 15 minutos, de 8/8 h se necessário.\n   OU Metoclopramida 10 mg (2 mL de 5 mg/mL) diluída em SF 0,9% 50–100 mL IV em 15 minutos, de 8/8 h (máx 5 dias).\n   OU Dimenidrinato 50 mg + piridoxina (ampola IV 'DL') diluído em SF 0,9% 10 mL IV lento, de 6/6 h.\n5. Se refratário: haloperidol 1 mg IV lento (ECG com QTc antes se possível).\n6. Glicemia capilar; eletrólitos e função renal se vômitos persistentes.\n7. Reavaliar abdome e sinais vitais após 1–2 h.\n\nCRIANÇA (peso: ___ kg)\n1. Ondansetrona 0,15 mg/kg (máx 4 mg) VO ou IV diluída em SF 0,9% 10–20 mL em 15 minutos; após 15–30 min, iniciar reidratação oral (TRO).\n2. Falha da TRO ou desidratação grave: SF 0,9% ou Ringer lactato 20 mL/kg IV em 20–30 min e reavaliar (ver ficha diarreia-desidratacao)."
+    ambulatorial: "ADULTO\nUSO ORAL / SUBLINGUAL\n1. Ondansetrona 4 mg comprimido orodispersível ---- 10 comprimidos\n   Dissolver 1 comprimido na boca (ou sob a língua) de 8 em 8 horas se náuseas ou vômitos, por até 3 dias.\n2. Sais para reidratação oral (SRO) --------------- 5 envelopes\n   Diluir 1 envelope em 1 litro de água filtrada ou fervida (fria). Beber em pequenos goles após cada vômito ou evacuação líquida.\n\nCRIANÇA > 6 MESES (peso: ___ kg)\n1. Ondansetrona 4 mg comprimido orodispersível ou solução oral ---- 1 caixa/frasco\n   8 a 15 kg: 2 mg (meio comprimido de 4 mg); 15 a 30 kg: 4 mg (1 comprimido); acima de 30 kg: 8 mg (2 comprimidos de 4 mg) — dose única; se necessário, repetir de 8 em 8 horas por no máximo 1 a 2 dias.\n2. Sais para reidratação oral (SRO): oferecer 5 mL (1 colher de chá) a cada 1 a 2 minutos; aumentar se não vomitar. Após cada vômito ou evacuação: 50–100 mL (< 2 anos) ou 100–200 mL (2 a 10 anos).",
+    hospitalar: "VÔMITOS NO PS — ADULTO\n1. Dieta zero por 1–2 h; depois líquidos claros em pequenos volumes conforme tolerância.\n2. Acesso venoso periférico se desidratação ou falha da via oral.\n3. SF 0,9% ou Ringer lactato 500–1.000 mL IV em 30–60 min; repetir conforme hidratação (cautela em cardiopatas e DRC).\n4. Ondansetrona 8 mg (4 mL de 2 mg/mL) diluída em SF 0,9% 50 mL IV em 15 minutos, de 8/8 h se necessário.\n   OU Metoclopramida 10 mg (2 mL de 5 mg/mL) diluída em SF 0,9% 50–100 mL IV em 15 minutos, de 8/8 h (máx 5 dias).\n   OU Dimenidrinato + piridoxina ampola 'DL' 10 mL (30 mg de dimenidrinato) 1 ampola IV lento (em pelo menos 2 minutos), de 4/4 a 6/6 h se necessário.\n5. Se refratário: haloperidol 1 mg IV lento (ECG com QTc antes se possível).\n6. Glicemia capilar; eletrólitos e função renal se vômitos persistentes.\n7. Reavaliar abdome e sinais vitais após 1–2 h.\n\nCRIANÇA (peso: ___ kg)\n1. Ondansetrona VO pelas faixas de peso (8–15 kg: 2 mg; > 15–30 kg: 4 mg; > 30 kg: 8 mg) ou IV 0,15 mg/kg (máx 4 mg) diluída em SF 0,9% 10–20 mL em 15 minutos; após 15–30 min, iniciar reidratação oral (TRO).\n2. Falha da TRO ou desidratação grave: SF 0,9% ou Ringer lactato 20 mL/kg IV em 20–30 min e reavaliar (ver ficha diarreia-desidratacao)."
   },
   orientacoesRetorno: [
     "Beber líquidos em pequenos goles e com frequência; voltar à alimentação habitual assim que tolerar, sem jejum prolongado",

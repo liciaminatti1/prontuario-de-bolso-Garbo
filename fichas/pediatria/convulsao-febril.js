@@ -51,7 +51,7 @@ registrarFicha({
     {
       droga: "Midazolam (crise em curso, sem acesso venoso)",
       linha: "l1",
-      dose: "0,2 mg/kg intranasal ou IM (máx 10 mg); bucal 0,3 mg/kg (máx 10 mg)",
+      dose: "0,2 mg/kg intranasal ou IM (máx 10 mg); bucal 0,5 mg/kg (máx 10 mg)",
       via: "Intranasal (dividir entre as narinas, com atomizador), bucal ou IM",
       intervalo: "Pode repetir 1 vez após 5–10 min",
       duracao: "Dose de resgate",
@@ -78,7 +78,7 @@ registrarFicha({
       intervalo: "6/6 h se febre com desconforto",
       duracao: "Enquanto febre",
       monitorizacao: "Conforto",
-      contraindicacoes: "Dipirona: < 3 meses ou < 5 kg (bula), discrasias sanguíneas",
+      contraindicacoes: "Dipirona: < 3 meses ou < 5 kg (bula), discrasias sanguíneas; via IV não deve ser usada em menores de 1 ano (de 3 a 11 meses, só IM)",
       ajustes: "Não previne recorrência (AAP); usar para conforto, não em esquema fixo"
     },
     {
@@ -94,7 +94,7 @@ registrarFicha({
     }
   ],
   prescricao: {
-    hospitalar: "CONVULSÃO FEBRIL NO PS (peso: ___ kg)\n1. Posição lateral de segurança; aspirar vias aéreas; O₂ por máscara 10 L/min se SpO₂ < 94%; monitor e oximetria.\n2. Glicemia capilar imediata (se < 60 mg/dL: SG 10% 2–5 mL/kg IV).\n3. Se em crise há 5 min ou mais:\n   - Sem acesso venoso: midazolam 5 mg/mL ___ mg (0,2 mg/kg; máx 10 mg) intranasal, metade em cada narina (ou IM).\n   - Com acesso venoso: diazepam 5 mg/mL ___ mg (0,3 mg/kg; máx 10 mg) IV lento, sem diluir, 1–2 mg/min.\n   - Alternativa: diazepam ___ mg (0,5 mg/kg; máx 20 mg) via retal.\n   Repetir 1 vez após 5–10 min se persistir. Sem resposta após 2 doses: protocolo de estado de mal (ficha convulsao).\n4. Dipirona ___ mg (15–25 mg/kg; máx 1 g) IV diluída em SF 0,9% 10 mL, lento, se febre (ou VO após recuperação).\n5. Observação por 2–6 h (até recuperação neurológica completa); reavaliar o foco da febre.",
+    hospitalar: "CONVULSÃO FEBRIL NO PS (peso: ___ kg)\n1. Posição lateral de segurança; aspirar vias aéreas; O₂ por máscara 10 L/min se SpO₂ < 94%; monitor e oximetria.\n2. Glicemia capilar imediata (se < 60 mg/dL: SG 10% 2–5 mL/kg IV).\n3. Se em crise há 5 min ou mais:\n   - Sem acesso venoso: midazolam 5 mg/mL ___ mg (0,2 mg/kg; máx 10 mg) intranasal, metade em cada narina (ou IM).\n   - Com acesso venoso: diazepam 5 mg/mL ___ mg (0,3 mg/kg; máx 10 mg) IV lento, sem diluir, 1–2 mg/min.\n   - Alternativa: diazepam ___ mg (0,5 mg/kg; máx 20 mg) via retal.\n   Repetir 1 vez após 5–10 min se persistir. Sem resposta após 2 doses: protocolo de estado de mal (ficha convulsao).\n4. Dipirona ___ mg (15–25 mg/kg; máx 1 g) IV diluída em SF 0,9% 10 mL, lento, se febre (IV só a partir de 1 ano; de 3 a 11 meses, IM; ou VO após recuperação).\n5. Observação por 2–6 h (até recuperação neurológica completa); reavaliar o foco da febre.",
     ambulatorial: "ALTA — CONVULSÃO FEBRIL SIMPLES (peso: ___ kg)\nUSO ORAL\n1. Paracetamol gotas 200 mg/mL ------------------ 1 frasco\n   Dar 1 gota por kg (máx 35 gotas) de 6 em 6 horas se febre com desconforto.\n   OU Dipirona gotas 500 mg/mL (> 3 meses e > 5 kg) -- 1 frasco\n   Dar ___ gotas (1 gota = 25 mg; 15 mg/kg ≈ 0,6 gota/kg) de 6 em 6 horas se febre.\n2. Tratamento do foco da febre conforme diagnóstico.\n\nSE CRISE NOVAMENTE EM CASA (orientação aos pais)\n- Manter a calma, deitar a criança de lado em local seguro, afrouxar roupas, não colocar nada na boca, não sacudir.\n- Marcar o tempo. Se durar mais de 5 minutos, se repetir ou se não acordar depois: chamar SAMU 192."
   },
   orientacoesRetorno: [
