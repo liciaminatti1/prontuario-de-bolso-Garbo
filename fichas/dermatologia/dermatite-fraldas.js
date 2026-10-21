@@ -94,7 +94,7 @@ registrarFicha({
       duracao: "5 a 7 dias",
       monitorizacao: "Resposta em 3–5 dias",
       contraindicacoes: "Hipersensibilidade",
-      ajustes: "Só se infecção bacteriana secundária localizada. Alternativa SUS conforme REMUME: neomicina + bacitracina pomada"
+      ajustes: "Só se infecção bacteriana secundária localizada. Alternativa: ácido fusídico 2% creme 3 vezes ao dia. Neomicina + bacitracina não é recomendada (SBP 2022: baixa eficácia e sensibilização)"
     }
   ],
   prescricao: {

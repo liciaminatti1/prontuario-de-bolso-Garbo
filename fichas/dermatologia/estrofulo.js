@@ -76,7 +76,7 @@ registrarFicha({
       duracao: "5 a 7 dias",
       monitorizacao: "—",
       contraindicacoes: "—",
-      ajustes: "Alternativa SUS conforme REMUME: neomicina + bacitracina pomada. Muitas lesões: ver ficha Impetigo"
+      ajustes: "Alternativa: ácido fusídico 2% creme 3 vezes ao dia. Neomicina + bacitracina não é recomendada (SBP 2022). Muitas lesões: ver ficha Impetigo"
     }
   ],
   prescricao: {

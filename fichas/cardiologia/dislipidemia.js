@@ -114,7 +114,7 @@ registrarFicha({
       intervalo: "1×/dia",
       duracao: "Contínuo",
       monitorizacao: "Perfil lipídico, função renal",
-      contraindicacoes: "Gestação; TFG < 30 (máx 10 mg)",
+      contraindicacoes: "Gestação, lactação, hepatopatia ativa; insuficiência renal grave (ClCr < 30 mL/min) segundo a bula",
       ajustes: "Asiáticos: iniciar 5 mg. Não disponível no SUS (Componente Básico)"
     },
     {
@@ -178,12 +178,12 @@ registrarFicha({
       colunas: ["Risco", "LDL-c (mg/dL)", "Não-HDL-c (mg/dL)", "Redução de LDL-c"],
       linhas: [
         ["Extremo", "< 40", "< 70", "≥ 50%"],
-        ["Muito alto", "< 50", "< 80", "Conferir na diretriz"],
-        ["Alto", "< 70", "< 100", "Conferir na diretriz"],
-        ["Intermediário", "< 100", "< 130", "Conferir na diretriz"],
-        ["Baixo", "< 115", "< 145", "Conferir na diretriz"]
+        ["Muito alto", "< 50", "< 80", "≥ 50%"],
+        ["Alto", "< 70", "< 100", "≥ 50%"],
+        ["Intermediário", "< 100", "< 130", "≥ 30%"],
+        ["Baixo", "< 115", "< 145", "≥ 30%"]
       ],
-      nota: "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose — SBC 2025. ApoB é meta secundária (extremo < 45 mg/dL). Redução percentual confirmada aqui só para o risco extremo; conferir as demais no texto original."
+      nota: "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose — SBC 2025. Atingir a meta absoluta e a redução percentual. ApoB é meta secundária (extremo < 45; muito alto < 55 mg/dL)."
     },
     {
       titulo: "Intensidade das estatinas",

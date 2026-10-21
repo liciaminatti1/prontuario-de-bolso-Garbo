@@ -174,8 +174,9 @@ registrarFicha({
       "Encaminhar para alergologista"
     ],
     observacao: [
-      "Mínimo 4–6 h após resolução",
-      "Até 24 h se: reação grave, > 1 dose de adrenalina, asma grave, acesso difícil ao serviço"
+      "Alta após 2 h da resolução só se: boa resposta a 1 dose de adrenalina, resolução completa, já tem 2 autoinjetores e sabe usar, e há supervisão adequada",
+      "Mínimo 6 h após a resolução se precisou de 2 doses IM de adrenalina ou se há história de reação bifásica",
+      "Mínimo 12 h se: reação grave com > 2 doses de adrenalina, asma grave ou insuficiência respiratória importante, absorção contínua possível do alérgeno, chegada à noite ou acesso difícil ao serviço de emergência"
     ],
     internacao: [
       "Necessidade de > 2 doses ou infusão de adrenalina",
@@ -187,7 +188,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "ADULTO — SALA DE EMERGÊNCIA (peso: ___ kg)\n1. Monitor cardíaco, oximetria e PA a cada 5 min. Decúbito dorsal com MMII elevados (sentado se dispneia; decúbito lateral esquerdo se gestante).\n2. Adrenalina 1 mg/mL — 0,5 mg (0,5 mL) IM no vasto lateral da coxa, AGORA. Repetir a cada 5 min se não houver melhora.\n3. Oxigênio por máscara com reservatório 10–15 L/min.\n4. Soro fisiológico 0,9% 500–1.000 mL IV em bolus se hipotensão; repetir conforme resposta.\n5. Se broncoespasmo: salbutamol 100 mcg/jato, 4 a 8 jatos com espaçador a cada 20 min, ou salbutamol solução 5 mg/mL 1 mL (5 mg) + SF 0,9% 3 mL em nebulização.\n6. Se refratária (sem resposta a 2 doses IM): adrenalina 1 mg (1 mL) + SF 0,9% 99 mL (10 mcg/mL) IV em bomba de infusão, iniciar 0,5–1 mL/kg/h e titular pela PA e sintomas.\n7. Se uso de betabloqueador e sem resposta à adrenalina: glucagon 1–5 mg IV lento em 5 min; depois 5–15 mcg/min IV contínuo.\n8. Após estabilização, se urticária ou prurido: difenidramina 50 mg IV lento (diluir em 10 mL de SF 0,9%) ou prometazina 25 mg IM, dose única.\n9. Hidrocortisona 200 mg IV, dose única (opcional; não substitui a adrenalina).\n10. Sinais vitais de 15/15 min na 1ª hora, depois de 1/1 h. Observar no mínimo 6 h após a resolução (até 24 h se reação grave).\n\nCRIANÇA (por kg)\n- Adrenalina 1 mg/mL IM: 0,01 mg/kg (0,01 mL/kg), máx 0,3 mg (pré-púbere) ou 0,5 mg (adolescente); repetir a cada 5 min.\n- SF 0,9%: 10–20 mL/kg IV em bolus; repetir conforme resposta.\n- Infusão (refratária): mesma solução 10 mcg/mL, 0,5–1 mL/kg/h.\n- Salbutamol nebulização: 2,5 mg (< 20 kg) ou 5 mg (≥ 20 kg).\n- Difenidramina 1 mg/kg IV (máx 50 mg). Hidrocortisona: 6 meses–6 anos 50 mg; 6–12 anos 100 mg IV.",
+    hospitalar: "ADULTO — SALA DE EMERGÊNCIA (peso: ___ kg)\n1. Monitor cardíaco, oximetria e PA a cada 5 min. Decúbito dorsal com MMII elevados (sentado se dispneia; decúbito lateral esquerdo se gestante).\n2. Adrenalina 1 mg/mL — 0,5 mg (0,5 mL) IM no vasto lateral da coxa, AGORA. Repetir a cada 5 min se não houver melhora.\n3. Oxigênio por máscara com reservatório 10–15 L/min.\n4. Soro fisiológico 0,9% 500–1.000 mL IV em bolus se hipotensão; repetir conforme resposta.\n5. Se broncoespasmo: salbutamol 100 mcg/jato, 4 a 8 jatos com espaçador a cada 20 min, ou salbutamol solução 5 mg/mL 1 mL (5 mg) + SF 0,9% 3 mL em nebulização.\n6. Se refratária (sem resposta a 2 doses IM): adrenalina 1 mg (1 mL) + SF 0,9% 99 mL (10 mcg/mL) IV em bomba de infusão, iniciar 0,5–1 mL/kg/h e titular pela PA e sintomas.\n7. Se uso de betabloqueador e sem resposta à adrenalina: glucagon 1–5 mg IV lento em 5 min; depois 5–15 mcg/min IV contínuo.\n8. Após estabilização, se urticária ou prurido: difenidramina 50 mg IV lento (diluir em 10 mL de SF 0,9%) ou prometazina 25 mg IM, dose única.\n9. Hidrocortisona 200 mg IV, dose única (opcional; não substitui a adrenalina).\n10. Sinais vitais de 15/15 min na 1ª hora, depois de 1/1 h. Observar no mínimo 6 h após a resolução se 2 doses de adrenalina; 12 h se reação grave, > 2 doses, asma grave ou acesso difícil ao serviço (alta com 2 h só nos critérios da RCUK 2021).\n\nCRIANÇA (por kg)\n- Adrenalina 1 mg/mL IM: 0,01 mg/kg (0,01 mL/kg), máx 0,3 mg (pré-púbere) ou 0,5 mg (adolescente); repetir a cada 5 min.\n- SF 0,9%: 10–20 mL/kg IV em bolus; repetir conforme resposta.\n- Infusão (refratária): mesma solução 10 mcg/mL, 0,5–1 mL/kg/h.\n- Salbutamol nebulização: 2,5 mg (< 20 kg) ou 5 mg (≥ 20 kg).\n- Difenidramina 1 mg/kg IV (máx 50 mg). Hidrocortisona: 6 meses–6 anos 50 mg; 6–12 anos 100 mg IV.",
     ambulatorial: "ADULTO\nUSO ORAL\n1. Loratadina 10 mg ---------------------------- 5 comprimidos\n   Tomar 1 comprimido 1 vez ao dia por 3 a 5 dias se coceira ou placas na pele.\n\nUSO INTRAMUSCULAR (se disponível)\n2. Adrenalina autoinjetável 0,3 mg ------------------ 2 unidades\n   Aplicar 1 dose na parte lateral da coxa ao primeiro sinal de reação grave e chamar o SAMU 192. Se não melhorar em 5 minutos, aplicar a segunda.\n\nCRIANÇA\n1. Loratadina 1 mg/mL xarope: 2–12 anos, < 30 kg: 5 mL 1 vez ao dia; ≥ 30 kg: 10 mL 1 vez ao dia, por 3 a 5 dias.\n2. Adrenalina autoinjetável 0,15 mg ou 0,3 mg conforme o peso (seguir a bula), 2 unidades.\n\nENCAMINHAMENTO\n3. Alergologia/imunologia: investigação do gatilho e plano de ação escrito."
   },
   orientacoesRetorno: [
@@ -213,6 +214,7 @@ registrarFicha({
   ],
   fontes: [
     "Resuscitation Council UK — Emergency treatment of anaphylaxis: guidelines for healthcare providers (2021)",
+    "NICE NG258 — Anaphylaxis: período de observação alinhado à RCUK 2021 (2026)",
     "World Allergy Organization Anaphylaxis Guidance 2020",
     "AAAAI/ACAAI — Anaphylaxis: a 2023 practice parameter update",
     "SBP/ASBAI — Consenso Brasileiro sobre Alergia Alimentar (2018), parte 2: anafilaxia"
