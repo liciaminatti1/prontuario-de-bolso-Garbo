@@ -37,7 +37,7 @@ registrarFicha({
     "Obstrução do tubo por secreção ou mordedura",
     "Hipoventilação em acidose metabólica grave (CAD, intoxicação por salicilato)"
   ],
-  proximaDecisao: "PaO₂/FiO₂ < 150 com PEEP ≥ 5 apesar da ventilação protetora → posição prona ≥ 12–16 h/dia, PEEP mais alta, considerar bloqueio neuromuscular por curto período e acionar UTI. Hipercapnia com pH < 7,20 apesar de FR máxima → aumentar VC se platô permitir; em asma, tolerar hipercapnia (pH ≥ 7,20) priorizando expiração longa.",
+  proximaDecisao: "PaO₂/FiO₂ < 150 com PEEP ≥ 5 apesar da ventilação protetora → posição prona > 12 h/dia (ideal ≥ 16 h), PEEP mais alta, considerar bloqueio neuromuscular por curto período e acionar UTI. Hipercapnia com pH < 7,20 apesar de FR máxima → aumentar VC se platô permitir; em asma, tolerar hipercapnia (pH ≥ 7,20) priorizando expiração longa.",
   clinica: {
     anamnese: [
       "Causa da insuficiência respiratória: SDRA (pneumonia, sepse), DPOC, asma, edema pulmonar, neurológico, intoxicação",
@@ -110,7 +110,7 @@ registrarFicha({
       duracao: "—",
       monitorizacao: "Platô, pH (aceitar ≥ 7,20–7,25)",
       contraindicacoes: "Prona: instabilidade de coluna, abdome aberto, hipertensão intracraniana não controlada",
-      ajustes: "PaO₂/FiO₂ < 150: prona ≥ 16 h/dia; bloqueio neuromuscular não rotineiro (considerar se assincronia grave). Manobras de recrutamento prolongadas não recomendadas"
+      ajustes: "PaO₂/FiO₂ < 150: prona > 12 h/dia (estudo PROSEVA: ≥ 16 h). Bloqueio neuromuscular por curto período pode ser considerado na SDRA grave precoce (ATS 2024, sugestão condicional); não usar de rotina. Manobras de recrutamento prolongadas não recomendadas"
     },
     {
       droga: "Asma / DPOC (obstrutivo)",
@@ -148,7 +148,7 @@ registrarFicha({
     {
       droga: "Criança (PALICC-2)",
       linha: "l1",
-      dose: "VC 6–8 mL/kg de peso predito (4–6 mL/kg se platô/driving altos); platô ≤ 28 cmH₂O (29–32 se complacência da caixa torácica reduzida); driving pressure ≤ 15 cmH₂O; PEEP inicial 5",
+      dose: "VC 4–8 mL/kg de peso predito conforme a complacência (menor quanto pior a complacência); platô ≤ 28 cmH₂O (29–32 se complacência da caixa torácica reduzida); driving pressure ≤ 15 cmH₂O; PEEP inicial 5",
       via: "Ventilador (PCV ou VCV)",
       intervalo: "—",
       duracao: "—",
@@ -176,7 +176,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "VENTILAÇÃO MECÂNICA — PARÂMETROS INICIAIS (ADULTO)\nAltura: ___ cm  Sexo: ___  Peso predito: ___ kg\n1. Modo: volume controlado assistido (VCV).\n2. VC: 6 mL/kg de peso predito = ___ mL (6–8 mL/kg; 6 mL/kg se SDRA).\n3. FR: 16 irpm (20–30 se acidose metabólica; 10–12 se asma/DPOC).\n4. PEEP: 5–8 cmH₂O (SDRA: tabela PEEP/FiO₂).\n5. FiO₂: 100% e reduzir em 15–30 min para SpO₂ 92–96% (DPOC: 88–92%).\n6. Fluxo 50–60 L/min (obstrutivo: 60–80 L/min), onda descendente; I:E 1:2 (obstrutivo ≥ 1:3).\n7. Sensibilidade a fluxo 2 L/min ou pressão −2 cmH₂O.\n8. Medir pressão de platô (pausa 0,5 s): manter ≤ 30 cmH₂O; driving pressure ≤ 15 cmH₂O.\n9. Gasometria arterial em 30 min; radiografia de tórax.\n10. Cabeceira 30–45°; balonete 20–30 cmH₂O; sonda orogástrica; analgossedação contínua (ver ficha sedacao-continua).\n11. Umidificação com filtro trocador de calor e umidade; aspiração de vias aéreas se necessário.\n\nCRIANÇA (peso: ___ kg; usar peso predito pela altura se disponível)\n- PCV ou VCV; VC 6–8 mL/kg; PEEP 5; FiO₂ para SpO₂ 92–97%.\n- FR: lactente 25–30; pré-escolar 20–25; escolar 15–20; adolescente 12–16 irpm.\n- Ti: 0,5–0,6 s (lactente) a 0,8–1,0 s (adolescente).\n- Platô ≤ 28 cmH₂O; driving pressure ≤ 15 cmH₂O."
+    hospitalar: "VENTILAÇÃO MECÂNICA — PARÂMETROS INICIAIS (ADULTO)\nAltura: ___ cm  Sexo: ___  Peso predito: ___ kg\n1. Modo: volume controlado assistido (VCV).\n2. VC: 6 mL/kg de peso predito = ___ mL (6–8 mL/kg; 6 mL/kg se SDRA).\n3. FR: 16 irpm (20–30 se acidose metabólica; 10–12 se asma/DPOC).\n4. PEEP: 5–8 cmH₂O (SDRA: tabela PEEP/FiO₂).\n5. FiO₂: 100% e reduzir em 15–30 min para SpO₂ 92–96% (DPOC: 88–92%).\n6. Fluxo 50–60 L/min (obstrutivo: 60–80 L/min), onda descendente; I:E 1:2 (obstrutivo ≥ 1:3).\n7. Sensibilidade a fluxo 2 L/min ou pressão −2 cmH₂O.\n8. Medir pressão de platô (pausa 0,5 s): manter ≤ 30 cmH₂O; driving pressure ≤ 15 cmH₂O.\n9. Gasometria arterial em 30 min; radiografia de tórax.\n10. Cabeceira 30–45°; balonete 20–30 cmH₂O; sonda orogástrica; analgossedação contínua (ver ficha sedacao-continua).\n11. Umidificação com filtro trocador de calor e umidade; aspiração de vias aéreas se necessário.\n\nCRIANÇA (peso: ___ kg; usar peso predito pela altura se disponível)\n- PCV ou VCV; VC 6 mL/kg (faixa 4–8 mL/kg conforme complacência); PEEP 5; FiO₂ para SpO₂ 92–97%.\n- FR: lactente 25–30; pré-escolar 20–25; escolar 15–20; adolescente 12–16 irpm.\n- Ti: 0,5–0,6 s (lactente) a 0,8–1,0 s (adolescente).\n- Platô ≤ 28 cmH₂O; driving pressure ≤ 15 cmH₂O."
   },
   orientacoesRetorno: [
     "Família: a ventilação mecânica é suporte temporário enquanto se trata a causa; o tempo varia com a doença",

@@ -169,7 +169,7 @@ registrarFicha({
     {
       droga: "Succinilcolina (suxametônio) 100 mg — reconstituir em 10 mL (10 mg/mL)",
       linha: "l1",
-      dose: "Adulto 1,5 mg/kg; criança 2 mg/kg (lactente até 3 mg/kg em alguns protocolos)",
+      dose: "Adulto 1,5 mg/kg; criança e lactente 2 mg/kg",
       via: "IV em bolus, logo após o indutor",
       intervalo: "Dose única (repetir pode causar bradicardia)",
       duracao: "Bloqueio 6–10 min",

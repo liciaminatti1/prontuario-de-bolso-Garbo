@@ -23,7 +23,7 @@ registrarFicha({
   condutaInicial: [
     "Verificar responsividade, respiração e pulso (braquial no lactente, carotídeo ou femoral na criança) em até 10 s. Chamar ajuda e pedir desfibrilador",
     "Compressões: 100–120/min, profundidade de pelo menos 1/3 do diâmetro anteroposterior (cerca de 4 cm no lactente e 5 cm na criança), retorno total",
-    "Lactente: 2 polegares com mãos envolvendo o tórax (2 socorristas). Criança: 1 ou 2 mãos na metade inferior do esterno",
+    "Lactente: 2 polegares com as mãos envolvendo o tórax; se não conseguir envolver o tórax, região tenar de 1 mão. A técnica de 2 dedos não é mais recomendada (AHA 2025). Criança: 1 ou 2 mãos na metade inferior do esterno",
     "Relação 30:2 com 1 socorrista e 15:2 com 2 socorristas. Ventilar com bolsa-válvula-máscara e O₂ 100%, só o suficiente para elevar o tórax",
     "Com via aérea avançada: compressões contínuas e 1 ventilação a cada 2–3 s (20–30/min)",
     "Monitor/desfibrilador: chocável (FV/TVSP) → choque 2 J/kg; não chocável → adrenalina o quanto antes",

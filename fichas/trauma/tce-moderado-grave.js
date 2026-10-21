@@ -130,7 +130,7 @@ registrarFicha({
       duracao: "Iniciar até 3 h do trauma",
       monitorizacao: "Trombose",
       contraindicacoes: "Mais de 3 h do trauma",
-      ajustes: "CRASH-3: redução de morte por TCE nos casos leves a moderados, sem benefício claro no grave com pupilas não reativas. O ATLS 11ª ed. menciona dose de 2 g em bolus no TCE"
+      ajustes: "CRASH-3: redução de morte por TCE nos casos leves a moderados, sem benefício claro no grave com pupilas não reativas. Alternativa: NICE (NG232, 2023) recomenda 2 g IV em bolus único no adulto com Glasgow ≤ 12 sem sangramento extracraniano, em até 2 h do trauma; seguir o protocolo local"
     },
     {
       droga: "Levetiracetam 500 mg/5 mL ou fenitoína 50 mg/mL (profilaxia de crise precoce)",
@@ -239,9 +239,10 @@ registrarFicha({
   ],
   fontes: [
     "American College of Surgeons — ATLS: Advanced Trauma Life Support, 11ª ed. (2025)",
-    "Brain Trauma Foundation — Guidelines for the Management of Severe Traumatic Brain Injury, 4ª ed. (2016; atualização 2022)",
+    "Brain Trauma Foundation — Guidelines for the Management of Severe Traumatic Brain Injury, 4ª ed. (2016; atualização das recomendações de craniectomia descompressiva, 2020)",
     "Kochanek PM et al. — Guidelines for the Management of Pediatric Severe Traumatic Brain Injury, 3ª ed. (Pediatr Crit Care Med, 2019)",
     "Bullock MR et al. — Surgical Management of Traumatic Brain Injury (Neurosurgery, 2006)",
+    "NICE — Head injury: assessment and early management (NG232, 2023)",
     "CRASH-3 Trial Collaborators — ácido tranexâmico no TCE (Lancet, 2019); CRASH — corticoide no TCE (Lancet, 2004)"
   ],
   revisao: "2026-10-21",

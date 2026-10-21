@@ -20,7 +20,7 @@ registrarFicha({
     "Agitação súbita: checar dor, hipóxia, tubo deslocado, assincronia, bexigoma, abstinência, delirium"
   ],
   conduta: [
-    "Analgesia primeiro (analgossedação): opioide em infusão contínua, titulado por escala de dor (BPS ou CPOT ≥ 3–5 indica dor)",
+    "Analgesia primeiro (analgossedação): opioide em infusão contínua, titulado por escala de dor (BPS > 5 ou CPOT > 2 indica dor)",
     "Sedação leve como meta (RASS −2 a 0) na maioria dos casos. Sedação profunda (RASS −4 a −5) só se: bloqueio neuromuscular, SDRA grave com assincronia, hipertensão intracraniana, estado de mal epiléptico, controle de temperatura com tremores",
     "Escolha do sedativo: propofol ou dexmedetomidina preferidos a benzodiazepínico em adultos (PADIS 2018; atualização 2025 sugere dexmedetomidina em vez de propofol quando se busca sedação leve). Midazolam em choque grave ou falta de outros",
     "Choque: preferir fentanil + midazolam ou cetamina em doses baixas; evitar bolus de propofol",

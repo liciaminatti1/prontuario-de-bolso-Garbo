@@ -65,7 +65,7 @@ registrarFicha({
       "Leve: Glasgow 14–15 (PECARN aplicável)",
       "Moderado: Glasgow 9–13 (alguns protocolos pediátricos consideram 13 como moderado)",
       "Grave: Glasgow ≤ 8",
-      "Risco PECARN de lesão cerebral clinicamente importante: alto (TC), intermediário (observar ou TC), muito baixo (< 0,05% em < 2 anos e < 0,1% em ≥ 2 anos sem nenhum critério)"
+      "Risco PECARN de lesão cerebral clinicamente importante: alto (TC), intermediário (observar ou TC), muito baixo (< 0,02% em < 2 anos e < 0,05% em ≥ 2 anos sem nenhum critério)"
     ]
   },
   exames: [
@@ -115,7 +115,7 @@ registrarFicha({
       duracao: "Até 3 dias",
       monitorizacao: "—",
       contraindicacoes: "< 3 meses ou < 5 kg; discrasia sanguínea",
-      ajustes: "Gotas 500 mg/mL: 20 gotas = 1 mL = 500 mg (1 gota = 25 mg)"
+      ajustes: "Gotas 500 mg/mL: 20 gotas = 1 mL = 500 mg (1 gota = 25 mg). Via IV não recomendada em lactente < 1 ano (bula)"
     },
     {
       droga: "Ondansetrona 4 mg (comprimido orodispersível) ou 2 mg/mL (injetável)",

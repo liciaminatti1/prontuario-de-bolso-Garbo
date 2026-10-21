@@ -115,7 +115,7 @@ registrarFicha({
       via: "IV",
       intervalo: "Metade nas primeiras 8 h (a partir da hora da queimadura) e metade nas 16 h seguintes",
       duracao: "24 h; depois conforme centro de queimados",
-      monitorizacao: "Diurese horária: adulto 0,5 mL/kg/h (30–50 mL/h); criança ≤ 30 kg 1 mL/kg/h; elétrica com urina escura: adulto 75–100 mL/h até clarear",
+      monitorizacao: "Diurese horária: adulto 0,5 mL/kg/h (30–50 mL/h); criança ≤ 30 kg 1 mL/kg/h; elétrica com urina escura (mioglobinúria): 1–1,5 mL/kg/h até clarear (adulto ≈ 75–100 mL/h)",
       contraindicacoes: "—",
       ajustes: "A fórmula é ponto de partida: ajustar a cada hora pela diurese (± 20–30%). Parkland clássica usa 4 mL/kg/% (ainda citada em materiais do Ministério da Saúde); o ATLS e a ABA preferem iniciar com 2 mL/kg/% no adulto para evitar hiper-hidratação. Criança < 30 kg: somar manutenção com soro glicosado"
     },
