@@ -196,7 +196,7 @@ registrarFicha({
       ajustes: "Urticária crônica espontânea sem controle com anti-H1 em dose 4×. Prescrição pelo especialista; acesso no SUS varia por estado (CEAF) — conferir"
     },
     {
-      droga: "Anti-histamínico H2 (ranitidina), cetotifeno, corticoide crônico",
+      droga: "Anti-histamínico H2 (ranitidina — retirada do mercado brasileiro), cetotifeno, corticoide crônico",
       linha: "ci",
       dose: "—",
       via: "—",

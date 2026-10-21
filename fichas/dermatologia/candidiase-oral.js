@@ -57,8 +57,8 @@ registrarFicha({
       intervalo: "4 vezes ao dia, após as refeições",
       duracao: "Manter até 1 semana após o desaparecimento das lesões",
       monitorizacao: "Engasgo em lactentes pequenos",
-      contraindicacoes: "Menores de 4 meses e lactentes com reflexo de deglutição imaturo (risco de engasgo); uso de varfarina (aumenta INR)",
-      ajustes: "Disponível no SUS (RENAME 2024). Não aplicar no fundo da garganta. Interage com varfarina, sulfonilureias e outros substratos do CYP3A4/2C9"
+      contraindicacoes: "Menores de 4 meses e lactentes com reflexo de deglutição imaturo (risco de engasgo; em prematuro ou atraso neuromotor, só a partir de 5–6 meses); uso de varfarina (aumenta INR)",
+      ajustes: "Inclusão na RENAME não confirmada: conferir REMUME (item de farmácia). Não aplicar no fundo da garganta. Interage com varfarina, sulfonilureias e outros substratos do CYP3A4/2C9"
     },
     {
       droga: "Fluconazol",
@@ -73,7 +73,7 @@ registrarFicha({
     }
   ],
   prescricao: {
-    ambulatorial: "LACTENTE — 1ª ESCOLHA (SUS)\nUSO ORAL (TÓPICO NA BOCA)\n1. Nistatina suspensão oral 100.000 UI/mL --------------- 1 frasco\n   Aplicar 1 mL de cada lado da boca (total 2 mL), 4 vezes ao dia, após as mamadas, por 14 dias. Manter por mais 2 dias após as placas sumirem. Pode passar com gaze limpa sobre as placas.\n   (Prematuro ou baixo peso: 0,5 mL de cada lado, 4 vezes ao dia.)\n\nALTERNATIVA (≥ 4 MESES)\n1. Miconazol gel oral 20 mg/g ---------------------------- 1 bisnaga\n   Lactente 4–24 meses: aplicar 1,25 mL (¼ da colher-medida) sobre as placas, dividido em pequenas porções, 4 vezes ao dia, após as mamadas. Criança ≥ 2 anos: 2,5 mL, 4 vezes ao dia. Manter por 1 semana após as placas sumirem. Não aplicar no fundo da garganta.\n\nMÃE QUE AMAMENTA COM DOR OU LESÃO NO MAMILO\nUSO TÓPICO\n2. Miconazol 2% creme ------------------------------------ 1 bisnaga\n   Aplicar fina camada nos mamilos e aréolas após cada mamada, por 14 dias. Retirar o excesso antes da próxima mamada.\n\nCASO MODERADO A GRAVE OU FALHA AO TÓPICO\nUSO ORAL\n3. Fluconazol ---------------------------------------------- ___\n   Criança: 6 mg/kg no 1º dia e depois 3 mg/kg 1 vez ao dia, por 7 a 14 dias (máx. 200 mg/dia).\n   Adolescente/adulto: fluconazol 100 a 200 mg 1 vez ao dia, por 7 a 14 dias."
+    ambulatorial: "LACTENTE — 1ª ESCOLHA (SUS)\nUSO ORAL (TÓPICO NA BOCA)\n1. Nistatina suspensão oral 100.000 UI/mL --------------- 1 frasco\n   Aplicar 1 mL de cada lado da boca (total 2 mL), 4 vezes ao dia, após as mamadas, por 7 a 14 dias, mantendo por mais 2 dias após as placas sumirem. Pode passar com gaze limpa sobre as placas.\n   (Prematuro ou baixo peso: 0,5 mL de cada lado, 4 vezes ao dia.)\n\nALTERNATIVA (≥ 4 MESES)\n1. Miconazol gel oral 20 mg/g ---------------------------- 1 bisnaga\n   Lactente 4–24 meses: aplicar 1,25 mL (¼ da colher-medida) sobre as placas, dividido em pequenas porções, 4 vezes ao dia, após as mamadas. Criança ≥ 2 anos: 2,5 mL, 4 vezes ao dia. Manter por 1 semana após as placas sumirem. Não aplicar no fundo da garganta.\n\nMÃE QUE AMAMENTA COM DOR OU LESÃO NO MAMILO\nUSO TÓPICO\n2. Miconazol 2% creme ------------------------------------ 1 bisnaga\n   Aplicar fina camada nos mamilos e aréolas após cada mamada, por 14 dias. Retirar o excesso antes da próxima mamada.\n\nCASO MODERADO A GRAVE OU FALHA AO TÓPICO\nUSO ORAL\n3. Fluconazol ---------------------------------------------- ___\n   Criança: 6 mg/kg no 1º dia e depois 3 mg/kg 1 vez ao dia, por 7 a 14 dias (máx. 200 mg/dia).\n   Adolescente/adulto: fluconazol 100 a 200 mg 1 vez ao dia, por 7 a 14 dias."
   },
   orientacoesRetorno: [
     "Aplicar o remédio depois das mamadas, para ele ficar mais tempo na boca",
@@ -88,7 +88,7 @@ registrarFicha({
   ],
   fontes: [
     "IDSA — Clinical Practice Guideline for the Management of Candidiasis: 2016 Update (Pappas et al., Clin Infect Dis 2016) — orofaríngea: tópico na doença leve, fluconazol 7–14 dias na moderada/grave",
-    "Ministério da Saúde — RENAME 2024 (nistatina 100.000 UI/mL suspensão; miconazol 20 mg/g gel oral)",
+    "Ministério da Saúde — RENAME 2024 (nistatina 100.000 UI/mL suspensão)",
     "Bulas ANVISA: nistatina suspensão oral; miconazol gel oral (Daktarin gel oral) — doses por idade e contraindicação < 4 meses",
     "Ministério da Saúde — Saúde da Criança: aleitamento materno e alimentação complementar, Cadernos de Atenção Básica nº 23 (2015) — candidíase mamilar"
   ],
