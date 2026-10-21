@@ -133,7 +133,7 @@ registrarFicha({
       dose: "10 mg",
       via: "Oral, 15–30 min antes das refeições",
       intervalo: "Até 3 vezes ao dia (máx 30 mg/dia)",
-      duracao: "Até 4 semanas",
+      duracao: "Até 7 dias (EMA/Anvisa: menor dose pelo menor tempo); reavaliar antes de repetir",
       monitorizacao: "QT (ECG se cardiopata ou com outras drogas que prolongam QT)",
       contraindicacoes: "QT longo, cardiopatia significativa, insuficiência hepática moderada/grave, uso de cetoconazol, eritromicina, claritromicina",
       ajustes: "Para plenitude pós-prandial e saciedade precoce. Metoclopramida 10 mg 3×/dia é alternativa por até 5 dias (risco de discinesia tardia; evitar em idosos)"
@@ -195,7 +195,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "DISPEPSIA SEM SINAIS DE ALARME\nUSO ORAL\n1. Omeprazol 20 mg ------------------------------------------- 56 cápsulas\n   Tomar 1 cápsula em jejum, 30 minutos antes do café da manhã, por 8 semanas.\n2. Hidróxido de alumínio + hidróxido de magnésio (suspensão) --- 1 frasco\n   Tomar 10 mL após as refeições e ao deitar se queimação, por até 2 semanas. Não tomar junto com outros remédios.\n\nSE PLENITUDE / SACIEDADE PRECOCE PREDOMINANTE\n3. Domperidona 10 mg ----------------------------------------- 60 comprimidos\n   Tomar 1 comprimido 15 a 30 minutos antes do café, do almoço e do jantar, por até 4 semanas.\n\nDISPEPSIA FUNCIONAL REFRATÁRIA (EDA NORMAL)\n4. Amitriptilina 25 mg ------------------------------------------ 30 comprimidos\n   Tomar meio comprimido (12,5 mg) à noite por 2 semanas; depois 1 comprimido à noite. Uso por pelo menos 3 meses. (Iniciar com 10 mg se disponível.)\n\nEXAMES\n- Pesquisa de antígeno de H. pylori nas fezes (suspender omeprazol 2 semanas antes) OU EDA com biópsias se alarme/idade."
+    ambulatorial: "DISPEPSIA SEM SINAIS DE ALARME\nUSO ORAL\n1. Omeprazol 20 mg ------------------------------------------- 56 cápsulas\n   Tomar 1 cápsula em jejum, 30 minutos antes do café da manhã, por 8 semanas.\n2. Hidróxido de alumínio + hidróxido de magnésio (suspensão) --- 1 frasco\n   Tomar 10 mL após as refeições e ao deitar se queimação, por até 2 semanas. Não tomar junto com outros remédios.\n\nSE PLENITUDE / SACIEDADE PRECOCE PREDOMINANTE\n3. Domperidona 10 mg ----------------------------------------- 21 comprimidos\n   Tomar 1 comprimido 15 a 30 minutos antes do café, do almoço e do jantar, por até 7 dias. Não passar de 3 comprimidos por dia.\n\nDISPEPSIA FUNCIONAL REFRATÁRIA (EDA NORMAL)\n4. Amitriptilina 25 mg ------------------------------------------ 30 comprimidos\n   Tomar meio comprimido (12,5 mg) à noite por 2 semanas; depois 1 comprimido à noite. Uso por pelo menos 3 meses. (Iniciar com 10 mg se disponível.)\n\nEXAMES\n- Pesquisa de antígeno de H. pylori nas fezes (suspender omeprazol 2 semanas antes) OU EDA com biópsias se alarme/idade."
   },
   orientacoesRetorno: [
     "Faça refeições menores e mais vezes ao dia; evite comer muito à noite e alimentos que você percebeu que pioram (gordura, frituras, álcool, café em excesso)",
@@ -217,7 +217,7 @@ registrarFicha({
         ["Falha do testar e tratar + IBP", "EDA"],
         ["Parente de 1º grau com câncer gástrico", "EDA e pesquisa de H. pylori"]
       ],
-      nota: "Corte de 40 anos usado pelos consensos brasileiros pela alta incidência de câncer gástrico; ACG/CAG (2017) usa 60 anos em países de baixa incidência. Confirmar no texto do V Consenso Brasileiro (2026)."
+      nota: "Corte de 40 anos adotado aqui por ser conservador em país de alta incidência de câncer gástrico. O corte não foi confirmado no texto do V Consenso Brasileiro (2026): um resumo secundário cita testar e tratar em dispepsia não investigada até 45 anos sem alarme. ACG/CAG (2017) usa 60 anos em países de baixa incidência. Em região de alta incidência ou com história familiar, preferir EDA mais cedo."
     }
   ],
   fontes: [

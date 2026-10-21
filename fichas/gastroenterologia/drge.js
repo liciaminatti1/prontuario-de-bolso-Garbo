@@ -173,7 +173,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "DRGE TÍPICA SEM ALARME\nUSO ORAL\n1. Omeprazol 20 mg ------------------------------------------- 56 cápsulas\n   Tomar 1 cápsula em jejum, 30 a 60 minutos antes do café da manhã, por 8 semanas.\n   (Se melhora parcial após 4 semanas: 1 cápsula antes do café e 1 antes do jantar.)\n2. Hidróxido de alumínio + hidróxido de magnésio (suspensão) --- 1 frasco\n   Tomar 10 a 20 mL após as refeições e ao deitar se azia. Não tomar junto com outros remédios.\n\nAPÓS CONTROLE (DESMAME)\n- Omeprazol 20 mg 1 cápsula apenas nos dias com sintomas (sob demanda) ou suspender; reavaliar se os sintomas voltarem.\n\nORIENTAÇÕES\n- Elevar a cabeceira da cama 15 a 20 cm (calços sob os pés da cama).\n- Jantar pelo menos 3 horas antes de deitar."
+    ambulatorial: "DRGE TÍPICA SEM ALARME\nUSO ORAL\n1. Omeprazol 20 mg ------------------------------------------- 56 cápsulas\n   Tomar 1 cápsula em jejum, 30 a 60 minutos antes do café da manhã, por 8 semanas.\n   (Se melhora parcial após 4 semanas: 1 cápsula antes do café e 1 antes do jantar; nesse caso, nova receita de 56 cápsulas para completar as 8 semanas.)\n2. Hidróxido de alumínio + hidróxido de magnésio (suspensão) --- 1 frasco\n   Tomar 10 a 20 mL após as refeições e ao deitar se azia. Não tomar junto com outros remédios.\n\nAPÓS CONTROLE (DESMAME)\n- Omeprazol 20 mg 1 cápsula apenas nos dias com sintomas (sob demanda) ou suspender; reavaliar se os sintomas voltarem.\n\nORIENTAÇÕES\n- Elevar a cabeceira da cama 15 a 20 cm (calços sob os pés da cama).\n- Jantar pelo menos 3 horas antes de deitar."
   },
   orientacoesRetorno: [
     "Emagrecer, mesmo pouco, melhora muito o refluxo",

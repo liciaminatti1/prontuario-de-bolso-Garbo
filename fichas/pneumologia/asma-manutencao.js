@@ -111,7 +111,7 @@ registrarFicha({
       duracao: "Contínuo",
       monitorizacao: "Número de inalações por semana; controle; crises",
       contraindicacoes: "Hipersensibilidade",
-      ajustes: "Máximo de 12 inalações em um dia (GINA, adultos e adolescentes). Pode ser usada antes do exercício. O PCDT do SUS limita a dose diária por apresentação; conferir a tabela da Portaria vigente"
+      ajustes: "Máximo de 12 inalações em um dia (GINA, adultos e adolescentes). Pode ser usada antes do exercício. O PCDT do SUS limita a dose diária por apresentação (no PCDT de 2023: até 8 cápsulas de 6/200 ou 4 de 12/400 por dia, cerca de 1.600 mcg/dia de budesonida); conferir o limite na tabela do PCDT 2026"
     },
     {
       droga: "Budesonida + formoterol 6/200 mcg em manutenção e resgate (MART) — etapas 3 e 4, trilha 1",

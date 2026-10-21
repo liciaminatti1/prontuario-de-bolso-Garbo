@@ -232,9 +232,9 @@ registrarFicha({
       titulo: "Classificação de gravidade da exacerbação — proposta de Roma (GOLD)",
       colunas: ["Gravidade", "Critérios"],
       linhas: [
-        ["Leve", "Dispneia < 5/10, FR < 24, FC < 95, SpO₂ ≥ 92% e queda ≤ 3% do basal, PCR < 10 mg/L"],
+        ["Leve", "Não preenche os critérios de moderada (referência: dispneia < 5/10, FR < 24, FC < 95, SpO₂ ≥ 92% e queda ≤ 3% do basal, PCR < 10 mg/L)"],
         ["Moderada", "≥ 3 de: dispneia ≥ 5/10, FR ≥ 24, FC ≥ 95, SpO₂ < 92% ou queda > 3% do basal, PCR ≥ 10 mg/L"],
-        ["Grave", "Hipercapnia com acidose: PaCO₂ > 45 mmHg e pH < 7,35"]
+        ["Grave", "Critérios clínicos de moderada + gasometria com hipercapnia nova ou piorada e acidose: PaCO₂ > 45 mmHg e pH < 7,35"]
       ],
       nota: "Escala de dispneia visual analógica de 0 a 10. Se gasometria indisponível, tratar como moderada quem preencher os critérios clínicos."
     }
