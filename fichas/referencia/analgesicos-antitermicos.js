@@ -51,7 +51,7 @@ registrarFicha({
       linhas: [
         ["Codeína — comp 30 mg; solução oral 3 mg/mL; associação paracetamol 500 mg + codeína 30 mg", "30–60 mg VO de 4/4 a 6/6 h; máx. 240 mg/dia de codeína", "Contraindicada < 12 anos; 12–18 anos só se não houver alternativa, nunca após amigdalectomia", "Metabolizador ultrarrápido (CYP2D6): risco de depressão respiratória. Evitar na lactação. Constipação"],
         ["Tramadol — cápsula 50 mg; gotas 100 mg/mL; ampola 50 mg/mL (2 mL)", "50–100 mg VO ou IV lento de 6/6 h; máx. 400 mg/dia (300 mg/dia em > 75 anos)", "Contraindicado < 12 anos (ANVISA); 12–18 anos com cautela, 1–2 mg/kg/dose (máx. 100 mg/dose)", "Náusea frequente; reduz limiar convulsivo; síndrome serotoninérgica com ISRS. Ajustar se ClCr < 30"],
-        ["Morfina — comp 10 e 30 mg; solução oral 10 mg/mL; ampola 10 mg/mL", "VO: 5–10 mg de 4/4 h (virgem de opioide) · IV: 2–4 mg lento, repetir a cada 5–15 min até alívio", "VO: 0,2–0,4 mg/kg de 4/4 h · IV: 0,05–0,1 mg/kg (máx. 4 mg/dose) de 2/2 a 4/4 h", "Prescrever laxante junto. Naloxona disponível. Reduzir dose em idoso, DRC e hepatopatia"]
+        ["Morfina — comp 10 e 30 mg; solução oral 10 mg/mL; ampola 10 mg/mL", "VO: 5–10 mg de 4/4 h (virgem de opioide) · IV: 2–4 mg lento, repetir a cada 5–15 min até alívio", "VO: 0,2–0,4 mg/kg de 4/4 h (dose inicial máx. 5 mg) · IV: 0,05–0,1 mg/kg (máx. 4 mg/dose) de 2/2 a 4/4 h", "Prescrever laxante junto. Naloxona disponível. Reduzir dose em idoso, DRC e hepatopatia"]
       ],
       nota: "Opioide em criança: monitorar sedação e frequência respiratória. Antídoto: naloxona 0,1 mg/kg (máx. 2 mg) — ver ficha Antídotos."
     }

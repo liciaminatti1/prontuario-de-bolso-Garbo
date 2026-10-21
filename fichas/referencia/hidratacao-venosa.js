@@ -56,7 +56,7 @@ registrarFicha({
         ["SF 0,9%", "Na 154 mEq/L, Cl 154 mEq/L", "Bolus, reposição; base da manutenção isotônica"],
         ["Ringer lactato", "Na 130, K 4, Cl 109, Ca 3, lactato 28 mEq/L", "Bolus e reposição de grandes volumes"],
         ["Soro glicofisiológico (glicose 5% + NaCl 0,9%)", "Na 154 mEq/L + 50 g/L de glicose", "Manutenção isotônica pronta"],
-        ["NaCl 20% (ampola 10 mL)", "3,4 mEq de Na por mL", "Preparar soro: SG 5% 500 mL + NaCl 20% 22 mL ≈ Na 145 mEq/L"],
+        ["NaCl 20% (ampola 10 mL)", "3,4 mEq de Na por mL", "Preparar soro: SG 5% 500 mL + NaCl 20% 22 mL ≈ Na 143 mEq/L"],
         ["KCl 19,1% (ampola 10 mL)", "2,5 mEq de K por mL", "4 mL em 500 mL ≈ 20 mEq/L. Nunca em bolus"],
         ["SG 5%", "50 g/L de glicose, sem sódio", "Não usar isolado como manutenção (hipotônico in vivo)"]
       ]

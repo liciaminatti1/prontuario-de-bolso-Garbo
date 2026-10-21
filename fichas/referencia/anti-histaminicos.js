@@ -36,7 +36,7 @@ registrarFicha({
         ["Desloratadina — comp 5 mg; xarope 0,5 mg/mL", "6–11 meses: 1 mg (2 mL) · 1–5 anos: 1,25 mg (2,5 mL), 1×/dia", "2,5 mg (5 mL) 1×/dia", "5 mg 1×/dia", "Opção para lactente a partir de 6 meses"],
         ["Cetirizina — comp 10 mg; solução 1 mg/mL", "2–5 anos: 2,5 mg (2,5 mL) de 12/12 h", "5 mg (5 mL) de 12/12 h ou 10 mg 1×/dia", "10 mg 1×/dia", "Pode dar sonolência leve. ClCr < 50: metade da dose"],
         ["Levocetirizina — comp 5 mg; gotas/solução 0,5 mg/mL (conferir apresentação)", "2–5 anos: 1,25 mg de 12/12 h", "5 mg 1×/dia", "5 mg 1×/dia", "Ajustar na DRC"],
-        ["Fexofenadina — comp 60, 120 e 180 mg; suspensão 6 mg/mL", "6 meses–1 ano (urticária): 15 mg (2,5 mL) de 12/12 h · 2–5 anos: 30 mg (5 mL) de 12/12 h", "30 mg (5 mL) de 12/12 h", "Rinite: 120 mg 1×/dia · Urticária: 180 mg 1×/dia", "Não tomar com suco de frutas (reduz absorção). Não sedativa"],
+        ["Fexofenadina — comp 60, 120 e 180 mg; suspensão 6 mg/mL", "6 meses a < 2 anos (urticária): 15 mg (2,5 mL) de 12/12 h · 2–5 anos: 30 mg (5 mL) de 12/12 h", "30 mg (5 mL) de 12/12 h", "Rinite: 120 mg 1×/dia · Urticária: 180 mg 1×/dia", "Não tomar com suco de frutas (reduz absorção). Não sedativa"],
         ["Bilastina — comp 20 mg; comp orodispersível 10 mg", "Não indicada < 6 anos", "≥ 20 kg: 10 mg 1×/dia", "20 mg 1×/dia", "Tomar em jejum (1 h antes ou 2 h após refeição)"]
       ],
       nota: "Loratadina e cetirizina são as mais estudadas na gestação. Em criança, nunca ultrapassar a dose de adulto; conferir a idade mínima na bula de cada apresentação."
