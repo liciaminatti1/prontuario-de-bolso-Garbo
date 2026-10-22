@@ -36,7 +36,7 @@ for (const arq of todos) {
   vistas.push(ficha);
   if (!mostrar) continue;
   relatadas++;
-  if (!semIndice && !index.includes(`src="${arq}"`)) problemas.push("não está no index.html (rode node ferramentas/gerar-indice.js)");
+  if (!semIndice && !(index.includes(`src="${arq}"`) || index.includes(`src="${arq}?v=`))) problemas.push("não está no index.html (rode node ferramentas/gerar-indice.js)");
   if (ficha.especialidade && !arq.startsWith(`fichas/${ficha.especialidade}/`)) problemas.push(`especialidade "${ficha.especialidade}" não bate com a pasta`);
   if (ficha.id && path.basename(arq, ".js") !== ficha.id) problemas.push(`nome do arquivo deveria ser ${ficha.id}.js`);
   if (problemas.length) { console.log(`✗ ${arq}\n  - ${problemas.join("\n  - ")}`); erros++; continue; }
