@@ -87,6 +87,7 @@ Cada ficha também diz se é do caminho **UBS** ou **PS** (campo `caminho`). No 
    node ferramentas/gerar-indice.js
    node ferramentas/validar.js
    ```
+   O `gerar-indice` também carimba cada arquivo com uma impressão digital (`?v=...`), para que o navegador e o modo offline nunca fiquem presos a uma versão antiga. Rode-o sempre antes de publicar.
    O validador aponta campo faltando, id repetido, pasta diferente da especialidade, ficha fora do `index.html` e revisões com mais de 12 meses.
 4. Ao alterar conteúdo clínico, atualize `revisao` (AAAA-MM-DD) e aumente `versao`. As duas aparecem no topo da ficha e na aba Fontes.
 
