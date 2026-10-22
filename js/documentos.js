@@ -266,7 +266,7 @@ function telaDocumentos(docId, contexto = {}) {
   const doc = DOCUMENTOS.find(d => d.id === docId);
   if (!doc) {
     $app.innerHTML = `<div class="view">
-      <button class="back" id="voltar">← Fichas</button>
+      <button class="back para-lista" id="voltar">← Fichas</button>
       <div class="f-head"><h2>Documentos</h2><p>Preencha e copie para o prontuário eletrônico ou para impressão. Os dados do paciente não ficam salvos no aparelho.</p></div>
       <div class="list">${DOCUMENTOS.map(d => `<button class="item doc" data-doc="${d.id}" id="doc-${d.id}"><b>${esc(d.titulo)}</b><span>${esc(d.desc)}</span></button>`).join("")}</div>
     </div>`;
@@ -290,6 +290,7 @@ function telaDocumentos(docId, contexto = {}) {
     <div class="f-head"><h2>${esc(doc.titulo)}</h2><p>${esc(doc.desc)}</p></div>
     ${comPrescricao.length ? `<label class="campo largo importar" for="d-importar"><span>Importar prescrição de uma ficha</span>
       <select id="d-importar"><option value="">Escolha uma ficha…</option>${comPrescricao.map(f => `<option value="${f.id}" ${fichaInicial && fichaInicial.id === f.id ? "selected" : ""}>${esc(f.titulo)}</option>`).join("")}</select></label>` : ""}
+    <div class="doc-layout">
     <form class="form-doc" id="form-doc" autocomplete="off">
       ${pacienteCampos.map(c => campoHTML(doc, c, valores[c.id])).join("")}
       <details class="medico-box" ${CAMPOS_MEDICO.every(c => medico[c.id]) ? "" : "open"}>
@@ -297,11 +298,12 @@ function telaDocumentos(docId, contexto = {}) {
         <div class="form-doc">${CAMPOS_MEDICO.map(c => campoHTML(doc, c, valores[c.id])).join("")}</div>
       </details>
     </form>
-    <div class="sec gap-top">
+    <div class="sec gap-top doc-saida">
       <div class="card-h"><h3>Texto gerado</h3><button class="copy" data-target="saida-doc">Copiar</button></div>
       <p class="aviso" id="aviso-doc" hidden></p>
       <pre class="rx saida" id="saida-doc"></pre>
       <button class="link-btn" id="limpar-doc" type="button">Limpar dados do paciente</button>
+    </div>
     </div>
   </div>`;
 

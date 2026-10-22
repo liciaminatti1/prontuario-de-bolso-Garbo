@@ -28,7 +28,11 @@
     </div>
   </header>
 
-  <main class="wrap" id="app"><p class="empty">Carregando fichas…</p></main>
+  <!-- Celular: uma coluna (lista OU ficha). Computador: lista à esquerda e ficha à direita. -->
+  <main class="wrap layout" id="layout">
+    <aside class="painel-lista" id="lista" aria-label="Lista de fichas"></aside>
+    <section class="painel-conteudo" id="app" aria-live="polite"><p class="empty">Carregando fichas…</p></section>
+  </main>
 
   <!-- 1. Registro (precisa vir antes das fichas) -->
   <script src="js/registro.js"></script>

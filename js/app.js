@@ -3,7 +3,9 @@
    Documentos (atestado, receituário...) ficam em js/documentos.js.
    A navegação usa o hash da URL (#sca, #dengue, #documentos...), então cada tela tem link próprio. */
 
-const $app = document.getElementById("app");
+const $app = document.getElementById("app");     // ficha, documentos ou tela inicial
+const $lista = document.getElementById("lista"); // filtros + lista de fichas
+const telaLarga = window.matchMedia("(min-width: 1024px)");
 const $busca = document.getElementById("q");
 const estado = { caminho: "todos", publico: "todos", especialidade: "todas", busca: "" };
 try {
@@ -89,17 +91,17 @@ function filtrosHTML() {
 }
 
 function ligarFiltros() {
-  $app.querySelectorAll(".seg").forEach(b => b.onclick = () => {
+  $lista.querySelectorAll(".seg").forEach(b => b.onclick = () => {
     estado[b.dataset.g] = b.dataset.v;
     salvar(`pb-${b.dataset.g}`, b.dataset.v);
     telaLista();
   });
-  $app.querySelectorAll(".esp-chip").forEach(b => b.onclick = () => {
+  $lista.querySelectorAll(".esp-chip").forEach(b => b.onclick = () => {
     estado.especialidade = b.dataset.e;
     salvar("pb-especialidade", b.dataset.e);
     telaLista();
   });
-  const ativo = $app.querySelector('.esp-chip[aria-pressed="true"]');
+  const ativo = $lista.querySelector('.esp-chip[aria-pressed="true"]');
   if (ativo && ativo.dataset.e !== "todas") ativo.scrollIntoView({ block: "nearest", inline: "center" });
 }
 
@@ -120,7 +122,7 @@ function telaLista() {
     return `<section class="group">
       <div class="group-h"><h2>${NOME_CAMINHO[c]}</h2><p>${DESC_CAMINHO[c]}</p></div>
       <div class="list">${itens.map(f => `
-        <button class="item" data-p="${f.caminho}" data-id="${f.id}" id="it-${f.id}">
+        <button class="item" data-p="${f.caminho}" data-id="${f.id}" id="it-${f.id}" ${f.id === location.hash.slice(1) ? 'aria-current="true"' : ""}>
           <i class="esp-label">${ESPECIALIDADES[f.especialidade]}${f.publico !== "adulto" ? ` · ${NOME_PUBLICO[f.publico]}` : ""}</i>
           <b>${esc(f.titulo)}</b><span>${esc(f.resumo)}</span>
           ${f.critico ? `<em class="crit">${esc(f.critico.tempo)}</em>` : ""}
@@ -128,18 +130,46 @@ function telaLista() {
       </div></section>`;
   }).join("");
 
-  $app.innerHTML = `<div class="view">
+  $lista.innerHTML = `<div class="view">
     ${filtrosTela}
     ${grupos || `<p class="empty">Nenhuma ficha encontrada${estado.busca ? ` para “${esc(estado.busca)}”` : " com esses filtros"}.</p>`}
     <p class="disclaimer">Material de apoio à decisão clínica para profissionais de saúde. Não substitui o julgamento clínico nem os protocolos da sua instituição. Confira doses, diluições e contraindicações antes de prescrever.</p>
   </div>`;
   ligarFiltros();
-  $app.querySelectorAll(".item").forEach(b => b.onclick = () => ir(b.dataset.id));
+  marcarSelecionada(location.hash.slice(1));
+  $lista.querySelectorAll(".item").forEach(b => b.onclick = () => ir(b.dataset.id));
+}
+
+/* Marca na lista lateral a ficha aberta (computador). */
+function marcarSelecionada(id) {
+  $lista.querySelectorAll(".item").forEach(b => {
+    if (b.dataset.id === id) { b.setAttribute("aria-current", "true"); if (telaLarga.matches) b.scrollIntoView({ block: "nearest" }); }
+    else b.removeAttribute("aria-current");
+  });
+}
+
+/* Tela inicial do painel direito no computador (no celular a lista ocupa a tela). */
+function telaInicio() {
+  const n = c => FICHAS.filter(f => f.caminho === c).length;
+  $app.innerHTML = `<div class="view inicio">
+    <div class="f-head"><h2>Escolha uma ficha</h2>
+      <p>Use a lista ao lado ou a busca. Os filtros de caminho, idade e especialidade se combinam.</p></div>
+    <div class="inicio-grid">
+      <div class="q"><h3>Fichas</h3><p class="num">${FICHAS.length}</p><p>${n("ps")} de PS / Emergência · ${n("ubs")} de UBS / APS</p></div>
+      <button class="q atalho" id="ini-docs"><h3>Documentos</h3><p>Atestado, receituário, prescrição hospitalar, admissão, evolução e passagem de caso</p></button>
+      <div class="q"><h3>Atalhos de teclado</h3><ul>
+        <li><kbd>/</kbd> buscar</li>
+        <li><kbd>Esc</kbd> limpar a busca ou voltar</li>
+        <li><kbd>Alt</kbd> + <kbd>←</kbd> ficha anterior</li></ul></div>
+    </div>
+    <p class="disclaimer">Material de apoio à decisão clínica para profissionais de saúde. Não substitui o julgamento clínico nem os protocolos da sua instituição.</p>
+  </div>`;
+  document.getElementById("ini-docs").onclick = () => ir("documentos");
 }
 
 /* ---------- ficha ---------- */
 function cabecalhoFicha(f) {
-  return `<button class="back" id="voltar">← Todas as fichas</button>
+  return `<button class="back para-lista" id="voltar">← Todas as fichas</button>
     <div class="f-head">
       <div class="chips">
         <span class="chip ${f.caminho}">${NOME_CAMINHO[f.caminho]}</span>
@@ -317,14 +347,19 @@ function fichaCurta(f) {
 let contextoDocumento = {};
 function ir(id, contexto = {}) {
   contextoDocumento = { ...contexto, alvo: id };
-  window.scrollTo(0, 0);
+  if (!telaLarga.matches || id === "") window.scrollTo(0, 0);
+  else document.getElementById("app").scrollIntoView({ block: "start" });
   // Mudar o hash dispara "hashchange", que já chama rota(); evita desenhar a tela duas vezes.
   if (id && location.hash.slice(1) !== id) { location.hash = id; return; }
   if (!id && location.hash) history.pushState(null, "", location.pathname + location.search);
   rota();
 }
+let listaDesenhada = false;
 function rota() {
   const h = location.hash.slice(1);
+  if (!listaDesenhada) { telaLista(); listaDesenhada = true; }
+  document.body.dataset.rota = h ? "detalhe" : "lista";
+  marcarSelecionada(h);
   if (h === "documentos" || h.startsWith("doc-")) {
     // O contexto (ex.: ficha a importar) vale só para o documento para o qual foi criado.
     telaDocumentos(h === "documentos" ? null : h.slice(4), contextoDocumento.alvo === h ? contextoDocumento : {});
@@ -332,12 +367,35 @@ function rota() {
   }
   contextoDocumento = {};
   const f = FICHAS.find(x => x.id === h);
-  f ? telaFicha(f) : telaLista();
+  if (f) telaFicha(f);
+  else { document.body.dataset.rota = "lista"; telaInicio(); }
 }
 
 document.getElementById("btn-documentos").onclick = () => ir("documentos");
 document.getElementById("btn-inicio").onclick = () => ir("");
-$busca.addEventListener("input", () => { estado.busca = $busca.value; if (location.hash) ir(""); else telaLista(); });
+$busca.addEventListener("input", () => {
+  estado.busca = $busca.value;
+  telaLista();
+  // No celular a busca mostra a lista; no computador a ficha aberta continua à direita.
+  if (!telaLarga.matches && location.hash) ir("");
+});
+
+/* Atalhos: "/" busca, Esc limpa a busca ou volta para a lista. */
+document.addEventListener("keydown", e => {
+  const digitando = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
+  if (e.key === "/" && !digitando) { e.preventDefault(); $busca.focus(); $busca.select(); }
+  else if (e.key === "Escape") {
+    if (document.activeElement === $busca && $busca.value) { $busca.value = ""; estado.busca = ""; telaLista(); }
+    else if (!digitando && location.hash) ir("");
+    else if (digitando) document.activeElement.blur();
+  }
+});
+
+/* Altura do cabeçalho fixo, usada para posicionar a coluna lateral. */
+const $topo = document.querySelector(".top");
+const medirTopo = () => document.documentElement.style.setProperty("--top-h", $topo.offsetHeight + "px");
+new ResizeObserver(medirTopo).observe($topo);
+medirTopo();
 window.addEventListener("hashchange", rota);
 window.addEventListener("popstate", rota);
 rota();
