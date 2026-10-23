@@ -1,4 +1,4 @@
-# MEDFLOW · Prontuário de Bolso
+# Licia Minatti · Prontuário de Bolso
 
 Sistema web de raciocínio clínico rápido para **UBS / Atenção Primária** e **Pronto-Socorro / Emergência**.
 Funciona no celular e no computador, pode ser instalado na tela inicial e continua funcionando sem internet depois do primeiro acesso.

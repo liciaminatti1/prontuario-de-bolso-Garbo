@@ -1,4 +1,4 @@
-/* MEDFLOW · Prontuário de Bolso — interface.
+/* Licia Minatti · Prontuário de Bolso — interface.
    Estrutura: menu lateral (seções e especialidades) + barra superior (busca, UBS/PS, paciente)
    + conteúdo (#app). A navegação usa o hash da URL: #fichas, #favoritos, #calculadoras, #sca...
    Documentos: js/documentos.js · calculadoras e segurança: js/calculadoras.js. */
@@ -309,7 +309,7 @@ function telaInicio() {
           <a class="destaque" href="#${id}"><span class="rec-ic ${f.caminho}">${ic(icone)}</span><span><b>${esc(f.titulo)}</b><small>${esc(f.resumo).slice(0, 70)}${f.resumo.length > 70 ? "…" : ""}</small></span></a>`; }).join("")}</div>
         <a href="#fichas" class="link-btn">Ver todas as fichas →</a>
       </section>
-      <section class="dica">${ic("lampada", "ic dica-ic")}<div><b>Dica do MEDFLOW</b><p>${dica}</p></div></section>
+      <section class="dica">${ic("lampada", "ic dica-ic")}<div><b>Dica do dia</b><p>${dica}</p></div></section>
     </aside>
   </div>`;
   $app.querySelectorAll("[data-cen]").forEach(b => b.onclick = () => {
@@ -361,7 +361,7 @@ function telaConfiguracoes() {
     <div class="sec gap-top"><h3>Dados deste navegador</h3>
       <div class="seg-row"><button class="seg" id="cfg-limpar-fav">Limpar favoritos</button><button class="seg" id="cfg-limpar-hist">Limpar histórico</button></div>
     </div>
-    <p class="disclaimer">MEDFLOW v${VERSAO} · ${FICHAS.length} fichas · suporte à decisão clínica, não substitui o julgamento médico.</p>
+    <p class="disclaimer">Licia Minatti v${VERSAO} · ${FICHAS.length} fichas · suporte à decisão clínica, não substitui o julgamento médico.</p>
   </div>`;
   const form = document.getElementById("cfg-form");
   const salvarCfg = () => {
