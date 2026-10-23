@@ -18,6 +18,7 @@ ouvintesPaciente.add(() => { atualizadoresPaciente.forEach(fn => fn()); atualiza
 /* ---------- resumo do paciente (chip no topo) ---------- */
 function resumoPaciente() {
   const p = PACIENTE, partes = [];
+  if (p.vinculo) partes.push(p.vinculo.split(" ")[0]);
   if (num(p.peso)) partes.push(`${fmt(num(p.peso))} kg`);
   const ia = idadeEmAnos(p);
   if (ia !== null) partes.push(p.idadeUnidade === "meses" ? `${fmt(num(p.idade), 0)} meses` : `${fmt(ia, 0)} anos`);

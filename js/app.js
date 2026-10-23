@@ -120,6 +120,7 @@ function desenharMenu() {
   document.getElementById("menu").innerHTML = `
     <nav aria-label="Principal">
       ${item("", "inicio", "Início")}
+      ${item("pacientes", "usuario", "Pacientes")}
       ${item("favoritos", "estrela", "Favoritos")}
       ${item("historico", "relogio", "Histórico")}
       ${item("medicamentos", "pilula", "Medicamentos")}
@@ -146,7 +147,7 @@ function desenharMenu() {
 function marcarMenu(h) {
   document.querySelectorAll("#menu .nav-item").forEach(a => {
     let ativo = false;
-    if (a.dataset.rota !== undefined) ativo = a.dataset.rota === h || (a.dataset.rota === "documentos" && h.startsWith("doc-"));
+    if (a.dataset.rota !== undefined) ativo = a.dataset.rota === h || (a.dataset.rota === "documentos" && h.startsWith("doc-")) || (a.dataset.rota === "pacientes" && h.startsWith("pac-"));
     if (a.dataset.esp) ativo = h === "fichas" && estado.especialidade === a.dataset.esp;
     a.classList.toggle("ativo", ativo);
     if (ativo) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
@@ -277,6 +278,7 @@ function telaInicio() {
         ${card("medicamentos", "pilula", "Medicamentos", "Doses, ajuste renal, gestação e interações", "c2")}
         ${card("calculadoras", "calculadora", "Calculadoras", "Função renal, peso, hidratação e escores", "c3")}
         ${card("documentos", "documento", "Documentos", "Atestado, receita, admissão e evolução", "c4")}
+        ${card("pacientes", "usuario", "Pacientes", "Prontuário de acompanhamento com exames, medicações e alertas", "c5")}
       </div>
       <section class="painel">
         <h3>Acesso rápido por cenário</h3>
@@ -582,6 +584,8 @@ function rota() {
     return;
   }
   contextoDocumento = {};
+  if (h === "pacientes") { telaPacientes(); return; }
+  if (h.startsWith("pac-")) { telaPaciente(h.slice(4)); return; }
   const f = fichaPorId(h);
   if (f) { Historico.registrar(f.id); telaFicha(f); return; }
   ({ fichas: telaLista, favoritos: () => telaColecao("favoritos"), historico: () => telaColecao("historico"),

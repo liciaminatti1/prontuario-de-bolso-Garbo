@@ -31,6 +31,13 @@ Toda ficha traz **prescrição ambulatorial e/ou hospitalar pronta para copiar**
 
 > ⚠️ As bases de medicamentos e escores são referências resumidas e precisam passar pela mesma revisão médica das fichas.
 
+## Pacientes (prontuário de acompanhamento)
+
+- Menu **Pacientes**: cadastro e acompanhamento longitudinal com dados pessoais, patologias (ligadas às fichas), medicações em uso (com suspensão/reativação), alergias, exames com tendência gráfica e consultas com PA, peso, FC e evolução.
+- **Indicações e alertas automáticos**: interações entre as medicações em uso, alergias, gestação, ajuste pela função renal (calculada da última creatinina), valores críticos (potássio, INR), metas e exames de seguimento (diabetes, hipertensão, dislipidemia, hipotireoidismo, IECA/BRA, varfarina, metformina) e rastreios por idade e sexo, com link para a ficha correspondente.
+- **Usar no atendimento**: carrega o paciente nas calculadoras e nas fichas (doses e alertas personalizados). **Copiar resumo** gera um texto para o prontuário.
+- **Privacidade**: os dados ficam somente no navegador do aparelho, criptografados (AES-GCM 256 + PBKDF2) com uma senha definida pelo médico; bloqueio após 15 min sem uso e ao recarregar. Sem a senha os dados não podem ser recuperados. **Exportar backup** gera um arquivo criptografado para guardar ou levar a outro aparelho (Importar backup na tela de senha).
+
 ## Estrutura
 
 ```

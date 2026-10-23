@@ -49,7 +49,7 @@ const Historico = {
 /* ---------- paciente em atendimento (memória apenas) ---------- */
 const PACIENTE = {
   peso: "", idade: "", idadeUnidade: "anos", sexo: "", altura: "", creatinina: "",
-  gestante: false, alergias: [], medicacoes: []
+  gestante: false, alergias: [], medicacoes: [], vinculo: ""
 };
 const ouvintesPaciente = new Set();
 function atualizarPaciente(mudancas) {
@@ -57,7 +57,7 @@ function atualizarPaciente(mudancas) {
   ouvintesPaciente.forEach(fn => { try { fn(PACIENTE); } catch (e) { console.error(e); } });
 }
 function limparPaciente() {
-  atualizarPaciente({ peso: "", idade: "", idadeUnidade: "anos", sexo: "", altura: "", creatinina: "", gestante: false, alergias: [], medicacoes: [] });
+  atualizarPaciente({ peso: "", idade: "", idadeUnidade: "anos", sexo: "", altura: "", creatinina: "", gestante: false, alergias: [], medicacoes: [], vinculo: "" });
 }
 
 const num = v => { const n = parseFloat(String(v).replace(",", ".")); return isFinite(n) ? n : null; };
