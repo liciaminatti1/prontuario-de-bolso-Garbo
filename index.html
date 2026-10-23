@@ -3,36 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Prontuário de Bolso</title>
+  <title>MEDFLOW · Prontuário de Bolso</title>
   <meta name="description" content="Fichas clínicas de raciocínio rápido para UBS e Pronto-Socorro.">
-  <meta name="theme-color" content="#0b6e55">
+  <meta name="theme-color" content="#0f7b73">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icone.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/icone-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@500;600&display=swap">
-  <link rel="stylesheet" href="css/estilo.css?v=b1a3acf2">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:opsz,wght@6..12,600;6..12,800&family=Caveat:wght@500&family=IBM+Plex+Mono:wght@500;600&display=swap">
+  <link rel="stylesheet" href="css/estilo.css?v=82e59a75">
 </head>
 <body>
-  <header class="top">
-    <div class="wrap">
-      <div class="brand">
-        <h1>Prontuário de Bolso <small>Raciocínio rápido · UBS e Pronto-Socorro</small></h1>
-        <nav class="top-nav" aria-label="Seções">
-          <button class="nav-btn" id="btn-inicio" type="button">Fichas</button>
-          <button class="nav-btn" id="btn-documentos" type="button">Documentos</button>
-        </nav>
-      </div>
-      <input class="search" id="q" type="search" placeholder="Buscar queixa, diagnóstico ou droga (ex.: dor torácica, adrenalina)" autocomplete="off">
-    </div>
-  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="Menu">
+      <a class="logo" href="#" aria-label="MEDFLOW, início">
+        <svg class="logo-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a5 5 0 0 0 10 0V3"/><path d="M11 14v2a5 5 0 0 0 10 0v-2"/><circle cx="21" cy="12" r="2"/></svg>
+        <span><b>MEDFLOW</b><small>Prontuário de Bolso</small></span>
+      </a>
+      <div class="menu" id="menu"></div>
+    </aside>
+    <div class="fundo-menu" id="fundo-menu"></div>
 
-  <!-- Celular: uma coluna (lista OU ficha). Computador: lista à esquerda e ficha à direita. -->
-  <main class="wrap layout" id="layout">
-    <aside class="painel-lista" id="lista" aria-label="Lista de fichas"></aside>
-    <section class="painel-conteudo" id="app" aria-live="polite"><p class="empty">Carregando fichas…</p></section>
-  </main>
+    <div class="principal">
+      <header class="topbar">
+        <button class="icon-btn" id="btn-menu" type="button" aria-label="Abrir menu"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <a class="marca-mob" href="#" aria-label="MEDFLOW, início">MEDFLOW</a>
+        <div class="busca">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input class="search" id="q" type="search" placeholder="Buscar por sintoma, doença, tema, medicamento…" autocomplete="off" aria-label="Buscar">
+          <kbd class="kbd-dica">Ctrl K</kbd>
+          <button class="icon-btn mic" id="btn-voz" type="button" aria-label="Buscar por voz" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+        </div>
+        <div class="cenario-toggle" id="cenario" role="group" aria-label="Cenário">
+          <button type="button" data-c="todos">Todos</button>
+          <button type="button" data-c="ubs">UBS</button>
+          <button type="button" data-c="ps">PS</button>
+        </div>
+        <button class="chip-paciente" id="chip-paciente" type="button">Paciente</button>
+        <button class="avatar" id="btn-perfil" type="button" aria-label="Perfil e configurações">LM</button>
+      </header>
+
+      <main id="app" aria-live="polite"><p class="empty">Carregando…</p></main>
+
+      <footer class="rodape">
+        <span><b>MEDFLOW</b> <span id="rodape-versao"></span> · Suporte à decisão clínica · Não substitui o julgamento médico · Consulte sempre as diretrizes vigentes</span>
+        <span id="rodape-medico"></span>
+      </footer>
+    </div>
+  </div>
 
   <!-- 1. Registro (precisa vir antes das fichas) -->
   <script src="js/registro.js?v=6c0792a6"></script>
@@ -253,7 +272,11 @@
   <!-- FICHAS:FIM -->
 
   <!-- 3. Aplicação -->
-  <script src="js/documentos.js?v=f9aac439"></script>
-  <script src="js/app.js?v=0ad5b6de"></script>
+  <script src="js/perfil.js?v=ab60fba7"></script>
+  <script src="js/medicamentos.js?v=9483198c"></script>
+  <script src="js/scores.js?v=2bd10f0a"></script>
+  <script src="js/calculadoras.js?v=107b53dc"></script>
+  <script src="js/documentos.js?v=2f193bf1"></script>
+  <script src="js/app.js?v=0013751d"></script>
 </body>
 </html>

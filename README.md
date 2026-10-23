@@ -1,4 +1,4 @@
-# Prontuário de Bolso
+# MEDFLOW · Prontuário de Bolso
 
 Sistema web de raciocínio clínico rápido para **UBS / Atenção Primária** e **Pronto-Socorro / Emergência**.
 Funciona no celular e no computador, pode ser instalado na tela inicial e continua funcionando sem internet depois do primeiro acesso.
@@ -16,6 +16,20 @@ Toda ficha traz **prescrição ambulatorial e/ou hospitalar pronta para copiar**
 > Todo o conteúdo (doses, diluições, contraindicações) deve ser revisado por médico responsável antes do uso assistencial.
 
 ---
+
+## Painel, calculadoras e segurança (v3.0)
+
+- **Início em formato de painel:** saudação, atalhos (Busca clínica, Medicamentos, Calculadoras, Documentos), acesso rápido por cenário (UBS/PS), últimos acessados, indicadores, módulos em destaque e dica do dia. Menu lateral com especialidades; no celular o menu abre como gaveta.
+- **Perfil:** "Dra. Licia Minatti · CRM-MS 16.871" vem preenchido (editável em Configurações) e assina os documentos.
+- **Favoritos e histórico** guardados no navegador.
+- **Paciente em atendimento** (peso, idade, sexo, altura, creatinina, gestação, alergias, medicações em uso). Fica só na memória e some ao recarregar.
+- **Função renal:** Cockcroft-Gault (ajuste de dose), CKD-EPI 2021 (estadiamento) e Schwartz na criança.
+- **Calculadora de doses por peso**, com conversão para mL, gotas e comprimidos e limite de dose máxima (`js/medicamentos.js`).
+- **Segurança de medicamentos:** cada ficha reconhece os remédios citados e mostra gestação, ajuste renal, alergia (com reatividade cruzada) e interações com as medicações em uso, destacando o que se aplica ao paciente informado.
+- **19 escores** integrados às fichas (Wells, PERC, sPESI, HEART, CURB-65, CRB-65, CHA₂DS₂-VA, HAS-BLED, qSOFA, Glasgow, regra canadense, ABCD², Ottawa HSA, Centor/McIsaac, Westley, PHQ-9, GAD-7, IPSS, Pádua) em `js/scores.js`.
+- **Cálculos rápidos:** IMC e superfície corporal, peso estimado da criança, Holliday-Segar, reposição em queimaduras, gotejamento, ânion gap, sódio corrigido, osmolalidade, idade gestacional e DPP.
+
+> ⚠️ As bases de medicamentos e escores são referências resumidas e precisam passar pela mesma revisão médica das fichas.
 
 ## Estrutura
 

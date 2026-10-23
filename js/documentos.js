@@ -244,10 +244,16 @@ Recebido por: __________ — confirmar síntese em voz alta.`
 ];
 
 /* ---------- tela ---------- */
-function lerMedico() { try { return JSON.parse(localStorage.getItem("pb-medico") || "{}"); } catch (e) { return {}; } }
+/* Dados do médico: vêm do perfil (Configurações); o que for editado aqui atualiza o perfil. */
+function lerMedico() {
+  const p = Perfil.ler();
+  return { medico: Perfil.nomeCompleto(), crm: p.crm, rqe: p.rqe, servico: p.servico, cidade: p.cidade };
+}
 function salvarMedico(v) {
-  const m = {}; CAMPOS_MEDICO.forEach(c => m[c.id] = v[c.id] || "");
-  try { localStorage.setItem("pb-medico", JSON.stringify(m)); } catch (e) {}
+  const p = Perfil.ler();
+  const nome = (v.medico || "").replace(/^(Dra?\.)\s*/i, "");
+  const trat = (v.medico || "").match(/^(Dra?\.)/i);
+  Perfil.salvar({ ...p, tratamento: trat ? trat[1] : (nome ? "" : p.tratamento), nome: nome || p.nome, crm: v.crm || p.crm, rqe: v.rqe || "", servico: v.servico || "", cidade: v.cidade || "" });
 }
 
 function campoHTML(doc, c, valor) {
@@ -266,7 +272,7 @@ function telaDocumentos(docId, contexto = {}) {
   const doc = DOCUMENTOS.find(d => d.id === docId);
   if (!doc) {
     $app.innerHTML = `<div class="view">
-      <button class="back para-lista" id="voltar">← Fichas</button>
+      <button class="back" id="voltar">← Início</button>
       <div class="f-head"><h2>Documentos</h2><p>Preencha e copie para o prontuário eletrônico ou para impressão. Os dados do paciente não ficam salvos no aparelho.</p></div>
       <div class="list">${DOCUMENTOS.map(d => `<button class="item doc" data-doc="${d.id}" id="doc-${d.id}"><b>${esc(d.titulo)}</b><span>${esc(d.desc)}</span></button>`).join("")}</div>
     </div>`;
