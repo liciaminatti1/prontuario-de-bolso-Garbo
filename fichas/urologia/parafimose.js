@@ -91,7 +91,6 @@ registrarFicha({
   ],
   fontes: [
     "EAU/ESPU — Guidelines on Paediatric Urology: phimosis and paraphimosis (2024)",
-    "EAU — Guidelines on Urological Infections / Penile conditions (2024)",
     "Little B, White M — Treatment options for paraphimosis (Int J Clin Pract, 2005)"
   ],
   revisao: "2026-10-24",
