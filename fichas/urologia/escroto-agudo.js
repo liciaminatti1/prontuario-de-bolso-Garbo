@@ -189,8 +189,7 @@ registrarFicha({
     "Barbosa JA et al. — TWIST score (J Urol, 2013); Sheth KR et al. — validação por não urologistas (J Urol, 2016)",
     "EAU/ESPU — Guidelines on Paediatric Urology: acute scrotum (2024)",
     "Ministério da Saúde — PCDT Atenção Integral às Pessoas com IST (2022)",
-    "CDC — Sexually Transmitted Infections Treatment Guidelines: epididymitis (2021)",
-    "AUA — Pediatric acute scrotum (revisão/educação, 2023)"
+    "CDC — Sexually Transmitted Infections Treatment Guidelines: epididymitis (2021)"
   ],
   revisao: "2026-10-24",
   versao: "1.0"
