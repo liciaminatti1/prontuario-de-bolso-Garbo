@@ -45,8 +45,8 @@ prontuario-de-bolso/
 ├── index.html              Página única; carrega o registro, as fichas e o app
 ├── css/estilo.css          Visual (tema claro e escuro, layout de celular)
 ├── js/registro.js          Lista de especialidades, registrarFicha() e validação
-├── js/app.js               Interface: filtros, lista, fichas (completo e curto), busca
-├── js/documentos.js        Documentos médicos (atestado, receituário, evolução...)
+├── js/app.js               Interface: filtros, lista, fichas (completo, curto e procedimento), busca
+├── js/documentos.js        Documentos médicos (atestado, receituário, evolução, encaminhamento, transferência...)
 ├── docs/
 │   ├── ESQUEMA-FICHAS.md   Formato de cada campo e regras de conteúdo
 │   └── PENDENCIAS-REVISAO.md  Pontos a conferir na revisão médica
@@ -125,7 +125,7 @@ Uma ficha com campo faltando **não quebra o sistema**: ela é ignorada e o erro
 
 ## Fichas incluídas (revisão 21/10/2026)
 
-**204 fichas** em 21 especialidades: Emergência e suporte de vida (PCR adulto e pediátrica, pós-PCR, SRI, ventilação, choque, sepse pediátrica...), Cardiologia, Pneumologia, Neurologia, Infectologia (TB, ILTB, sífilis, hanseníase, PEP, exantemáticas...), Endócrino e metabólico, Ginecologia e obstetrícia (pré-natal, ITU e hipertensão na gestação, anticoncepção, IST...), Pediatria (puericultura, sinais vitais por idade, crupe, coqueluche...), Gastroenterologia, Hematologia (anemias, doença falciforme), Urologia e saúde do homem, Dermatologia, Olhos/ouvido/nariz/garganta, Ortopedia/reumatologia/dor, Saúde mental, Intoxicações e acidentes (antídotos, ofídicos, escorpião, aranhas, abelhas), Trauma, Alergia, Prevenção e rastreamento, Prescrição e referências (analgésicos, anti-histamínicos, vias e diluições, hidratação venosa).
+**397 fichas** em 23 especialidades, incluindo **24 procedimentos** com passo a passo (pasta `fichas/procedimentos/`) e **Cirurgia geral e perioperatório**: Emergência e suporte de vida (PCR adulto e pediátrica, pós-PCR, SRI, ventilação, choque, sepse pediátrica...), Cardiologia, Pneumologia, Neurologia, Infectologia (TB, ILTB, sífilis, hanseníase, PEP, exantemáticas...), Endócrino e metabólico, Ginecologia e obstetrícia (pré-natal, ITU e hipertensão na gestação, anticoncepção, IST...), Pediatria (puericultura, sinais vitais por idade, crupe, coqueluche...), Gastroenterologia, Hematologia (anemias, doença falciforme), Urologia e saúde do homem, Dermatologia, Olhos/ouvido/nariz/garganta, Ortopedia/reumatologia/dor, Saúde mental, Intoxicações e acidentes (antídotos, ofídicos, escorpião, aranhas, abelhas), Trauma, Alergia, Prevenção e rastreamento, Prescrição e referências (analgésicos, anti-histamínicos, vias e diluições, hidratação venosa).
 
 Para ver a lista atualizada com a contagem por especialidade: `node ferramentas/validar.js`.
 

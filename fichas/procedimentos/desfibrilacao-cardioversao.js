@@ -116,7 +116,7 @@ registrarFicha({
       linhas: [
         ["FV / TV sem pulso", "Não sincronizado", "120–200 J conforme fabricante (desconhecida: máxima); monofásico 360 J", "Igual ou maior"],
         ["TV polimórfica instável", "Não sincronizado", "Dose de desfibrilação", "Igual ou maior"],
-        ["FA instável", "Sincronizado", "120–200 J (dados recentes favorecem iniciar com ≥ 200 J)", "Aumentar até a máxima"],
+        ["FA instável", "Sincronizado", "Iniciar com ≥ 200 J (AHA 2025)", "Aumentar até a máxima"],
         ["Flutter atrial e TSV instáveis", "Sincronizado", "50–100 J", "Aumentar em degraus"],
         ["TV monomórfica com pulso instável", "Sincronizado", "100 J", "Aumentar em degraus"]
       ],

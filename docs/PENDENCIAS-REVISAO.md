@@ -10,6 +10,166 @@ Cada ficha foi escrita por um agente e revisada por outro, de forma independente
 
 **147 pontos em 139 fichas** · 136 correções já aplicadas pelos revisores (lista no fim).
 
+## Fichas e procedimentos criados em 24/10/2026 (lote de 193, sem revisor independente)
+
+Escritas por 12 agentes em paralelo, com validação estrutural e teste no navegador, mas **sem segundo revisor** e quase sempre sem acesso ao texto integral das diretrizes. Revisar inteiras antes do uso assistencial. Abaixo, os pontos que os próprios autores marcaram como incertos.
+
+Já ajustado: energia da cardioversão na FA alinhada em ≥ 200 J bifásico (AHA 2025) nas fichas fibrilacao-atrial, taquicardias e desfibrilacao-cardioversao.
+
+### Ginecologia (14 fichas)
+- gravidez-ectopica: metotrexato 50 mg/m² IM dose única, β-hCG D4/D7 (queda ≥ 15%); critérios massa < 3,5 cm, β-hCG < 5.000, sem BCF; zona discriminatória 1.500–2.000 (até 3.500). Conferir com FEBRASGO.
+- abortamento: misoprostol FIGO 2023 (incompleto < 13 sem 600 mcg VO ou 400 mcg SL; retido 800 mcg vaginal 3/3 h; preparo de colo 400 mcg) — comparar com norma MS. Aborto infectado clindamicina + gentamicina. Anti-D 250–300 mcg. Progesterona 400 mg vaginal 12/12 h (só se perda prévia). Lidocaína paracervical máx. 4,5 mg/kg.
+- doenca-trofoblastica: seguimento pós-normalização (FIGO 2021) x rotina brasileira de 6 meses.
+- torcao-anexial: cetoprofeno IV pediátrico off-label.
+- lesoes-precursoras-colo: tabela INCA 2016 de memória; DNA-HPV positivo na repetição de 12 meses ficou genérico.
+- endometriose (PCDT Portaria 879/2016 — conferir versão), infertilidade (fonte OMS 2025 — conferir), nodulo-mamario (INCA 2022 — conferir ano), bartholinite/corpo-estranho-vaginal (fontes genéricas), incontinencia-urinaria (oxibutinina na RENAME?).
+### Emergências obstétricas (12 fichas; eclâmpsia/HELLP já em hipertensao-gestacao)
+- trabalho-parto-prematuro: nifedipino ataque 20 mg, manutenção 20 mg 6/6–8/8 h por 48 h; teto 120 mg/dia "conferir protocolo".
+- rotura-membranas: amoxicilina de latência 250 mg 8/8 h (ACOG) x 500 mg em protocolos brasileiros; interrupção 34 sem (MS) x 36s6d (ACOG).
+- hemorragia-pos-parto: ocitocina 5 UI IV + 20 UI/500 mL (OPAS), metilergometrina máx. 1 mg/24 h, balão 300–500 mL, corte de 300 mL (OMS 2025), terbutalina/nitroglicerina na inversão.
+- gestante-na-urgencia: MEOWS (CEMACH/Singh 2012), tabela de classificação de risco MS 2017 resumida, dipirona "evitar 1º e 3º trimestres".
+- tev-gestacao: pontuação RCOG 37a resumida; intervalos de enoxaparina e anestesia neuraxial.
+- obito-fetal: misoprostol FIGO 2023 (200 mcg < 28 sem; 25 mcg ≥ 28), cicatriz uterina, licença-maternidade ≥ 23 sem, critérios da DO (20 sem/500 g/25 cm).
+- corioamnionite: gentamicina 5 mg/kg/dia ou 1,5 mg/kg 8/8 h; suspensão após parto vaginal.
+- trauma-gestante: CTG mínimo 4–6 h; ácido tranexâmico CRASH-2. Fontes FEBRASGO genéricas (Tratado 2019).
+### Procedimentos parte 1 (13 fichas)
+- desfibrilacao-cardioversao: FA 120–200 J bifásico ("dados recentes favorecem ≥ 200 J" — conferir ACLS 2025); troca de vetor na FV refratária; sedação (etomidato 0,1–0,2 mg/kg, propofol 0,5–1 mg/kg, midazolam + fentanil; criança midazolam 0,05–0,1 mg/kg, cetamina 1 mg/kg).
+- anestesia-local: bupivacaína 2,5 mg/kg (máx. 175 mg) / 3 mg/kg com vasoconstritor; lidocaína 4,5 e 7 mg/kg; emulsão lipídica 20% ASRA 2020 (> 70 kg bolus 100 mL; ≤ 70 kg 1,5 mL/kg + 0,25 mL/kg/min; limite ~12 mL/kg).
+- acesso-intraosseo: lidocaína 40 mg adulto / 0,5 mg/kg criança (bula); faixas de agulha EZ-IO do fabricante.
+- acesso-venoso-periferico: fluxos por calibre aproximados; não trocar cateter por rotina antes de 96 h (ANVISA).
+- sutura: prazos de retirada e fios por região são consenso da literatura.
+- controle-hemorragia-torniquete: ácido tranexâmico pediátrico 15 mg/kg (máx. 1 g) + 2 mg/kg/h; tempos de torniquete TCCC.
+- imobilizacao-talas: número de camadas é referência prática.
+- puncao-arterial-gasometria: análise em até 30 min sem gelo; Allen 5–10 s.
+- sondagem-nasogastrica: pH ≤ 5,5 (NHS).
+- reducao-luxacao-ombro: lidocaína 1% 20 mL intra-articular.
+- Fontes COFEN 619/2019 e 567/2018, COREN-SP 010/2020, BRASPEN 2021: conferir citações.
+### Procedimentos parte 2 e referência (16 fichas)
+- distocia-ombro: mnemônico ALEEERTA reconstruído de memória (último "A" = "Anotar") — conferir com ALSO/FEBRASGO. HELPERR correto.
+- notificacao-compulsoria: tabela de periodicidade resumida de memória (animal peçonhento, raiva, tétano ausente, malária, chikungunya/zika); portaria vigente (GM/MS 6.734/2025 e atualização 2026 com número incerto) — ficha diz "conferir a vigente".
+- puncao-lombar: plaquetas < 50.000 (AABB 2015) para eletiva; comprimentos de agulha pediátrica.
+- drenagem-toracica: 28–32 Fr no hemotórax (ATLS 10ª), pigtail, cateter de descompressão 5–8 cm.
+- toracocentese: ~1,5 L por sessão; não corrigir coagulação de rotina (BTS 2023).
+- paracentese: albumina 6–8 g/L se > 5 L (exemplo 8 g/L); PBE ceftriaxona 2 g/dia + albumina 1,5 g/kg D1 e 1 g/kg D3; ano da SBH.
+- parto-vaginal: expulsivo ~3 h nulípara / 2 h multípara; clampeamento 1–3 min; sulfato ferroso 40 mg 3 meses; anti-D 300 mcg.
+- insercao-diu: histerometria 6–9 cm; inserção até 12º dia; categorias OMS pós-parto/pós-aborto.
+- revisao-canal-episiorrafia: lidocaína máx. 4,5 mg/kg (300 mg); classificação RCOG; lactulose só 3º/4º grau.
+- exames-laboratoriais: valores críticos aproximados (usar laboratório local).
+- seguranca-paciente: exemplo de KCl 25 mEq/500 mL a 5 mEq/h; ano da lista ISMP Brasil.
+### Parto, pré-natal de risco e puerpério (18 fichas)
+- inducao-parto: misoprostol 25 mcg vaginal 6/6 h (MS) ou 25 mcg oral 2/2 h (OMS 2022), sem número máximo de doses; intervalo até ocitocina ≥ 4 h (6 h em alguns protocolos); ocitocina 5 UI/500 mL, máx. 20 mUI/min (até 32).
+- trabalho-de-parto: 2º período (MS 2017) nulípara > 2 h sem / > 3 h com analgesia, multípara > 1 h / > 2 h; ausculta 15–30 min (ativa) e 5 min (expulsivo); profilaxia GBS.
+- cesariana-parto-instrumental: cefazolina 2 g (3 g ≥ 120 kg), azitromicina adicional (ACOG), omeprazol 40 mg + metoclopramida 10 mg, enoxaparina 40 mg por escore; ocitocina de prevenção de HPP como "protocolo institucional".
+- restricao-crescimento-fetal: idade gestacional de parto por Doppler (ISUOG 2020).
+- isoimunizacao-rh: anti-D 300 mcg com 28 sem (MS 2022); título crítico ≥ 1:16 (ou 1:8); Coombs mensal a partir de 24 sem.
+- hiv-gestacao: AZT IV com CV 50–1.000 "considerar"; AZT do RN por IG; raltegravir remetido ao PCDT; SMX-TMP a partir de 4 sem.
+- hepatite-b-gestacao: tenofovir se CV ≥ 200.000 UI/mL ou HBeAg+, 24–28 sem; sem opção "todas sem CV".
+- toxoplasmose-gestacao: corte 16 x 18 sem para esquema tríplice; ácido folínico 10–15 mg/dia; pirimetamina e sulfadiazina; suspensão perto do termo não descrita; valaciclovir para CMV sem dose.
+- tireoide-gestacao: PTU 50–150 mg 8/8 h, metimazol 5–15 mg/dia, TSH ~4,0; fonte "ATA 2017; atualização 2026" — conferir.
+- consulta-puerperal: MEC do injetável trimestral < 6 sem em lactante "conferir"; combinados (< 6 sem cat. 4; 6 sem–6 meses cat. 3; não lactante < 21 dias cat. 4).
+- infeccao-puerperal: clindamicina + gentamicina, ampicilina se falha; 30 mL/kg na sepse.
+- amamentacao-problemas: domperidona 10 mg 8/8 h off-label; armazenamento 12 h geladeira / 15 dias congelador; nistatina 1 mL 6/6 h.
+- transtornos-puerperais: EPDS ≥ 10 (Brasil ~11/12); sertralina 1ª escolha.
+- medicamentos-gestacao-lactacao: dipirona com ressalva no 3º tri; AINE evitar ≥ 20 sem, contraindicado ≥ 30.
+- Fontes com ano incerto: ACOG 2024 (Rh), FIGO 2023, FEBRASGO 2021.
+### Cardiologia e pneumologia (17 fichas)
+- taquicardias: "AHA 2025 sugere ≥ 200 J bifásico" na FA — conferir e alinhar com fibrilacao-atrial (120–200 J) e procedimentos/desfibrilacao-cardioversao.
+- sindrome-aortica-aguda: diluições de esmolol e nitroprussiato; PAS 70–90 no AAA roto (ESVS).
+- endocardite: empírico ESC 2023 (ampicilina + ceftriaxona; alternativa ampicilina + oxacilina + gentamicina), vancomicina, rifampicina, daptomicina 10 mg/kg; profilaxia AHA 2021 (azitromicina/doxiciclina, sem clindamicina).
+- miocardite: restrição de exercício sem prazo numérico; pulsoterapia como decisão do especialista; fonte "SBC Miocardites 2022" — conferir.
+- sincope: Canadian Syncope Risk Score de memória (CMAJ 2016).
+- tvp: rivaroxabana pode não estar no SUS local.
+- insuficiencia-respiratoria-aguda/vni: índice ROX (< 2,85 em 2 h, < 3,47 em 6 h, < 3,85 em 12 h); HACOR > 5 em 1 h.
+- pneumotorax: local da descompressão (4º/5º EIC, ATLS 10) e aspiração até 2,5 L (BTS antiga) — conferir BTS 2023.
+- derrame-pleural: ADA ≥ 40 U/L; glicose < 72 e LDH > 1.000; MIST2 alteplase 10 mg + dornase 5 mg 12/12 h por 3 dias.
+- hemoptise: ácido tranexâmico nebulizado 500 mg 8/8 h.
+- dispositivos-cardiacos: fonte "SBC DCEI 2023" — conferir.
+### Endócrino, nefro e urologia clínica (16 fichas)
+- insulinoterapia-hospitalar: escala de correção é exemplo próprio (não RABBIT 2); dieta enteral 1 UI/10–15 g de carboidrato.
+- crise-tireotoxica: SSKI 5 gotas 6/6 h; Lugol "dose equivalente"; PTU 500–1.000 mg ataque + 250 mg 4/4 h; propranolol 60–80 mg 4/4 h.
+- coma-mixedematoso: levotiroxina por SNG (300–500 µg ataque, 50–100 µg/dia) sem diretriz formal.
+- insuficiencia-adrenal: hidrocortisona pediátrica 25/50/100 mg por idade; dexametasona 0,15 mg/kg (máx. 4 mg); cortes da cortrosina; prednisona 5 mg/dia na alta.
+- hipercalcemia: denosumabe x bisfosfonato (Endocrine Society 2023); ácido zoledrônico e creatinina < 4,5.
+- hipocalcemia: infusão de exemplo 100 mL gluconato 10% + 900 mL SG 5% a 50 mL/h (conferido: ~0,9 mg/mL de cálcio elementar).
+- hiponatremia: preparo de NaCl 3% (conferido: 890 mL SF + 110 mL NaCl 20%); ureia manipulada.
+- hipocalemia: limites periféricos 10 mEq/h e 40 mEq/L — alinhar com enfermagem.
+- disturbios-magnesio: sem dose oral; IV 4–8 g em 12–24 h.
+- lesao-renal-aguda/dialise-urgencia: pH < 7,1–7,15 como exemplo; teste de furosemida < 200 mL em 2 h; enoxaparina 30 mg/dia se TFG < 30.
+- sindromes-glomerulares: prednisolona IPNA 2023; penicilina benzatina por peso (corte 20 kg); anlodipino pediátrico; PCDT síndrome nefrótica sem ano.
+- rabdomiolise: meta de diurese 200–300 mL/h de revisões.
+- hematuria: estratificação AUA/SUFU 2020 de memória.
+### Gastro e hemato/onco (14 fichas)
+- hemorragia-digestiva-alta: omeprazol 80 mg/100 mL a 10 mL/h (estabilidade); terlipressina 2 mg 4/4 h (1 mg < 50 kg); octreotida 500 mcg/250 mL a 25 mL/h; Glasgow-Blatchford convertido para ureia mg/dL, alta 0–1 (ESGE 2021).
+- hemorragia-digestiva-baixa: Oakland convertido para g/dL.
+- pancreatite-aguda: hidratação WATERFALL.
+- cirrose-descompensada: ceftriaxona 2 g (ou 1 g), albumina 1,5/1 g/kg, terlipressina na SHR, albumina 6–8 g/L na paracentese, profilaxia com norfloxacino/ciprofloxacino.
+- hepatite-aguda-insuficiencia-hepatica: critérios do King's College de memória.
+- doenca-inflamatoria-intestinal: anos dos PCDT (Conitec); megacólon 5,5–6 cm; Oxford PCR > 45 no 3º dia.
+- trombocitopenia: gatilhos de plaquetas, PLASMIC, plasma 20–30 mL/kg.
+- neutropenia-febril: ajuste renal do cefepime; vancomicina ataque 25 mg/kg; febre axilar ≥ 37,8 °C.
+- sindrome-lise-tumoral: rasburicase 0,2 mg/kg (disponibilidade); alopurinol 100 mg/m² 8/8 h, máx. 800 mg/dia.
+- compressao-medular-maligna: dexametasona 16 mg/dia (NICE 2023).
+- coagulopatias-urgencia: CCP 25/35/50 U/kg por INR; CCP 50 U/kg ou 2.000 U nos anti-Xa; andexanet (ANVISA); protamina; carvão se DOAC ≤ 2 h.
+- reacao-transfusional: rendimento de hemocomponentes aproximado.
+### Trauma e urgências urológicas (17 fichas)
+- Geral: "ATLS 10ª (2018) e 11ª (2025)" — confirmar ano da 11ª e mudanças; bolus 20 mL/kg e hemácias 10 mL/kg (10ª ed.).
+- trauma-raquimedular: PAM no choque neurogênico 85–90 (AANS 2013) x ≥ 75–80 (AO Spine 2024); metilprednisolona "não usar de rotina".
+- trauma-torax: antibiótico na drenagem "controverso"; esmolol na lesão de aorta (FC < 80, PAM 60–70).
+- fratura-exposta: ceftriaxona no Gustilo III (TQIP 2015), gentamicina 5 mg/kg; penicilina sem dose; pediátrico cefazolina 30 mg/kg, clindamicina 10 mg/kg.
+- choque-hemorragico: cálcio a cada 4 unidades; CCP 25–50 UI/kg; crio se fibrinogênio < 150; criança 10–20 mL/kg.
+- isquemia-aguda-membro: heparina 80 UI/kg + 18 UI/kg/h; fasciotomia se isquemia > 4–6 h.
+- mordeduras: amoxicilina-clavulanato 45 mg/kg/dia; alergia SMX-TMP + clindamicina.
+- escroto-agudo: epididimite ceftriaxona 500 mg + doxiciclina 10 dias / levofloxacino 500 mg; TWIST 0–2/3–4/5–7.
+- priapismo: fenilefrina 100–500 mcg/mL 1 mL a cada 3–5 min (AUA 2022); alternativas sem dose; gasometria cavernosa.
+- parafimose: lidocaína ≤ 4,5 mg/kg; cetamina 1–1,5 mg/kg IV ou 4–5 mg/kg IM.
+- trauma-genitourinario: cistografia ≥ 300–350 mL.
+- Dipirona pediátrica 15 mg/kg (máx. 1 g) ≈ 0,6 gota/kg (conferido com 500 mg/mL, 20 gotas/mL).
+### Cirurgia geral e perioperatório (21 fichas)
+- Antibiótico: 4 dias após controle do foco (STOP-IT); até 24 h após colecistectomia grau I–II (Tokyo).
+- diverticulite: corte para drenagem ≥ 3 cm (ASCRS 2020) x ≥ 4–5 cm (WSES 2020); critérios para tratar sem antibiótico.
+- corpo-estranho: mel 10 mL a cada 10 min até 6 doses (> 1 ano, < 12 h); sucralfato 10 mL até 3 doses; bateria ≥ 20 mm no estômago em < 5 anos sem prazo de RX de controle.
+- obstrucao-intestinal: neostigmina 2 mg IV no Ogilvie.
+- isquemia-mesenterica: heparina 80 UI/kg + 18 UI/kg/h.
+- gangrena-fournier: piperacilina-tazobactam + clindamicina + vancomicina.
+- ruptura-esofagica: fluconazol 800 mg ataque + 400 mg/dia; escore de Pittsburgh.
+- avaliacao-pre-operatoria: suspensão de DOAC (PAUSE), iSGLT2 3 dias (ertugliflozina 4), insulina basal 75–80% / NPH 50%, IECA/BRA 24 h, GLP-1 (consenso 2024), HbA1c < 8%; conferir com SBC 2024.
+- profilaxias-perioperatorias: doses pediátricas; Caprini (ACCP 2012); jejum de 1 h para líquidos claros em crianças (ESAIC).
+- drenos-cuidados: débito < 30–50 mL/24 h; triglicerídeos > 110; amilase > 3× (ISGPS); bilirrubina ≥ 3× (ISGLS).
+- doencas-anorretais: nitroglicerina 0,2% e diltiazem 2% manipulados.
+- consentimento-informado: STF 2024 (Temas 952 e 1.069) e Res. CFM 2.232/2019 — revisão jurídica.
+- Fontes de memória: ASCRS 2023, HerniaSurge 2023, WSES 2022 (isquemia mesentérica).
+### Neurologia e infectologia (15 fichas)
+- raiva-profilaxia: NT 8/2022 não aberta na íntegra; confirmado por fontes secundárias (4 doses D0/3/7/14, IM ou ID 2 × 0,1 mL, IGHAR 20 UI/kg, SAR 40 UI/kg, soro até D7). Sem regra fixa para sobra de soro, reexposição e exposição a silvestres/herbívoros.
+- malaria: possível 3ª ed. do Guia MS (2026) com G6PD obrigatório e tafenoquina ≥ 2 anos — não confirmado; primaquina gametocitocida, ajuste > 70 kg, gestante P. vivax e lâminas de cura remetidos ao Guia.
+- chikungunya-zika: prednisona subaguda sem número; hidroxicloroquina 5 mg/kg/dia (máx. 400) de fluxograma de MG 2025; corte de microcefalia 31,9/31,5 cm.
+- hiv-infeccao: PCDT "2023/2024"; ataque da PrEP 2 comprimidos; genotipagem; TARV em 2 semanas na TB; rifapentina x dolutegravir.
+- avc-hemorragico: CCP por INR (bula Kcentra); metoprolol/nitroprussiato no lugar de labetalol/nicardipina.
+- hemorragia-subaracnoidea: PAS < 160 como prática comum.
+- delirium: haloperidol no idoso ≤ 3–5 mg/dia (máx. 3 mg/24 h na prescrição) — convenção.
+- crise-miastenica: prednisona até 1 mg/kg (máx. 60–80 mg); piridostigmina ~480 mg/dia.
+- hipertensao-intracraniana: NaCl 3% (conferido: 445 mL SF + 55 mL NaCl 20%); dexametasona pediátrica.
+- antibioticoterapia-racional: tabela de ajuste renal (pip-tazo em diálise, levofloxacino, SMX-TMP).
+- deterioracao-clinica: NEWS2 completo; sem MEWS/PEWS numérico.
+- leptospirose: penicilina cristalina 50.000–100.000 UI/kg/dia e ceftriaxona 80–100 mg/kg/dia pediátricas.
+- fasciite-necrosante: imunoglobulina IV sem dose.
+### Reumato, alergia, dermato grave, saúde mental, toxicologia e ambiental (19 fichas)
+- angioedema: icatibanto off-label no angioedema por IECA; doses pediátricas da bula europeia; plasma 2 unidades.
+- artrite-septica: cefalexina pediátrica 75–100 mg/kg/dia (IDSA 2023); duração 4 semanas adulto / 10–14 dias criança.
+- vasculites: metilprednisolona 500–1.000 mg na ACG com sintoma visual; prednisona 40–60 mg sem. Sem ficha de Kawasaki (resumo na ficha).
+- lupus-grave: prednisona após pulso; IGIV 1 g/kg/dia por 2 dias; PCDT LES sem ano.
+- poliartralgia-febril: prednisona 0,5 mg/kg/dia por até 3 semanas; teto de 40 mg incerto (MS 2017).
+- reacao-adversa-medicamento: diretriz BAD DRESS 2024 (existência/ano); RegiSCAR de memória.
+- sjs-net: ciclosporina 3–5 mg/kg/dia por 7–10 dias; volume ~2 mL/kg × % SC descolada.
+- agitacao-psicomotora: haloperidol até 20 mg/24 h; midazolam IM 5–15 mg.
+- sindrome-serotoninergica: ciproeptadina com disponibilidade limitada.
+- sindrome-neuroleptica-maligna: bromocriptina até 45 mg/dia; dantroleno 1–2,5 mg/kg até 10 mg/kg/dia.
+- abstinencia-alcoolica-grave: fenobarbital sem dose; tiamina 500 mg IV 8/8 h por 3 dias.
+- hipotermia: ERC 2021 (até 3 choques, adrenalina suspensa < 30 °C).
+- afogamento: mortalidade por grau de Szpilman; fonte SOBRASA sem ano.
+- morte-encefalica: PAM mínima por idade e intervalos (CFM 2.173/2017) — conferir no texto; manutenção do doador (vasopressina pediátrica, desmopressina, metilprednisolona 15 mg/kg).
+- hipertermia-intermacao: guia MS calor extremo sem ano.
+- violencia-interpessoal: Leis 13.931/2019, 10.741/2003 e 13.146/2015 — revisão jurídica.
+
 ## Fichas criadas em 24/10/2026 (sem revisão automática independente)
 
 Estas 13 fichas foram escritas sem acesso às diretrizes originais nem segundo revisor. Revisar inteiras, com atenção a doses, metas e critérios de encaminhamento:

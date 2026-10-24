@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:opsz,wght@6..12,600;6..12,800&family=Caveat:wght@500&family=IBM+Plex+Mono:wght@500;600&display=swap">
-  <link rel="stylesheet" href="css/estilo.css?v=1400104e">
+  <link rel="stylesheet" href="css/estilo.css?v=9aaa6e45">
 </head>
 <body>
   <div class="shell">
@@ -54,13 +54,18 @@
   </div>
 
   <!-- 1. Registro (precisa vir antes das fichas) -->
-  <script src="js/registro.js?v=985bd689"></script>
+  <script src="js/registro.js?v=802a6683"></script>
 
   <!-- 2. Fichas: geradas por "node ferramentas/gerar-indice.js". Não edite à mão entre os marcadores. -->
   <!-- FICHAS:INICIO -->
   <!-- Emergência e suporte de vida -->
+  <script src="fichas/emergencia/afogamento.js?v=42110899"></script>
   <script src="fichas/emergencia/choque.js?v=958d0f2d"></script>
   <script src="fichas/emergencia/crianca-grave.js?v=39886d3e"></script>
+  <script src="fichas/emergencia/deterioracao-clinica.js?v=6ecc0d7d"></script>
+  <script src="fichas/emergencia/hipertermia-intermacao.js?v=72f40f48"></script>
+  <script src="fichas/emergencia/hipotermia.js?v=5bcee4ec"></script>
+  <script src="fichas/emergencia/morte-encefalica.js?v=58176d31"></script>
   <script src="fichas/emergencia/ovace.js?v=84ef2183"></script>
   <script src="fichas/emergencia/oxigenoterapia.js?v=75a0c051"></script>
   <script src="fichas/emergencia/pcr-adulto.js?v=e383dda7"></script>
@@ -71,52 +76,81 @@
   <script src="fichas/emergencia/sequencia-rapida-intubacao.js?v=53d4082e"></script>
   <script src="fichas/emergencia/ventilacao-mecanica.js?v=956a54e7"></script>
   <!-- Cardiologia -->
+  <script src="fichas/cardiologia/bradicardias.js?v=d6574914"></script>
   <script src="fichas/cardiologia/chagas-cronica.js?v=bfe7f429"></script>
   <script src="fichas/cardiologia/dac-cronica.js?v=ef9318c1"></script>
   <script src="fichas/cardiologia/dislipidemia.js?v=9f9f2dff"></script>
+  <script src="fichas/cardiologia/dispositivos-cardiacos.js?v=72f7cc1b"></script>
   <script src="fichas/cardiologia/dor-toracica-ubs.js?v=57a1f73d"></script>
-  <script src="fichas/cardiologia/fibrilacao-atrial.js?v=ff39ca1f"></script>
+  <script src="fichas/cardiologia/ecg-interpretacao.js?v=0cbad63a"></script>
+  <script src="fichas/cardiologia/endocardite.js?v=36eb395f"></script>
+  <script src="fichas/cardiologia/fibrilacao-atrial.js?v=c58891e5"></script>
   <script src="fichas/cardiologia/has-descompensada.js?v=a1e5de2f"></script>
   <script src="fichas/cardiologia/has-emerg.js?v=7a19f453"></script>
   <script src="fichas/cardiologia/has-ubs.js?v=26b91a28"></script>
   <script src="fichas/cardiologia/ic-cronica.js?v=db224af8"></script>
   <script src="fichas/cardiologia/ic-descompensada.js?v=52417856"></script>
   <script src="fichas/cardiologia/insuficiencia-venosa.js?v=43272411"></script>
+  <script src="fichas/cardiologia/miocardite.js?v=321e7648"></script>
+  <script src="fichas/cardiologia/pericardite-tamponamento.js?v=ac986e99"></script>
   <script src="fichas/cardiologia/sca.js?v=2fd2dace"></script>
+  <script src="fichas/cardiologia/sincope.js?v=1c38e8b9"></script>
+  <script src="fichas/cardiologia/sindrome-aortica-aguda.js?v=49e21e03"></script>
+  <script src="fichas/cardiologia/taquicardias.js?v=55dddd65"></script>
+  <script src="fichas/cardiologia/tvp.js?v=378f8630"></script>
   <!-- Pneumologia -->
   <script src="fichas/pneumologia/asma-manutencao.js?v=a409c3ed"></script>
   <script src="fichas/pneumologia/asma-ps.js?v=6f622590"></script>
   <script src="fichas/pneumologia/asma-ubs.js?v=b51c3f68"></script>
+  <script src="fichas/pneumologia/derrame-pleural.js?v=9263b4de"></script>
+  <script src="fichas/pneumologia/dispneia-aguda.js?v=d83e19dc"></script>
   <script src="fichas/pneumologia/dpoc-exacerbacao.js?v=9338cfca"></script>
   <script src="fichas/pneumologia/dpoc.js?v=4dca7c83"></script>
+  <script src="fichas/pneumologia/hemoptise.js?v=078447b6"></script>
+  <script src="fichas/pneumologia/insuficiencia-respiratoria-aguda.js?v=56d9f569"></script>
   <script src="fichas/pneumologia/pneumonia.js?v=679f6a8c"></script>
+  <script src="fichas/pneumologia/pneumotorax.js?v=24babe3e"></script>
   <script src="fichas/pneumologia/tep.js?v=351d8d08"></script>
   <script src="fichas/pneumologia/tosse-persistente.js?v=6c94d740"></script>
+  <script src="fichas/pneumologia/vni.js?v=18cfd470"></script>
   <!-- Neurologia -->
+  <script src="fichas/neurologia/avc-hemorragico.js?v=a5fa1dab"></script>
   <script src="fichas/neurologia/avc-prevencao-secundaria.js?v=aed9fcf9"></script>
   <script src="fichas/neurologia/avc.js?v=3df1ef1b"></script>
   <script src="fichas/neurologia/cefaleia-ps.js?v=6954b4ce"></script>
   <script src="fichas/neurologia/convulsao.js?v=073d6912"></script>
+  <script src="fichas/neurologia/crise-miastenica.js?v=d414295e"></script>
+  <script src="fichas/neurologia/delirium.js?v=c59dca77"></script>
   <script src="fichas/neurologia/demencia.js?v=611bc175"></script>
   <script src="fichas/neurologia/enxaqueca.js?v=815336ba"></script>
   <script src="fichas/neurologia/epilepsia.js?v=f888f4e0"></script>
+  <script src="fichas/neurologia/guillain-barre.js?v=44755ea7"></script>
+  <script src="fichas/neurologia/hemorragia-subaracnoidea.js?v=ec893d61"></script>
+  <script src="fichas/neurologia/hipertensao-intracraniana.js?v=8691cc28"></script>
   <script src="fichas/neurologia/neuropatia-periferica.js?v=947b0e1b"></script>
+  <script src="fichas/neurologia/rebaixamento-consciencia.js?v=7d7bce43"></script>
   <script src="fichas/neurologia/vertigem.js?v=f52dfcc0"></script>
   <!-- Infectologia -->
   <script src="fichas/infectologia/cervicite-uretrite.js?v=96df4457"></script>
+  <script src="fichas/infectologia/chikungunya-zika.js?v=c858ab3f"></script>
   <script src="fichas/infectologia/cistite.js?v=e82752bc"></script>
   <script src="fichas/infectologia/covid-19.js?v=0c627443"></script>
   <script src="fichas/infectologia/dengue.js?v=7fb233e0"></script>
   <script src="fichas/infectologia/exantematicas.js?v=d4092011"></script>
+  <script src="fichas/infectologia/fasciite-necrosante.js?v=f17c82e4"></script>
   <script src="fichas/infectologia/hanseniase.js?v=546d25be"></script>
   <script src="fichas/infectologia/hepatites-virais.js?v=626c144a"></script>
+  <script src="fichas/infectologia/hiv-infeccao.js?v=7391aacc"></script>
   <script src="fichas/infectologia/iltb.js?v=4e84ce39"></script>
   <script src="fichas/infectologia/ivas-sinusite.js?v=aebc2f14"></script>
+  <script src="fichas/infectologia/leptospirose.js?v=cbc3a558"></script>
+  <script src="fichas/infectologia/malaria.js?v=d1253726"></script>
   <script src="fichas/infectologia/meningite.js?v=5b1a482f"></script>
   <script src="fichas/infectologia/mononucleose.js?v=4f87bfca"></script>
   <script src="fichas/infectologia/oxiuriase.js?v=49153558"></script>
   <script src="fichas/infectologia/parasitoses-intestinais.js?v=7de0b37d"></script>
   <script src="fichas/infectologia/pep-sexual.js?v=6632a182"></script>
+  <script src="fichas/infectologia/raiva-profilaxia.js?v=17964429"></script>
   <script src="fichas/infectologia/rubeola.js?v=266204bd"></script>
   <script src="fichas/infectologia/sarampo.js?v=ee0ff586"></script>
   <script src="fichas/infectologia/sepse.js?v=47dbe04f"></script>
@@ -130,37 +164,89 @@
   <!-- Endócrino e metabólico -->
   <script src="fichas/endocrinologia/cad-pediatrica.js?v=3171139d"></script>
   <script src="fichas/endocrinologia/cetoacidose.js?v=0403a8ad"></script>
+  <script src="fichas/endocrinologia/coma-mixedematoso.js?v=3e500163"></script>
+  <script src="fichas/endocrinologia/crise-tireotoxica.js?v=a1b2334a"></script>
   <script src="fichas/endocrinologia/diabetes-tipo-2.js?v=77e3168b"></script>
+  <script src="fichas/endocrinologia/disturbios-magnesio.js?v=85dec64a"></script>
+  <script src="fichas/endocrinologia/hipercalcemia.js?v=a3a5d21f"></script>
   <script src="fichas/endocrinologia/hipercalemia.js?v=36b08ca6"></script>
   <script src="fichas/endocrinologia/hiperglicemia.js?v=f67bc860"></script>
+  <script src="fichas/endocrinologia/hipernatremia.js?v=b5a6c9f1"></script>
   <script src="fichas/endocrinologia/hipertireoidismo.js?v=440320e7"></script>
+  <script src="fichas/endocrinologia/hipocalcemia.js?v=00a493a0"></script>
+  <script src="fichas/endocrinologia/hipocalemia.js?v=aa8c54de"></script>
   <script src="fichas/endocrinologia/hipoglicemia.js?v=20c068c7"></script>
+  <script src="fichas/endocrinologia/hiponatremia.js?v=36d67c4c"></script>
   <script src="fichas/endocrinologia/hipotireoidismo.js?v=b4922f10"></script>
+  <script src="fichas/endocrinologia/insuficiencia-adrenal.js?v=a57c1769"></script>
+  <script src="fichas/endocrinologia/insulinoterapia-hospitalar.js?v=982a8e7b"></script>
   <script src="fichas/endocrinologia/obesidade.js?v=b5b48853"></script>
   <script src="fichas/endocrinologia/pe-diabetico.js?v=1a37d877"></script>
   <script src="fichas/endocrinologia/pre-diabetes.js?v=fd62a8da"></script>
   <!-- Ginecologia e obstetrícia -->
+  <script src="fichas/ginecologia-obstetricia/abortamento.js?v=a8b8f2a4"></script>
+  <script src="fichas/ginecologia-obstetricia/alteracoes-liquido-amniotico.js?v=6de98a00"></script>
+  <script src="fichas/ginecologia-obstetricia/amamentacao-problemas.js?v=bed729f2"></script>
   <script src="fichas/ginecologia-obstetricia/amenorreia-secundaria.js?v=5630e14e"></script>
+  <script src="fichas/ginecologia-obstetricia/anemia-gestacao.js?v=c598aa21"></script>
   <script src="fichas/ginecologia-obstetricia/anticoncepcao.js?v=6434882a"></script>
+  <script src="fichas/ginecologia-obstetricia/asma-gestacao.js?v=d426f597"></script>
+  <script src="fichas/ginecologia-obstetricia/bartholinite.js?v=cdaab335"></script>
   <script src="fichas/ginecologia-obstetricia/candidiase-vulvovaginal.js?v=780eac9c"></script>
+  <script src="fichas/ginecologia-obstetricia/cesariana-parto-instrumental.js?v=7dde1f5c"></script>
   <script src="fichas/ginecologia-obstetricia/climaterio.js?v=fd1ecc67"></script>
+  <script src="fichas/ginecologia-obstetricia/consulta-puerperal.js?v=d48132a2"></script>
+  <script src="fichas/ginecologia-obstetricia/corioamnionite.js?v=3ae40a42"></script>
+  <script src="fichas/ginecologia-obstetricia/corpo-estranho-vaginal.js?v=6b05ad05"></script>
   <script src="fichas/ginecologia-obstetricia/diabetes-gestacao.js?v=aac7c999"></script>
   <script src="fichas/ginecologia-obstetricia/dip.js?v=6deb16fb"></script>
   <script src="fichas/ginecologia-obstetricia/dismenorreia.js?v=a7920d88"></script>
+  <script src="fichas/ginecologia-obstetricia/distocias.js?v=2aef4e01"></script>
+  <script src="fichas/ginecologia-obstetricia/doenca-trofoblastica.js?v=2e97e959"></script>
+  <script src="fichas/ginecologia-obstetricia/endometriose.js?v=08cf10c6"></script>
   <script src="fichas/ginecologia-obstetricia/exames-prenatal.js?v=9b1c58dc"></script>
+  <script src="fichas/ginecologia-obstetricia/gestante-na-urgencia.js?v=6e5f7f95"></script>
+  <script src="fichas/ginecologia-obstetricia/gravidez-ectopica.js?v=cdb3ecd7"></script>
+  <script src="fichas/ginecologia-obstetricia/hemorragia-pos-parto.js?v=77c3ff4c"></script>
+  <script src="fichas/ginecologia-obstetricia/hepatite-b-gestacao.js?v=b70c2cf0"></script>
   <script src="fichas/ginecologia-obstetricia/hipertensao-gestacao.js?v=9e59a8e8"></script>
+  <script src="fichas/ginecologia-obstetricia/hiv-gestacao.js?v=3dbf96ce"></script>
+  <script src="fichas/ginecologia-obstetricia/incontinencia-urinaria.js?v=0051afc1"></script>
+  <script src="fichas/ginecologia-obstetricia/inducao-parto.js?v=5710b685"></script>
+  <script src="fichas/ginecologia-obstetricia/infeccao-puerperal.js?v=34c3cb54"></script>
+  <script src="fichas/ginecologia-obstetricia/infertilidade.js?v=1c432f29"></script>
+  <script src="fichas/ginecologia-obstetricia/isoimunizacao-rh.js?v=afa599fe"></script>
   <script src="fichas/ginecologia-obstetricia/itu-gestante.js?v=93f97c5b"></script>
+  <script src="fichas/ginecologia-obstetricia/lesoes-precursoras-colo.js?v=d4c4c3b7"></script>
   <script src="fichas/ginecologia-obstetricia/mastalgia.js?v=c44f1eec"></script>
   <script src="fichas/ginecologia-obstetricia/mastite.js?v=970c90ce"></script>
+  <script src="fichas/ginecologia-obstetricia/miomatose.js?v=df52ca40"></script>
   <script src="fichas/ginecologia-obstetricia/nauseas-vomitos-gestacao.js?v=e118a575"></script>
+  <script src="fichas/ginecologia-obstetricia/nodulo-mamario.js?v=19b3e8ea"></script>
+  <script src="fichas/ginecologia-obstetricia/obito-fetal.js?v=e767c97c"></script>
   <script src="fichas/ginecologia-obstetricia/prenatal-baixo-risco.js?v=97a08006"></script>
+  <script src="fichas/ginecologia-obstetricia/prolapso-cordao.js?v=60e4c095"></script>
+  <script src="fichas/ginecologia-obstetricia/prolapso-genital.js?v=d74ebb61"></script>
+  <script src="fichas/ginecologia-obstetricia/restricao-crescimento-fetal.js?v=c9146743"></script>
+  <script src="fichas/ginecologia-obstetricia/rotura-membranas.js?v=ce11092f"></script>
+  <script src="fichas/ginecologia-obstetricia/sangramento-pos-menopausa.js?v=194a57c2"></script>
+  <script src="fichas/ginecologia-obstetricia/sangramento-segunda-metade.js?v=86a09eec"></script>
   <script src="fichas/ginecologia-obstetricia/sangramento-uterino-anormal.js?v=9c508fc8"></script>
+  <script src="fichas/ginecologia-obstetricia/sepse-materna.js?v=4e179e41"></script>
   <script src="fichas/ginecologia-obstetricia/sop.js?v=35f10b62"></script>
   <script src="fichas/ginecologia-obstetricia/suplementacao-gestacao.js?v=a7c5b675"></script>
+  <script src="fichas/ginecologia-obstetricia/tev-gestacao.js?v=50d8db41"></script>
+  <script src="fichas/ginecologia-obstetricia/tireoide-gestacao.js?v=eae130e8"></script>
+  <script src="fichas/ginecologia-obstetricia/torcao-anexial.js?v=4b82b9e9"></script>
+  <script src="fichas/ginecologia-obstetricia/toxoplasmose-gestacao.js?v=a0df4a93"></script>
+  <script src="fichas/ginecologia-obstetricia/trabalho-de-parto.js?v=babb8630"></script>
+  <script src="fichas/ginecologia-obstetricia/trabalho-parto-prematuro.js?v=bf820b2c"></script>
+  <script src="fichas/ginecologia-obstetricia/trauma-gestante.js?v=75192460"></script>
   <script src="fichas/ginecologia-obstetricia/tricomoniase.js?v=0fe1e9b5"></script>
   <script src="fichas/ginecologia-obstetricia/vacinacao-gestacao.js?v=3cfd2088"></script>
   <script src="fichas/ginecologia-obstetricia/vaginose-bacteriana.js?v=57c4df2c"></script>
   <script src="fichas/ginecologia-obstetricia/violencia-sexual.js?v=f6f16308"></script>
+  <script src="fichas/ginecologia-obstetricia/vitalidade-fetal.js?v=c3080b75"></script>
   <script src="fichas/ginecologia-obstetricia/vulvovaginites.js?v=711abff2"></script>
   <!-- Pediatria -->
   <script src="fichas/pediatria/asma-crianca.js?v=683779b1"></script>
@@ -183,15 +269,22 @@
   <script src="fichas/pediatria/refluxo-lactente.js?v=4e8b78b2"></script>
   <script src="fichas/pediatria/sinais-vitais-pediatricos.js?v=34a42f6b"></script>
   <!-- Gastroenterologia -->
+  <script src="fichas/gastroenterologia/cirrose-descompensada.js?v=18ddadce"></script>
   <script src="fichas/gastroenterologia/colica-biliar.js?v=09e48ea1"></script>
   <script src="fichas/gastroenterologia/constipacao.js?v=499aca00"></script>
   <script src="fichas/gastroenterologia/diarreia-adulto.js?v=0817a390"></script>
   <script src="fichas/gastroenterologia/dispepsia.js?v=4194c063"></script>
+  <script src="fichas/gastroenterologia/doenca-inflamatoria-intestinal.js?v=866b6f03"></script>
   <script src="fichas/gastroenterologia/drge.js?v=df655b4f"></script>
+  <script src="fichas/gastroenterologia/hemorragia-digestiva-alta.js?v=89953bcc"></script>
+  <script src="fichas/gastroenterologia/hemorragia-digestiva-baixa.js?v=40b45d61"></script>
   <script src="fichas/gastroenterologia/hemorroidas.js?v=e29cb02b"></script>
+  <script src="fichas/gastroenterologia/hepatite-aguda-insuficiencia-hepatica.js?v=beb81b22"></script>
+  <script src="fichas/gastroenterologia/ictericia.js?v=523e5ce5"></script>
   <script src="fichas/gastroenterologia/intoxicacao-alimentar.js?v=f70fb900"></script>
   <script src="fichas/gastroenterologia/masld.js?v=950446e2"></script>
   <script src="fichas/gastroenterologia/nauseas-vomitos.js?v=269d77c3"></script>
+  <script src="fichas/gastroenterologia/pancreatite-aguda.js?v=c956c017"></script>
   <script src="fichas/gastroenterologia/ulcera-peptica-hpylori.js?v=89e2d03c"></script>
   <!-- Hematologia -->
   <script src="fichas/hematologia/anemia-falciforme.js?v=9a05e6d4"></script>
@@ -199,14 +292,31 @@
   <script src="fichas/hematologia/anemia-ferropriva.js?v=3f86789a"></script>
   <script src="fichas/hematologia/anemia-investigacao.js?v=613f6e70"></script>
   <script src="fichas/hematologia/anticoagulacao-oral.js?v=7c11e0b0"></script>
+  <script src="fichas/hematologia/coagulopatias-urgencia.js?v=1444dbe8"></script>
+  <script src="fichas/hematologia/compressao-medular-maligna.js?v=4e5fbffb"></script>
   <script src="fichas/hematologia/crise-falciforme.js?v=c774f44e"></script>
+  <script src="fichas/hematologia/neutropenia-febril.js?v=08ba0dff"></script>
+  <script src="fichas/hematologia/reacao-transfusional.js?v=d61eda1b"></script>
+  <script src="fichas/hematologia/sindrome-lise-tumoral.js?v=921fd1e4"></script>
+  <script src="fichas/hematologia/sindrome-veia-cava-superior.js?v=fb3aafb2"></script>
+  <script src="fichas/hematologia/trombocitopenia.js?v=a10c2732"></script>
   <!-- Nefrologia -->
+  <script src="fichas/nefrologia/dialise-urgencia.js?v=4cf10240"></script>
   <script src="fichas/nefrologia/doenca-renal-cronica.js?v=7e5f3333"></script>
+  <script src="fichas/nefrologia/lesao-renal-aguda.js?v=c689842d"></script>
+  <script src="fichas/nefrologia/rabdomiolise.js?v=388c17ec"></script>
+  <script src="fichas/nefrologia/sindromes-glomerulares.js?v=0ddc73ea"></script>
   <!-- Urologia e saúde do homem -->
   <script src="fichas/urologia/colica-renal.js?v=de8fb7d0"></script>
+  <script src="fichas/urologia/escroto-agudo.js?v=6229ac49"></script>
+  <script src="fichas/urologia/hematuria.js?v=9fc29923"></script>
   <script src="fichas/urologia/hpb.js?v=ab7864fc"></script>
+  <script src="fichas/urologia/parafimose.js?v=520e682a"></script>
   <script src="fichas/urologia/pielonefrite.js?v=16d7b637"></script>
+  <script src="fichas/urologia/priapismo.js?v=51c8a0fd"></script>
   <script src="fichas/urologia/prostatite.js?v=5d636c71"></script>
+  <script src="fichas/urologia/retencao-urinaria.js?v=63d76436"></script>
+  <script src="fichas/urologia/trauma-genitourinario.js?v=31403ff3"></script>
   <!-- Dermatologia -->
   <script src="fichas/dermatologia/candidiase-cutanea.js?v=2bd40433"></script>
   <script src="fichas/dermatologia/candidiase-oral.js?v=e5c57e95"></script>
@@ -234,6 +344,7 @@
   <script src="fichas/dermatologia/psoriase-leve.js?v=77d48ab1"></script>
   <script src="fichas/dermatologia/queimadura-solar.js?v=cd34e755"></script>
   <script src="fichas/dermatologia/sindrome-pele-escaldada.js?v=65ed53f0"></script>
+  <script src="fichas/dermatologia/sjs-net.js?v=9e33de40"></script>
   <script src="fichas/dermatologia/tinea-capitis.js?v=2de0b099"></script>
   <script src="fichas/dermatologia/tineas.js?v=f6d7d85e"></script>
   <script src="fichas/dermatologia/verruga.js?v=31637236"></script>
@@ -247,51 +358,135 @@
   <script src="fichas/oftalmo-otorrino/otite-externa.js?v=c604c70a"></script>
   <script src="fichas/oftalmo-otorrino/rinite-alergica.js?v=98eadf8e"></script>
   <!-- Ortopedia, reumatologia e dor -->
+  <script src="fichas/musculoesqueletico/artrite-septica.js?v=704dfd92"></script>
   <script src="fichas/musculoesqueletico/cervicalgia-dorsalgia.js?v=cbb2ceeb"></script>
   <script src="fichas/musculoesqueletico/dor-musculoesqueletica.js?v=4b4aa4f4"></script>
   <script src="fichas/musculoesqueletico/fibromialgia.js?v=d86308bb"></script>
   <script src="fichas/musculoesqueletico/gota.js?v=2b4de0b5"></script>
   <script src="fichas/musculoesqueletico/lombalgia.js?v=f93d744c"></script>
+  <script src="fichas/musculoesqueletico/lupus-grave.js?v=da693076"></script>
   <script src="fichas/musculoesqueletico/osteoartrite.js?v=a6393e7a"></script>
   <script src="fichas/musculoesqueletico/osteoporose.js?v=b0896d83"></script>
+  <script src="fichas/musculoesqueletico/poliartralgia-febril.js?v=35917f36"></script>
+  <script src="fichas/musculoesqueletico/vasculites.js?v=97903c62"></script>
   <!-- Saúde mental -->
+  <script src="fichas/saude-mental/abstinencia-alcoolica-grave.js?v=38971575"></script>
+  <script src="fichas/saude-mental/agitacao-psicomotora.js?v=4b6fad7d"></script>
   <script src="fichas/saude-mental/crise-ansiedade.js?v=74039c86"></script>
   <script src="fichas/saude-mental/depressao-ansiedade.js?v=7f33d07a"></script>
   <script src="fichas/saude-mental/insonia.js?v=5fcf1be0"></script>
+  <script src="fichas/saude-mental/risco-suicida.js?v=00511df4"></script>
+  <script src="fichas/saude-mental/sindrome-neuroleptica-maligna.js?v=0eba5a93"></script>
+  <script src="fichas/saude-mental/transtornos-puerperais.js?v=e2919c58"></script>
   <script src="fichas/saude-mental/uso-alcool.js?v=f52608c6"></script>
   <!-- Intoxicações e acidentes -->
   <script src="fichas/toxicologia/abelhas-formigas.js?v=89184041"></script>
   <script src="fichas/toxicologia/antidotos.js?v=3253333a"></script>
   <script src="fichas/toxicologia/araneismo.js?v=1c84e8e9"></script>
   <script src="fichas/toxicologia/escorpionismo.js?v=bfd95b5c"></script>
+  <script src="fichas/toxicologia/intoxicacao-benzodiazepinicos.js?v=d0049349"></script>
+  <script src="fichas/toxicologia/intoxicacao-opioides.js?v=ef9b95d5"></script>
   <script src="fichas/toxicologia/intoxicacoes-exogenas.js?v=6fc88c96"></script>
   <script src="fichas/toxicologia/ofidismo.js?v=2d55e015"></script>
+  <script src="fichas/toxicologia/sindrome-serotoninergica.js?v=7e476d6e"></script>
   <!-- Trauma -->
+  <script src="fichas/trauma/amputacao-traumatica.js?v=eb08b84d"></script>
+  <script src="fichas/trauma/choque-hemorragico.js?v=2e3b48b0"></script>
+  <script src="fichas/trauma/fratura-exposta.js?v=0af93172"></script>
+  <script src="fichas/trauma/mordeduras.js?v=f1e168fb"></script>
+  <script src="fichas/trauma/politrauma-abcde.js?v=e410584a"></script>
   <script src="fichas/trauma/queimaduras.js?v=3839db70"></script>
+  <script src="fichas/trauma/sindrome-compartimental.js?v=59e494aa"></script>
   <script src="fichas/trauma/tce-crianca.js?v=fa84ef1c"></script>
   <script src="fichas/trauma/tce-leve.js?v=e6858c05"></script>
   <script src="fichas/trauma/tce-moderado-grave.js?v=f96400b5"></script>
+  <script src="fichas/trauma/transferencia-trauma.js?v=cb86be95"></script>
+  <script src="fichas/trauma/trauma-abdominal.js?v=ab949415"></script>
+  <script src="fichas/trauma/trauma-extremidades.js?v=825c2092"></script>
+  <script src="fichas/trauma/trauma-pelve.js?v=9e45a1c4"></script>
+  <script src="fichas/trauma/trauma-raquimedular.js?v=3f720282"></script>
+  <script src="fichas/trauma/trauma-torax.js?v=f4a459ba"></script>
   <!-- Alergia e imunologia -->
   <script src="fichas/alergia/anafilaxia.js?v=f58a8579"></script>
+  <script src="fichas/alergia/angioedema.js?v=3fa370c7"></script>
+  <script src="fichas/alergia/reacao-adversa-medicamento.js?v=79408744"></script>
   <script src="fichas/alergia/urticaria.js?v=0c6a4da1"></script>
+  <!-- Cirurgia geral e perioperatório -->
+  <script src="fichas/cirurgia/abdome-agudo-perfurativo.js?v=31ff6ed5"></script>
+  <script src="fichas/cirurgia/abscesso-intra-abdominal.js?v=aaabd7b0"></script>
+  <script src="fichas/cirurgia/apendicite.js?v=c07aa66e"></script>
+  <script src="fichas/cirurgia/avaliacao-pre-operatoria.js?v=f64c579b"></script>
+  <script src="fichas/cirurgia/colecistite-colangite.js?v=09a48088"></script>
+  <script src="fichas/cirurgia/corpo-estranho.js?v=25c6761e"></script>
+  <script src="fichas/cirurgia/deiscencia-evisceracao.js?v=eecffbe8"></script>
+  <script src="fichas/cirurgia/diverticulite.js?v=4c77f1b1"></script>
+  <script src="fichas/cirurgia/doencas-anorretais.js?v=18eb144a"></script>
+  <script src="fichas/cirurgia/dor-abdominal-aguda.js?v=8fadb7c4"></script>
+  <script src="fichas/cirurgia/drenos-cuidados.js?v=c5307cc7"></script>
+  <script src="fichas/cirurgia/gangrena-fournier.js?v=a6cb408c"></script>
+  <script src="fichas/cirurgia/hernias-complicadas.js?v=34dd9cae"></script>
+  <script src="fichas/cirurgia/infeccao-sitio-cirurgico.js?v=17bd8504"></script>
+  <script src="fichas/cirurgia/isquemia-aguda-membro.js?v=0d86df86"></script>
+  <script src="fichas/cirurgia/isquemia-mesenterica.js?v=41073308"></script>
+  <script src="fichas/cirurgia/obstrucao-intestinal.js?v=a557623f"></script>
+  <script src="fichas/cirurgia/pos-operatorio-intercorrencias.js?v=a18da059"></script>
+  <script src="fichas/cirurgia/profilaxias-perioperatorias.js?v=4e56660b"></script>
+  <script src="fichas/cirurgia/ruptura-esofagica.js?v=93c19c12"></script>
+  <script src="fichas/cirurgia/sindrome-compartimental-abdominal.js?v=b7b951f2"></script>
   <!-- Prevenção e rastreamento -->
   <script src="fichas/prevencao/rastreio-cancer.js?v=f5d29ae8"></script>
   <script src="fichas/prevencao/tabagismo.js?v=1d56723a"></script>
   <script src="fichas/prevencao/vacinacao-adulto.js?v=e634df60"></script>
+  <script src="fichas/prevencao/violencia-interpessoal.js?v=8dad69a6"></script>
   <!-- Prescrição e referências -->
   <script src="fichas/referencia/analgesicos-antitermicos.js?v=7a3d4002"></script>
   <script src="fichas/referencia/anti-histaminicos.js?v=587847f8"></script>
+  <script src="fichas/referencia/antibioticoterapia-racional.js?v=6f34dc4f"></script>
+  <script src="fichas/referencia/comunicacao-mas-noticias.js?v=19266153"></script>
+  <script src="fichas/referencia/consentimento-informado.js?v=d4c3133b"></script>
+  <script src="fichas/referencia/exames-laboratoriais.js?v=3b453fbd"></script>
+  <script src="fichas/referencia/gasometria-acido-base.js?v=af04496d"></script>
   <script src="fichas/referencia/hidratacao-venosa.js?v=1e439fbe"></script>
+  <script src="fichas/referencia/imagem-interpretacao.js?v=d7810df6"></script>
+  <script src="fichas/referencia/medicamentos-gestacao-lactacao.js?v=e93ddb6f"></script>
+  <script src="fichas/referencia/notificacao-compulsoria.js?v=bb7ecbd0"></script>
+  <script src="fichas/referencia/raciocinio-clinico.js?v=c4133460"></script>
+  <script src="fichas/referencia/seguranca-paciente.js?v=c4e9cffa"></script>
   <script src="fichas/referencia/vias-administracao.js?v=c14c9072"></script>
+  <!-- Procedimentos -->
+  <script src="fichas/procedimentos/acesso-intraosseo.js?v=1462ccaa"></script>
+  <script src="fichas/procedimentos/acesso-venoso-periferico.js?v=614b3c15"></script>
+  <script src="fichas/procedimentos/administracao-medicamentos.js?v=0b414f9e"></script>
+  <script src="fichas/procedimentos/anestesia-local.js?v=5e8d45f5"></script>
+  <script src="fichas/procedimentos/controle-hemorragia-torniquete.js?v=8718a83a"></script>
+  <script src="fichas/procedimentos/curativos-desbridamento.js?v=ec06af21"></script>
+  <script src="fichas/procedimentos/desfibrilacao-cardioversao.js?v=bc28cee4"></script>
+  <script src="fichas/procedimentos/distocia-ombro.js?v=be099b11"></script>
+  <script src="fichas/procedimentos/drenagem-abscesso.js?v=71d98976"></script>
+  <script src="fichas/procedimentos/drenagem-bartholin.js?v=6777ea07"></script>
+  <script src="fichas/procedimentos/drenagem-toracica.js?v=ea6e0d2d"></script>
+  <script src="fichas/procedimentos/exame-especular-coleta.js?v=181be28c"></script>
+  <script src="fichas/procedimentos/imobilizacao-talas.js?v=67480e6c"></script>
+  <script src="fichas/procedimentos/insercao-diu.js?v=4bfdf75e"></script>
+  <script src="fichas/procedimentos/paracentese.js?v=77c2fcee"></script>
+  <script src="fichas/procedimentos/parto-vaginal.js?v=a58e3eda"></script>
+  <script src="fichas/procedimentos/puncao-arterial-gasometria.js?v=3a9cb0f0"></script>
+  <script src="fichas/procedimentos/puncao-lombar.js?v=f833f08c"></script>
+  <script src="fichas/procedimentos/reducao-luxacao-ombro.js?v=0a65ad38"></script>
+  <script src="fichas/procedimentos/revisao-canal-episiorrafia.js?v=d11c0a5f"></script>
+  <script src="fichas/procedimentos/sondagem-nasogastrica.js?v=3c056dcc"></script>
+  <script src="fichas/procedimentos/sondagem-vesical.js?v=5d8da170"></script>
+  <script src="fichas/procedimentos/sutura.js?v=2279da8c"></script>
+  <script src="fichas/procedimentos/toracocentese.js?v=c3d730a6"></script>
   <!-- FICHAS:FIM -->
 
   <!-- 3. Aplicação -->
   <script src="js/perfil.js?v=7af752de"></script>
-  <script src="js/medicamentos.js?v=9483198c"></script>
+  <script src="js/medicamentos.js?v=0bb53255"></script>
   <script src="js/scores.js?v=cfdd27b1"></script>
   <script src="js/calculadoras.js?v=e07ed90f"></script>
-  <script src="js/documentos.js?v=2f193bf1"></script>
+  <script src="js/documentos.js?v=feb6c2ba"></script>
   <script src="js/pacientes.js?v=54d45c4f"></script>
-  <script src="js/app.js?v=624ebde3"></script>
+  <script src="js/app.js?v=ac2cd2cf"></script>
 </body>
 </html>

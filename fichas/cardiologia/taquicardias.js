@@ -168,7 +168,7 @@ registrarFicha({
     {
       droga: "Cardioversão elétrica sincronizada",
       linha: "l1",
-      dose: "QRS estreito regular (TSV) e flutter: 50–100 J · QRS largo regular (TV monomórfica): 100 J · FA: ver ficha fibrilacao-atrial (AHA 2025 sugere ≥ 200 J bifásico) · subir a energia se falhar",
+      dose: "QRS estreito regular (TSV) e flutter: 50–100 J · QRS largo regular (TV monomórfica): 100 J · FA: ver ficha fibrilacao-atrial (iniciar com ≥ 200 J bifásico, AHA 2025) · subir a energia se falhar",
       via: "Pás/eletrodos adesivos (anterolateral ou anteroposterior)",
       intervalo: "Escalonar energia",
       duracao: "—",

@@ -20,7 +20,7 @@ registrarFicha({
   ],
   condutaInicial: [
     "ECG de 12 derivações, monitor, acesso",
-    "Instável: sedação + cardioversão sincronizada 120–200 J bifásico",
+    "Instável: sedação + cardioversão sincronizada, bifásico iniciando com ≥ 200 J (AHA 2025)",
     "Estável: tratar a causa e controlar frequência (alvo inicial < 110 bpm)",
     "Definir tempo de início (≤ 24 h, 24–48 h, > 48 h ou desconhecido)",
     "Calcular CHA₂DS₂-VA e risco de sangramento; iniciar anticoagulação quando indicada"
@@ -90,7 +90,7 @@ registrarFicha({
     {
       droga: "Cardioversão elétrica sincronizada",
       linha: "l1",
-      dose: "120–200 J bifásico (aumentar se falhar)",
+      dose: "Bifásico: iniciar com ≥ 200 J (AHA 2025; antes 120–200 J), aumentar até a máxima se falhar",
       via: "Pás anterolateral ou anteroposterior",
       intervalo: "Até 3 tentativas",
       duracao: "—",
@@ -209,8 +209,9 @@ registrarFicha({
   fontes: [
     "SOBRAC/SBC — Diretriz Brasileira de Fibrilação Atrial (Arq Bras Cardiol, 2025)",
     "ESC/EACTS 2024 Guidelines for the management of atrial fibrillation (CHA₂DS₂-VA; cardioversão > 24 h só após 3 semanas de anticoagulação ou ETE)",
-    "ACC/AHA/ACCP/HRS 2023 Guideline for the Diagnosis and Management of Atrial Fibrillation"
+    "ACC/AHA/ACCP/HRS 2023 Guideline for the Diagnosis and Management of Atrial Fibrillation",
+    "AHA 2025 Guidelines for CPR and ECC — Adult Advanced Life Support (energia da cardioversão)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.1"
+  revisao: "2026-10-24",
+  versao: "1.2"
 });
