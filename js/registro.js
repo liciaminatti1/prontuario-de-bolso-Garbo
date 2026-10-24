@@ -27,20 +27,24 @@ const ESPECIALIDADES = {
   "toxicologia": "Intoxicações e acidentes",
   "trauma": "Trauma",
   "alergia": "Alergia e imunologia",
+  "cirurgia": "Cirurgia geral e perioperatório",
   "prevencao": "Prevenção e rastreamento",
-  "referencia": "Prescrição e referências"
+  "referencia": "Prescrição e referências",
+  "procedimentos": "Procedimentos"
 };
 
 const CAMINHOS = ["ubs", "ps"];
 const PUBLICOS = ["adulto", "pediatrico", "ambos"];
-const FORMATOS = ["completo", "curto"];
+const FORMATOS = ["completo", "curto", "procedimento"];
 const LINHAS = ["l1", "alt", "adj", "ci"];
 
 const CAMPOS_COMUNS = ["id", "especialidade", "caminho", "publico", "titulo", "resumo", "alarmes",
-  "prescricao", "orientacoesRetorno", "fontes", "revisao", "versao"];
+  "orientacoesRetorno", "fontes", "revisao", "versao"];
 const CAMPOS_POR_FORMATO = {
-  completo: ["critico", "condutaInicial", "fataisExcluir", "proximaDecisao", "clinica", "exames", "tratamento", "destino"],
-  curto: ["conduta"]
+  completo: ["prescricao", "critico", "condutaInicial", "fataisExcluir", "proximaDecisao", "clinica", "exames", "tratamento", "destino"],
+  curto: ["prescricao", "conduta"],
+  // Procedimento: prescrição é opcional; passos = [{ etapa, itens: [] }].
+  procedimento: ["indicacoes", "contraindicacoes", "materiais", "checagemAntes", "passos", "conferirDepois", "complicacoes", "documentacao"]
 };
 
 const ehLista = v => Array.isArray(v) && v.every(x => typeof x === "string");
@@ -57,12 +61,18 @@ function validarFicha(f, jaRegistradas = window.FICHAS) {
   if (f.id && !/^[a-z0-9-]+$/.test(f.id)) erros.push("id deve ter só letras minúsculas, números e hífen");
   if (jaRegistradas.some(x => x.id === f.id)) erros.push(`id "${f.id}" repetido`);
   if (f.revisao && !/^\d{4}-\d{2}-\d{2}$/.test(f.revisao)) erros.push("revisao deve ser AAAA-MM-DD");
-  for (const c of ["alarmes", "orientacoesRetorno", "fontes", "conduta", "condutaInicial", "fataisExcluir", "encaminhar", "diferenciais"])
+  for (const c of ["alarmes", "orientacoesRetorno", "fontes", "conduta", "condutaInicial", "fataisExcluir", "encaminhar", "diferenciais",
+    "indicacoes", "contraindicacoes", "materiais", "checagemAntes", "conferirDepois", "complicacoes", "relacionadas"])
     if (f[c] !== undefined && !ehLista(f[c])) erros.push(`"${c}" deve ser uma lista de textos`);
   if (formato === "curto" && f.exames !== undefined && !ehLista(f.exames)) erros.push(`no formato curto, "exames" é uma lista de textos`);
   if (f.prescricao !== undefined) {
     const p = f.prescricao;
     if (typeof p !== "object" || (!p.ambulatorial && !p.hospitalar)) erros.push(`"prescricao" precisa de "ambulatorial" e/ou "hospitalar"`);
+  }
+  if (formato === "procedimento") {
+    if (!Array.isArray(f.passos) || !f.passos.length || f.passos.some(p => !p.etapa || !ehLista(p.itens) || !p.itens.length))
+      erros.push(`"passos" deve ser uma lista de { etapa, itens: [textos] }`);
+    if (f.documentacao !== undefined && typeof f.documentacao !== "string") erros.push(`"documentacao" deve ser texto`);
   }
   (f.tratamento || []).forEach((t, i) => {
     if (!LINHAS.includes(t.linha)) erros.push(`tratamento[${i}].linha deve ser ${LINHAS.join(", ")}`);

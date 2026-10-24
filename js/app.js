@@ -3,7 +3,7 @@
    + conteúdo (#app). A navegação usa o hash da URL: #fichas, #favoritos, #calculadoras, #sca...
    Documentos: js/documentos.js · calculadoras e segurança: js/calculadoras.js. */
 
-const VERSAO = "3.0";
+const VERSAO = "3.1";
 const $app = document.getElementById("app");
 const $busca = document.getElementById("q");
 const estado = { caminho: "todos", publico: "todos", especialidade: "todas", busca: "" };
@@ -58,13 +58,15 @@ const ICONES = {
   trauma: '<path d="M12 2v6M12 16v6M2 12h6M16 12h6"/><circle cx="12" cy="12" r="3"/>',
   seta: '<path d="m9 6 6 6-6 6"/>',
   lampada: '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/>',
+  bisturi: '<path d="M3 21 14 10l3 3L8 21z"/><path d="m14 10 5.5-5.5a2.1 2.1 0 0 1 3 3L17 13"/>',
   usuario: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>'
 };
 const ICONE_ESP = {
   emergencia: "ambulancia", cardiologia: "coracao", pneumologia: "pulmao", neurologia: "cerebro", infectologia: "virus",
   endocrinologia: "gota", "ginecologia-obstetricia": "feminino", pediatria: "bebe", gastroenterologia: "estomago",
   hematologia: "gota", urologia: "rim", nefrologia: "rim", dermatologia: "pele", "oftalmo-otorrino": "olho", musculoesqueletico: "osso",
-  "saude-mental": "mente", toxicologia: "alerta", trauma: "trauma", alergia: "escudo", prevencao: "escudo", referencia: "pilula"
+  "saude-mental": "mente", toxicologia: "alerta", trauma: "trauma", alergia: "escudo", prevencao: "escudo", referencia: "pilula",
+  cirurgia: "bisturi", procedimentos: "bisturi"
 };
 const ic = (nome, cls = "ic") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONES[nome] || ""}</svg>`;
 
@@ -115,7 +117,7 @@ function copiar(btn) {
 
 /* ---------- menu lateral ---------- */
 function desenharMenu() {
-  const usadas = Object.keys(ESPECIALIDADES).filter(k => FICHAS.some(f => f.especialidade === k));
+  const usadas = Object.keys(ESPECIALIDADES).filter(k => k !== "procedimentos" && FICHAS.some(f => f.especialidade === k));
   const item = (rota, icone, rotulo, extra = "") => `<a class="nav-item" href="#${rota}" data-rota="${rota}" ${extra}>${ic(icone)}<span>${rotulo}</span></a>`;
   document.getElementById("menu").innerHTML = `
     <nav aria-label="Principal">
@@ -126,6 +128,7 @@ function desenharMenu() {
       ${item("medicamentos", "pilula", "Medicamentos")}
       ${item("calculadoras", "calculadora", "Calculadoras")}
       ${item("documentos", "documento", "Documentos")}
+      <a class="nav-item" href="#fichas" data-esp="procedimentos">${ic("bisturi")}<span>Procedimentos</span></a>
     </nav>
     <p class="nav-titulo">Especialidades</p>
     <nav aria-label="Especialidades" class="nav-esp">
@@ -279,6 +282,7 @@ function telaInicio() {
         ${card("calculadoras", "calculadora", "Calculadoras", "Função renal, peso, hidratação e escores", "c3")}
         ${card("documentos", "documento", "Documentos", "Atestado, receita, admissão e evolução", "c4")}
         ${card("pacientes", "usuario", "Pacientes", "Prontuário de acompanhamento com exames, medicações e alertas", "c5")}
+        <a class="mod-card c6" href="#fichas" data-esp-card="procedimentos"><span class="mod-ic">${ic("bisturi")}</span><b>Procedimentos</b><span>Passo a passo, materiais e checagens</span></a>
       </div>
       <section class="painel">
         <h3>Acesso rápido por cenário</h3>
@@ -314,6 +318,9 @@ function telaInicio() {
       <section class="dica">${ic("lampada", "ic dica-ic")}<div><b>Dica do dia</b><p>${dica}</p></div></section>
     </aside>
   </div>`;
+  $app.querySelectorAll("[data-esp-card]").forEach(a => a.onclick = e => {
+    e.preventDefault(); estado.especialidade = a.dataset.espCard; salvar("pb-especialidade", a.dataset.espCard); ir("fichas");
+  });
   $app.querySelectorAll("[data-cen]").forEach(b => b.onclick = () => {
     definirCaminho(b.dataset.cen); estado.especialidade = "todas"; salvar("pb-especialidade", "todas"); ir("fichas");
   });
@@ -406,8 +413,8 @@ function telaFicha(f, modo = "rapida", aba = "clinica") {
   contadorCopia = 0;
   zerarAtualizadores();
   const alertas = contarAlertasFicha(f);
-  if (f.formato === "curto") {
-    $app.innerHTML = `<div class="view">${cabecalhoFicha(f)}${fichaCurta(f)}</div>`;
+  if (f.formato === "curto" || f.formato === "procedimento") {
+    $app.innerHTML = `<div class="view">${cabecalhoFicha(f)}${f.formato === "curto" ? fichaCurta(f) : fichaProcedimento(f)}</div>`;
     ligarSecaoFicha($app);
   } else {
     $app.innerHTML = `<div class="view">${cabecalhoFicha(f)}
@@ -562,6 +569,44 @@ function fichaCurta(f) {
   <div class="dest">${caixas([["ret", "Orientações ao paciente e retorno", f.orientacoesRetorno], ["tx", "Quando encaminhar", f.encaminhar]])}</div>
   ${tabelasHTML(f.tabelas)}
   <details class="bloco-calc gap-top" ${contarAlertasFicha(f) ? "open" : ""}><summary>${ic("calculadora")} Calculadoras e segurança${contarAlertasFicha(f) ? ` <span class="badge">${contarAlertasFicha(f)}</span>` : ""}</summary>${secaoCalculadorasFicha(f)}</details>
+  ${abaFontes(f)}`;
+}
+
+/* Procedimento: listas de checagem marcáveis (não são salvas; servem para conferir na hora). */
+function checklist(arr, prefixo) {
+  return `<ul class="checklist">${(arr || []).map((x, i) =>
+    `<li><label><input type="checkbox" id="${prefixo}-${i}"><span>${esc(x)}</span></label></li>`).join("")}</ul>`;
+}
+
+function fichaProcedimento(f) {
+  const q = (cls, titulo, arr) => arr && arr.length ? `<div class="q ${cls}"><h3>${titulo}</h3><ul>${lista(arr)}</ul></div>` : "";
+  const relacionadas = (f.relacionadas || []).map(fichaPorId).filter(Boolean);
+  const nAlertas = contarAlertasFicha(f);
+  let n = 0;
+  return `${faixaCritica(f)}
+  <div class="quick">
+    ${q("act", "Indicações", f.indicacoes)}
+    ${q("fatal", "Contraindicações", f.contraindicacoes)}
+    ${q("alarm", "Interromper / chamar ajuda se", f.alarmes)}
+  </div>
+  <div class="proc-grid gap-top">
+    <div class="sec card proc-mat"><h3>Materiais</h3>${checklist(f.materiais, `${f.id}-mat`)}</div>
+    <div class="sec card proc-chk"><h3>Conferir antes de começar</h3>${checklist(f.checagemAntes, `${f.id}-antes`)}</div>
+  </div>
+  <div class="sec gap-top"><h3>Passo a passo</h3>
+    ${f.passos.map(p => `<div class="card passo"><div class="card-h"><b>${esc(p.etapa)}</b></div>
+      <ol class="passos" start="${n + 1}">${p.itens.map(x => { n++; return `<li>${esc(x)}</li>`; }).join("")}</ol></div>`).join("")}
+  </div>
+  <div class="proc-grid gap-top">
+    <div class="sec card proc-chk"><h3>Conferir depois</h3>${checklist(f.conferirDepois, `${f.id}-depois`)}</div>
+    <div class="sec card proc-comp"><h3>Complicações e como agir</h3><ul>${lista(f.complicacoes)}</ul></div>
+  </div>
+  ${tabelasHTML(f.tabelas)}
+  <div class="sec gap-top"><h3>Registro no prontuário</h3>${blocoCopiavel(f.documentacao, "Descrição do procedimento")}</div>
+  ${f.prescricao ? `<div class="sec gap-top"><h3>Prescrição</h3>${blocosPrescricao(f)}</div>` : ""}
+  <div class="dest">${caixas([["ret", "Orientações ao paciente e retorno", f.orientacoesRetorno]])}</div>
+  ${relacionadas.length ? `<div class="sec gap-top"><h3>Fichas relacionadas</h3><div class="cen-chips">${relacionadas.map(r => `<a class="cchip" href="#${r.id}">${esc(r.titulo)}</a>`).join("")}</div></div>` : ""}
+  ${nAlertas || medicamentosDaFicha(f).length ? `<details class="bloco-calc gap-top" ${nAlertas ? "open" : ""}><summary>${ic("calculadora")} Calculadoras e segurança${nAlertas ? ` <span class="badge">${nAlertas}</span>` : ""}</summary>${secaoCalculadorasFicha(f)}</details>` : ""}
   ${abaFontes(f)}`;
 }
 

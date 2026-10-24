@@ -240,6 +240,81 @@ ${linhas("R — Pendências / recomendações:", v.pendencias)}
 ${linhas("Se piorar:", v.contingencia)}
 Passado por: ${v.medico || "__________"}${v.crm ? ` (${v.crm})` : ""}
 Recebido por: __________ — confirmar síntese em voz alta.`
+  },
+  {
+    id: "encaminhamento",
+    titulo: "Encaminhamento / referência",
+    desc: "Guia de referência para especialista ou outro serviço, com motivo, resumo clínico e prioridade.",
+    campos: [
+      { id: "paciente", rotulo: "Paciente, idade e sexo" },
+      { id: "documento", rotulo: "Cartão SUS / documento (opcional)" },
+      { id: "destino", rotulo: "Encaminho para", dica: "Ex.: Cardiologia, CAPS, pré-natal de alto risco" },
+      { id: "prioridade", rotulo: "Prioridade", tipo: "select", opcoes: ["Eletivo", "Prioritário", "Urgente (mesmo dia)"] },
+      { id: "motivo", rotulo: "Motivo do encaminhamento / pergunta ao especialista", tipo: "textarea", linhas: 3 },
+      { id: "historia", rotulo: "Resumo clínico (história, exame físico)", tipo: "textarea", linhas: 4 },
+      { id: "exames", rotulo: "Exames realizados (com datas e resultados)", tipo: "textarea", linhas: 3 },
+      { id: "tratamento", rotulo: "Tratamentos já realizados e medicações em uso", tipo: "textarea", linhas: 3 },
+      { id: "hd", rotulo: "Hipótese diagnóstica / CID-10" },
+      { id: "data", rotulo: "Data", tipo: "date", padrao: hojeISO },
+      ...CAMPOS_MEDICO
+    ],
+    gerar: v => `ENCAMINHAMENTO — ${v.destino || "__________"}
+Prioridade: ${v.prioridade}
+
+Paciente: ${v.paciente || "__________"}${v.documento ? `\nDocumento: ${v.documento}` : ""}
+
+${linhas("Motivo do encaminhamento:", v.motivo)}
+${linhas("Resumo clínico:", v.historia)}
+${linhas("Exames:", v.exames)}
+${linhas("Tratamentos e medicações em uso:", v.tratamento)}
+${v.hd ? `Hipótese diagnóstica: ${v.hd}\n` : ""}
+Solicito avaliação e conduta. Peço contrarreferência para seguimento na unidade de origem.
+
+${assinatura(v)}`
+  },
+  {
+    id: "transferencia",
+    titulo: "Relatório de transferência",
+    desc: "Resumo para transferência inter-hospitalar ou regulação: estado atual, o que foi feito e cuidados no transporte.",
+    campos: [
+      { id: "paciente", rotulo: "Paciente, idade e sexo" },
+      { id: "data", rotulo: "Data", tipo: "date", padrao: hojeISO },
+      { id: "hora", rotulo: "Hora", tipo: "time", padrao: horaAgora },
+      { id: "origem", rotulo: "Serviço de origem" },
+      { id: "destino", rotulo: "Serviço de destino e médico que aceitou" },
+      { id: "regulacao", rotulo: "Nº da regulação / senha (se houver)" },
+      { id: "motivo", rotulo: "Motivo da transferência", dica: "Ex.: necessidade de UTI, hemodinâmica, neurocirurgia" },
+      { id: "hd", rotulo: "Diagnósticos", tipo: "textarea", linhas: 2 },
+      { id: "historia", rotulo: "Resumo da história e evolução", tipo: "textarea", linhas: 4 },
+      { id: "sv", rotulo: "Sinais vitais na saída", dica: "PA, FC, FR, SpO₂ (O₂ em uso), Tax, glicemia, Glasgow" },
+      { id: "exame", rotulo: "Exame físico atual", tipo: "textarea", linhas: 3 },
+      { id: "exames", rotulo: "Exames principais (resultados e horários)", tipo: "textarea", linhas: 3 },
+      { id: "feito", rotulo: "Medicações e procedimentos realizados (com horários)", tipo: "textarea", linhas: 4 },
+      { id: "dispositivos", rotulo: "Dispositivos", dica: "Acessos, IOT (nº, rima), SNG, SVD, drenos" },
+      { id: "alergias", rotulo: "Alergias", padrao: () => "Nega" },
+      { id: "transporte", rotulo: "Transporte e cuidados no trajeto", tipo: "select", opcoes: ["USA (suporte avançado) com médico", "USB (suporte básico)", "Transporte sanitário simples"] },
+      { id: "pendencias", rotulo: "Pendências e recomendações", tipo: "textarea", linhas: 2 },
+      ...CAMPOS_MEDICO
+    ],
+    gerar: v => `RELATÓRIO DE TRANSFERÊNCIA — ${br(v.data)} ${v.hora || ""}
+Paciente: ${v.paciente || "__________"}
+Origem: ${v.origem || "__________"}
+Destino: ${v.destino || "__________"}${v.regulacao ? `\nRegulação: ${v.regulacao}` : ""}
+Motivo: ${v.motivo || ""}
+
+${linhas("DIAGNÓSTICOS:", v.hd)}
+${linhas("HISTÓRIA E EVOLUÇÃO:", v.historia)}
+ESTADO NA SAÍDA
+${v.sv ? `Sinais vitais: ${v.sv}\n` : ""}${v.exame || ""}
+
+${linhas("EXAMES:", v.exames)}
+${linhas("REALIZADO (medicações, procedimentos e horários):", v.feito)}
+${v.dispositivos ? `Dispositivos: ${v.dispositivos}\n` : ""}Alergias: ${v.alergias || ""}
+Transporte: ${v.transporte}
+${linhas("PENDÊNCIAS / RECOMENDAÇÕES:", v.pendencias)}
+Paciente e familiares informados sobre a transferência. Cópia de exames encaminhada.
+
+${assinatura(v)}`
   }
 ];
 

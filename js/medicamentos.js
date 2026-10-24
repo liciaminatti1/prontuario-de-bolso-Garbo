@@ -488,7 +488,7 @@ const casaRegra = (m, chaves) => chaves.some(k => k === m.id || (m.tags || []).i
 
 /* Medicamentos citados numa ficha (tratamento + prescrição + texto geral). */
 function medicamentosDaFicha(f) {
-  const partes = [JSON.stringify(f.tratamento || []), JSON.stringify(f.prescricao || {}), (f.conduta || []).join(" "), (f.condutaInicial || []).join(" ")];
+  const partes = [JSON.stringify(f.tratamento || []), JSON.stringify(f.prescricao || {}), (f.conduta || []).join(" "), (f.condutaInicial || []).join(" "), JSON.stringify(f.passos || []), (f.materiais || []).join(" ")];
   const texto = normTxt(partes.join(" "));
   // Palavra inteira (ex.: "adrenalina" não casa com "noradrenalina").
   const escRe = x => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");

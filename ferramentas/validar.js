@@ -45,6 +45,10 @@ for (const arq of todos) {
   else console.log(`✓ ${arq}`);
 }
 
+// Fichas relacionadas precisam existir (confere depois de carregar todas).
+for (const f of vistas) for (const r of f.relacionadas || [])
+  if (!vistas.some(x => x.id === r)) { console.log(`! ${f.id}: relacionada "${r}" não existe`); avisos++; }
+
 if (!filtros.length) {
   const resumo = {};
   for (const f of vistas) (resumo[f.especialidade] ||= { ps: 0, ubs: 0 })[f.caminho]++;

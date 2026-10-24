@@ -8,12 +8,13 @@ node ferramentas/gerar-indice.js     # atualiza a lista no index.html
 node ferramentas/validar.js          # confere tudo
 ```
 
-Há dois formatos:
+Há três formatos:
 
 - **completo**: condições graves ou complexas. Vista rápida + ficha completa em abas.
 - **curto**: condições simples e referências. Uma página só: alarmes, conduta, prescrição e retorno.
+- **procedimento**: só na pasta `fichas/procedimentos/`. Indicações, materiais, checagens, passo a passo, conferência e registro.
 
-Exemplos: `fichas/endocrinologia/cetoacidose.js` (completo) e `fichas/oftalmo-otorrino/hordeolo.js` (curto).
+Exemplos: `fichas/endocrinologia/cetoacidose.js` (completo), `fichas/oftalmo-otorrino/hordeolo.js` (curto) e `fichas/procedimentos/sondagem-vesical.js` (procedimento).
 
 ---
 
@@ -79,6 +80,15 @@ Obrigatórios além dos comuns: `conduta` (lista, em ordem). Opcionais:
 - `tratamento`: mesma estrutura do formato completo, se ajudar
 - `encaminhar`: lista de textos (quando e para onde encaminhar)
 - `tabelas`
+
+## Formato procedimento
+
+`prescricao` é opcional. Obrigatórios além dos comuns (`alarmes` = quando interromper / chamar ajuda):
+
+- `indicacoes`, `contraindicacoes`, `materiais` (cada item vira uma caixa de marcar), `checagemAntes` (conferências antes de começar: identificação, consentimento, alergias, coagulação, time-out...), `conferirDepois`, `complicacoes` (complicação + como agir): listas de textos
+- `passos`: `[{ etapa: "Preparo", itens: ["...", "..."] }, ...]`, em ordem; a numeração é contínua entre etapas
+- `documentacao`: texto pronto para copiar no prontuário, com campos `[ ]` para preencher
+- Opcionais: `critico`, `tabelas`, `relacionadas` (lista de ids de fichas)
 
 ## Regras de conteúdo
 

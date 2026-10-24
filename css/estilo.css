@@ -110,6 +110,7 @@ h1,h2,h3,h4{font-family:var(--f-display);line-height:1.2;text-wrap:balance;margi
 .c3{background:var(--c3-soft)} .c3 .mod-ic{background:var(--c3)} .c3 b{color:var(--c3)}
 .c5{background:var(--brand-soft)} .c5 .mod-ic{background:var(--brand)} .c5 b{color:var(--brand-2)}
 .c4{background:var(--c4-soft)} .c4 .mod-ic{background:var(--c4)} .c4 b{color:var(--c4)}
+.c6{background:var(--ps-soft)} .c6 .mod-ic{background:var(--ps)} .c6 b{color:var(--ps)}
 .painel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px}
 .painel h3{font-size:1.15rem;font-weight:800}
 .painel-h{display:flex;justify-content:space-between;align-items:center;gap:10px}
@@ -446,3 +447,16 @@ kbd{font-family:var(--f-mono);font-size:.8rem;border:1px solid var(--line);borde
   .add-form input[name="nome"]{grid-column:1/-1}
 }
 @media (prefers-reduced-motion:no-preference){.view{animation:in .18s ease-out}@keyframes in{from{opacity:.4;transform:translateY(4px)}}}
+
+/* ---------- procedimentos ---------- */
+.proc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.proc-grid>.card{margin:0}
+.checklist{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px}
+.checklist label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;padding:6px 4px;border-radius:8px}
+.checklist label:hover{background:var(--surface-2)}
+.checklist input{width:20px;height:20px;flex:none;margin-top:2px;accent-color:var(--brand)}
+.checklist input:checked+span{color:var(--muted);text-decoration:line-through}
+.passo{margin-bottom:10px}
+.passos{margin:6px 0 0;padding-left:1.6em;display:flex;flex-direction:column;gap:6px}
+.passos li::marker{font-weight:800;color:var(--brand-2)}
+.proc-comp{border-left:4px solid var(--alarm)}
