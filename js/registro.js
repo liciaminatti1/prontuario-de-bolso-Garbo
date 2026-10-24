@@ -18,6 +18,7 @@ const ESPECIALIDADES = {
   "pediatria": "Pediatria",
   "gastroenterologia": "Gastroenterologia",
   "hematologia": "Hematologia",
+  "nefrologia": "Nefrologia",
   "urologia": "Urologia e saúde do homem",
   "dermatologia": "Dermatologia",
   "oftalmo-otorrino": "Olhos, ouvido, nariz e garganta",

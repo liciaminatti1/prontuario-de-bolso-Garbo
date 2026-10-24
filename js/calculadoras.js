@@ -337,6 +337,17 @@ const CALCULOS = [
       if (na && g) out.push(`Sódio corrigido (Katz) <b>${fmt(na + 1.6 * (g - 100) / 100)}</b> mEq/L`);
       if (na && g) out.push(`Osmolalidade calculada <b>${fmt(2 * na + g / 18 + (u ? u / 6 : 0), 0)}</b> mOsm/kg${u ? "" : " (sem ureia)"}`);
       return out.length ? out.join("<br>") : null; } },
+  { id: "fib4", nome: "FIB-4 e APRI (fibrose hepática)", campos: [["idade", "Idade (anos)", "idade"], ["tgo", "TGO/AST (U/L)"], ["tgp", "TGP/ALT (U/L)"], ["plaq", "Plaquetas (mil/mm³, ex.: 210)"], ["lsn", "Limite superior do TGO (U/L, padrão 40)"]],
+    padrao: { lsn: "40" },
+    calc: v => { const i = num(v.idade), ast = num(v.tgo), alt = num(v.tgp), pl = num(v.plaq), lsn = num(v.lsn) || 40;
+      if (!ast || !pl) return null;
+      const out = [];
+      if (i && alt) { const f = i * ast / (pl * Math.sqrt(alt));
+        const corte = i >= 65 ? 2.0 : 1.3;
+        out.push(`FIB-4 <b>${fmt(f, 2)}</b> — ${f < corte ? "baixo risco de fibrose avançada" : f > 2.67 ? "alto risco: hepatologia" : "indeterminado: elastografia"}${i >= 65 ? " (≥ 65 anos: corte inferior 2,0)" : ""}`); }
+      const apri = (ast / lsn) / pl * 100;
+      out.push(`APRI <b>${fmt(apri, 2)}</b> — ${apri > 1.5 ? "fibrose significativa provável" : apri > 1 ? "possível cirrose se > 1 (avaliar)" : apri < 0.5 ? "fibrose significativa improvável" : "indeterminado"}`);
+      return out.join("<br>"); } },
   { id: "gestacao", nome: "Idade gestacional e DPP pela DUM", campos: [["dum", "Data da última menstruação", null, "date"]],
     calc: v => { if (!v.dum) return null;
       const dum = new Date(v.dum + "T12:00:00"), hoje = new Date(); hoje.setHours(12, 0, 0, 0);

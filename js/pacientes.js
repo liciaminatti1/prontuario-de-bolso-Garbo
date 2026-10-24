@@ -210,6 +210,31 @@ function indicacoes(p) {
     const b = ultimoExame(p, "b12");
     if (!b || diasDesde(b.data) > 730) add("info", "Metformina: vitamina B12", "Uso prolongado: dosar B12 periodicamente (sobretudo se neuropatia ou anemia).");
   }
+  if (temPatologia(p, ["doenca-renal-cronica"], ["renal cronica", "drc"]) || (rf && rf.tfg && rf.tfg < 60)) {
+    const rac = ultimoExame(p, "rac");
+    if (!rac || diasDesde(rac.data) > 365) add("moderada", "DRC: albuminúria", "Relação albumina/creatinina não registrada nos últimos 12 meses (estadiamento A1–A3).", "doenca-renal-cronica");
+    else if (valorNum(rac) >= 30 && !usa("iecabra")) add("moderada", `DRC com albuminúria ${fmt(valorNum(rac), 0)} mg/g`, "Considerar IECA ou BRA (e iSGLT2 conforme PCDT).", "doenca-renal-cronica");
+    if (rf && rf.tfg && rf.tfg < 30) add("moderada", "DRC G4–G5", "TFG < 30: encaminhar à nefrologia.", "doenca-renal-cronica");
+    if (usa("aine")) add("grave", "DRC em uso de AINE", "Suspender anti-inflamatório (piora a função renal e o potássio).", "doenca-renal-cronica");
+  }
+  if (temPatologia(p, ["ic-cronica", "ic-descompensada"], ["insuficiencia cardiaca", "icc"])) {
+    if (!usa("iecabra")) add("info", "IC: IECA/BRA/sacubitril-valsartana", "Pilar da IC com FE reduzida não registrado nas medicações.", "ic-cronica");
+    const kAtual = valorNum(ultimoExame(p, "potassio"));
+    if (!usa("poupador-k") && (!rf || !rf.tfg || rf.tfg >= 30) && (kAtual === null || kAtual < 5))
+      add("info", "IC: espironolactona", "Pilar da IC com FE reduzida não registrado (indicada se K < 5 e TFG ≥ 30).", "ic-cronica");
+    if (usa("aine")) add("grave", "IC em uso de AINE", "AINE descompensa a IC: suspender.", "ic-cronica");
+  }
+  if (temPatologia(p, ["dac-cronica", "sca", "avc-prevencao-secundaria"], ["coronari", "infarto", "iam", "angina", "avc", "derrame"])) {
+    if (!usa("antiagregante") && !usa("anticoagulante")) add("moderada", "Prevenção secundária: antitrombótico", "Doença aterosclerótica sem antiagregante ou anticoagulante registrado.", temPatologia(p, ["avc-prevencao-secundaria"], ["avc", "derrame"]) ? "avc-prevencao-secundaria" : "dac-cronica");
+    if (!usa("estatina")) add("moderada", "Prevenção secundária: estatina", "Doença aterosclerótica sem estatina registrada (alta intensidade).", "dac-cronica");
+  }
+  if (temPatologia(p, ["tabagismo"], ["tabag", "fumante"])) add("info", "Tabagismo", "Abordar cessação em toda consulta; oferecer adesivo/bupropiona.", "tabagismo");
+  if (temPatologia(p, ["anticoagulacao-oral", "fibrilacao-atrial", "tep"], ["fibrilacao", "anticoag"]) && !usa("anticoagulante")) add("info", "Anticoagulação", "Condição que costuma exigir anticoagulação sem anticoagulante registrado: conferir CHA₂DS₂-VA/indicação.", "anticoagulacao-oral");
+  const pesoAtual = num((ultimaConsulta(p, "peso") || {}).peso), altura = num(p.dados.altura);
+  if (pesoAtual && altura && idade !== null && idade >= 18) {
+    const imc = pesoAtual / Math.pow(altura / 100, 2);
+    if (imc >= 30) add("info", `IMC ${fmt(imc, 1)} kg/m²`, "Obesidade: plano de perda de 5–10% do peso; avaliar farmacoterapia.", "obesidade");
+  }
   if (p.dados.gestante) {
     let ig = "";
     if (p.dados.dum) { const d = diasDesde(p.dados.dum); ig = ` IG estimada ${Math.floor(d / 7)} sem ${d % 7} d.`; }

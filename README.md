@@ -26,7 +26,7 @@ Toda ficha traz **prescrição ambulatorial e/ou hospitalar pronta para copiar**
 - **Função renal:** Cockcroft-Gault (ajuste de dose), CKD-EPI 2021 (estadiamento) e Schwartz na criança.
 - **Calculadora de doses por peso**, com conversão para mL, gotas e comprimidos e limite de dose máxima (`js/medicamentos.js`).
 - **Segurança de medicamentos:** cada ficha reconhece os remédios citados e mostra gestação, ajuste renal, alergia (com reatividade cruzada) e interações com as medicações em uso, destacando o que se aplica ao paciente informado.
-- **19 escores** integrados às fichas (Wells, PERC, sPESI, HEART, CURB-65, CRB-65, CHA₂DS₂-VA, HAS-BLED, qSOFA, Glasgow, regra canadense, ABCD², Ottawa HSA, Centor/McIsaac, Westley, PHQ-9, GAD-7, IPSS, Pádua) em `js/scores.js`.
+- **21 escores** integrados às fichas (Wells, PERC, sPESI, HEART, CURB-65, CRB-65, CHA₂DS₂-VA, HAS-BLED, qSOFA, Glasgow, regra canadense, ABCD², Ottawa HSA, Centor/McIsaac, Westley, PHQ-9, GAD-7, IPSS, Pádua, Fagerström, AUDIT-C) em `js/scores.js`.
 - **Cálculos rápidos:** IMC e superfície corporal, peso estimado da criança, Holliday-Segar, reposição em queimaduras, gotejamento, ânion gap, sódio corrigido, osmolalidade, idade gestacional e DPP.
 
 > ⚠️ As bases de medicamentos e escores são referências resumidas e precisam passar pela mesma revisão médica das fichas.
@@ -125,7 +125,7 @@ Uma ficha com campo faltando **não quebra o sistema**: ela é ignorada e o erro
 
 ## Fichas incluídas (revisão 21/10/2026)
 
-**191 fichas** em 20 especialidades: Emergência e suporte de vida (PCR adulto e pediátrica, pós-PCR, SRI, ventilação, choque, sepse pediátrica...), Cardiologia, Pneumologia, Neurologia, Infectologia (TB, ILTB, sífilis, hanseníase, PEP, exantemáticas...), Endócrino e metabólico, Ginecologia e obstetrícia (pré-natal, ITU e hipertensão na gestação, anticoncepção, IST...), Pediatria (puericultura, sinais vitais por idade, crupe, coqueluche...), Gastroenterologia, Hematologia (anemias, doença falciforme), Urologia e saúde do homem, Dermatologia, Olhos/ouvido/nariz/garganta, Ortopedia/reumatologia/dor, Saúde mental, Intoxicações e acidentes (antídotos, ofídicos, escorpião, aranhas, abelhas), Trauma, Alergia, Prevenção e rastreamento, Prescrição e referências (analgésicos, anti-histamínicos, vias e diluições, hidratação venosa).
+**204 fichas** em 21 especialidades: Emergência e suporte de vida (PCR adulto e pediátrica, pós-PCR, SRI, ventilação, choque, sepse pediátrica...), Cardiologia, Pneumologia, Neurologia, Infectologia (TB, ILTB, sífilis, hanseníase, PEP, exantemáticas...), Endócrino e metabólico, Ginecologia e obstetrícia (pré-natal, ITU e hipertensão na gestação, anticoncepção, IST...), Pediatria (puericultura, sinais vitais por idade, crupe, coqueluche...), Gastroenterologia, Hematologia (anemias, doença falciforme), Urologia e saúde do homem, Dermatologia, Olhos/ouvido/nariz/garganta, Ortopedia/reumatologia/dor, Saúde mental, Intoxicações e acidentes (antídotos, ofídicos, escorpião, aranhas, abelhas), Trauma, Alergia, Prevenção e rastreamento, Prescrição e referências (analgésicos, anti-histamínicos, vias e diluições, hidratação venosa).
 
 Para ver a lista atualizada com a contagem por especialidade: `node ferramentas/validar.js`.
 

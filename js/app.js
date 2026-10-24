@@ -63,7 +63,7 @@ const ICONES = {
 const ICONE_ESP = {
   emergencia: "ambulancia", cardiologia: "coracao", pneumologia: "pulmao", neurologia: "cerebro", infectologia: "virus",
   endocrinologia: "gota", "ginecologia-obstetricia": "feminino", pediatria: "bebe", gastroenterologia: "estomago",
-  hematologia: "gota", urologia: "rim", dermatologia: "pele", "oftalmo-otorrino": "olho", musculoesqueletico: "osso",
+  hematologia: "gota", urologia: "rim", nefrologia: "rim", dermatologia: "pele", "oftalmo-otorrino": "olho", musculoesqueletico: "osso",
   "saude-mental": "mente", toxicologia: "alerta", trauma: "trauma", alergia: "escudo", prevencao: "escudo", referencia: "pilula"
 };
 const ic = (nome, cls = "ic") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONES[nome] || ""}</svg>`;

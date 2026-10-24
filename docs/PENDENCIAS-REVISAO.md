@@ -10,6 +10,25 @@ Cada ficha foi escrita por um agente e revisada por outro, de forma independente
 
 **147 pontos em 139 fichas** · 136 correções já aplicadas pelos revisores (lista no fim).
 
+## Fichas criadas em 24/10/2026 (sem revisão automática independente)
+
+Estas 13 fichas foram escritas sem acesso às diretrizes originais nem segundo revisor. Revisar inteiras, com atenção a doses, metas e critérios de encaminhamento:
+
+- [ ] Doença renal crônica (`fichas/nefrologia/doenca-renal-cronica.js`) — critérios de iSGLT2 no PCDT vigente
+- [ ] IC crônica (`fichas/cardiologia/ic-cronica.js`) — doses-alvo e disponibilidade de sacubitril-valsartana no SUS
+- [ ] Doença coronariana crônica (`fichas/cardiologia/dac-cronica.js`)
+- [ ] Doença de Chagas crônica (`fichas/cardiologia/chagas-cronica.js`) — indicações de benznidazol e notificação
+- [ ] Obesidade (`fichas/endocrinologia/obesidade.js`) — fármacos e critérios cirúrgicos vigentes
+- [ ] Pré-diabetes (`fichas/endocrinologia/pre-diabetes.js`)
+- [ ] Tabagismo (`fichas/prevencao/tabagismo.js`) — esquema do PCDT 2020
+- [ ] Anticoagulação oral (`fichas/hematologia/anticoagulacao-oral.js`) — tabelas de ajuste do INR e pausas pré-procedimento
+- [ ] Esteatose hepática / MASLD (`fichas/gastroenterologia/masld.js`)
+- [ ] Demência (`fichas/neurologia/demencia.js`) — PCDT Alzheimer vigente
+- [ ] Pós-AVC / prevenção secundária (`fichas/neurologia/avc-prevencao-secundaria.js`)
+- [ ] Hepatites B e C (`fichas/infectologia/hepatites-virais.js`) — esquemas do PCDT vigente
+- [ ] Uso de álcool (`fichas/saude-mental/uso-alcool.js`)
+- [ ] Escores Fagerström e AUDIT-C, cálculo FIB-4/APRI e regras novas do módulo Pacientes
+
 ## Pontos a conferir
 
 ### Anafilaxia  

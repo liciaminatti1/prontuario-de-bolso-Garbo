@@ -53,13 +53,13 @@ const SCORES = [
     interpretar: s => s === 0 ? { nivel: "baixo", texto: "0: tratamento ambulatorial." }
       : s <= 2 ? { nivel: "medio", texto: "1–2: avaliar no hospital / considerar internação." }
       : { nivel: "alto", texto: "3–4: internação urgente." } },
-  { id: "cha2ds2va", nome: "CHA₂DS₂-VA (FA)", fichas: ["fibrilacao-atrial"], fonte: "ESC 2024; SBC/SOBRAC 2025",
+  { id: "cha2ds2va", nome: "CHA₂DS₂-VA (FA)", fichas: ["fibrilacao-atrial", "anticoagulacao-oral", "avc-prevencao-secundaria"], fonte: "ESC 2024; SBC/SOBRAC 2025",
     itens: [{ t: "Insuficiência cardíaca", p: 1 }, { t: "Hipertensão", p: 1 }, { t: "Idade ≥ 75 anos", p: 2 }, { t: "Diabetes", p: 1 },
       { t: "AVC, AIT ou embolia prévios", p: 2 }, { t: "Doença vascular (IAM, DAP, placa aórtica)", p: 1 }, { t: "Idade 65–74 anos", p: 1 }],
     interpretar: s => s === 0 ? { nivel: "baixo", texto: "0: anticoagulação não recomendada." }
       : s === 1 ? { nivel: "medio", texto: "1: considerar anticoagulação." }
       : { nivel: "alto", texto: "≥ 2: anticoagulação recomendada (DOAC preferido, exceto prótese mecânica/estenose mitral)." } },
-  { id: "hasbled", nome: "HAS-BLED (risco de sangramento)", fichas: ["fibrilacao-atrial"], fonte: "Pisters R et al., 2010",
+  { id: "hasbled", nome: "HAS-BLED (risco de sangramento)", fichas: ["fibrilacao-atrial", "anticoagulacao-oral"], fonte: "Pisters R et al., 2010",
     itens: [{ t: "Hipertensão não controlada (PAS > 160)", p: 1 }, { t: "Função renal alterada (diálise, transplante, Cr ≥ 2,26)", p: 1 },
       { t: "Função hepática alterada (cirrose, bilirrubina/TGO muito elevadas)", p: 1 }, { t: "AVC prévio", p: 1 },
       { t: "Sangramento prévio ou predisposição", p: 1 }, { t: "INR lábil", p: 1 }, { t: "Idade > 65 anos", p: 1 },
@@ -85,7 +85,7 @@ const SCORES = [
       { t: "Amnésia retrógrada ≥ 30 minutos" }, { t: "Mecanismo perigoso (atropelamento, ejeção, queda > 1 m ou 5 degraus)" }],
     interpretar: (s, n) => n > 0 ? { nivel: "alto", texto: "Algum critério presente: solicitar TC de crânio." }
       : { nivel: "baixo", texto: "Nenhum critério: TC não indicada pela regra (não se aplica a anticoagulados, < 16 anos ou convulsão)." } },
-  { id: "abcd2", nome: "ABCD² (AIT)", fichas: ["avc"], fonte: "Johnston SC et al., 2007",
+  { id: "abcd2", nome: "ABCD² (AIT)", fichas: ["avc", "avc-prevencao-secundaria"], fonte: "Johnston SC et al., 2007",
     itens: [{ t: "Idade ≥ 60 anos", p: 1 }, { t: "PA ≥ 140/90 na avaliação", p: 1 },
       { t: "Clínica", opcoes: [["Outros sintomas", 0], ["Alteração de fala sem fraqueza", 1], ["Fraqueza unilateral", 2]] },
       { t: "Duração", opcoes: [["< 10 min", 0], ["10–59 min", 1], ["≥ 60 min", 2]] }, { t: "Diabetes", p: 1 }],
@@ -148,6 +148,27 @@ const SCORES = [
     interpretar: s => s >= 4 ? { nivel: "alto", texto: "≥ 4: alto risco de TEV — profilaxia farmacológica se sem risco de sangramento (ex.: enoxaparina 40 mg SC/dia)." }
       : { nivel: "baixo", texto: "< 4: baixo risco — deambulação precoce; profilaxia farmacológica não rotineira." } }
 ];
+
+SCORES.push(
+  { id: "fagerstrom", nome: "Fagerström (dependência de nicotina)", fichas: ["tabagismo"], fonte: "Heatherton TF et al., 1991; INCA",
+    itens: [
+      { t: "Quanto tempo após acordar fuma o 1º cigarro?", opcoes: [["Após 60 min", 0], ["31–60 min", 1], ["6–30 min", 2], ["Nos primeiros 5 min", 3]] },
+      { t: "Difícil não fumar em locais proibidos?", opcoes: [["Não", 0], ["Sim", 1]] },
+      { t: "Qual cigarro mais lhe satisfaz?", opcoes: [["Outros", 0], ["O primeiro da manhã", 1]] },
+      { t: "Quantos cigarros por dia?", opcoes: [["≤ 10", 0], ["11–20", 1], ["21–30", 2], ["≥ 31", 3]] },
+      { t: "Fuma mais nas primeiras horas do dia?", opcoes: [["Não", 0], ["Sim", 1]] },
+      { t: "Fuma mesmo doente, acamado?", opcoes: [["Não", 0], ["Sim", 1]] }],
+    interpretar: s => s <= 2 ? { nivel: "baixo", texto: "0–2: dependência muito baixa." } : s <= 4 ? { nivel: "baixo", texto: "3–4: dependência baixa." }
+      : s === 5 ? { nivel: "medio", texto: "5: dependência média — considerar adesivo 21 mg." } : { nivel: "alto", texto: "6–10: dependência elevada — adesivo 21 mg + nicotina de curta ação ± bupropiona." } },
+  { id: "audit-c", nome: "AUDIT-C (consumo de álcool)", fichas: ["uso-alcool"], fonte: "Bush K et al., 1998; OMS",
+    itens: [
+      { t: "Com que frequência toma bebida alcoólica?", opcoes: [["Nunca", 0], ["Mensalmente ou menos", 1], ["2–4 vezes por mês", 2], ["2–3 vezes por semana", 3], ["4 ou mais vezes por semana", 4]] },
+      { t: "Quantas doses toma num dia típico?", opcoes: [["1–2", 0], ["3–4", 1], ["5–6", 2], ["7–9", 3], ["10 ou mais", 4]] },
+      { t: "Com que frequência toma 6 ou mais doses numa ocasião?", opcoes: [["Nunca", 0], ["Menos que mensalmente", 1], ["Mensalmente", 2], ["Semanalmente", 3], ["Diariamente ou quase", 4]] }],
+    interpretar: s => s >= 4 ? { nivel: s >= 8 ? "alto" : "medio", texto: `${s} pontos: positivo (≥ 4 em homens, ≥ 3 em mulheres). Aplicar o AUDIT completo e fazer intervenção breve.${s >= 8 ? " Pontuação alta sugere uso nocivo ou dependência." : ""}` }
+      : s === 3 ? { nivel: "medio", texto: "3 pontos: positivo em mulheres (≥ 3); em homens, abaixo do corte (≥ 4)." }
+      : { nivel: "baixo", texto: "Rastreio negativo." } }
+);
 
 const SCORE_POR_ID = Object.fromEntries(SCORES.map(s => [s.id, s]));
 const scoresDaFicha = id => SCORES.filter(s => s.fichas.includes(id));
