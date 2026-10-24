@@ -149,7 +149,7 @@ registrarFicha({
   ],
   fontes: [
     "NICE — NG234: Spinal metastases and metastatic spinal cord compression (2023)",
-    "ESMO — Clinical Practice Guideline: management of bone health and metastatic spinal cord compression (2020)",
+    "ESMO — Bone health in cancer: Clinical Practice Guidelines (Coleman et al., 2020)",
     "Patchell RA et al. — Direct decompressive surgical resection in spinal cord compression (Lancet, 2005)",
     "Fisher CG et al. — Spinal Instability Neoplastic Score (SINS) (Spine, 2010)"
   ],
