@@ -159,8 +159,7 @@ registrarFicha({
   fontes: [
     "American College of Surgeons — ATLS, 10ª ed. (2018) e 11ª ed. (2025)",
     "AAOS — Management of Acute Compartment Syndrome: Clinical Practice Guideline (2018)",
-    "British Orthopaedic Association — BOAST 10: Diagnosis and management of compartment syndrome of the limbs (2014)",
-    "EAST — Rhabdomyolysis / crush injury: revisões (2021)"
+    "British Orthopaedic Association — BOAST 10: Diagnosis and management of compartment syndrome of the limbs (2014)"
   ],
   revisao: "2026-10-24",
   versao: "1.0"

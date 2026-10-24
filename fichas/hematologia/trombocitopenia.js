@@ -228,7 +228,7 @@ registrarFicha({
     "ASH — Guidelines for immune thrombocytopenia (Neunert et al., Blood Adv 2019)",
     "ISTH — Guidelines for the diagnosis and treatment of thrombotic thrombocytopenic purpura (2020)",
     "Bendapudi PK et al. — PLASMIC score (Lancet Haematol, 2017)",
-    "AABB — Platelet transfusion: clinical practice guideline (Kaufman et al., 2015; atualização AABB/ICTMG 2025)",
+    "AABB — Platelet transfusion: clinical practice guideline (Kaufman et al., 2015)",
     "ASH — Guidelines for heparin-induced thrombocytopenia (Cuker et al., 2018)",
     "Ministério da Saúde — Guia para uso de hemocomponentes, 2ª ed. (2015)"
   ],
