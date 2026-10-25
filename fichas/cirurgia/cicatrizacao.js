@@ -91,7 +91,7 @@ registrarFicha({
   ],
   fontes: [
     "Gold MH et al. — Updated international clinical recommendations on scar management, partes 1 e 2 (Dermatol Surg, 2014)",
-    "Ogawa R — Japan Scar Workshop (JSW) Scar Scale e consenso de tratamento de queloide e cicatriz hipertrófica (2019)",
+    "Ogawa R et al. — Diagnosis and treatment of keloids and hypertrophic scars: Japan Scar Workshop Consensus Document 2018 (Burns Trauma, 2019)",
     "Sabiston Textbook of Surgery, 21ª ed. (2021) — Wound healing",
     "Ministério da Saúde — Manual do pé diabético (2016) e Cadernos de Atenção Básica nº 30: Procedimentos (2011)"
   ],

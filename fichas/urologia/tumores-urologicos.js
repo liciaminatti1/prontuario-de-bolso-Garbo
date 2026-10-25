@@ -87,9 +87,8 @@ registrarFicha({
   fontes: [
     "Ministério da Saúde/INCA — Rastreamento do câncer de próstata: nota técnica e Detecção precoce do câncer (2021)",
     "EAU Guidelines — Prostate Cancer, Non-muscle-invasive Bladder Cancer, Renal Cell Carcinoma, Testicular Cancer e Penile Cancer (2025)",
-    "AUA/SUFU — Microhematuria Guideline (2020; atualização 2025)",
+    "AUA/SUFU — Microhematuria Guideline (2020)",
     "Silverman SG et al. — Bosniak Classification of Cystic Renal Masses, Version 2019 (Radiology, 2019)",
-    "Sociedade Brasileira de Urologia — Posicionamento sobre rastreamento do câncer de próstata (2023)",
     "Lei nº 13.896/2019 e Lei nº 12.732/2012"
   ],
   revisao: "2026-10-25",

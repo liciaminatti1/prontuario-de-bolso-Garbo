@@ -155,9 +155,8 @@ registrarFicha({
     "American Society of Anesthesiologists — ASA Physical Status Classification System (atualização 2020)",
     "ASA — Practice Guidelines for Preoperative Fasting (2017; atualização com bebidas de carboidrato 2023) e Multisociety guidance on GLP-1 receptor agonists (2024)",
     "ASA — Practice Guidelines for Management of the Difficult Airway (2022) e Difficult Airway Society — guidelines for unanticipated difficult intubation in adults (2015)",
-    "European Malignant Hyperthermia Group — guidelines for treatment of MH crisis (Br J Anaesth, 2020) e MHAUS (2024)",
+    "European Malignant Hyperthermia Group — guidelines for treatment of malignant hyperthermia crisis (Br J Anaesth, 2021) e MHAUS — protocolo de tratamento",
     "Aldrete JA — The post-anesthesia recovery score revisited (J Clin Anesth, 1995)",
-    "Sociedade Brasileira de Anestesiologia — Hipertermia maligna: protocolo de tratamento"
   ],
   revisao: "2026-10-25",
   versao: "1.0"

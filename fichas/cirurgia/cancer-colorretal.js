@@ -99,10 +99,10 @@ registrarFicha({
     "PS: obstrução, perfuração, sangramento volumoso"
   ],
   fontes: [
-    "Ministério da Saúde — Diretrizes Diagnósticas e Terapêuticas do Câncer de Cólon e Reto (Portaria Conjunta SAES/SCTIE, 2025)",
+    "Ministério da Saúde — Diretrizes Diagnósticas e Terapêuticas do Câncer de Cólon e Reto (Portaria SAS/MS nº 958/2014)",
     "INCA/Ministério da Saúde — Detecção precoce do câncer (2021) e protocolo nacional de rastreamento colorretal com FIT (2026)",
     "US Multi-Society Task Force — Recommendations for follow-up after colonoscopy and polypectomy (Gastroenterology, 2020)",
-    "NCCN Guidelines — Colon Cancer e Rectal Cancer (2025); ESMO — Localised colon cancer (2020) e Rectal cancer (2017, atualização 2025)",
+    "NCCN Guidelines — Colon Cancer e Rectal Cancer (2025); ESMO — Localised colon cancer (2020) e Rectal cancer (2017)",
     "ACG — Clinical Guideline: Hereditary gastrointestinal cancer syndromes (2015) e NCCN Genetic/Familial High-Risk Assessment: Colorectal (2025)",
     "Lei nº 12.732/2012 (início do tratamento em até 60 dias)"
   ],

@@ -65,7 +65,7 @@ registrarFicha({
       colunas: ["Quando aparece", "Quadro", "O que fazer"],
       linhas: [
         ["Intraoperatória", "Bile no campo, anatomia duvidosa", "Cirurgião experiente em HPB ou drenagem e transferência"],
-        ["Primeiros dias", "Dor, febre, distensão, bile no dreno, ascite biliar; icterícia se ligadura/clipagem", "USG/TC, colangio-RM; drenagem percutânea de coleção, antibiótico se sepse; CPRE com prótese nas fístulas menores (ducto cístico, Luschka)"],
+        ["Primeiros dias", "Dor, febre, distensão, bile no dreno, ascite biliar; icterícia se ligadura/clipagem", "USG/TC, colangio-RM; drenagem percutânea de coleção (sepse: conduta da ficha colecistite-colangite); CPRE com prótese nas fístulas menores (ducto cístico, Luschka)"],
         ["Tardia (meses a anos)", "Icterícia, colangite de repetição, cirrose biliar secundária", "Colangio-RM; reparo (hepaticojejunostomia) em centro especializado"]
       ],
       nota: "Classificação de Strasberg (A a E) e de Bismuth orientam o reparo. Lesões maiores (Strasberg E) devem ser reparadas em centro de referência."

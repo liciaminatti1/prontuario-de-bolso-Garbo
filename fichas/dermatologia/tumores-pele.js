@@ -122,11 +122,11 @@ registrarFicha({
     "Oncologia: melanoma estádio III–IV ou CEC avançado"
   ],
   fontes: [
-    "INCA/Ministério da Saúde — Câncer de pele melanoma e não melanoma: detecção precoce (2022)",
-    "Sociedade Brasileira de Dermatologia — Consenso brasileiro de carcinoma basocelular e espinocelular",
+    "INCA/Ministério da Saúde — Detecção precoce do câncer (2021)",
+    "British Association of Dermatologists — Guidelines for the management of adults with basal cell carcinoma (2021)",
     "NCCN Guidelines — Melanoma: Cutaneous; Basal Cell Skin Cancer; Squamous Cell Skin Cancer (2025)",
     "European consensus-based interdisciplinary guideline for melanoma (EADO/EDF/EORTC, 2022/2024)",
-    "EuroDerm/EADV — Guidelines for actinic keratosis (2024)"
+    "British Association of Dermatologists — Guidelines for the care of patients with actinic keratosis (2017)"
   ],
   revisao: "2026-10-25",
   versao: "1.0"

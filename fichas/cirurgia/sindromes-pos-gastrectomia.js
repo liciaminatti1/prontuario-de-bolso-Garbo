@@ -145,7 +145,7 @@ registrarFicha({
     "Scarpellini E et al. — International consensus on the diagnosis and management of dumping syndrome (Nat Rev Endocrinol, 2020)",
     "ACG — Clinical Guideline: Small Intestinal Bacterial Overgrowth (Am J Gastroenterol, 2020)",
     "Sabiston Textbook of Surgery, 21ª ed. (2021) — Postgastrectomy syndromes",
-    "British Society of Haematology — Guideline on cobalamin and folate disorders (2014; atualização 2023)"
+    "British Committee for Standards in Haematology — Guidelines for the diagnosis and treatment of cobalamin and folate disorders (2014)"
   ],
   revisao: "2026-10-25",
   versao: "1.0"
