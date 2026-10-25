@@ -56,15 +56,15 @@ registrarFicha({
       linha: "l1",
       dose: "1.000 mcg (1 mL) por aplicação",
       via: "IM",
-      intervalo: "Ataque: em dias alternados por 2 semanas (6 aplicações) ou diário por 1 semana e semanal por 4 semanas. Manutenção: 1 vez por mês (cianocobalamina) ou a cada 2–3 meses (hidroxocobalamina)",
+      intervalo: "Ataque: em dias alternados por 2 semanas (6 aplicações; menos aplicações que o esquema diário + semanal, com mesma eficácia). Manutenção: 1 vez por mês (cianocobalamina) ou a cada 2–3 meses (hidroxocobalamina)",
       duracao: "Por toda a vida se anemia perniciosa, gastrectomia, bariátrica ou ressecção ileal; até corrigir e tratar a causa se dietética ou medicamentosa",
       monitorizacao: "Reticulócitos em 7–10 dias; Hb em 4–8 semanas; potássio nos primeiros dias se anemia grave; B12 não precisa ser redosada se houver resposta clínica",
       contraindicacoes: "Hipersensibilidade",
       ajustes: "Com sintomas neurológicos: aplicar em dias alternados até parar de melhorar (orientação do especialista; BSH 2014). Verificar a apresentação disponível na rede (ampolas de 1.000 a 5.000 mcg). Evitar IM se plaquetas muito baixas: avaliar SC profunda conforme serviço"
     },
     {
-      droga: "Cianocobalamina oral",
-      linha: "alt",
+      droga: "Cianocobalamina oral (preferir quando elegível: sem injeções)",
+      linha: "l1",
       dose: "1.000–2.000 mcg",
       via: "VO",
       intervalo: "1 vez ao dia",
@@ -107,7 +107,7 @@ registrarFicha({
     "PS no mesmo dia: anemia descompensada, sintomas neurológicos graves de instalação rápida, pancitopenia com sangramento ou febre"
   ],
   prescricao: {
-    ambulatorial: "PEDIDO DE EXAMES — MACROCITOSE / SUSPEITA DE ANEMIA MEGALOBLÁSTICA\nHemograma completo com reticulócitos e análise do esfregaço; vitamina B12; ácido fólico sérico; LDH; bilirrubinas; ferritina; TSH; TGO; TGP; GGT; creatinina. Se B12 baixa sem causa dietética: anticorpo antifator intrínseco e anticélula parietal. Se B12 limítrofe: ácido metilmalônico ou homocisteína (se disponível).\nHD: Anemia por deficiência de vitamina B12 (CID D51.9) / de folato (CID D52.9).\n\nDEFICIÊNCIA DE B12\nUSO INTRAMUSCULAR\n1. Cianocobalamina 1.000 mcg/mL ------------------- 10 ampolas\n   Aplicar 1 ampola IM em dias alternados por 2 semanas (6 aplicações); depois 1 ampola IM 1 vez por mês (manutenção).\n\nOU, se dieta pobre, sem sintomas neurológicos, anemia leve e boa adesão:\nUSO ORAL\n1. Cianocobalamina 1.000 mcg ---------------------- 60 comprimidos\n   Tomar 1 a 2 comprimidos por dia, todos os dias. Reavaliar em 2–3 meses.\n\nDEFICIÊNCIA DE FOLATO (com B12 normal ou já em reposição)\nUSO ORAL\n2. Ácido fólico 5 mg ------------------------------- 120 comprimidos\n   Tomar 1 comprimido por dia por 4 meses.\n\nCONTROLE\nReticulócitos em 7–10 dias; hemograma em 4–8 semanas; potássio em 2–3 dias se Hb < 8 g/dL."
+    ambulatorial: "PEDIDO DE EXAMES — MACROCITOSE / SUSPEITA DE ANEMIA MEGALOBLÁSTICA\nHemograma completo com reticulócitos e análise do esfregaço; vitamina B12; ácido fólico sérico; LDH; bilirrubinas; ferritina; TSH; TGO; TGP; GGT; creatinina. Se B12 baixa sem causa dietética: anticorpo antifator intrínseco e anticélula parietal. Se B12 limítrofe: ácido metilmalônico ou homocisteína (se disponível).\nHD: Anemia por deficiência de vitamina B12 (CID D51.9) / de folato (CID D52.9).\n\nDEFICIÊNCIA DE B12 — sem sintomas neurológicos, sem anemia grave e com boa adesão (preferir: sem injeções)\nUSO ORAL\n1. Cianocobalamina 1.000 mcg ---------------------- 60 comprimidos\n   Tomar 1 a 2 comprimidos por dia, todos os dias. Reavaliar em 2–3 meses.\n\nOU, se sintomas neurológicos, anemia grave, má absorção/anemia perniciosa ou dúvida sobre adesão:\nUSO INTRAMUSCULAR\n1. Cianocobalamina 1.000 mcg/mL ------------------- 10 ampolas\n   Aplicar 1 ampola IM em dias alternados por 2 semanas (6 aplicações); depois 1 ampola IM 1 vez por mês (manutenção).\n\nDEFICIÊNCIA DE FOLATO (com B12 normal ou já em reposição)\nUSO ORAL\n2. Ácido fólico 5 mg ------------------------------- 120 comprimidos\n   Tomar 1 comprimido por dia por 4 meses.\n\nCONTROLE\nReticulócitos em 7–10 dias; hemograma em 4–8 semanas; potássio em 2–3 dias se Hb < 8 g/dL."
   },
   orientacoesRetorno: [
     "A anemia costuma melhorar em 1 a 2 meses; os formigamentos e o equilíbrio melhoram mais devagar e às vezes não voltam totalmente",
@@ -124,5 +124,5 @@ registrarFicha({
     "Ministério da Saúde — RENAME (versão vigente)"
   ],
   revisao: "2026-10-25",
-  versao: "1.0"
+  versao: "1.1"
 });

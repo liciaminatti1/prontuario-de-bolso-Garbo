@@ -15,7 +15,7 @@ Cada ficha foi escrita por um agente e revisada por outro, de forma independente
 Mesma situação do lote de 24/10: escritas por agentes, validadas e testadas no navegador, sem segundo revisor. Revisar inteiras antes do uso assistencial.
 
 Já ajustado: ficha obesidade passou a citar a Resolução CFM 2.429/2025 (a 2.172/2017 foi revogada).
-Divergência a decidir: ataque de B12 IM em anemia-megaloblastica (dias alternados por 2 semanas) x anemia-investigacao (diário por 1 semana, depois semanal).
+Resolvido (decisão da médica responsável: o mais viável ao paciente): B12 VO em dose alta quando elegível (sem injeções); se IM, dias alternados por 2 semanas (6 aplicações) e depois mensal — padronizado em anemia-megaloblastica e anemia-investigacao.
 
 ### Drenagens de abscesso (6 procedimentos) e tabelas de resistência (17 fichas editadas)
 - drenagem-abscesso-periamigdaliano: amoxicilina-clavulanato 875/125 mg 12/12 h por 10–14 dias; IV clindamicina 600 mg 8/8 h, ceftriaxona 2 g + metronidazol, ampicilina-sulbactam 3 g 6/6 h; dexametasona sem dose; punção ≤ 1 cm.
@@ -69,7 +69,7 @@ Divergência a decidir: ataque de B12 IM em anemia-megaloblastica (dias alternad
 - esclerose-multipla: McDonald 2024; pulsoterapia pediátrica 20–30 mg/kg/dia (máx. 1 g); plasmaférese 5–7 trocas; "ABN 2022".
 - transtorno-bipolar: litemia 0,6–0,8 / 0,8–1,2; toxicidade 1,5 e 2,5; EXTRIP 4,0 e 5,0; valproato 50–125; quetiapina na depressão.
 ### Hematologia — lote 2 (9 fichas)
-- anemia-megaloblastica: ataque de B12 IM em dias alternados por 2 semanas DIFERE de anemia-investigacao (diário 1 semana → semanal) — padronizar; apresentação na rede; B12 oral alta dose no SUS.
+- anemia-megaloblastica: esquema padronizado (ver acima); conferir apresentação na rede e disponibilidade de B12 oral em dose alta no SUS.
 - anemias-hemoliticas: prednisona 1 mg/kg (teto 80–100 mg); metilprednisolona/rituximabe sem dose.
 - hemostasia-primaria: ácido tranexâmico pediátrico 15–25 mg/kg 8/8 h (máx. 1,5 g), adulto 1 g VO 8/8 h ou 10 mg/kg IV; desmopressina 0,3 mcg/kg (máx. 20 mcg); spray nasal brasileiro.
 - hemofilias: níveis-alvo WFH 2020 x Manual MS 2015; rFVIIa 90 mcg/kg 2–3 h; CCPA 50–100 UI/kg (máx. 200/dia); emicizumabe no SUS.

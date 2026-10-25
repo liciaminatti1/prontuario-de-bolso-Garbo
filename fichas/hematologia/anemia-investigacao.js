@@ -130,13 +130,13 @@ registrarFicha({
     {
       droga: "Cianocobalamina (deficiência de B12)",
       linha: "l1",
-      dose: "1.000 mcg IM 1×/dia por 1 semana, depois 1×/semana por 4 semanas, depois 1×/mês; ou 1.000–2.000 mcg VO/dia se absorção preservada e sem sintomas neurológicos",
+      dose: "Sem sintoma neurológico, sem anemia grave e com boa adesão: 1.000–2.000 mcg VO 1×/dia (sem injeções). Demais casos: 1.000 mcg IM em dias alternados por 2 semanas (6 aplicações), depois 1×/mês",
       via: "IM ou VO",
       intervalo: "Conforme esquema",
       duracao: "Por toda a vida se anemia perniciosa, gastrectomia ou bariátrica",
       monitorizacao: "Reticulócitos em 7–10 dias; Hb em 4–8 semanas; potássio se anemia grave (cai no início)",
       contraindicacoes: "Hipersensibilidade",
-      ajustes: "Com sintomas neurológicos: IM em dias alternados até não melhorar mais (orientação de especialista). Tratar B12 antes ou junto com folato. RENAME"
+      ajustes: "Esquema escolhido por exigir menos aplicações e idas à unidade (detalhes na ficha anemia-megaloblastica). Com sintomas neurológicos: IM em dias alternados até parar de melhorar (orientação de especialista). Tratar B12 antes ou junto com folato. RENAME"
     },
     {
       droga: "Ácido fólico (deficiência de folato)",
@@ -221,6 +221,6 @@ registrarFicha({
     "AABB/ICTMG — International guidelines for red blood cell transfusion (JAMA, 2023)",
     "Ministério da Saúde — Guia para uso de hemocomponentes (2015) e RENAME (versão vigente)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });
