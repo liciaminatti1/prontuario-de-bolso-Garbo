@@ -80,9 +80,9 @@ registrarFicha({
     }
   ],
   fontes: [
-    "Rezende — Obstetrícia Fundamental, 15ª ed. (2024) e Zugaib — Obstetrícia, 5ª ed. (2023): estática fetal e mecanismo de parto",
+    "Rezende — Obstetrícia Fundamental e Zugaib — Obstetrícia (edições vigentes): estática fetal e mecanismo de parto",
     "FEBRASGO — Protocolos de Obstetrícia: Assistência ao trabalho de parto",
-    "Ministério da Saúde — Diretrizes Nacionais de Assistência ao Parto Normal (2017; atualização 2022)",
+    "Ministério da Saúde — Diretrizes Nacionais de Assistência ao Parto Normal (2017)",
     "Williams Obstetrics, 26ª ed. (2022): Normal labor"
   ],
   revisao: "2026-10-25",

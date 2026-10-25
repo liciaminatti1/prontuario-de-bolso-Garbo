@@ -104,7 +104,7 @@ registrarFicha({
     "Volte em 1 a 2 dias para tirar a gaze e avaliar",
     "Volte antes se tiver febre, a vermelhidão aumentar além da marca feita na pele, a dor piorar muito, aparecer mancha escura ou bolhas"
   ],
-  relacionadas: ["furunculo-abscesso", "anestesia-local", "celulite-erisipela", "tetano-profilaxia", "sepse", "curativos-desbridamento"],
+  relacionadas: ["furunculo-abscesso", "anestesia-local", "celulite-erisipela", "tetano-profilaxia", "sepse", "curativos-desbridamento", "drenagem-abscesso-periamigdaliano", "drenagem-abscesso-perianal", "drenagem-abscesso-mamario", "drenagem-paroniquia-panaricio", "drenagem-cisto-pilonidal", "drenagem-bartholin"],
   fontes: [
     "IDSA — Practice Guidelines for the Diagnosis and Management of Skin and Soft Tissue Infections (2014)",
     "Talan DA et al. — Trimethoprim–Sulfamethoxazole versus Placebo for Uncomplicated Skin Abscess. N Engl J Med (2016)",
@@ -113,5 +113,5 @@ registrarFicha({
     "WSES/SIS-E — Guidelines for the management of skin and soft-tissue infections (2022)"
   ],
   revisao: "2026-10-24",
-  versao: "1.0"
+  versao: "1.1"
 });
