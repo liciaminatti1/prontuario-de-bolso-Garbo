@@ -2,7 +2,7 @@
    Estratégia "rede primeiro": com internet, sempre busca a versão mais nova;
    sem internet, usa a última cópia salva. Ao mudar o conteúdo não é preciso mexer aqui:
    o index.html carrega cada arquivo com ?v=<impressão digital> (ferramentas/gerar-indice.js). */
-const CACHE = "prontuario-de-bolso-v10";
+const CACHE = "prontuario-de-bolso-v11";
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(["./", "index.html", "css/estilo.css", "js/registro.js", "js/perfil.js", "js/medicamentos.js", "js/scores.js", "js/calculadoras.js", "js/documentos.js", "js/pacientes.js", "js/app.js", "manifest.webmanifest"])));

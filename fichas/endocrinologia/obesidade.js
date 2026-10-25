@@ -79,13 +79,13 @@ registrarFicha({
     alta: ["Seguimento longitudinal na UBS, com nutrição e eMulti"],
     observacao: ["—"],
     internacao: ["—"],
-    transferencia: ["Cirurgia bariátrica: IMC ≥ 40, ou ≥ 35 com comorbidade, após tratamento clínico; (IMC 30–35 com DM2 de difícil controle: cirurgia metabólica, conforme CFM)", "Endocrinologia: suspeita de causa secundária", "Saúde mental: transtorno alimentar"]
+    transferencia: ["Cirurgia bariátrica: IMC ≥ 40, ou ≥ 35 com comorbidade, após tratamento clínico; (IMC 30–34,9 com comorbidades específicas: conforme CFM 2.429/2025; ver ficha cirurgia-bariatrica)", "Endocrinologia: suspeita de causa secundária", "Saúde mental: transtorno alimentar"]
   },
   fontes: [
     "ABESO/SBEM — Diretrizes Brasileiras de Obesidade (2016) e posicionamentos de tratamento farmacológico (2022–2024)",
     "Ministério da Saúde — Linha de cuidado do sobrepeso e obesidade",
-    "CFM — Resolução nº 2.172/2017 (cirurgia metabólica)"
+    "CFM — Resolução nº 2.429/2025 (cirurgia bariátrica e metabólica; revogou a 2.131/2015 e a 2.172/2017)"
   ],
-  revisao: "2026-10-24",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });

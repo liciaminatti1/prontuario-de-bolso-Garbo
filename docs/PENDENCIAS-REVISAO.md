@@ -10,6 +10,96 @@ Cada ficha foi escrita por um agente e revisada por outro, de forma independente
 
 **147 pontos em 139 fichas** · 136 correções já aplicadas pelos revisores (lista no fim).
 
+## Lote de 25/10/2026 (73 fichas novas + 17 fichas com tabela de falha/resistência a antibiótico)
+
+Mesma situação do lote de 24/10: escritas por agentes, validadas e testadas no navegador, sem segundo revisor. Revisar inteiras antes do uso assistencial.
+
+Já ajustado: ficha obesidade passou a citar a Resolução CFM 2.429/2025 (a 2.172/2017 foi revogada).
+Divergência a decidir: ataque de B12 IM em anemia-megaloblastica (dias alternados por 2 semanas) x anemia-investigacao (diário por 1 semana, depois semanal).
+
+### Drenagens de abscesso (6 procedimentos) e tabelas de resistência (17 fichas editadas)
+- drenagem-abscesso-periamigdaliano: amoxicilina-clavulanato 875/125 mg 12/12 h por 10–14 dias; IV clindamicina 600 mg 8/8 h, ceftriaxona 2 g + metronidazol, ampicilina-sulbactam 3 g 6/6 h; dexametasona sem dose; punção ≤ 1 cm.
+- drenagem-abscesso-perianal: antibiótico só nos critérios ASCRS 2022; alergia ciprofloxacino + metronidazol 400 mg 8/8 h.
+- drenagem-abscesso-mamario: cefalexina 500 mg 6/6 h 10–14 dias; SMX-TMP na lactação com ressalvas; não puerperal amoxicilina-clavulanato.
+- drenagem-paroniquia-panaricio: lado da incisão por dedo; garrote ≤ 15–20 min; doxiciclina ≥ 8 anos 2 mg/kg/dose.
+- drenagem-hematoma-subungueal: trepanar se dor, sem limite de tamanho; sem antibiótico mesmo com fratura do tufo.
+- cervicite-uretrite: gonococo resistente — ceftriaxona 1 g; alergia grave gentamicina 240 mg IM + azitromicina 2 g (CDC 2021) — conferir PCDT 2022.
+- ivas-sinusite (faringite com alergia grave): clindamicina 7 mg/kg/dose 8/8 h (máx. 300 mg); azitromicina 12 mg/kg/dia (máx. 500 mg) 5 dias.
+- sifilis: desabastecimento de penicilina remetido às notas técnicas do MS.
+- pielonefrite: ESBL ertapenem 1 g / meropenem 1 g 8/8 h.
+- ulcera-peptica-hpylori: falha de 2 esquemas, rifabutina sem dose.
+- Fontes: Klug TE 2016; diretriz alemã S3 Sinus pilonidalis 2020.
+### Ginecologia e obstetrícia — lote 2 (9 fichas)
+- ciclo-menstrual: progesterona lútea ~3 ng/mL; suspender ACO ~3 meses antes de androgênios.
+- amenorreia-primaria: critérios 13/15 anos ou 3 anos após telarca; "Turner consensus 2024".
+- cancer-endometrio: FIGO 2023 resumida (POLEmut/p53abn); seguimento; ESGO/ESTRO/ESP 2025.
+- massas-anexiais: cisto simples ≤ ~5 cm e controle 6–12 sem (O-RADS v2022); RMI > 200 (RCOG).
+- cancer-mama: seguimento ASCO; mamografia 6–12 meses após RT; venlafaxina e cálcio/vitamina D no SUS; portaria das DDT.
+- cancer-colo-utero: vacina HPV (grupos especiais e resgate 15–19 anos); condiloma (imiquimode, podofilotoxina, ATA 80–90%); tratamento por estádio simplificado; TH após RT.
+- diagnostico-gestacao: elevação mínima de β-hCG 35–50% em 48 h; zona discriminatória 1.500–3.500; redatação ACOG 2017.
+- estatica-fetal-mecanismo-parto: diâmetros e ordem dos 6 tempos.
+- gemelaridade: parto 37 (DC), 36 (MCDA), 32–33+6 (MA) — NICE/ISUOG; TFF ≥ 8/≤ 2 cm; laser 16–26 sem; posição FEBRASGO não confirmada.
+### Cardio, pneumo, endócrino e nefro — lote 2 (9 fichas)
+- hipertensao-secundaria: investigar se < 40 anos (ESC 2024) x < 30 (SBC 2020); Diretriz Brasileira 2025 não lida; rastreio de hiperaldosteronismo em todo hipertenso (Endocrine Society 2025, condicional).
+- valvulopatias: TAVI ≥ 70 anos (ESC/EACTS 2025); limiares cirúrgicos (FEVE, DSVE, PSAP > 50); INR de prótese mecânica.
+- febre-reumatica: benzatina 600.000 UI < 20 kg (SBC 2009; AHA 27 kg) a cada 21 dias; duração SBC 2009; sulfadiazina (corte 30 kg); AAS 80–100 mg/kg/dia (máx. 3 g) e ADULTO 4–8 g/dia (alto — conferir); prednisona até 80 mg; haloperidol na coreia até 5 mg/dia.
+- bronquiectasias: ciprofloxacino 750 mg 12/12 h 14 dias; pip-tazo 6/6–8/8 h; amicacina 15 mg/kg/dia; ERS 2025 não confirmada.
+- diabetes-tipo-1: dose total 0,4–0,5 UI/kg/dia adulto e 0,7–1,0 criança pré-púbere; NPH 2/3 manhã + 1/3 22 h; regras 500/450 e 1800/1500; dias de doença ISPAD 2022; glucagon 0,5 mg < 25 kg; PCDT DM1 2019 (ano).
+- nodulo-tireoide: ATA 2015 mantida; sem % de risco Bethesda.
+- doencas-adrenal: dexametasona 1 mg (1,8 e 5,0 µg/dL); ESE 2023; HAC não clássica sem corte de 17-OHP.
+- litiase-urinaria: citrato de potássio 30–60 mEq/dia (manipulado); hidroclorotiazida 25–50 mg (NOSTONE 2023 negativo).
+### Pediatria geral e amigdalite — lote 2 (7 fichas)
+- faringoamigdalite: amoxicilina adulto 500 mg 8/8 h 10 dias (opção 12/12 h); dexametasona 10 mg dose única opcional; doses IV no abscesso (clindamicina 10–13 mg/kg/dose, ampicilina-sulbactam 50 mg/kg/dose); resistência a macrolídeo "variável" sem % Brasil.
+- desnutricao: gentamicina 7,5 mg/kg/dia, ampicilina → amoxicilina 15 mg/kg 8/8 h, vitamina A, ferro 3 mg/kg/dia na reabilitação, choque 15 mL/kg em 1 h, ciprofloxacino 15 mg/kg 12/12 h na disenteria; receitas de F-75/ReSoMal remetidas ao manual.
+- alimentacao-lactente: quantidades aproximadas; leite de vaca antes de 12 meses (SBP x Guia MS 2019).
+- calendario-vacinal-crianca: idades-limite (Instrução Normativa vigente), VPC10 → VPC20, HPV 9–45 anos em imunossuprimidos.
+- saude-mental-infancia: metilfenidato até 60 mg/dia (fora do SUS, PCDT TDAH 2022), risperidona inicial 0,25–0,5 mg (PCDT agressividade no TEA).
+- crescimento-desenvolvimento: velocidades de crescimento de referência geral.
+- prevencao-acidentes: faixas da CONTRAN 819/2021; Disque-Intoxicação 0800 722 6001.
+### Gastro, reumato, neuro e saúde mental — lote 2 (11 fichas)
+- PCDTs a confirmar: AR (Portaria Conjunta 16/2019), LES e EA ("versão vigente"), artrite psoriásica (Portaria Conjunta 37/2026, fonte estadual), Parkinson (10/2017), bipolar (SAS 315/2016).
+- colite-clostridioides: vancomicina oral preparada do frasco IV (2,5 mL = 125 mg; estabilidade); fidaxomicina no Brasil; bezlotoxumabe retirado em 2025.
+- acalasia-megaesofago: nifedipina 10 mg SL e dinitrato 5 mg SL; faixas de Mascarenhas.
+- nodulos-hepaticos: "US LI-RADS v2024"; EASL 2025; hemangioma < 3 cm sem seguimento (ACG 2024).
+- doenca-celiaca: diagnóstico sem biópsia em adulto só qualitativo; sem quantidade/tempo de reintrodução de glúten.
+- artrite-reumatoide: MTX 10–15 → 25 mg/semana; ~1 mês de ILTB antes de biológico.
+- esclerose-sistemica: captopril na crise renal (6,25–12,5 mg, aumentos 4–8 h); nifedipina retard até 60 mg; sildenafila 20 mg 8/8 h.
+- lupus-eritematoso-sistemico: prednisona ≤ 7,5 mg/dia; hidroxicloroquina 400 mg dias alternados < 80 kg.
+- doenca-parkinson: pramipexol máx. 4,5 mg/dia; levodopa/carbidopa 250/25 ¼–½ comprimido.
+- esclerose-multipla: McDonald 2024; pulsoterapia pediátrica 20–30 mg/kg/dia (máx. 1 g); plasmaférese 5–7 trocas; "ABN 2022".
+- transtorno-bipolar: litemia 0,6–0,8 / 0,8–1,2; toxicidade 1,5 e 2,5; EXTRIP 4,0 e 5,0; valproato 50–125; quetiapina na depressão.
+### Hematologia — lote 2 (9 fichas)
+- anemia-megaloblastica: ataque de B12 IM em dias alternados por 2 semanas DIFERE de anemia-investigacao (diário 1 semana → semanal) — padronizar; apresentação na rede; B12 oral alta dose no SUS.
+- anemias-hemoliticas: prednisona 1 mg/kg (teto 80–100 mg); metilprednisolona/rituximabe sem dose.
+- hemostasia-primaria: ácido tranexâmico pediátrico 15–25 mg/kg 8/8 h (máx. 1,5 g), adulto 1 g VO 8/8 h ou 10 mg/kg IV; desmopressina 0,3 mcg/kg (máx. 20 mcg); spray nasal brasileiro.
+- hemofilias: níveis-alvo WFH 2020 x Manual MS 2015; rFVIIa 90 mcg/kg 2–3 h; CCPA 50–100 UI/kg (máx. 200/dia); emicizumabe no SUS.
+- sindrome-hemolitico-uremica: restrição hídrica 400 mL/m²/dia + diurese; furosemida pediátrica; anlodipino 0,1 mg/kg; notificação; inibidor de C5 sem dose.
+- leucemias: ATRA 45 mg/m²/dia; metas na LPA (plaquetas > 30–50 mil, fibrinogênio > 100–150).
+- talassemias: quelantes sem dose; quelação se ferritina > 1.000 ou 10–20 transfusões.
+- mieloma-multiplo: hidratação 200–300 mL/h; zoledronato com ClCr < 30; seguimento de MGUS.
+- Fontes "versão vigente": DDT Mieloma, DDT LMC, PCDT Sobrecarga de Ferro, emicizumabe; NICE NG239 (2024).
+### Neonatologia e cirurgia pediátrica — lote 2 (9 fichas)
+- reanimacao-neonatal: SpO₂ alvo por minuto; adrenalina 0,02 mg/kg IV e 0,1 mg/kg traqueal; profundidade da cânula por IG; clampeamento; interrupção após 20 min.
+- sepse-neonatal/desconforto-respiratorio-neonatal: aminoglicosídeos padrão Neofax por IG/idade pós-natal; cefotaxima, oxacilina, meropenem, cefepima; fluconazol 25 mg/kg ataque + 12 mg/kg/dia; anfotericina B 1 mg/kg/dia; metronidazol neonatal (intervalo genérico); surfactante (poractante 200 → 100 mg/kg; beractante 100 mg/kg; FiO₂ > 0,30 em CPAP ≥ 6).
+- ictericia-neonatal: curvas AAP 2022 só por remissão (BiliTool); zonas de Kramer; IGIV 0,5–1 g/kg; suspensão da fototerapia.
+- triagem-neonatal: Lei 14.154/2021 (implantação estadual); oximetria ≥ 95% e diferença < 3%; escore Bristol; levotiroxina 10–15 mcg/kg/dia.
+- cardiopatias-congenitas: PGE1 com ampola 500 mcg/mL (confirmar), SpO₂ 75–85%; crise hipoxêmica morfina 0,1 mg/kg, cetamina 1–2 mg/kg; fenilefrina e betabloqueador sem dose.
+- cirurgia-pediatrica-digestiva: piloro — HCO₃ < 30 e Cl ≥ 100 antes da cirurgia; USG ≥ 3–4 mm e ≥ 15–17 mm.
+- prematuridade: ferro 2/3/4 mg/kg/dia; vitamina D 400 UI; triagem de ROP < 1.500 g e/ou ≤ 32 sem; palivizumabe/nirsevimabe "conforme nota técnica".
+- defeitos-parede-abdominal: antibiótico na gastrosquise não padronizado; idades cirúrgicas (umbilical 4–5 anos ou > 1,5–2 cm; hidrocele 12–24 meses; orquidopexia 6–18 meses); paracetamol 1 gota ≈ 13 mg.
+### Cirurgia e oncologia — lote 2 (13 fichas)
+- cirurgia-bariatrica: CFM 2.429/2025 (IMC 30–34,9 com comorbidades específicas não listadas; adolescentes 14–16 anos com IMC > 40 vindo de notícias — conferir anexo); suplementação ASMBS 2019; ursodiol 300 mg 12/12 h 6 meses; enoxaparina 40 mg 12/12 h se IMC ≥ 40; tiamina 500 mg IV 8/8 h. (Ficha obesidade atualizada para citar a 2.429/2025.)
+- anestesiologia: doses de indutores, BNM e sugamadex (2/4/16 mg/kg); dantroleno 2,5 mg/kg (frasco 20 mg/60 mL), manutenção 1 mg/kg 4/4–6/6 h; Aldrete ≥ 9; jejum ASA 2023.
+- abdome-agudo-hemorragico: ácido tranexâmico fora do trauma/pós-parto como extrapolação.
+- doenca-arterial-periferica: cilostazol 100 mg 12/12 h (50 mg com inibidores de CYP); rivaroxabana 2,5 mg fora do SUS.
+- sindromes-pos-gastrectomia: acarbose 50–100 mg 3×/dia; octreotida 50–100 mcg SC; supercrescimento bacteriano.
+- cicatrizacao: triancinolona 10–40 mg/mL a cada 4–6 semanas.
+- tumores-pele: margens por Breslow e CBC/CEC; fluoruracila 5% e imiquimode 5%.
+- cancer-colorretal: vigilância USMSTF 2020; seguimento NCCN; DDT colorretal Portaria SAS/MS 958/2014 (número).
+- cancer-gastrico: EDA na dispepsia ≥ 40–45 anos (ACG/CAG usa 60); portaria das Diretrizes MS 2018.
+- doencas-vias-biliares: ASGE 2019 (bilirrubina > 4 com colédoco dilatado; > 55 anos); pólipos ESGAR 2022.
+- tumores-pancreas: Fukuoka/Kyoto de memória; sem intervalos numéricos de vigilância.
+
 ## Fichas e procedimentos criados em 24/10/2026 (lote de 193, sem revisor independente)
 
 Escritas por 12 agentes em paralelo, com validação estrutural e teste no navegador, mas **sem segundo revisor** e quase sempre sem acesso ao texto integral das diretrizes. Revisar inteiras antes do uso assistencial. Abaixo, os pontos que os próprios autores marcaram como incertos.
