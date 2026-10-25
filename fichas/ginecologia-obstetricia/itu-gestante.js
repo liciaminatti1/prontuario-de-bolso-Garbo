@@ -232,6 +232,17 @@ registrarFicha({
         ["Cistite", "UBS", "Cefalexina, fosfomicina ou nitrofurantoína (empírico)", "5–7 dias", "Urocultura de controle"],
         ["Pielonefrite", "Hospital", "Ceftriaxona EV → VO pelo antibiograma", "10–14 dias", "Profilaxia até o parto + urocultura mensal"]
       ]
+    },
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Cistite sem melhora em 48–72 h", "Urocultura com antibiograma; trocar conforme resultado entre opções seguras (cefalexina, fosfomicina, nitrofurantoína, amoxicilina-clavulanato)", "Pensar em pielonefrite"],
+        ["Pielonefrite com febre após 48–72 h de ceftriaxona", "USG de rins e vias urinárias (obstrução, abscesso); hemoculturas; ampliar para piperacilina-tazobactam ou carbapenêmico conforme cultura/CCIH", "Obstrução: urologia (duplo J ou nefrostomia)"],
+        ["E. coli ESBL", "Cistite: fosfomicina ou nitrofurantoína se sensíveis (nitrofurantoína evitar perto do termo); pielonefrite: carbapenêmico IV", "Discutir com infectologia"],
+        ["Alergia grave a betalactâmico", "Cistite: fosfomicina ou nitrofurantoína; pielonefrite: aztreonam ou aminoglicosídeo com obstetra/infectologia", "Aminoglicosídeo: risco de ototoxicidade fetal, usar só se necessário"],
+        ["Recorrência ou bacteriúria persistente após 2 tratamentos", "Tratar pelo antibiograma e iniciar profilaxia até o parto", "Urocultura mensal; USG de vias urinárias"]
+      ]
     }
   ],
   fontes: [
@@ -242,6 +253,6 @@ registrarFicha({
     "IDSA — Clinical Practice Guideline for the Management of Asymptomatic Bacteriuria (2019)",
     "ACOG — Clinical Consensus: Urinary tract infections in pregnant individuals (2023)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });

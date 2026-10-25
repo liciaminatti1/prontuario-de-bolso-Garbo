@@ -150,6 +150,17 @@ registrarFicha({
         ["Hospitalar alternativa", "Clindamicina 900 mg IV 8/8 h + gentamicina 3–5 mg/kg IV 24/24 h", "14 dias (completar com VO)"]
       ],
       nota: "Metronidazol 400 mg VO pode substituir o de 500 mg quando for a apresentação disponível."
+    },
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Sem melhora em 72 h do esquema ambulatorial", "Internar; USG transvaginal (abscesso tubo-ovariano); rever diagnóstico (apendicite, gravidez ectópica, torção)", "CDC 2021"],
+        ["Abscesso tubo-ovariano", "Esquema IV com cobertura anaeróbia (ceftriaxona + doxiciclina + metronidazol); drenagem guiada ou cirurgia se grande ou sem resposta em 48–72 h", "Ginecologia"],
+        ["Alergia grave a cefalosporina", "Internado: clindamicina + gentamicina IV; ambulatorial: quinolona + metronidazol só se baixo risco de gonococo e com teste", "Gonococo resistente a quinolona no Brasil"],
+        ["Intolerância ou contraindicação à doxiciclina", "Azitromicina como alternativa (esquemas do CDC)", "—"],
+        ["DIU sem melhora em 48–72 h", "Considerar retirar o DIU e oferecer outro método", "Não é obrigatório retirar se houver melhora"]
+      ]
     }
   ],
   fontes: [
@@ -157,6 +168,6 @@ registrarFicha({
     "CDC — Sexually Transmitted Infections Treatment Guidelines: Pelvic Inflammatory Disease (2021)",
     "TelessaúdeRS-UFRGS — Tratamento da doença inflamatória pélvica (adaptado de MS 2022 e CDC 2021)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });

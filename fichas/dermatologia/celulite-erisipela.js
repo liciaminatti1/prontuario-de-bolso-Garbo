@@ -187,11 +187,24 @@ registrarFicha({
     "Tratar a micose entre os dedos e manter a pele hidratada (evita novas crises)",
     "Retorno na UBS em 48–72 h para reavaliar"
   ],
+  tabelas: [
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Sem melhora em 48–72 h (piora leve nas primeiras 24 h pode ocorrer)", "Procurar abscesso oculto (USG: drenar), rever diagnóstico (TVP, dermatite de estase, gota) e sinais de infecção necrosante", "Demarcar a borda para comparar"],
+        ["Falha da cefalexina com purulência ou risco de MRSA comunitário", "SMX-TMP 800/160 mg 1–2 cp de 12/12 h associado a cefalexina, ou clindamicina isolada, ou doxiciclina 100 mg de 12/12 h + cefalexina", "Cultura de secreção se houver"],
+        ["Resistência à clindamicina (inclusive induzível, teste D)", "SMX-TMP ou doxiciclina, associados a betalactâmico para estreptococo", "—"],
+        ["Alergia à penicilina", "Não grave: cefalexina; grave: clindamicina", "—"],
+        ["Sinais sistêmicos, falha do oral ou imunossuprimido", "Internar: cefazolina ou oxacilina IV; vancomicina se MRSA, sepse ou falha", "Suspeita de necrosante: cirurgia + antibiótico amplo (ver fasciite-necrosante)"]
+      ]
+    }
+  ],
   fontes: [
     "IDSA — Practice Guidelines for the Diagnosis and Management of Skin and Soft Tissue Infections (2014)",
     "OMS — The WHO AWaRe (Access, Watch, Reserve) Antibiotic Book (2022)",
     "Ministério da Saúde — Cadernos de Atenção Básica nº 28: Acolhimento à demanda espontânea, vol. II (2013)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.1"
+  revisao: "2026-10-25",
+  versao: "1.2"
 });

@@ -156,11 +156,24 @@ registrarFicha({
     "Retornar em 2–3 meses se a criança parecer não ouvir bem",
     "Prevenção: aleitamento materno, vacinas em dia (pneumocócica e influenza), evitar fumaça de cigarro e mamadeira deitado"
   ],
+  tabelas: [
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Sem melhora em 48–72 h de amoxicilina", "Confirmar OMA à otoscopia; trocar para amoxicilina-clavulanato 90 mg/kg/dia de amoxicilina", "AAP 2013"],
+        ["Falha da amoxicilina-clavulanato", "Ceftriaxona 50 mg/kg IM/IV 1×/dia (máx. 1 g) por 3 dias", "—"],
+        ["Falha da ceftriaxona", "ORL: timpanocentese com cultura; clindamicina ± cefalosporina de 3ª geração conforme cultura", "Pensar em pneumococo resistente"],
+        ["Alergia à penicilina", "Não grave: cefuroxima; grave: azitromicina (menor eficácia) ou clindamicina", "—"],
+        ["Mastoidite, paralisia facial, sinais meníngeos ou toxemia", "Internar; antibiótico IV e ORL (ver mastoidite, meningite)", "—"]
+      ]
+    }
+  ],
   fontes: [
     "AAP — Clinical Practice Guideline: The Diagnosis and Management of Acute Otitis Media (Pediatrics, 2013)",
     "SBP / ABORL-CCF — Guia prático de otite média aguda",
     "NICE NG91 — Otitis media (acute): antimicrobial prescribing (2018, atualizado 2022)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.2"
+  revisao: "2026-10-25",
+  versao: "1.3"
 });

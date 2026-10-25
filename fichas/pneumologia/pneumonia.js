@@ -180,12 +180,26 @@ registrarFicha({
     "Reavaliação na UBS em 48–72 horas (presencial ou por telefone)",
     "Vacinas: gripe anual, pneumocócica e covid-19 conforme o calendário; parar de fumar"
   ],
+  tabelas: [
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Sem melhora em 48–72 h (ambulatorial)", "Reavaliar adesão, RX de tórax (derrame, abscesso, cavitação) e diagnóstico alternativo (TB, TEP, IC, neoplasia)", "Considerar internação (CURB-65/CRB-65)"],
+        ["Falha da amoxicilina, sem comorbidade", "Amoxicilina-clavulanato + azitromicina, ou levofloxacino 750 mg 1×/dia", "Cobre atípicos e produtores de betalactamase"],
+        ["Alergia grave à penicilina", "Levofloxacino 750 mg 1×/dia (VO ou IV) ou doxiciclina 100 mg de 12/12 h (casos leves)", "Quinolona: risco de tendinite, QT longo; excluir TB antes"],
+        ["Pneumococo com resistência alta a macrolídeo (local > 25%)", "Não usar macrolídeo isolado; associar a betalactâmico", "ATS/IDSA 2019"],
+        ["Risco de MRSA ou Pseudomonas (internação e antibiótico IV nos últimos 90 dias, colonização prévia)", "Cultura de escarro e hemoculturas; ampliar: piperacilina-tazobactam (Pseudomonas) e/ou vancomicina ou linezolida (MRSA); descalonar em 48–72 h", "Pneumonia necrotizante pós-influenza: cobrir MRSA"],
+        ["Piora no internado apesar do esquema", "TC de tórax; toracocentese se derrame (empiema = drenagem); revisar culturas", "Infectologia/CCIH"]
+      ]
+    }
+  ],
   fontes: [
     "ATS — Clinical Practice Guideline Update: Diagnosis and Management of Community-acquired Pneumonia (Am J Respir Crit Care Med, 2025)",
     "ATS/IDSA — Diagnosis and Treatment of Adults with Community-acquired Pneumonia (2019)",
     "SBPT — Recomendações para o manejo da pneumonia adquirida na comunidade (J Bras Pneumol, 2018)",
     "Dequin PF et al. CAPE COD — hidrocortisona na PAC grave (N Engl J Med, 2023)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.2"
+  revisao: "2026-10-25",
+  versao: "1.3"
 });

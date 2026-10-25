@@ -250,6 +250,18 @@ registrarFicha({
         ["Alergia grave a betalactâmico", "Aminoglicosídeo IV/IM 1×/dia ou quinolona", "Igual"]
       ],
       nota: "IDSA 2025: a duração conta a partir do 1º dia de antibiótico ativo e vale para pacientes com melhora clínica. Homem com suspeita de prostatite pode precisar de 10–14 dias ou mais (ver ficha prostatite)."
+    },
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Febre ou piora após 48–72 h de antibiótico adequado", "USG ou TC de vias urinárias (obstrução, abscesso renal/perirrenal); revisar urocultura e hemoculturas", "Obstrução infectada: desobstrução urgente (duplo J ou nefrostomia) pela urologia"],
+        ["Antibiograma mostra resistência ao antibiótico em uso", "Trocar para opção sensível; preferir oral com boa concentração renal (quinolona, SMX-TMP ou betalactâmico)", "Betalactâmico oral: considerar dose IV inicial de ceftriaxona"],
+        ["E. coli/Klebsiella ESBL sem sepse", "Ertapenem 1 g IV/IM 1×/dia; passar para oral sensível (quinolona ou SMX-TMP) quando possível", "Aminoglicosídeo é opção se sensível; monitorar função renal"],
+        ["ESBL ou Pseudomonas com sepse, ou internação/antibiótico recente", "Meropenem 1 g IV de 8/8 h (ou piperacilina-tazobactam se sensível); descalonar com cultura", "Infectologia/CCIH se carbapenemase (KPC)"],
+        ["Alergia grave a betalactâmico", "Aminoglicosídeo IV/IM 1×/dia ou quinolona se sensível", "Aztreonam é alternativa hospitalar"],
+        ["Falha do tratamento oral ambulatorial ou vômitos", "Internar: ceftriaxona IV (ou conforme cultura)", "—"]
+      ]
     }
   ],
   fontes: [
@@ -258,6 +270,6 @@ registrarFicha({
     "Ministério da Saúde — RENAME 2024",
     "Instituto Latino-Americano de Sepse (ILAS) / Surviving Sepsis Campaign 2021 — manejo inicial da sepse"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });

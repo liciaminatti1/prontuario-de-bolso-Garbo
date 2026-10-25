@@ -58,12 +58,25 @@ registrarFicha({
     "Mastologia ou cirurgia: abscesso que precisa de drenagem, recorrência, massa que persiste após tratamento",
     "Banco de leite / grupo de apoio à amamentação: dificuldades de pega, excesso de produção"
   ],
+  tabelas: [
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Sem melhora em 48 h de cefalexina", "USG de mama (abscesso: ver drenagem-abscesso-mamario); cultura do leite", "Garantir esvaziamento frequente da mama"],
+        ["Falha ou suspeita de MRSA", "SMX-TMP 800/160 mg de 12/12 h ou clindamicina 300 mg de 6/6 h por 10–14 dias, conforme antibiograma", "SMX-TMP: evitar se bebê < 1 mês, prematuro, ictérico ou com G6PD"],
+        ["Alergia à penicilina", "Clindamicina 300 mg de 6/6 h", "Compatível com amamentação"],
+        ["Sepse ou falha do oral", "Internar (ver prescrição hospitalar: cefazolina; vancomicina se MRSA)", "—"],
+        ["Sem resposta a antibiótico e drenagem, ou fora da lactação", "Mastologia: USG/mamografia e biópsia", "Excluir carcinoma inflamatório e mastite granulomatosa"]
+      ]
+    }
+  ],
   fontes: [
     "Academy of Breastfeeding Medicine — Clinical Protocol #36: The Mastitis Spectrum (Breastfeed Med, 2022)",
     "Ministério da Saúde — Caderno de Atenção Básica nº 23: Saúde da criança: aleitamento materno e alimentação complementar (2ª ed., 2015)",
     "OMS — Mastitis: causes and management (2000)",
     "Surviving Sepsis Campaign — International Guidelines for Management of Sepsis and Septic Shock (2021)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });

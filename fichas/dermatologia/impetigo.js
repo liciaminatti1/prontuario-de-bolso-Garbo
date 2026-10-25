@@ -122,12 +122,25 @@ registrarFicha({
     "Pediatria/clínica: suspeita de glomerulonefrite pós-estreptocócica",
     "Dermatologia: impetigo recorrente ou dúvida diagnóstica"
   ],
+  tabelas: [
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Falha do tópico em 3–5 dias", "Antibiótico oral (cefalexina); cultura da secreção", "Rever uso correto (retirar crostas antes de aplicar)"],
+        ["Falha da cefalexina ou suspeita de MRSA", "Clindamicina; ou SMX-TMP (associar betalactâmico se estreptococo provável)", "Guiar pela cultura"],
+        ["Resistência à mupirocina ou ao ácido fusídico (uso repetido)", "Trocar o tópico ou usar antibiótico oral", "Evitar ciclos repetidos de tópico"],
+        ["Alergia à penicilina", "Clindamicina; macrolídeo só se sensível (resistência crescente)", "—"],
+        ["Ectima extenso, celulite ou sinais sistêmicos", "Tratar como celulite; internar se toxemia (ver celulite-erisipela)", "Pele escaldada: ver sindrome-pele-escaldada"]
+      ]
+    }
+  ],
   fontes: [
     "Sociedade Brasileira de Pediatria — Infecções bacterianas superficiais cutâneas, Documento Científico do Departamento de Dermatologia (dezembro/2022): mupirocina, ácido fusídico e retapamulina tópicos; bacitracina não recomendada",
     "IDSA — Practice Guidelines for the Diagnosis and Management of Skin and Soft Tissue Infections: 2014 Update (Stevens DL, et al.) — tópico por 5 dias em lesões limitadas; oral por 7 dias em lesões numerosas e ectima",
     "Hospital Israelita Albert Einstein — Pathway Impetigo em crianças e adolescentes (cefalexina 50 mg/kg/dia de 6/6 h, máx. 4 g; 7 dias)",
     "Ministério da Saúde — RENAME 2024 (cefalexina, amoxicilina + clavulanato, clindamicina)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });

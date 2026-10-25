@@ -179,6 +179,19 @@ registrarFicha({
     "Voltar se a febre durar mais de 3 dias, se piorar depois de ter melhorado, ou se não melhorar em 72 horas de antibiótico",
     "Sinusite sem antibiótico: retornar em 7 dias se não houver melhora"
   ],
+  tabelas: [
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Faringite sem melhora em 72 h de penicilina/amoxicilina", "Reavaliar: abscesso periamigdaliano (ver drenagem-abscesso-periamigdaliano), mononucleose, adesão", "S. pyogenes segue sensível à penicilina"],
+        ["Faringite recorrente ou falha bacteriológica", "Amoxicilina-clavulanato ou clindamicina por 10 dias", "IDSA 2012"],
+        ["Faringite com alergia à penicilina", "Não grave: cefalexina 10 dias; grave: azitromicina 12 mg/kg/dia (máx. 500 mg) por 5 dias ou clindamicina 7 mg/kg/dose de 8/8 h (máx. 300 mg) por 10 dias", "Resistência do estreptococo a macrolídeo existe"],
+        ["Sinusite sem melhora em 72 h ou piora", "Amoxicilina-clavulanato em dose alta; adulto alérgico: doxiciclina ou levofloxacino 500 mg 1×/dia", "Macrolídeo e SMX-TMP não são recomendados (resistência do pneumococo)"],
+        ["Falha do 2º esquema ou complicação (edema orbitário, cefaleia intensa, sinais neurológicos)", "TC de seios/órbita; internar; ceftriaxona IV e ORL", "—"]
+      ]
+    }
+  ],
   fontes: [
     "Ministério da Saúde — Guia de Manejo e Tratamento de Influenza (2023)",
     "IDSA — Guideline on the Diagnosis of Group A Streptococcal Pharyngitis, parte 1: diagnóstico (Clin Infect Dis, 2025)",
@@ -188,6 +201,6 @@ registrarFicha({
     "EPOS — European Position Paper on Rhinosinusitis and Nasal Polyps (2020)",
     "ABORL-CCF — Diretrizes Brasileiras de Rinossinusites (2015)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.2"
+  revisao: "2026-10-25",
+  versao: "1.3"
 });

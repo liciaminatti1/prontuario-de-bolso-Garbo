@@ -212,6 +212,16 @@ registrarFicha({
         ["2 falhas", "Gastroenterologia: teste de resistência", "—"]
       ],
       nota: "Teste de cura sempre: ≥ 4 semanas sem antibiótico/bismuto e 2 semanas sem IBP/vonoprazana."
+    },
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Teste de cura positivo", "Antes do resgate: checar adesão, tabagismo e supressão ácida (IBP em dose dobrada ou vonoprazana); escolher resgate pela tabela acima", "Nunca repetir claritromicina ou levofloxacino já usados"],
+        ["Uso prévio de macrolídeo ou resistência à claritromicina conhecida", "Não usar tríplice com claritromicina", "Preferir quádrupla com bismuto"],
+        ["Uso prévio de metronidazol", "Quádrupla com bismuto por 14 dias continua válida", "Dose e duração plenas superam parte da resistência"],
+        ["Falha de 2 esquemas", "Gastroenterologia: EDA com cultura ou teste molecular de resistência; 3º esquema guiado", "Rifabutina é opção de resgate (Maastricht VI), com disponibilidade limitada"]
+      ]
     }
   ],
   fontes: [
@@ -220,6 +230,6 @@ registrarFicha({
     "ACG — Clinical Guideline: Treatment of Helicobacter pylori Infection (Am J Gastroenterol, 2024)",
     "ACG — Clinical Guideline: Upper Gastrointestinal and Ulcer Bleeding (Am J Gastroenterol, 2021)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });

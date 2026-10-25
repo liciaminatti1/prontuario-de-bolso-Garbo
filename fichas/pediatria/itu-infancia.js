@@ -223,6 +223,17 @@ registrarFicha({
         ["Jato médio", "Com controle esfincteriano", "≥ 100.000 UFC/mL de um germe"],
         ["Saco coletor", "Só triagem: válido se negativo", "Positivo não confirma: recoletar por método adequado"]
       ]
+    },
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Febre persistente após 48 h de antibiótico", "Revisar urocultura/antibiograma; USG de rins e vias urinárias (abscesso, obstrução, pionefrose)", "Internar se toxemia ou desidratação"],
+        ["Germe resistente ao antibiótico oral em uso", "Trocar para opção oral sensível conforme antibiograma", "Não esperar o fim do curso para trocar"],
+        ["Resistência a todas as opções orais ou ESBL", "Internar: aminoglicosídeo IV se sensível (gentamicina 5–7,5 mg/kg/dia 1×/dia) ou carbapenêmico conforme CCIH", "Infectologia pediátrica"],
+        ["Alergia a betalactâmico", "SMX-TMP conforme antibiograma; nitrofurantoína só para cistite (não para ITU febril); aminoglicosídeo IV no internado", "—"],
+        ["Vômitos, intolerância oral, < 2–3 meses ou falha do oral", "Ceftriaxona 50–75 mg/kg/dia IV/IM (máx. 2 g); < 2 meses associar ampicilina", "Ver febre-lactente"]
+      ]
     }
   ],
   fontes: [
@@ -232,6 +243,6 @@ registrarFicha({
     "Zaoutis T et al. — Short-Course Therapy for Urinary Tract Infections in Children: SCOUT trial (JAMA Pediatr, 2023)",
     "Ministério da Saúde — RENAME 2024"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });

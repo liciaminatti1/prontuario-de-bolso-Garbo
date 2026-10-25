@@ -114,12 +114,26 @@ registrarFicha({
     "PS/cirurgia no mesmo dia: abscesso grande ou profundo, na mão, face central, perianal, mama, sinais de fasciíte necrosante, sinais sistêmicos",
     "Dermatologia: furunculose recorrente apesar da descolonização, suspeita de hidradenite supurativa"
   ],
+  tabelas: [
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Sem melhora ou recidiva em 48–72 h após drenagem", "Reabrir/redrenar, USG para coleção residual; cultura do pus", "A drenagem é o tratamento principal"],
+        ["Falha da cefalexina ou suspeita de MRSA comunitário", "SMX-TMP, clindamicina ou doxiciclina 100 mg de 12/12 h (criança ≥ 8 anos: 2 mg/kg/dose de 12/12 h, máx. 100 mg)", "Guiar pelo antibiograma"],
+        ["Resistência à clindamicina (inclusive induzível, teste D)", "SMX-TMP ou doxiciclina", "—"],
+        ["Alergia grave à penicilina", "SMX-TMP ou clindamicina", "SMX-TMP cobre mal estreptococo: se celulite associada, preferir clindamicina"],
+        ["Sinais sistêmicos, celulite extensa ou falha do oral", "Internar: vancomicina IV se MRSA (ver prescrição hospitalar)", "Linezolida é alternativa com infectologia"],
+        ["Furunculose de repetição", "Cultura; descolonização (mupirocina nasal + banho com clorexidina) e investigar diabetes", "Tratar contatos domiciliares se recorrência familiar"]
+      ]
+    }
+  ],
   fontes: [
     "IDSA — Practice Guidelines for the Diagnosis and Management of Skin and Soft Tissue Infections: 2014 Update (Stevens DL, et al. Clin Infect Dis 2014) — I&D, indicações de antibiótico e descolonização (mupirocina nasal 2×/dia 5 dias, banhos com clorexidina)",
     "Talan DA, et al. Trimethoprim–sulfamethoxazole versus placebo for uncomplicated skin abscess. N Engl J Med 2016;374:823–32; Daum RS, et al. A placebo-controlled trial of antibiotics for smaller skin abscesses. N Engl J Med 2017;376:2545–55",
     "Sociedade Brasileira de Pediatria — Infecções bacterianas superficiais cutâneas, Documento Científico do Departamento de Dermatologia (dezembro/2022)",
     "Ministério da Saúde — RENAME 2024 (cefalexina, sulfametoxazol + trimetoprima, clindamicina, oxacilina, cefazolina, vancomicina)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });

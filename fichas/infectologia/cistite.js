@@ -178,12 +178,26 @@ registrarFicha({
     "Se corrimento, coceira ou dor na relação, avisar: pode ser outra infecção",
     "Não precisa repetir exame de urina se ficar sem sintomas (exceto gestante)"
   ],
+  tabelas: [
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Sem melhora em 48–72 h ou sintomas que voltam em até 2–4 semanas", "Urocultura com antibiograma antes de trocar; trocar para outra classe (nitrofurantoína, fosfomicina ou cefalexina, a que não foi usada)", "Rever diagnóstico: vaginite, IST, litíase, pielonefrite; tratar como cistite complicada"],
+        ["Antibiograma com resistência ao antibiótico em uso", "Trocar para opção oral sensível, mesmo que os sintomas tenham melhorado parcialmente", "Nitrofurantoína e fosfomicina costumam manter atividade contra E. coli ESBL"],
+        ["E. coli ESBL ou multirresistente", "Nitrofurantoína ou fosfomicina se sensíveis no antibiograma", "Sem opção oral sensível: discutir com infectologia (pode exigir via IV/IM)"],
+        ["Resistência local a SMX-TMP > 20% ou uso recente dele", "Não usar SMX-TMP empírico; só guiado por antibiograma", "IDSA/ESCMID; resistência comunitária alta no Brasil"],
+        ["Alergia a betalactâmico", "Nitrofurantoína ou fosfomicina", "Fluoroquinolona só se nenhuma outra opção, guiada por antibiograma"],
+        ["Febre, dor lombar, calafrios ou vômitos", "Tratar como pielonefrite (ver ficha); internar se sepse ou sem tolerância oral", "Nitrofurantoína e fosfomicina não atingem nível adequado no rim"]
+      ]
+    }
+  ],
   fontes: [
     "IDSA/ESCMID — International Clinical Practice Guidelines for the Treatment of Acute Uncomplicated Cystitis and Pyelonephritis in Women (2010; atualização em andamento)",
     "IDSA — Guideline on Management of Complicated Urinary Tract Infections (2025)",
     "EAU Guidelines on Urological Infections (2025)",
     "FEBRASGO — Infecção do trato urinário (protocolo)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.1"
+  revisao: "2026-10-25",
+  versao: "1.2"
 });

@@ -231,6 +231,18 @@ registrarFicha({
         ["Prostatite bacteriana crônica", "Quinolona por 4 semanas (urologia)"]
       ],
       nota: "IDSA 2025 reconhece evidência limitada para a duração ideal na prostatite; EAU recomenda 2–4 semanas na aguda e 4 a 6 semanas de quinolona na crônica."
+    },
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Febre ou dor sem melhora em 48–72 h", "USG transretal ou TC/RM de pelve (abscesso prostático); urocultura e hemocultura", "Abscesso: drenagem pela urologia"],
+        ["Resistência à quinolona no antibiograma", "SMX-TMP se sensível; senão betalactâmico IV conforme antibiograma, com transição oral quando possível", "Betalactâmicos penetram menos na próstata: manter curso longo"],
+        ["E. coli ESBL", "Ertapenem ou meropenem IV; depois oral sensível (quinolona ou SMX-TMP)", "Sem opção oral: infectologia/urologia (fosfomicina oral é usada em alguns protocolos)"],
+        ["Alergia a betalactâmico", "Quinolona ou SMX-TMP conforme antibiograma; aminoglicosídeo IV no internado", "—"],
+        ["Sepse, retenção urinária ou falha do oral", "Internar: ceftriaxona IV (± aminoglicosídeo); piperacilina-tazobactam ou carbapenêmico se risco de resistência", "Retenção: cateter suprapúbico ou sonda fina conforme urologia"],
+        ["Recidiva após terminar o tratamento", "Urocultura antes e depois de massagem prostática; quinolona por 4–6 semanas se sensível", "Prostatite bacteriana crônica: urologia"]
+      ]
     }
   ],
   fontes: [
@@ -240,6 +252,6 @@ registrarFicha({
     "CDC — Sexually Transmitted Infections Treatment Guidelines (2021): epididimite aguda",
     "Ministério da Saúde — RENAME 2024"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });

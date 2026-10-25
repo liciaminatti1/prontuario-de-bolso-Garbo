@@ -203,6 +203,17 @@ registrarFicha({
         ["1–4 anos", "≥ 40 irpm"]
       ],
       nota: "Contar por 1 minuto inteiro, com a criança calma e sem febre alta se possível."
+    },
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Sem melhora em 48–72 h de amoxicilina", "RX de tórax; revisar dose e adesão; amoxicilina 80–90 mg/kg/dia (máx. 4 g/dia) ou amoxicilina-clavulanato", "Procurar derrame, empiema, abscesso"],
+        ["Suspeita de S. aureus (pós-influenza/sarampo, pneumatoceles, derrame rápido)", "Internar: oxacilina IV (ou ceftriaxona + oxacilina); MRSA: vancomicina ou clindamicina conforme cultura", "Hemocultura e cultura do líquido pleural"],
+        ["Suspeita de atípico (≥ 5 anos, sem resposta a betalactâmico)", "Associar azitromicina 10 mg/kg no 1º dia (máx. 500 mg), depois 5 mg/kg/dia (máx. 250 mg)", "—"],
+        ["Alergia à penicilina", "Não grave: cefalosporina (ex.: ceftriaxona no internado); grave: azitromicina (atípico) ou clindamicina/levofloxacino com especialista", "Macrolídeo isolado cobre mal pneumococo resistente"],
+        ["Falha do oral, grave ou sem vacinação para Hib", "Internar: penicilina cristalina ou ceftriaxona IV", "Ver doses na tabela de tratamento"]
+      ]
     }
   ],
   fontes: [
@@ -211,6 +222,6 @@ registrarFicha({
     "Ministério da Saúde/OPAS — AIDPI Criança: 2 meses a 5 anos (2017)",
     "Bielicki JA et al. — CAP-IT trial, JAMA (2021); Williams DJ et al. — SCOUT-CAP trial, JAMA Pediatrics (2022)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });

@@ -149,6 +149,18 @@ registrarFicha({
         ["Neurossífilis", "Penicilina cristalina 18–24 milhões UI/dia IV 14 dias", "Ceftriaxona 2 g IV/dia 10–14 dias"]
       ],
       nota: "Gestante: só penicilina benzatina é considerada tratamento adequado; alergia → dessensibilização."
+    },
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Alergia à penicilina, não gestante", "Doxiciclina 100 mg de 12/12 h (15 dias recente; 30 dias tardia) ou ceftriaxona 1 g IV/IM 1×/dia por 10–14 dias", "Seguimento sorológico rigoroso"],
+        ["Alergia à penicilina em gestante", "Dessensibilização à penicilina em ambiente hospitalar", "Só a penicilina benzatina trata o feto"],
+        ["Desabastecimento de penicilina benzatina", "Priorizar gestantes, parcerias de gestantes e sífilis congênita; demais: doxiciclina ou ceftriaxona", "Seguir notas técnicas vigentes do Ministério da Saúde"],
+        ["Falha: VDRL sem queda de 2 diluições no prazo esperado ou aumento de 2 diluições", "Afastar reinfecção; testar HIV; LCR para neurossífilis; retratar com penicilina benzatina 3 doses semanais", "PCDT IST 2022"],
+        ["Neurossífilis com alergia à penicilina", "Ceftriaxona 2 g IV 1×/dia por 10–14 dias ou dessensibilização", "Infectologia"],
+        ["Azitromicina", "Não usar", "Resistência do T. pallidum a macrolídeos é alta"]
+      ]
     }
   ],
   fontes: [
@@ -158,6 +170,6 @@ registrarFicha({
     "OMS — Recommendations for the treatment of Neisseria gonorrhoeae, Chlamydia trachomatis and Treponema pallidum (2024)",
     "CDC — Sexually Transmitted Infections Treatment Guidelines (2021)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });

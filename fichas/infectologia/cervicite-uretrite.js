@@ -149,6 +149,17 @@ registrarFicha({
         ["Trichomonas", "Metronidazol 2 g VO dose única", "Metronidazol 500 mg 12/12 h 7 dias"]
       ],
       nota: "CDC 2021: para M. genitalium, doxiciclina 7 dias seguida de moxifloxacino 400 mg 7 dias (ou azitromicina 4 dias se teste de resistência a macrolídeo negativo). Resistência a macrolídeos crescente no Brasil."
+    },
+    {
+      titulo: "Falha ou resistência ao antibiótico",
+      colunas: ["Situação", "Opção", "Observação"],
+      linhas: [
+        ["Sintomas persistentes após 7 dias", "Rever adesão, reexposição e tratamento da parceria; NAAT e cultura para gonococo com antibiograma (colher cultura antes de retratar)", "Notificar suspeita de falha"],
+        ["Suspeita de gonococo resistente à ceftriaxona (persistência sem reexposição)", "Repetir ceftriaxona 1 g IM ou IV com cultura prévia; consultar infectologia", "Teste de cura 7–14 dias depois; CDC 2021"],
+        ["Alergia grave a cefalosporina", "Gentamicina 240 mg IM + azitromicina 2 g VO, dose única", "CDC 2021; cultura e teste de cura"],
+        ["Persistência após tratar gonococo e clamídia", "Mycoplasma genitalium: doxiciclina 7 dias seguida de moxifloxacino 7 dias; Trichomonas: metronidazol", "Ver tabela de tratamento por agente"],
+        ["Gonococo disseminado (artrite, lesões de pele, febre)", "Internar: ceftriaxona 1 g IV 24/24 h", "—"]
+      ]
     }
   ],
   fontes: [
@@ -157,6 +168,6 @@ registrarFicha({
     "OMS — Recommendations for the treatment of Neisseria gonorrhoeae, Chlamydia trachomatis and Treponema pallidum (2024)",
     "European guideline on the management of Mycoplasma genitalium infections (IUSTI, 2021)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-10-25",
+  versao: "1.1"
 });
