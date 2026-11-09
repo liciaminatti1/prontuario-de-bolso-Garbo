@@ -67,7 +67,7 @@ registrarFicha({
         ["Hidrocortisona 100–500 mg", "Diluente próprio (pode ir em 100 mL de SF 0,9%)", "IV lento em 3–5 min ou em 30 min", "—"],
         ["Escopolamina (butilbrometo) 20 mg", "Puro ou com dipirona em 100 mL de SF 0,9%", "IV lento", "Taquicardia, retenção urinária; evitar em glaucoma de ângulo fechado"],
         ["Cloreto de potássio 19,1% (2,5 mEq/mL)", "Sempre diluído em SF 0,9% (ex.: 10 mL = 25 mEq em 250–500 mL)", "≤ 10 mEq/h em veia periférica; até 20 mEq/h só em acesso central com monitor", "Nunca em bolus. Dor no trajeto: diluir mais"],
-        ["Glicose 50%", "Pura (em veia calibrosa) ou diluir 1:1 para periférica", "IV lento", "Vesicante. Criança: usar glicose 10% (2–5 mL/kg)"]
+        ["Glicose 50%", "Pura (em veia calibrosa) ou diluir 1:1 para periférica", "IV lento", "Vesicante. Criança: usar glicose 10% (5–10 mL/kg, 0,5–1 g/kg; RN: 2 mL/kg)"]
       ],
       nota: "Confirme na bula do fabricante disponível no serviço e no guia de diluição da farmácia; compatibilidade em Y deve ser checada."
     },
@@ -95,6 +95,7 @@ registrarFicha({
     "Dúvidas de diluição, compatibilidade e estabilidade: farmácia hospitalar ou centro de informação sobre medicamentos"
   ],
   fontes: [
+    "AHA/AAP — PALS 2025: glicose na hipoglicemia 0,5–1 g/kg (SG 10% 5–10 mL/kg); RN: SG 10% 2 mL/kg",
     "COREN-SP — Parecer nº 010/2020: volumes máximos e técnica de administração intramuscular",
     "Ministério da Saúde — Nota técnica sobre administração de vacinas IM sem aspiração e volumes por músculo (2020)",
     "Ministério da Saúde — Manual de Normas e Procedimentos para Vacinação (2014; atualizações)",
@@ -102,6 +103,6 @@ registrarFicha({
     "ANVISA — RDC nº 471/2021 (antimicrobianos) e Portaria SVS/MS nº 344/1998 (controle especial)",
     "AHA — Diretrizes de RCP e ACE 2025 (acesso intraósseo)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

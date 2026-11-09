@@ -57,17 +57,17 @@ registrarFicha({
     {
       droga: "Pamoato de pirvínio",
       linha: "alt",
-      dose: "Dose por kg conforme a bula da apresentação (suspensão ou drágea)",
+      dose: "Suspensão 10 mg/mL: 1 mL/kg (10 mg/kg), máx. 600 mg (60 mL). Drágea 100 mg (> 12 anos): 1 drágea por 10 kg (máx. 6 drágeas)",
       via: "VO",
       intervalo: "Dose única",
       duracao: "Repetir após 2 semanas",
-      monitorizacao: "Fezes avermelhadas (inócuo, mancha roupas)",
-      contraindicacoes: "Hipersensibilidade",
-      ajustes: "Opção quando albendazol/mebendazol não puderem ser usados; conferir a dose máxima na bula"
+      monitorizacao: "Fezes avermelhadas: sem significado clínico (mancha roupas)",
+      contraindicacoes: "Hipersensibilidade. Não recomendado < 10 kg",
+      ajustes: "Opção quando albendazol/mebendazol não puderem ser usados (bula Pyr-Pam)"
     }
   ],
   prescricao: {
-    ambulatorial: "ADULTO E CRIANÇA ≥ 2 ANOS (tratar todos da casa)\nUSO ORAL\n1. Albendazol 400 mg (comprimido) ou suspensão 40 mg/mL ---- 2 comprimidos ou 1 frasco por pessoa\n   Tomar 1 comprimido (ou 10 mL da suspensão) em dose única hoje e repetir a mesma dose daqui a 14 dias.\n   Criança de 1 a 2 anos: 5 mL (200 mg) hoje e repetir em 14 dias.\n\nALTERNATIVA\n1. Mebendazol 100 mg (comprimido) ou suspensão 20 mg/mL ---- 2 comprimidos ou 1 frasco por pessoa\n   Tomar 1 comprimido (ou 5 mL) em dose única hoje e repetir em 14 dias (criança > 1 ano: mesma dose).\n\nORIENTAÇÕES (por 2 semanas)\n- Unhas curtas e limpas; lavar as mãos após o banheiro e antes de comer; evitar coçar.\n- Banho pela manhã para remover os ovos; trocar a roupa íntima todos os dias.\n- Lavar roupas de cama, toalhas e pijamas com água quente; não sacudir os lençóis.\n- Limpar o chão e o vaso sanitário com pano úmido."
+    ambulatorial: "ADULTO E CRIANÇA ≥ 2 ANOS (tratar todos da casa)\nUSO ORAL\n1. Albendazol 400 mg (comprimido) ou suspensão 40 mg/mL ---- 2 comprimidos ou 1 frasco por pessoa\n   Tomar 1 comprimido (ou 10 mL da suspensão) em dose única hoje e repetir a mesma dose daqui a 14 dias.\n   Criança de 1 a 2 anos: 5 mL (200 mg) hoje e repetir em 14 dias.\n\nALTERNATIVA\n1. Mebendazol 100 mg (comprimido) ou suspensão 20 mg/mL ---- 2 comprimidos ou 1 frasco por pessoa\n   Tomar 1 comprimido (ou 5 mL) em dose única hoje e repetir em 14 dias (criança > 1 ano: mesma dose).\n\nALTERNATIVA (≥ 10 kg)\n1. Pamoato de pirvínio suspensão 10 mg/mL ---- 1 frasco\n   Tomar 1 mL por kg de peso (máximo 60 mL) em dose única hoje e repetir em 14 dias. As fezes podem ficar vermelhas, sem problema.\n   (> 12 anos: drágea 100 mg — 1 drágea a cada 10 kg de peso, máximo 6, dose única, repetir em 14 dias.)\n\nORIENTAÇÕES (por 2 semanas)\n- Unhas curtas e limpas; lavar as mãos após o banheiro e antes de comer; evitar coçar.\n- Banho pela manhã para remover os ovos; trocar a roupa íntima todos os dias.\n- Lavar roupas de cama, toalhas e pijamas com água quente; não sacudir os lençóis.\n- Limpar o chão e o vaso sanitário com pano úmido."
   },
   orientacoesRetorno: [
     "Os ovos sobrevivem fora do corpo por até 2–3 semanas: por isso a 2ª dose e a higiene da casa são essenciais",
@@ -82,8 +82,9 @@ registrarFicha({
     "SBP — Guia Prático de Atualização nº 7: Parasitoses intestinais — diagnóstico e tratamento (2020)",
     "Ministério da Saúde — Doenças Infecciosas e Parasitárias: Guia de Bolso, 8ª ed. (2010)",
     "CDC — Enterobiasis: Clinical Overview and Treatment (2024)",
-    "Ministério da Saúde — RENAME 2024 (albendazol, mebendazol)"
+    "Ministério da Saúde — RENAME 2024 (albendazol, mebendazol)",
+    "Bula Pyr-Pam (pamoato de pirvínio suspensão 10 mg/mL e drágea 100 mg) — Anvisa"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

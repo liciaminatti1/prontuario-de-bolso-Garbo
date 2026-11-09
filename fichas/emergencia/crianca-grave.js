@@ -78,7 +78,7 @@ registrarFicha({
       pedido: "Glicemia capilar imediata (beira-leito).",
       porQue: "Hipoglicemia é causa e consequência frequente de gravidade em lactentes.",
       esperar: "≥ 60 mg/dL.",
-      interpretacao: "< 60 mg/dL: SG 10% 2–5 mL/kg IV e repetir em 15 min.",
+      interpretacao: "< 60 mg/dL: SG 10% 5–10 mL/kg (0,5–1 g/kg) IV — RN: 2 mL/kg — e repetir em 15 min.",
       limitacoes: "Glicosímetro é impreciso em choque com má perfusão periférica; confirmar com glicemia sérica."
     },
     {
@@ -132,13 +132,13 @@ registrarFicha({
     {
       droga: "Glicose (SG 10%)",
       linha: "l1",
-      dose: "2–5 mL/kg (0,2–0,5 g/kg)",
+      dose: "Criança: 0,5–1 g/kg = SG 10% 5–10 mL/kg (PALS). RN: SG 10% 2 mL/kg",
       via: "IV ou IO em bolus",
       intervalo: "Repetir se glicemia < 60 mg/dL após 15 min",
       duracao: "Depois manter soro de manutenção com glicose",
       monitorizacao: "Glicemia capilar a cada 15–30 min até estável",
       contraindicacoes: "—",
-      ajustes: "O PALS cita 0,5–1 g/kg (SG 10% 5–10 mL/kg); começar com 2–5 mL/kg e repetir conforme glicemia. RN: 2 mL/kg. Não usar SG 25–50% em lactentes em veia periférica (flebite e hiperosmolaridade)"
+      ajustes: "Dose padronizada pelo PALS. A faixa 2–5 mL/kg de SG 10% (0,2–0,5 g/kg) fica abaixo do PALS: usar só no RN ou na manutenção. Não usar SG 25–50% em lactentes em veia periférica (flebite e hiperosmolaridade)"
     },
     {
       droga: "Epinefrina em infusão contínua (choque refratário a volume)",
@@ -198,7 +198,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "CRIANÇA GRAVE — SALA DE EMERGÊNCIA (peso: ___ kg; estimado se necessário)\n1. Jejum enquanto instável.\n2. Monitor cardíaco, oximetria contínua, PA a cada 5–15 min, cabeceira conforme conforto.\n3. Oxigênio por máscara não reinalante 10–15 L/min; titular para SpO₂ ≥ 94%.\n4. Acesso venoso periférico (IO se 2 tentativas sem sucesso ou 90 s).\n5. Ringer lactato (ou SF 0,9%) ___ mL (10–20 mL/kg) IV/IO em 5–20 minutos. Reavaliar após cada bolus; repetir até 40–60 mL/kg na 1ª hora se perfusão ainda ruim e sem estertores/hepatomegalia.\n6. Se glicemia < 60 mg/dL: SG 10% ___ mL (2–5 mL/kg) IV em bolus; repetir glicemia em 15 minutos.\n7. Se suspeita de sepse: colher hemocultura e iniciar ceftriaxona ___ mg (100 mg/kg/dia, máx 4 g/dia se meningite; 50–75 mg/kg, máx 2 g se sepse sem meningite) IV, diluída em SF 0,9% 50–100 mL, em 30 minutos — na 1ª hora.\n8. Se choque persistente após volume: epinefrina — diluir (0,3 × peso) mg em SG 5% até 50 mL; iniciar 0,5–1 mL/h (= 0,05–0,1 mcg/kg/min) em bomba de infusão, titular até perfusão adequada (máx 1 mcg/kg/min). Vasodilatado: norepinefrina na mesma diluição e dose.\n9. Antitérmico se febre: dipirona 15–25 mg/kg/dose IV (máx 1 g) de 6/6 h — IV só a partir de 1 ano; de 3 a 11 meses usar IM; contraindicada < 3 meses ou < 5 kg —, ou paracetamol 10–15 mg/kg VO de 6/6 h.\n10. Sonda vesical de demora em choque: diurese horária (alvo ≥ 1 mL/kg/h).\n11. Controles: glicemia capilar de 1/1 h; gasometria e lactato em 1–2 h; balanço hídrico; reavaliação médica contínua até transferência."
+    hospitalar: "CRIANÇA GRAVE — SALA DE EMERGÊNCIA (peso: ___ kg; estimado se necessário)\n1. Jejum enquanto instável.\n2. Monitor cardíaco, oximetria contínua, PA a cada 5–15 min, cabeceira conforme conforto.\n3. Oxigênio por máscara não reinalante 10–15 L/min; titular para SpO₂ ≥ 94%.\n4. Acesso venoso periférico (IO se 2 tentativas sem sucesso ou 90 s).\n5. Ringer lactato (ou SF 0,9%) ___ mL (10–20 mL/kg) IV/IO em 5–20 minutos. Reavaliar após cada bolus; repetir até 40–60 mL/kg na 1ª hora se perfusão ainda ruim e sem estertores/hepatomegalia.\n6. Se glicemia < 60 mg/dL: SG 10% ___ mL (5–10 mL/kg = 0,5–1 g/kg; RN: 2 mL/kg) IV em bolus; repetir glicemia em 15 minutos.\n7. Se suspeita de sepse: colher hemocultura e iniciar ceftriaxona ___ mg (100 mg/kg/dia, máx 4 g/dia se meningite; 50–75 mg/kg, máx 2 g se sepse sem meningite) IV, diluída em SF 0,9% 50–100 mL, em 30 minutos — na 1ª hora.\n8. Se choque persistente após volume: epinefrina — diluir (0,3 × peso) mg em SG 5% até 50 mL; iniciar 0,5–1 mL/h (= 0,05–0,1 mcg/kg/min) em bomba de infusão, titular até perfusão adequada (máx 1 mcg/kg/min). Vasodilatado: norepinefrina na mesma diluição e dose.\n9. Antitérmico se febre: dipirona 15–25 mg/kg/dose IV (máx 1 g) de 6/6 h — IV só a partir de 1 ano; de 3 a 11 meses usar IM; contraindicada < 3 meses ou < 5 kg —, ou paracetamol 10–15 mg/kg VO de 6/6 h.\n10. Sonda vesical de demora em choque: diurese horária (alvo ≥ 1 mL/kg/h).\n11. Controles: glicemia capilar de 1/1 h; gasometria e lactato em 1–2 h; balanço hídrico; reavaliação médica contínua até transferência."
   },
   orientacoesRetorno: [
     "Após alta de quadro grave, retorno em 24–48 h na UBS ou no PS para reavaliação",
@@ -232,12 +232,12 @@ registrarFicha({
     }
   ],
   fontes: [
-    "AHA/AAP — 2025 American Heart Association and American Academy of Pediatrics Guidelines for CPR and ECC: Pediatric Advanced Life Support (2025)",
+    "AHA/AAP — 2025 American Heart Association and American Academy of Pediatrics Guidelines for CPR and ECC: Pediatric Advanced Life Support (2025) — glicose 0,5–1 g/kg (SG 10% 5–10 mL/kg)",
     "Surviving Sepsis Campaign — International Guidelines for the Management of Septic Shock and Sepsis-Associated Organ Dysfunction in Children (Pediatr Crit Care Med, 2020)",
     "SBP — Departamento Científico de Emergência: Reconhecimento da criança gravemente enferma / Triângulo de Avaliação Pediátrica (documentos científicos vigentes)",
     "Dieckmann RA et al. — The Pediatric Assessment Triangle (Pediatr Emerg Care, 2010)",
     "Phoenix Sepsis Criteria — International Consensus Criteria for Pediatric Sepsis and Septic Shock (JAMA, 2024)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

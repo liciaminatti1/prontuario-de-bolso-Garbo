@@ -123,7 +123,7 @@ registrarFicha({
       dose: "5 mg",
       via: "IV lento (1–2 min)",
       intervalo: "Repetir a cada 20 min se PA ≥ 160/110",
-      duracao: "Dose máxima 20–30 mg conforme protocolo; se não controlar, outro fármaco",
+      duracao: "5 mg a cada 20 min; se sem resposta com 30 mg, considerar outro fármaco (alguns protocolos até 45 mg)",
       monitorizacao: "PA a cada 5 min; BCF; taquicardia, cefaleia",
       contraindicacoes: "Taquicardia importante",
       ajustes: "Diluição: ampola 20 mg/mL (1 mL) + 19 mL de água destilada = 1 mg/mL; aplicar 5 mL (5 mg)"
@@ -164,7 +164,7 @@ registrarFicha({
     {
       droga: "Metildopa (manutenção oral)",
       linha: "l1",
-      dose: "250 mg 2–3×/dia, até 2 g/dia",
+      dose: "250 mg 2–3×/dia; usual até 2 g/dia; máx. 3 g/dia",
       via: "VO",
       intervalo: "8/8 h a 12/12 h",
       duracao: "Até o parto (no puerpério trocar por outra classe se depressão)",
@@ -214,7 +214,7 @@ registrarFicha({
       duracao: "12 semanas até o parto",
       monitorizacao: "—",
       contraindicacoes: "Hipercalcemia",
-      ajustes: "Universal no SUS desde 2024 (NT MS 251/2024)"
+      ajustes: "Universal no SUS desde 2024 (NT MS 251/2024). Atenção: em mar/abr de 2026, FEBRASGO e RBEHG deixaram de recomendar cálcio para prevenção de pré-eclâmpsia (reanálise Cochrane, Cluver 2025); o cálcio pode seguir por outras indicações. A NT 251/2024 do MS não foi revogada e segue como norma do SUS"
     },
     {
       droga: "iECA, BRA, atenolol, diuréticos (na gestação)",
@@ -256,8 +256,8 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "HIPERTENSÃO CRÔNICA OU GESTACIONAL ESTÁVEL (meta PA < 140/90)\nUSO ORAL\n1. Metildopa 250 mg ------------------------------ 90 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas (ajustar até 2 comprimidos de 8 em 8 horas).\n   OU Nifedipina retard 20 mg --------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas.\n   OU Anlodipino 5 mg ------------------------------ 30 comprimidos\n   Tomar 1 comprimido ao dia (até 10 mg/dia).\n\nPREVENÇÃO DE PRÉ-ECLÂMPSIA\n2. Ácido acetilsalicílico 100 mg ---------------- 30 comprimidos\n   Tomar 1 comprimido à noite, de 12 a 36 semanas.\n3. Carbonato de cálcio 1.250 mg (500 mg de cálcio) - 60 comprimidos\n   Tomar 1 comprimido no café e 1 no jantar, a partir de 12 semanas até o parto (2 horas longe do ferro).\n\nPUERPÉRIO (amamentando)\n4. Enalapril 10 mg ------------------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas (ou manter nifedipina/anlodipino).",
-    hospitalar: "PRÉ-ECLÂMPSIA COM SINAIS DE GRAVIDADE / CRISE HIPERTENSIVA (peso: ___ kg; IG: ___ semanas)\n1. Dieta zero se parto iminente; senão, dieta geral.\n2. Decúbito lateral esquerdo; cabeceira 30°; grades elevadas; acesso venoso calibroso; sonda vesical de demora (diurese horária).\n3. Nifedipina 10 mg VO; repetir 10 mg a cada 20–30 min se PA ≥ 160/110 (máximo 30 mg).\n   OU Hidralazina 20 mg/mL: 1 ampola + 19 mL de água destilada (1 mg/mL); aplicar 5 mL (5 mg) IV em 1–2 min; repetir a cada 20 min se PA ≥ 160/110 (máximo 20–30 mg conforme protocolo).\n   Meta: PAS 140–150 e PAD 90–100.\n4. Sulfato de magnésio (Zuspan):\n   Ataque: MgSO₄ 50% 8 mL (4 g) + água destilada 12 mL IV em 15–20 min.\n   Manutenção: MgSO₄ 50% 10 mL (5 g) + SF 0,9% 490 mL IV em bomba a 100 mL/h (1 g/h), por 24 h após o parto ou a última convulsão.\n   Sem bomba (Pritchard): ataque 4 g IV + 10 g IM (MgSO₄ 50% 10 mL em cada glúteo); manutenção 5 g IM (10 mL) de 4/4 h alternando glúteos.\n5. Antes de cada hora de MgSO₄ checar: reflexo patelar presente, FR ≥ 16 irpm, diurese ≥ 25 mL/h. Se alterado: suspender a infusão e chamar o médico.\n6. Gluconato de cálcio 10% 10 mL à beira do leito: aplicar IV em 3–5 min se depressão respiratória.\n7. Hidratação restrita: SF 0,9% ou Ringer lactato 80–100 mL/h (risco de edema pulmonar).\n8. Betametasona 12 mg IM, repetir em 24 h, se 24–34 semanas e parto provável em 7 dias.\n9. Exames: hemograma, plaquetas, creatinina, AST, ALT, LDH, bilirrubinas, relação proteína/creatinina; repetir a cada 6–24 h.\n10. Controles: PA de 15/15 min até controle e depois de 1/1 h; FR, SpO₂, reflexos e diurese de 1/1 h; BCF/cardiotocografia conforme IG.\n11. Suspender AAS. Comunicar obstetra para decisão sobre o parto."
+    ambulatorial: "HIPERTENSÃO CRÔNICA OU GESTACIONAL ESTÁVEL (meta PA < 140/90)\nUSO ORAL\n1. Metildopa 250 mg ------------------------------ 90 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas (ajustar até 2 comprimidos de 8 em 8 horas; usual até 2 g/dia, máximo 3 g/dia).\n   OU Nifedipina retard 20 mg --------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas.\n   OU Anlodipino 5 mg ------------------------------ 30 comprimidos\n   Tomar 1 comprimido ao dia (até 10 mg/dia).\n\nPREVENÇÃO DE PRÉ-ECLÂMPSIA\n2. Ácido acetilsalicílico 100 mg ---------------- 30 comprimidos\n   Tomar 1 comprimido à noite, de 12 a 36 semanas.\n3. Carbonato de cálcio 1.250 mg (500 mg de cálcio) - 60 comprimidos\n   Tomar 1 comprimido no café e 1 no jantar, a partir de 12 semanas até o parto (2 horas longe do ferro). Norma do SUS (NT 251/2024); FEBRASGO e RBEHG (2026) não recomendam mais cálcio para prevenir pré-eclâmpsia.\n\nPUERPÉRIO (amamentando)\n4. Enalapril 10 mg ------------------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas (ou manter nifedipina/anlodipino).",
+    hospitalar: "PRÉ-ECLÂMPSIA COM SINAIS DE GRAVIDADE / CRISE HIPERTENSIVA (peso: ___ kg; IG: ___ semanas)\n1. Dieta zero se parto iminente; senão, dieta geral.\n2. Decúbito lateral esquerdo; cabeceira 30°; grades elevadas; acesso venoso calibroso; sonda vesical de demora (diurese horária).\n3. Nifedipina 10 mg VO; repetir 10 mg a cada 20–30 min se PA ≥ 160/110 (máximo 30 mg).\n   OU Hidralazina 20 mg/mL: 1 ampola + 19 mL de água destilada (1 mg/mL); aplicar 5 mL (5 mg) IV em 1–2 min; repetir a cada 20 min se PA ≥ 160/110; se sem resposta com 30 mg, considerar outro fármaco (alguns protocolos até 45 mg).\n   Meta: PAS 140–150 e PAD 90–100.\n4. Sulfato de magnésio (Zuspan):\n   Ataque: MgSO₄ 50% 8 mL (4 g) + água destilada 12 mL IV em 15–20 min.\n   Manutenção: MgSO₄ 50% 10 mL (5 g) + SF 0,9% 490 mL IV em bomba a 100 mL/h (1 g/h), por 24 h após o parto ou a última convulsão.\n   Sem bomba (Pritchard): ataque 4 g IV + 10 g IM (MgSO₄ 50% 10 mL em cada glúteo); manutenção 5 g IM (10 mL) de 4/4 h alternando glúteos.\n5. Antes de cada hora de MgSO₄ checar: reflexo patelar presente, FR ≥ 16 irpm, diurese ≥ 25 mL/h. Se alterado: suspender a infusão e chamar o médico.\n6. Gluconato de cálcio 10% 10 mL à beira do leito: aplicar IV em 3–5 min se depressão respiratória.\n7. Hidratação restrita: SF 0,9% ou Ringer lactato 80–100 mL/h (risco de edema pulmonar).\n8. Betametasona 12 mg IM, repetir em 24 h, se 24–34 semanas e parto provável em 7 dias.\n9. Exames: hemograma, plaquetas, creatinina, AST, ALT, LDH, bilirrubinas, relação proteína/creatinina; repetir a cada 6–24 h.\n10. Controles: PA de 15/15 min até controle e depois de 1/1 h; FR, SpO₂, reflexos e diurese de 1/1 h; BCF/cardiotocografia conforme IG.\n11. Suspender AAS. Comunicar obstetra para decisão sobre o parto."
   },
   orientacoesRetorno: [
     "Medir a pressão conforme combinado (na UBS ou em casa) e anotar",
@@ -276,7 +276,7 @@ registrarFicha({
         ["Moderado (≥ 2)", "Nuliparidade; IMC > 30; história familiar de PE; idade ≥ 35 anos; intervalo > 10 anos; baixo nível socioeconômico; mulher negra; FIV; desfecho adverso em gestação prévia", "AAS 100 mg/noite 12–36 sem"],
         ["Todas as gestantes", "—", "Cálcio 1.000 mg/dia a partir de 12 semanas (SUS)"]
       ],
-      nota: "Fatores: USPSTF/ACOG adotados pela RBEHG. AAS: RBEHG 2025 (100 mg à noite, 12–36 semanas)."
+      nota: "Fatores: USPSTF/ACOG adotados pela RBEHG. AAS: RBEHG 2025 (100 mg à noite, 12–36 semanas). Cálcio: atenção: em mar/abr de 2026, FEBRASGO e RBEHG deixaram de recomendar cálcio para prevenção de pré-eclâmpsia (reanálise Cochrane, Cluver 2025); o cálcio pode seguir por outras indicações. A NT 251/2024 do MS não foi revogada e segue como norma do SUS."
     },
     {
       titulo: "Sulfato de magnésio 50% (ampola 10 mL = 5 g)",
@@ -292,10 +292,12 @@ registrarFicha({
     "RBEHG (Rede Brasileira de Estudos sobre Hipertensão na Gravidez) — Protocolo Pré-eclâmpsia (2025) e Hipertensão arterial crônica na gestação (2023)",
     "Ministério da Saúde — Manual de Gestação de Alto Risco (2022)",
     "Ministério da Saúde — Nota Técnica Conjunta nº 251/2024 (suplementação universal de cálcio)",
+    "FEBRASGO e RBEHG — Posicionamentos de mar/abr de 2026: cálcio deixa de ser recomendado para prevenção de pré-eclâmpsia (após Cochrane, Cluver et al., 2025)",
+    "TelessaúdeRS-UFRGS (baseado no MS) — Hipertensão na gestação: metildopa até 3.000 mg/dia",
     "FEBRASGO — Protocolo: Pré-eclâmpsia nos seus diversos aspectos (2021)",
     "ACOG — Practice Bulletin nº 222: Gestational hypertension and preeclampsia (2020) e Clinical Practice Update (2022, estudo CHAP)",
     "ISSHP — The 2021 International Society for the Study of Hypertension in Pregnancy classification, diagnosis & management recommendations"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

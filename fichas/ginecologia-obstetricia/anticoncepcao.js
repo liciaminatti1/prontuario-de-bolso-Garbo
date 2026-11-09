@@ -58,8 +58,9 @@ registrarFicha({
     ],
     gravidade: [
       "MEC categoria 1: sem restrição · 2: vantagens superam riscos · 3: riscos geralmente superam vantagens · 4: risco inaceitável",
-      "Combinados categoria 4 (exemplos): ≥ 35 anos fumante ≥ 15 cigarros/dia; PA ≥ 160/100 ou doença vascular; enxaqueca com aura; TEV atual ou prévio; trombofilia; AVC/DAC; valvopatia complicada; câncer de mama atual; tumor hepático/cirrose descompensada; LES com antifosfolípide positivo; pós-parto < 21 dias sem amamentar ou < 6 semanas amamentando (MEC 5ª ed.; conferir na tabela da 6ª ed.)",
+      "Combinados categoria 4 (exemplos): ≥ 35 anos fumante ≥ 15 cigarros/dia; PA ≥ 160/100 ou doença vascular; enxaqueca com aura; TEV atual ou prévio; trombofilia; AVC/DAC; valvopatia complicada; câncer de mama atual; tumor hepático/cirrose descompensada; LES com antifosfolípide positivo; pós-parto < 21 dias sem amamentar ou < 6 semanas amamentando. Lactante de 6 semanas a 6 meses: categoria 3; > 6 meses: categoria 2 (MEC 6ª ed., 2025)",
       "DIU categoria 4: gravidez; sepse puerperal ou pós-aborto séptico; DIP ou cervicite purulenta/clamídia/gonorreia atual; sangramento vaginal inexplicado; câncer de colo ou endométrio aguardando tratamento; cavidade uterina distorcida; tuberculose pélvica",
+      "AMPD no pós-parto imediato: passou de categoria 3 para categoria 2 (MEC 6ª ed., 2025)",
       "DIU no pós-parto (MEC 2025): até 48 h cobre categoria 1 (SIU-LNG 2); de 48 h a < 4 semanas categoria 3; ≥ 4 semanas categoria 1"
     ]
   },
@@ -110,7 +111,7 @@ registrarFicha({
       duracao: "3 anos",
       monitorizacao: "Padrão de sangramento",
       contraindicacoes: "Câncer de mama atual; outras categorias 3–4 do MEC",
-      ajustes: "Oferta ampliada no SUS (Portaria SECTICS/MS nº 47/2025). Até o 5º dia do ciclo sem apoio; depois, preservativo por 7 dias. Indutores enzimáticos reduzem a eficácia"
+      ajustes: "No SUS para mulheres de 14 a 49 anos (Portarias SECTICS/MS nº 47 — 18 a 49 anos — e nº 48 — 14 a 17 anos —, de 08/07/2025). Até o 5º dia do ciclo sem apoio; depois, preservativo por 7 dias. Indutores enzimáticos reduzem a eficácia"
     },
     {
       droga: "SIU de levonorgestrel 52 mg",
@@ -118,7 +119,7 @@ registrarFicha({
       dose: "1 dispositivo",
       via: "Intrauterina",
       intervalo: "—",
-      duracao: "Conforme a bula do produto registrado (5 anos; estudos e FDA: até 8 anos para contracepção); 5 anos se uso para fluxo intenso",
+      duracao: "8 anos para contracepção (bula Anvisa do Mirena); 5 anos se uso para menorragia ou proteção endometrial",
       monitorizacao: "Revisão em 4–12 semanas",
       contraindicacoes: "Semelhantes ao DIU de cobre; câncer de mama atual",
       ajustes: "Reduz fluxo e cólica. Disponibilidade no SUS limitada a indicações específicas conforme local. Até o 7º dia do ciclo sem apoio; depois, 7 dias de preservativo"
@@ -132,7 +133,7 @@ registrarFicha({
       duracao: "Contínuo",
       monitorizacao: "Peso, sangramento; retorno da fertilidade pode demorar meses",
       contraindicacoes: "Câncer de mama atual; múltiplos fatores de risco cardiovascular (cat. 3)",
-      ajustes: "Até o 7º dia do ciclo sem apoio; depois, 7 dias de preservativo. Opção com indutores enzimáticos. Reduz densidade óssea de forma reversível"
+      ajustes: "Pós-parto imediato: categoria 2 (MEC 6ª ed., 2025; antes era 3). Até o 7º dia do ciclo sem apoio; depois, 7 dias de preservativo. Opção com indutores enzimáticos. Reduz densidade óssea de forma reversível"
     },
     {
       droga: "Enantato de noretisterona 50 mg + valerato de estradiol 5 mg (injetável mensal)",
@@ -197,7 +198,7 @@ registrarFicha({
       intervalo: "—",
       duracao: "—",
       monitorizacao: "—",
-      contraindicacoes: "Enxaqueca com aura, ≥ 35 anos fumante de ≥ 15 cigarros/dia, PA ≥ 160/100, TEV, trombofilia, AVC/DAC, câncer de mama, pós-parto recente (< 21 dias sem amamentar; < 6 semanas amamentando)",
+      contraindicacoes: "Enxaqueca com aura, ≥ 35 anos fumante de ≥ 15 cigarros/dia, PA ≥ 160/100, TEV, trombofilia, AVC/DAC, câncer de mama, pós-parto recente (< 21 dias sem amamentar; < 6 semanas amamentando); lactante de 6 semanas a 6 meses é categoria 3",
       ajustes: "Trocar por DIU, implante, AMPD ou pílula só de progestagênio"
     }
   ],
@@ -277,15 +278,16 @@ registrarFicha({
     }
   ],
   fontes: [
-    "OMS — Medical eligibility criteria for contraceptive use, 6ª edição (2025)",
-    "OMS — Selected practice recommendations for contraceptive use, 4ª edição (2025)",
+    "OMS — Medical eligibility criteria for contraceptive use, 6ª edição (03/11/2025)",
+    "OMS — Selected practice recommendations for contraceptive use, 4ª edição (03/11/2025)",
     "OMS/Johns Hopkins — Family Planning: A Global Handbook for Providers (2022)",
-    "Ministério da Saúde — Portaria SECTICS/MS nº 47/2025 (ampliação do implante de etonogestrel no SUS)",
+    "Ministério da Saúde — Portarias SECTICS/MS nº 47 (18 a 49 anos) e nº 48 (14 a 17 anos), de 08/07/2025: implante de etonogestrel no SUS",
+    "Anvisa — Bula do SIU de levonorgestrel 52 mg (Mirena): 8 anos para contracepção; 5 anos para menorragia/proteção endometrial",
     "Brasil — Lei nº 14.443/2022 (planejamento familiar/esterilização)",
     "Ministério da Saúde — Cadernos de Atenção Básica nº 26: Saúde sexual e saúde reprodutiva (2013)",
     "FEBRASGO — Manual de Anticoncepção (2021)",
     "FSRH — Emergency Contraception guideline (2017, atualizado 2023)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

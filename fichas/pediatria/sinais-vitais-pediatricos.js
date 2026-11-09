@@ -28,7 +28,7 @@ registrarFicha({
     "Hipotensão para a idade = choque descompensado → ver ficha crianca-grave"
   ],
   prescricao: {
-    hospitalar: "CÁLCULOS RÁPIDOS NA SALA DE EMERGÊNCIA (peso real ou estimado: ___ kg)\n1. Peso estimado (APLS): < 12 meses = (0,5 × idade em meses) + 4; 1–5 anos = (2 × idade em anos) + 8; 6–12 anos = (3 × idade em anos) + 7.\n2. Expansão volêmica: cristaloide isotônico (Ringer lactato ou SF 0,9%) 10–20 mL/kg IV/IO em 5–20 minutos; reavaliar FC, perfusão, PA, fígado e ausculta após cada alíquota.\n3. Hipoglicemia (glicemia < 60 mg/dL): SG 10% 2–5 mL/kg IV em bolus; repetir glicemia em 15 minutos.\n4. Limite inferior de PAS (1–10 anos) = 70 + (2 × idade em anos) mmHg.\n5. Débito urinário esperado: lactente/criança ≥ 1 mL/kg/h; adolescente ≥ 0,5 mL/kg/h."
+    hospitalar: "CÁLCULOS RÁPIDOS NA SALA DE EMERGÊNCIA (peso real ou estimado: ___ kg)\n1. Peso estimado (APLS): < 12 meses = (0,5 × idade em meses) + 4; 1–5 anos = (2 × idade em anos) + 8; 6–12 anos = (3 × idade em anos) + 7.\n2. Expansão volêmica: cristaloide isotônico (Ringer lactato ou SF 0,9%) 10–20 mL/kg IV/IO em 5–20 minutos; reavaliar FC, perfusão, PA, fígado e ausculta após cada alíquota.\n3. Hipoglicemia (glicemia < 60 mg/dL): SG 10% 5–10 mL/kg (0,5–1 g/kg, PALS; RN: 2 mL/kg) IV em bolus; repetir glicemia em 15 minutos.\n4. Limite inferior de PAS (1–10 anos) = 70 + (2 × idade em anos) mmHg.\n5. Débito urinário esperado: lactente/criança ≥ 1 mL/kg/h; adolescente ≥ 0,5 mL/kg/h."
   },
   orientacoesRetorno: [
     "Ficha de referência para a equipe: as orientações de alta dependem da doença de base",
@@ -87,11 +87,12 @@ registrarFicha({
     }
   ],
   fontes: [
+    "AHA/AAP — PALS 2025: glicose na hipoglicemia 0,5–1 g/kg (SG 10% 5–10 mL/kg); RN: SG 10% 2 mL/kg",
     "AHA/AAP — Pediatric Advanced Life Support: Provider Manual e diretrizes de RCP e ACE (2020; atualização AHA 2025)",
     "Advanced Life Support Group — APLS: Advanced Paediatric Life Support, 6ª ed. (fórmulas de peso)",
     "OMS/Ministério da Saúde — AIDPI Criança: 2 meses a 5 anos (2017), critérios de taquipneia",
     "AAP — Clinical Practice Guideline for High Blood Pressure in Children and Adolescents (2017)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

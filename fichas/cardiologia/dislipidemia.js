@@ -51,10 +51,11 @@ registrarFicha({
       { dx: "Hipercolesterolemia familiar", pista: "LDL ≥ 190, xantomas, família" }
     ],
     gravidade: [
-      "Extremo: eventos ateroscleróticos recorrentes, progressão da aterosclerose apesar do tratamento, ou 1 evento maior associado a ≥ 2 condições de alto risco (ex.: DM, DRC, tabagismo, hipercolesterolemia familiar). Conferir a lista completa de condições na diretriz",
-      "Muito alto: doença aterosclerótica clínica estabelecida (IAM, AVC isquêmico, DAOP, revascularização) que não preenche critério de extremo",
-      "Alto: DM com estratificador de risco, DRC, LDL ≥ 190 mg/dL, aterosclerose subclínica significativa ou escore alto",
-      "Intermediário e baixo: pelo escore de risco (PREVENT, 30–79 anos sem DCV)"
+      "Extremo: múltiplos eventos cardiovasculares maiores, ou 1 evento maior + ≥ 2 condições de alto risco (ex.: DM, DRC, tabagismo, hipercolesterolemia familiar). Conferir a lista completa de condições na diretriz",
+      "Muito alto: doença aterosclerótica significativa ou evento manifesto (IAM, AVC isquêmico, DAOP, revascularização) que não preenche critério de extremo; escore de cálcio coronário (CAC) > 300; DM com estratificador de muito alto risco ou ≥ 3 estratificadores",
+      "Alto: PREVENT ≥ 20% em 10 anos; risco intermediário + fator agravante; aterosclerose subclínica; LDL-c ≥ 190 mg/dL; DM2 (homem ≥ 50 / mulher ≥ 56 anos) com 1–2 estratificadores; Lp(a) > 180 mg/dL",
+      "Intermediário: PREVENT entre os cortes de baixo e alto risco, sem critério de alto (conferir a faixa exata na diretriz)",
+      "Baixo: PREVENT < 5% em 10 anos, sem fator agravante e sem DM (escore em 30–79 anos sem DCV)"
     ]
   },
   exames: [
@@ -175,15 +176,15 @@ registrarFicha({
   tabelas: [
     {
       titulo: "Metas por categoria de risco — SBC 2025",
-      colunas: ["Risco", "LDL-c (mg/dL)", "Não-HDL-c (mg/dL)", "Redução de LDL-c"],
+      colunas: ["Risco", "LDL-c (mg/dL)", "Não-HDL-c (mg/dL)", "ApoB (mg/dL)", "Redução de LDL-c"],
       linhas: [
-        ["Extremo", "< 40", "< 70", "≥ 50%"],
-        ["Muito alto", "< 50", "< 80", "≥ 50%"],
-        ["Alto", "< 70", "< 100", "≥ 50%"],
-        ["Intermediário", "< 100", "< 130", "≥ 30%"],
-        ["Baixo", "< 115", "< 145", "≥ 30%"]
+        ["Extremo", "< 40", "< 70", "< 45", "≥ 50%"],
+        ["Muito alto", "< 50", "< 80", "< 55", "≥ 50%"],
+        ["Alto", "< 70", "< 100", "< 70", "≥ 50%"],
+        ["Intermediário", "< 100", "< 130", "< 90", "≥ 30%"],
+        ["Baixo", "< 115", "< 145", "< 100", "≥ 30%"]
       ],
-      nota: "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose — SBC 2025. Atingir a meta absoluta e a redução percentual. ApoB é meta secundária (ex.: extremo < 45; intermediário < 90; baixo < 100 mg/dL)."
+      nota: "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose — SBC 2025. Atingir a meta absoluta e a redução percentual. ApoB é meta secundária."
     },
     {
       titulo: "Intensidade das estatinas",
@@ -196,10 +197,10 @@ registrarFicha({
     }
   ],
   fontes: [
-    "SBC — Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose (Arq Bras Cardiol, 2025)",
+    "SBC — Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose (Arq Bras Cardiol 2025;122(9):e20250640)",
     "Ministério da Saúde — PCDT Dislipidemia: prevenção de eventos cardiovasculares e pancreatite (2020)",
     "ESC/EAS 2019 Guidelines for the management of dyslipidaemias e Focused Update 2025"
   ],
-  revisao: "2026-10-21",
-  versao: "2.0"
+  revisao: "2026-11-09",
+  versao: "2.1"
 });

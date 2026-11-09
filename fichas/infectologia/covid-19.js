@@ -24,7 +24,7 @@ registrarFicha({
     "Medir SpO₂, FR, FC, PA, temperatura; classificar como síndrome gripal (leve) ou SRAG",
     "Identificar grupo de risco e elegibilidade ao nirmatrelvir/ritonavir (início em até 5 dias)",
     "Sintomáticos, hidratação, isolamento e sinais de alerta por escrito",
-    "Notificar: síndrome gripal no e-SUS Notifica; SRAG hospitalizada e óbito no SIVEP-Gripe"
+    "Notificação: a covid-19 deixou de ser item independente da Lista de Notificação Compulsória (Portaria GM/MS nº 11.211/2026); segue a vigilância de síndrome gripal (e-SUS Notifica) e de SRAG hospitalizada e óbito (SIVEP-Gripe)"
   ],
   fataisExcluir: [
     "SRAG / pneumonia viral com hipoxemia",
@@ -181,12 +181,13 @@ registrarFicha({
     }
   ],
   fontes: [
+    "Ministério da Saúde — Portaria GM/MS nº 11.211, de 13/05/2026 (Lista Nacional de Notificação Compulsória)",
     "Ministério da Saúde — Guia para uso do antiviral nirmatrelvir/ritonavir em pacientes com COVID-19 não hospitalizados e de alto risco, 2ª ed. (2025)",
     "Ministério da Saúde — Guia de vigilância integrada da covid-19, influenza e outros vírus respiratórios de importância em saúde pública (2024)",
     "Ministério da Saúde/CONITEC — Diretrizes Brasileiras para Tratamento Hospitalar do Paciente com COVID-19 (2021–2022)",
     "OMS — Clinical management of COVID-19: living guideline (2023–2025)",
     "Bula do nirmatrelvir/ritonavir (Paxlovid) — ANVISA"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

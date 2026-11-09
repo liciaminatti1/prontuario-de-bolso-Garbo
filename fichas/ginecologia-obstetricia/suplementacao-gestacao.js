@@ -23,7 +23,8 @@ registrarFicha({
     "Alto risco de defeito do tubo neural (filho anterior com DTN, uso de anticonvulsivante, DM prévio, obesidade, má absorção): ácido fólico 5 mg/dia",
     "Ferro elementar 40 mg/dia para toda gestante desde o diagnóstico da gestação até 3 meses pós-parto (PNSF)",
     "Hb < 11 g/dL: dose de tratamento (120–240 mg de ferro elementar/dia, em 3 tomadas) e Hb de controle em 30–60 dias",
-    "Cálcio: 1.000 mg/dia de cálcio elementar (carbonato de cálcio 1.250 mg 2×/dia) da 12ª semana até o parto, para toda gestante",
+    "Cálcio: 1.000 mg/dia de cálcio elementar (carbonato de cálcio 1.250 mg 2×/dia) da 12ª semana até o parto, para toda gestante (norma do SUS, NT 251/2024)",
+    "Atenção: em mar/abr de 2026, FEBRASGO e RBEHG deixaram de recomendar cálcio para prevenção de pré-eclâmpsia (reanálise Cochrane, Cluver 2025); o cálcio pode seguir por outras indicações. A NT 251/2024 do MS não foi revogada e segue como norma do SUS",
     "Separar ferro e cálcio em pelo menos 2 horas; ferro longe de leite, café e chá",
     "Efeitos do ferro (náusea, constipação, fezes escuras): tomar à noite ou com pequena refeição antes de suspender"
   ],
@@ -43,11 +44,11 @@ registrarFicha({
         ["Sulfato ferroso (Hb < 11 g/dL)", "120–240 mg de ferro elementar/dia", "Até normalizar a Hb; depois voltar à profilaxia"],
         ["Carbonato de cálcio 1.250 mg", "500 mg de cálcio elementar 2×/dia (1.000 mg/dia)", "12ª semana até o parto"]
       ],
-      nota: "PNSF e Caderno de Micronutrientes (MS, 2022). Cálcio universal: NT Conjunta MS nº 251/2024. Sulfato ferroso 40 mg = comprimido padronizado no SUS com 40 mg de ferro elementar."
+      nota: "PNSF e Caderno de Micronutrientes (MS, 2022). Cálcio universal: NT Conjunta MS nº 251/2024 (FEBRASGO e RBEHG, 2026, não o recomendam mais para prevenir pré-eclâmpsia). Sulfato ferroso 40 mg = comprimido padronizado no SUS com 40 mg de ferro elementar."
     }
   ],
   prescricao: {
-    ambulatorial: "USO ORAL\n1. Ácido fólico 400 mcg (0,4 mg) ------------------ 30 comprimidos\n   Tomar 1 comprimido ao dia, até o fim da gestação.\n   (Alto risco de defeito do tubo neural ou serviço só com 5 mg: Ácido fólico 5 mg — tomar 1 comprimido ao dia.)\n2. Sulfato ferroso 40 mg de ferro elementar ------ 30 comprimidos\n   Tomar 1 comprimido ao dia, 30 minutos antes do almoço ou entre as refeições, com suco de laranja ou limão, até 3 meses após o parto.\n3. Carbonato de cálcio 1.250 mg (500 mg de cálcio) - 60 comprimidos\n   A partir de 12 semanas: tomar 1 comprimido no café da manhã e 1 no jantar, até o parto. Intervalo mínimo de 2 horas do ferro.\n\nSE ANEMIA (Hb < 11 g/dL), EM LUGAR DO ITEM 2\n4. Sulfato ferroso 40 mg de ferro elementar ------ 90 comprimidos\n   Tomar 1 comprimido 3 vezes ao dia, entre as refeições, por 30 dias e retornar com hemograma."
+    ambulatorial: "USO ORAL\n1. Ácido fólico 400 mcg (0,4 mg) ------------------ 30 comprimidos\n   Tomar 1 comprimido ao dia, até o fim da gestação.\n   (Alto risco de defeito do tubo neural ou serviço só com 5 mg: Ácido fólico 5 mg — tomar 1 comprimido ao dia.)\n2. Sulfato ferroso 40 mg de ferro elementar ------ 30 comprimidos\n   Tomar 1 comprimido ao dia, 30 minutos antes do almoço ou entre as refeições, com suco de laranja ou limão, até 3 meses após o parto.\n3. Carbonato de cálcio 1.250 mg (500 mg de cálcio) - 60 comprimidos\n   A partir de 12 semanas: tomar 1 comprimido no café da manhã e 1 no jantar, até o parto. Intervalo mínimo de 2 horas do ferro. Norma do SUS (NT 251/2024); FEBRASGO e RBEHG (2026) não recomendam mais cálcio para prevenir pré-eclâmpsia.\n\nSE ANEMIA (Hb < 11 g/dL), EM LUGAR DO ITEM 2\n4. Sulfato ferroso 40 mg de ferro elementar ------ 90 comprimidos\n   Tomar 1 comprimido 3 vezes ao dia, entre as refeições, por 30 dias e retornar com hemograma."
   },
   orientacoesRetorno: [
     "O ferro deixa as fezes escuras: isso é esperado",
@@ -65,9 +66,10 @@ registrarFicha({
     "Ministério da Saúde — Caderno dos Programas Nacionais de Suplementação de Micronutrientes / Programa Nacional de Suplementação de Ferro (2022)",
     "Ministério da Saúde — Nota Técnica nº 133/2022-CGPAM (ácido fólico 400 mcg)",
     "Ministério da Saúde — Nota Técnica Conjunta nº 251/2024 (suplementação universal de cálcio em gestantes)",
+    "FEBRASGO e RBEHG — Posicionamentos de mar/abr de 2026: cálcio deixa de ser recomendado para prevenção de pré-eclâmpsia (após Cochrane, Cluver et al., 2025)",
     "OMS — Recommendations on antenatal care for a positive pregnancy experience (2016) e calcium supplementation (2018/2020)",
     "Ministério da Saúde — Cadernos de Atenção Básica nº 32 (2012)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

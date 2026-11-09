@@ -67,7 +67,7 @@ registrarFicha({
       pedido: "BNP ou NT-proBNP.",
       porQue: "Diferenciar dispneia cardíaca e não cardíaca.",
       esperar: "Elevado.",
-      interpretacao: "BNP < 100 ou NT-proBNP < 300 pg/mL tornam IC aguda improvável.",
+      interpretacao: "BNP < 100 ou NT-proBNP < 300 pg/mL tornam IC descompensada improvável.",
       limitacoes: "Mais alto em idosos e DRC; mais baixo em obesos e EAP flash."
     },
     {
@@ -99,7 +99,7 @@ registrarFicha({
       pedido: "Ecocardiograma transtorácico.",
       porQue: "FE, valvopatias, complicações mecânicas.",
       esperar: "—",
-      interpretacao: "FE ≤ 40% → terapia modificadora de doença na alta.",
+      interpretacao: "ICFEr → terapia médica fundamental na alta. ESC 2026: ICFEr = FE < 50% (sai a categoria intermediária ICFElr) e ICFEp = FE ≥ 50%. No SUS, o PCDT ICFEr (2024) usa FE ≤ 40%.",
       limitacoes: "—"
     }
   ],
@@ -157,7 +157,7 @@ registrarFicha({
       duracao: "—",
       monitorizacao: "PA, K, creatinina",
       contraindicacoes: "Suspender betabloqueador apenas em choque/baixo débito",
-      ajustes: "FE ≤ 40%: quatro pilares (betabloqueador, sacubitril-valsartana/IECA/BRA, espironolactona, dapagliflozina)"
+      ajustes: "ICFEr: terapia médica fundamental — quatro pilares (betabloqueador, IECA/BRA/INRA [sacubitril-valsartana], antagonista mineralocorticoide [espironolactona], iSGLT2 [dapagliflozina]). ESC 2026: ICFEr = FE < 50%; PCDT ICFEr (SUS): FE ≤ 40%. Sacubitril-valsartana no SUS (PCDT 2024): < 75 anos, NYHA II, BNP > 150 pg/mL ou NT-proBNP acima do corte do PCDT; doses 50, 100 e 200 mg 12/12 h. Dapagliflozina 10 mg também no PCDT. ICFEp: ESC 2026 traz a primeira recomendação de agonista do GLP-1"
     }
   ],
   destino: {
@@ -187,7 +187,7 @@ registrarFicha({
   },
   prescricao: {
     hospitalar: "IC DESCOMPENSADA / EAP — PERFIL QUENTE-ÚMIDO (peso: ___ kg)\n1. Dieta hipossódica, branda; restrição hídrica 1,5 L/dia se hiponatremia ou congestão refratária. Jejum se VNI.\n2. Cabeceira elevada 45° (sentado com pernas pendentes no EAP).\n3. O₂ se SpO₂ < 90%. VNI (CPAP 5–10 cmH₂O ou BiPAP IPAP 10–15 / EPAP 5–8) se desconforto respiratório ou SpO₂ baixa.\n4. Furosemida 10 mg/mL — 40 mg (4 mL) IV em bolus se virgem de diurético; em uso crônico, 1 a 2,5 vezes a dose oral diária IV. Repetir de 12/12 h (ou de 8/8 h) conforme diurese.\n5. Se PAS > 110 mmHg: nitroglicerina 5 mg/mL — 50 mg (10 mL) + SG 5% 240 mL (200 mcg/mL) IV em bomba. Iniciar 10–20 mcg/min (3–6 mL/h); aumentar 5–10 mcg/min a cada 3–5 min (máx 200 mcg/min). Sem bomba: dinitrato de isossorbida 5 mg SL a cada 5–10 min.\n6. Se perfil frio (baixo débito): dobutamina 12,5 mg/mL — 250 mg (20 mL) + SG 5% 230 mL (1 mg/mL) IV em bomba. Iniciar 2,5 mcg/kg/min (70 kg ≈ 10,5 mL/h); titular até 10 mcg/kg/min. Se PAS < 90 apesar disso: noradrenalina (ver ficha de choque) e UTI.\n7. Manter betabloqueador se estável (suspender só em choque/baixo débito). Manter IECA/BRA/sacubitril-valsartana se PA e função renal permitirem.\n8. Enoxaparina 40 mg SC 1 vez ao dia (profilaxia de TEV; 20 mg se ClCr < 30).\n9. Cloreto de potássio conforme K sérico (alvo 4,0–5,0). Repor magnésio se baixo.\n10. Controles: diurese horária nas primeiras 6 h (sonda se necessário), sódio urinário em 2 h, peso diário em jejum, balanço hídrico, creatinina, K e Mg diários.\n11. Resposta insuficiente (diurese < 100–150 mL/h ou Na urinário < 50–70 mEq/L): dobrar a furosemida; associar hidroclorotiazida 25–50 mg VO 1 vez ao dia (monitorar Na e K diariamente).",
-    ambulatorial: "ALTA — IC COM FE ≤ 40% (ajustar à PA, FC, K e TFG)\nUSO ORAL\n1. Furosemida 40 mg ----------------------------- 30 comprimidos\n   Tomar 1 comprimido pela manhã (ajustar pelo peso: dose extra se ganhar > 2 kg em 3 dias, conforme orientação).\n2. Carvedilol 3,125 mg -------------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas, com alimento. Dobrar a cada 2 semanas até 25 mg de 12/12 h se tolerar. (Alternativa: succinato de metoprolol 25 mg 1 vez ao dia.)\n3. Enalapril 5 mg ------------------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas (alvo 10–20 mg de 12/12 h). Ou losartana 25–50 mg 1 vez ao dia se tosse. Sacubitril-valsartana conforme critérios do PCDT.\n4. Espironolactona 25 mg ------------------------ 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia (se K < 5,0 e TFG ≥ 30).\n5. Dapagliflozina 10 mg -------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia (SUS conforme PCDT de IC).\n\nPEDIDO DE EXAMES (em 1–2 semanas)\nCreatinina, ureia, sódio, potássio."
+    ambulatorial: "ALTA — ICFEr (PCDT SUS: FE ≤ 40%; ESC 2026: FE < 50%) (ajustar à PA, FC, K e TFG)\nUSO ORAL\n1. Furosemida 40 mg ----------------------------- 30 comprimidos\n   Tomar 1 comprimido pela manhã (ajustar pelo peso: dose extra se ganhar > 2 kg em 3 dias, conforme orientação).\n2. Carvedilol 3,125 mg -------------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas, com alimento. Dobrar a cada 2 semanas até 25 mg de 12/12 h se tolerar. (Alternativa: succinato de metoprolol 25 mg 1 vez ao dia.)\n3. Enalapril 5 mg ------------------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas (alvo 10–20 mg de 12/12 h). Ou losartana 25–50 mg 1 vez ao dia se tosse. Sacubitril-valsartana no SUS conforme o PCDT ICFEr (< 75 anos, NYHA II, BNP > 150 pg/mL ou NT-proBNP elevado): 50 mg de 12/12 h, titular para 100 e 200 mg de 12/12 h.\n4. Espironolactona 25 mg ------------------------ 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia (se K < 5,0 e TFG ≥ 30).\n5. Dapagliflozina 10 mg -------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia (SUS conforme PCDT de IC).\n\nPEDIDO DE EXAMES (em 1–2 semanas)\nCreatinina, ureia, sódio, potássio."
   },
   orientacoesRetorno: [
     "Pesar-se todo dia pela manhã, após urinar e antes do café; anotar",
@@ -199,10 +199,11 @@ registrarFicha({
     "Consulta em 7–14 dias após a alta (UBS ou cardiologia) com exames de sangue"
   ],
   fontes: [
+    "Ministério da Saúde — PCDT Insuficiência Cardíaca com Fração de Ejeção Reduzida (Portaria Conjunta SAES/SECTICS nº 10, de 13/09/2024)",
     "SBC — Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda (2018) e Atualização de Tópicos Emergentes (2021)",
-    "ESC 2021 Guidelines for heart failure e Focused Update 2023",
-    "Ministério da Saúde — PCDT Insuficiência Cardíaca com Fração de Ejeção Reduzida (versão vigente)"
+    "ESC 2026 Guidelines for heart failure (Eur Heart J, 28/08/2026)",
+    "ESC 2021 Guidelines for heart failure e Focused Update 2023"
   ],
-  revisao: "2026-10-21",
-  versao: "1.1"
+  revisao: "2026-11-09",
+  versao: "1.2"
 });

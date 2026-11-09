@@ -109,13 +109,13 @@ registrarFicha({
     }
   ],
   fontes: [
-    "Ministério da Saúde — PCDT Artrite Reumatoide (Portaria Conjunta SAES/SCTIE nº 16, 2019; conferir atualização vigente na CONITEC)",
+    "Ministério da Saúde — PCDT Artrite Reumatoide (Portaria Conjunta SAES/SCTIE nº 33, de 19/01/2026; revoga a Portaria Conjunta nº 16/2021)",
     "ACR/EULAR — 2010 Rheumatoid Arthritis Classification Criteria",
     "EULAR recommendations for the management of rheumatoid arthritis with synthetic and biological DMARDs (2022 update)",
     "ACR Guideline for the Treatment of Rheumatoid Arthritis (2021)",
     "Sociedade Brasileira de Reumatologia — Recomendações para o tratamento da artrite reumatoide (2017; atualização 2020)",
     "Ministério da Saúde — Manual dos Centros de Referência para Imunobiológicos Especiais (CRIE, 2023)"
   ],
-  revisao: "2026-10-25",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

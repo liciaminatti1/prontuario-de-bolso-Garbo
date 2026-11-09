@@ -20,7 +20,8 @@ registrarFicha({
     "Febre alta com tosse, coriza e conjuntivite (pensar em sarampo)"
   ],
   conduta: [
-    "Caso suspeito (Guia de Vigilância 2024): febre e exantema maculopapular com linfadenopatia retroauricular, occipital e/ou cervical, independentemente da idade e da vacinação; ou febre e exantema com viagem recente ao exterior ou contato com viajante. A NT Conjunta 344/2025-MS acrescentou critérios: conferir o texto vigente. Febre e exantema isolados, sem outro critério, não indicam sorologia de rotina",
+    "Caso suspeito (NT Conjunta 344/2025-MS, que substitui as definições do Guia de Vigilância 2024): febre e exantema maculopapular com linfadenopatia retroauricular, occipital e/ou cervical, independentemente da idade e da vacinação; ou febre e exantema com viagem recente ao exterior ou contato com viajante; e também passa a ser caso suspeito quem tem febre e exantema maculopapular com IgM reagente para sarampo ou rubéola, mesmo fora da definição antiga. Febre e exantema isolados, sem outro critério, não indicam sorologia de rotina",
+    "IgM reagente de qualquer laboratório, inclusive privado, vale como critério confirmatório até a conclusão da investigação (NT Conjunta 345/2025-MS): notificar em até 24 h e iniciar as medidas de controle sem esperar o LACEN",
     "Isolar em sala separada com máscara cirúrgica; afastar de gestantes",
     "Notificar à vigilância municipal em até 24 h (ficha SINAN de doenças exantemáticas febris sarampo/rubéola)",
     "Coletar no primeiro atendimento: sangue para IgM/IgG e swab de naso/orofaringe + urina para RT-PCR (LACEN)",
@@ -32,7 +33,7 @@ registrarFicha({
     "Gestante não pode receber tríplice viral; vacinar no puerpério se suscetível"
   ],
   exames: [
-    "IgM e IgG para rubéola (e sarampo) no soro, no primeiro atendimento",
+    "IgM e IgG para rubéola (e sarampo) no soro, no primeiro atendimento. IgM reagente em laboratório privado também desencadeia notificação e investigação (NT 344 e 345/2025)",
     "Swab combinado de naso e orofaringe e urina para RT-PCR (identifica o genótipo)",
     "Gestante: sorologia pareada e avidez de IgG conforme a vigilância/medicina fetal",
     "RN com suspeita de SRC: IgM no RN, swab e urina; avaliação oftalmológica, auditiva e ecocardiograma"
@@ -61,10 +62,10 @@ registrarFicha({
   ],
   fontes: [
     "Ministério da Saúde — Guia de Vigilância em Saúde, 6ª edição revisada (2024): Sarampo, Rubéola e Síndrome da Rubéola Congênita",
-    "Ministério da Saúde — Nota Técnica Conjunta nº 344/2025-CGVDI/DPNI/SVSA/MS (definição de caso e coleta de amostras de sarampo, rubéola e SRC)",
-    "Ministério da Saúde — Nota Técnica Conjunta nº 345/2025-CGVDI/DPNI/SVSA/MS (conduta frente a caso suspeito, bloqueio vacinal e contatos)",
+    "Ministério da Saúde — Nota Técnica Conjunta nº 344/2025-CGVDI/DPNI/SVSA/MS (substitui as definições de caso do Guia de Vigilância 2024; febre + exantema com IgM reagente = caso suspeito)",
+    "Ministério da Saúde — Nota Técnica Conjunta nº 345/2025-CGVDI/DPNI/SVSA/MS (conduta frente a caso suspeito, bloqueio vacinal e contatos; IgM reagente de qualquer laboratório, inclusive privado, como critério confirmatório até concluir a investigação)",
     "American Academy of Pediatrics — Red Book 2024–2027: Rubella"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

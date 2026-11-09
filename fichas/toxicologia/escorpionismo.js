@@ -22,7 +22,7 @@ registrarFicha({
   ],
   condutaInicial: [
     "Lavar o local com água e sabão; compressa morna pode aliviar a dor",
-    "Anestesia local: lidocaína 2% sem vasoconstritor infiltrada no local (adulto 3–4 mL; criança 1–2 mL); pode repetir até 3 vezes com intervalo de 30–60 min",
+    "Anestesia local: lidocaína 2% sem vasoconstritor infiltrada no local (adulto 3–4 mL; criança 1–2 mL); pode repetir no máximo 3 vezes, com intervalo de 40 min (PCDT 2025)",
     "Analgesia sistêmica: dipirona (criança 10 mg/kg/dose de 6/6 h; adulto 1 g)",
     "Classificar a gravidade (tabela) e reavaliar a cada 30–60 min nas primeiras horas",
     "Moderado ou grave: soro antiescorpiônico (SAEsc) ou antiaracnídico (SAAr) IV — moderado 3 frascos-ampolas, grave 6",
@@ -105,11 +105,11 @@ registrarFicha({
       linha: "l1",
       dose: "Adulto: 3–4 mL · Criança: 1–2 mL",
       via: "Infiltração no local da picada",
-      intervalo: "Pode repetir até 3 vezes, a cada 30–60 min",
+      intervalo: "Pode repetir no máximo 3 vezes, com intervalo de 40 min (PCDT 2025)",
       duracao: "Até alívio",
       monitorizacao: "Toxicidade de anestésico local (gosto metálico, convulsão) se doses repetidas em criança pequena",
       contraindicacoes: "Alergia a anestésico local",
-      ajustes: "Não ultrapassar 4,5 mg/kg de lidocaína somando todas as doses"
+      ajustes: "Não ultrapassar 4,5 mg/kg de lidocaína somando todas as doses. Volumes (1–2 mL criança; 3–4 mL adulto) do Manual 2001; protocolos de hospitais universitários usam 1–2 mL na criança com repetição após 1 h"
     },
     {
       droga: "Dipirona",
@@ -166,7 +166,7 @@ registrarFicha({
   },
   prescricao: {
     ambulatorial: "ACIDENTE LEVE — ALTA APÓS OBSERVAÇÃO\nUSO ORAL\n1. Dipirona 500 mg ------------------------------------- 1 caixa\n   Tomar 2 comprimidos (1 g) de 6 em 6 horas se dor, por até 3 dias.\n   Criança: dipirona solução oral 50 mg/mL — 10 mg/kg/dose (0,2 mL/kg) de 6 em 6 horas se dor (máx. 1 g/dose).\n\nORIENTAÇÕES\n2. Compressa morna no local 3 a 4 vezes ao dia se dor.",
-    hospitalar: "ACIDENTE ESCORPIÔNICO MODERADO/GRAVE (peso: ___ kg)\n1. Dieta zero enquanto houver vômitos; depois, dieta leve.\n2. Monitor cardíaco, oximetria, PA a cada 15 min durante o soro e na 1ª hora; depois de 1/1 h.\n3. O₂ por cateter ou máscara se SpO₂ < 94%. Cabeceira elevada.\n4. Acesso venoso periférico. SF 0,9% para manter veia; evitar hiper-hidratação (risco de edema pulmonar).\n5. Lidocaína 2% sem vasoconstritor: infiltrar 3–4 mL no local da picada (criança 1–2 mL); repetir até 3 vezes a cada 30–60 min se dor.\n6. Dipirona 1 g IV diluída em 10 mL de água destilada, lento, de 6/6 h (criança 10 mg/kg/dose, máx. 1 g).\n7. SORO ANTIESCORPIÔNICO (ou antiaracnídico) IV, dose única, mesma dose em qualquer idade:\n   ( ) Moderado: 3 frascos-ampolas\n   ( ) Grave: 6 frascos-ampolas (máximo)\n   Puro ou diluído em SF 0,9%, infusão IV lenta em 20 a 60 min, sob supervisão médica. Adrenalina 1 mg/mL e material de via aérea à beira do leito.\n8. Se reação ao soro: suspender; adrenalina 0,01 mg/kg IM (máx. 0,5 mg adulto; 0,3 mg criança pré-púbere); reiniciar mais lento após controle.\n9. Ondansetrona 0,15 mg/kg IV lento (máx. 4 mg; adulto 4–8 mg) de 8/8 h SN.\n10. Exames: glicemia, Na, K, ureia, creatinina, amilase, hemograma, troponina, ECG; radiografia de tórax se taquipneia ou crepitações.\n11. Glicemia capilar de 6/6 h.\n12. Comunicar: vômitos persistentes, sudorese profusa, FC < 60 ou > 160 (criança) / > 120 (adulto), PAS < 90 ou hipertensão grave, SpO₂ < 94%, crepitações, sonolência.\n13. Notificação SINAN (acidente por animal peçonhento)."
+    hospitalar: "ACIDENTE ESCORPIÔNICO MODERADO/GRAVE (peso: ___ kg)\n1. Dieta zero enquanto houver vômitos; depois, dieta leve.\n2. Monitor cardíaco, oximetria, PA a cada 15 min durante o soro e na 1ª hora; depois de 1/1 h.\n3. O₂ por cateter ou máscara se SpO₂ < 94%. Cabeceira elevada.\n4. Acesso venoso periférico. SF 0,9% para manter veia; evitar hiper-hidratação (risco de edema pulmonar).\n5. Lidocaína 2% sem vasoconstritor: infiltrar 3–4 mL no local da picada (criança 1–2 mL); repetir no máximo 3 vezes, com intervalo de 40 min, se dor.\n6. Dipirona 1 g IV diluída em 10 mL de água destilada, lento, de 6/6 h (criança 10 mg/kg/dose, máx. 1 g).\n7. SORO ANTIESCORPIÔNICO (ou antiaracnídico) IV, dose única, mesma dose em qualquer idade:\n   ( ) Moderado: 3 frascos-ampolas\n   ( ) Grave: 6 frascos-ampolas (máximo)\n   Puro ou diluído em SF 0,9%, infusão IV lenta em 20 a 60 min, sob supervisão médica. Adrenalina 1 mg/mL e material de via aérea à beira do leito.\n8. Se reação ao soro: suspender; adrenalina 0,01 mg/kg IM (máx. 0,5 mg adulto; 0,3 mg criança pré-púbere); reiniciar mais lento após controle.\n9. Ondansetrona 0,15 mg/kg IV lento (máx. 4 mg; adulto 4–8 mg) de 8/8 h SN.\n10. Exames: glicemia, Na, K, ureia, creatinina, amilase, hemograma, troponina, ECG; radiografia de tórax se taquipneia ou crepitações.\n11. Glicemia capilar de 6/6 h.\n12. Comunicar: vômitos persistentes, sudorese profusa, FC < 60 ou > 160 (criança) / > 120 (adulto), PAS < 90 ou hipertensão grave, SpO₂ < 94%, crepitações, sonolência.\n13. Notificação SINAN (acidente por animal peçonhento)."
   },
   orientacoesRetorno: [
     "Prevenção: sacudir roupas, toalhas e calçados antes de usar; afastar camas da parede; vedar ralos, frestas e rodapés; manter quintal sem entulho e lixo",
@@ -175,11 +175,11 @@ registrarFicha({
     "A dor e o formigamento local podem durar até 1 a 2 dias"
   ],
   fontes: [
-    "Ministério da Saúde — Protocolo Clínico e Diretrizes Terapêuticas dos Acidentes Escorpiônicos (Portaria SECTICS/MS nº 59, de 1º/8/2025; ed. 2026)",
+    "Ministério da Saúde — Protocolo Clínico e Diretrizes Terapêuticas dos Acidentes Escorpiônicos (Portaria SECTICS/MS nº 59, de 1º/8/2025; ed. 2026) — infiltração de lidocaína no máximo 3 vezes, intervalo de 40 min (resumo secundário)",
     "Ministério da Saúde — Guia de Vigilância em Saúde, 6ª ed., vol. 3 (2023): Escorpionismo",
     "Prefeitura de São Paulo/COVISA — Protocolo de Manejo Clínico dos Acidentes por Escorpião (atualizado em 2026)",
     "Ministério da Saúde/FUNASA — Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos, 2ª ed. rev. (2001)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

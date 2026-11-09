@@ -22,7 +22,7 @@ registrarFicha({
     "1ª escolha: metronidazol 500 mg VO de 12/12 h por 7 dias (ou gel vaginal 5 noites)",
     "Gestação: metronidazol oral 7 dias em qualquer trimestre (sintomáticas)",
     "Recorrente: novo curso de 7–14 dias e depois metronidazol gel 2 vezes por semana por 4 a 6 meses",
-    "Parceria: o PCDT não recomenda tratar. Ensaio clínico de 2025 (NEJM) mostrou menos recorrência com tratamento do parceiro masculino em relação monogâmica (metronidazol oral + clindamicina creme no pênis) — considerar em recorrência, decisão compartilhada",
+    "Parceria: o PCDT IST 2022 e o CDC 2021 ainda não incluem o tratamento do parceiro. Pode-se considerar tratar o parceiro masculino em relação heterossexual monogâmica, sobretudo na recorrência (ACOG Clinical Practice Update out/2025 apoia em relação contínua; CDPH 2025 e NYSDOH 2026 recomendam considerar), com decisão compartilhada. Esquema do estudo (Vodstrcil, NEJM 2025): metronidazol 400 mg VO 12/12 h + clindamicina 2% creme na pele do pênis 12/12 h por 7 dias (recorrência em 12 semanas 35% x 63%)",
     "Oferecer testes rápidos de HIV, sífilis e hepatites B e C"
   ],
   exames: [
@@ -58,8 +58,10 @@ registrarFicha({
   fontes: [
     "Ministério da Saúde — PCDT para Atenção Integral às Pessoas com IST (2022; capítulo de corrimento vaginal de 2020)",
     "CDC — Sexually Transmitted Infections Treatment Guidelines (2021)",
-    "Vodstrcil LA et al. Male-Partner Treatment to Prevent Recurrence of Bacterial Vaginosis. N Engl J Med (2025)"
+    "Vodstrcil LA et al. Male-Partner Treatment to Prevent Recurrence of Bacterial Vaginosis. N Engl J Med (2025)",
+    "ACOG — Clinical Practice Update: tratamento do parceiro na vaginose bacteriana (out/2025)",
+    "California Department of Public Health (CDPH, 12/11/2025) e New York State Department of Health (NYSDOH, 19/02/2026) — recomendações sobre tratamento do parceiro na vaginose bacteriana"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

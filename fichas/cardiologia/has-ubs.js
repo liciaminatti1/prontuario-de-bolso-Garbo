@@ -221,14 +221,15 @@ registrarFicha({
         ["Hipertensão estágio 2", "160–179", "100–109"],
         ["Hipertensão estágio 3", "≥ 180", "≥ 110"]
       ],
-      nota: "Quando PAS e PAD caem em categorias diferentes, vale a maior. Confirmar com MRPA ou MAPA."
+      nota: "Quando PAS e PAD caem em categorias diferentes, vale a maior. Confirmar com MRPA ou MAPA. O PCDT de HA do Ministério da Saúde (2025), referência oficial do SUS, ainda usa a nomenclatura antiga (ótima/normal/normal-alta); a SBC 2025 adota normal < 120/80, pré-hipertensão 120–139/80–89 e meta < 130/80 para todo hipertenso."
     }
   ],
   fontes: [
     "SBC/SBH/SBN — Diretriz Brasileira de Hipertensão Arterial (Arq Bras Cardiol, 2025)",
+    "Ministério da Saúde — PCDT Hipertensão Arterial Sistêmica (2025): referência oficial do SUS; ainda usa a nomenclatura antiga (ótima/normal/normal-alta)",
     "Ministério da Saúde — Linha de Cuidado do Adulto com Hipertensão Arterial Sistêmica (2021)",
     "ESC 2024 Guidelines for the management of elevated blood pressure and hypertension"
   ],
-  revisao: "2026-10-21",
-  versao: "1.1"
+  revisao: "2026-11-09",
+  versao: "1.2"
 });

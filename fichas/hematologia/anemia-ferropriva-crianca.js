@@ -118,10 +118,10 @@ registrarFicha({
       dose: "10–12,5 mg/dia de ferro elementar (dose fixa, sem cálculo por peso)",
       via: "VO",
       intervalo: "1 vez ao dia",
-      duracao: "Ciclos de 3 meses diários seguidos de 3 meses de pausa: 2 ciclos entre 6 e 24 meses (de preferência iniciando aos 6 e aos 12 meses). A termo, peso adequado",
+      duracao: "2 ciclos de 3 meses diários, iniciados aos 6 e aos 12 meses, com pausa de 3 meses entre eles (SBP 2026). A termo, peso adequado",
       monitorizacao: "Adesão; hemograma se suspeita clínica",
       contraindicacoes: "Em tratamento de anemia (usar dose terapêutica); hemoglobinopatias com sobrecarga",
-      ajustes: "Substitui o esquema antigo do PNSF (1 mg/kg/dia contínuo dos 6 aos 24 meses, manual de 2013). Solução 25 mg/mL: 8 a 10 gotas = 10–12,5 mg. SBP 2026: lactente que recebe leite de vaca pode precisar iniciar aos 4 meses. Criança em uso de NutriSUS: seguir a orientação local para não somar suplementos. Seguir o protocolo adotado pelo município"
+      ajustes: "Substitui o esquema antigo (1 mg/kg/dia contínuo dos 6 aos 24 meses, PNSF 2013). Dose máxima diária não informada nas fontes da SBP 2026. Solução 25 mg/mL: 8 a 10 gotas = 10–12,5 mg. SBP 2026: lactente que recebe leite de vaca pode precisar iniciar aos 4 meses. Criança em uso de NutriSUS: seguir a orientação local para não somar suplementos. Seguir o protocolo adotado pelo município"
     },
     {
       droga: "Sulfato ferroso — profilaxia em prematuros e baixo peso",
@@ -183,7 +183,7 @@ registrarFicha({
       titulo: "Suplementação profilática de ferro (ferro elementar)",
       colunas: ["Situação", "Ministério da Saúde (PNSF)", "SBP 2026"],
       linhas: [
-        ["A termo, peso adequado", "10–12,5 mg/dia por 3 meses, pausa de 3 meses, novo ciclo: 2 ciclos entre 6 e 24 meses (Caderno dos Programas de Suplementação, 2022)", "10–12,5 mg/dia (dose fixa) em 2 ciclos de 3 meses, de preferência a partir dos 6 e dos 12 meses; com leite de vaca, pode iniciar aos 4 meses"],
+        ["A termo, peso adequado", "10–12,5 mg/dia por 3 meses, pausa de 3 meses, novo ciclo: 2 ciclos entre 6 e 24 meses (Caderno dos Programas de Suplementação, 2022)", "10–12,5 mg/dia (dose fixa) em 2 ciclos de 3 meses, iniciados aos 6 e aos 12 meses, com pausa de 3 meses; com leite de vaca, pode iniciar aos 4 meses"],
         ["Pré-termo ou baixo peso (< 2.500 g)", "Seguir orientação do serviço/SBP", "A partir de 30 dias: 2 mg/kg/dia (a termo < 2.500 g ou pré-termo ≥ 1.500 g), 3 mg/kg/dia (1.000–1.500 g), 4 mg/kg/dia (< 1.000 g) até 12 meses; depois 1 mg/kg/dia até 24 meses"]
       ],
       nota: "O esquema antigo do PNSF (1 mg/kg/dia contínuo dos 6 aos 24 meses) foi substituído em 2022. Dados da SBP 2026 a partir de resumos secundários; conferir no documento original. Adotar o protocolo do município."
@@ -210,6 +210,6 @@ registrarFicha({
     "OMS — Guideline on use of ferritin concentrations to assess iron status in individuals and populations (2020)",
     "Ministério da Saúde — RENAME 2024 (sulfato ferroso)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

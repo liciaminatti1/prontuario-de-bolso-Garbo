@@ -83,7 +83,7 @@ registrarFicha({
   encaminhar: [
     "IGHAT: CRIE ou hospital de referência (pedido conforme fluxo local)",
     "Ferimento extenso, fratura exposta, queimadura grave → PS/cirurgia",
-    "Suspeita de tétano instalado → emergência hospitalar/UTI e notificação compulsória (SINAN)"
+    "Suspeita de tétano instalado → emergência hospitalar/UTI e notificação compulsória imediata (até 24 h): tétano acidental à SMS e à Secretaria Estadual; tétano neonatal à Secretaria Estadual e ao Ministério da Saúde (Portaria GM/MS nº 11.211/2026)"
   ],
   tabelas: [
     {
@@ -102,8 +102,9 @@ registrarFicha({
     "Ministério da Saúde — Guia de Vigilância em Saúde, 6ª ed.: Tétano acidental (2023–2024)",
     "Ministério da Saúde — Manual dos Centros de Referência para Imunobiológicos Especiais, 6ª ed. (2023)",
     "Ministério da Saúde — Calendário Nacional de Vacinação/PNI (2025)",
+    "Ministério da Saúde — Portaria GM/MS nº 11.211, de 13/05/2026 (Lista Nacional de Notificação Compulsória: tétano acidental de notificação imediata à SES; neonatal, imediata à SES e ao MS)",
     "SES-AL — Nota Informativa SEVISA 07/2025: indicações do soro e da imunoglobulina antitetânica (2025)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

@@ -28,7 +28,7 @@ registrarFicha({
     "Chocável (FV/TVSP): choque imediato (bifásico na energia recomendada pelo fabricante, 120–200 J; se desconhecida, a máxima; monofásico 360 J) e voltar às compressões sem checar pulso",
     "Não chocável (AESP/assistolia): adrenalina 1 mg IV/IO o quanto antes e RCP por 2 min",
     "Acesso venoso periférico (preferido); intraósseo se o IV não for obtido rapidamente",
-    "Checar ritmo a cada 2 min. Adrenalina 1 mg a cada 3–5 min. Amiodarona ou lidocaína na FV/TVSP refratária",
+    "Checar ritmo a cada 2 min. Adrenalina 1 mg a cada 3–5 min (na FV/TVSP, após falha dos choques iniciais (tipicamente após o 2º choque no algoritmo AHA; ERC: após o 3º)). Amiodarona ou lidocaína na FV/TVSP refratária",
     "Via aérea avançada (tubo ou dispositivo supraglótico) sem interromper compressões; depois, 1 ventilação a cada 6 s (10/min) com compressões contínuas e capnografia",
     "Buscar e tratar 5H5T durante todo o atendimento (ultrassom à beira-leito se não atrasar compressões)"
   ],
@@ -131,7 +131,7 @@ registrarFicha({
       duracao: "Enquanto durar a PCR",
       monitorizacao: "Ritmo, ETCO₂",
       contraindicacoes: "Nenhuma na PCR",
-      ajustes: "Não chocável: o quanto antes. Chocável: após falha da desfibrilação inicial (no algoritmo, depois do 2º choque). Pode ser feita sem diluir ou diluída em 10 mL de SF 0,9%"
+      ajustes: "Não chocável: o quanto antes. Chocável: após falha dos choques iniciais (tipicamente após o 2º choque no algoritmo AHA; ERC: após o 3º). Pode ser feita sem diluir ou diluída em 10 mL de SF 0,9%"
     },
     {
       droga: "Amiodarona 50 mg/mL",
@@ -232,7 +232,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "PCR — ADULTO (registrar horários de cada intervenção)\n1. RCP contínua: compressões 100–120/min, 5–6 cm, trocar compressor a cada 2 min. Sem via aérea avançada: 30:2. Com via aérea avançada: 1 ventilação a cada 6 s, compressões contínuas.\n2. O₂ 100% por bolsa-válvula-máscara (15 L/min); capnografia após via aérea avançada.\n3. FV/TVSP: desfibrilação bifásica 200 J (ou conforme fabricante; monofásico 360 J) a cada checagem de ritmo.\n4. Adrenalina 1 mg/mL — 1 mL (1 mg) IV/IO em bolus, seguida de 20 mL de SF 0,9% em bolus e elevação do membro, a cada 3–5 min.\n5. FV/TVSP refratária (após o 3º choque): amiodarona 50 mg/mL — 6 mL (300 mg) IV/IO em bolus; 2ª dose 3 mL (150 mg) após 3–5 min.\n   Alternativa: lidocaína 2% sem vasoconstritor 1–1,5 mg/kg IV/IO (70 kg: 3,5–5 mL); depois 0,5–0,75 mg/kg; máximo 3 mg/kg.\n6. Se hipercalemia suspeita: gluconato de cálcio 10% 30 mL IV em bolus + bicarbonato de sódio 8,4% 50–100 mL IV em bolus (vias separadas).\n7. Se torsades: sulfato de magnésio 50% 4 mL (2 g) + 10 mL de SF 0,9% IV em bolus.\n8. Glicemia capilar; corrigir hipoglicemia com glicose 50% 50 mL IV.\n9. SF 0,9% ou Ringer lactato 1.000 mL IV aberto se hipovolemia suspeita.\n10. Após RCE: ECG de 12 derivações, gasometria, eletrólitos, RX de tórax e seguir prescrição da ficha pos-pcr."
+    hospitalar: "PCR — ADULTO (registrar horários de cada intervenção)\n1. RCP contínua: compressões 100–120/min, 5–6 cm, trocar compressor a cada 2 min. Sem via aérea avançada: 30:2. Com via aérea avançada: 1 ventilação a cada 6 s, compressões contínuas.\n2. O₂ 100% por bolsa-válvula-máscara (15 L/min); capnografia após via aérea avançada.\n3. FV/TVSP: desfibrilação bifásica 200 J (ou conforme fabricante; monofásico 360 J) a cada checagem de ritmo.\n4. Adrenalina 1 mg/mL — 1 mL (1 mg) IV/IO em bolus, seguida de 20 mL de SF 0,9% em bolus e elevação do membro, a cada 3–5 min. Não chocável: o quanto antes; FV/TVSP: após falha dos choques iniciais (tipicamente após o 2º choque no algoritmo AHA; ERC: após o 3º).\n5. FV/TVSP refratária (após o 3º choque): amiodarona 50 mg/mL — 6 mL (300 mg) IV/IO em bolus; 2ª dose 3 mL (150 mg) após 3–5 min.\n   Alternativa: lidocaína 2% sem vasoconstritor 1–1,5 mg/kg IV/IO (70 kg: 3,5–5 mL); depois 0,5–0,75 mg/kg; máximo 3 mg/kg.\n6. Se hipercalemia suspeita: gluconato de cálcio 10% 30 mL IV em bolus + bicarbonato de sódio 8,4% 50–100 mL IV em bolus (vias separadas).\n7. Se torsades: sulfato de magnésio 50% 4 mL (2 g) + 10 mL de SF 0,9% IV em bolus.\n8. Glicemia capilar; corrigir hipoglicemia com glicose 50% 50 mL IV.\n9. SF 0,9% ou Ringer lactato 1.000 mL IV aberto se hipovolemia suspeita.\n10. Após RCE: ECG de 12 derivações, gasometria, eletrólitos, RX de tórax e seguir prescrição da ficha pos-pcr."
   },
   orientacoesRetorno: [
     "Família: informar com linguagem simples o que aconteceu, o que está sendo feito e o prognóstico; oferecer presença durante a reanimação quando possível",
@@ -244,7 +244,7 @@ registrarFicha({
       titulo: "Ciclo de 2 minutos — o que fazer",
       colunas: ["Ritmo", "Ação imediata", "Drogas"],
       linhas: [
-        ["FV / TV sem pulso", "Choque e RCP 2 min", "Adrenalina 1 mg após falha do choque inicial (após 2º choque), a cada 3–5 min; amiodarona 300 → 150 mg (ou lidocaína) após 3º choque"],
+        ["FV / TV sem pulso", "Choque e RCP 2 min", "Adrenalina 1 mg após falha dos choques iniciais (tipicamente após o 2º choque no algoritmo AHA; ERC: após o 3º), a cada 3–5 min; amiodarona 300 → 150 mg (ou lidocaína) após 3º choque"],
         ["AESP", "RCP 2 min; buscar 5H5T", "Adrenalina 1 mg o quanto antes, a cada 3–5 min"],
         ["Assistolia", "Conferir cabos e ganho; RCP 2 min", "Adrenalina 1 mg o quanto antes, a cada 3–5 min"]
       ],
@@ -270,9 +270,10 @@ registrarFicha({
   fontes: [
     "American Heart Association — 2025 AHA Guidelines for CPR and ECC, Part 9: Adult Advanced Life Support (Circulation, 2025)",
     "American Heart Association — 2025 Adult Cardiac Arrest Algorithm (2025)",
+    "European Resuscitation Council — Guidelines 2025: Adult Advanced Life Support (adrenalina após o 3º choque)",
     "ILCOR — International Consensus on CPR and ECC Science with Treatment Recommendations (2025)",
     "Sociedade Brasileira de Cardiologia — Atualização da Diretriz de RCP e Cuidados de Emergência (2019), para contexto nacional"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

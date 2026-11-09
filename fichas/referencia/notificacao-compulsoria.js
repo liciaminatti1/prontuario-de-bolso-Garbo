@@ -6,7 +6,7 @@ registrarFicha({
   publico: "ambos",
   formato: "curto",
   titulo: "Notificação compulsória: o que, quando e como",
-  resumo: "Quais doenças, agravos e eventos notificar segundo a Lista Nacional de Notificação Compulsória (Portaria de Consolidação GM/MS nº 4/2017, Anexo 1 do Anexo V, com atualizações), prazos imediato (até 24 h) e semanal, e como notificar (SINAN, e-SUS, telefone/e-mail da vigilância).",
+  resumo: "Quais doenças, agravos e eventos notificar segundo a Lista Nacional de Notificação Compulsória (Portaria de Consolidação GM/MS nº 4/2017, Anexo 1 do Anexo V, na redação da Portaria GM/MS nº 11.211, de 13/05/2026), prazos imediato (até 24 h) e semanal, e como notificar (SINAN, e-SUS, telefone/e-mail da vigilância).",
   palavrasChave: "notificacao compulsoria lista nacional doencas de notificacao dnc sinan e sus notifica ficha de notificacao vigilancia epidemiologica cievs notificacao imediata 24 horas semanal portaria de consolidacao 4 violencia acidente de trabalho sarampo meningite dengue sifilis tuberculose",
   critico: {
     tempo: "Imediata: até 24 h, por telefone",
@@ -28,7 +28,8 @@ registrarFicha({
     "Colher amostras indicadas (sorologia, PCR, swab) antes do tratamento quando possível, conforme o Guia de Vigilância",
     "Iniciar medidas de controle sem esperar a vigilância: isolamento, quimioprofilaxia de contatos, vacinação de bloqueio",
     "Notificação também é obrigatória em serviços privados; não exige consentimento do paciente; o sigilo dos dados é garantido",
-    "Conferir a lista vigente: a portaria é atualizada com frequência (incluídas ou alteradas em 2025–2026, ex.: caxumba, Oropouche, anomalias congênitas)"
+    "Lista vigente: Portaria GM/MS nº 11.211, de 13/05/2026 — caxumba passa a ser de notificação imediata; inclui febre do Oropouche; difteria: imediata ao Ministério da Saúde; tétano acidental: imediata à Secretaria Estadual; covid-19 deixa de ser item independente (segue a vigilância de síndrome gripal e SRAG). Antes dela: Portaria GM/MS nº 10.175/2026 (anomalias congênitas) e nº 6.734/2025",
+    "A portaria é atualizada com frequência: conferir sempre a lista vigente"
   ],
   tabelas: [
     {
@@ -38,14 +39,18 @@ registrarFicha({
         ["Sarampo, rubéola, síndrome da rubéola congênita", "Imediata", "Bloqueio vacinal em até 72 h"],
         ["Doença meningocócica e outras meningites", "Imediata", "Quimioprofilaxia de contatos"],
         ["Poliomielite / paralisia flácida aguda (< 15 anos)", "Imediata", "Coleta de fezes"],
-        ["Difteria, coqueluche", "Imediata", "Investigação de contatos"],
+        ["Difteria", "Imediata (ao Ministério da Saúde)", "Investigação de contatos"],
+        ["Coqueluche", "Imediata", "Investigação de contatos"],
+        ["Caxumba", "Imediata", "Portaria GM/MS nº 11.211/2026"],
+        ["Tétano acidental", "Imediata (à Secretaria Estadual)", "Portaria GM/MS nº 11.211/2026"],
+        ["Febre do Oropouche", "Conforme lista vigente", "Incluída na Portaria GM/MS nº 11.211/2026"],
         ["Raiva humana; acidente por animal potencialmente transmissor da raiva", "Imediata (raiva) / conforme lista (acidente)", "Profilaxia pós-exposição"],
         ["Febre amarela, febre maculosa, hantavirose, leptospirose, peste", "Imediata", "—"],
         ["Cólera, botulismo, febre tifoide", "Imediata", "—"],
         ["Dengue (caso), chikungunya, zika", "Semanal", "Óbito: imediata; zika em gestante e chikungunya em área sem transmissão: imediata"],
         ["Doença de Chagas aguda", "Imediata", "—"],
         ["Malária", "Imediata fora da região amazônica; semanal na região amazônica", "—"],
-        ["Influenza por novo subtipo; SRAG", "Imediata", "SIVEP-Gripe"],
+        ["Influenza por novo subtipo; SRAG", "Imediata", "SIVEP-Gripe. Covid-19 não é mais item independente: entra na vigilância de síndrome gripal/SRAG"],
         ["Mpox", "Imediata", "—"],
         ["Evento adverso grave ou óbito pós-vacinação", "Imediata", "e-SUS Notifica"],
         ["Violência sexual; tentativa de suicídio", "Imediata (municipal)", "Ficha de violência interpessoal/autoprovocada"],
@@ -56,9 +61,10 @@ registrarFicha({
         ["Intoxicação exógena", "Semanal", "Inclui agrotóxicos e medicamentos"],
         ["Acidente por animal peçonhento", "Conforme lista vigente", "Soroterapia (ver fichas de toxicologia)"],
         ["Óbito materno e óbito infantil", "Semanal", "Investigação pelo comitê"],
-        ["Toxoplasmose gestacional e congênita", "Semanal", "—"]
+        ["Toxoplasmose gestacional e congênita", "Semanal", "—"],
+        ["Anomalias congênitas", "Conforme lista vigente", "Incluídas pela Portaria GM/MS nº 10.175/2026"]
       ],
-      nota: "Resumo para consulta rápida, não substitui a lista oficial. Periodicidades mudam entre atualizações da portaria e alguns estados e municípios acrescentam agravos: confira sempre a lista vigente (Portaria de Consolidação GM/MS nº 4/2017, Anexo 1 do Anexo V, atualizada pela Portaria GM/MS nº 6.734/2025 e atualizações de 2026). Na dúvida, notifique imediatamente."
+      nota: "Resumo para consulta rápida, não substitui a lista oficial. Periodicidades mudam entre atualizações da portaria e alguns estados e municípios acrescentam agravos: confira sempre a lista vigente (Portaria de Consolidação GM/MS nº 4/2017, Anexo 1 do Anexo V, na redação da Portaria GM/MS nº 11.211, de 13/05/2026; antes: nº 10.175/2026 e nº 6.734/2025). Na dúvida, notifique imediatamente."
     }
   ],
   prescricao: {
@@ -71,11 +77,11 @@ registrarFicha({
     "Retornar se piora ou se familiares apresentarem sintomas"
   ],
   fontes: [
-    "Ministério da Saúde — Portaria de Consolidação GM/MS nº 4/2017, Anexo 1 do Anexo V (Lista Nacional de Notificação Compulsória), com atualizações (Portaria GM/MS nº 6.734/2025; atualização de 2026 — conferir a vigente)",
+    "Ministério da Saúde — Portaria de Consolidação GM/MS nº 4/2017, Anexo 1 do Anexo V (Lista Nacional de Notificação Compulsória), na redação da Portaria GM/MS nº 11.211, de 13/05/2026 (lista vigente); atualizações anteriores: Portaria GM/MS nº 10.175/2026 e nº 6.734/2025",
     "Lei nº 6.259/1975 (notificação compulsória) e Lei nº 13.931/2019 (violência contra a mulher)",
     "Ministério da Saúde — Guia de Vigilância em Saúde, 6ª edição (2023/2024)",
     "Ministério da Saúde — Instrutivo de notificação de violência interpessoal e autoprovocada (2016)"
   ],
-  revisao: "2026-10-24",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

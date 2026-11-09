@@ -171,7 +171,7 @@ registrarFicha({
       duracao: "Neuralgia pós-herpética: manter enquanto houver benefício; reavaliar a cada 3 meses e retirar aos poucos",
       monitorizacao: "Sonolência, tontura, edema, quedas",
       contraindicacoes: "—",
-      ajustes: "Disponível no SUS (Componente Especializado/REMUME — conferir). ClCr 30–59: máx. 1.400 mg/dia; 15–29: máx. 700 mg/dia. Idoso: começar 100–300 mg à noite. Pregabalina 75 mg 12/12 h (até 150 mg 12/12 h; máx. 600 mg/dia) é alternativa fora da RENAME"
+      ajustes: "No SUS: Componente Especializado (CEAF), grupo 2, pelo PCDT Dor Crônica (CID R52.1/R52.2). ClCr 30–59: máx. 1.400 mg/dia; 15–29: máx. 700 mg/dia. Idoso: começar 100–300 mg à noite. Pregabalina 75 mg 12/12 h (até 150 mg 12/12 h; máx. 600 mg/dia) é alternativa fora da RENAME"
     },
     {
       droga: "Amitriptilina (ou nortriptilina)",
@@ -276,14 +276,15 @@ registrarFicha({
         ["Indicação (bula/SBIm)", "Adultos ≥ 50 anos e adultos ≥ 18 anos com risco aumentado (imunossupressão)"],
         ["Esquema", "2 doses de 0,5 mL IM, intervalo de 2 a 6 meses (imunossuprimido: pode ser 1 a 2 meses)"],
         ["Quem já teve zóster", "Vacinar após a resolução do episódio agudo"],
-        ["Disponibilidade", "Não incorporada ao SUS (decisão do MS após CONITEC, janeiro de 2026). Disponível na rede privada"],
+        ["Disponibilidade", "Não incorporada ao SUS para ≥ 80 anos e imunocomprometidos ≥ 18 anos (Portaria SCTIE/MS nº 3, de 08/01/2026): sem oferta no SUS nem no CRIE. Disponível na rede privada"],
         ["Vacina atenuada (Zostavax)", "Descontinuada; não usar em imunossuprimidos"]
       ],
-      nota: "Conferir no CRIE local se há oferta para grupos especiais. A decisão de 2026 pode ser revista pela CONITEC."
+      nota: "Portaria SCTIE/MS nº 3/2026 (Relatório CONITEC nº 1073; Conass Informa 04/2026). A decisão pode ser revista pela CONITEC."
     }
   ],
   fontes: [
-    "Ministério da Saúde — Portaria SECTICS/MS publicada no DOU em 12/01/2026: decisão de não incorporar a vacina herpes-zóster recombinante ao SUS (≥ 80 anos e imunocomprometidos ≥ 18 anos; relatório CONITEC)",
+    "Ministério da Saúde — Portaria SCTIE/MS nº 3, de 08/01/2026 (DOU 12/01/2026): não incorporação da vacina herpes-zóster recombinante adjuvada ao SUS (≥ 80 anos e imunocomprometidos ≥ 18 anos); Relatório CONITEC nº 1073; Conass Informa 04/2026",
+    "Ministério da Saúde — PCDT Dor Crônica: gabapentina no Componente Especializado (CEAF), grupo 2 (CID R52.1/R52.2)",
     "SBIm — Calendário de vacinação do adulto e do idoso 2025/2026: vacina herpes-zóster recombinante",
     "Ministério da Saúde — RENAME 2024 (aciclovir, amitriptilina, nortriptilina)",
     "Dworkin RH et al. — Recommendations for the management of herpes zoster. Clin Infect Dis, 2007",
@@ -292,6 +293,6 @@ registrarFicha({
     "NICE — Neuropathic pain in adults: pharmacological management (CG173, atualizado 2020)",
     "American Geriatrics Society — Beers Criteria (2023)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

@@ -8,8 +8,8 @@ registrarFicha({
   resumo: "Diagnóstico, classificação pela fração de ejeção e otimização da terapia modificadora de doença no seguimento ambulatorial.",
   palavrasChave: "ic insuficiencia cardiaca cronica icfer fe reduzida betabloqueador carvedilol sacubitril valsartana espironolactona dapagliflozina quatro pilares bnp",
   critico: {
-    tempo: "Quatro pilares na FE ≤ 40%",
-    texto: "Betabloqueador + IECA/BRA/sacubitril-valsartana + espironolactona + iSGLT2, iniciados e titulados em semanas. Diurético só para congestão."
+    tempo: "Quatro pilares na ICFEr",
+    texto: "Terapia médica fundamental: betabloqueador + IECA/BRA/sacubitril-valsartana + espironolactona + iSGLT2, iniciados e titulados em semanas. ICFEr: FE < 50% (ESC 2026); no SUS, FE ≤ 40% (PCDT 2024). Diurético só para congestão."
   },
   alarmes: [
     "Ganho de peso > 2 kg em 3 dias, ortopneia ou dispneia progressiva",
@@ -20,13 +20,14 @@ registrarFicha({
   ],
   condutaInicial: [
     "Confirmar com ecocardiograma (FE) e BNP/NT-proBNP; definir etiologia (isquêmica, hipertensiva, chagásica, valvar)",
-    "FE ≤ 40%: iniciar os 4 pilares em doses baixas e titular a cada 2–4 semanas",
+    "ICFEr (ESC 2026: FE < 50%; PCDT SUS: FE ≤ 40%): iniciar os 4 pilares da terapia médica fundamental em doses baixas e titular a cada 2–4 semanas",
+    "ICFEp (FE ≥ 50%): iSGLT2, diurético se congestão e tratamento das comorbidades; a ESC 2026 traz a primeira recomendação de agonista do GLP-1 na ICFEp",
     "Diurético de alça na menor dose que mantenha euvolemia",
     "Vacinas (influenza, pneumococo, covid-19), restrição moderada de sal, atividade física / reabilitação",
     "Investigar ferro (ferritina, saturação) e tratar comorbidades"
   ],
   fataisExcluir: [
-    "Descompensação aguda / edema agudo de pulmão",
+    "IC descompensada / edema agudo de pulmão",
     "Isquemia miocárdica em curso",
     "Arritmia ventricular",
     "Hipercalemia por associação de fármacos"
@@ -52,9 +53,10 @@ registrarFicha({
       { dx: "Anemia, tireoidopatia", pista: "Hb baixa, TSH alterado" }
     ],
     gravidade: [
-      "ICFEr: FE ≤ 40% · ICFElr: 41–49% · ICFEp: ≥ 50%",
+      "ESC 2026: ICFEr: FE < 50% · ICFEp: FE ≥ 50% (sai a categoria intermediária ICFElr)",
+      "PCDT ICFEr (SUS, 2024): FE ≤ 40% para acesso aos medicamentos do protocolo",
       "NYHA I a IV",
-      "Estágios A a D (ACC/AHA)"
+      "Estágios A a D (ESC 2026, ACC/AHA)"
     ]
   },
   exames: [
@@ -64,15 +66,15 @@ registrarFicha({
     { nome: "ECG e sorologia para Chagas", pedido: "ECG de 12 derivações. Sorologia para doença de Chagas (2 métodos) se epidemiologia.", porQue: "Ritmo, bloqueios, etiologia chagásica.", esperar: "—", interpretacao: "QRS ≥ 150 ms com BRE → avaliar ressincronização.", limitacoes: "—" }
   ],
   tratamento: [
-    { droga: "Carvedilol (ou bisoprolol / succinato de metoprolol)", linha: "l1", dose: "Carvedilol 3,125 mg 12/12h → dobrar a cada 2 semanas até 25 mg 12/12h (50 mg 12/12h se > 85 kg)", via: "VO", intervalo: "12/12h", duracao: "Contínuo", monitorizacao: "FC (alvo < 70), PA, congestão", contraindicacoes: "Descompensação aguda, BAV avançado, bradicardia sintomática", ajustes: "Bisoprolol 1,25 → 10 mg/dia; metoprolol succinato 12,5–25 → 200 mg/dia" },
-    { droga: "Sacubitril-valsartana (ou IECA/BRA)", linha: "l1", dose: "24/26 mg 12/12h → 49/51 → 97/103 mg 12/12h", via: "VO", intervalo: "12/12h", duracao: "Contínuo", monitorizacao: "PA, creatinina, K", contraindicacoes: "Angioedema, gestação; suspender IECA 36 h antes de iniciar", ajustes: "Alternativa: enalapril 2,5 → 10–20 mg 12/12h ou losartana 25 → 150 mg/dia" },
+    { droga: "Carvedilol (ou bisoprolol / succinato de metoprolol)", linha: "l1", dose: "Carvedilol 3,125 mg 12/12h → dobrar a cada 2 semanas até 25 mg 12/12h (50 mg 12/12h se > 85 kg)", via: "VO", intervalo: "12/12h", duracao: "Contínuo", monitorizacao: "FC (alvo < 70), PA, congestão", contraindicacoes: "IC descompensada, BAV avançado, bradicardia sintomática", ajustes: "Bisoprolol 1,25 → 10 mg/dia; metoprolol succinato 12,5–25 → 200 mg/dia" },
+    { droga: "Sacubitril-valsartana (ou IECA/BRA)", linha: "l1", dose: "24/26 mg 12/12h → 49/51 → 97/103 mg 12/12h", via: "VO", intervalo: "12/12h", duracao: "Contínuo", monitorizacao: "PA, creatinina, K", contraindicacoes: "Angioedema, gestação; suspender IECA 36 h antes de iniciar", ajustes: "SUS (PCDT ICFEr 2024): FE ≤ 40%, < 75 anos, NYHA II, BNP > 150 pg/mL ou NT-proBNP acima do corte do PCDT; doses 50, 100 e 200 mg 12/12h (= 24/26, 49/51 e 97/103 mg). Alternativa: enalapril 2,5 → 10–20 mg 12/12h ou losartana 25 → 150 mg/dia" },
     { droga: "Espironolactona", linha: "l1", dose: "12,5–25 mg → 50 mg/dia", via: "VO", intervalo: "1×/dia", duracao: "Contínuo", monitorizacao: "K e creatinina em 1 semana, 1 mês e depois a cada 3 meses", contraindicacoes: "K > 5,0, TFG < 30", ajustes: "Suspender se K > 5,5" },
-    { droga: "Dapagliflozina ou empagliflozina", linha: "l1", dose: "10 mg", via: "VO", intervalo: "1×/dia", duracao: "Contínuo", monitorizacao: "Volemia", contraindicacoes: "DM1, TFG < 20–25", ajustes: "Benefício em todas as faixas de FE" },
+    { droga: "Dapagliflozina ou empagliflozina", linha: "l1", dose: "10 mg", via: "VO", intervalo: "1×/dia", duracao: "Contínuo", monitorizacao: "Volemia", contraindicacoes: "DM1, TFG < 20–25", ajustes: "Benefício em todas as faixas de FE. Dapagliflozina 10 mg está no PCDT ICFEr (SUS)" },
     { droga: "Furosemida", linha: "adj", dose: "20–80 mg/dia (menor dose que mantenha euvolemia)", via: "VO", intervalo: "1–2×/dia", duracao: "Enquanto congestão", monitorizacao: "Peso, K, creatinina", contraindicacoes: "Hipovolemia", ajustes: "Paciente pode ajustar pelo peso conforme plano escrito" },
     { droga: "AINE, diltiazem, verapamil, glitazonas", linha: "ci", dose: "Evitar", via: "—", intervalo: "—", duracao: "—", monitorizacao: "—", contraindicacoes: "Pioram a IC", ajustes: "—" }
   ],
   prescricao: {
-    ambulatorial: "USO ORAL (início — titular a cada 2–4 semanas)\n1. Carvedilol 3,125 mg --------------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas, com alimento.\n2. Sacubitril + valsartana 24/26 mg -------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas. (Alternativa: enalapril 2,5 mg 12/12h.)\n3. Espironolactona 25 mg -------------------------- 30 comprimidos\n   Tomar meio a 1 comprimido pela manhã.\n4. Dapagliflozina 10 mg --------------------------- 30 comprimidos\n   Tomar 1 comprimido pela manhã.\n5. Furosemida 40 mg ------------------------------- 30 comprimidos\n   Tomar 1 comprimido pela manhã (ajustar conforme o peso).\n\nORIENTAÇÕES\n- Pesar-se todos os dias pela manhã e anotar.\n- Sal com moderação; evitar alimentos industrializados e embutidos.\n- Não usar anti-inflamatórios.\n- Exames (potássio e creatinina) em 1–2 semanas."
+    ambulatorial: "USO ORAL (início — titular a cada 2–4 semanas)\n1. Carvedilol 3,125 mg --------------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas, com alimento.\n2. Sacubitril + valsartana 24/26 mg (50 mg) ------ 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas. (SUS: critérios do PCDT ICFEr. Alternativa: enalapril 2,5 mg 12/12h.)\n3. Espironolactona 25 mg -------------------------- 30 comprimidos\n   Tomar meio a 1 comprimido pela manhã.\n4. Dapagliflozina 10 mg --------------------------- 30 comprimidos\n   Tomar 1 comprimido pela manhã.\n5. Furosemida 40 mg ------------------------------- 30 comprimidos\n   Tomar 1 comprimido pela manhã (ajustar conforme o peso).\n\nORIENTAÇÕES\n- Pesar-se todos os dias pela manhã e anotar.\n- Sal com moderação; evitar alimentos industrializados e embutidos.\n- Não usar anti-inflamatórios.\n- Exames (potássio e creatinina) em 1–2 semanas."
   },
   orientacoesRetorno: [
     "Pesar todo dia: se ganhar mais de 2 kg em 3 dias, procurar a unidade",
@@ -89,10 +91,12 @@ registrarFicha({
     transferencia: ["Cardiologia: FE ≤ 35% persistente (avaliar CDI/ressincronização), NYHA III–IV, etiologia a definir, valvopatia", "PS: congestão grave, hipotensão, síncope, dor torácica"]
   },
   fontes: [
+    "Ministério da Saúde — PCDT Insuficiência Cardíaca com Fração de Ejeção Reduzida (Portaria Conjunta SAES/SECTICS nº 10, de 13/09/2024)",
     "SBC — Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda (2018) e Atualização (2021)",
+    "ESC 2026 Guidelines for heart failure (Eur Heart J, 28/08/2026)",
     "ESC 2021 Heart Failure Guidelines e Focused Update 2023",
     "AHA/ACC/HFSA 2022 Guideline for the Management of Heart Failure"
   ],
-  revisao: "2026-10-24",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

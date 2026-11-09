@@ -28,6 +28,7 @@ registrarFicha({
     "Tratar dor ou ansiedade se presentes e remedir",
     "Ajustar o esquema oral: aumentar dose ou associar classe (BRA ou IECA + bloqueador de canal de cálcio + tiazídico); preferir combinação a dose máxima de uma só droga",
     "Sem tratamento prévio: a diretriz SBC 2025 prefere iniciar com combinação de 2 drogas na maioria dos pacientes (sobretudo PA ≥ 160/100 ou alto risco); monoterapia em estágio 1 de baixo risco, idoso frágil ou muito idoso",
+    "Classificação (SBC 2025): normal < 120/80; pré-hipertensão 120–139/80–89; meta < 130/80 para todo hipertenso. O PCDT de HA do Ministério da Saúde (2025), referência oficial do SUS, ainda usa a nomenclatura antiga (ótima/normal/normal-alta) — ver has-ubs",
     "Exames básicos se não houver recentes; ECG na UBS se disponível",
     "Retorno em até 7 dias com medidas domiciliares (MRPA); meta de longo prazo < 130/80 mmHg (individualizar em idoso frágil)"
   ],
@@ -132,9 +133,10 @@ registrarFicha({
   ],
   fontes: [
     "SBC/SBH/SBN — Diretriz Brasileira de Hipertensão Arterial (Arq Bras Cardiol, 2025; DOI 10.36660/abc.20250624)",
+    "Ministério da Saúde — PCDT Hipertensão Arterial Sistêmica (2025): referência oficial do SUS; ainda usa a nomenclatura antiga (ótima/normal/normal-alta)",
     "Ministério da Saúde — Linha de Cuidado do Adulto com Hipertensão Arterial Sistêmica (2021)",
     "ESC 2024 Guidelines for the management of elevated blood pressure and hypertension"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

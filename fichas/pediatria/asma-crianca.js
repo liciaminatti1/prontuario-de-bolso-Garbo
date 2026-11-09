@@ -9,7 +9,7 @@ registrarFicha({
   palavrasChave: "asma crianca pediatria sibilancia chiado bronquite crise broncoespasmo salbutamol espacador beclometasona budesonida formoterol montelucaste prednisolona gina etapas controle",
   critico: {
     tempo: "Salbutamol com espaçador já",
-    texto: "Crise: salbutamol 100 mcg com espaçador a cada 20 min na 1ª hora (≤ 5 anos 2–6 jatos; 6–11 anos 4–10 jatos), O₂ se SpO₂ < 94% e prednisolona 1–2 mg/kg. Em ≥ 6 anos, SABA isolado sem corticoide inalatório não é tratamento de manutenção (GINA 2026)."
+    texto: "Crise: salbutamol 100 mcg com espaçador a cada 20 min na 1ª hora (≤ 5 anos 2–6 jatos; 6–11 anos 4–10 jatos), O₂ se SpO₂ < 94% e prednisolona 1–2 mg/kg. Em 6–11 anos, SABA isolado sem corticoide inalatório deixou de ser recomendado (GINA 2026)."
   },
   alarmes: [
     "Não consegue falar ou mamar, agitação ou sonolência, confusão",
@@ -100,7 +100,7 @@ registrarFicha({
       duracao: "Conforme crise",
       monitorizacao: "FC, tremor, SpO₂, resposta clínica; potássio se doses repetidas",
       contraindicacoes: "—",
-      ajustes: "1 jato por vez, 5–10 respirações (ou 10 s) após cada jato. Nebulização (solução 5 mg/mL): 0,15 mg/kg = 0,03 mL/kg (mín 2,5 mg = 0,5 mL; máx 5 mg = 1 mL) em 3–4 mL de SF, com O₂ 6–8 L/min — reservar para crise grave ou sem espaçador"
+      ajustes: "1 jato por vez, 5–10 respirações (ou 10 s) após cada jato. Nebulização (solução 5 mg/mL): 0,15 mg/kg = 0,03 mL/kg (mín 2,5 mg = 0,5 mL; máx 5 mg = 1 mL) em 3–4 mL de SF, com O₂ 6–8 L/min — reservar para crise grave ou sem espaçador. Crise leve em ≥ 6 anos na APS/PS: budesonida-formoterol é alternativa ao SABA (GINA 2026)"
     },
     {
       droga: "Brometo de ipratrópio",
@@ -136,15 +136,15 @@ registrarFicha({
       ajustes: "SUS: beclometasona spray 50 mcg e 250 mcg; budesonida cápsula inalatória 200 mcg. Enxaguar a boca após o uso"
     },
     {
-      droga: "Budesonida + formoterol (6–11 anos, etapas 3–4; resgate anti-inflamatório)",
+      droga: "Budesonida + formoterol (6–11 anos: resgate anti-inflamatório — AIR nas etapas 1–2; MART nas etapas 3–4)",
       linha: "alt",
-      dose: "Dose muito baixa/baixa (ex.: budesonida-formoterol 100/6 mcg): manutenção 1 inalação 1–2×/dia + 1 inalação se sintomas (MART), máx 8 inalações/dia",
+      dose: "Budesonida-formoterol 100/6 mcg — AIR (etapas 1–2): 1 inalação se sintomas · MART (etapas 3–4, dose muito baixa/baixa): manutenção 1 inalação 1–2×/dia + 1 inalação se sintomas; máx. 48 mcg de formoterol (dose medida) por dia = 8 inalações de 100/6",
       via: "Inalador de pó",
       intervalo: "Conforme esquema",
       duracao: "Contínuo",
       monitorizacao: "Técnica do inalador de pó (exige fluxo inspiratório adequado)",
       contraindicacoes: "< 6 anos",
-      ajustes: "GINA 2026: MART é opção nas etapas 3–4 em 6–11 anos e o relatório passou a não recomendar SABA isolado nessa faixa (dados do estudo CARE). No SUS, a apresentação 6/200 mcg é do componente especializado conforme PCDT; a de 100/6 nem sempre está disponível"
+      ajustes: "GINA 2026 (05/05/2026): em 6–11 anos o SABA isolado deixou de ser recomendado; ICS-formoterol como resgate (AIR) nas etapas 1–2 (estudo CARE) e MART nas etapas 3–4; ICS-formoterol também é alternativa ao SABA na exacerbação leve (≥ 6 anos). No SUS, a apresentação 6/200 mcg é do componente especializado conforme PCDT; a de 100/6 nem sempre está disponível"
     },
     {
       droga: "Montelucaste",
@@ -200,8 +200,8 @@ registrarFicha({
       titulo: "Etapas de manutenção por faixa etária (GINA 2025–2026, resumo)",
       colunas: ["Etapa", "≤ 5 anos", "6–11 anos"],
       linhas: [
-        ["1", "SABA se sintomas; considerar CI inalatório intermitente nas viroses", "CI dose baixa sempre que usar SABA, ou CI dose baixa diária (SABA isolado não recomendado em 2026)"],
-        ["2", "CI dose baixa diária (preferencial); alternativa: montelucaste", "CI dose baixa diária + SABA de resgate (ou budesonida-formoterol de resgate, conforme GINA 2026)"],
+        ["1", "SABA se sintomas; considerar CI inalatório intermitente nas viroses", "Budesonida-formoterol dose baixa só se sintomas (AIR), ou CI sempre que usar SABA (AIR com CI-SABA), ou CI dose baixa diária. SABA isolado não é mais recomendado (GINA 2026)"],
+        ["2", "CI dose baixa diária (preferencial); alternativa: montelucaste", "Budesonida-formoterol dose baixa só se sintomas (AIR), ou CI dose baixa diária + resgate"],
         ["3", "CI dose baixa dobrada (dose média); encaminhar", "CI-LABA dose baixa, ou MART com budesonida-formoterol dose muito baixa, ou CI dose média"],
         ["4", "Manter e encaminhar ao especialista", "CI-LABA dose média ou MART dose baixa; encaminhar"],
         ["5", "—", "Especialista: fenotipagem, anti-IgE/anti-IL-5/anti-IL-4R"]
@@ -221,11 +221,11 @@ registrarFicha({
     }
   ],
   fontes: [
-    "GINA — Global Strategy for Asthma Management and Prevention (2026) e Summary Guide (2026)",
-    "Ministério da Saúde — Protocolo Clínico e Diretrizes Terapêuticas da Asma (2023)",
+    "GINA — Global Strategy for Asthma Management and Prevention (2026, publicada em 05/05/2026) e Summary Guide (2026)",
+    "Ministério da Saúde — PCDT da Asma, Portaria Conjunta SAES/SCTIE nº 43, de 24/03/2026 (revoga a Portaria Conjunta nº 32/2023)",
     "Sociedade Brasileira de Pediatria — Documento científico: Asma na infância — diagnóstico e manejo (2023)",
     "SBPT — Recomendações para o manejo da asma (2020) e atualização (2024)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

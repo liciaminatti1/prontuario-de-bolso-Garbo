@@ -147,7 +147,7 @@ registrarFicha({
     transferencia: ["Resfriar ANTES de transferir; transporte com resfriamento contínuo"]
   },
   prescricao: {
-    hospitalar: "GOLPE DE CALOR (peso: ___ kg)\n1. Dieta zero até consciência normal.\n2. RESFRIAMENTO IMEDIATO: imersão em água fria/gelada (ou retirar roupas, borrifar água e ventilar + gelo em pescoço, axilas e virilha). Interromper em 38,5–39 °C.\n3. Temperatura retal de 5/5 min durante o resfriamento; depois de 1/1 h por 24 h.\n4. Monitor, SpO₂, O₂ para SpO₂ ≥ 94%.\n5. SF 0,9% (frio, se disponível) 1.000 mL IV em 30–60 min (criança 20 mL/kg); reavaliar e repetir; manter diurese ≥ 1 mL/kg/h.\n6. Glicemia capilar agora e de 2/2 h; glicose 50% 50 mL IV se < 70 mg/dL (criança glicose 10% 2–5 mL/kg).\n7. Diazepam 10 mg IV lento SN tremor intenso, agitação ou convulsão (criança 0,2 mg/kg, máx. 10 mg).\n8. Sonda vesical para diurese horária.\n9. Exames: eletrólitos, creatinina, CK, TGO/TGP, coagulograma, fibrinogênio, gasometria, urina tipo 1; repetir em 12–24 h.\n10. NÃO usar dipirona/paracetamol para baixar a temperatura.\n11. Enoxaparina 40 mg SC 1×/dia após excluir coagulopatia.",
+    hospitalar: "GOLPE DE CALOR (peso: ___ kg)\n1. Dieta zero até consciência normal.\n2. RESFRIAMENTO IMEDIATO: imersão em água fria/gelada (ou retirar roupas, borrifar água e ventilar + gelo em pescoço, axilas e virilha). Interromper em 38,5–39 °C.\n3. Temperatura retal de 5/5 min durante o resfriamento; depois de 1/1 h por 24 h.\n4. Monitor, SpO₂, O₂ para SpO₂ ≥ 94%.\n5. SF 0,9% (frio, se disponível) 1.000 mL IV em 30–60 min (criança 20 mL/kg); reavaliar e repetir; manter diurese ≥ 1 mL/kg/h.\n6. Glicemia capilar agora e de 2/2 h; glicose 50% 50 mL IV se < 70 mg/dL (criança glicose 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg)).\n7. Diazepam 10 mg IV lento SN tremor intenso, agitação ou convulsão (criança 0,2 mg/kg, máx. 10 mg).\n8. Sonda vesical para diurese horária.\n9. Exames: eletrólitos, creatinina, CK, TGO/TGP, coagulograma, fibrinogênio, gasometria, urina tipo 1; repetir em 12–24 h.\n10. NÃO usar dipirona/paracetamol para baixar a temperatura.\n11. Enoxaparina 40 mg SC 1×/dia após excluir coagulopatia.",
     ambulatorial: "EXAUSTÃO PELO CALOR — ALTA\n1. Soro de reidratação oral ----------------------- 5 envelopes\n   Diluir 1 envelope em 1 litro de água; beber aos poucos ao longo do dia.\n2. Repouso em local fresco por 24–48 h; retorno gradual às atividades."
   },
   orientacoesRetorno: [
@@ -158,11 +158,12 @@ registrarFicha({
     "Consulta na UBS em 1 semana com exames de controle (função renal, CK, fígado)"
   ],
   fontes: [
+    "AHA/AAP — PALS 2025: glicose na hipoglicemia 0,5–1 g/kg (SG 10% 5–10 mL/kg); RN: SG 10% 2 mL/kg",
     "Wilderness Medical Society — Clinical Practice Guidelines for the prevention and treatment of heat illness (2019, atualização 2024)",
     "American College of Sports Medicine — Expert consensus statement on exertional heat illness (2023)",
     "Epstein Y, Yanovich R. Heatstroke (N Engl J Med, 2019)",
     "Ministério da Saúde — Guia de preparação e resposta aos efeitos do calor extremo sobre a saúde (versão vigente)"
   ],
-  revisao: "2026-10-24",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

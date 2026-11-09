@@ -72,7 +72,7 @@ registrarFicha({
       pedido: "IgM e IgG para sarampo e rubéola no soro — caso suspeito notificado. Enviar ao LACEN com ficha SINAN.",
       porQue: "Confirmação laboratorial obrigatória.",
       esperar: "IgM reagente.",
-      interpretacao: "A vigilância define a necessidade de 2ª amostra e a classificação final.",
+      interpretacao: "A vigilância define a necessidade de 2ª amostra e a classificação final. Febre + exantema maculopapular com IgM reagente passa a ser caso suspeito mesmo fora da definição clássica (NT 344/2025); IgM reagente de qualquer laboratório, inclusive privado, vale como critério confirmatório até concluir a investigação (NT 345/2025).",
       limitacoes: "IgM pode ser não reagente nos primeiros dias do exantema; vacina recente gera IgM."
     },
     {
@@ -140,13 +140,13 @@ registrarFicha({
     {
       droga: "Imunoglobulina humana (contato suscetível com contraindicação à vacina)",
       linha: "alt",
-      dose: "Conforme Manual dos CRIE / orientação da vigilância",
-      via: "IM ou IV conforme produto",
+      dose: "Dose e via conforme CRIE/vigilância (ex.: SMS-SP 2026 — IG humana IV 150 mg/kg = 1,5 mL/kg da formulação 100 mg/mL, em unidade de referência)",
+      via: "Conforme CRIE/vigilância (IV na referência brasileira)",
       intervalo: "Dose única, até 6 dias após a exposição",
       duracao: "—",
       monitorizacao: "—",
       contraindicacoes: "—",
-      ajustes: "Para gestantes suscetíveis, imunodeprimidos e lactentes < 6 meses. Solicitar via vigilância/CRIE"
+      ajustes: "Até 6 dias após a exposição, para lactentes < 6 meses, gestantes e imunocomprometidos suscetíveis. Solicitar via vigilância/CRIE. A dose IM 0,25–0,5 mL/kg (máx. 15 mL) é de referências americanas"
     }
   ],
   destino: {
@@ -198,10 +198,11 @@ registrarFicha({
   fontes: [
     "Ministério da Saúde — Guia de Vigilância em Saúde, 6ª edição revisada (2024): Sarampo",
     "Ministério da Saúde — Notas Técnicas Conjuntas nº 344/2025 e nº 345/2025-CGVDI/DPNI/SVSA/MS (definição de caso, coleta, conduta, bloqueio vacinal e monitoramento de contatos)",
+    "SMS São Paulo — Sarampo: imunoglobulina humana pós-exposição IV 150 mg/kg em unidade de referência (2026)",
     "Ministério da Saúde — Manual dos Centros de Referência para Imunobiológicos Especiais, 6ª ed. (2023)",
     "OMS — Measles: vitamin A supplementation for children (recomendação vigente) e Measles vaccines: WHO position paper (2017)",
     "American Academy of Pediatrics — Red Book 2024–2027: Measles"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

@@ -89,8 +89,8 @@ complementarMedicamentos({
     prescrever: [
       { contexto: "Adulto — anemia ferropriva", texto: "USO ORAL\n1. Sulfato ferroso 40 mg de ferro elementar ------- 60 comprimidos\n   Tomar 1 comprimido 1 a 2 vezes ao dia, 30 minutos antes das refeições, com suco de fruta cítrica.\n   Não tomar com leite, café ou chá. Pode escurecer as fezes." },
       { contexto: "Gestante — profilaxia (MS)", texto: "USO ORAL\n1. Sulfato ferroso 40 mg de ferro elementar ------- 30 comprimidos\n   Tomar 1 comprimido ao dia, 30 minutos antes do almoço, durante a gestação e até 3 meses após o parto." },
-      { contexto: "Criança — profilaxia (1 mg/kg/dia)", texto: "USO ORAL\n1. Sulfato ferroso gotas 25 mg/mL de ferro elementar ---- 1 frasco\n   Dar ___ gotas 1 vez ao dia, 30 minutos antes de uma refeição.\n   (1 mg/kg/dia de ferro elementar; 1 gota = 1,25 mg.)" },
-      { contexto: "Criança — tratamento (3–5 mg/kg/dia)", texto: "USO ORAL\n1. Sulfato ferroso gotas 25 mg/mL de ferro elementar ---- 1 frasco\n   Dar ___ gotas 1 vez ao dia (ou divididas em 2 tomadas), 30 minutos antes das refeições.\n   (3–5 mg/kg/dia de ferro elementar; manter 2–3 meses após normalizar a hemoglobina.)" }
+      { contexto: "Criança a termo — profilaxia (dose fixa 10–12,5 mg/dia, SBP 2026)", texto: "USO ORAL\n1. Sulfato ferroso gotas 25 mg/mL de ferro elementar ---- 1 frasco\n   Dar 8 a 10 gotas (10 a 12,5 mg) 1 vez ao dia, 30 minutos antes de uma refeição, por 3 meses.\n   Pausa de 3 meses e novo ciclo de 3 meses (2 ciclos, iniciados aos 6 e aos 12 meses). 1 gota = 1,25 mg.\n   (Prematuro/baixo peso: 2–4 mg/kg/dia conforme o peso ao nascer, do 1º mês até 12 meses; depois 1 mg/kg/dia até 2 anos.)" },
+      { contexto: "Criança — tratamento (3–6 mg/kg/dia, SBP 2026)", texto: "USO ORAL\n1. Sulfato ferroso gotas 25 mg/mL de ferro elementar ---- 1 frasco\n   Dar ___ gotas 1 vez ao dia (ou divididas em 2 tomadas), 30 minutos antes das refeições.\n   (3–6 mg/kg/dia de ferro elementar por 3–6 meses, até normalizar a hemoglobina e a ferritina.)" }
     ]
   },
   calcio: {
@@ -546,14 +546,14 @@ adicionarMedicamentos([
     ] },
   { id: "glicose-50", nomes: ["Glicose 50%", "glicose hipertônica", "soro glicosado 50%", "glicose 25%"], classe: "emergencia", receita: "hospitalar", tags: [],
     usos: "Hipoglicemia sintomática ou com rebaixamento; junto da insulina no tratamento da hipercalemia",
-    ped: { dose: 2, faixa: "2–5 mL/kg de glicose 10% (0,2–0,5 g/kg)", intervalo: "repetir conforme glicemia", maxDose: 250, unidade: "mL de glicose 10%" },
+    ped: { dose: 5, faixa: "5–10 mL/kg de glicose 10% (0,5–1 g/kg; PALS). RN: 2 mL/kg (0,2 g/kg)", intervalo: "repetir conforme glicemia", maxDose: 250, unidade: "mL de glicose 10%" },
     adulto: "Glicose 50% 40–50 mL (20–25 g) IV em bolus; checar glicemia em 15 min",
     renal: [],
     gestacao: { nivel: "compativel", texto: "Compatível." },
     alergia: [], contra: ["Etilista/desnutrido: tiamina 100 mg antes ou junto", "Glicose 50% é hipertônica e irritante: veia calibrosa, conferir refluxo (necrose se extravasar)", "Criança: não usar 50%; usar glicose 10%"],
     prescrever: [
       { contexto: "Hipoglicemia — adulto", texto: "Glicose 50% — 40 mL (4 ampolas de 10 mL; 20 g) IV em bolus, em veia calibrosa.\nGlicemia capilar em 15 min; repetir se < 70 mg/dL. Depois, SG 5–10% de manutenção e alimentação." },
-      { contexto: "Hipoglicemia — criança", texto: "Glicose 10% — ___ mL IV em 5 min.\n(2–5 mL/kg = 0,2–0,5 g/kg. Preparar: 1 parte de glicose 50% + 4 partes de água destilada ou SF.) Glicemia em 15 min." },
+      { contexto: "Hipoglicemia — criança", texto: "Glicose 10% — ___ mL IV em 5 min.\n(5–10 mL/kg = 0,5–1 g/kg, PALS; máximo 25 g = 250 mL. RN: 2 mL/kg. Preparar: 1 parte de glicose 50% + 4 partes de água destilada ou SF.) Glicemia em 15 min." },
       { contexto: "Hipercalemia (junto da insulina)", texto: "Insulina regular 10 UI + glicose 50% 50 mL (25 g) IV em 15–30 min.\nGlicemia capilar de 1/1h nas 4–6 h seguintes." }
     ] },
   { id: "noradrenalina", nomes: ["Noradrenalina", "norepinefrina", "hemitartarato de norepinefrina"], classe: "emergencia", receita: "hospitalar", tags: [],

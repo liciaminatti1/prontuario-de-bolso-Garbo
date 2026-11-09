@@ -51,19 +51,19 @@ registrarFicha({
       linha: "l1",
       dose: "Criança ≥ 2 anos: 20 mg/kg/dose (máx. 800 mg/dose) · Adolescente e adulto: 800 mg/dose",
       via: "Oral",
-      intervalo: "Criança: 4 vezes ao dia · Adulto: 5 vezes ao dia (de 4/4 h, sem a dose da madrugada)",
+      intervalo: "5 vezes ao dia (de 4/4 h, sem a dose da madrugada) — criança e adulto (MS)",
       duracao: "Criança: 5 dias · Adulto: 7 dias",
       monitorizacao: "Hidratação",
       contraindicacoes: "Alergia ao aciclovir",
-      ajustes: "Ajustar na insuficiência renal. Crianças com > 40 kg: dose de adulto. O MS também cita o esquema de 5 vezes ao dia para crianças. Gestante: avaliar com o pré-natal (aciclovir é usado)"
+      ajustes: "Ajustar na insuficiência renal. Crianças com > 40 kg: dose de adulto. O Red Book (AAP) usa 20 mg/kg/dose 4 vezes ao dia por 5 dias na criança; adotado aqui o esquema do MS (5 vezes ao dia). O texto do MS diz 'máx. 800 mg/dia', provável erro por 800 mg/dose. Gestante: avaliar com o pré-natal (aciclovir é usado)"
     },
     {
       droga: "Aciclovir IV",
       linha: "l1",
-      dose: "10 mg/kg/dose (< 1 ano: 10 mg/kg/dose; alternativa 500 mg/m²/dose em ≥ 1 ano)",
+      dose: "10–15 mg/kg/dose no imunocomprometido (MS) (< 1 ano: 10 mg/kg/dose; alternativa 500 mg/m²/dose em ≥ 1 ano)",
       via: "IV em 1 h",
       intervalo: "8/8 h",
-      duracao: "7–10 dias ou até 48 h sem lesões novas",
+      duracao: "≥ 7 dias (7–10 dias) ou até 48 h sem lesões novas",
       monitorizacao: "Função renal, hidratação",
       contraindicacoes: "—",
       ajustes: "Diluir para concentração ≤ 7 mg/mL em SF 0,9%. Hidratar bem (nefrotoxicidade). Ajuste renal"
@@ -92,7 +92,7 @@ registrarFicha({
     }
   ],
   prescricao: {
-    ambulatorial: "VARICELA — ADULTO\nUSO ORAL\n1. Aciclovir 400 mg ---------------------------------- 70 comprimidos\n   Tomar 2 comprimidos (800 mg) de 4 em 4 horas, 5 vezes ao dia (pular a dose da madrugada), por 7 dias.\n2. Paracetamol 500 mg --------------------------------- 20 comprimidos\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se febre ou dor (máximo 4 g por dia).\n3. Loratadina 10 mg ----------------------------------- 7 comprimidos\n   Tomar 1 comprimido 1 vez ao dia se coceira.\n\nCRIANÇA (peso: ___ kg)\nUSO ORAL\n1. Paracetamol 200 mg/mL gotas ------------------------- 1 frasco\n   Dar 1 gota por kg (10 mg/kg; máximo 35 gotas) de 6 em 6 horas se febre.\n2. Dexclorfeniramina 2 mg/5 mL xarope ----------------- 1 frasco\n   2 a 6 anos: 1,25 mL de 8 em 8 horas; 6 a 12 anos: 2,5 mL de 8 em 8 horas, se coceira (máximo 5 dias). Pode dar sono.\n3. SE GRUPO DE RISCO: Aciclovir 200 mg/5 mL suspensão (ou comprimido 200 mg/400 mg) --- ___ frascos\n   Dar 20 mg/kg por dose (máximo 800 mg) de 6 em 6 horas (4 vezes ao dia) por 5 dias.\n   Exemplo 15 kg: 300 mg = 7,5 mL por dose.\n\nUSO TÓPICO\n4. Pasta d'água ------------------------------------------ 1 frasco\n   Aplicar nas lesões 2 a 3 vezes ao dia se coceira (não usar em lesões abertas extensas).\n\nSE IMPETIGINIZAÇÃO (pus, crosta melicérica, vermelhidão ao redor)\n5. Cefalexina 250 mg/5 mL suspensão ------------------- ___ frascos\n   Criança: 50 mg/kg/dia divididos de 6 em 6 horas (máximo 500 mg/dose) por 7 dias. Adulto: cefalexina 500 mg de 6 em 6 horas por 7 dias.\n\nNÃO USAR: AAS, ibuprofeno ou outros anti-inflamatórios.\nATESTADO: afastamento até todas as lesões virarem crosta."
+    ambulatorial: "VARICELA — ADULTO\nUSO ORAL\n1. Aciclovir 400 mg ---------------------------------- 70 comprimidos\n   Tomar 2 comprimidos (800 mg) de 4 em 4 horas, 5 vezes ao dia (pular a dose da madrugada), por 7 dias.\n2. Paracetamol 500 mg --------------------------------- 20 comprimidos\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se febre ou dor (máximo 4 g por dia).\n3. Loratadina 10 mg ----------------------------------- 7 comprimidos\n   Tomar 1 comprimido 1 vez ao dia se coceira.\n\nCRIANÇA (peso: ___ kg)\nUSO ORAL\n1. Paracetamol 200 mg/mL gotas ------------------------- 1 frasco\n   Dar 1 gota por kg (10 mg/kg; máximo 35 gotas) de 6 em 6 horas se febre.\n2. Dexclorfeniramina 2 mg/5 mL xarope ----------------- 1 frasco\n   2 a 6 anos: 1,25 mL de 8 em 8 horas; 6 a 12 anos: 2,5 mL de 8 em 8 horas, se coceira (máximo 5 dias). Pode dar sono.\n3. SE GRUPO DE RISCO: Aciclovir 200 mg/5 mL suspensão (ou comprimido 200 mg/400 mg) --- ___ frascos\n   Dar 20 mg/kg por dose (máximo 800 mg por dose) de 4 em 4 horas, 5 vezes ao dia (pular a dose da madrugada), por 5 dias.\n   Exemplo 15 kg: 300 mg = 7,5 mL por dose.\n\nUSO TÓPICO\n4. Pasta d'água ------------------------------------------ 1 frasco\n   Aplicar nas lesões 2 a 3 vezes ao dia se coceira (não usar em lesões abertas extensas).\n\nSE IMPETIGINIZAÇÃO (pus, crosta melicérica, vermelhidão ao redor)\n5. Cefalexina 250 mg/5 mL suspensão ------------------- ___ frascos\n   Criança: 50 mg/kg/dia divididos de 6 em 6 horas (máximo 500 mg/dose) por 7 dias. Adulto: cefalexina 500 mg de 6 em 6 horas por 7 dias.\n\nNÃO USAR: AAS, ibuprofeno ou outros anti-inflamatórios.\nATESTADO: afastamento até todas as lesões virarem crosta."
   },
   orientacoesRetorno: [
     "Manter em casa até todas as bolhas virarem casquinha (em geral 5 a 7 dias)",
@@ -108,10 +108,11 @@ registrarFicha({
     "Pré-natal: gestante com varicela ou contato suscetível"
   ],
   fontes: [
-    "Ministério da Saúde — Guia de Vigilância em Saúde, 6ª edição revisada (2024): Varicela e herpes-zóster",
+    "Ministério da Saúde — Guia de Vigilância em Saúde, 6ª edição revisada (2024): Varicela e herpes-zóster (aciclovir 20 mg/kg/dose 5×/dia por 5 dias na criança; 800 mg 5×/dia por 7 dias no adulto; 10–15 mg/kg IV 8/8 h ≥ 7 dias no imunocomprometido)",
+    "Ministério da Saúde — página Herpes/varicela: tratamento com aciclovir (2026)",
     "Ministério da Saúde — Manual dos Centros de Referência para Imunobiológicos Especiais, 6ª ed. (2023): IGHAVZ e vacina varicela",
     "American Academy of Pediatrics — Red Book 2024–2027: Varicella-Zoster Virus Infections"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

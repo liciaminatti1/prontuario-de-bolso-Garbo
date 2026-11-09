@@ -15,7 +15,7 @@ registrarFicha({
   alarmes: [
     "Lesão inalatória: queimadura em ambiente fechado, face queimada, vibrissas chamuscadas, escarro carbonáceo, rouquidão, estridor, dispneia",
     "Queimadura circunferencial de tórax (restringe ventilação) ou membro (síndrome compartimental): escarotomia",
-    "SCQ ≥ 20% no adulto ou ≥ 10% na criança (2º e 3º graus)",
+    "Grande queimado (MS; corte de idade 12 anos): 2º grau > 20% SCQ em > 12 anos ou > 15% em < 12 anos; 3º grau > 10% em > 12 anos ou > 5% em < 12 anos",
     "Queimadura elétrica de alta voltagem: arritmia, rabdomiólise, lesão profunda maior que a visível",
     "Intoxicação por monóxido de carbono (cefaleia, confusão, SpO₂ falsamente normal) ou cianeto (acidose lática grave, choque)",
     "Padrão suspeito de maus-tratos: queimadura em luva/meia, bordas nítidas, nádegas/períneo, história incompatível",
@@ -267,17 +267,17 @@ registrarFicha({
       linhas: [
         ["2º grau", "> 20% SCQ", "> 15% SCQ"],
         ["3º grau", "> 10% SCQ", "> 5% SCQ"],
-        ["Outros", "Elétrica, períneo, inalação, politrauma, comorbidade grave; 3º grau em mãos, pés, face, pescoço ou axila", "Mesmos critérios"]
+        ["Outros (qualquer idade)", "Queimadura elétrica, inalatória ou química; queimadura de face, mão, pé, genitália, períneo ou pescoço; politrauma; doença grave prévia", "Mesmos critérios"]
       ],
-      nota: "Valores reproduzidos de materiais de ensino baseados na Cartilha do MS e na Portaria de assistência ao queimado; conferir com o documento oficial e com a regulação local."
+      nota: "O corte de idade é 12 anos (não 'criança/adulto'). Critérios conferidos no material do Ministério da Saúde reproduzido em várias fontes (revisão 09/11/2026); seguir também a regulação local. O limiar para iniciar hidratação venosa na criança (≥ 10–15% SCQ) ainda está pendente de conferência."
     }
   ],
   fontes: [
     "American College of Surgeons — ATLS: Advanced Trauma Life Support, 11ª ed. (2025), capítulo de lesões térmicas",
     "American Burn Association — Guidelines for Burn Patient Referral (2022) e diretrizes de ressuscitação volêmica",
-    "Ministério da Saúde — Cartilha para tratamento de emergência das queimaduras (2012)",
+    "Ministério da Saúde — Cartilha para tratamento de emergência das queimaduras (2012): critérios de grande queimado com corte de idade de 12 anos",
     "International Society for Burn Injuries — ISBI Practice Guidelines for Burn Care (2016; parte 2, 2018)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

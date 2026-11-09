@@ -167,8 +167,8 @@ registrarFicha({
       intervalo: "Dose única",
       duracao: "—",
       monitorizacao: "Depressão respiratória e hipotensão (preparar via aérea)",
-      contraindicacoes: "—",
-      ajustes: "Conferir a concentração da ampola disponível antes de calcular o volume. Diluir em 100 mL SF. Usar se outras opções indisponíveis; 2ª linha usual no recém-nascido"
+      contraindicacoes: "Alerta da bula (Fenocris®, Cristália): contraindicado em crianças do sexo feminino, mulheres com potencial de engravidar e gestantes, salvo necessidade clara",
+      ajustes: "Conferir a concentração da ampola disponível antes de calcular o volume (Fenocris® 100 mg/mL, ampola 2 mL, IM/IV). Diluir em 100 mL SF. Usar se outras opções indisponíveis; 2ª linha usual no recém-nascido"
     },
     {
       droga: "Estado de mal refratário: midazolam contínuo",
@@ -207,7 +207,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "PRESCRIÇÃO — SALA DE EMERGÊNCIA (ESTADO DE MAL, ADULTO 70 kg)\n1. Decúbito lateral, aspiração, O₂ por máscara 10 L/min, monitor e oximetria.\n2. Glicemia capilar agora. Se < 60 mg/dL: tiamina 100 mg IV + glicose 50% 50 mL IV.\n3. 0–5 min de crise: diazepam 10 mg (2 mL) IV sem diluir em 2 min. Sem acesso: midazolam 10 mg (2 mL) IM no vasto lateral.\n4. Persistindo após 5 min: repetir diazepam 10 mg IV (máx 2 doses).\n5. Persistindo (≈ 20 min): levetiracetam 4.200 mg (60 mg/kg; 42 mL de 100 mg/mL) + SF 0,9% 100 mL IV em 15 min.\n   OU fenitoína 1.400 mg (20 mg/kg; 28 mL de 50 mg/mL) + SF 0,9% 250 mL IV a ≤ 50 mg/min (≥ 30 min), com monitor cardíaco e PA.\n6. Persistindo após 2ª linha: chamar UTI, IOT e midazolam 0,2 mg/kg IV em bolus, depois midazolam 1 mg/mL IV em bomba a 0,05–2 mg/kg/h (70 kg: 3,5–140 mL/h), titular; EEG.\n7. Manutenção após controle: fenitoína 100 mg IV de 8 em 8 horas (em 50 mL de SF) OU levetiracetam 1.000 mg + SF 100 mL IV de 12 em 12 horas.\n8. Suspeita de eclâmpsia: sulfato de magnésio 4 g IV em 20 min (ataque), depois 1 g/h.\n9. Dipirona 1 g IV se febre.\n10. Cuidados: grades elevadas, cabeceira 30°, avaliação neurológica a cada 15–30 min, glicemia capilar de 4 em 4 horas.\n\nCRIANÇA (por kg)\n- Diazepam 0,15–0,2 mg/kg IV (máx 10 mg) ou 0,5 mg/kg retal (máx 20 mg); midazolam 0,2 mg/kg IN/bucal (máx 10 mg) ou IM 5 mg (13–40 kg).\n- Levetiracetam 60 mg/kg IV (máx 4.500 mg) em 15 min, ou fenitoína 20 mg/kg IV a ≤ 1 mg/kg/min (máx 1.500 mg), ou fenobarbital 20 mg/kg IV (máx 1.000 mg).\n- Hipoglicemia: SG 10% 5 mL/kg IV."
+    hospitalar: "PRESCRIÇÃO — SALA DE EMERGÊNCIA (ESTADO DE MAL, ADULTO 70 kg)\n1. Decúbito lateral, aspiração, O₂ por máscara 10 L/min, monitor e oximetria.\n2. Glicemia capilar agora. Se < 60 mg/dL: tiamina 100 mg IV + glicose 50% 50 mL IV.\n3. 0–5 min de crise: diazepam 10 mg (2 mL) IV sem diluir em 2 min. Sem acesso: midazolam 10 mg (2 mL) IM no vasto lateral.\n4. Persistindo após 5 min: repetir diazepam 10 mg IV (máx 2 doses).\n5. Persistindo (≈ 20 min): levetiracetam 4.200 mg (60 mg/kg; 42 mL de 100 mg/mL) + SF 0,9% 100 mL IV em 15 min.\n   OU fenitoína 1.400 mg (20 mg/kg; 28 mL de 50 mg/mL) + SF 0,9% 250 mL IV a ≤ 50 mg/min (≥ 30 min), com monitor cardíaco e PA.\n6. Persistindo após 2ª linha: chamar UTI, IOT e midazolam 0,2 mg/kg IV em bolus, depois midazolam 1 mg/mL IV em bomba a 0,05–2 mg/kg/h (70 kg: 3,5–140 mL/h), titular; EEG.\n7. Manutenção após controle: fenitoína 100 mg IV de 8 em 8 horas (em 50 mL de SF) OU levetiracetam 1.000 mg + SF 100 mL IV de 12 em 12 horas.\n8. Suspeita de eclâmpsia: sulfato de magnésio 4 g IV em 20 min (ataque), depois 1 g/h.\n9. Dipirona 1 g IV se febre.\n10. Cuidados: grades elevadas, cabeceira 30°, avaliação neurológica a cada 15–30 min, glicemia capilar de 4 em 4 horas.\n\nCRIANÇA (por kg)\n- Diazepam 0,15–0,2 mg/kg IV (máx 10 mg) ou 0,5 mg/kg retal (máx 20 mg); midazolam 0,2 mg/kg IN/bucal (máx 10 mg) ou IM 5 mg (13–40 kg).\n- Levetiracetam 60 mg/kg IV (máx 4.500 mg) em 15 min, ou fenitoína 20 mg/kg IV a ≤ 1 mg/kg/min (máx 1.500 mg), ou fenobarbital 20 mg/kg IV (máx 1.000 mg).\n- Hipoglicemia: SG 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg) IV."
   },
   orientacoesRetorno: [
     "Durante uma crise: deitar de lado, afastar objetos, não colocar nada na boca, marcar o tempo",
@@ -223,8 +223,9 @@ registrarFicha({
     "ESETT trial (N Engl J Med 2019; Lancet 2020 — análise pediátrica) — levetiracetam, fosfenitoína e valproato",
     "RAMPART (N Engl J Med 2012) — midazolam IM",
     "Ministério da Saúde — PCDT Epilepsia (Portaria Conjunta nº 17/2018; atualização aprovada pela Conitec em 2025 aguardando publicação)",
-    "AHA — PALS (2025) para hipoglicemia pediátrica"
+    "AHA — PALS (2025) para hipoglicemia pediátrica",
+    "Cristália — Bula do Fenocris® (fenobarbital sódico 100 mg/mL, injetável): alerta de contraindicação em meninas, mulheres com potencial de engravidar e gestantes"
   ],
-  revisao: "2026-10-21",
-  versao: "1.2"
+  revisao: "2026-11-09",
+  versao: "1.3"
 });

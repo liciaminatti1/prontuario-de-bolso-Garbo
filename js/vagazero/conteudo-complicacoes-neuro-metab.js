@@ -347,7 +347,7 @@ VZ_COMPLICACOES.push(
   ],
   medicamentos: [
     { farmaco: "glicose", nome: "Glicose hipertônica", indicacao: "hipoglicemia sintomática ou sem via oral",
-      adulto: "10–25 g IV: 20–50 mL de glicose 50%", pediatrico: "0,2–0,5 g/kg IV: 2–5 mL/kg de glicose 10%, máx 25 g",
+      adulto: "10–25 g IV: 20–50 mL de glicose 50%", pediatrico: "0,5–1 g/kg IV: 5–10 mL/kg de glicose 10%, máx 25 g (PALS)",
       neonatal: "200 mg/kg IV: 2 mL/kg de glicose 10%, seguido de infusão contínua de glicose (TIG 6–8 mg/kg/min)",
       diluicao: "Adulto: G50% (ampola 10 mL = 5 g) pura em veia calibrosa ou diluída. Criança/neonato: G10% (diluir G50% 1:4 com AD se não houver G10%); neonato não usar > 12,5% em veia periférica",
       via: "IV ou IO", velocidade: "Adulto: em 1–3 min. Neonato: em 1 min (minibolus)", repeticao: "Glicemia em 15 min; repetir se < 70 mg/dL (neonato conforme protocolo)" },
@@ -359,7 +359,7 @@ VZ_COMPLICACOES.push(
   procedimentos: ["Glicemia capilar", "Acesso venoso ou intraósseo", "Bomba de infusão para soro glicosado"],
   parar: ["Hipoglicemia recorrente sem resposta: parada segura e reavaliação", "Sem glicose a bordo e sem acesso: desviar para o serviço mais próximo", "Convulsão: ver Crise convulsiva"],
   contingencia: { se: "Se a glicemia ficar abaixo de 70 mg/dL (neonato < 45)", faca: ["Suspender insulina", "Glicose IV (adulto 10–25 g; criança 0,2–0,5 g/kg; neonato 2 mL/kg de G10%)", "Sem acesso: glucagon IM", "Repetir glicemia em 15 min", "Manter aporte contínuo"] },
-  fontes: ["ADA — Standards of Care in Diabetes, seção 6: Glycemic goals and hypoglycemia (2025)", "ISPAD Clinical Practice Consensus Guidelines 2022 — Hypoglycemia (Abraham et al.)", "Ministério da Saúde — Atenção à Saúde do Recém-Nascido, vol. 3 (2ª ed., 2014)", "Sociedade Brasileira de Diabetes — Diretriz SBD (2024)", "Bula ANVISA — glucagon"]
+  fontes: ["ADA — Standards of Care in Diabetes, seção 6: Glycemic goals and hypoglycemia (2025)", "ISPAD Clinical Practice Consensus Guidelines 2022 — Hypoglycemia (Abraham et al.)", "Ministério da Saúde — Atenção à Saúde do Recém-Nascido, vol. 3 (2ª ed., 2014)", "Sociedade Brasileira de Diabetes — Diretriz SBD (2024)", "AHA/AAP — PALS 2025: glicose na hipoglicemia 0,5–1 g/kg (SG 10% 5–10 mL/kg); RN: SG 10% 2 mL/kg", "Bula ANVISA — glucagon"]
 },
 {
   id: "hiperglicemia",

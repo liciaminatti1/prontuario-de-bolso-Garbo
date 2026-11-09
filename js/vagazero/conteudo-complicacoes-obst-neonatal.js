@@ -202,11 +202,11 @@ VZ_COMPLICACOES.push(
     medicamentos: [
       {
         farmaco: "hidralazina", nome: "Hidralazina (ampola 20 mg/mL)", indicacao: "PA ≥ 160 x 110 mmHg",
-        adulto: "5 mg IV a cada 20 min; dose máxima 30 mg",
+        adulto: "5 mg IV a cada 20 min; se sem resposta com 30 mg, considerar outro fármaco (alguns protocolos até 45 mg)",
         pediatrico: "", neonatal: "",
         diluicao: "1 ampola (20 mg) + 19 mL de água destilada = 1 mg/mL; dar 5 mL",
         via: "IV", velocidade: "Bolus lento em 1–2 min",
-        repeticao: "A cada 20 min até a meta, máx. 30 mg; se não atingir, trocar de fármaco"
+        repeticao: "A cada 20 min até a meta; se sem resposta com 30 mg, considerar outro fármaco (alguns protocolos até 45 mg)"
       },
       {
         farmaco: null, nome: "Nifedipino de liberação imediata (comprimido 10 mg)", indicacao: "PA ≥ 160 x 110 mmHg, alternativa à hidralazina (não está na biblioteca de fármacos)",
@@ -234,7 +234,7 @@ VZ_COMPLICACOES.push(
     ],
     contingencia: {
       se: "Se a PA continuar ≥ 160 x 110 mmHg 20 min após a primeira dose",
-      faca: ["Repetir hidralazina 5 mg IV (máx. 30 mg)", "Ou nifedipino 10 mg VO (máx. 30 mg)", "Garantir sulfato de magnésio", "Avisar regulação e o destino"]
+      faca: ["Repetir hidralazina 5 mg IV (sem resposta com 30 mg: considerar outro fármaco; alguns protocolos até 45 mg)", "Ou nifedipino 10 mg VO (máx. 30 mg)", "Garantir sulfato de magnésio", "Avisar regulação e o destino"]
     },
     fontes: [
       "Ministério da Saúde — Manual de Gestação de Alto Risco (2022)",

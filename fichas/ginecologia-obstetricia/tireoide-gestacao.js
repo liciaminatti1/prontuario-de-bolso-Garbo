@@ -9,8 +9,8 @@ registrarFicha({
   resumo: "Ajuste da levotiroxina na gestante já tratada, conduta no TSH alterado no pré-natal, tireotoxicose gestacional transitória x doença de Graves (PTU no 1º trimestre, metimazol depois) e tireoidite pós-parto.",
   palavrasChave: "tireoide gestacao hipotireoidismo subclinico tsh t4 livre anti tpo levotiroxina hipertireoidismo graves trab propiltiouracil ptu metimazol tiamazol hiperemese tireotoxicose gestacional tireoidite pos parto",
   critico: {
-    tempo: "Gestante em LT4: +25–30% já",
-    texto: "Gestante que já usa levotiroxina: aumentar a dose em 25–30% (ex.: 2 comprimidos extras por semana) assim que confirmar a gravidez e dosar TSH em 4 semanas."
+    tempo: "Gestante em LT4: +20–30% já",
+    texto: "Gestante que já usa levotiroxina: aumentar a dose em 20–30% (ex.: 2 comprimidos extras por semana) assim que confirmar a gravidez e dosar TSH em 4 semanas."
   },
   alarmes: [
     "Taquicardia > 120, febre, agitação, vômitos, confusão (crise tireotóxica)",
@@ -22,11 +22,13 @@ registrarFicha({
     "Não há rastreio universal de TSH no SUS; dosar TSH em gestante com sintomas, história de doença tireoidiana, anti-TPO positivo conhecido, DM1, outras autoimunes, irradiação de pescoço, abortos de repetição, infertilidade ou bócio",
     "Referência de TSH: usar faixa por trimestre do laboratório; sem ela, limite superior de ~4,0 mU/L (ATA)",
     "Hipotireoidismo clínico (TSH elevado com T4 livre baixo, ou TSH ≥ 10): levotiroxina ~1,6–2 mcg/kg/dia, TSH a cada 4 semanas até a metade da gestação e depois 1 vez por trimestre",
-    "Hipotireoidismo subclínico (TSH acima da referência, T4 livre normal): pedir anti-TPO; considerar levotiroxina 25–50 mcg/dia sobretudo com anti-TPO positivo, conforme especialista; gestante eutireoidiana com anti-TPO positivo não precisa de levotiroxina (ver ficha Hipotireoidismo)",
-    "Meta: TSH na metade inferior da faixa de referência do trimestre (em geral < 2,5)",
+    "Hipotireoidismo subclínico (TSH acima da referência, T4 livre normal) — ATA 2026: o anti-TPO deixa de guiar o tratamento; levotiroxina 25–50 mcg/dia só se diagnosticado no 1º trimestre e confirmado em exame repetido; não tratar se diagnosticado depois do 1º trimestre",
+    "Gestante eutireoidiana com anti-TPO positivo: não tratar com levotiroxina (ATA 2026; ver ficha Hipotireoidismo)",
+    "Meta: TSH < 2,5 (ATA 2026)",
+    "Iodo: ingestão de 250 mcg/dia na gestação (ATA 2026)",
     "Pós-parto: voltar à dose pré-gestacional (ou suspender se iniciada só na gestação com dose baixa) e dosar TSH em 6 semanas",
     "TSH suprimido no 1º trimestre: diferenciar tireotoxicose gestacional transitória (hiperêmese, sem bócio/oftalmopatia, TRAb negativo — não usar antitireoidiano; betabloqueador se sintomas) de Graves (TRAb positivo)",
-    "Graves: PTU no 1º trimestre; após 16 semanas, trocar por metimazol. Menor dose que mantenha T4 livre no limite superior do normal",
+    "Graves: em uso de antitireoidiano e com baixo risco de recidiva, considerar suspender ao confirmar a gestação no 1º trimestre (ATA 2026), com T4 livre seriado. Se mantiver: PTU no 1º trimestre; após 16 semanas, trocar por metimazol. Menor dose que mantenha T4 livre no limite superior do normal",
     "Graves (atual ou tratado com iodo/cirurgia): TRAb no início e com 18–22 semanas; TRAb > 3× o normal → vigilância fetal (FC e bócio fetal) no PNAR",
     "Tireoidite pós-parto (1–6 meses): fase tireotóxica só betabloqueador; fase hipotireoidea tratar se sintomas ou desejo de gestar"
   ],
@@ -37,7 +39,7 @@ registrarFicha({
     "Rever valores com o trimestre (T4 total sobe ~1,5× no 2º/3º trimestre)"
   ],
   tratamento: [
-    { droga: "Levotiroxina", linha: "l1", dose: "Clínico: 1,6–2 mcg/kg/dia; subclínico: 25–50 mcg/dia; já em uso: +25–30%", via: "VO", intervalo: "1×/dia em jejum (30–60 min antes do café)", duracao: "Gestação; reavaliar no pós-parto", monitorizacao: "TSH a cada 4 semanas até 20 semanas, depois por trimestre", contraindicacoes: "—", ajustes: "Separar 4 h de ferro e cálcio" },
+    { droga: "Levotiroxina", linha: "l1", dose: "Clínico: 1,6–2 mcg/kg/dia; subclínico (só se diagnosticado no 1º trimestre): 25–50 mcg/dia; já em uso: +20–30%", via: "VO", intervalo: "1×/dia em jejum (30–60 min antes do café)", duracao: "Gestação; reavaliar no pós-parto", monitorizacao: "TSH a cada 4 semanas até 20 semanas, depois por trimestre", contraindicacoes: "—", ajustes: "Separar 4 h de ferro e cálcio" },
     { droga: "Propiltiouracil (PTU) 100 mg", linha: "l1", dose: "50–150 mg (conforme T4 livre)", via: "VO", intervalo: "8/8 h", duracao: "1º trimestre; trocar para metimazol após", monitorizacao: "T4 livre 2–4 semanas; TGO/TGP", contraindicacoes: "Hepatotoxicidade prévia", ajustes: "Hepatotoxicidade grave: preferir só no 1º trimestre" },
     { droga: "Metimazol (tiamazol)", linha: "l1", dose: "5–15 mg/dia (conforme T4 livre)", via: "VO", intervalo: "1×/dia", duracao: "2º e 3º trimestres", monitorizacao: "T4 livre 2–4 semanas; hemograma se febre/dor de garganta", contraindicacoes: "1º trimestre (embriopatia: aplasia cútis, atresia de coanas/esôfago)", ajustes: "Conversão aproximada PTU:metimazol 20:1. Compatível com amamentação (até 20–30 mg/dia)" },
     { droga: "Propranolol", linha: "adj", dose: "10–40 mg", via: "VO", intervalo: "6/6 a 8/8 h", duracao: "Poucas semanas, até controle", monitorizacao: "FC", contraindicacoes: "Asma", ajustes: "Uso prolongado associado a RCF" }
@@ -56,11 +58,12 @@ registrarFicha({
     "PS: suspeita de crise tireotóxica"
   ],
   fontes: [
-    "American Thyroid Association — Guidelines for the Diagnosis and Management of Thyroid Disease During Pregnancy and the Postpartum (2017; atualização 2026)",
+    "American Thyroid Association — 2026 Guidelines for Thyroid Disease in Preconception, Pregnancy, and the Postpartum (Korevaar et al., Thyroid, 31/05/2026)",
+    "American Thyroid Association — Guidelines for the Diagnosis and Management of Thyroid Disease During Pregnancy and the Postpartum (2017)",
     "Ministério da Saúde — Manual de Gestação de Alto Risco (2022)",
     "FEBRASGO — Protocolo: Doenças da tireoide na gestação (2021)",
     "Sociedade Brasileira de Endocrinologia e Metabologia — Consenso sobre hipotireoidismo e hipertireoidismo na gestação (2013/2018)"
   ],
-  revisao: "2026-10-24",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

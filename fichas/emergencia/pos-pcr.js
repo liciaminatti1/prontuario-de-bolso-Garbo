@@ -199,7 +199,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "PÓS-PCR — ADULTO (peso: ___ kg)\n1. Dieta zero; sonda orogástrica aberta.\n2. Cabeceira 30°; monitor, oximetria, capnografia, pressão arterial invasiva se disponível; sonda vesical com diurese horária.\n3. Ventilação mecânica: VC 6–8 mL/kg de peso predito, PEEP 5–8 cmH₂O, FR para PaCO₂ 35–45 mmHg; FiO₂ para SpO₂ 90–98% (AHA 2025; ERC/ESICM 2025 preferem 94–98%), evitando SpO₂ 100%.\n4. Noradrenalina 4 mg/4 mL — 4 ampolas (16 mg) + SG 5% 234 mL (64 mcg/mL) IV em bomba, iniciar 0,05 mcg/kg/min (70 kg ≈ 3,3 mL/h) e titular para PAM ≥ 65 mmHg.\n5. SF 0,9% 250–500 mL IV em 15–30 min se sinais de hipovolemia; reavaliar.\n6. Sedação e analgesia contínuas (ver ficha sedacao-continua): fentanil 1–2 mcg/kg/h + propofol ou midazolam; meta conforme controle de temperatura.\n7. Controle de temperatura: manter 32–37,5 °C com manta/compressas; não deixar passar de 37,5 °C. Paracetamol 750 mg via sonda de 6/6 h se temperatura > 37,5 °C.\n8. Glicemia capilar de 2/2 h; insulina regular SC conforme protocolo se > 180 mg/dL; evitar < 80 mg/dL.\n9. Omeprazol 40 mg IV 1×/dia.\n10. Enoxaparina 40 mg SC 1×/dia (se sem sangramento e sem cateterismo/trombólise em curso).\n11. Controles: ECG de 12 derivações agora e após 6–12 h; gasometria arterial em 1 h; eletrólitos, lactato, troponina de 6/6 h; Glasgow e pupilas de 2/2 h (sem sedação, quando possível).\n\nCRIANÇA (peso: ___ kg)\n- FiO₂ para SpO₂ 94–99%; PaCO₂ 35–45 mmHg.\n- PAS/PAM acima do percentil 10 para a idade: cristaloide 10–20 mL/kg e vasopressor (adrenalina ou noradrenalina 0,05–1 mcg/kg/min) se persistir.\n- Prevenir febre: temperatura ≤ 37,5 °C; paracetamol 15 mg/kg (máx 1 g) de 6/6 h.\n- Glicemia de 2/2 h; tratar hipoglicemia com glicose 10% 2–5 mL/kg."
+    hospitalar: "PÓS-PCR — ADULTO (peso: ___ kg)\n1. Dieta zero; sonda orogástrica aberta.\n2. Cabeceira 30°; monitor, oximetria, capnografia, pressão arterial invasiva se disponível; sonda vesical com diurese horária.\n3. Ventilação mecânica: VC 6–8 mL/kg de peso predito, PEEP 5–8 cmH₂O, FR para PaCO₂ 35–45 mmHg; FiO₂ para SpO₂ 90–98% (AHA 2025; ERC/ESICM 2025 preferem 94–98%), evitando SpO₂ 100%.\n4. Noradrenalina 4 mg/4 mL — 4 ampolas (16 mg) + SG 5% 234 mL (64 mcg/mL) IV em bomba, iniciar 0,05 mcg/kg/min (70 kg ≈ 3,3 mL/h) e titular para PAM ≥ 65 mmHg.\n5. SF 0,9% 250–500 mL IV em 15–30 min se sinais de hipovolemia; reavaliar.\n6. Sedação e analgesia contínuas (ver ficha sedacao-continua): fentanil 1–2 mcg/kg/h + propofol ou midazolam; meta conforme controle de temperatura.\n7. Controle de temperatura: manter 32–37,5 °C com manta/compressas; não deixar passar de 37,5 °C. Paracetamol 750 mg via sonda de 6/6 h se temperatura > 37,5 °C.\n8. Glicemia capilar de 2/2 h; insulina regular SC conforme protocolo se > 180 mg/dL; evitar < 80 mg/dL.\n9. Omeprazol 40 mg IV 1×/dia.\n10. Enoxaparina 40 mg SC 1×/dia (se sem sangramento e sem cateterismo/trombólise em curso).\n11. Controles: ECG de 12 derivações agora e após 6–12 h; gasometria arterial em 1 h; eletrólitos, lactato, troponina de 6/6 h; Glasgow e pupilas de 2/2 h (sem sedação, quando possível).\n\nCRIANÇA (peso: ___ kg)\n- FiO₂ para SpO₂ 94–99%; PaCO₂ 35–45 mmHg.\n- PAS/PAM acima do percentil 10 para a idade: cristaloide 10–20 mL/kg e vasopressor (adrenalina ou noradrenalina 0,05–1 mcg/kg/min) se persistir.\n- Prevenir febre: temperatura ≤ 37,5 °C; paracetamol 15 mg/kg (máx 1 g) de 6/6 h.\n- Glicemia de 2/2 h; tratar hipoglicemia com glicose 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg)."
   },
   orientacoesRetorno: [
     "Família: explicar que o prognóstico neurológico só é definido após vários dias, com exames combinados",
@@ -222,11 +222,12 @@ registrarFicha({
     }
   ],
   fontes: [
+    "AHA/AAP — PALS 2025: glicose na hipoglicemia 0,5–1 g/kg (SG 10% 5–10 mL/kg); RN: SG 10% 2 mL/kg",
     "American Heart Association — 2025 Guidelines for CPR and ECC, Part 11: Post-Cardiac Arrest Care (Circulation, 2025)",
     "American Heart Association / AAP — 2025 Guidelines, Part 8: Pediatric Advanced Life Support — cuidados pós-PCR (2025)",
     "European Resuscitation Council / ESICM — Guidelines 2025: Post-resuscitation care (Resuscitation, 2025)",
     "Sociedade Brasileira de Cardiologia — Atualização da Diretriz de RCP e Cuidados de Emergência (2019), para contexto nacional"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

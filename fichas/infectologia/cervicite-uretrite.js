@@ -37,7 +37,7 @@ registrarFicha({
     "Orquiepididimite / torção testicular (dor testicular aguda)",
     "HIV e sífilis concomitantes"
   ],
-  proximaDecisao: "Persistência ou recorrência após 7 dias: rever adesão e reexposição (parceria não tratada). Se aderiu e sem reexposição, tratar Mycoplasma genitalium e Trichomonas (moxifloxacino 7 dias + metronidazol 2 g) e colher cultura com antibiograma para gonococo se possível.",
+  proximaDecisao: "Persistência ou recorrência após 7 dias: rever adesão e reexposição (parceria não tratada). Se aderiu e sem reexposição, tratar Mycoplasma genitalium em 2 etapas (doxiciclina 100 mg 12/12 h 7 dias, depois moxifloxacino 400 mg/dia 7 dias — CDC 2021) e Trichomonas (metronidazol 2 g) e colher cultura com antibiograma para gonococo se possível.",
   clinica: {
     anamnese: [
       "Corrimento uretral (purulento: gonococo; mucoide escasso: clamídia/Mycoplasma), disúria, prurido",
@@ -115,7 +115,7 @@ registrarFicha({
     { droga: "Ceftriaxona", linha: "l1", dose: "500 mg", via: "IM", intervalo: "Dose única", duracao: "—", monitorizacao: "Observar 30 min (alergia)", contraindicacoes: "Anafilaxia a cefalosporinas", ajustes: "Diluir em lidocaína 1% sem vasoconstritor (2 mL para 500 mg IM; usar o diluente do kit IM). Gestação: pode usar. Peso ≥ 150 kg: 1 g (CDC). Gonococcia disseminada: 1 g IV/IM 24/24 h (internar)" },
     { droga: "Azitromicina", linha: "l1", dose: "1 g (2 comprimidos de 500 mg)", via: "VO", intervalo: "Dose única", duracao: "—", monitorizacao: "Náusea, diarreia; QT longo", contraindicacoes: "Alergia a macrolídeos", ajustes: "Associada à ceftriaxona (PCDT: terapia dupla). Gestação: escolha para clamídia" },
     { droga: "Doxiciclina (clamídia)", linha: "alt", dose: "100 mg", via: "VO", intervalo: "12/12 h", duracao: "7 dias (proctite por clamídia/LGV: 21 dias)", monitorizacao: "Esofagite: tomar com água, sentada", contraindicacoes: "Gestação, < 8 anos", ajustes: "Mais eficaz que azitromicina na clamídia retal (CDC 2021 prefere doxiciclina). Substitui a azitromicina no esquema com ceftriaxona fora da gestação" },
-    { droga: "Moxifloxacino (Mycoplasma genitalium persistente)", linha: "alt", dose: "400 mg", via: "VO", intervalo: "1 vez ao dia", duracao: "7 dias", monitorizacao: "QT, tendinite, disglicemia", contraindicacoes: "Gestação, QT longo, miastenia", ajustes: "Uretrite/cervicite persistente após azitromicina com boa adesão e sem reexposição" },
+    { droga: "Moxifloxacino (Mycoplasma genitalium — 2ª etapa)", linha: "alt", dose: "400 mg", via: "VO", intervalo: "1 vez ao dia", duracao: "7 dias, logo após 7 dias de doxiciclina 100 mg 12/12 h", monitorizacao: "QT, tendinite, disglicemia", contraindicacoes: "Gestação, QT longo, miastenia", ajustes: "CDC 2021: esquema em 2 etapas quando a resistência a macrolídeo é desconhecida ou presente. Se sensível a macrolídeo: doxiciclina 7 dias e depois azitromicina 1 g no 1º dia + 500 mg/dia por 3 dias (total 2,5 g). Azitromicina 1 g dose única não deve ser usada para M. genitalium (falhas de 16–60%)" },
     { droga: "Metronidazol (Trichomonas na uretrite persistente)", linha: "adj", dose: "2 g (5 comprimidos de 400 mg ou 8 de 250 mg)", via: "VO", intervalo: "Dose única", duracao: "—", monitorizacao: "—", contraindicacoes: "Álcool por 24 h", ajustes: "Associar ao moxifloxacino na persistência" },
     { droga: "Ciprofloxacino ou penicilina para gonorreia", linha: "ci", dose: "—", via: "—", intervalo: "—", duracao: "—", monitorizacao: "—", contraindicacoes: "Alta resistência do gonococo no Brasil (Projeto SenGono)", ajustes: "Não usar" }
   ],
@@ -145,10 +145,10 @@ registrarFicha({
       linhas: [
         ["Gonococo + clamídia (ou sem Gram)", "Ceftriaxona 500 mg IM + azitromicina 1 g VO, dose única", "Fora da gestação: ceftriaxona + doxiciclina 100 mg 12/12 h 7 dias"],
         ["Só clamídia", "Azitromicina 1 g VO dose única", "Doxiciclina 100 mg 12/12 h 7 dias"],
-        ["Mycoplasma genitalium", "Azitromicina 1 g VO dose única", "Moxifloxacino 400 mg/dia 7 dias"],
+        ["Mycoplasma genitalium", "2 etapas: doxiciclina 100 mg 12/12 h 7 dias, depois moxifloxacino 400 mg/dia 7 dias (resistência a macrolídeo desconhecida ou presente)", "Se sensível a macrolídeo: doxiciclina 7 dias, depois azitromicina 1 g + 500 mg/dia por 3 dias (total 2,5 g)"],
         ["Trichomonas", "Metronidazol 2 g VO dose única", "Metronidazol 500 mg 12/12 h 7 dias"]
       ],
-      nota: "CDC 2021: para M. genitalium, doxiciclina 7 dias seguida de moxifloxacino 400 mg 7 dias (ou azitromicina 4 dias se teste de resistência a macrolídeo negativo). Resistência a macrolídeos crescente no Brasil."
+      nota: "M. genitalium: esquema em 2 etapas do CDC 2021. Azitromicina 1 g em dose única foi abandonada para M. genitalium (falhas de 16–60%; diretrizes canadense e britânica). Resistência a macrolídeos crescente no Brasil. O texto do PCDT 2022 sobre M. genitalium não foi conferido nesta revisão."
     },
     {
       titulo: "Falha ou resistência ao antibiótico",
@@ -164,10 +164,10 @@ registrarFicha({
   ],
   fontes: [
     "Ministério da Saúde — PCDT para Atenção Integral às Pessoas com IST (2022); capítulo Infecções que causam corrimento uretral (Epidemiol Serv Saúde, 2021)",
-    "CDC — Sexually Transmitted Infections Treatment Guidelines (2021)",
+    "CDC — Sexually Transmitted Infections Treatment Guidelines (2021); Mycoplasma genitalium: esquema em 2 etapas (doxiciclina → moxifloxacino ou azitromicina 2,5 g)",
     "OMS — Recommendations for the treatment of Neisseria gonorrhoeae, Chlamydia trachomatis and Treponema pallidum (2024)",
     "European guideline on the management of Mycoplasma genitalium infections (IUSTI, 2021)"
   ],
-  revisao: "2026-10-25",
-  versao: "1.1"
+  revisao: "2026-11-09",
+  versao: "1.2"
 });

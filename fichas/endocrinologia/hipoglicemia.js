@@ -21,7 +21,7 @@ registrarFicha({
   condutaInicial: [
     "Glicemia capilar",
     "Consciente e deglutindo: 15–20 g de glicose VO (1 colher de sopa de açúcar em água, 150 mL de suco)",
-    "Não deglute: glicose 50% 30–50 mL IV (adulto) · criança glicose 10% 2–5 mL/kg IV · ou glucagon IM/SC (1 mg; 0,5 mg se < 25 kg)",
+    "Não deglute: glicose 50% 30–50 mL IV (adulto) · criança glicose 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg) IV · ou glucagon IM/SC (1 mg; 0,5 mg se < 25 kg)",
     "Etilista ou desnutrido: tiamina 100 mg IV antes ou junto com a glicose",
     "Repetir glicemia em 15 min (regra dos 15) e oferecer refeição quando acordar"
   ],
@@ -99,7 +99,7 @@ registrarFicha({
     {
       droga: "Glicose 50%",
       linha: "l1",
-      dose: "Adulto 30–50 mL (15–25 g) · criança: glicose 10% 2–5 mL/kg (0,2–0,5 g/kg), máx 25 g",
+      dose: "Adulto 30–50 mL (15–25 g) · criança: glicose 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg), máx 25 g",
       via: "IV (veia calibrosa; irritante)",
       intervalo: "Repetir conforme glicemia em 15 min",
       duracao: "—",
@@ -168,7 +168,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "ADULTO — HIPOGLICEMIA COM REBAIXAMENTO OU SEM VIA ORAL\n1. Glicemia capilar agora. Decúbito lateral se rebaixado.\n2. Glicose 50% — 40 mL (20 g) IV lento em veia calibrosa, AGORA. Repetir 20–40 mL se glicemia < 70 mg/dL em 15 min.\n3. Etilista ou desnutrido: tiamina 100 mg IV (antes ou junto com a glicose).\n4. Sem acesso venoso: glucagon 1 mg IM ou SC (reconstituir no diluente do kit). Lateralizar (vômitos).\n5. Manutenção (sulfonilureia, insulina de ação longa, recorrência): SG 10% 100–150 mL/h IV contínuo, ajustando para glicemia > 100 mg/dL.\n6. Hipoglicemia recorrente por sulfonilureia apesar de glicose: octreotida 50–100 mcg SC de 6/6 h a 8/8 h.\n7. Dieta oral assim que acordar e deglutir (carboidrato complexo).\n8. Glicemia capilar de 15/15 min até > 100 mg/dL; depois de 1/1 h a 2/2 h. Sulfonilureia: observar ≥ 24 h.\n\nCRIANÇA (por kg)\n- Glicose 10%: 2–5 mL/kg IV em bolus lento (0,2–0,5 g/kg); não usar glicose 50% em criança pequena.\n- Glucagon IM/SC: 0,5 mg se < 25 kg (ou < 6–8 anos); 1 mg se ≥ 25 kg.\n- Manutenção: SG 10% no volume de manutenção (Holliday-Segar), ajustando pela glicemia.\n- Consciente: glicose 0,3 g/kg VO (máx 15–20 g).",
+    hospitalar: "ADULTO — HIPOGLICEMIA COM REBAIXAMENTO OU SEM VIA ORAL\n1. Glicemia capilar agora. Decúbito lateral se rebaixado.\n2. Glicose 50% — 40 mL (20 g) IV lento em veia calibrosa, AGORA. Repetir 20–40 mL se glicemia < 70 mg/dL em 15 min.\n3. Etilista ou desnutrido: tiamina 100 mg IV (antes ou junto com a glicose).\n4. Sem acesso venoso: glucagon 1 mg IM ou SC (reconstituir no diluente do kit). Lateralizar (vômitos).\n5. Manutenção (sulfonilureia, insulina de ação longa, recorrência): SG 10% 100–150 mL/h IV contínuo, ajustando para glicemia > 100 mg/dL.\n6. Hipoglicemia recorrente por sulfonilureia apesar de glicose: octreotida 50–100 mcg SC de 6/6 h a 8/8 h.\n7. Dieta oral assim que acordar e deglutir (carboidrato complexo).\n8. Glicemia capilar de 15/15 min até > 100 mg/dL; depois de 1/1 h a 2/2 h. Sulfonilureia: observar ≥ 24 h.\n\nCRIANÇA (por kg)\n- Glicose 10%: 5–10 mL/kg IV em bolus lento (0,5–1 g/kg; RN: 2 mL/kg); não usar glicose 50% em criança pequena.\n- Glucagon IM/SC: 0,5 mg se < 25 kg (ou < 6–8 anos); 1 mg se ≥ 25 kg.\n- Manutenção: SG 10% no volume de manutenção (Holliday-Segar), ajustando pela glicemia.\n- Consciente: glicose 0,3 g/kg VO (máx 15–20 g).",
     ambulatorial: "ALTA — CORRIGIDA E COM CAUSA IDENTIFICADA\nORIENTAÇÕES / AJUSTES\n1. Revisar a dose de insulina ou sulfonilureia (reduzir 10–20% da dose implicada, ou suspender glibenclamida e preferir gliclazida MR/outra classe no idoso e na DRC).\n2. Ter sempre à mão 15 g de carboidrato rápido (1 colher de sopa de açúcar, 3 balas moles ou 150 mL de suco/refrigerante comum).\n3. Glicemia capilar antes das refeições e ao deitar por 1 semana; anotar.\n\nSE INSULINA E HIPOGLICEMIA GRAVE PRÉVIA (USO IM/SC — se disponível)\n4. Glucagon 1 mg (kit) --------------------------- 1 unidade\n   Familiar aplicar 1 mg (criança < 25 kg: 0,5 mg) na coxa se a pessoa não conseguir engolir ou desmaiar, e chamar o SAMU 192."
   },
   orientacoesRetorno: [
@@ -180,10 +180,11 @@ registrarFicha({
     "Retorno na UBS em poucos dias para ajustar os remédios"
   ],
   fontes: [
+    "AHA/AAP — PALS 2025: glicose na hipoglicemia 0,5–1 g/kg (SG 10% 5–10 mL/kg); RN: SG 10% 2 mL/kg",
     "ADA — Standards of Care in Diabetes 2026, seção 6 (Glycemic goals and hypoglycemia)",
     "SBD — Diretriz Oficial da Sociedade Brasileira de Diabetes: Hipoglicemia (2024–2025)",
     "ISPAD Clinical Practice Consensus Guidelines 2022: Hypoglycemia in children and adolescents"
   ],
-  revisao: "2026-10-21",
-  versao: "1.1"
+  revisao: "2026-11-09",
+  versao: "1.2"
 });

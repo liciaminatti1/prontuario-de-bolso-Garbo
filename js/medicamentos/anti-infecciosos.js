@@ -15,7 +15,7 @@ complementarMedicamentos({
       { contexto: "Criança — otite média aguda / sinusite (alta dose 80–90 mg/kg/dia)", texto: "USO ORAL\n1. Amoxicilina suspensão 400 mg/5 mL -------- 1 frasco\n   Dar ___ mL de 12 em 12 horas por 10 dias.\n   (80–90 mg/kg/dia ÷ 2; não ultrapassar a dose de adulto. Duração na OMA: < 2 anos 10 dias; 2–5 anos 7 dias; ≥ 6 anos 5–7 dias.)" },
       { contexto: "Criança — faringite / pneumonia (50 mg/kg/dia)", texto: "USO ORAL\n1. Amoxicilina suspensão 250 mg/5 mL -------- 2 frascos\n   Dar ___ mL de 8 em 8 horas por 10 dias (faringite) ou 7 dias (pneumonia).\n   (50 mg/kg/dia ÷ 3; máximo 500 mg por dose. Faringite: alternativa 50 mg/kg 1×/dia, máx 1 g.)" },
       { contexto: "Profilaxia de endocardite (procedimento dentário)", texto: "USO ORAL\n1. Amoxicilina 500 mg ------------------------ 4 cápsulas\n   Tomar 4 cápsulas (2 g) em dose única, 30 a 60 minutos antes do procedimento.\n   (Criança: 50 mg/kg, máximo 2 g.)" },
-      { contexto: "H. pylori — terapia tripla (14 dias)", texto: "USO ORAL\n1. Amoxicilina 500 mg ------------------------ 56 cápsulas\n   Tomar 2 cápsulas (1 g) de 12 em 12 horas por 14 dias.\n2. Claritromicina 500 mg -------------------- 28 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas por 14 dias.\n3. Omeprazol 20 mg -------------------------- 28 cápsulas\n   Tomar 1 cápsula de 12 em 12 horas, 30 minutos antes do café e do jantar, por 14 dias." }
+      { contexto: "H. pylori — tríplice, alternativa (14 dias; 1ª linha é a quádrupla com bismuto — ver IBP)", texto: "USO ORAL\n1. Amoxicilina 500 mg ------------------------ 56 cápsulas\n   Tomar 2 cápsulas (1 g) de 12 em 12 horas por 14 dias.\n2. Claritromicina 500 mg -------------------- 28 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas por 14 dias.\n3. Omeprazol 40 mg (ou vonoprazana 20 mg) ---- 28 cápsulas\n   Tomar 1 cápsula de 12 em 12 horas, 30 minutos antes do café e do jantar, por 14 dias.\n(V Consenso Brasileiro 2026: só sem macrolídeo prévio; de preferência otimizada com bismuto e/ou vonoprazana.)" }
     ]
   },
   "amoxicilina-clavulanato": {
@@ -64,7 +64,7 @@ complementarMedicamentos({
     usos: "H. pylori, pneumonia (atípicos), sinusite e faringite em alérgico à penicilina.",
     prescrever: [
       { contexto: "Adulto — ambulatorial (7 dias)", texto: "USO ORAL\n1. Claritromicina 500 mg -------------------- 14 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas por 7 dias." },
-      { contexto: "H. pylori — ver modelo em amoxicilina", texto: "Claritromicina 500 mg 12/12h + amoxicilina 1 g 12/12h + omeprazol 20 mg 12/12h por 14 dias." },
+      { contexto: "H. pylori — alternativa (ver modelo em amoxicilina)", texto: "Claritromicina 500 mg 12/12h + amoxicilina 1 g 12/12h + omeprazol 40 mg (ou vonoprazana 20 mg) 12/12h por 14 dias, só sem macrolídeo prévio. 1ª linha (V Consenso Brasileiro 2026): quádrupla com bismuto — ver IBP." },
       { contexto: "Criança — ambulatorial (15 mg/kg/dia)", texto: "USO ORAL\n1. Claritromicina suspensão 250 mg/5 mL ------ 1 frasco\n   Dar ___ mL de 12 em 12 horas por 7 a 10 dias.\n   (15 mg/kg/dia ÷ 2; máximo 500 mg por dose.)" },
       { contexto: "Hospitalar / PS", texto: "Claritromicina 500 mg: reconstituir em 10 mL de água destilada, diluir em SF 0,9% 250 mL e infundir IV em 60 min de 12/12h." }
     ]
@@ -545,7 +545,7 @@ adicionarMedicamentos([
     ] },
   { id: "praziquantel", nomes: ["Praziquantel"], classe: "antiparasitarios", receita: "simples", tags: [],
     usos: "Esquistossomose mansônica, teníase; neurocisticercose (especialista, com corticoide).",
-    ped: { dose: 60, faixa: "Esquistossomose: 60 mg/kg dose única (até 15 anos); teníase 5–10 mg/kg dose única", intervalo: "dose única" },
+    ped: { dose: 60, faixa: "Esquistossomose: 60 mg/kg dose única (até 15 anos); teníase 5–10 mg/kg dose única", intervalo: "dose única", idadeMin: "≥ 4 anos" },
     apres: [{ rotulo: "comprimido 600 mg", mgPorComp: 600 }],
     adulto: "Esquistossomose: 50 mg/kg VO dose única · teníase: 5–10 mg/kg dose única",
     renal: [],
@@ -553,6 +553,6 @@ adicionarMedicamentos([
     alergia: [], contra: ["Cisticercose ocular", "Neurocisticercose: só com especialista (reação inflamatória)", "Indutores (rifampicina) reduzem muito o nível"],
     prescrever: [
       { contexto: "Esquistossomose — adulto", texto: "USO ORAL\n1. Praziquantel 600 mg ---------------------- ___ comprimidos\n   Tomar ___ comprimidos (50 mg/kg) em dose única, após uma refeição, sem mastigar.\n   (Ex.: 60 kg = 3.000 mg = 5 comprimidos. Pode causar tontura e sonolência no dia.)" },
-      { contexto: "Esquistossomose — criança (até 15 anos)", texto: "USO ORAL\n1. Praziquantel 600 mg ---------------------- ___ comprimidos\n   Dar ___ comprimido(s) (60 mg/kg) em dose única, após uma refeição.\n   (Arredondar para a fração de ½ comprimido mais próxima.)" }
+      { contexto: "Esquistossomose — criança (4 a 15 anos)", texto: "USO ORAL\n1. Praziquantel 600 mg ---------------------- ___ comprimidos\n   Dar ___ comprimido(s) (60 mg/kg) em dose única, após uma refeição.\n   (Arredondar para a fração de ½ comprimido mais próxima. Idade mínima: 4 anos — bula Farmanguinhos.)" }
     ] }
 ]);

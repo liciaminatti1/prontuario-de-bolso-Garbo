@@ -9,7 +9,7 @@ registrarFicha({
   palavrasChave: "constipacao prisao de ventre intestino preso fecaloma impactacao fecal escape fecal encoprese roma iv macrogol polietilenoglicol peg lactulose oleo mineral bisacodil senna fibras",
   critico: {
     tempo: "Desimpactar antes da manutenção",
-    texto: "Com fecaloma (massa abdominal ou reto cheio, escape fecal), desimpactar primeiro (PEG oral em dose alta por 3–6 dias ou enema) e só depois iniciar manutenção. Manter laxativo por meses e retirar devagar."
+    texto: "Com fecaloma (massa abdominal ou reto cheio, escape fecal), desimpactar primeiro (PEG oral em dose alta — criança 3–5 dias — ou enema) e só depois iniciar manutenção. Manter laxativo por meses e retirar devagar."
   },
   alarmes: [
     "Criança: início no 1º mês de vida ou eliminação de mecônio após 48 h (doença de Hirschsprung)",
@@ -23,8 +23,8 @@ registrarFicha({
     "Confirmar critérios de Roma IV e afastar sinais de alarme",
     "Revisar medicamentos constipantes (opioides, anticolinérgicos, ferro, cálcio, antiácidos com alumínio, bloqueadores de canal de cálcio, antidepressivos tricíclicos)",
     "Avaliar impactação: massa fecal palpável no abdome ou reto cheio de fezes endurecidas ao toque (o toque retal em criança só se dúvida diagnóstica ou sinal de alarme)",
-    "Se impactação: desimpactar com PEG oral (criança 1–1,5 g/kg/dia por 3–6 dias; adulto conforme esquema) ou enema",
-    "Iniciar manutenção: PEG (1ª escolha em criança e adulto) ou lactulose; adulto também pode usar fibra solúvel (psyllium)",
+    "Se impactação: desimpactar com PEG oral (criança 1–1,5 g/kg/dia por 3–5 dias; adulto conforme esquema) ou enema",
+    "Iniciar manutenção: PEG (1ª escolha em criança e adulto; único tratamento com recomendação forte na ESPGHAN/NASPGHAN 2025) ou lactulose; adulto também pode usar fibra solúvel (psyllium)",
     "Orientar: treino de toalete (sentar 5–10 min após as refeições, com apoio para os pés), água, fibras, atividade física, diário de evacuações (escala de Bristol)"
   ],
   fataisExcluir: [
@@ -106,13 +106,13 @@ registrarFicha({
     {
       droga: "Polietilenoglicol 3350 / macrogol (com ou sem eletrólitos)",
       linha: "l1",
-      dose: "Criança — desimpactação: 1–1,5 g/kg/dia; manutenção: 0,4 g/kg/dia (faixa 0,2–0,8), ajustar. Adulto — manutenção: 17 g/dia (1 sachê de 17 g ou 14–17 g conforme apresentação), ajustar; desimpactação: conforme bula/protocolo (doses maiores por 1–3 dias)",
+      dose: "Criança — desimpactação: 1–1,5 g/kg/dia por 3–5 dias; manutenção: 0,4–0,8 g/kg/dia (máx. usual 17 g/dia), ajustar (AGA/NASPGHAN 2026). Adulto — manutenção: 17 g/dia (1 sachê de 17 g ou 14–17 g conforme apresentação), ajustar; desimpactação: conforme bula/protocolo (doses maiores por 1–3 dias)",
       via: "VO, diluído em água, suco ou leite",
       intervalo: "1 vez ao dia (pode dividir em 2 tomadas)",
-      duracao: "Desimpactação: 3–6 dias. Manutenção: pelo menos 2 meses e até 1 mês sem sintomas; retirar devagar",
+      duracao: "Desimpactação (criança): 3–5 dias. Manutenção: pelo menos 2 meses e até 1 mês sem sintomas; retirar devagar",
       monitorizacao: "Diário de evacuações; objetivo: 1 evacuação pastosa por dia sem dor",
       contraindicacoes: "Obstrução ou perfuração intestinal, íleo, megacólon tóxico",
-      ajustes: "1ª escolha da ESPGHAN/NASPGHAN em criança (inclusive < 6 meses fora de bula, com cautela). Não está na RENAME: em geral comprado em farmácia; alternativa SUS: lactulose"
+      ajustes: "1ª escolha da ESPGHAN/NASPGHAN 2025 em criança (único com recomendação forte; inclusive < 6 meses fora de bula, com cautela). Não está na RENAME: em geral comprado em farmácia; alternativa SUS: lactulose"
     },
     {
       droga: "Lactulose (xarope 667 mg/mL)",
@@ -133,8 +133,8 @@ registrarFicha({
       intervalo: "1 a 2 vezes ao dia, longe das refeições e não ao deitar",
       duracao: "Manutenção",
       monitorizacao: "Escape oleoso anal",
-      contraindicacoes: "Menores de 1 ano, distúrbio de deglutição, refluxo/vômitos, neuropatas, acamados (risco de pneumonia lipoídica por aspiração)",
-      ajustes: "Usar só em criança > 1 ano e neurologicamente normal. Uso prolongado reduz absorção de vitaminas lipossolúveis"
+      contraindicacoes: "Menores de 2 anos, comprometimento neurológico, distúrbio de deglutição, refluxo/vômitos, acamados (risco de pneumonia lipoídica por aspiração)",
+      ajustes: "Usar só em criança ≥ 2 anos e sem comprometimento neurológico (AGA/NASPGHAN 2026). Uso prolongado reduz absorção de vitaminas lipossolúveis"
     },
     {
       droga: "Bisacodil",
@@ -206,7 +206,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "CONSTIPAÇÃO — ADULTO\nUSO ORAL\n1. Macrogol 3350 (polietilenoglicol) sachê ----------- 30 sachês\n   Dissolver 1 sachê em 1 copo de água e tomar 1 vez ao dia. Ajustar (meio a 2 sachês) para 1 evacuação macia por dia.\n   (Alternativa SUS) Lactulose 667 mg/mL ------------- 2 frascos\n   Tomar 15 a 30 mL 1 vez ao dia, de manhã. Ajustar a dose.\n2. Psyllium sachê --------------------------------- 30 sachês\n   Dissolver 1 sachê em 1 copo grande de água 1 vez ao dia.\n3. Se 3 dias sem evacuar: bisacodil 5 mg ------------- 1 caixa\n   Tomar 1 a 2 comprimidos à noite.\n\nCRIANÇA (peso: ___ kg)\nDESIMPACTAÇÃO (se fecaloma)\n1. Macrogol 3350 pó: ___ g (1 a 1,5 g/kg/dia) por dia, dissolvido em água ou suco, dividido em 2 tomadas, por 3 a 6 dias, até sair fezes líquidas claras.\nMANUTENÇÃO (após desimpactação, por pelo menos 2 meses)\n2. Macrogol 3350 pó: ___ g (0,4 g/kg/dia; ajustar entre 0,2 e 0,8 g/kg/dia) 1 vez ao dia.\n   OU Lactulose 667 mg/mL: ___ mL (1,5 a 3 mL/kg/dia) por dia, em 1 ou 2 tomadas.\n   OU (criança > 1 ano, sem problema para engolir) óleo mineral: ___ mL (1 a 3 mL/kg/dia, máx 90 mL/dia) 1 vez ao dia, longe das refeições e nunca deitada.\n\nORIENTAÇÕES\n- Sentar no vaso 5 a 10 minutos após o café, o almoço e o jantar, com apoio para os pés (banquinho).\n- Beber água ao longo do dia; comer frutas, verduras, feijão e cereais integrais.\n- Anotar as evacuações (diário) e trazer no retorno.",
+    ambulatorial: "CONSTIPAÇÃO — ADULTO\nUSO ORAL\n1. Macrogol 3350 (polietilenoglicol) sachê ----------- 30 sachês\n   Dissolver 1 sachê em 1 copo de água e tomar 1 vez ao dia. Ajustar (meio a 2 sachês) para 1 evacuação macia por dia.\n   (Alternativa SUS) Lactulose 667 mg/mL ------------- 2 frascos\n   Tomar 15 a 30 mL 1 vez ao dia, de manhã. Ajustar a dose.\n2. Psyllium sachê --------------------------------- 30 sachês\n   Dissolver 1 sachê em 1 copo grande de água 1 vez ao dia.\n3. Se 3 dias sem evacuar: bisacodil 5 mg ------------- 1 caixa\n   Tomar 1 a 2 comprimidos à noite.\n\nCRIANÇA (peso: ___ kg)\nDESIMPACTAÇÃO (se fecaloma)\n1. Macrogol 3350 pó: ___ g (1 a 1,5 g/kg/dia) por dia, dissolvido em água ou suco, dividido em 2 tomadas, por 3 a 5 dias, até sair fezes líquidas claras.\nMANUTENÇÃO (após desimpactação, por pelo menos 2 meses)\n2. Macrogol 3350 pó: ___ g (0,4 a 0,8 g/kg/dia; máx. usual 17 g/dia) 1 vez ao dia.\n   OU Lactulose 667 mg/mL: ___ mL (1,5 a 3 mL/kg/dia) por dia, em 1 ou 2 tomadas.\n   OU (criança ≥ 2 anos, sem comprometimento neurológico nem problema para engolir) óleo mineral: ___ mL (1 a 3 mL/kg/dia, máx 90 mL/dia) 1 vez ao dia, longe das refeições e nunca deitada.\n\nORIENTAÇÕES\n- Sentar no vaso 5 a 10 minutos após o café, o almoço e o jantar, com apoio para os pés (banquinho).\n- Beber água ao longo do dia; comer frutas, verduras, feijão e cereais integrais.\n- Anotar as evacuações (diário) e trazer no retorno.",
     hospitalar: "FECALOMA NO PS — DESIMPACTAÇÃO RETAL\n1. Dieta conforme aceitação.\n2. Adulto: enema de fosfato de sódio 133 mL via retal agora (contraindicado se insuficiência renal ou desidratação); alternativa: enema de glicerina 12% 250–500 mL via retal.\n3. Criança ≥ 2 anos: enema de fosfato de sódio 2,5 mL/kg (máx 133 mL) via retal, dose única. Lactente/criança < 2 anos: supositório de glicerina infantil ou SF 0,9% 5–10 mL/kg via retal.\n4. Se dor: dipirona 1 g IV (criança: 15–25 mg/kg/dose, máx 1 g; IV só a partir de 1 ano).\n5. Se falha após 2 tentativas: desimpactação manual sob analgesia, e/ou macrogol oral em dose de desimpactação.\n6. Alta com manutenção (ver receita ambulatorial)."
   },
   orientacoesRetorno: [
@@ -232,12 +232,13 @@ registrarFicha({
     }
   ],
   fontes: [
-    "ESPGHAN/NASPGHAN — Evaluation and Treatment of Functional Constipation in Infants and Children (Tabbers et al., JPGN 2014) e atualização das diretrizes de tratamento (Gordon et al., JPGN 2026)",
+    "ESPGHAN/NASPGHAN — Evaluation and Treatment of Functional Constipation in Infants and Children (Tabbers et al., JPGN 2014) e atualização das diretrizes de tratamento (Gordon et al., JPGN 2025)",
+    "AGA/NASPGHAN — Care pathway: constipação funcional na criança (2026)",
     "Critérios de Roma IV — Rome Foundation (2016): distúrbios funcionais pediátricos e do adulto",
     "AGA/ACG — Clinical Practice Guideline on the Pharmacological Management of Chronic Idiopathic Constipation (Gastroenterology/Am J Gastroenterol, 2023)",
     "SBP — Departamento Científico de Gastroenterologia: Constipação intestinal funcional (documento científico vigente)",
     "Ministério da Saúde — RENAME 2024 (lactulose; conferir na lista local a disponibilidade de óleo mineral, enemas e glicerina)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

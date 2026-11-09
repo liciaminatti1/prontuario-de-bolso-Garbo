@@ -203,7 +203,7 @@ registrarFicha({
   },
   prescricao: {
     ambulatorial: "EXANTEMA VIRAL SEM SINAIS DE GRAVIDADE — CRIANÇA (peso: ___ kg)\nUSO ORAL\n1. Paracetamol 200 mg/mL gotas ------------------------- 1 frasco\n   Dar 1 gota por kg (máximo 35 gotas) de 6 em 6 horas se febre ou dor.\n2. (Alternativa) Dipirona 500 mg/mL gotas ------------ 1 frasco\n   Dar 10–15 mg/kg (aprox. 1 gota a cada 2 kg, máximo 40 gotas) de 6 em 6 horas se febre ou dor (não usar em menores de 3 meses).\n3. Soro de reidratação oral --------------------------- envelopes\n   Oferecer em pequenos goles ao longo do dia, além do leite e da água.\n\nSE PRURIDO (maiores de 2 anos)\n4. Loratadina 1 mg/mL xarope -------------------------- 1 frasco\n   2 a 12 anos e até 30 kg: 5 mL 1 vez ao dia; acima de 30 kg: 10 mL 1 vez ao dia, por até 5 dias.\n\nNÃO USAR: ácido acetilsalicílico (AAS), ibuprofeno ou outros anti-inflamatórios até descartar dengue e varicela.",
-    hospitalar: "SUSPEITA DE MENINGOCOCCEMIA (febre + petéquias/púrpura) — CONDUTA ANTES DA TRANSFERÊNCIA (peso: ___ kg)\n1. O₂ para SpO₂ ≥ 94%; monitor; acesso venoso (ou intraósseo).\n2. Ceftriaxona 100 mg/kg (máx. 2 g) IV em 30 min (diluir em SF 0,9% ou SG 5%, 20–50 mL) — ou IM se não houver acesso. NÃO aguardar exames.\n3. Se má perfusão: Ringer lactato (ou SF 0,9%) 10–20 mL/kg IV em 5–20 min; reavaliar após cada bolus (ver ficha Sepse pediátrica).\n4. Glicemia capilar; se < 60 mg/dL: SG 10% 2–5 mL/kg IV.\n5. Precaução de gotículas (máscara cirúrgica) por 24 h após o início do antibiótico.\n6. Notificação imediata à vigilância (quimioprofilaxia dos contatos).\n7. Transferir com SAMU levando horário e dose do antibiótico."
+    hospitalar: "SUSPEITA DE MENINGOCOCCEMIA (febre + petéquias/púrpura) — CONDUTA ANTES DA TRANSFERÊNCIA (peso: ___ kg)\n1. O₂ para SpO₂ ≥ 94%; monitor; acesso venoso (ou intraósseo).\n2. Ceftriaxona 100 mg/kg (máx. 2 g) IV em 30 min (diluir em SF 0,9% ou SG 5%, 20–50 mL) — ou IM se não houver acesso. NÃO aguardar exames.\n3. Se má perfusão: Ringer lactato (ou SF 0,9%) 10–20 mL/kg IV em 5–20 min; reavaliar após cada bolus (ver ficha Sepse pediátrica).\n4. Glicemia capilar; se < 60 mg/dL: SG 10% 5–10 mL/kg (0,5–1 g/kg, PALS; RN: 2 mL/kg) IV.\n5. Precaução de gotículas (máscara cirúrgica) por 24 h após o início do antibiótico.\n6. Notificação imediata à vigilância (quimioprofilaxia dos contatos).\n7. Transferir com SAMU levando horário e dose do antibiótico."
   },
   orientacoesRetorno: [
     "A maioria das manchas com febre é virose e melhora sozinha em poucos dias",
@@ -230,16 +230,18 @@ registrarFicha({
         ["Kawasaki", "< 5 anos", "Febre ≥ 5 dias", "Polimorfo, sem vesículas", "Conjuntivite, lábios, edema de mãos/pés, linfonodo", "Não"],
         ["Meningococcemia", "Qualquer", "Febre aguda, mau estado geral", "Petéquias/púrpura", "Evolução em horas, choque", "Imediata (24 h)"]
       ],
-      nota: "Notificação conforme Lista Nacional de Notificação Compulsória e Guia de Vigilância em Saúde (MS, 6ª ed. revisada, 2024). Definição de caso suspeito de sarampo e rubéola atualizada pela NT Conjunta 344/2025-MS."
+      nota: "Notificação conforme a Lista Nacional de Notificação Compulsória vigente — Portaria GM/MS nº 11.211, de 13/05/2026 (inclui caxumba com notificação imediata e febre do Oropouche; muda difteria e tétano; antes: Portarias nº 10.175/2026 e nº 6.734/2025) — e o Guia de Vigilância em Saúde (MS, 6ª ed. revisada, 2024). Conferir na tabela da Portaria 11.211 a regra atual de varicela, mão-pé-boca e zika em gestante. Definição de caso suspeito de sarampo e rubéola atualizada pela NT Conjunta 344/2025-MS."
     }
   ],
   fontes: [
+    "Ministério da Saúde — Portaria GM/MS nº 11.211, de 13/05/2026 (Lista Nacional de Notificação Compulsória)",
+    "AHA/AAP — PALS 2025: glicose na hipoglicemia 0,5–1 g/kg (SG 10% 5–10 mL/kg); RN: SG 10% 2 mL/kg",
     "Ministério da Saúde — Guia de Vigilância em Saúde, 6ª edição revisada (2024): sarampo, rubéola, varicela, doença meningocócica, arboviroses",
     "Ministério da Saúde — Notas Técnicas Conjuntas nº 344/2025 e nº 345/2025-CGVDI/DPNI/SVSA/MS (vigilância do sarampo e rubéola, conduta e bloqueio vacinal)",
     "Ministério da Saúde — Dengue: diagnóstico e manejo clínico, adulto e criança (6ª ed., 2024)",
     "American Academy of Pediatrics — Red Book: Report of the Committee on Infectious Diseases, 2024–2027",
     "American Heart Association — Update on Diagnosis and Management of Kawasaki Disease: Scientific Statement (Circulation, 2024)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

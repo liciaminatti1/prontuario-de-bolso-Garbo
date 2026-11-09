@@ -52,13 +52,13 @@ registrarFicha({
     {
       droga: "Misoprostol (indução)",
       linha: "l1",
-      dose: "14 a < 28 semanas: 200 mcg · ≥ 28 semanas: 25 mcg vaginal (ou 25 mcg VO)",
+      dose: "13–24 semanas: 400 mcg · 25–27 semanas: 200 mcg · ≥ 28 semanas: 25–50 mcg vaginal ou 50–100 mcg VO",
       via: "Vaginal, sublingual ou bucal (até 28 sem); vaginal ou oral (≥ 28 sem)",
-      intervalo: "< 28 sem: 4/4 h a 6/6 h · ≥ 28 sem: 25 mcg vaginal de 6/6 h ou 25 mcg VO de 2/2 h",
+      intervalo: "13–24 sem: a cada 3 h · 25–27 sem: a cada 4 h · ≥ 28 sem: vaginal a cada 4 h ou VO a cada 2 h",
       duracao: "Até a expulsão; reavaliar se sem resposta em 24 h",
       monitorizacao: "Dinâmica uterina, sangramento, febre",
       contraindicacoes: "Cesárea prévia ≥ 28 semanas (risco de rotura): preferir Foley e ocitocina",
-      ajustes: "FIGO 2023. Cicatriz uterina < 28 semanas: uso possível com cautela e dose menor conforme protocolo. Comprimidos de 25 e 200 mcg disponíveis em hospitais"
+      ajustes: "FIGO 2023 (atualiza a tabela de 2017; sem dose máxima definida). Cicatriz uterina < 28 semanas: uso possível com cautela e dose menor conforme protocolo. Comprimidos de 25 e 200 mcg disponíveis em hospitais"
     },
     {
       droga: "Ocitocina",
@@ -95,7 +95,7 @@ registrarFicha({
     }
   ],
   prescricao: {
-    hospitalar: "ÓBITO FETAL — INDUÇÃO (IG: ___ semanas; cesárea prévia: ___)\n1. Dieta livre (zero se analgesia/procedimento).\n2. Acomodar em quarto privativo, longe de mães com bebês; acompanhante livre.\n3. Se ≥ 28 semanas e sem cicatriz uterina: misoprostol 25 mcg via vaginal de 6/6 h (ou 25 mcg VO de 2/2 h) até trabalho de parto.\n   Se 14 a < 28 semanas: misoprostol 200 mcg via vaginal ou sublingual de 4/4 h a 6/6 h.\n   Se cesárea prévia e ≥ 28 semanas: sonda Foley 16–18 Fr intracervical com balão de 30–60 mL de SF 0,9%, seguida de ocitocina.\n4. Ocitocina 5 UI + SF 0,9% 500 mL IV em bomba, iniciar 6–12 mL/h e aumentar a cada 30–40 min conforme protocolo (≥ 4 h após último misoprostol).\n5. Analgesia: dipirona 1 g IV de 6/6 h; morfina 2–4 mg IV se dor intensa; peridural se coagulação normal.\n6. Após o parto: cabergolina 0,5 mg — 2 comprimidos VO, dose única (se desejar e sem hipertensão).\n7. Se Rh negativo e Coombs indireto negativo: imunoglobulina anti-D 300 mcg IM até 72 h.\n8. Exames: hemograma, plaquetas, TP, TTPa, fibrinogênio, tipagem, Coombs indireto, Kleihauer-Betke, glicemia, HbA1c, TSH, VDRL, HIV, toxoplasmose, parvovírus B19, CMV, anticorpos antifosfolípides; anatomopatológico de placenta; necropsia/cariótipo se autorizados.\n9. Controles: sinais vitais de 4/4 h; dinâmica uterina; sangramento; temperatura.\n10. Solicitar psicologia e serviço social; preencher Declaração de Óbito.",
+    hospitalar: "ÓBITO FETAL — INDUÇÃO (IG: ___ semanas; cesárea prévia: ___)\n1. Dieta livre (zero se analgesia/procedimento).\n2. Acomodar em quarto privativo, longe de mães com bebês; acompanhante livre.\n3. Misoprostol (FIGO 2023), conforme IG:\n   Se 13–24 semanas: misoprostol 400 mcg via vaginal, sublingual ou bucal a cada 3 h até a expulsão.\n   Se 25–27 semanas: misoprostol 200 mcg via vaginal, sublingual ou bucal a cada 4 h.\n   Se ≥ 28 semanas e sem cicatriz uterina: misoprostol 25–50 mcg via vaginal a cada 4 h (ou 50–100 mcg VO a cada 2 h) até trabalho de parto.\n   Se cesárea prévia e ≥ 28 semanas: sonda Foley 16–18 Fr intracervical com balão de 30–60 mL de SF 0,9%, seguida de ocitocina.\n4. Ocitocina 5 UI + SF 0,9% 500 mL IV em bomba, iniciar 6–12 mL/h e aumentar a cada 30–40 min conforme protocolo (≥ 4 h após último misoprostol).\n5. Analgesia: dipirona 1 g IV de 6/6 h; morfina 2–4 mg IV se dor intensa; peridural se coagulação normal.\n6. Após o parto: cabergolina 0,5 mg — 2 comprimidos VO, dose única (se desejar e sem hipertensão).\n7. Se Rh negativo e Coombs indireto negativo: imunoglobulina anti-D 300 mcg IM até 72 h.\n8. Exames: hemograma, plaquetas, TP, TTPa, fibrinogênio, tipagem, Coombs indireto, Kleihauer-Betke, glicemia, HbA1c, TSH, VDRL, HIV, toxoplasmose, parvovírus B19, CMV, anticorpos antifosfolípides; anatomopatológico de placenta; necropsia/cariótipo se autorizados.\n9. Controles: sinais vitais de 4/4 h; dinâmica uterina; sangramento; temperatura.\n10. Solicitar psicologia e serviço social; preencher Declaração de Óbito.",
     ambulatorial: "ALTA APÓS ÓBITO FETAL\nUSO ORAL\n1. Paracetamol 750 mg ------------------------------ 20 comprimidos\n   Tomar 1 comprimido de 6 em 6 horas se dor.\n2. Sulfato ferroso 40 mg de ferro elementar --------- 30 comprimidos\n   Tomar 1 comprimido ao dia, 1 hora antes do almoço, por 1 mês (ou conforme Hb).\n3. Ácido fólico 5 mg (se planeja nova gestação) ------ 30 comprimidos\n   Tomar 1 comprimido ao dia; iniciar pelo menos 1 mês antes de engravidar."
   },
   orientacoesRetorno: [
@@ -126,10 +126,10 @@ registrarFicha({
   fontes: [
     "Ministério da Saúde — Manual de Gestação de Alto Risco (2022)",
     "Ministério da Saúde — Declaração de Óbito: manual de instruções para preenchimento (2022) e Portaria nº 72/2010 (vigilância do óbito infantil e fetal)",
-    "FIGO — Updated recommendations for the use of misoprostol alone in gynecology and obstetrics (2023)",
+    "FIGO — Updated recommendations for the use of misoprostol alone in gynecology and obstetrics (2023; substitui a tabela de 2017)",
     "ACOG/SMFM — Obstetric Care Consensus nº 10: Management of stillbirth (2020)",
     "RCOG — Green-top Guideline nº 55: Late intrauterine fetal death and stillbirth (2010)"
   ],
-  revisao: "2026-10-24",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

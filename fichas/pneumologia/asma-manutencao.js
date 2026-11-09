@@ -111,7 +111,7 @@ registrarFicha({
       duracao: "Contínuo",
       monitorizacao: "Número de inalações por semana; controle; crises",
       contraindicacoes: "Hipersensibilidade",
-      ajustes: "Máximo de 12 inalações em um dia (GINA, adultos e adolescentes). Pode ser usada antes do exercício. O PCDT do SUS limita a dose diária por apresentação (no PCDT de 2023: até 8 cápsulas de 6/200 ou 4 de 12/400 por dia, cerca de 1.600 mcg/dia de budesonida); conferir o limite na tabela do PCDT 2026"
+      ajustes: "Máximo de 12 inalações em um dia (GINA, adultos e adolescentes). Pode ser usada antes do exercício. O PCDT do SUS limita a dose diária por apresentação (no PCDT de 2023: até 8 cápsulas de 6/200 ou 4 de 12/400 por dia, cerca de 1.600 mcg/dia de budesonida); o limite diário da combinação no PCDT 2026 (Portaria Conjunta nº 43/2026) ainda não foi conferido no texto"
     },
     {
       droga: "Budesonida + formoterol 6/200 mcg em manutenção e resgate (MART) — etapas 3 e 4, trilha 1",
@@ -133,7 +133,7 @@ registrarFicha({
       duracao: "Contínuo",
       monitorizacao: "Adesão ao CI (o maior problema dessa trilha)",
       contraindicacoes: "—",
-      ajustes: "Usar quando budesonida + formoterol não estiver disponível ou o paciente estiver estável e aderente. Etapa 1 da trilha 2: usar CI toda vez que usar salbutamol. Etapa 3: CI dose baixa + LABA; etapa 4: CI dose média + LABA. Enxaguar a boca após o CI"
+      ajustes: "Usar quando budesonida + formoterol não estiver disponível ou o paciente estiver estável e aderente. Etapa 1 da trilha 2: usar CI toda vez que usar salbutamol. Etapa 3: CI dose baixa + LABA; etapa 4: CI dose média + LABA. Enxaguar a boca após o CI. PCDT 2026 (resumo SES-SC) — quantidade máxima mensal de budesonida: 200 mcg 248 cápsulas; 400 mcg 124 cápsulas"
     },
     {
       droga: "Tiotrópio (névoa suave) 2,5 mcg",
@@ -239,11 +239,12 @@ registrarFicha({
     }
   ],
   fontes: [
-    "Ministério da Saúde — PCDT da Asma, Portaria Conjunta SAES/SCTIE nº 43 (2026)",
+    "Ministério da Saúde — PCDT da Asma, Portaria Conjunta SAES/SCTIE nº 43, de 24/03/2026 (revoga a Portaria Conjunta nº 32/2023)",
+    "SES-SC — Resumo do PCDT da Asma 2026 (quantidades máximas mensais dispensadas)",
     "Global Initiative for Asthma (GINA) — Global Strategy for Asthma Management and Prevention (2026)",
     "SBPT — Recomendações para o manejo da asma (2020) e atualizações",
     "ERS/ATS — Interpretive strategies for routine lung function tests (2022)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

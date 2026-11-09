@@ -62,7 +62,7 @@ registrarFicha({
     gravidade: [
       "Necessidade de massagem e adrenalina: alto risco de encefalopatia hipóxico-isquêmica",
       "RN ≥ 35–36 sem com encefalopatia moderada a grave: avaliar hipotermia terapêutica, iniciada até 6 h de vida em centro de referência",
-      "Sem FC detectável após 20 min de reanimação adequada: discutir com a equipe a interrupção dos esforços (SBP 2022)"
+      "Sem FC detectável apesar de reanimação adequada: a SBP 2022 não fixa um tempo — a decisão de interromper, após 10–20 min, é individualizada e discutida com a equipe e com a família"
     ]
   },
   exames: [
@@ -231,6 +231,6 @@ registrarFicha({
     "AHA/AAP — Neonatal Resuscitation Guidelines (2020, atualização 2025)",
     "Ministério da Saúde — Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, vol. 1 (2014)"
   ],
-  revisao: "2026-10-25",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

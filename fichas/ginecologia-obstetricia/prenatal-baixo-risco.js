@@ -141,7 +141,7 @@ registrarFicha({
       duracao: "Da 12ª semana até o parto (suplementação universal, NT MS 251/2024)",
       monitorizacao: "Constipação",
       contraindicacoes: "Hipercalcemia, litíase renal por cálcio (avaliar)",
-      ajustes: "—"
+      ajustes: "Atenção: em mar/abr de 2026, FEBRASGO e RBEHG deixaram de recomendar cálcio para prevenção de pré-eclâmpsia (reanálise Cochrane, Cluver 2025); o cálcio pode seguir por outras indicações. A NT 251/2024 do MS não foi revogada e segue como norma do SUS"
     },
     {
       droga: "AAS (ácido acetilsalicílico)",
@@ -212,7 +212,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "USO ORAL\n1. Ácido fólico 400 mcg (0,4 mg) ------------------- 30 comprimidos\n   Tomar 1 comprimido ao dia, até o fim da gestação.\n   (Se o serviço só dispuser de 5 mg: ver ficha Ácido fólico e ferro na gestação.)\n2. Sulfato ferroso 40 mg de ferro elementar ------ 30 comprimidos\n   Tomar 1 comprimido ao dia, 30 minutos antes do almoço ou entre as refeições, com suco de fruta cítrica, até 3 meses após o parto.\n3. Carbonato de cálcio 1.250 mg (500 mg de cálcio) - 60 comprimidos\n   A partir de 12 semanas: tomar 1 comprimido no café da manhã e 1 no jantar, até o parto. Não tomar junto com o ferro (intervalo mínimo de 2 horas).\n\nSE DOR OU FEBRE\n4. Paracetamol 500 mg ----------------------------- 1 caixa\n   Tomar 1 comprimido de 6 em 6 horas se dor ou febre (máximo 6 comprimidos por dia).\n\nSE ALTO RISCO DE PRÉ-ECLÂMPSIA (indicação médica)\n5. Ácido acetilsalicílico 100 mg ------------------ 30 comprimidos\n   Tomar 1 comprimido à noite, de 12 a 36 semanas de gestação."
+    ambulatorial: "USO ORAL\n1. Ácido fólico 400 mcg (0,4 mg) ------------------- 30 comprimidos\n   Tomar 1 comprimido ao dia, até o fim da gestação.\n   (Se o serviço só dispuser de 5 mg: ver ficha Ácido fólico e ferro na gestação.)\n2. Sulfato ferroso 40 mg de ferro elementar ------ 30 comprimidos\n   Tomar 1 comprimido ao dia, 30 minutos antes do almoço ou entre as refeições, com suco de fruta cítrica, até 3 meses após o parto.\n3. Carbonato de cálcio 1.250 mg (500 mg de cálcio) - 60 comprimidos\n   A partir de 12 semanas: tomar 1 comprimido no café da manhã e 1 no jantar, até o parto. Não tomar junto com o ferro (intervalo mínimo de 2 horas). Norma do SUS (NT 251/2024); FEBRASGO e RBEHG (2026) não recomendam mais cálcio para prevenir pré-eclâmpsia.\n\nSE DOR OU FEBRE\n4. Paracetamol 500 mg ----------------------------- 1 caixa\n   Tomar 1 comprimido de 6 em 6 horas se dor ou febre (máximo 6 comprimidos por dia).\n\nSE ALTO RISCO DE PRÉ-ECLÂMPSIA (indicação médica)\n5. Ácido acetilsalicílico 100 mg ------------------ 30 comprimidos\n   Tomar 1 comprimido à noite, de 12 a 36 semanas de gestação."
   },
   orientacoesRetorno: [
     "Trazer a Caderneta da Gestante em todas as consultas e exames",
@@ -241,12 +241,12 @@ registrarFicha({
       titulo: "Ganho de peso gestacional",
       colunas: ["IMC pré-gestacional", "Referência"],
       linhas: [
-        ["< 18,5 (baixo peso)", "9,7–12,2 kg até 40 semanas (curvas brasileiras)"],
-        ["18,5–24,9 (eutrofia)", "Usar a curva de ganho de peso da Caderneta da Gestante"],
-        ["25–29,9 (sobrepeso)", "Usar a curva de ganho de peso da Caderneta da Gestante"],
-        ["≥ 30 (obesidade)", "Usar a curva de ganho de peso da Caderneta da Gestante"]
+        ["< 18,5 (baixo peso)", "9,7–12,2 kg até 40 semanas"],
+        ["18,5–24,9 (eutrofia)", "8,0–12,0 kg até 40 semanas"],
+        ["25–29,9 (sobrepeso)", "7,0–9,0 kg até 40 semanas"],
+        ["≥ 30 (obesidade)", "5,0–7,2 kg até 40 semanas"]
       ],
-      nota: "Desde 2022 o MS adota curvas brasileiras de ganho de peso (Kac e cols.), impressas na Caderneta da Gestante."
+      nota: "Caderneta da Gestante MS 2022 / FEBRASGO 2024 (curvas brasileiras de Kac e Surita). Acompanhar o ganho a cada consulta na curva da Caderneta."
     }
   ],
   fontes: [
@@ -257,8 +257,9 @@ registrarFicha({
     "Ministério da Saúde — Nota Técnica Conjunta nº 251/2024 (suplementação universal de cálcio na gestação)",
     "Ministério da Saúde — Caderno dos Programas Nacionais de Suplementação de Micronutrientes (2022)",
     "OMS — WHO recommendations on antenatal care for a positive pregnancy experience (2016)",
-    "FEBRASGO — Position statement: ganho de peso gestacional (2023)"
+    "FEBRASGO — Position statement: ganho de peso gestacional (2023) e curvas brasileiras de ganho de peso (Kac/Surita, 2024): baixo peso 9,7–12,2 kg; eutrofia 8,0–12,0; sobrepeso 7,0–9,0; obesidade 5,0–7,2 kg",
+    "FEBRASGO e RBEHG — Posicionamentos de mar/abr de 2026: cálcio deixa de ser recomendado para prevenção de pré-eclâmpsia (após Cochrane, Cluver et al., 2025)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

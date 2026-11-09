@@ -86,7 +86,7 @@ registrarFicha({
     {
       droga: "Ácido acetilsalicílico (artrite)",
       linha: "l1",
-      dose: "Criança: 80–100 mg/kg/dia (máx 3 g/dia) divididos em 4 tomadas; adulto: 4–8 g/dia em 4 tomadas, conforme tolerância",
+      dose: "Criança: 80–100 mg/kg/dia (máx 3 g/dia) divididos em 4 tomadas; adulto: 4–8 g/dia em 4 tomadas, conforme tolerância (dose histórica alta, não conferida na revisão de 09/11/2026 — revisar com a diretriz SBC antes de usar)",
       via: "VO",
       intervalo: "6/6 h",
       duracao: "Dose plena por 2 semanas, depois 60 mg/kg/dia por mais 2–4 semanas",
@@ -154,7 +154,7 @@ registrarFicha({
     }
   ],
   prescricao: {
-    ambulatorial: "PROFILAXIA SECUNDÁRIA (aplicar na UBS)\nUSO INTRAMUSCULAR\n1. Penicilina G benzatina 1.200.000 UI ---------- 1 frasco-ampola\n   Aplicar 1.200.000 UI IM profunda a cada 21 dias (criança < 20 kg: 600.000 UI).\n   Próxima dose: ___/___/___. Duração prevista: até ___.\n\nALERGIA À PENICILINA (USO ORAL)\n1. Sulfadiazina 500 mg ----------------------------- 60 comprimidos\n   Tomar 2 comprimidos (1 g) 1 vez ao dia, todos os dias (< 30 kg: 1 comprimido).\n\nFASE AGUDA — ARTRITE (USO ORAL)\n2. Ácido acetilsalicílico 500 mg ------------------- ___ comprimidos\n   Criança: 80–100 mg/kg/dia divididos de 6 em 6 horas (exemplo 30 kg: 1 comprimido de 6 em 6 horas = 66 mg/kg/dia; ajustar). Adulto: 2 comprimidos de 6 em 6 horas, por 2 semanas, depois reduzir.\n   OU Naproxeno 250 mg — 10–20 mg/kg/dia de 12 em 12 horas (máx 1 g/dia).\n\nCARDITE MODERADA/GRAVE (USO ORAL)\n3. Prednisona 20 mg -------------------------------- ___ comprimidos\n   1–2 mg/kg/dia (máx 80 mg) pela manhã por 2–3 semanas; depois reduzir 20–25% por semana.\n\nPEDIDO DE EXAMES\n- ASLO, VHS, PCR, hemograma, ECG, ecocardiograma transtorácico com Doppler. Indicação: suspeita de febre reumática."
+    ambulatorial: "PROFILAXIA SECUNDÁRIA (aplicar na UBS)\nUSO INTRAMUSCULAR\n1. Penicilina G benzatina 1.200.000 UI ---------- 1 frasco-ampola\n   Aplicar 1.200.000 UI IM profunda a cada 21 dias (criança < 20 kg: 600.000 UI).\n   Próxima dose: ___/___/___. Duração prevista: até ___.\n\nALERGIA À PENICILINA (USO ORAL)\n1. Sulfadiazina 500 mg ----------------------------- 60 comprimidos\n   Tomar 2 comprimidos (1 g) 1 vez ao dia, todos os dias (< 30 kg: 1 comprimido).\n\nFASE AGUDA — ARTRITE (USO ORAL)\n2. Ácido acetilsalicílico 500 mg ------------------- ___ comprimidos\n   Criança: 80–100 mg/kg/dia divididos de 6 em 6 horas (exemplo 30 kg: 1 comprimido de 6 em 6 horas = 66 mg/kg/dia; ajustar). Adulto: 2 comprimidos de 6 em 6 horas, por 2 semanas, depois reduzir (dose de adulto histórica, não conferida — revisar com a diretriz SBC).\n   OU Naproxeno 250 mg — 10–20 mg/kg/dia de 12 em 12 horas (máx 1 g/dia).\n\nCARDITE MODERADA/GRAVE (USO ORAL)\n3. Prednisona 20 mg -------------------------------- ___ comprimidos\n   1–2 mg/kg/dia (máx 80 mg) pela manhã por 2–3 semanas; depois reduzir 20–25% por semana.\n\nPEDIDO DE EXAMES\n- ASLO, VHS, PCR, hemograma, ECG, ecocardiograma transtorácico com Doppler. Indicação: suspeita de febre reumática."
   },
   orientacoesRetorno: [
     "A injeção de benzetacil a cada 21 dias protege o coração de novos ataques; não pular doses, mesmo sem sintomas",
@@ -175,6 +175,6 @@ registrarFicha({
     "AHA — Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography (Circulation, 2015)",
     "AHA — Prevention of Rheumatic Fever and Diagnosis and Treatment of Acute Streptococcal Pharyngitis (Circulation, 2009)"
   ],
-  revisao: "2026-10-25",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

@@ -61,7 +61,7 @@ registrarFicha({
       "Não complicada: dor, sem sangramento ativo — tratamento ambulatorial",
       "Hemorragia: escore de Glasgow-Blatchford 0–1 pode ter manejo ambulatorial com EDA precoce; demais casos internação e EDA em até 24 h",
       "Perfuração ou obstrução: cirurgia / internação",
-      "Indicações de pesquisar e tratar H. pylori: úlcera ativa ou prévia, dispepsia, linfoma MALT, parente de 1º grau com câncer gástrico, ressecção de câncer gástrico precoce, anemia ferropriva sem causa, deficiência de B12, PTI, antes de uso prolongado de AINE/AAS em quem tem história de úlcera"
+      "Indicações de pesquisar e tratar H. pylori: úlcera ativa ou prévia, dispepsia, linfoma MALT, parente de 1º grau com câncer gástrico, ressecção de câncer gástrico precoce, anemia ferropriva sem causa, PTI, antes de uso prolongado de AINE/AAS em quem tem história de úlcera"
     ]
   },
   exames: [
@@ -102,7 +102,7 @@ registrarFicha({
     {
       droga: "Quádrupla com bismuto — 1ª linha (também para alérgicos à penicilina)",
       linha: "l1",
-      dose: "IBP em dose padrão (omeprazol 20 mg, pantoprazol 40 mg ou esomeprazol 20 mg) ou vonoprazana 20 mg + subcitrato de bismuto coloidal 240 mg + tetraciclina 500 mg + metronidazol 400 mg",
+      dose: "IBP em dose padrão (omeprazol 20 mg, pantoprazol 40 mg ou esomeprazol 20 mg) ou vonoprazana 20 mg + subcitrato de bismuto coloidal 240 mg + tetraciclina 500 mg + metronidazol 400–500 mg",
       via: "Oral",
       intervalo: "IBP/vonoprazana e bismuto de 12/12 h; tetraciclina e metronidazol de 6/6 h (4 vezes ao dia)",
       duracao: "14 dias",
@@ -124,13 +124,13 @@ registrarFicha({
     {
       droga: "Dupla com amoxicilina em dose alta — alternativa",
       linha: "alt",
-      dose: "Amoxicilina 1 g de 8/8 h (ou 750 mg de 6/6 h) + vonoprazana 20 mg de 12/12 h (ou IBP em dose alta de 12/12 h)",
+      dose: "Amoxicilina 3–4 g/dia em 3–4 tomadas (ex.: 1 g de 8/8 h ou 750 mg–1 g de 6/6 h) + vonoprazana 20 mg de 12/12 h (ou IBP em dose alta de 12/12 h)",
       via: "Oral",
       intervalo: "Conforme descrito",
       duracao: "14 dias",
       monitorizacao: "Diarreia, exantema",
       contraindicacoes: "Alergia a penicilina",
-      ajustes: "Opção quando não há bismuto. Melhor resultado com vonoprazana"
+      ajustes: "Esquema sem bismuto do V Consenso Brasileiro (2026). Melhor resultado com vonoprazana"
     },
     {
       droga: "Alérgico à penicilina — opções",
@@ -225,11 +225,11 @@ registrarFicha({
     }
   ],
   fontes: [
-    "Federação Brasileira de Gastroenterologia / Núcleo Brasileiro para Estudo do H. pylori — V Consenso Brasileiro sobre Infecção por Helicobacter pylori (Arq Gastroenterol, 2026; doi 10.1590/S0004-2803.24612026-043)",
+    "Federação Brasileira de Gastroenterologia / Núcleo Brasileiro para Estudo do H. pylori — V Consenso Brasileiro sobre Infecção por Helicobacter pylori (Arq Gastroenterol 2026;63:e26043; doi 10.1590/S0004-2803.24612026-043)",
     "Malfertheiner P et al. — Management of H. pylori infection: the Maastricht VI/Florence consensus report (Gut, 2022)",
     "ACG — Clinical Guideline: Treatment of Helicobacter pylori Infection (Am J Gastroenterol, 2024)",
     "ACG — Clinical Guideline: Upper Gastrointestinal and Ulcer Bleeding (Am J Gastroenterol, 2021)"
   ],
-  revisao: "2026-10-25",
-  versao: "1.1"
+  revisao: "2026-11-09",
+  versao: "1.2"
 });

@@ -132,7 +132,9 @@ complementarMedicamentos({
     prescrever: [
       { contexto: "Adulto — DRGE / dispepsia", texto: "USO ORAL\n1. Omeprazol 20 mg ---------------------------- 30 cápsulas\n   Tomar 1 cápsula em jejum, 30 minutos antes do café da manhã, por 30 dias." },
       { contexto: "Adulto — úlcera / esofagite (dose dobrada)", texto: "USO ORAL\n1. Omeprazol 40 mg ---------------------------- 56 cápsulas\n   Tomar 1 cápsula 30 minutos antes do café da manhã e 1 cápsula 30 minutos antes do jantar, por 4 semanas." },
-      { contexto: "Adulto — erradicação de H. pylori (14 dias)", texto: "USO ORAL\n1. Omeprazol 20 mg ---------------------------- 28 cápsulas\n   Tomar 1 cápsula de 12 em 12 horas, 30 minutos antes do café e do jantar, por 14 dias.\n2. Amoxicilina 500 mg ------------------------- 56 cápsulas\n   Tomar 2 cápsulas (1 g) de 12 em 12 horas por 14 dias.\n3. Claritromicina 500 mg ---------------------- 28 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas por 14 dias.\n(Amoxicilina e claritromicina: receita de antimicrobiano em 2 vias. Controle de cura ≥ 4 semanas após o fim, com IBP suspenso há 2 semanas.)" },
+      { contexto: "Adulto — H. pylori, 1ª linha: quádrupla com bismuto (14 dias)", texto: "USO ORAL\n1. Omeprazol 20 mg ---------------------------- 28 cápsulas\n   Tomar 1 cápsula de 12 em 12 horas, 30 minutos antes do café e do jantar, por 14 dias.\n   (ou Vonoprazana 20 mg: 1 comprimido de 12 em 12 horas por 14 dias.)\n2. Subcitrato de bismuto coloidal 240 mg (manipulado) -- 28 cápsulas\n   Tomar 1 cápsula de 12 em 12 horas por 14 dias. As fezes ficam escuras (esperado).\n3. Tetraciclina 500 mg ------------------------ 56 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas por 14 dias, 1 hora antes ou 2 horas depois das refeições, longe de leite, antiácido, cálcio e ferro.\n4. Metronidazol 400 mg ------------------------ 56 comprimidos\n   Tomar 1 comprimido de 6 em 6 horas por 14 dias, após as refeições. Não beber álcool durante e até 3 dias depois.\n(V Consenso Brasileiro de H. pylori 2026: 1ª linha, também para alérgicos à penicilina. Tetraciclina e metronidazol: receita de antimicrobiano em 2 vias. Controle de cura ≥ 4 semanas após o fim, com IBP suspenso há 2 semanas.)" },
+      { contexto: "Adulto — H. pylori sem bismuto: dupla com amoxicilina em dose alta (14 dias)", texto: "USO ORAL\n1. Vonoprazana 20 mg -------------------------- 28 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas por 14 dias.\n   (ou IBP em dose alta de 12 em 12 horas, ex.: omeprazol 40 mg.)\n2. Amoxicilina 500 mg ------------------------- 84 cápsulas\n   Tomar 2 cápsulas (1 g) de 8 em 8 horas por 14 dias (3–4 g/dia em 3–4 tomadas).\n(Amoxicilina: receita de antimicrobiano em 2 vias. Contraindicado se alergia à penicilina.)" },
+      { contexto: "Adulto — H. pylori, alternativa: tríplice com claritromicina (14 dias; sem macrolídeo prévio)", texto: "USO ORAL\n1. Omeprazol 40 mg (ou vonoprazana 20 mg) ----- 28 cápsulas\n   Tomar 1 cápsula de 12 em 12 horas, 30 minutos antes do café e do jantar, por 14 dias.\n   (De preferência otimizada com bismuto 240 mg 12/12 h e/ou vonoprazana.)\n2. Amoxicilina 500 mg ------------------------- 56 cápsulas\n   Tomar 2 cápsulas (1 g) de 12 em 12 horas por 14 dias.\n3. Claritromicina 500 mg ---------------------- 28 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas por 14 dias.\n(Amoxicilina e claritromicina: receita de antimicrobiano em 2 vias. Controle de cura ≥ 4 semanas após o fim, com IBP suspenso há 2 semanas.)" },
       { contexto: "Hospitalar", texto: "Omeprazol 40 mg (frasco-ampola) — reconstituir com o diluente próprio (10 mL) e fazer IV lento em 2,5–5 min, 1 vez ao dia (ou em SF 0,9% 100 mL em 20–30 min)." }
     ]
   },
@@ -379,15 +381,15 @@ adicionarMedicamentos([
     ] },
   { id: "oleo-mineral", nomes: ["Óleo mineral", "oleo mineral", "vaselina líquida", "vaselina liquida", "petrolato líquido"], classe: "intestinais", receita: "simples",
     tags: [],
-    usos: "Constipação e fecaloma (lubrificante); em criança, após 1 ano e sem risco de aspiração",
+    usos: "Constipação e fecaloma (lubrificante); em criança, a partir de 2 anos, sem comprometimento neurológico nem risco de aspiração (AGA/NASPGHAN 2026)",
     adulto: "15–45 mL VO 1×/dia, longe das refeições",
     renal: [],
     gestacao: { nivel: "evitar", texto: "Evitar uso prolongado (reduz absorção de vitaminas lipossolúveis); preferir lactulose ou macrogol." },
     alergia: [],
-    contra: ["< 1 ano", "Risco de aspiração (pneumonia lipoídica): disfagia, DRGE, vômitos, alteração neurológica, acamado", "Não dar antes de deitar nem em posição deitada", "Uso prolongado: má absorção de vitaminas A, D, E, K"],
+    contra: ["< 2 anos", "Comprometimento neurológico", "Risco de aspiração (pneumonia lipoídica): disfagia, DRGE, vômitos, alteração neurológica, acamado", "Não dar antes de deitar nem em posição deitada", "Uso prolongado: má absorção de vitaminas A, D, E, K"],
     prescrever: [
       { contexto: "Adulto — ambulatorial", texto: "USO ORAL\n1. Óleo mineral ------------------------------ 1 frasco\n   Tomar 15 mL (1 colher de sopa) 1 vez ao dia, longe das refeições, sentado.\n   Não tomar antes de deitar." },
-      { contexto: "Criança (> 1 ano, sem risco de aspiração)", texto: "USO ORAL\n1. Óleo mineral ------------------------------ 1 frasco\n   Dar ___ mL 1 vez ao dia, longe das refeições, com a criança sentada.\n   (1–3 mL/kg/dia; máximo 90 mL/dia; não dar antes de deitar)" }
+      { contexto: "Criança (≥ 2 anos, sem comprometimento neurológico nem risco de aspiração)", texto: "USO ORAL\n1. Óleo mineral ------------------------------ 1 frasco\n   Dar ___ mL 1 vez ao dia, longe das refeições, com a criança sentada.\n   (1–3 mL/kg/dia; máximo 90 mL/dia; não dar antes de deitar)" }
     ] },
   { id: "macrogol", nomes: ["Macrogol", "polietilenoglicol", "PEG 3350", "PEG 4000"], classe: "intestinais", receita: "simples",
     tags: [],
@@ -400,7 +402,7 @@ adicionarMedicamentos([
     prescrever: [
       { contexto: "Adulto — constipação", texto: "USO ORAL\n1. Macrogol 3350 pó para solução oral -------- 1 caixa (sachês) ou frasco\n   Dissolver 1 sachê (ou 17 g do pó) em 1 copo de água (200 mL) e tomar 1 vez ao dia.\n   Ajustar a dose até evacuações macias diárias." },
       { contexto: "Criança — manutenção", texto: "USO ORAL\n1. Macrogol 3350 pó para solução oral -------- 1 frasco\n   Dissolver ___ g em água (cerca de 10 mL de água por grama) e dar 1 vez ao dia.\n   (0,4–0,8 g/kg/dia; máximo 17 g/dia; ajustar até fezes macias diárias)" },
-      { contexto: "Criança — desimpactação fecal (3–6 dias)", texto: "USO ORAL\n1. Macrogol 3350 pó para solução oral -------- 1 frasco\n   Dissolver ___ g em água e dar 1 vez ao dia por 3 a 6 dias; depois passar para a dose de manutenção.\n   (1–1,5 g/kg/dia)" }
+      { contexto: "Criança — desimpactação fecal (3–5 dias)", texto: "USO ORAL\n1. Macrogol 3350 pó para solução oral -------- 1 frasco\n   Dissolver ___ g em água e dar 1 vez ao dia por 3 a 5 dias; depois passar para a dose de manutenção.\n   (1–1,5 g/kg/dia)" }
     ] },
   { id: "loperamida", nomes: ["Loperamida"], classe: "intestinais", receita: "simples",
     tags: [],

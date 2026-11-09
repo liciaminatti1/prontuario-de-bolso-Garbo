@@ -25,7 +25,7 @@ registrarFicha({
     "Limpeza suave do conduto (aspiração ou mecha seca) se muito debris; não irrigar se suspeita de perfuração ou em diabéticos",
     "Gotas otológicas de antibiótico ± corticoide por 7 dias (até 10 dias se persistência)",
     "Conduto muito edemaciado: colocar mecha (gaze/algodão) para levar a gota até o fundo, trocar em 24–72 h",
-    "Membrana timpânica não visualizada, perfuração ou tubo de ventilação: usar quinolona sem aminoglicosídeo (evitar neomicina — ototóxica)",
+    "Membrana timpânica não visualizada, perfuração ou tubo de ventilação: usar quinolona isolada — ciprofloxacino 3,5 mg/mL solução otológica (Ciloxan otológico), sem aminoglicosídeo e sem corticoide (evitar neomicina — ototóxica; ciprofloxacino + hidrocortisona é contraindicado com membrana perfurada)",
     "Otomicose (debris branco/preto, prurido): limpeza + antifúngico tópico",
     "Manter o ouvido seco durante o tratamento"
   ],
@@ -51,7 +51,7 @@ registrarFicha({
       intervalo: "12/12 h",
       duracao: "7 dias",
       monitorizacao: "Melhora da dor em 48–72 h",
-      contraindicacoes: "Perfuração timpânica suspeita ou confirmada (bula); < 1 ano",
+      contraindicacoes: "Perfuração timpânica suspeita ou confirmada (bula: Otociriax, Cipro HC); < 1 ano",
       ajustes: "Aquecer o frasco na mão, deitar com a orelha para cima por 3–5 min após aplicar; tracionar o pavilhão"
     },
     {
@@ -66,15 +66,15 @@ registrarFicha({
       ajustes: "Opção de menor custo"
     },
     {
-      droga: "Ciprofloxacino ou ofloxacino em solução (sem aminoglicosídeo) — membrana perfurada/tubo",
+      droga: "Ciprofloxacino 3,5 mg/mL solução otológica (Ciloxan otológico) — membrana perfurada/tubo",
       linha: "alt",
-      dose: "Conforme bula do produto disponível",
+      dose: "Conforme bula (uso em > 1 ano)",
       via: "Otológica",
       intervalo: "Conforme bula",
       duracao: "7 dias",
       monitorizacao: "—",
       contraindicacoes: "—",
-      ajustes: "Quinolonas tópicas são as únicas gotas consideradas seguras com membrana não íntegra (AAO-HNS). Encaminhar ao ORL"
+      ajustes: "Quinolona isolada registrada no Brasil; a bula inclui otite média com membrana perfurada e condutos timpânicos supurativos. Quinolonas tópicas são as únicas gotas consideradas seguras com membrana não íntegra (AAO-HNS). Encaminhar ao ORL"
     },
     {
       droga: "Ciprofloxacino oral (casos selecionados)",
@@ -89,7 +89,7 @@ registrarFicha({
     }
   ],
   prescricao: {
-    ambulatorial: "OTITE EXTERNA AGUDA — ADULTO\nUSO OTOLÓGICO\n1. Ciprofloxacino 2 mg/mL + hidrocortisona 10 mg/mL suspensão otológica --- 1 frasco\n   Agitar. Pingar 3 gotas no ouvido ___ (direito/esquerdo) de 12 em 12 horas por 7 dias. Ficar deitado com o ouvido para cima por 3 a 5 minutos.\n   (alternativa: polimixina B + neomicina + hidrocortisona solução otológica — 3 gotas de 6 em 6 ou de 8 em 8 horas por 7 a 10 dias; não usar se tímpano perfurado.)\n\nUSO ORAL\n2. Dipirona 500 mg ---------------------------------- 1 caixa\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor.\n3. Ibuprofeno 400 mg -------------------------------- 10 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após as refeições, por até 3 dias se dor forte.\n\nCRIANÇA > 1 ANO\n1. Ciprofloxacino + hidrocortisona suspensão otológica — 3 gotas de 12 em 12 horas por 7 dias.\n   (ou polimixina B + neomicina + hidrocortisona — 2 gotas 3 a 4 vezes ao dia por 7 a 10 dias, se tímpano íntegro.)\n2. Dipirona 500 mg/mL gotas (25 mg/gota) — 0,4 a 0,6 gota/kg/dose (10–15 mg/kg; máx 40 gotas) de 6 em 6 horas se dor.\n   ou Ibuprofeno 5–10 mg/kg/dose (máx 400 mg) de 8 em 8 horas se dor."
+    ambulatorial: "OTITE EXTERNA AGUDA — ADULTO\nUSO OTOLÓGICO\n1. Ciprofloxacino 2 mg/mL + hidrocortisona 10 mg/mL suspensão otológica --- 1 frasco\n   Agitar. Pingar 3 gotas no ouvido ___ (direito/esquerdo) de 12 em 12 horas por 7 dias. Ficar deitado com o ouvido para cima por 3 a 5 minutos.\n   (alternativa: polimixina B + neomicina + hidrocortisona solução otológica — 3 gotas de 6 em 6 ou de 8 em 8 horas por 7 a 10 dias; não usar se tímpano perfurado.)\n   (tímpano perfurado, não visualizado ou tubo de ventilação: ciprofloxacino 3,5 mg/mL solução otológica — Ciloxan otológico — conforme bula, por 7 dias.)\n\nUSO ORAL\n2. Dipirona 500 mg ---------------------------------- 1 caixa\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor.\n3. Ibuprofeno 400 mg -------------------------------- 10 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após as refeições, por até 3 dias se dor forte.\n\nCRIANÇA > 1 ANO\n1. Ciprofloxacino + hidrocortisona suspensão otológica — 3 gotas de 12 em 12 horas por 7 dias.\n   (ou polimixina B + neomicina + hidrocortisona — 2 gotas 3 a 4 vezes ao dia por 7 a 10 dias, se tímpano íntegro.)\n2. Dipirona 500 mg/mL gotas (25 mg/gota) — 0,4 a 0,6 gota/kg/dose (10–15 mg/kg; máx 40 gotas) de 6 em 6 horas se dor.\n   ou Ibuprofeno 5–10 mg/kg/dose (máx 400 mg) de 8 em 8 horas se dor."
   },
   orientacoesRetorno: [
     "Não molhar o ouvido durante o tratamento: no banho, tampar com algodão com vaselina; não nadar por 7–10 dias",
@@ -106,8 +106,8 @@ registrarFicha({
   fontes: [
     "AAO-HNS — Clinical Practice Guideline: Acute Otitis Externa, update (2014)",
     "ABORL-CCF — Tratado de Otorrinolaringologia, 3ª ed.: otites externas (2018)",
-    "Bulas ANVISA: ciprofloxacino + hidrocortisona suspensão otológica; polimixina B + neomicina + hidrocortisona solução otológica"
+    "Bulas ANVISA: ciprofloxacino + hidrocortisona suspensão otológica (Otociriax, Cipro HC); polimixina B + neomicina + hidrocortisona solução otológica; ciprofloxacino 3,5 mg/mL solução otológica (Ciloxan otológico)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

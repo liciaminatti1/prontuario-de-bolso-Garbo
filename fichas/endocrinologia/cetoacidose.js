@@ -130,15 +130,15 @@ registrarFicha({
       ajustes: "Diluição: 100 U em 100 mL de SF 0,9% = 1 U/mL (desprezar 20 mL pelo equipo). Glicemia < 250: reduzir para 0,05 U/kg/h + soro glicosado; não desligar antes da resolução da cetose"
     },
     {
-      droga: "Insulina regular SC/IM (CAD leve, sem bomba)",
+      droga: "Análogo de insulina rápida SC — lispro, asparte ou glulisina (CAD leve/moderada, sem bomba)",
       linha: "alt",
-      dose: "0,2 U/kg e depois 0,1 U/kg",
-      via: "SC ou IM",
-      intervalo: "A cada 1 h (ou 0,3 U/kg e depois 0,2 U/kg a cada 2 h com análogo rápido)",
+      dose: "0,1 U/kg a cada 1 h ou 0,2 U/kg a cada 2 h",
+      via: "SC",
+      intervalo: "1/1 h ou 2/2 h",
       duracao: "Até resolução",
       monitorizacao: "Glicemia horária",
       contraindicacoes: "CAD grave, choque, edema",
-      ajustes: "Consenso 2024: insulina SC é opção para CAD leve e moderada não complicada fora da UTI"
+      ajustes: "Consenso 2024: análogo rápido SC é opção para CAD leve e moderada não complicada fora da UTI. Se só houver insulina regular, usá-la SC no mesmo esquema é adaptação (não é o esquema do consenso)"
     },
     {
       droga: "Soro glicosado 5–10% (associado)",
@@ -224,9 +224,9 @@ registrarFicha({
     }
   ],
   fontes: [
-    "ADA/EASD/JBDS/AACE/DTS — Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (Diabetes Care/Diabetologia, 2024)",
+    "ADA/EASD/JBDS/AACE/DTS — Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (Diabetes Care/Diabetologia, 2024) — K 3,5–5,0: 10–20 mmol/L de soro; CAD leve/moderada: análogo rápido SC 0,1 U/kg 1/1 h ou 0,2 U/kg 2/2 h",
     "SBD — Diretriz Oficial da Sociedade Brasileira de Diabetes: Crises hiperglicêmicas agudas (2024–2025)"
   ],
-  revisao: "2026-10-21",
-  versao: "2.0"
+  revisao: "2026-11-09",
+  versao: "2.1"
 });

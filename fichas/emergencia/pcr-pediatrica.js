@@ -75,7 +75,7 @@ registrarFicha({
       pedido: "Glicemia capilar imediata.",
       porQue: "Hipoglicemia é causa e complicação frequente.",
       esperar: "—",
-      interpretacao: "< 60 mg/dL: glicose 10% 2–5 mL/kg IV/IO.",
+      interpretacao: "< 60 mg/dL: glicose 10% 5–10 mL/kg (0,5–1 g/kg) IV/IO; RN: 2 mL/kg.",
       limitacoes: "—"
     },
     {
@@ -143,7 +143,7 @@ registrarFicha({
     {
       droga: "Glicose 10%",
       linha: "adj",
-      dose: "2–5 mL/kg (0,2–0,5 g/kg)",
+      dose: "5–10 mL/kg (0,5–1 g/kg, PALS); RN: 2 mL/kg",
       via: "IV ou IO",
       intervalo: "Repetir conforme glicemia",
       duracao: "—",
@@ -154,13 +154,13 @@ registrarFicha({
     {
       droga: "Gluconato de cálcio 10%",
       linha: "adj",
-      dose: "0,5–1 mL/kg (50–100 mg/kg), máx 20 mL (2 g)",
+      dose: "0,6 mL/kg (60 mg/kg), máx 20 mL (2 g)",
       via: "IV ou IO lento",
       intervalo: "Pode repetir",
       duracao: "—",
       monitorizacao: "—",
       contraindicacoes: "Não usar de rotina",
-      ajustes: "Só se hipercalemia, hipocalcemia, hipermagnesemia ou intoxicação por bloqueador de canal de cálcio"
+      ajustes: "Só se hipercalemia, hipocalcemia, hipermagnesemia ou intoxicação por bloqueador de canal de cálcio. Variação entre tabelas PALS/hospitais pediátricos: alguns aceitam 60–100 mg/kg e máximo de 2 g (Children's Minnesota) ou 3 g (CHEO, BC Children's). Alternativa: cloreto de cálcio 10% 20 mg/kg (0,2 mL/kg), máx 1 g"
     },
     {
       droga: "Bicarbonato de sódio 8,4% (1 mEq/mL)",
@@ -204,7 +204,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "PCR — CRIANÇA (peso: ___ kg; registrar horários)\n1. RCP: compressões 100–120/min, 1/3 do diâmetro do tórax; 15:2 (2 socorristas). Com via aérea avançada: 1 ventilação a cada 2–3 s e compressões contínuas.\n2. O₂ 100% por bolsa-válvula-máscara (bolsa pediátrica, máscara do tamanho adequado).\n3. Adrenalina: diluir 1 mL de adrenalina 1 mg/mL + 9 mL de SF 0,9% (0,1 mg/mL). Fazer 0,1 mL/kg (0,01 mg/kg; máx 10 mL = 1 mg) IV/IO em bolus + 5–10 mL de SF 0,9%, a cada 3–5 min.\n   Ex.: 10 kg = 1 mL; 20 kg = 2 mL.\n4. FV/TVSP: choque 2 J/kg; depois 4 J/kg; seguintes ≥ 4 J/kg (máx 10 J/kg ou dose de adulto).\n5. FV/TVSP refratária: amiodarona 50 mg/mL — 5 mg/kg (0,1 mL/kg; máx 300 mg = 6 mL) IV/IO em bolus; repetir até 3 doses.\n   Alternativa: lidocaína 2% 1 mg/kg (0,05 mL/kg) IV/IO.\n6. Se glicemia < 60 mg/dL: glicose 10% 2–5 mL/kg IV/IO.\n7. Se hipercalemia: gluconato de cálcio 10% 0,5–1 mL/kg (máx 20 mL) IV lento + bicarbonato de sódio 8,4% 1 mL/kg IV (vias separadas).\n8. Se hipovolemia: SF 0,9% ou Ringer lactato 20 mL/kg IV/IO em bolus.\n9. Após RCE: gasometria, eletrólitos, glicemia, RX de tórax e seguir a ficha pos-pcr."
+    hospitalar: "PCR — CRIANÇA (peso: ___ kg; registrar horários)\n1. RCP: compressões 100–120/min, 1/3 do diâmetro do tórax; 15:2 (2 socorristas). Com via aérea avançada: 1 ventilação a cada 2–3 s e compressões contínuas.\n2. O₂ 100% por bolsa-válvula-máscara (bolsa pediátrica, máscara do tamanho adequado).\n3. Adrenalina: diluir 1 mL de adrenalina 1 mg/mL + 9 mL de SF 0,9% (0,1 mg/mL). Fazer 0,1 mL/kg (0,01 mg/kg; máx 10 mL = 1 mg) IV/IO em bolus + 5–10 mL de SF 0,9%, a cada 3–5 min.\n   Ex.: 10 kg = 1 mL; 20 kg = 2 mL.\n4. FV/TVSP: choque 2 J/kg; depois 4 J/kg; seguintes ≥ 4 J/kg (máx 10 J/kg ou dose de adulto).\n5. FV/TVSP refratária: amiodarona 50 mg/mL — 5 mg/kg (0,1 mL/kg; máx 300 mg = 6 mL) IV/IO em bolus; repetir até 3 doses.\n   Alternativa: lidocaína 2% 1 mg/kg (0,05 mL/kg) IV/IO.\n6. Se glicemia < 60 mg/dL: glicose 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg) IV/IO.\n7. Se hipercalemia: gluconato de cálcio 10% 0,6 mL/kg (60 mg/kg; máx 20 mL = 2 g) IV lento + bicarbonato de sódio 8,4% 1 mL/kg IV (vias separadas).\n8. Se hipovolemia: SF 0,9% ou Ringer lactato 20 mL/kg IV/IO em bolus.\n9. Após RCE: gasometria, eletrólitos, glicemia, RX de tórax e seguir a ficha pos-pcr."
   },
   orientacoesRetorno: [
     "Família: comunicar com clareza e oferecer presença durante a reanimação quando possível",
@@ -241,8 +241,9 @@ registrarFicha({
     "American Heart Association / American Academy of Pediatrics — 2025 Guidelines for CPR and ECC, Part 8: Pediatric Advanced Life Support (Circulation, 2025)",
     "American Heart Association — 2025 PALS Cardiac Arrest and Bradycardia Algorithms (2025)",
     "ILCOR — Consensus on Science with Treatment Recommendations (2025)",
+    "Tabelas de doses PALS de hospitais pediátricos (Children's Minnesota; CHEO; BC Children's Hospital): gluconato de cálcio 10% 60 mg/kg (0,6 mL/kg), máx 2–3 g; cloreto de cálcio 20 mg/kg, máx 1 g",
     "Sociedade Brasileira de Pediatria — Documentos científicos de reanimação pediátrica (consultar versão vigente)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

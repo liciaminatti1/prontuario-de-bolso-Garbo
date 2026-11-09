@@ -24,6 +24,7 @@ registrarFicha({
   conduta: [
     "Vacina HPV (PNI): rotina em dose única para meninas e meninos de 9 a 14 anos; grupos especiais (HIV, transplantados, oncológicos, imunossuprimidos, usuários de PrEP, vítimas de violência sexual e outros definidos pelo MS) com faixa etária e esquema próprios — conferir o calendário vigente; estratégias de resgate temporárias conforme o MS",
     "Vacina não trata infecção já existente e não substitui o rastreamento; não aplicar na gestação (adiar para o pós-parto); pode na lactação",
+    "Rastreamento (Diretrizes INCA 2025): teste de DNA-HPV oncogênico como exame primário, repetido a cada 5 anos se negativo; imunossuprimidas a cada 3 anos — detalhes e condutas em rastreio-cancer e lesoes-precursoras-colo",
     "Condiloma acuminado (verruga genital, HPV 6 e 11): diagnóstico clínico; biópsia se atípico, pigmentado, endurecido, ulcerado, sem resposta ou em imunossuprimido",
     "Condiloma: oferecer testagem para HIV, sífilis e hepatites B e C; exame especular (lesões no colo e vagina) e rastreio do colo conforme a idade; examinar parcerias se possível",
     "Tratamento do condiloma: domiciliar (imiquimode ou podofilotoxina) ou no serviço (ácido tricloroacético 80–90%, crioterapia, exérese ou eletrocauterização). Recidiva é comum",
@@ -90,11 +91,11 @@ registrarFicha({
   fontes: [
     "FIGO — Revised staging for carcinoma of the cervix uteri (Bhatla et al., 2018; corrigenda 2019) e Cancer Report 2021",
     "Ministério da Saúde — Diretrizes Diagnósticas e Terapêuticas do Câncer do Colo do Útero (Portaria vigente) e Lei 12.732/2012",
-    "INCA — Diretrizes Brasileiras para o Rastreamento do Câncer do Colo do Útero (2024–2025)",
+    "INCA — Diretrizes Brasileiras para o Rastreamento do Câncer do Colo do Útero, 2025 (vol. 1: DNA-HPV primário)",
     "Ministério da Saúde — PCDT para Atenção Integral às Pessoas com IST (2022): verrugas anogenitais",
     "Ministério da Saúde/PNI — Informes técnicos da vacina HPV (dose única, 2024) e Calendário Nacional de Vacinação vigente",
     "ESGO/ESTRO/ESP — Guidelines for the management of patients with cervical cancer (2023); NCCN Cervical Cancer (versão vigente)"
   ],
-  revisao: "2026-10-25",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

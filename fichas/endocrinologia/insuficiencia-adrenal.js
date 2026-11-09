@@ -175,7 +175,7 @@ registrarFicha({
     transferencia: ["Sem leito monitorizado → regulação após hidrocortisona"]
   },
   prescricao: {
-    hospitalar: "CRISE ADRENAL — ADULTO\n1. Dieta zero enquanto vômitos/hipotensão; liberar assim que tolerar.\n2. Monitor, 2 acessos, glicemia capilar de 2/2 h.\n3. Colher cortisol, ACTH, Na, K, glicemia, creatinina (não atrasar o item 4).\n4. Hidrocortisona (succinato) 100 mg IV em bolus AGORA (ou IM se sem acesso).\n5. Hidrocortisona 50 mg IV de 6/6 h (ou 200 mg em 250 mL de SF 0,9% em 24 h em bomba).\n6. SF 0,9% 1.000 mL IV na 1ª hora; depois 500 mL/h a 250 mL/h conforme PA e congestão; associar SG 5% se hipoglicemia.\n7. Se glicemia < 70: glicose 50% 40 mL IV.\n8. Tratar o desencadeante (antibiótico se infecção, culturas antes).\n9. Enoxaparina 40 mg SC 1×/dia se sem contraindicação.\n10. Controles: PA de 1/1 h, diurese, Na e K de 6/6 h nas primeiras 24 h.\n\nCRIANÇA (peso ___ kg; SC ___ m²)\n- Hidrocortisona 50–100 mg/m² IV/IM em bolus (máx. 100 mg) — até 3 anos 25 mg; 3–12 anos 50 mg; ≥ 12 anos 100 mg.\n- Depois 50–100 mg/m²/dia IV dividido de 6/6 h.\n- SF 0,9% 20 mL/kg em bolus, repetir conforme perfusão; glicemia de 1/1 h a 2/2 h; hipoglicemia: SG 10% 2–5 mL/kg IV.",
+    hospitalar: "CRISE ADRENAL — ADULTO\n1. Dieta zero enquanto vômitos/hipotensão; liberar assim que tolerar.\n2. Monitor, 2 acessos, glicemia capilar de 2/2 h.\n3. Colher cortisol, ACTH, Na, K, glicemia, creatinina (não atrasar o item 4).\n4. Hidrocortisona (succinato) 100 mg IV em bolus AGORA (ou IM se sem acesso).\n5. Hidrocortisona 50 mg IV de 6/6 h (ou 200 mg em 250 mL de SF 0,9% em 24 h em bomba).\n6. SF 0,9% 1.000 mL IV na 1ª hora; depois 500 mL/h a 250 mL/h conforme PA e congestão; associar SG 5% se hipoglicemia.\n7. Se glicemia < 70: glicose 50% 40 mL IV.\n8. Tratar o desencadeante (antibiótico se infecção, culturas antes).\n9. Enoxaparina 40 mg SC 1×/dia se sem contraindicação.\n10. Controles: PA de 1/1 h, diurese, Na e K de 6/6 h nas primeiras 24 h.\n\nCRIANÇA (peso ___ kg; SC ___ m²)\n- Hidrocortisona 50–100 mg/m² IV/IM em bolus (máx. 100 mg) — até 3 anos 25 mg; 3–12 anos 50 mg; ≥ 12 anos 100 mg.\n- Depois 50–100 mg/m²/dia IV dividido de 6/6 h.\n- SF 0,9% 20 mL/kg em bolus, repetir conforme perfusão; glicemia de 1/1 h a 2/2 h; hipoglicemia: SG 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg) IV.",
     ambulatorial: "INSUFICIÊNCIA ADRENAL — MANUTENÇÃO (adulto, exemplo)\nUSO ORAL\n1. Prednisona 5 mg -------------------------------- 30 comprimidos\n   Tomar 1 comprimido pela manhã, todos os dias. NÃO SUSPENDER.\n   (Ou hidrocortisona manipulada 10 mg ao acordar + 5 mg às 13–14 h.)\n2. Fludrocortisona 0,1 mg (só insuficiência primária) -- 30 comprimidos\n   Tomar 1 comprimido pela manhã.\n\nDIAS DE DOENÇA\n- Febre acima de 38 °C ou doença que obriga a ficar de cama: tomar o DOBRO da dose de corticoide (acima de 39 °C: o TRIPLO) por 2–3 dias e depois voltar ao normal.\n- Vômitos ou diarreia que impedem tomar o remédio: aplicar hidrocortisona 100 mg IM (se tiver em casa) e ir ao pronto-socorro.\nUSO INJETÁVEL (kit de emergência, se disponível)\n3. Hidrocortisona (succinato) 100 mg ------------- 1 frasco-ampola + diluente, seringa e agulha IM\n   Aplicar 100 mg IM em caso de vômitos, desmaio ou mal-estar grave e ir ao PS."
   },
   orientacoesRetorno: [
@@ -186,10 +186,11 @@ registrarFicha({
     "Consulta com endocrinologia em 2–4 semanas"
   ],
   fontes: [
+    "AHA/AAP — PALS 2025: glicose na hipoglicemia 0,5–1 g/kg (SG 10% 5–10 mL/kg); RN: SG 10% 2 mL/kg",
     "Endocrine Society — Diagnosis and Treatment of Primary Adrenal Insufficiency: Clinical Practice Guideline (JCEM, 2016)",
     "ESE/Endocrine Society — Diagnosis and therapy of glucocorticoid-induced adrenal insufficiency: joint guideline (Eur J Endocrinol / JCEM, 2024)",
     "Society for Endocrinology — Endocrine emergency guidance: emergency management of acute adrenal insufficiency (adrenal crisis) in adult patients (Endocrine Connections, 2016)"
   ],
-  revisao: "2026-10-24",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

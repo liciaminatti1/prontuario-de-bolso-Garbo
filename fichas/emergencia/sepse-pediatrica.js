@@ -197,7 +197,7 @@ registrarFicha({
     {
       droga: "Glicose e cálcio (correções)",
       linha: "adj",
-      dose: "Hipoglicemia: SG 10% 2–5 mL/kg · Hipocalcemia (cálcio iônico baixo): gluconato de cálcio 10% 0,5–1 mL/kg (máx. 20 mL)",
+      dose: "Hipoglicemia: SG 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg) · Hipocalcemia (cálcio iônico baixo): gluconato de cálcio 10% 0,5–1 mL/kg (máx. 20 mL)",
       via: "IV lento (cálcio em 10–20 min, com monitor)",
       intervalo: "Conforme controle",
       duracao: "—",
@@ -229,7 +229,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "CHOQUE SÉPTICO PEDIÁTRICO — 1ª HORA (peso: ___ kg)\n1. Dieta zero. Decúbito elevado se desconforto respiratório.\n2. O₂ por máscara não reinalante; após estabilização, titular para evitar hiperóxia (SSC 2026: na criança intubada após a ressuscitação, alvo conservador de SpO₂ 88–92%).\n3. Monitor cardíaco, oximetria contínua, PA a cada 5–15 min; sonda vesical para diurese horária.\n4. Acesso venoso calibroso (ou intraósseo).\n5. Colher hemocultura, lactato, gasometria venosa com eletrólitos e cálcio iônico, hemograma, coagulograma, PCR, função renal e hepática — sem atrasar o item 6.\n6. Ceftriaxona 50 mg/kg = ___ mg (máx. 2 g) IV em 30 min, diluída em SF 0,9% (ex.: 20–50 mL), de 12/12 h.\n   + Vancomicina 15 mg/kg = ___ mg IV de 6/6 h, diluída em SF 0,9% até ≤ 5 mg/mL, em 1–2 h (se choque, cateter, MRSA ou pele/partes moles).\n   + Clindamicina 10–13 mg/kg = ___ mg (máx. 900 mg/dose) IV de 8/8 h, diluída em SF 0,9% até ≤ 18 mg/mL, em 30–60 min (se suspeita de choque tóxico).\n   (< 28 dias: ampicilina + gentamicina ou cefotaxima, doses da neonatologia.)\n7. Ringer lactato 10–20 mL/kg = ___ mL IV em 5–20 min (seringa). Reavaliar após cada bolus; repetir até 40–60 mL/kg na 1ª hora se perfusão ainda inadequada e sem sinais de sobrecarga (hepatomegalia, estertores, piora da SpO₂). Sem UTI disponível e sem hipotensão: não fazer bolus.\n8. Se choque persistente após fluido ou sinais de sobrecarga: Epinefrina — diluir 0,3 mg × peso = ___ mg (___ mL da ampola 1 mg/mL) em SG 5% até 50 mL; infundir em bomba em veia periférica calibrosa ou IO a ___ mL/h (1 mL/h = 0,1 mcg/kg/min; iniciar 0,5–1 mL/h = 0,05–0,1 mcg/kg/min e titular até 3 mL/h = 0,3 mcg/kg/min). Choque quente: Norepinefrina com a mesma diluição e titulação.\n9. Glicemia capilar agora e de 1/1 h; se < 60 mg/dL: SG 10% 2–5 mL/kg IV.\n10. Se cálcio iônico baixo: gluconato de cálcio 10% 0,5–1 mL/kg (máx. 20 mL) IV em 10–20 min, com monitor, em via separada da ceftriaxona.\n11. Após ressuscitação: soro de manutenção isotônico com glicose (SG 5% + NaCl 0,9% ou solução isotônica pronta) a ___ mL/h.\n12. Dipirona 15 mg/kg (máx. 1 g) IV de 6/6 h se febre.\n13. Controles: FC, FR, PA, SpO₂, TEC e consciência a cada 15 min na 1ª hora; diurese horária (meta ≥ 1 mL/kg/h); lactato em 2–4 h; balanço hídrico.\n14. Solicitar vaga de UTI pediátrica."
+    hospitalar: "CHOQUE SÉPTICO PEDIÁTRICO — 1ª HORA (peso: ___ kg)\n1. Dieta zero. Decúbito elevado se desconforto respiratório.\n2. O₂ por máscara não reinalante; após estabilização, titular para evitar hiperóxia (SSC 2026: na criança intubada após a ressuscitação, alvo conservador de SpO₂ 88–92%).\n3. Monitor cardíaco, oximetria contínua, PA a cada 5–15 min; sonda vesical para diurese horária.\n4. Acesso venoso calibroso (ou intraósseo).\n5. Colher hemocultura, lactato, gasometria venosa com eletrólitos e cálcio iônico, hemograma, coagulograma, PCR, função renal e hepática — sem atrasar o item 6.\n6. Ceftriaxona 50 mg/kg = ___ mg (máx. 2 g) IV em 30 min, diluída em SF 0,9% (ex.: 20–50 mL), de 12/12 h.\n   + Vancomicina 15 mg/kg = ___ mg IV de 6/6 h, diluída em SF 0,9% até ≤ 5 mg/mL, em 1–2 h (se choque, cateter, MRSA ou pele/partes moles).\n   + Clindamicina 10–13 mg/kg = ___ mg (máx. 900 mg/dose) IV de 8/8 h, diluída em SF 0,9% até ≤ 18 mg/mL, em 30–60 min (se suspeita de choque tóxico).\n   (< 28 dias: ampicilina + gentamicina ou cefotaxima, doses da neonatologia.)\n7. Ringer lactato 10–20 mL/kg = ___ mL IV em 5–20 min (seringa). Reavaliar após cada bolus; repetir até 40–60 mL/kg na 1ª hora se perfusão ainda inadequada e sem sinais de sobrecarga (hepatomegalia, estertores, piora da SpO₂). Sem UTI disponível e sem hipotensão: não fazer bolus.\n8. Se choque persistente após fluido ou sinais de sobrecarga: Epinefrina — diluir 0,3 mg × peso = ___ mg (___ mL da ampola 1 mg/mL) em SG 5% até 50 mL; infundir em bomba em veia periférica calibrosa ou IO a ___ mL/h (1 mL/h = 0,1 mcg/kg/min; iniciar 0,5–1 mL/h = 0,05–0,1 mcg/kg/min e titular até 3 mL/h = 0,3 mcg/kg/min). Choque quente: Norepinefrina com a mesma diluição e titulação.\n9. Glicemia capilar agora e de 1/1 h; se < 60 mg/dL: SG 10% 5–10 mL/kg (0,5–1 g/kg, PALS; RN: 2 mL/kg) IV.\n10. Se cálcio iônico baixo: gluconato de cálcio 10% 0,5–1 mL/kg (máx. 20 mL) IV em 10–20 min, com monitor, em via separada da ceftriaxona.\n11. Após ressuscitação: soro de manutenção isotônico com glicose (SG 5% + NaCl 0,9% ou solução isotônica pronta) a ___ mL/h.\n12. Dipirona 15 mg/kg (máx. 1 g) IV de 6/6 h se febre.\n13. Controles: FC, FR, PA, SpO₂, TEC e consciência a cada 15 min na 1ª hora; diurese horária (meta ≥ 1 mL/kg/h); lactato em 2–4 h; balanço hídrico.\n14. Solicitar vaga de UTI pediátrica."
   },
   orientacoesRetorno: [
     "Explicar à família, em linguagem simples, que a infecção afetou a circulação e que a criança precisa de cuidados intensivos",
@@ -262,11 +262,12 @@ registrarFicha({
     }
   ],
   fontes: [
+    "AHA/AAP — PALS 2025: glicose na hipoglicemia 0,5–1 g/kg (SG 10% 5–10 mL/kg); RN: SG 10% 2 mL/kg",
     "Surviving Sepsis Campaign — International Guidelines for the Management of Sepsis and Septic Shock in Children 2026 (Intensive Care Medicine / Pediatric Critical Care Medicine, 2026)",
     "Schlapbach LJ, Watson RS, Sorce LR et al. — International Consensus Criteria for Pediatric Sepsis and Septic Shock (Phoenix) (JAMA, 2024)",
     "American Heart Association — 2025 Guidelines for CPR and ECC: Pediatric Advanced Life Support",
     "Instituto Latino-Americano de Sepse (ILAS) — Protocolo gerenciado de sepse pediátrica (versão vigente)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

@@ -10,7 +10,7 @@ registrarFicha({
   palavrasChave: "sangramento uterino anormal sua hemorragia uterina disfuncional menorragia metrorragia sangramento menstrual intenso palm coein polipo adenomiose mioma leiomioma hiperplasia endometrio coagulopatia von willebrand anovulacao acido tranexamico medroxiprogesterona anticoncepcional diu levonorgestrel",
   critico: {
     tempo: "Beta-hCG e estabilidade",
-    texto: "Excluir gravidez (ectópica, abortamento) e avaliar instabilidade hemodinâmica antes de tudo. Sangramento agudo intenso estável: anticoncepcional combinado 3×/dia ou medroxiprogesterona 3×/dia por 7 dias; ácido tranexâmico como alternativa ou adjuvante (cautela ao associar com estrogênio)."
+    texto: "Excluir gravidez (ectópica, abortamento) e avaliar instabilidade hemodinâmica antes de tudo. Sangramento agudo intenso estável: anticoncepcional combinado 3×/dia ou medroxiprogesterona 3×/dia por 7 dias (ou noretisterona 10 mg 12/12 h); ácido tranexâmico como alternativa ou adjuvante (cautela ao associar com estrogênio)."
   },
   alarmes: [
     "Instabilidade hemodinâmica: PAS < 90, FC > 100–120, síncope, palidez intensa",
@@ -137,18 +137,18 @@ registrarFicha({
       duracao: "7 dias; depois manutenção (ex.: 10 mg/dia 10–14 dias/mês ou contínuo)",
       monitorizacao: "Sangramento",
       contraindicacoes: "Gravidez, câncer de mama",
-      ajustes: "Opção quando estrogênio é contraindicado"
+      ajustes: "Opção quando estrogênio é contraindicado. Alternativa (FEBRASGO): noretisterona 10 mg VO 12/12 h (Primolut-Nor 10 mg)"
     },
     {
       droga: "Ácido tranexâmico",
       linha: "l1",
-      dose: "Agudo IV: 10 mg/kg (máx. 600 mg/dose) · VO: 1 g (4 comprimidos de 250 mg)",
+      dose: "Agudo VO: 500–1.000 mg (2–4 comprimidos de 250 mg) 8/8 h, ou 1 g 3–4×/dia · Agudo IV: 10 mg/kg (máx. 600 mg/dose) 8/8 h",
       via: "IV ou VO",
-      intervalo: "8/8 h",
-      duracao: "Até 5 dias (agudo) · Crônico: durante a menstruação, até 5 dias por ciclo",
+      intervalo: "8/8 h (VO 1 g: 3–4×/dia)",
+      duracao: "Agudo: 3–7 dias (esquema 1 g 3–4×/dia: 5 dias) · Crônico: durante a menstruação, até 5 dias por ciclo",
       monitorizacao: "Sangramento; sinais de trombose",
       contraindicacoes: "TEV ativo ou prévio, trombofilia, uso de anticoncepcional combinado (cautela), insuficiência renal grave (ajustar)",
-      ajustes: "IV: ampola 250 mg/5 mL (50 mg/mL); diluir em 100 mL de SF 0,9% e infundir em 10–15 min. Não hormonal; não interfere na fertilidade"
+      ajustes: "IV: ampola 250 mg/5 mL (50 mg/mL); diluir em 100 mL de SF 0,9% e infundir em 10–15 min. A dose fixa de 1 g IV é a da hemorragia pós-parto, não a do SUA. Não hormonal; não interfere na fertilidade. Incorporado ao SUS para leiomioma em mulheres em idade reprodutiva (Portaria SCTIE/MS nº 101/2026)"
     },
     {
       droga: "SIU de levonorgestrel 52 mg (sangramento menstrual intenso crônico)",
@@ -175,7 +175,7 @@ registrarFicha({
     {
       droga: "AMPD 150 mg IM trimestral / progestogênio oral contínuo",
       linha: "alt",
-      dose: "AMPD 150 mg a cada 3 meses · Progestogênio oral cíclico longo (NICE: noretisterona 15 mg/dia do 5º ao 26º dia; verificar disponibilidade da apresentação de 5 mg no Brasil)",
+      dose: "AMPD 150 mg a cada 3 meses · Progestogênio oral cíclico longo (NICE: noretisterona 15 mg/dia do 5º ao 26º dia). No Brasil a noretisterona oral é o Primolut-Nor 10 mg (½ comprimido = 5 mg; não há comprimido de 5 mg)",
       via: "IM · VO",
       intervalo: "—",
       duracao: "Manutenção",
@@ -231,8 +231,8 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "SANGRAMENTO AGUDO INTENSO, ESTÁVEL (beta-hCG negativo)\nUSO ORAL\n1. Levonorgestrel 0,15 mg + etinilestradiol 0,03 mg ---- 4 cartelas\n   Tomar 1 comprimido de 8 em 8 horas por 7 dias (usa a 1ª cartela inteira); depois iniciar nova cartela e tomar 1 comprimido ao dia por pelo menos 3 meses.\n   OU (se estrogênio contraindicado) Acetato de medroxiprogesterona 10 mg --- 42 comprimidos\n   Tomar 2 comprimidos (20 mg) de 8 em 8 horas por 7 dias.\n2. Ácido tranexâmico 250 mg ------------------------- 60 comprimidos\n   Tomar 4 comprimidos (1 g) de 8 em 8 horas por até 5 dias. (Cautela se associado ao anticoncepcional combinado: risco trombótico teórico; não usar se TEV prévio.)\n3. Metoclopramida 10 mg ----------------------------- 10 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas se enjoo.\n4. Sulfato ferroso 40 mg de ferro elementar -------- 180 comprimidos\n   Tomar 2 comprimidos juntos (80 mg de ferro elementar) 1 vez ao dia, 30 minutos antes do almoço, com suco cítrico, por 3 meses. Se enjoo, tomar em dias alternados.\n\nSANGRAMENTO MENSTRUAL INTENSO CRÔNICO (sem lesão estrutural)\n5. Ácido tranexâmico 250 mg ------------------------- 60 comprimidos\n   Tomar 4 comprimidos (1 g) de 8 em 8 horas nos dias de maior fluxo, por até 5 dias a cada menstruação.\n6. Ácido mefenâmico 500 mg -------------------------- 15 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas durante a menstruação, por até 5 dias.",
-    hospitalar: "SANGRAMENTO UTERINO AGUDO INTENSO — SALA DE EMERGÊNCIA (peso: ___ kg)\n1. Dieta zero se instável ou possibilidade de procedimento.\n2. Monitor, oximetria, 2 acessos venosos calibrosos; decúbito dorsal; O₂ se SpO₂ < 94%.\n3. Coletar: hemograma, tipagem ABO-Rh e prova cruzada, beta-hCG, TP/INR, TTPa, fibrinogênio, plaquetas, creatinina.\n4. Ringer lactato ou SF 0,9% 500–1.000 mL IV rápido se hipotensa; reavaliar após cada alíquota.\n5. Concentrado de hemácias se instabilidade persistente ou Hb < 7 g/dL.\n6. Ácido tranexâmico 10 mg/kg (máx. 600 mg) + SF 0,9% 100 mL IV em 10–15 min de 8/8 h (ampola 250 mg/5 mL; 600 mg = 12 mL).\n7. Se estável e sem contraindicação: levonorgestrel 0,15 mg + etinilestradiol 0,03 mg 1 comprimido VO de 8/8 h por 7 dias (ou acetato de medroxiprogesterona 20 mg VO de 8/8 h).\n8. Metoclopramida 10 mg + SF 0,9% 20 mL IV lento de 8/8 h se náusea.\n9. Sem resposta em 24 h ou instável: ginecologia — tamponamento com sonda Foley (balão com 30 mL), AMIU/curetagem com histopatológico, embolização ou cirurgia.\n10. Controles: sinais vitais de 1/1 h até estabilizar; contagem de absorventes; diurese; Hb de 6/6 h a 12/12 h."
+    ambulatorial: "SANGRAMENTO AGUDO INTENSO, ESTÁVEL (beta-hCG negativo)\nUSO ORAL\n1. Levonorgestrel 0,15 mg + etinilestradiol 0,03 mg ---- 4 cartelas\n   Tomar 1 comprimido de 8 em 8 horas por 7 dias (usa a 1ª cartela inteira); depois iniciar nova cartela e tomar 1 comprimido ao dia por pelo menos 3 meses.\n   OU (se estrogênio contraindicado) Acetato de medroxiprogesterona 10 mg --- 42 comprimidos\n   Tomar 2 comprimidos (20 mg) de 8 em 8 horas por 7 dias.\n   OU Noretisterona 10 mg (Primolut-Nor) ------------- 14 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas por 7 dias.\n2. Ácido tranexâmico 250 mg ------------------------- 84 comprimidos\n   Tomar 2 a 4 comprimidos (500 mg a 1 g) de 8 em 8 horas por 3 a 7 dias. (Cautela se associado ao anticoncepcional combinado: risco trombótico teórico; não usar se TEV prévio.)\n3. Metoclopramida 10 mg ----------------------------- 10 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas se enjoo.\n4. Sulfato ferroso 40 mg de ferro elementar -------- 180 comprimidos\n   Tomar 2 comprimidos juntos (80 mg de ferro elementar) 1 vez ao dia, 30 minutos antes do almoço, com suco cítrico, por 3 meses. Se enjoo, tomar em dias alternados.\n\nSANGRAMENTO MENSTRUAL INTENSO CRÔNICO (sem lesão estrutural)\n5. Ácido tranexâmico 250 mg ------------------------- 60 comprimidos\n   Tomar 4 comprimidos (1 g) de 8 em 8 horas nos dias de maior fluxo, por até 5 dias a cada menstruação.\n6. Ácido mefenâmico 500 mg -------------------------- 15 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas durante a menstruação, por até 5 dias.",
+    hospitalar: "SANGRAMENTO UTERINO AGUDO INTENSO — SALA DE EMERGÊNCIA (peso: ___ kg)\n1. Dieta zero se instável ou possibilidade de procedimento.\n2. Monitor, oximetria, 2 acessos venosos calibrosos; decúbito dorsal; O₂ se SpO₂ < 94%.\n3. Coletar: hemograma, tipagem ABO-Rh e prova cruzada, beta-hCG, TP/INR, TTPa, fibrinogênio, plaquetas, creatinina.\n4. Ringer lactato ou SF 0,9% 500–1.000 mL IV rápido se hipotensa; reavaliar após cada alíquota.\n5. Concentrado de hemácias se instabilidade persistente ou Hb < 7 g/dL.\n6. Ácido tranexâmico 10 mg/kg (máx. 600 mg) + SF 0,9% 100 mL IV em 10–15 min de 8/8 h (ampola 250 mg/5 mL; 600 mg = 12 mL).\n7. Se estável e sem contraindicação: levonorgestrel 0,15 mg + etinilestradiol 0,03 mg 1 comprimido VO de 8/8 h por 7 dias (ou acetato de medroxiprogesterona 20 mg VO de 8/8 h, ou noretisterona 10 mg VO de 12/12 h, por 7 dias).\n8. Metoclopramida 10 mg + SF 0,9% 20 mL IV lento de 8/8 h se náusea.\n9. Sem resposta em 24 h ou instável: ginecologia — tamponamento com sonda Foley (balão com 30 mL), AMIU/curetagem com histopatológico, embolização ou cirurgia.\n10. Controles: sinais vitais de 1/1 h até estabilizar; contagem de absorventes; diurese; Hb de 6/6 h a 12/12 h."
   },
   orientacoesRetorno: [
     "Tomar os comprimidos no horário certo; o sangramento deve diminuir em 1–2 dias",
@@ -261,8 +261,10 @@ registrarFicha({
     "ACOG — Committee Opinion nº 557: Management of acute abnormal uterine bleeding in nonpregnant reproductive-aged women (2013, reafirmado)",
     "ACOG — Committee Opinion nº 785: Screening and management of bleeding disorders in adolescents with heavy menstrual bleeding (2019)",
     "NICE — NG88: Heavy menstrual bleeding: assessment and management (atualizado 2021)",
-    "FEBRASGO — Sangramento uterino anormal (Série Orientações e Recomendações FEBRASGO)"
+    "FEBRASGO — Sangramento uterino anormal (Série Orientações e Recomendações FEBRASGO); ácido tranexâmico IV 10 mg/kg 8/8 h (Afya/FEBRASGO, 2021)",
+    "Ministério da Saúde — Portaria SCTIE/MS nº 101, de 08/01/2026: incorporação do ácido tranexâmico ao SUS para leiomioma em mulheres em idade reprodutiva",
+    "Bula Primolut-Nor (noretisterona 10 mg) — Anvisa"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

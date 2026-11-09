@@ -464,11 +464,11 @@ VZ_FARMACOS.push(
         repeticao: "Se persistir: 10 mg/kg adicionais, até total de 40 mg/kg, conforme neonatologista",
         observacoes: "Primeira escolha OMS e ILAE. Antes: corrigir hipoglicemia, hipocalcemia e hipóxia." }
     ],
-    contraindicacoes: ["Porfiria", "Hipersensibilidade a barbitúricos", "Insuficiência respiratória grave sem suporte"],
+    contraindicacoes: ["Porfiria", "Hipersensibilidade a barbitúricos", "Insuficiência respiratória grave sem suporte", "Alerta da bula (Fenocris®, Cristália): contraindicado em crianças do sexo feminino, mulheres com potencial de engravidar e gestantes, salvo necessidade clara"],
     cuidados: ["Depressão respiratória e sedação prolongada", "Hipotensão com infusão rápida", "Solução alcalina: irritante em extravasamento", "Indutor enzimático: muitas interações"],
     adversos: ["Sedação", "Apneia", "Hipotensão", "Excitação paradoxal em crianças"],
     monitorizacao: ["SpO2 e FR contínuas", "PA", "Nível de consciência", "Nível sérico no destino"],
-    fontes: ["American Epilepsy Society — Guideline for the treatment of convulsive status epilepticus in children and adults (2016)", "OMS — Guidelines on neonatal seizures (2011)", "ILAE — Treatment of neonatal seizures (2023)", "Bula ANVISA — fenobarbital sódico injetável (Gardenal)"]
+    fontes: ["American Epilepsy Society — Guideline for the treatment of convulsive status epilepticus in children and adults (2016)", "OMS — Guidelines on neonatal seizures (2011)", "ILAE — Treatment of neonatal seizures (2023)", "Bula ANVISA — fenobarbital sódico injetável (Gardenal)", "Bula Fenocris® (Cristália) — fenobarbital sódico 100 mg/mL injetável"]
   },
 
   /* ---------------- LEVETIRACETAM ---------------- */
@@ -646,7 +646,7 @@ VZ_FARMACOS.push(
       { id: "crise-hipertensiva-gestante", rotulo: "Hipertensão grave na gestação/puerpério (PAS ≥ 160 ou PAD ≥ 110)", faixa: "adulto", modo: "bolus",
         dose: { min: 5, max: 5, unidade: "mg" }, doseMax: { valor: 30, unidade: "mg" },
         diluicao: "1 ampola (20 mg) + 19 mL de AD = 20 mL (1 mg/mL); aplicar 5 mL (5 mg)", diluicaoPadrao: null,
-        via: "IV", velocidade: "Lento, em 1–2 min", repeticao: "5 mg a cada 20 min até controle; dose máxima total 30 mg (MS)",
+        via: "IV", velocidade: "Lento, em 1–2 min", repeticao: "5 mg a cada 20 min até controle; se sem resposta com 30 mg, considerar outro fármaco (alguns protocolos até 45 mg)",
         observacoes: "Meta: PAS 140–150 e PAD 90–100 mmHg; não reduzir bruscamente (sofrimento fetal). Associar sulfato de magnésio na pré-eclâmpsia grave. Medir PA a cada 5 min após cada dose." },
       { id: "crise-hipertensiva-adulto", rotulo: "Emergência hipertensiva — adulto não gestante (2ª linha)", faixa: "adulto", modo: "bolus",
         dose: { min: 10, max: 20, unidade: "mg" }, doseMax: { valor: 20, unidade: "mg" },

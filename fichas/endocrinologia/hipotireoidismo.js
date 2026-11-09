@@ -22,7 +22,7 @@ registrarFicha({
     "Confirmar TSH alterado em nova dosagem com T4 livre (4–12 semanas, exceto se TSH muito alto ou gestante)",
     "Anti-TPO para definir etiologia autoimune",
     "Clínico: levotiroxina",
-    "Subclínico: tratar se TSH ≥ 10; na gestação ou desejo de gestar, confirmar o TSH e seguir o pré-natal (gestante eutireoidiana com anti-TPO positivo não recebe levotiroxina — ATA 2026); individualizar se 4,5–10",
+    "Subclínico: tratar se TSH ≥ 10; individualizar se 4,5–10. Gestação (ATA 2026): o anti-TPO deixa de guiar o tratamento; levotiroxina só se o subclínico for diagnosticado no 1º trimestre e confirmado em exame repetido; não tratar se diagnosticado depois do 1º trimestre; gestante eutireoidiana com anti-TPO positivo não recebe levotiroxina",
     "Orientar tomada em jejum e interações"
   ],
   fataisExcluir: [
@@ -70,7 +70,7 @@ registrarFicha({
       pedido: "Anticorpo antitireoperoxidase (anti-TPO).",
       porQue: "Confirma tireoidite de Hashimoto e prediz progressão do subclínico.",
       esperar: "Positivo na maioria dos hipotireoidismos primários.",
-      interpretacao: "Positivo + subclínico → maior chance de evolução; favorece tratar.",
+      interpretacao: "Positivo + subclínico → maior chance de evolução; favorece tratar (fora da gestação). Na gestação, o anti-TPO não guia mais o tratamento (ATA 2026).",
       limitacoes: "Não repetir."
     },
     {
@@ -97,13 +97,13 @@ registrarFicha({
     {
       droga: "Levotiroxina na gestação",
       linha: "l1",
-      dose: "Já em uso: aumentar ~25–30% ao confirmar gestação (ex.: 2 comprimidos extras por semana)",
+      dose: "Já em uso: aumentar 20–30% ao confirmar gestação (ex.: 2 comprimidos extras por semana). TSH-alvo < 2,5 (ATA 2026)",
       via: "VO",
       intervalo: "1×/dia",
       duracao: "Retornar à dose prévia após o parto",
       monitorizacao: "TSH a cada 4 semanas até 20 semanas",
       contraindicacoes: "—",
-      ajustes: "Encaminhar ao pré-natal de alto risco conforme protocolo local"
+      ajustes: "Encaminhar ao pré-natal de alto risco conforme protocolo local. Ingestão de iodo na gestação: 250 mcg/dia (ATA 2026)"
     }
   ],
   destino: {
@@ -130,7 +130,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "ADULTO JOVEM SEM CARDIOPATIA — DOSE PLENA (1,6 mcg/kg/dia)\nUSO ORAL\n1. Levotiroxina sódica ___ mcg (ex.: 100 mcg para 60–65 kg) ---- 30 comprimidos\n   Tomar 1 comprimido em jejum, com água, 30 a 60 minutos antes do café da manhã, todos os dias. Uso contínuo.\n\nIDOSO, CARDIOPATA OU HIPOTIREOIDISMO SUBCLÍNICO\nUSO ORAL\n1. Levotiroxina sódica 25 mcg -------------------- 30 comprimidos\n   Tomar 1 comprimido em jejum, 30 a 60 minutos antes do café, todos os dias (idoso/cardiopata: pode iniciar com ½ comprimido = 12,5 mcg). Aumentar 12,5–25 mcg a cada 6–8 semanas conforme TSH.\n\nGESTANTE JÁ EM USO\n- Ao confirmar a gravidez, aumentar a dose em 25–30% (ex.: tomar 2 comprimidos extras por semana) e dosar TSH em 4 semanas.\n\nPEDIDO DE EXAMES (6–8 semanas após início ou ajuste)\nTSH e T4 livre."
+    ambulatorial: "ADULTO JOVEM SEM CARDIOPATIA — DOSE PLENA (1,6 mcg/kg/dia)\nUSO ORAL\n1. Levotiroxina sódica ___ mcg (ex.: 100 mcg para 60–65 kg) ---- 30 comprimidos\n   Tomar 1 comprimido em jejum, com água, 30 a 60 minutos antes do café da manhã, todos os dias. Uso contínuo.\n\nIDOSO, CARDIOPATA OU HIPOTIREOIDISMO SUBCLÍNICO\nUSO ORAL\n1. Levotiroxina sódica 25 mcg -------------------- 30 comprimidos\n   Tomar 1 comprimido em jejum, 30 a 60 minutos antes do café, todos os dias (idoso/cardiopata: pode iniciar com ½ comprimido = 12,5 mcg). Aumentar 12,5–25 mcg a cada 6–8 semanas conforme TSH.\n\nGESTANTE JÁ EM USO\n- Ao confirmar a gravidez, aumentar a dose em 20–30% (ex.: tomar 2 comprimidos extras por semana) e dosar TSH em 4 semanas.\n\nPEDIDO DE EXAMES (6–8 semanas após início ou ajuste)\nTSH e T4 livre."
   },
   orientacoesRetorno: [
     "Tomar a levotiroxina todo dia em jejum, só com água, e esperar 30–60 min para comer",
@@ -145,8 +145,8 @@ registrarFicha({
     "SBEM — Consenso Brasileiro para Abordagem Clínica e Tratamento do Hipotireoidismo Subclínico em Adultos (Arq Bras Endocrinol Metab, 2013)",
     "ATA — Guidelines for the Treatment of Hypothyroidism (2014)",
     "SBEM — Posicionamento sobre hipotireoidismo primário em situações especiais (Arch Endocrinol Metab, 2022)",
-    "ATA — 2026 Guidelines for Thyroid Disease in Preconception, Pregnancy, and the Postpartum (Thyroid, 2026): não tratar com levotiroxina a gestante eutireoidiana, mesmo com anti-TPO positivo"
+    "ATA — 2026 Guidelines for Thyroid Disease in Preconception, Pregnancy, and the Postpartum (Korevaar et al., Thyroid, 31/05/2026): anti-TPO não guia o tratamento do subclínico; não tratar a gestante eutireoidiana, mesmo com anti-TPO positivo"
   ],
-  revisao: "2026-10-21",
-  versao: "1.1"
+  revisao: "2026-11-09",
+  versao: "1.2"
 });

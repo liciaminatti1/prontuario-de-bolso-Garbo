@@ -24,7 +24,7 @@ registrarFicha({
   ],
   condutaInicial: [
     "Triagem prioritária: sinais vitais, SpO₂, dor (escala numérica ou de faces), temperatura, tamanho do baço (comparar com o registro)",
-    "Analgesia em até 60 min: dor moderada/intensa → morfina IV ou SC + dipirona; reavaliar a cada 15–30 min",
+    "Analgesia em até 60 min, escalonada (OMS 2026): AINE como analgesia inicial, com dipirona ou paracetamol; dor moderada/intensa → morfina IV ou SC associada ao AINE (preferível a opioide isolado) + dipirona; reavaliar a cada 15–30 min",
     "Acesso venoso; hemograma com reticulócitos, tipagem e prova cruzada; bioquímica",
     "Febre ≥ 38,5 °C: hemocultura e ceftriaxona IV sem esperar exames",
     "Hidratação de manutenção (oral ou IV); não fazer hiper-hidratação (risco de STA e congestão)",
@@ -46,7 +46,7 @@ registrarFicha({
       "Genótipo (SS, SC, Sβ⁰, Sβ⁺), Hb basal, tamanho basal do baço, transfusões e aloanticorpos (cartão do hemocentro)",
       "Localização e intensidade da dor; é igual às crises habituais? analgésicos já usados em casa",
       "Febre, tosse, dor torácica, dispneia",
-      "Uso de hidroxiureia, penicilina profilática, vacinas em dia",
+      "Uso de hidroxiureia (OMS 2026: fortemente recomendada dos 9 meses aos 19 anos), penicilina profilática, vacinas em dia",
       "Cefaleia, fraqueza, alteração da fala, convulsão",
       "Gatilhos: frio, desidratação, infecção, esforço, estresse, gestação"
     ],
@@ -139,14 +139,14 @@ registrarFicha({
     },
     {
       droga: "Cetorolaco ou ibuprofeno (AINE)",
-      linha: "adj",
+      linha: "l1",
       dose: "Cetorolaco: criança 0,5 mg/kg (máx. 30 mg); adulto 30 mg IV (15 mg se ≥ 65 anos/< 50 kg) · Ibuprofeno oral 10 mg/kg (criança: máx. 400 mg/dose; adulto: 600 mg)",
       via: "IV / oral",
       intervalo: "6/6 h (cetorolaco) · 8/8 h (ibuprofeno)",
       duracao: "Cetorolaco: máx. 5 dias",
       monitorizacao: "Creatinina, sangramento",
       contraindicacoes: "Lesão renal, desidratação, gestação, sangramento, úlcera",
-      ajustes: "Muitos pacientes falciformes têm nefropatia; conferir creatinina"
+      ajustes: "OMS 2026 (crianças e adolescentes): AINE sugerido como analgesia inicial da crise; AINE + opioide preferível a opioide isolado na dor moderada a grave. Muitos pacientes falciformes têm nefropatia; conferir creatinina e hidratação"
     },
     {
       droga: "Ceftriaxona (febre)",
@@ -204,7 +204,7 @@ registrarFicha({
     ],
     alta: [
       "Dor controlada com analgésico oral, afebril (ou febre em criança > 5 anos, bom estado, culturas colhidas, ceftriaxona feita e retorno garantido em 24 h — conforme protocolo do hemocentro), Hb estável, sem STA",
-      "Retorno ao hemocentro/hematologista em poucos dias"
+      "Retorno ao hemocentro/hematologista em poucos dias; se não usa hidroxiureia e tem 9 meses a 19 anos, discutir início (OMS 2026: forte recomendação)"
     ],
     observacao: [
       "Crise álgica que melhora com 1–2 doses de opioide: observar 4–6 h"
@@ -218,8 +218,8 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "CRISE ÁLGICA NA DOENÇA FALCIFORME — CRIANÇA (peso: ___ kg)\n1. Dieta livre conforme aceitação; estimular líquidos orais.\n2. Soro de manutenção (Holliday-Segar): SG 5% + NaCl (solução isotônica) ___ mL/h; NÃO hiper-hidratar. Bolus só se desidratada.\n3. Morfina 0,1 mg/kg/dose = ___ mg (máx. 10 mg) IV lento (diluir 10 mg em 9 mL SF 0,9% = 1 mg/mL). Reavaliar dor em 15–30 min; se dor persistente, repetir 25–50% da dose. Depois: ___ mg IV de 4/4 h fixa.\n4. Dipirona 25 mg/kg/dose = ___ mg (máx. 1 g) IV de 6/6 h fixa.\n5. Lactulose 667 mg/mL 0,5–1 mL/kg/dia (máx. 30 mL) VO 1 vez ao dia enquanto em uso de opioide.\n6. Naloxona — deixar prescrita: se sonolência excessiva ou FR baixa com paciente respirando, doses pequenas IV repetidas e tituladas (para não reverter toda a analgesia); se apneia ou parada, 0,1 mg/kg (máx. 2 mg) IV.\n7. Espirometria de incentivo: 10 inspirações profundas a cada 2 h acordado.\n8. O₂ se SpO₂ < 95% ou abaixo do basal.\n9. SE FEBRE ≥ 38,5 °C: colher hemocultura e fazer Ceftriaxona 75 mg/kg = ___ mg (máx. 2 g) IV em 30 min, diluída em SF 0,9% 50 mL, 1 vez ao dia (100 mg/kg/dia, máx. 4 g/dia, de 12/12 h se meningite).\n10. SE STA: Ceftriaxona como acima + Azitromicina 10 mg/kg no D1 (máx. 500 mg) e 5 mg/kg (máx. 250 mg) D2–D5 VO; concentrado de hemácias fenotipado 10 mL/kg em 2–4 h se Hb > 1 g/dL abaixo do basal; avisar hematologista.\n11. Controles: sinais vitais e SpO₂ de 4/4 h (contínua se opioide em infusão), escala de dor de 2/2 h, baço 1 vez por turno, diurese, Hb e reticulócitos diários.\n\nADULTO: Morfina 0,1 mg/kg (em geral 5–10 mg) IV/SC, repetir conforme acima; Dipirona 1 g IV de 6/6 h; Cetorolaco 30 mg IV de 6/6 h por até 5 dias se creatinina normal; Ceftriaxona 2 g IV 1 vez ao dia se febre; Azitromicina 500 mg D1 e 250 mg D2–D5 na STA; Enoxaparina 40 mg SC 1 vez ao dia (profilaxia de TEV) se internado e sem contraindicação.",
-    ambulatorial: "ALTA APÓS CRISE ÁLGICA — ADULTO\nUSO ORAL\n1. Dipirona 500 mg ------------------------------------ 30 comprimidos\n   Tomar 2 comprimidos (1 g) de 6 em 6 horas por 3 dias, depois se dor.\n2. Ibuprofeno 600 mg ---------------------------------- 10 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após refeições, por até 3 dias (somente se função renal normal).\n3. Codeína 30 mg + paracetamol 500 mg ---------------- 12 comprimidos (receita de controle especial)\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor forte apesar dos itens 1 e 2.\n\nCRIANÇA (peso: ___ kg)\n1. Dipirona 500 mg/mL gotas — 15–25 mg/kg por dose (aprox. 1 gota/kg, máximo 40 gotas) de 6 em 6 horas por 3 dias, depois se dor.\n2. Ibuprofeno 50 mg/mL — 10 mg/kg por dose = 0,2 mL/kg (máximo 8 mL = 400 mg por dose) de 8 em 8 horas por até 3 dias, se hidratada e com função renal normal.\n(Codeína: contraindicada em menores de 12 anos.)\n\nManter hidroxiureia, ácido fólico e penicilina profilática conforme o hemocentro."
+    hospitalar: "CRISE ÁLGICA NA DOENÇA FALCIFORME — CRIANÇA (peso: ___ kg)\n1. Dieta livre conforme aceitação; estimular líquidos orais.\n2. Soro de manutenção (Holliday-Segar): SG 5% + NaCl (solução isotônica) ___ mL/h; NÃO hiper-hidratar. Bolus só se desidratada.\n3. Morfina 0,1 mg/kg/dose = ___ mg (máx. 10 mg) IV lento (diluir 10 mg em 9 mL SF 0,9% = 1 mg/mL). Reavaliar dor em 15–30 min; se dor persistente, repetir 25–50% da dose. Depois: ___ mg IV de 4/4 h fixa.\n4. Dipirona 25 mg/kg/dose = ___ mg (máx. 1 g) IV de 6/6 h fixa.\n5. AINE associado (OMS 2026), se hidratada e creatinina normal: cetorolaco 0,5 mg/kg = ___ mg (máx. 30 mg) IV de 6/6 h por até 5 dias, ou ibuprofeno 10 mg/kg = ___ mg (máx. 400 mg) VO de 8/8 h.\n6. Lactulose 667 mg/mL 0,5–1 mL/kg/dia (máx. 30 mL) VO 1 vez ao dia enquanto em uso de opioide.\n7. Naloxona — deixar prescrita: se sonolência excessiva ou FR baixa com paciente respirando, doses pequenas IV repetidas e tituladas (para não reverter toda a analgesia); se apneia ou parada, 0,1 mg/kg (máx. 2 mg) IV.\n8. Espirometria de incentivo: 10 inspirações profundas a cada 2 h acordado.\n9. O₂ se SpO₂ < 95% ou abaixo do basal.\n10. SE FEBRE ≥ 38,5 °C: colher hemocultura e fazer Ceftriaxona 75 mg/kg = ___ mg (máx. 2 g) IV em 30 min, diluída em SF 0,9% 50 mL, 1 vez ao dia (100 mg/kg/dia, máx. 4 g/dia, de 12/12 h se meningite).\n11. SE STA: Ceftriaxona como acima + Azitromicina 10 mg/kg no D1 (máx. 500 mg) e 5 mg/kg (máx. 250 mg) D2–D5 VO; concentrado de hemácias fenotipado 10 mL/kg em 2–4 h se Hb > 1 g/dL abaixo do basal; avisar hematologista.\n12. Controles: sinais vitais e SpO₂ de 4/4 h (contínua se opioide em infusão), escala de dor de 2/2 h, baço 1 vez por turno, diurese, Hb e reticulócitos diários.\n\nADULTO: Morfina 0,1 mg/kg (em geral 5–10 mg) IV/SC, repetir conforme acima; Dipirona 1 g IV de 6/6 h; Cetorolaco 30 mg IV de 6/6 h por até 5 dias se creatinina normal; Ceftriaxona 2 g IV 1 vez ao dia se febre; Azitromicina 500 mg D1 e 250 mg D2–D5 na STA; Enoxaparina 40 mg SC 1 vez ao dia (profilaxia de TEV) se internado e sem contraindicação.",
+    ambulatorial: "ALTA APÓS CRISE ÁLGICA — ADULTO\nUSO ORAL\n1. Dipirona 500 mg ------------------------------------ 30 comprimidos\n   Tomar 2 comprimidos (1 g) de 6 em 6 horas por 3 dias, depois se dor.\n2. Ibuprofeno 600 mg ---------------------------------- 10 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após refeições, por até 3 dias (somente se função renal normal).\n3. Codeína 30 mg + paracetamol 500 mg ---------------- 12 comprimidos (receita de controle especial)\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor forte apesar dos itens 1 e 2.\n\nCRIANÇA (peso: ___ kg)\n1. Dipirona 500 mg/mL gotas — 15–25 mg/kg por dose (aprox. 1 gota/kg, máximo 40 gotas) de 6 em 6 horas por 3 dias, depois se dor.\n2. Ibuprofeno 50 mg/mL — 10 mg/kg por dose = 0,2 mL/kg (máximo 8 mL = 400 mg por dose) de 8 em 8 horas por até 3 dias, se hidratada e com função renal normal.\n(Codeína: contraindicada em menores de 12 anos.)\n\nManter hidroxiureia, ácido fólico e penicilina profilática conforme o hemocentro (hidroxiureia: forte recomendação da OMS 2026 dos 9 meses aos 19 anos)."
   },
   orientacoesRetorno: [
     "Beber bastante água, evitar frio, roupas molhadas e esforço intenso até a dor passar",
@@ -247,9 +247,9 @@ registrarFicha({
     "Ministério da Saúde — PCDT Doença Falciforme (Portaria Conjunta SAES/SECTICS nº 16, de 1º/11/2024)",
     "Ministério da Saúde — Doença falciforme: condutas básicas para tratamento (2012) e Manual de eventos agudos em doença falciforme (2009)",
     "American Society of Hematology — 2020 Guidelines for Sickle Cell Disease: Management of Acute and Chronic Pain; Transfusion Support; Prevention, Diagnosis and Treatment of Cerebrovascular Disease (2020)",
-    "OMS — Guideline on the management of sickle cell disease in children and adolescents (2026)",
+    "OMS — Guideline on the management of sickle cell disease in children and adolescents (07/05/2026)",
     "NHLBI — Evidence-Based Management of Sickle Cell Disease: Expert Panel Report (2014)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

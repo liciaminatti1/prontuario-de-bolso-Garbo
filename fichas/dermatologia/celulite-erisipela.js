@@ -100,15 +100,26 @@ registrarFicha({
       ajustes: "Obesos: 1 g 6/6h"
     },
     {
-      droga: "Amoxicilina ou penicilina (erisipela)",
+      droga: "Amoxicilina (erisipela)",
       linha: "l1",
-      dose: "Amoxicilina adulto 500 mg 8/8h (criança 50 mg/kg/dia de 8/8h, máx 500 mg/dose) · ou penicilina G benzatina IM: adulto e ≥ 27 kg 1.200.000 UI; < 27 kg 600.000 UI",
-      via: "VO / IM",
-      intervalo: "Amoxicilina 8/8h",
+      dose: "Adulto 500 mg 8/8h (criança 50 mg/kg/dia de 8/8h, máx 500 mg/dose)",
+      via: "VO",
+      intervalo: "8/8h",
       duracao: "5 dias (estender se melhora lenta)",
       monitorizacao: "—",
       contraindicacoes: "Alergia a penicilina",
-      ajustes: "Erisipela é estreptocócica"
+      ajustes: "Erisipela é estreptocócica. Cefalexina/amoxicilina VO são a 1ª linha"
+    },
+    {
+      droga: "Penicilina G benzatina (erisipela — alternativa)",
+      linha: "alt",
+      dose: "Adulto e ≥ 27 kg 1.200.000 UI; < 27 kg 600.000 UI",
+      via: "IM profundo",
+      intervalo: "Dose única",
+      duracao: "—",
+      monitorizacao: "Observar 30 min após a aplicação (anafilaxia)",
+      contraindicacoes: "Alergia a penicilina",
+      ajustes: "Alternativa quando a adesão ao tratamento VO for duvidosa (a IDSA 2014 não a lista no tratamento agudo). Seu papel mais sólido é na profilaxia da erisipela recorrente"
     },
     {
       droga: "Clindamicina",
@@ -177,7 +188,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    ambulatorial: "ADULTO — CELULITE NÃO PURULENTA, SEM SINAIS SISTÊMICOS\nUSO ORAL\n1. Cefalexina 500 mg ----------------------------- 20 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas por 5 dias (obeso: 2 cápsulas de 6/6 h).\n2. Dipirona 500 mg ------------------------------- 40 comprimidos\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor ou febre, por até 5 dias.\n\nADULTO — ERISIPELA (alternativas)\n1. Amoxicilina 500 mg ---------------------------- 15 cápsulas\n   Tomar 1 cápsula de 8 em 8 horas por 5 dias.\n   OU\n1. Penicilina G benzatina 1.200.000 UI ----------- 1 frasco-ampola\n   Aplicar 1.200.000 UI IM profundo, dose única (na UBS, com material para anafilaxia).\n\nALERGIA A BETALACTÂMICO\n1. Clindamicina 300 mg ---------------------------- 20 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas por 5 dias.\n\nPORTA DE ENTRADA (tinea pedis) — USO TÓPICO\n3. Miconazol 2% creme ----------------------------- 1 bisnaga\n   Aplicar entre os dedos, 2 vezes ao dia, por 4 semanas.\n\nCRIANÇA (por kg)\n- Cefalexina 250 mg/5 mL suspensão: 25–50 mg/kg/dia divididos de 6/6 h, por 5 dias (máx 500 mg/dose).\n- Amoxicilina 250 mg/5 mL: 50 mg/kg/dia divididos de 8/8 h, por 5 dias (máx 500 mg/dose).\n- Clindamicina (alergia): 30–40 mg/kg/dia divididos de 6/6 h ou 8/8 h (máx 450 mg/dose).\n- Dipirona: 10–15 mg/kg/dose até de 6/6 h (máx 1 g/dose)."
+    ambulatorial: "ADULTO — CELULITE NÃO PURULENTA, SEM SINAIS SISTÊMICOS\nUSO ORAL\n1. Cefalexina 500 mg ----------------------------- 20 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas por 5 dias (obeso: 2 cápsulas de 6/6 h).\n2. Dipirona 500 mg ------------------------------- 40 comprimidos\n   Tomar 1 a 2 comprimidos de 6 em 6 horas se dor ou febre, por até 5 dias.\n\nADULTO — ERISIPELA\n1. Amoxicilina 500 mg ---------------------------- 15 cápsulas\n   Tomar 1 cápsula de 8 em 8 horas por 5 dias.\n   ALTERNATIVA (se adesão ao tratamento oral duvidosa):\n1. Penicilina G benzatina 1.200.000 UI ----------- 1 frasco-ampola\n   Aplicar 1.200.000 UI IM profundo, dose única (na UBS, com material para anafilaxia).\n\nALERGIA A BETALACTÂMICO\n1. Clindamicina 300 mg ---------------------------- 20 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas por 5 dias.\n\nPORTA DE ENTRADA (tinea pedis) — USO TÓPICO\n3. Miconazol 2% creme ----------------------------- 1 bisnaga\n   Aplicar entre os dedos, 2 vezes ao dia, por 4 semanas.\n\nCRIANÇA (por kg)\n- Cefalexina 250 mg/5 mL suspensão: 25–50 mg/kg/dia divididos de 6/6 h, por 5 dias (máx 500 mg/dose).\n- Amoxicilina 250 mg/5 mL: 50 mg/kg/dia divididos de 8/8 h, por 5 dias (máx 500 mg/dose).\n- Clindamicina (alergia): 30–40 mg/kg/dia divididos de 6/6 h ou 8/8 h (máx 450 mg/dose).\n- Dipirona: 10–15 mg/kg/dose até de 6/6 h (máx 1 g/dose)."
   },
   orientacoesRetorno: [
     "Manter a perna (ou o braço) elevada sempre que possível; repouso relativo nos primeiros dias",
@@ -205,6 +216,6 @@ registrarFicha({
     "OMS — The WHO AWaRe (Access, Watch, Reserve) Antibiotic Book (2022)",
     "Ministério da Saúde — Cadernos de Atenção Básica nº 28: Acolhimento à demanda espontânea, vol. II (2013)"
   ],
-  revisao: "2026-10-25",
-  versao: "1.2"
+  revisao: "2026-11-09",
+  versao: "1.3"
 });

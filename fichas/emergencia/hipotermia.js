@@ -106,7 +106,7 @@ registrarFicha({
     {
       droga: "Glicose",
       linha: "adj",
-      dose: "Adulto: glicose 50% 50 mL (após tiamina 100 mg IV se etilista/desnutrido). Criança: glicose 10% 2–5 mL/kg",
+      dose: "Adulto: glicose 50% 50 mL (após tiamina 100 mg IV se etilista/desnutrido). Criança: glicose 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg)",
       via: "IV",
       intervalo: "Se glicemia < 70 mg/dL",
       duracao: "—",
@@ -146,7 +146,7 @@ registrarFicha({
     transferencia: ["Grave instável ou PCR: centro com ECMO/circulação extracorpórea, com RCP contínua se necessário"]
   },
   prescricao: {
-    hospitalar: "HIPOTERMIA MODERADA (peso: ___ kg; T central: ___ °C)\n1. Dieta zero até T > 35 °C e consciência normal.\n2. Retirar roupas molhadas; secar; manta térmica de ar forçado a 42–43 °C sobre o tronco; cobertores; sala aquecida.\n3. Manuseio gentil, decúbito horizontal; monitor cardíaco contínuo; desfibrilador à disposição.\n4. SF 0,9% aquecido a 40 °C — 1.000 mL IV em 30–60 min (criança 20 mL/kg); repetir conforme PA.\n5. O₂ aquecido e umidificado se SpO₂ baixa ou IOT.\n6. Tiamina 100 mg IV se etilista/desnutrido; glicose 50% 50 mL IV se glicemia < 70 (criança glicose 10% 2–5 mL/kg).\n7. Temperatura central (retal/esofágica/vesical) de 15/15 min; meta de aumento 1–2 °C/h até > 35 °C.\n8. Exames: gasometria, eletrólitos, K de 1/1–2/2 h, glicemia de 1/1 h, CK, coagulograma, TSH.\n9. Sonda vesical de demora para diurese (diurese fria do frio é comum).\n10. Comunicar: arritmia, PAS < 90, T sem subir após 1 h.",
+    hospitalar: "HIPOTERMIA MODERADA (peso: ___ kg; T central: ___ °C)\n1. Dieta zero até T > 35 °C e consciência normal.\n2. Retirar roupas molhadas; secar; manta térmica de ar forçado a 42–43 °C sobre o tronco; cobertores; sala aquecida.\n3. Manuseio gentil, decúbito horizontal; monitor cardíaco contínuo; desfibrilador à disposição.\n4. SF 0,9% aquecido a 40 °C — 1.000 mL IV em 30–60 min (criança 20 mL/kg); repetir conforme PA.\n5. O₂ aquecido e umidificado se SpO₂ baixa ou IOT.\n6. Tiamina 100 mg IV se etilista/desnutrido; glicose 50% 50 mL IV se glicemia < 70 (criança glicose 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg)).\n7. Temperatura central (retal/esofágica/vesical) de 15/15 min; meta de aumento 1–2 °C/h até > 35 °C.\n8. Exames: gasometria, eletrólitos, K de 1/1–2/2 h, glicemia de 1/1 h, CK, coagulograma, TSH.\n9. Sonda vesical de demora para diurese (diurese fria do frio é comum).\n10. Comunicar: arritmia, PAS < 90, T sem subir após 1 h.",
     ambulatorial: "ALTA\n1. Retorno na UBS em até 7 dias.\n2. Encaminhamento ao serviço social/CREAS/Centro POP se pessoa em situação de rua; abrigo para noites frias."
   },
   orientacoesRetorno: [
@@ -156,11 +156,12 @@ registrarFicha({
     "Procurar atendimento se tremor intenso, confusão, sonolência, pele muito fria e pálida, dedos endurecidos ou escuros"
   ],
   fontes: [
+    "AHA/AAP — PALS 2025: glicose na hipoglicemia 0,5–1 g/kg (SG 10% 5–10 mL/kg); RN: SG 10% 2 mL/kg",
     "European Resuscitation Council — Guidelines 2021: Cardiac arrest in special circumstances (hipotermia acidental)",
     "AHA — Diretrizes de RCP e ACE (2020; atualização 2025): parada em hipotermia",
     "Wilderness Medical Society — Clinical Practice Guidelines for the out-of-hospital evaluation and treatment of accidental hypothermia (2019)",
     "Paal P et al. Accidental hypothermia: 2021 update (Int J Environ Res Public Health, 2022)"
   ],
-  revisao: "2026-10-24",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

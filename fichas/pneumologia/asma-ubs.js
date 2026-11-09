@@ -22,7 +22,7 @@ registrarFicha({
     "Avaliar gravidade (fala, FR, FC, SpO₂, PFE)",
     "Salbutamol spray com espaçador 4–10 jatos a cada 20 min na 1ª hora (criança ≤ 5 anos: 2–6 jatos; 6–11 anos: 4–10 jatos)",
     "Crise moderada: prednisona 40–50 mg (criança 1–2 mg/kg/dia, máx 40 mg; < 2 anos máx 20 mg; 2–5 anos máx 30 mg)",
-    "O₂ se SpO₂ < 92%; alvo 92–95% (≤ 5 anos: ≥ 92%)",
+    "O₂ se SpO₂ < 93%; alvo 93–95% no adulto (GINA); criança: alvo 94–98%",
     "Crise grave: tratar e acionar SAMU"
   ],
   fataisExcluir: [
@@ -130,7 +130,7 @@ registrarFicha({
     ]
   },
   prescricao: {
-    hospitalar: "ATENDIMENTO NA UNIDADE (1ª HORA)\n1. Salbutamol spray 100 mcg/jato com espaçador: adulto 4 a 10 jatos; criança ≤ 5 anos 2 a 6 jatos (com máscara); a cada 20 minutos por 3 vezes.\n2. Se moderada a grave: + brometo de ipratrópio 20 mcg/jato — adulto 4 a 8 jatos, criança 4 jatos — a cada 20 minutos na 1ª hora.\n3. Prednisona 40 mg VO agora (criança: prednisolona 1–2 mg/kg, máx 40 mg).\n4. O₂ por cateter ou máscara se SpO₂ < 92%.\n5. Reavaliar fala, FR, FC, SpO₂ e PFE após cada ciclo. Grave ou sem resposta em 1 h: acionar SAMU 192 mantendo salbutamol contínuo e O₂.",
+    hospitalar: "ATENDIMENTO NA UNIDADE (1ª HORA)\n1. Salbutamol spray 100 mcg/jato com espaçador: adulto 4 a 10 jatos; criança ≤ 5 anos 2 a 6 jatos (com máscara); a cada 20 minutos por 3 vezes.\n2. Se moderada a grave: + brometo de ipratrópio 20 mcg/jato — adulto 4 a 8 jatos, criança 4 jatos — a cada 20 minutos na 1ª hora.\n3. Prednisona 40 mg VO agora (criança: prednisolona 1–2 mg/kg, máx 40 mg).\n4. O₂ por cateter ou máscara se SpO₂ < 93% (alvo 93–95% no adulto; criança 94–98%).\n5. Reavaliar fala, FR, FC, SpO₂ e PFE após cada ciclo. Grave ou sem resposta em 1 h: acionar SAMU 192 mantendo salbutamol contínuo e O₂.",
     ambulatorial: "ADULTO\nUSO ORAL\n1. Prednisona 20 mg ------------------------------- 10 comprimidos\n   Tomar 2 comprimidos (40 mg) pela manhã por 5 dias.\nUSO INALATÓRIO\n2. Beclometasona 250 mcg spray --------------------- 1 frasco\n   Inalar 1 jato com espaçador de 12 em 12 horas, todos os dias. Enxaguar a boca depois.\n   (ou budesonida + formoterol 200/6 mcg: 1 inalação de 12 em 12 horas e 1 a mais se falta de ar, máx 12/dia)\n3. Salbutamol 100 mcg spray ------------------------ 1 frasco\n   Inalar 2 a 4 jatos com espaçador se falta de ar ou chiado (até de 4 em 4 horas).\n\nCRIANÇA (exemplo 15 kg)\nUSO ORAL\n1. Prednisolona 3 mg/mL solução ------------------ 1 frasco\n   Dar 5 mL (15 mg ≈ 1 mg/kg) pela manhã por 3 a 5 dias (máx 30 mg em 2–5 anos).\nUSO INALATÓRIO\n2. Salbutamol 100 mcg spray + espaçador com máscara -- 1 frasco\n   Fazer 2 a 4 jatos (1 por vez, 5–10 respirações cada) se chiado ou cansaço, até de 4 em 4 horas.\n3. Beclometasona 50 mcg spray ------------------- 1 frasco\n   Fazer 1 jato com espaçador e máscara de 12 em 12 horas, todos os dias."
   },
   orientacoesRetorno: [
@@ -143,9 +143,9 @@ registrarFicha({
   ],
   fontes: [
     "Global Initiative for Asthma (GINA) — Global Strategy e Summary Guide (2026)",
-    "Ministério da Saúde — PCDT Asma (Portaria Conjunta SAES/SECTICS nº 32/2023; atualização de 2026 relatada por nota estadual, conferir no DOU)",
+    "Ministério da Saúde — PCDT da Asma, Portaria Conjunta SAES/SCTIE nº 43, de 24/03/2026 (revoga a Portaria Conjunta nº 32/2023)",
     "Ministério da Saúde — Cadernos de Atenção Básica nº 25: Doenças respiratórias crônicas (2010)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.2"
+  revisao: "2026-11-09",
+  versao: "1.3"
 });

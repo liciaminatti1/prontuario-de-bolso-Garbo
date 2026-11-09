@@ -45,7 +45,7 @@ registrarFicha({
       linhas: [
         ["DIU de cobre", "Até 48 h ou a partir de 4 semanas (entre 48 h e 4 semanas: categoria 3); sepse puerperal: 4", "Igual"],
         ["Implante e pílula só de progestagênio", "Podem iniciar logo após o parto (categoria 1–2)", "Imediato (categoria 1)"],
-        ["Injetável trimestral (AMPD)", "Preferir a partir de 6 semanas (categoria mais restritiva antes de 6 semanas — conferir MEC vigente)", "Imediato"],
+        ["Injetável trimestral (AMPD)", "Pode iniciar no pós-parto imediato (categoria 2 no MEC 6ª ed., 2025; antes era 3)", "Imediato"],
         ["Combinados (pílula, injetável mensal)", "< 6 semanas: 4; 6 semanas a 6 meses: 3; ≥ 6 meses: 2", "< 21 dias: 4; 21–42 dias: 2 (3 se outros fatores de risco de TEV); > 42 dias: 1"],
         ["LAM (lactação e amenorreia)", "Eficaz se amamentação exclusiva (dia e noite), em amenorreia e < 6 meses; perdeu um critério → outro método", "Não se aplica"],
         ["Laqueadura", "No parto se desejo manifestado ≥ 60 dias antes (Lei 14.443/2022) ou após 42 dias", "Igual"]
@@ -74,9 +74,9 @@ registrarFicha({
     "Ministério da Saúde — Rede Alyne: Portaria GM/MS nº 5.350/2024",
     "Ministério da Saúde — Portaria nº 2.068/2016 (alojamento conjunto: permanência mínima de 24 h)",
     "OMS — Recommendations on maternal and newborn care for a positive postnatal experience (2022)",
-    "OMS — Medical eligibility criteria for contraceptive use (5ª ed. 2015; atualização 2025)",
+    "OMS — Medical eligibility criteria for contraceptive use, 6ª edição (03/11/2025): AMPD no pós-parto imediato passou de categoria 3 para 2",
     "ACOG Committee Opinion 736 — Optimizing postpartum care (2018)"
   ],
-  revisao: "2026-10-24",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

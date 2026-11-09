@@ -25,7 +25,7 @@ registrarFicha({
     "HPV 16 e/ou 18 positivo: colposcopia (qualquer resultado da citologia)",
     "HPV oncogênico não 16/18 positivo: olhar a citologia reflexa — ASC-US ou pior → colposcopia; negativa → repetir DNA-HPV em 12 meses",
     "Na repetição em 12 meses: negativo → volta ao intervalo de 5 anos; persistência de HPV → seguir o fluxograma da diretriz (em geral colposcopia)",
-    "Onde o rastreio ainda é por citologia: conduta pela tabela (INCA 2016)",
+    "O rastreamento segue as Diretrizes INCA 2025, vol. 1 (DNA-HPV primário). A tabela de citologia (INCA 2016) vale só onde o DNA-HPV ainda não foi implantado",
     "Registrar no SISCAN, agendar o retorno e fazer busca ativa de quem não retorna",
     "Colposcopia alterada com HSIL/NIC 2–3: tratamento por excisão da zona de transformação (EZT/CAF) no nível secundário"
   ],
@@ -53,7 +53,7 @@ registrarFicha({
   ],
   tabelas: [
     {
-      titulo: "Rastreio com DNA-HPV (Diretrizes 2024–2025)",
+      titulo: "Rastreio com DNA-HPV (Diretrizes INCA 2025, vol. 1)",
       colunas: ["Resultado", "Conduta"],
       linhas: [
         ["HPV não detectado", "Repetir em 5 anos (imunossuprimida: 3 anos)"],
@@ -65,7 +65,7 @@ registrarFicha({
       nota: "Coteste (DNA-HPV + citologia na mesma coleta para todas) não é recomendado. Conferir o fluxograma oficial vigente para a conduta na repetição positiva e no seguimento pós-colposcopia."
     },
     {
-      titulo: "Rastreio com citologia (INCA 2016)",
+      titulo: "Rastreio com citologia (INCA 2016) — só onde o DNA-HPV ainda não foi implantado",
       colunas: ["Resultado", "≥ 25 anos", "< 25 anos"],
       linhas: [
         ["Insatisfatória", "Repetir em 6–12 semanas, corrigindo a causa", "Idem"],
@@ -81,10 +81,10 @@ registrarFicha({
     }
   ],
   fontes: [
-    "INCA/Ministério da Saúde — Diretrizes Brasileiras para o Rastreamento do Câncer do Colo do Útero, 2ª ed. revista e atualizada (2016)",
-    "INCA/Ministério da Saúde — Diretrizes Brasileiras para o Rastreamento do Câncer do Colo do Útero: rastreamento organizado utilizando testes moleculares para detecção de DNA-HPV oncogênico (Parte I, 2024; Portaria Conjunta SAES/SECTICS nº 13/2025)",
+    "INCA/Ministério da Saúde — Diretrizes Brasileiras para o Rastreamento do Câncer do Colo do Útero, 2ª ed. revista e atualizada (2016) — só onde o DNA-HPV ainda não foi implantado",
+    "INCA/Ministério da Saúde — Diretrizes Brasileiras para o Rastreamento do Câncer do Colo do Útero: rastreamento organizado utilizando testes moleculares para detecção de DNA-HPV oncogênico (Diretrizes INCA 2025, vol. 1; Portaria Conjunta SAES/SECTICS nº 13/2025)",
     "FEBRASGO — Lesões precursoras do câncer do colo uterino. Protocolos FEBRASGO (2021)"
   ],
-  revisao: "2026-10-24",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

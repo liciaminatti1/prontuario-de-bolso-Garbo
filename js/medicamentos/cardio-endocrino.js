@@ -271,13 +271,13 @@ adicionarMedicamentos([
     ] },
   { id: "hidralazina", nomes: ["Hidralazina"], classe: "anti-hipertensivos", receita: "simples", tags: [],
     usos: "Crise hipertensiva na gestação (IV), IC (com nitrato, em intolerantes a IECA/BRA ou negros), HAS resistente",
-    adulto: "Gestante PA ≥ 160/110: 5 mg IV a cada 20 min (máx 30 mg) · IC: 25 mg 8/8h até 75–100 mg 8/8h, com dinitrato de isossorbida · HAS: 25–50 mg 2–3×/dia (máx habitual 200 mg/dia)",
+    adulto: "Gestante PA ≥ 160/110: 5 mg IV a cada 20 min; se sem resposta com 30 mg, considerar outro fármaco (alguns protocolos até 45 mg) · IC: 25 mg 8/8h até 75–100 mg 8/8h, com dinitrato de isossorbida · HAS: 25–50 mg 2–3×/dia (máx habitual 200 mg/dia)",
     apres: [{ rotulo: "comprimido 25 mg", mgPorComp: 25 }, { rotulo: "comprimido 50 mg", mgPorComp: 50 }, { rotulo: "ampola 20 mg/mL (1 mL)", mgPorMl: 20 }],
     renal: [],
     gestacao: { nivel: "compativel", texto: "IV é 1ª linha na crise hipertensiva da gestação/pré-eclâmpsia." },
     alergia: [], contra: ["Taquicardia reflexa: evitar sem betabloqueador na doença coronariana", "Lúpus induzido (doses altas, uso prolongado)", "Estenose mitral/aórtica grave"],
     prescrever: [
-      { contexto: "Gestante — PA ≥ 160/110 (crise hipertensiva)", texto: "Hidralazina 20 mg/mL — 1 ampola (1 mL) + 19 mL de água destilada (1 mg/mL).\nFazer 5 mL (5 mg) IV lento; repetir 5 mg a cada 20 min se PA ≥ 160/110, até 30 mg.\nAlvo PAS 140–155 e PAD 90–100; monitorar PA a cada 5 min e vitalidade fetal." },
+      { contexto: "Gestante — PA ≥ 160/110 (crise hipertensiva)", texto: "Hidralazina 20 mg/mL — 1 ampola (1 mL) + 19 mL de água destilada (1 mg/mL).\nFazer 5 mL (5 mg) IV lento; repetir 5 mg a cada 20 min se PA ≥ 160/110; se sem resposta com 30 mg, considerar outro fármaco (alguns protocolos até 45 mg).\nAlvo PAS 140–155 e PAD 90–100; monitorar PA a cada 5 min e vitalidade fetal." },
       { contexto: "Adulto — IC (associada a nitrato)", texto: "USO ORAL\n1. Hidralazina 25 mg ----------------------- 90 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas.\n2. Dinitrato de isossorbida 10 mg ----------- 90 comprimidos\n   Tomar 2 comprimidos (20 mg) de 8 em 8 horas.\n   (Titular a cada 2–4 semanas até hidralazina 75–100 mg + isossorbida 40 mg 8/8h.)" }
     ] },
   { id: "clonidina", nomes: ["Clonidina"], classe: "anti-hipertensivos", receita: "simples", tags: [],
@@ -293,13 +293,13 @@ adicionarMedicamentos([
     ] },
   { id: "metildopa", nomes: ["Metildopa", "alfametildopa"], classe: "anti-hipertensivos", receita: "simples", tags: [],
     usos: "Hipertensão crônica e gestacional (1ª escolha na gestação)",
-    adulto: "750 mg a 2 g/dia VO em 2–4 tomadas (iniciar 250 mg 2–3×/dia)",
+    adulto: "750 mg a 2 g/dia VO em 2–4 tomadas (iniciar 250 mg 2–3×/dia); máximo 3 g/dia",
     apres: [{ rotulo: "comprimido 250 mg", mgPorComp: 250 }, { rotulo: "comprimido 500 mg", mgPorComp: 500 }],
     renal: [],
     gestacao: { nivel: "compativel", texto: "Anti-hipertensivo com maior experiência na gestação; compatível na lactação (preferir trocar no puerpério se depressão)." },
     alergia: [], contra: ["Hepatopatia ativa", "Depressão grave", "Anemia hemolítica (Coombs +)", "Feocromocitoma", "Uso de IMAO"],
     prescrever: [
-      { contexto: "Gestante — hipertensão", texto: "USO ORAL\n1. Metildopa 250 mg ------------------------ 90 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas. Uso contínuo até nova avaliação.\n   (Aumentar conforme PA até 2 g/dia; ex.: 500 mg 8/8h.)" }
+      { contexto: "Gestante — hipertensão", texto: "USO ORAL\n1. Metildopa 250 mg ------------------------ 90 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas. Uso contínuo até nova avaliação.\n   (Aumentar conforme PA; ex.: 500 mg 8/8h. Máximo 3 g/dia.)" }
     ] },
 
   /* ---------- diuréticos ---------- */

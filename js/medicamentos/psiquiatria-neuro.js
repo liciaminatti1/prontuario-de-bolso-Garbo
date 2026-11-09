@@ -21,7 +21,7 @@ complementarMedicamentos({
       { contexto: "Adulto — ansiedade (curto prazo)", texto: "USO ORAL\n1. Diazepam 5 mg ------------------------ 30 (trinta) comprimidos\n   Tomar 1 comprimido por via oral até 2 vezes ao dia, se ansiedade intensa.\n   (Uso pelo menor tempo possível, idealmente ≤ 4 semanas; retirada gradual. Notificação B azul.)" },
       { contexto: "Adulto — abstinência alcoólica (ambulatorial, leve)", texto: "USO ORAL\n1. Diazepam 10 mg ----------------------- 20 (vinte) comprimidos\n   Tomar 1 comprimido por via oral de 6 em 6 horas nos dias 1 e 2;\n   1 comprimido de 8 em 8 horas nos dias 3 e 4;\n   1 comprimido de 12 em 12 horas nos dias 5 e 6; depois suspender.\n2. Tiamina 300 mg/dia VO.\n   (Ajustar pela escala CIWA-Ar; em hepatopatia ou idoso preferir lorazepam.)" },
       { contexto: "PS — crise convulsiva (adulto)", texto: "Diazepam 5 mg/mL — 2 mL (10 mg) IV lento, sem diluir (até 5 mg/min).\nRepetir 1 vez após 5 min se a crise persistir.\nSem acesso venoso: preferir midazolam 10 mg IM." },
-      { contexto: "PS — crise convulsiva (criança)", texto: "Diazepam 5 mg/mL — ___ mL IV lento, sem diluir.\n(0,2–0,3 mg/kg/dose; máximo 10 mg; repetir 1 vez após 5 min se persistir.)\nSem acesso venoso: midazolam 0,2 mg/kg IM ou intranasal (máx 10 mg)." }
+      { contexto: "PS — crise convulsiva (criança)", texto: "Diazepam 5 mg/mL — ___ mL IV lento, sem diluir.\n(0,2 mg/kg/dose, AES 2016; máximo 10 mg; repetir 1 vez após 5 min se persistir.)\nSem acesso venoso: midazolam 0,2 mg/kg IM ou intranasal (máx 10 mg)." }
     ]
   },
   fenitoina: {
@@ -403,7 +403,7 @@ adicionarMedicamentos([
     renal: [{ abaixo: 10, texto: "Reduzir a dose (excreção renal parcial) e monitorar sedação." }],
     gestacao: { nivel: "evitar", texto: "Teratogênico (malformações cardíacas e fenda); sedação e abstinência neonatal." },
     alergia: [],
-    contra: ["Depressão respiratória e hipotensão no ataque IV: preparar via aérea", "Porfiria", "Indutor potente: anticoncepcional, varfarina e DOAC perdem efeito", "Álcool, opioides e benzodiazepínicos somam sedação"],
+    contra: ["Alerta da bula (Fenocris®, Cristália): contraindicado em crianças do sexo feminino, mulheres com potencial de engravidar e gestantes, salvo necessidade clara", "Depressão respiratória e hipotensão no ataque IV: preparar via aérea", "Porfiria", "Indutor potente: anticoncepcional, varfarina e DOAC perdem efeito", "Álcool, opioides e benzodiazepínicos somam sedação"],
     prescrever: [
       { contexto: "Hospitalar / PS — estado de mal (adulto)", texto: "Fenobarbital 100 mg/mL — 20 mg/kg (ex.: 70 kg = 1.400 mg = 14 mL) + SF 0,9% 100 mL\nIV a no máximo 50–100 mg/min (≈ 15–30 min). Monitorar respiração e PA." },
       { contexto: "Criança — estado de mal", texto: "Fenobarbital 100 mg/mL — ___ mL (20 mg/kg) diluídos em SF 0,9%, IV lento (≥ 10–20 min).\nMonitorar respiração e PA." },

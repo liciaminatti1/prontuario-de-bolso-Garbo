@@ -104,7 +104,7 @@ registrarFicha({
     {
       droga: "Glicose hipertônica",
       linha: "l1",
-      dose: "Adulto: glicose 50% 40–50 mL (20–25 g). Criança: glicose 10% 2–5 mL/kg",
+      dose: "Adulto: glicose 50% 40–50 mL (20–25 g). Criança: glicose 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg)",
       via: "IV",
       intervalo: "Repetir conforme glicemia em 15 min",
       duracao: "Manter SG 5–10% se causa persistente (sulfonilureia)",
@@ -164,7 +164,7 @@ registrarFicha({
     transferencia: ["Sem TC, neurocirurgia ou UTI: regular após estabilização"]
   },
   prescricao: {
-    hospitalar: "REBAIXAMENTO DE CONSCIÊNCIA — MEDIDAS INICIAIS (adulto)\n1. Dieta zero.\n2. Decúbito elevado 30° (lateral se vômitos e via aérea não protegida); aspiração de vias aéreas se necessário.\n3. O₂ por cateter ou máscara para SpO₂ ≥ 94%.\n4. Se glicemia < 70 mg/dL: glicose 50% 40 mL IV em veia calibrosa; repetir glicemia em 15 min. Manter SG 10% 500 mL IV a 80 mL/h se causa persistente.\n5. Se etilista, desnutrido ou suspeita de Wernicke: tiamina 300 mg diluída em 100 mL de SF 0,9% IV em 30 min (antes ou junto da glicose); Wernicke: 500 mg IV de 8/8 h.\n6. Se miose e FR < 12 ou suspeita de opioide: naloxona 0,4 mg/mL — diluir 1 mL em 9 mL de SF (0,04 mg/mL) e fazer 1–2 mL IV a cada 2–3 min até FR ≥ 12 (máx 2 mg; reavaliar diagnóstico se sem resposta).\n7. SF 0,9% 500 mL IV em 30 min se hipotensão; depois manutenção conforme quadro.\n8. Se febre e suspeita de meningite: colher hemoculturas e iniciar antibiótico conforme ficha meningite sem aguardar a punção.\n9. Cuidados: monitor, SpO₂, PA e Glasgow com pupilas de 15/15 min na 1ª hora e depois de 1/1 h; glicemia capilar de 1/1 h se hipoglicemia; proteção contra queda (grades); sonda vesical se retenção.\n\nCRIANÇA (por kg)\n- Glicose 10% 2–5 mL/kg IV.\n- Naloxona 0,1 mg/kg IV/IM/IN (máx 2 mg/dose).\n- SF 0,9% 10–20 mL/kg IV se choque (reavaliar após cada alíquota)."
+    hospitalar: "REBAIXAMENTO DE CONSCIÊNCIA — MEDIDAS INICIAIS (adulto)\n1. Dieta zero.\n2. Decúbito elevado 30° (lateral se vômitos e via aérea não protegida); aspiração de vias aéreas se necessário.\n3. O₂ por cateter ou máscara para SpO₂ ≥ 94%.\n4. Se glicemia < 70 mg/dL: glicose 50% 40 mL IV em veia calibrosa; repetir glicemia em 15 min. Manter SG 10% 500 mL IV a 80 mL/h se causa persistente.\n5. Se etilista, desnutrido ou suspeita de Wernicke: tiamina 300 mg diluída em 100 mL de SF 0,9% IV em 30 min (antes ou junto da glicose); Wernicke: 500 mg IV de 8/8 h.\n6. Se miose e FR < 12 ou suspeita de opioide: naloxona 0,4 mg/mL — diluir 1 mL em 9 mL de SF (0,04 mg/mL) e fazer 1–2 mL IV a cada 2–3 min até FR ≥ 12 (máx 2 mg; reavaliar diagnóstico se sem resposta).\n7. SF 0,9% 500 mL IV em 30 min se hipotensão; depois manutenção conforme quadro.\n8. Se febre e suspeita de meningite: colher hemoculturas e iniciar antibiótico conforme ficha meningite sem aguardar a punção.\n9. Cuidados: monitor, SpO₂, PA e Glasgow com pupilas de 15/15 min na 1ª hora e depois de 1/1 h; glicemia capilar de 1/1 h se hipoglicemia; proteção contra queda (grades); sonda vesical se retenção.\n\nCRIANÇA (por kg)\n- Glicose 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg) IV.\n- Naloxona 0,1 mg/kg IV/IM/IN (máx 2 mg/dose).\n- SF 0,9% 10–20 mL/kg IV se choque (reavaliar após cada alíquota)."
   },
   orientacoesRetorno: [
     "Família: voltar imediatamente se sonolência difícil de acordar, confusão, convulsão, vômitos repetidos ou respiração lenta",
@@ -211,10 +211,11 @@ registrarFicha({
     }
   ],
   fontes: [
+    "AHA/AAP — PALS 2025: glicose na hipoglicemia 0,5–1 g/kg (SG 10% 5–10 mL/kg); RN: SG 10% 2 mL/kg",
     "Teasdale G et al. — Glasgow Coma Scale: 40 anos e Glasgow-P (J Neurosurg, 2018); www.glasgowcomascale.org",
     "ATLS — Advanced Trauma Life Support, 10ª ed. (American College of Surgeons, 2018)",
     "Ministério da Saúde — Protocolos de Intervenção para o SAMU 192: suporte avançado de vida (2016)"
   ],
-  revisao: "2026-10-24",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });
