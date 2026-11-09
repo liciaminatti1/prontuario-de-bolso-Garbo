@@ -46,6 +46,7 @@ prontuario-de-bolso/
 ├── css/estilo.css          Visual (tema claro e escuro, layout de celular)
 ├── js/registro.js          Lista de especialidades, registrarFicha() e validação
 ├── js/app.js               Interface: filtros, lista, fichas (completo, curto e procedimento), busca
+├── js/medicamentos/        Base de medicamentos por classe (receituário e modelos de prescrição)
 ├── js/documentos.js        Documentos médicos (atestado, receituário, evolução, encaminhamento, transferência...)
 ├── docs/
 │   ├── ESQUEMA-FICHAS.md   Formato de cada campo e regras de conteúdo

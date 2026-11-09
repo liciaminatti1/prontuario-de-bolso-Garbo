@@ -277,6 +277,9 @@ const RX_COR = { simples: "", antimicrobiano: "rx-atb", C1: "rx-c1", B1: "rx-b1"
 const etiquetaReceita = m => m.receita && m.receita !== "simples"
   ? `<span class="rx-tag ${RX_COR[m.receita] || ""}" title="${esc(RECEITAS[m.receita][1])}">${esc(RECEITAS[m.receita][0])}</span>` : "";
 
+/* Modelo de uso hospitalar vai para a prescrição hospitalar; os demais, para o receituário. */
+const ehModeloHospitalar = (m, p) => m.receita === "hospitalar" || /hospitalar|interna[çc][aã]o|sala de emerg/i.test(p.contexto) || /\b(PS|IV|EV)\b/.test(p.contexto);
+
 /* Cartão "como prescrever": tipo de receituário + modelos prontos para copiar. */
 function prescricaoMedHTML(m) {
   const rec = RECEITAS[m.receita];
@@ -286,7 +289,7 @@ function prescricaoMedHTML(m) {
     <p class="mp-classe">${esc(classe)}${m.usos ? ` · ${esc(m.usos)}` : ""}</p>
     ${rec ? `<p class="mp-receita"><b>Receituário:</b> ${esc(rec[0])}. ${esc(rec[1])}</p>` : ""}
     ${(m.prescrever || []).map((p, i) => blocoCopiavel(p.texto, p.contexto) +
-      `<button class="link-btn" data-modelo="${m.id}:${i}">Abrir ${/hospitalar|PS|IV|IM/i.test(p.contexto) || m.receita === "hospitalar" ? "na prescrição hospitalar" : "no receituário"} →</button>`).join("")
+      `<button class="link-btn" data-modelo="${m.id}:${i}">Abrir ${ehModeloHospitalar(m, p) ? "na prescrição hospitalar" : "no receituário"} →</button>`).join("")
       || `<p class="empty">Modelo de prescrição ainda não cadastrado.</p>`}
   </div>`;
 }
@@ -354,8 +357,7 @@ function telaMedicamentos() {
     if (mod) {
       const [id, i] = mod.dataset.modelo.split(":");
       const m = MED_POR_ID[id], p = m.prescrever[+i];
-      const hosp = /hospitalar|PS|IV|IM/i.test(p.contexto) || m.receita === "hospitalar";
-      ir(hosp ? "doc-prescricao-hospitalar" : "doc-receita", { texto: p.texto });
+      ir(ehModeloHospitalar(m, p) ? "doc-prescricao-hospitalar" : "doc-receita", { texto: p.texto });
     }
   });
   $classes.addEventListener("click", e => {
