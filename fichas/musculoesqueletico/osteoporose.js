@@ -32,7 +32,7 @@ registrarFicha({
     "Fratura de quadril não reconhecida (dor na virilha após queda, incapacidade de apoiar)",
     "Hipocalcemia antes de iniciar bifosfonato (corrigir vitamina D e cálcio)"
   ],
-  proximaDecisao: "Sem contraindicação → alendronato 70 mg/semana + vitamina D (e cálcio se dieta insuficiente). Intolerância gastrointestinal ou impossibilidade de tomar corretamente → ácido zoledrônico IV anual (PCDT). Fratura nova em tratamento, T-escore ≤ −3,0 com fratura ou risco muito alto → reumatologia/endocrinologia para avaliar teriparatida ou romosozumabe (critérios do PCDT).",
+  proximaDecisao: "Sem contraindicação → alendronato 70 mg/semana + vitamina D (e cálcio se dieta insuficiente). Intolerância gastrointestinal ou impossibilidade de tomar corretamente → ácido zoledrônico IV anual (PCDT). Fratura nova em tratamento, T-escore ≤ −3,0 com fratura ou risco muito alto → reumatologia/endocrinologia para avaliar romosozumabe (mulheres; critérios do PCDT 2025). Teriparatida foi excluída do SUS; em homens, nenhum dos dois foi incorporado.",
   clinica: {
     anamnese: [
       "Idade, idade da menopausa, amenorreia prolongada, hipogonadismo no homem",
@@ -109,7 +109,7 @@ registrarFicha({
       duracao: "5 anos; depois reavaliar (pausa se risco não alto; manter até 10 anos se risco alto)",
       monitorizacao: "Adesão, sintomas esofágicos, DXA em 1–2 anos",
       contraindicacoes: "ClCr < 35 mL/min, doença do esôfago (acalasia, estenose), incapacidade de ficar sentado/em pé 30 min, hipocalcemia não corrigida, gestação",
-      ajustes: "Tomar com 1 copo cheio (200 mL) de água pura, em jejum, e ficar em pé ou sentado e sem comer por 30 minutos. RENAME / PCDT 2023"
+      ajustes: "Tomar com 1 copo cheio (200 mL) de água pura, em jejum, e ficar em pé ou sentado e sem comer por 30 minutos. RENAME / PCDT 2025"
     },
     {
       droga: "Risedronato de sódio",
@@ -167,15 +167,15 @@ registrarFicha({
       ajustes: "Carbonato de cálcio 1.250 mg = 500 mg de cálcio elementar. Separar 4 h de levotiroxina e de ferro; nunca junto com o alendronato. Preferir cálcio da dieta (1 copo de leite ≈ 300 mg)"
     },
     {
-      droga: "Teriparatida / romosozumabe (anabólicos)",
+      droga: "Romosozumabe (anabólico; teriparatida excluída do SUS)",
       linha: "adj",
-      dose: "Teriparatida 20 mcg SC 1×/dia (até 24 meses); romosozumabe 210 mg SC 1×/mês por 12 meses",
+      dose: "Romosozumabe 210 mg SC 1×/mês por 12 meses (teriparatida 20 mcg SC 1×/dia, até 24 meses: só fora do SUS)",
       via: "SC",
       intervalo: "Conforme droga",
       duracao: "Seguir com antirreabsortivo após",
       monitorizacao: "Especialista",
       contraindicacoes: "Teriparatida: doença de Paget, radioterapia óssea, hipercalcemia. Romosozumabe: IAM ou AVC no último ano",
-      ajustes: "Critérios restritos do PCDT 2023 (falha a outros tratamentos e risco muito alto; romosozumabe só em mulheres pós-menopausa > 70 anos). Prescrição pelo especialista; a dispensação pelo CEAF varia por estado. Denosumabe não foi incorporado ao SUS (CONITEC, Portaria SCTIE/MS nº 62/2022). A CONITEC aprovou novo PCDT ainda não publicado em 2025: conferir a versão vigente"
+      ajustes: "PCDT 2025 (Portaria Conjunta SAES/SECTICS nº 22/2025): romosozumabe ampliado para mulheres com osteoporose grave e falha terapêutica (caiu o corte de > 70 anos); teriparatida excluída do SUS. Homens: CONITEC não incorporou romosozumabe nem teriparatida (Portaria SCTIE/MS nº 33/2026). Prescrição pelo especialista; a dispensação pelo CEAF varia por estado. Denosumabe não foi incorporado ao SUS (CONITEC, Portaria SCTIE/MS nº 62/2022)"
     }
   ],
   destino: {
@@ -224,13 +224,14 @@ registrarFicha({
     }
   ],
   fontes: [
-    "Ministério da Saúde/CONITEC — PCDT Osteoporose (Portaria Conjunta SAES/SECTICS nº 19, de 28/09/2023)",
+    "Ministério da Saúde/CONITEC — PCDT Osteoporose (Portaria Conjunta SAES/SECTICS nº 22, de 22/10/2025; substitui a Portaria Conjunta nº 19/2023)",
+    "Ministério da Saúde — Portaria SCTIE/MS nº 33/2026: não incorporação de romosozumabe e teriparatida para osteoporose em homens",
     "ABRASSO — FRAX Brasil 2.0 (2024)",
     "SBEM/ABRASSO — Consenso sobre risco muito alto de fratura em mulheres na pós-menopausa (2023)",
     "FEBRASGO — Osteoporose na pós-menopausa (protocolo, versão vigente)",
     "SBPC/ML–SBEM — Intervalos de referência da vitamina D (25-OH-D) (2017, atualização 2020)",
     "SBEM — Recomendações para o diagnóstico e tratamento da hipovitaminose D (Arq Bras Endocrinol Metab, 2014)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

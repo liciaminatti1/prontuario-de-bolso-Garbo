@@ -114,7 +114,7 @@ registrarFicha({
     {
       droga: "Carvão ativado (pó)",
       linha: "l1",
-      dose: "Adulto: 1 g/kg (habitual 50 g) · Criança: 1 g/kg (máx. 50 g)",
+      dose: "Criança: 1 g/kg (máx. 50 g) · Adulto: 50 g (faixa 25–100 g)",
       via: "VO ou por sonda nasogástrica, suspenso em água (cerca de 1 g para 8–10 mL)",
       intervalo: "Dose única; doses múltiplas só por indicação do CIATox (ex.: carbamazepina, fenobarbital, teofilina, dapsona, quinina)",
       duracao: "Dose única",
@@ -191,7 +191,7 @@ registrarFicha({
     transferencia: ["UTI: IOT, instabilidade hemodinâmica, arritmia, convulsão refratária, necessidade de hemodiálise (lítio, metanol, salicilato, metformina com acidose grave)"]
   },
   prescricao: {
-    hospitalar: "SALA DE EMERGÊNCIA — INTOXICAÇÃO EXÓGENA (peso: ___ kg)\n1. Dieta zero até avaliação de via aérea e de nível de consciência.\n2. Monitor cardíaco, oximetria e PA não invasiva contínuos. Cabeceira a 30°; decúbito lateral se vômitos.\n3. O₂ por cateter nasal ou máscara se SpO₂ < 94%.\n4. Acesso venoso periférico calibroso (2 se instável).\n5. SF 0,9% 500 mL IV em bolus se PAS < 90 mmHg; reavaliar e repetir. Criança: SF 0,9% 20 mL/kg em 10–20 min.\n6. Glicemia capilar agora e de 1/1 h. Se < 70 mg/dL: glicose 50% 50 mL IV (criança: glicose 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg)). Etilista: tiamina 100 mg IV antes.\n7. Carvão ativado 50 g (criança: 1 g/kg, máx. 50 g) suspenso em 300–400 mL de água, VO ou SNG, dose única — SOMENTE se ingestão há até 1 h, agente adsorvível e via aérea protegida.\n8. Se FR < 12 irpm ou miose com sonolência (suspeita de opioide): naloxona 0,4 mg/mL — diluir 1 ampola em 9 mL de SF 0,9% (0,04 mg/mL) e fazer 1 mL (0,04 mg) IV a cada 2 min até FR adequada (criança: 0,1 mg/kg, máx. 2 mg).\n9. Se convulsão: diazepam 10 mg IV lento, sem diluir (criança 0,2 mg/kg, máx. 10 mg); repetir em 5–10 min se persistir.\n10. Antídoto específico conforme agente (ver ficha Antídotos) após contato com o CIATox.\n11. Ondansetrona 4 mg IV lento SN se vômitos (criança 0,15 mg/kg, máx. 4 mg) — evitar se QTc prolongado.\n12. Coletar: gasometria venosa, eletrólitos, ureia, creatinina, CK, paracetamol 4 h, AST, ALT, TP/INR; ECG agora e repetir conforme agente.\n13. Notificação SINAN (intoxicação exógena). Se tentativa de suicídio: notificação imediata e vigilância contínua (retirar objetos de risco, acompanhante).\n14. Sinais vitais, Glasgow e pupilas de 1/1 h. Comunicar FR < 12, PAS < 90, QRS > 100 ms, convulsão, Glasgow em queda.\n\nCONTATO: CIATox — Disque-Intoxicação 0800 722 6001 (24 h)."
+    hospitalar: "SALA DE EMERGÊNCIA — INTOXICAÇÃO EXÓGENA (peso: ___ kg)\n1. Dieta zero até avaliação de via aérea e de nível de consciência.\n2. Monitor cardíaco, oximetria e PA não invasiva contínuos. Cabeceira a 30°; decúbito lateral se vômitos.\n3. O₂ por cateter nasal ou máscara se SpO₂ < 94%.\n4. Acesso venoso periférico calibroso (2 se instável).\n5. SF 0,9% 500 mL IV em bolus se PAS < 90 mmHg; reavaliar e repetir. Criança: SF 0,9% 20 mL/kg em 10–20 min.\n6. Glicemia capilar agora e de 1/1 h. Se < 70 mg/dL: glicose 50% 50 mL IV (criança: glicose 10% 5–10 mL/kg (0,5–1 g/kg; RN: 2 mL/kg)). Etilista: tiamina 100 mg IV antes.\n7. Carvão ativado — adulto: 50 g (faixa 25–100 g); criança: 1 g/kg (máx. 50 g) — suspenso em 300–400 mL de água, VO ou SNG, dose única — SOMENTE se ingestão há até 1 h, agente adsorvível e via aérea protegida.\n8. Se FR < 12 irpm ou miose com sonolência (suspeita de opioide): naloxona 0,4 mg/mL — diluir 1 ampola em 9 mL de SF 0,9% (0,04 mg/mL) e fazer 1 mL (0,04 mg) IV a cada 2 min até FR adequada (criança: 0,1 mg/kg, máx. 2 mg).\n9. Se convulsão: diazepam 10 mg IV lento, sem diluir (criança 0,2 mg/kg, máx. 10 mg); repetir em 5–10 min se persistir.\n10. Antídoto específico conforme agente (ver ficha Antídotos) após contato com o CIATox.\n11. Ondansetrona 4 mg IV lento SN se vômitos (criança 0,15 mg/kg, máx. 4 mg) — evitar se QTc prolongado.\n12. Coletar: gasometria venosa, eletrólitos, ureia, creatinina, CK, paracetamol 4 h, AST, ALT, TP/INR; ECG agora e repetir conforme agente.\n13. Notificação SINAN (intoxicação exógena). Se tentativa de suicídio: notificação imediata e vigilância contínua (retirar objetos de risco, acompanhante).\n14. Sinais vitais, Glasgow e pupilas de 1/1 h. Comunicar FR < 12, PAS < 90, QRS > 100 ms, convulsão, Glasgow em queda.\n\nCONTATO: CIATox — Disque-Intoxicação 0800 722 6001 (24 h)."
   },
   orientacoesRetorno: [
     "Guardar medicamentos, produtos de limpeza e venenos em local alto, trancado e na embalagem original; nunca em garrafa de refrigerante",
@@ -210,5 +210,5 @@ registrarFicha({
     "Goldfrank's Toxicologic Emergencies, 11ª ed. (2019)"
   ],
   revisao: "2026-11-09",
-  versao: "1.1"
+  versao: "1.2"
 });
