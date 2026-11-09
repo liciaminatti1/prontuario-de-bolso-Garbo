@@ -2,10 +2,10 @@
    Estratégia "rede primeiro": com internet, sempre busca a versão mais nova;
    sem internet, usa a última cópia salva. Ao mudar o conteúdo não é preciso mexer aqui:
    o index.html carrega cada arquivo com ?v=<impressão digital> (ferramentas/gerar-indice.js). */
-const CACHE = "prontuario-de-bolso-v12";
+const CACHE = "prontuario-de-bolso-v13";
 
 self.addEventListener("install", e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(["./", "index.html", "css/estilo.css", "js/registro.js", "js/perfil.js", "js/medicamentos.js", "js/medicamentos/anti-infecciosos.js", "js/medicamentos/dor-gastro.js", "js/medicamentos/psiquiatria-neuro.js", "js/medicamentos/cardio-endocrino.js", "js/medicamentos/outros.js", "js/scores.js", "js/calculadoras.js", "js/documentos.js", "js/pacientes.js", "js/app.js", "manifest.webmanifest"])));
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(["./", "index.html", "css/estilo.css", "js/registro.js", "js/perfil.js", "js/medicamentos.js", "js/medicamentos/anti-infecciosos.js", "js/medicamentos/dor-gastro.js", "js/medicamentos/psiquiatria-neuro.js", "js/medicamentos/cardio-endocrino.js", "js/medicamentos/outros.js", "js/scores.js", "js/calculadoras.js", "js/documentos.js", "js/pacientes.js", "js/vagazero/base.js", "js/vagazero/conteudo-farmacos-neuro-via-aerea.js", "js/vagazero/conteudo-farmacos-cardio-metabolico.js", "js/vagazero/conteudo-complicacoes-resp-cardio.js", "js/vagazero/conteudo-complicacoes-neuro-metab.js", "js/vagazero/conteudo-complicacoes-obst-neonatal.js", "js/vagazero/conteudo-guias.js", "js/vagazero/calc.js", "js/vagazero/motor.js", "js/vagazero/extracao.js", "js/vagazero/ui.js", "js/app.js", "manifest.webmanifest"])));
   self.skipWaiting();
 });
 

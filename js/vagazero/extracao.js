@@ -21,7 +21,7 @@ const VZ_ROTULOS = [
   { rot: /estatura|comprimento|altura/, campo: "altura", re: /(\d+(?:[.,]\d+)?)\s*(cm|m)\b/ },
   { rot: /\bpc\b|perimetro cefalico/, campo: "rn.pc", re: /(\d+(?:[.,]\d+)?)\s*cm\b/ },
   { rot: /\big\b|idade gestacional|capurro/, campo: "pac.ig", re: /(\d{2})\s*sem(?:anas?)?(?:\s*(?:e\s*)?(\d)\s*dias?)?/ },
-  { rot: /apgar/, campo: "apgar", re: /1["'”]?\s*:?\s*(\d{1,2})\s*5["'”]?\s*:?\s*(\d{1,2})/ },
+  { rot: /apgar/, campo: "apgar", re: /1["'”]?\s*:?\s*(10|\d)(?!\d)\s*5["'”]?\s*:?\s*(10|\d)(?!\d)/ },
   { rot: /^sexo\b|\bsexo\b/, campo: "pac.sexo", re: /\b(masculino|feminino|indeterminado)\b/ },
   { rot: /\bidade\b(?! gestacional)/, campo: "idade", re: /\b(\d+)\s*(dias?|mes(?:es)?|anos?)\b/ },
   { rot: /data de nascimento|\bdn\b|nascido em/, campo: "pac.nascimento", re: /(\d{2}\/\d{2}\/\d{4})/ },

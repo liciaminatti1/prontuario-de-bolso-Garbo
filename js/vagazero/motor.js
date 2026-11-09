@@ -341,11 +341,19 @@ function vzAntesDaSaida(caso, g, perfil, risco, faltando, o2) {
 }
 
 /* ---------- complicações prováveis ---------- */
+/* Complicações que só existem com o suporte correspondente (ex.: extubação exige tubo). */
+const VZ_REQUISITOS = {
+  "extubacao-acidental": ["via-aerea-avancada", "vm"],
+  "falha-ventilacao-mecanica": ["vm", "vni", "via-aerea-avancada"],
+  "obstrucao-deslocamento-tubo-neonatal-pediatrico": ["via-aerea-avancada", "vm"]
+};
 function vzComplicacoes(g, perfil, risco) {
   if (!perfil) return [];
   const lista = [];
   for (const c of VZ_COMPLICACOES) {
     if (!c.publico.includes(perfil)) continue;
+    const req = c.requer || VZ_REQUISITOS[c.id];
+    if (req && !req.some(r => g.has(r))) continue;
     let score = 0; const motivos = [];
     for (const [k, w] of Object.entries(c.gatilhos)) if (g.has(k)) { score += w; motivos.push(g.get(k)); }
     if (c.id === "pcr" && ["alto", "critico"].includes(risco.nivel)) { score = Math.max(score, 2); motivos.push(`${VZ_NIVEL_NOME[risco.nivel]} na avaliação`); }
@@ -469,7 +477,7 @@ function vzAnalisar(caso) {
 function vzSBAR(caso, a) {
   const p = caso.pac, t = caso.transf, sv = caso.sv;
   const ni = v => vzTxt(v) || "não informado";
-  const idade = p.idade !== "" ? `${p.idade} ${p.idadeUnidade}` : "idade não informada";
+  const idade = p.idade !== "" ? `${p.idade} ${vzN(p.idade) === 1 ? p.idadeUnidade.replace(/s$/, "").replace("ese", "ês") : p.idadeUnidade}` : "idade não informada";
   const svTxt = s => [`PA ${s.pas || "—"}${s.pad ? "×" + s.pad : ""} mmHg`, `FC ${s.fc || "—"}`, `FR ${s.fr || "—"}`, `SpO₂ ${s.spo2 || "—"}%`, `T ${s.temp || "—"} °C`,
     `Glicemia ${s.glicemia || "—"}`, a.perfil !== "neonato" ? `Glasgow ${s.glasgow || "—"}` : ""].filter(Boolean).join(" · ");
   const ordenados = [...caso.monit].sort((x, y) => (x.hora || "").localeCompare(y.hora || ""));
@@ -480,7 +488,7 @@ function vzSBAR(caso, a) {
   const respostas = Object.entries(VZ_ABCDE).map(([l, def]) => def.itens.map(([k, rot]) => (caso.abcde[l] || {})[k] ? `${rot}: ${(caso.abcde[l] || {})[k]}` : "").filter(Boolean).join("; ")).filter(Boolean).join(" | ");
   return `RELATÓRIO DE TRANSFERÊNCIA — SBAR
 Data: ${new Date().toLocaleDateString("pt-BR")} · Origem: ${ni(t.origem)} → Destino: ${ni(t.destino)}${t.regulacao ? ` · Regulação: ${t.regulacao}` : ""}
-Paciente: ${p.nome || "não identificado"} · ${idade} · ${p.sexo === "M" ? "masculino" : p.sexo === "F" ? "feminino" : "sexo não informado"} · Peso ${p.peso ? p.peso + " kg" : "não informado"}${p.gestante === "sim" ? ` · Gestante ${p.ig || "?"} semanas` : ""}${a.perfil === "neonato" && p.ig ? ` · IG ao nascer ${p.ig} semanas` : ""}
+Paciente: ${p.nome || "não identificado"} · ${idade} · ${p.sexo === "M" ? "masculino" : p.sexo === "F" ? "feminino" : "sexo não informado"} · Peso ${vzN(p.peso) ? VZ_FMT(vzN(p.peso), 3) + " kg" : "não informado"}${p.gestante === "sim" ? ` · Gestante ${p.ig || "?"} semanas` : ""}${a.perfil === "neonato" && p.ig ? ` · IG ao nascer ${p.ig} semanas` : ""}
 
 S — SITUAÇÃO
 Motivo da transferência: ${ni(t.motivo)}
@@ -490,7 +498,7 @@ Estado atual: ${VZ_NIVEL_NOME[a.risco.nivel]} (apoio à decisão; não autoriza 
 B — HISTÓRIA (BACKGROUND)
 Comorbidades: ${ni(p.comorbidades)}
 Alergias: ${ni(p.alergias)}
-Medicamentos de uso habitual: ${ni(p.medicacoes)}${a.perfil === "neonato" && (caso.rn.apgar || caso.rn.pesoNascimento) ? `\nRN: Apgar ${caso.rn.apgar || "—"} · peso ao nascer ${caso.rn.pesoNascimento ? caso.rn.pesoNascimento + " kg" : "—"} · PC ${caso.rn.pc || "—"} cm` : ""}
+Medicamentos de uso habitual: ${ni(p.medicacoes)}${a.perfil === "neonato" && (caso.rn.apgar || caso.rn.pesoNascimento) ? `\nRN: Apgar ${caso.rn.apgar || "—"} · peso ao nascer ${vzN(caso.rn.pesoNascimento) ? VZ_FMT(vzN(caso.rn.pesoNascimento), 3) + " kg" : "—"} · PC ${caso.rn.pc || "—"} cm` : ""}
 
 A — AVALIAÇÃO
 Sinais vitais iniciais: ${svTxt(sv)}${saida ? `\nNa saída (${saida.hora}): ${svTxt(saida)}` : ""}

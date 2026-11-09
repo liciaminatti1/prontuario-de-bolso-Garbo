@@ -17,6 +17,14 @@ Toda ficha traz **prescrição ambulatorial e/ou hospitalar pronta para copiar**
 
 ---
 
+## Vaga Zero — transporte inter-hospitalar
+
+Menu **Vaga Zero** (`#vagazero`): assistente de apoio à decisão para transferências de urgência. Abas: Painel, Dados do paciente, ABCDE, Preparação da saída (checklist), Riscos e complicações, Medicamentos e doses (calculadora com dupla checagem), Via aérea e ventilação (cânula, peso predito, autonomia do cilindro), Monitorização (linha do tempo), Contingência ("se acontecer X, faça Y") e Relatório SBAR (copiar/PDF).
+
+- Foto ou PDF da ficha são lidos **no aparelho** (`vendor/`: pdf.js e Tesseract com português); o médico confirma cada valor reconhecido; conflitos e campos vazios são apontados.
+- Rascunho só na aba do navegador (sessionStorage); histórico só no prontuário criptografado de Pacientes.
+- Esquema e regras: `docs/VAGA-ZERO.md` · validação e testes: `node ferramentas/validar-vagazero.js`.
+
 ## Painel, calculadoras e segurança (v3.0)
 
 - **Início em formato de painel:** saudação, atalhos (Busca clínica, Medicamentos, Calculadoras, Documentos), acesso rápido por cenário (UBS/PS), últimos acessados, indicadores, módulos em destaque e dica do dia. Menu lateral com especialidades; no celular o menu abre como gaveta.
