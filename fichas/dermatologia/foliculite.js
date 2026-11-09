@@ -92,11 +92,22 @@ registrarFicha({
       duracao: "2 a 4 semanas",
       monitorizacao: "Interações, QT",
       contraindicacoes: "Gestação; drogas que prolongam QT",
-      ajustes: "Foliculite por Malassezia extensa ou sem resposta ao tópico (alternativa: itraconazol 200 mg/dia por 7 dias). RENAME/SUS"
+      ajustes: "Foliculite por Malassezia extensa ou sem resposta ao tópico; na Malassezia o sistêmico é mais eficaz (alguns protocolos: 150–300 mg/semana por 1–2 meses). RENAME/SUS"
+    },
+    {
+      droga: "Itraconazol (cápsula 100 mg)",
+      linha: "alt",
+      dose: "Adulto: 200 mg",
+      via: "VO, com alimento",
+      intervalo: "1 vez ao dia",
+      duracao: "1 a 3 semanas",
+      monitorizacao: "Interações (inibidor do CYP3A4), função hepática se uso prolongado",
+      contraindicacoes: "Gestação; insuficiência cardíaca",
+      ajustes: "Alternativa ao fluconazol na foliculite por Malassezia extensa"
     }
   ],
   prescricao: {
-    ambulatorial: "FOLICULITE BACTERIANA LOCALIZADA — ADULTO E CRIANÇA\nUSO TÓPICO\n1. Clorexidina degermante 2% ------------------------------- 1 frasco\n   Lavar a área no banho, deixar 1 minuto e enxaguar, 1 vez ao dia.\n2. Mupirocina 2% pomada ------------------------------------ 1 bisnaga\n   Aplicar fina camada nas lesões 3 vezes ao dia por 5 a 7 dias.\n\nFOLICULITE BACTERIANA EXTENSA OU COM CELULITE\nUSO ORAL\n3. Cefalexina 500 mg --------------------------------------- 28 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas por 7 dias.\n   Criança: cefalexina 250 mg/5 mL, 25–50 mg/kg/dia divididos de 6/6 h por 7 dias (máx. 4 g/dia).\n\nFOLICULITE POR MALASSEZIA (tronco, coceira)\nUSO TÓPICO\n4. Cetoconazol 2% xampu ------------------------------------ 1 frasco\n   No banho, aplicar no tronco e nos ombros, deixar 5 minutos e enxaguar, 1 vez ao dia por 2 a 4 semanas; depois 1 vez por semana para prevenir.\n   SE EXTENSA (adulto, não gestante):\n5. Fluconazol 150 mg -------------------------------------- 4 cápsulas\n   Tomar 1 cápsula 1 vez por semana por 4 semanas.\n\nPSEUDOFOLICULITE DA BARBA\n6. Suspender o barbear rente por 3 a 4 semanas; depois usar aparador ou barbeador elétrico, no sentido do pelo, sem esticar a pele. Liberar pelos encravados com agulha estéril, sem arrancar.\n\nFOLICULITE DA PISCINA (PSEUDOMONAS)\n7. Não precisa de antibiótico na maioria dos casos: some em 7 a 10 dias. Se coceira, loratadina 10 mg 1 vez ao dia por até 7 dias."
+    ambulatorial: "FOLICULITE BACTERIANA LOCALIZADA — ADULTO E CRIANÇA\nUSO TÓPICO\n1. Clorexidina degermante 2% ------------------------------- 1 frasco\n   Lavar a área no banho, deixar 1 minuto e enxaguar, 1 vez ao dia.\n2. Mupirocina 2% pomada ------------------------------------ 1 bisnaga\n   Aplicar fina camada nas lesões 3 vezes ao dia por 5 a 7 dias.\n\nFOLICULITE BACTERIANA EXTENSA OU COM CELULITE\nUSO ORAL\n3. Cefalexina 500 mg --------------------------------------- 28 cápsulas\n   Tomar 1 cápsula de 6 em 6 horas por 7 dias.\n   Criança: cefalexina 250 mg/5 mL, 25–50 mg/kg/dia divididos de 6/6 h por 7 dias (máx. 4 g/dia).\n\nFOLICULITE POR MALASSEZIA (tronco, coceira)\nUSO TÓPICO\n4. Cetoconazol 2% xampu ------------------------------------ 1 frasco\n   No banho, aplicar no tronco e nos ombros, deixar 5 minutos e enxaguar, 1 vez ao dia por 2 a 4 semanas; depois 1 vez por semana para prevenir.\n   SE EXTENSA (adulto, não gestante):\n5. Fluconazol 150 mg -------------------------------------- 4 cápsulas\n   Tomar 1 cápsula 1 vez por semana por 4 semanas.\n   OU Itraconazol 100 mg ------------------------------- 14 a 42 cápsulas\n   Tomar 2 cápsulas (200 mg) 1 vez ao dia, após uma refeição, por 1 a 3 semanas.\n\nPSEUDOFOLICULITE DA BARBA\n6. Suspender o barbear rente por 3 a 4 semanas; depois usar aparador ou barbeador elétrico, no sentido do pelo, sem esticar a pele. Liberar pelos encravados com agulha estéril, sem arrancar.\n\nFOLICULITE DA PISCINA (PSEUDOMONAS)\n7. Não precisa de antibiótico na maioria dos casos: some em 7 a 10 dias. Se coceira, loratadina 10 mg 1 vez ao dia por até 7 dias."
   },
   orientacoesRetorno: [
     "Não espremer as bolinhas; lavar as mãos depois de tocar",
@@ -113,8 +124,9 @@ registrarFicha({
     "Sociedade Brasileira de Pediatria — Infecções bacterianas superficiais cutâneas, Documento Científico do Departamento de Dermatologia (dezembro/2022)",
     "IDSA — Practice Guidelines for the Diagnosis and Management of Skin and Soft Tissue Infections: 2014 Update (Stevens DL, et al.)",
     "Primary Care Dermatology Society (PCDS) — Folliculitis e Pityrosporum folliculitis: clinical guidance (atualização vigente)",
-    "Ministério da Saúde — RENAME 2024 (cefalexina, clindamicina, fluconazol)"
+    "Ministério da Saúde — RENAME 2024 (cefalexina, clindamicina, fluconazol)",
+    "Hald M et al. — Evidence-based Danish guidelines for the treatment of Malassezia-related skin diseases (Acta Derm Venereol, 2015)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

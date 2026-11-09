@@ -86,10 +86,11 @@ registrarFicha({
     transferencia: ["Cardiologia: angina limitante apesar de 2 antianginosos, isquemia extensa, FE reduzida, dúvida diagnóstica", "PS (SAMU 192): angina em repouso ou prolongada"]
   },
   fontes: [
+    "SBC — Diretriz Brasileira de Doença Coronariana Crônica (2025; lançada no Congresso SBC 2025)",
     "ESC 2024 Guidelines for the management of chronic coronary syndromes",
     "SBC — Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose (2025)",
     "AHA/ACC 2023 Guideline for Chronic Coronary Disease"
   ],
-  revisao: "2026-10-24",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

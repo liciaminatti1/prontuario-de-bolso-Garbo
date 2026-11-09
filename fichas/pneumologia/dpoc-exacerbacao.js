@@ -241,11 +241,11 @@ registrarFicha({
   ],
   fontes: [
     "GOLD — Global Strategy for the Diagnosis, Management and Prevention of COPD (2026)",
-    "Ministério da Saúde — PCDT Doença Pulmonar Obstrutiva Crônica (Portaria Conjunta nº 19/2021) e Portaria SECTICS/MS nº 46/2024",
+    "Ministério da Saúde — PCDT Doença Pulmonar Obstrutiva Crônica (Portaria Conjunta SAES/SCTIE nº 29, de 27/11/2025, que substitui a Portaria Conjunta nº 19/2021) e Portaria SECTICS/MS nº 46/2024",
     "Celli BR, Fabbri LM et al. — An Updated Definition and Severity Classification of COPD Exacerbations: The Rome Proposal (Am J Respir Crit Care Med, 2021)",
     "ERS/ATS — Noninvasive mechanical ventilation for acute respiratory failure (2017)",
     "SBPT — Recomendações para o tratamento farmacológico da DPOC (2022)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

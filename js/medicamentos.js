@@ -294,12 +294,12 @@ const MEDICAMENTOS = [
     adulto: "20–80 mg VO/IV",
     renal: [{ abaixo: 30, texto: "Pode exigir doses maiores para efeito." }],
     gestacao: { nivel: "cautela", texto: "Usar apenas com indicação clara (ex.: edema pulmonar)." },
-    alergia: ["sulfonamidas"], contra: ["Hipovolemia, hipocalemia"] },
+    alergia: [], contra: ["Hipovolemia, hipocalemia", "Alergia a sulfa antimicrobiana: reatividade cruzada baixa (aviso, não contraindicação); evitar só se reação grave prévia (SSJ/NET, DRESS)"] },
   { id: "hidroclorotiazida", nomes: ["Hidroclorotiazida"], tags: ["diuretico"],
     adulto: "12,5–25 mg/dia",
     renal: [{ abaixo: 30, texto: "Pouco eficaz; preferir diurético de alça." }],
     gestacao: { nivel: "cautela", texto: "Não iniciar na gestação; manter só se já em uso e bem indicada." },
-    alergia: ["sulfonamidas"], contra: ["Gota, hiponatremia"] },
+    alergia: [], contra: ["Gota, hiponatremia", "Alergia a sulfa antimicrobiana: reatividade cruzada baixa (aviso, não contraindicação); evitar só se reação grave prévia (SSJ/NET, DRESS)"] },
   { id: "amiodarona", nomes: ["Amiodarona"], tags: ["qt", "cyp-inib-amio"],
     adulto: "Ataque 150–300 mg IV em 30–60 min; PCR 300 mg + 150 mg",
     renal: [],
@@ -344,7 +344,7 @@ const MEDICAMENTOS = [
     adulto: "Gliclazida MR 30–120 mg/dia · glibenclamida 2,5–20 mg/dia",
     renal: [{ abaixo: 30, texto: "Evitar (hipoglicemia prolongada); gliclazida só com muita cautela." }, { abaixo: 60, texto: "Glibenclamida: evitar. Gliclazida: cautela." }],
     gestacao: { nivel: "evitar", texto: "Preferir insulina na gestação." },
-    alergia: ["sulfonamidas"], contra: ["Idosos frágeis (hipoglicemia)"] },
+    alergia: [], contra: ["Idosos frágeis (hipoglicemia)", "Alergia a sulfa antimicrobiana: reatividade cruzada baixa (aviso, não contraindicação); evitar só se reação grave prévia (SSJ/NET, DRESS)"] },
   { id: "levotiroxina", nomes: ["Levotiroxina"], tags: ["levotiroxina"],
     adulto: "1,6 mcg/kg/dia (idoso/cardiopata: iniciar 12,5–25 mcg)",
     renal: [],
@@ -589,7 +589,7 @@ function alertasAlergia(m, alergias) {
       : "Alergia a penicilina: reatividade cruzada baixa com cefalosporinas de 3ª geração; evitar se anafilaxia, usar com cautela nas demais." });
   if (alergias.includes("aine") && m.id === "dipirona") out.push({ g: "moderada", t: "Alergia a AINE: possível reação cruzada com dipirona em pacientes com doença respiratória exacerbada por AINE." });
   if (alergias.includes("sulfonamidas") && (tags.includes("diuretico") || tags.includes("sulfonilureia")) && !(m.alergia || []).includes("sulfonamidas"))
-    out.push({ g: "moderada", t: "Alergia a sulfa antimicrobiana: reação cruzada com sulfas não antimicrobianas é rara." });
+    out.push({ g: "moderada", t: "Alergia a sulfa antimicrobiana: reatividade cruzada com sulfas não antimicrobianas é baixa (Strom, NEJM 2003) — aviso, não contraindicação; evitar se reação grave prévia (SSJ/NET, DRESS)." });
   return out;
 }
 const nomeAlergia = id => (ALERGIAS.find(a => a[0] === id) || [id, id])[1].toLowerCase();

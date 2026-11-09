@@ -10,6 +10,26 @@ Cada ficha foi escrita por um agente e revisada por outro, de forma independente
 
 **147 pontos em 139 fichas** · 136 correções já aplicadas pelos revisores (lista no fim).
 
+## Revisão médica de 09/11/2026 — APLICADA
+
+Relatório completo: `docs/RELATORIO-REVISAO-2026-11-09.md`. Aplicadas as seções 1 (correções), 2 (normas novas), as sugestões de redação da seção 3 e as sugestões explícitas das seções 4–5, em cerca de 75 fichas, na base de medicamentos e no Vaga Zero (revisão "2026-11-09", versão aumentada, fonte citada).
+
+**Decisões de aplicação a conferir** (não estavam escritas no relatório):
+- Asma (asma-ps, asma-ubs): início de O₂ com SpO₂ < 93% (para não ficar abaixo do alvo 93–95%); criança ≤ 5 anos com alvo 94–98%.
+- Oxiuríase: máximo de 6 drágeas (derivado do teto de 600 mg).
+- Queimaduras: alarme antigo substituído pelos critérios de grande queimado do MS (corte em 12 anos).
+- Diazepam: texto padronizado em 0,2 mg/kg também na base de medicamentos (a sugestão era só para a ficha de convulsão febril).
+- Alergia a sulfa: o alerta automático passou a ser "moderado" (aviso), não contraindicação.
+
+**Ainda abertos após a revisão:**
+- Itens que o relatório marca como não conferidos (seção 6 e notas ⚠️): mantidos sem alteração.
+- PCDT de AIJ (Portaria Conjunta 34/2026): não há ficha de AIJ.
+- Fenobarbital: a ficha de convulsão usa infusão de 50–100 mg/min; a bula do Fenocris diz < 60 mg/min — decidir.
+- Ficha de epilepsia sem o alerta da bula do fenobarbital (meninas/mulheres em idade fértil/gestantes).
+- "IC aguda" ainda aparece em outras fichas (dispneia-aguda, sca, has-emerg, fibrilacao-atrial): a troca para "descompensada" foi feita só nas fichas de IC.
+- GLP-1 na ICFEp citado sem droga/dose; corte PREVENT do risco intermediário da SBC 2025 marcado "conferir".
+- O arquivo anotado `PENDENCIAS-REVISAO-revisado-2026-11-09.md` citado no relatório não foi anexado; os itens foram aplicados a partir do relatório consolidado.
+
 ## Lote de 25/10/2026 (73 fichas novas + 17 fichas com tabela de falha/resistência a antibiótico)
 
 Mesma situação do lote de 24/10: escritas por agentes, validadas e testadas no navegador, sem segundo revisor. Revisar inteiras antes do uso assistencial.

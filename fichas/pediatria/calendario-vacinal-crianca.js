@@ -32,7 +32,7 @@ registrarFicha({
     "Contagem de CD4 para decidir vacinas atenuadas em criança com HIV (definição pelo CRIE/infectologia)"
   ],
   encaminhar: [
-    "CRIE: imunodeprimidos e seus contatos, asplenia/doença falciforme, HIV, doença renal ou hepática crônica, cardiopatia e pneumopatia crônicas, diabetes, fístula liquórica, implante coclear, prematuros extremos, trissomias, doenças de depósito, candidatos a transplante, eventos adversos graves a vacinas anteriores",
+    "CRIE: imunodeprimidos e seus contatos, asplenia/doença falciforme, HIV, doença renal ou hepática crônica, cardiopatia e pneumopatia crônicas, diabetes, fístula liquórica, implante coclear, prematuros extremos, trissomias, doenças de depósito, candidatos a transplante, eventos adversos graves a vacinas anteriores. Pneumocócicas para alto risco no SUS: VPC15 a partir de 2 meses (Portaria SCTIE/MS nº 4/2026) e VPC20 a partir de 5 anos (Portaria SCTIE/MS nº 5/2026)",
     "Alergia grave a ovo (anafilaxia) antes da febre amarela: avaliação no CRIE (tríplice viral pode ser aplicada normalmente)",
     "Evento adverso grave: notificar no e-SUS Notifica (EAPV) e encaminhar ao CRIE para definir doses seguintes"
   ],
@@ -46,7 +46,7 @@ registrarFicha({
         ["Rotavírus", "1ª dose de 1 mês e 15 dias até 3 meses e 15 dias; 2ª dose até 7 meses e 29 dias", "Perdeu o prazo: não aplicar"],
         ["Penta (DTP+Hib+HepB) / DTP", "Penta até 6 anos 11 meses e 29 dias (completar 3 doses); reforços de DTP até 6 anos 11 meses e 29 dias", "≥ 7 anos sem esquema: dT (3 doses: 0, 2 e 4 meses) + hepatite B"],
         ["Poliomielite (VIP)", "Completar o esquema em < 5 anos conforme instrução normativa vigente", "VOP foi substituída pela VIP em todo o esquema (2024–2026)"],
-        ["Pneumocócica conjugada", "Até 4 anos 11 meses e 29 dias; 12 meses–4 anos sem vacina: dose única", "Transição VPC10 → VPC20: seguir a nota técnica vigente"],
+        ["Pneumocócica conjugada", "Até 4 anos 11 meses e 29 dias; 12 meses–4 anos sem vacina: dose única", "Transição VPC10 → VPC20 na rotina: seguir a nota técnica vigente. Alto risco (CRIE): VPC15 a partir de 2 meses (Portaria SCTIE/MS nº 4/2026) e VPC20 a partir de 5 anos (Portaria SCTIE/MS nº 5/2026)"],
         ["Meningocócica C / ACWY", "Até 4 anos 11 meses e 29 dias; 12 meses–4 anos sem vacina: dose única; ACWY aos 11–14 anos", "Desde 2025 o reforço dos 12 meses é ACWY"],
         ["Febre amarela", "9 meses: 1ª dose; reforço aos 4 anos. ≥ 5 anos sem nenhuma dose: dose única (até 59 anos)", "1ª dose após os 5 anos dispensa reforço"],
         ["Tríplice viral / tetraviral", "2 doses até 29 anos (intervalo mínimo 30 dias). Tetraviral até 4 anos 11 meses e 29 dias (ou tríplice + varicela)", "Bloqueio de sarampo: 6–11 meses recebem dose zero (não conta no esquema)"],
@@ -95,8 +95,9 @@ registrarFicha({
     "Ministério da Saúde — Manual dos Centros de Referência para Imunobiológicos Especiais, 6ª ed. (2023)",
     "Ministério da Saúde — Manual de Normas e Procedimentos para Vacinação (2014) e Manual de Vigilância Epidemiológica de Eventos Supostamente Atribuíveis à Vacinação ou Imunização (ESAVI), 4ª ed. (2021)",
     "Ministério da Saúde/PNI — Notas técnicas: menACWY aos 12 meses (NT nº 77/2025), HPV dose única (2024), VIP em todo o esquema (2024–2026), dengue (2024)",
+    "Ministério da Saúde — Portarias SCTIE/MS nº 4 e nº 5, de 08/01/2026: incorporação da VPC15 (alto risco ≥ 2 meses) e da VPC20 (alto risco ≥ 5 anos) (Conass Informa 04/2026)",
     "SBP — Calendário de Vacinação SBP 2026–2027"
   ],
-  revisao: "2026-10-25",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

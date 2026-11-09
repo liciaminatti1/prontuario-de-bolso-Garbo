@@ -115,9 +115,9 @@ registrarFicha({
     "American Contact Dermatitis Society / AAAAI-ACAAI — Contact dermatitis: a practice parameter update (Fonacier L et al., J Allergy Clin Immunol Pract, 2015)",
     "European Society of Contact Dermatitis — Guideline for diagnostic patch testing (2015) e European guideline on hand eczema (Thyssen JP et al., 2022)",
     "Sociedade Brasileira de Dermatologia — Dermatite de contato (orientações SBD)",
-    "Ministério da Saúde — Portaria GM/MS nº 5.201/2024: Lista Nacional de Notificação Compulsória (inclui dermatoses ocupacionais); Dermatoses ocupacionais: protocolo de complexidade diferenciada (Saúde do Trabalhador, 2006)",
+    "Ministério da Saúde — Portaria GM/MS nº 11.211/2026: Lista Nacional de Notificação Compulsória vigente (conferir a inclusão de dermatoses ocupacionais); Dermatoses ocupacionais: protocolo de complexidade diferenciada (Saúde do Trabalhador, 2006)",
     "Ministério da Saúde — RENAME 2024"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

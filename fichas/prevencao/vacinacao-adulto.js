@@ -25,9 +25,9 @@ registrarFicha({
     "Idoso ≥ 60 anos: hepatite B e dT conforme histórico, influenza anual, covid-19 conforme calendário vigente, pneumocócica conforme grupo (VPP23 para acamados/institucionalizados; VPC20 para ≥ 85 anos e estratégias especiais)",
     "Febre amarela em ≥ 60 anos nunca vacinado: avaliar risco de exposição e comorbidades antes de indicar",
     "Dengue (Butantan-DV, dose única): implantação gradual em 2026 na faixa de 15 a 59 anos conforme grupos e municípios definidos pelo MS — conferir a orientação local",
-    "Comorbidades (diabetes, cardiopatia, pneumopatia, DRC, asplenia, HIV, imunossupressão): encaminhar ao CRIE para pneumocócicas, hepatite A, varicela, meningocócicas, HPV e outras",
+    "Comorbidades (diabetes, cardiopatia, pneumopatia, DRC, asplenia, HIV, imunossupressão): encaminhar ao CRIE para pneumocócicas (VPC20 para alto risco a partir de 5 anos — Portaria SCTIE/MS nº 5/2026; VPC15 para alto risco a partir de 2 meses — Portaria SCTIE/MS nº 4/2026), hepatite A, varicela, meningocócicas, HPV e outras",
     "Profissionais de saúde: hepatite B (com anti-HBs após o esquema), dT/dTpa, tríplice viral 2 doses, influenza, covid-19, varicela se suscetível",
-    "Herpes-zóster recombinante: não incorporada ao SUS (decisão de jan/2026); disponível na rede privada (SBIm recomenda a partir de 50 anos)"
+    "Herpes-zóster recombinante: não incorporada ao SUS (Portaria SCTIE/MS nº 3, de 08/01/2026: ≥ 80 anos e imunocomprometidos ≥ 18 anos); disponível na rede privada (SBIm recomenda a partir de 50 anos)"
   ],
   tabelas: [
     {
@@ -41,7 +41,7 @@ registrarFicha({
         ["Influenza", "≥ 60 anos, gestantes, puérperas, profissionais de saúde, doenças crônicas e outros grupos prioritários", "1 dose anual (campanha)", "Pode ser aplicada junto com outras vacinas"],
         ["Covid-19", "≥ 60 anos, gestantes, imunocomprometidos e grupos prioritários", "Conforme calendário/nota técnica vigente do MS (idosos com doses periódicas)", "Conferir intervalo e vacina disponível no ano"],
         ["Pneumocócica 23-valente (VPP23)", "≥ 60 anos acamados ou institucionalizados; indígenas; grupos do CRIE", "1 dose; reforço único após 5 anos em grupos específicos", "—"],
-        ["Pneumocócica 20-valente (VPC20)", "≥ 85 anos (rotina desde set/2026); 60–84 anos só em estratégias especiais e CRIE", "Dose única, conforme histórico vacinal", "Incorporada ao SUS em 2026; conferir orientação local"],
+        ["Pneumocócica 20-valente (VPC20)", "≥ 85 anos (rotina desde set/2026); 60–84 anos só em estratégias especiais; grupos de alto risco a partir de 5 anos no CRIE (Portaria SCTIE/MS nº 5/2026)", "Dose única, conforme histórico vacinal", "Incorporada ao SUS em 2026; conferir orientação local"],
         ["HPV", "Rotina 9–14 anos. Adultos só em grupos especiais (imunossuprimidos, HIV, transplantados e outros definidos pelo MS)", "Conforme grupo (3 doses em imunossuprimidos)", "Encaminhar ao CRIE/sala de vacina com indicação"],
         ["Dengue (Butantan-DV)", "15–59 anos, em implantação gradual por grupos e municípios (2026)", "Dose única", "Atenuada: contraindicada em gestante e imunossuprimido"]
       ],
@@ -67,10 +67,11 @@ registrarFicha({
     "Ministério da Saúde — Calendário Técnico Nacional de Vacinação do Adulto e do Idoso (atualização jan/2026)",
     "Ministério da Saúde — Manual dos Centros de Referência para Imunobiológicos Especiais, 6ª ed. (2023)",
     "Ministério da Saúde — Incorporação da vacina pneumocócica 20-valente (jun/2026) e ampliação para ≥ 85 anos (set/2026)",
-    "Ministério da Saúde/CONITEC — Decisão de não incorporação da vacina herpes-zóster recombinante (jan/2026)",
+    "Ministério da Saúde — Portaria SCTIE/MS nº 3, de 08/01/2026: não incorporação da vacina herpes-zóster recombinante (Relatório CONITEC nº 1073)",
+    "Ministério da Saúde — Portarias SCTIE/MS nº 4 e nº 5, de 08/01/2026: incorporação da VPC15 (alto risco ≥ 2 meses) e da VPC20 (alto risco ≥ 5 anos) (Conass Informa 04/2026)",
     "Ministério da Saúde/Instituto Butantan — Vacina dengue Butantan-DV: início da vacinação no SUS (jan/2026)",
     "SBIm — Calendários de vacinação 2026/2027"
   ],
-  revisao: "2026-10-21",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

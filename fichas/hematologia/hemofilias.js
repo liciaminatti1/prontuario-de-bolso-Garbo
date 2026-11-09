@@ -194,7 +194,8 @@ registrarFicha({
       "Sangramento grave: nível de fator e Hb a cada 12–24 h"
     ],
     alta: [
-      "Hemartrose ou hematoma superficial com melhora após a dose, dor controlada, plano de doses domiciliares e retorno ao hemocentro em 24–72 h"
+      "Hemartrose ou hematoma superficial com melhora após a dose, dor controlada, plano de doses domiciliares e retorno ao hemocentro em 24–72 h",
+      "Profilaxia com emicizumabe no SUS (hemocentro): hemofilia A moderada/grave com inibidor, inclusive em imunotolerância (Protocolo de Uso — Portaria Conjunta nº 12, de 09/10/2024); hemofilia A grave ou FVIII < 2% sem inibidor, com início até 6 anos (Portaria SCTIE/MS nº 94, de 26/12/2025; protocolo de uso dessa faixa na Consulta Pública 11/2026)"
     ],
     observacao: [
       "Trauma de crânio leve com TC normal após o fator: observar e manter nível de fator conforme hemocentro (risco de sangramento tardio)"
@@ -249,9 +250,10 @@ registrarFicha({
   fontes: [
     "Ministério da Saúde — Manual de hemofilia, 2ª ed. (2015) e Manual de reabilitação na hemofilia (2011)",
     "World Federation of Hemophilia — WFH Guidelines for the Management of Hemophilia, 3ª ed. (Haemophilia, 2020)",
-    "Ministério da Saúde — Protocolo de uso de emicizumabe para profilaxia em hemofilia A com inibidor (versão vigente)",
+    "Ministério da Saúde — Protocolo de Uso do emicizumabe na profilaxia de hemofilia A moderada ou grave com inibidor (Portaria Conjunta nº 12, de 09/10/2024; Relatório CONITEC nº 926)",
+    "Ministério da Saúde — Portaria SCTIE/MS nº 94, de 26/12/2025: incorporação do emicizumabe na hemofilia A grave (FVIII < 2%) sem inibidor, até 6 anos de idade no início (Relatório CONITEC nº 1.109; CP 11/2026)",
     "International recommendations on the diagnosis and treatment of acquired hemophilia A (Haematologica, 2020)"
   ],
-  revisao: "2026-10-25",
-  versao: "1.0"
+  revisao: "2026-11-09",
+  versao: "1.1"
 });

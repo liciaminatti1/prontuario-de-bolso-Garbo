@@ -97,7 +97,7 @@ registrarFicha({
       duracao: "Contínuo",
       monitorizacao: "Sintomas, exacerbações, técnica",
       contraindicacoes: "LAMA: glaucoma de ângulo fechado, retenção urinária",
-      ajustes: "Grupos B e E. SUS (CEAF, PCDT 2021): tiotrópio/olodaterol 2,5/2,5 mcg e umeclidínio/vilanterol 62,5/25 mcg"
+      ajustes: "Grupos B e E. SUS (CEAF; lista do PCDT 2021 — conferir no PCDT vigente, Portaria Conjunta nº 29/2025): tiotrópio/olodaterol 2,5/2,5 mcg e umeclidínio/vilanterol 62,5/25 mcg"
     },
     {
       droga: "Broncodilatador isolado (formoterol, salmeterol ou tiotrópio)",
@@ -192,9 +192,9 @@ registrarFicha({
   ],
   fontes: [
     "GOLD — Global Strategy for the Diagnosis, Management and Prevention of COPD (2026)",
-    "Ministério da Saúde — PCDT Doença Pulmonar Obstrutiva Crônica (Portaria Conjunta nº 19/2021) e Portaria SECTICS/MS nº 46/2024 (terapia tripla)",
+    "Ministério da Saúde — PCDT Doença Pulmonar Obstrutiva Crônica (Portaria Conjunta SAES/SCTIE nº 29, de 27/11/2025, que substitui a Portaria Conjunta nº 19/2021) e Portaria SECTICS/MS nº 46/2024 (terapia tripla)",
     "SBPT — Recomendações para o tratamento farmacológico da DPOC (2022)"
   ],
-  revisao: "2026-10-21",
-  versao: "1.1"
+  revisao: "2026-11-09",
+  versao: "1.2"
 });

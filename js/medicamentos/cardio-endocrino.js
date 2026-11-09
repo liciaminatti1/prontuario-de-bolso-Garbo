@@ -309,7 +309,7 @@ adicionarMedicamentos([
     apres: [{ rotulo: "comprimido 12,5 mg", mgPorComp: 12.5 }, { rotulo: "comprimido 25 mg", mgPorComp: 25 }, { rotulo: "comprimido 50 mg", mgPorComp: 50 }],
     renal: [{ abaixo: 30, texto: "Menos eficaz; pode ser usada com cautela na DRC avançada, mas monitorar Na, K e volemia. Diurético de alça costuma ser preferido." }],
     gestacao: { nivel: "cautela", texto: "Não iniciar na gestação; manter só se já em uso e bem indicada." },
-    alergia: [], contra: ["Hipocalemia, hiponatremia", "Gota", "Monitorar glicemia e ácido úrico"],
+    alergia: [], contra: ["Hipocalemia, hiponatremia", "Gota", "Monitorar glicemia e ácido úrico", "Alergia a sulfa antimicrobiana: reatividade cruzada baixa (aviso, não contraindicação); evitar só se reação grave prévia (SSJ/NET, DRESS)"],
     prescrever: [
       { contexto: "Adulto — HAS", texto: "USO ORAL\n1. Clortalidona 25 mg ---------------------- 30 comprimidos\n   Tomar 1 comprimido por dia, pela manhã. Uso contínuo.\n   (Idoso: iniciar com meio comprimido — 12,5 mg. Dosar Na e K em 2–4 semanas.)" }
     ] },
@@ -319,7 +319,7 @@ adicionarMedicamentos([
     apres: [{ rotulo: "comprimido LP 1,5 mg", mgPorComp: 1.5 }, { rotulo: "comprimido 2,5 mg", mgPorComp: 2.5 }],
     renal: [{ abaixo: 30, texto: "Evitar (pouco eficaz e risco de distúrbio eletrolítico)." }],
     gestacao: { nivel: "cautela", texto: "Não iniciar na gestação." },
-    alergia: [], contra: ["Hipocalemia, hiponatremia", "Encefalopatia hepática"],
+    alergia: [], contra: ["Hipocalemia, hiponatremia", "Encefalopatia hepática", "Alergia a sulfa antimicrobiana: reatividade cruzada baixa (aviso, não contraindicação); evitar só se reação grave prévia (SSJ/NET, DRESS)"],
     prescrever: [
       { contexto: "Adulto — HAS", texto: "USO ORAL\n1. Indapamida 1,5 mg (liberação prolongada) -- 30 comprimidos\n   Tomar 1 comprimido por dia, pela manhã. Não partir. Uso contínuo." }
     ] },
@@ -398,7 +398,7 @@ adicionarMedicamentos([
     apres: [{ rotulo: "comprimido MR 30 mg", mgPorComp: 30 }, { rotulo: "comprimido MR 60 mg", mgPorComp: 60 }],
     renal: [{ abaixo: 30, texto: "Evitar (hipoglicemia); se usar, dose mínima e monitorar." }, { abaixo: 60, texto: "Cautela; iniciar com 30 mg." }],
     gestacao: { nivel: "evitar", texto: "Preferir insulina na gestação." },
-    alergia: [], contra: ["DM1, cetoacidose", "Idosos frágeis e refeições irregulares (hipoglicemia)", "Hepatopatia grave"],
+    alergia: [], contra: ["DM1, cetoacidose", "Idosos frágeis e refeições irregulares (hipoglicemia)", "Hepatopatia grave", "Alergia a sulfa antimicrobiana: reatividade cruzada baixa (aviso, não contraindicação); evitar só se reação grave prévia (SSJ/NET, DRESS)"],
     prescrever: [
       { contexto: "Adulto — DM2", texto: "USO ORAL\n1. Gliclazida MR 30 mg -------------------- 30 comprimidos\n   Tomar 1 comprimido no café da manhã. Não partir o de 30 mg. Uso contínuo.\n   (Aumentar 30 mg a cada 2–4 semanas conforme glicemia, até 120 mg/dia. Orientar hipoglicemia.)" }
     ] },
