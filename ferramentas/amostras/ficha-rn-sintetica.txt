@@ -1,0 +1,34 @@
+AMOSTRA SINTÉTICA PARA TESTE — DADOS INVENTADOS, NÃO CORRESPONDEM A NENHUM PACIENTE
+Impressão de Ficha | Recém Nascido
+FICHA Nº
+TESTE-0001
+Identificação
+Data Hora
+10/03/2030 14:00:00
+Unidade Solicitante
+HOSPITAL DE TESTE A
+Profissional Solicitante CRM
+MEDICO TESTE 0001
+Nome do Paciente Nome Social Nome da Mãe
+RN DE PACIENTE TESTE PACIENTE TESTE
+Sexo CNS
+Masculino
+Data de Nascimento Idade Plano de Saúde
+10/03/2030 1 dia Não informado
+Dados Clínicos
+FICHA RN
+Peso de Nascimento Estatura PC IG(CAPURRO)
+1420 g 40 cm 27 cm 31 Semanas e 2 Dias
+Apgar Sopro Cardíaco Reanimação Intubação em sala de Parto
+1": 6 5": 8
+Malformações Quais Estado Geral Perfusão periférica
+REG lentificada
+PA FC FR Peso Atual
+x mmHg 148 64 1400 g
+Temperatura Saturação de O2 Desconforto Respiratório
+36,2 °C 93%
+Outras informações
+RN DE PARTO PREMATURO, IG 31 SEMANAS 5 DIAS PELA USG. HGT: 41MG/DL, FEITO SORO GLICOSADO. EM CPAP NASAL.
+Dados Adicionais
+[10/03/2030 às 15:00 por PROFISSIONAL TESTE] RN EM INCUBADORA, OXIGENOTERAPIA EM CATETER NASAL 1 LITROS SAT:91%.
+[10/03/2030 às 16:00 por REGULADOR TESTE] Paciente autorizado para hospital de teste B, Cidade Teste, senha 123456/2030
