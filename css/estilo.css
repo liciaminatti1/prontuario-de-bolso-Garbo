@@ -460,3 +460,28 @@ kbd{font-family:var(--f-mono);font-size:.8rem;border:1px solid var(--line);borde
 .passos{margin:6px 0 0;padding-left:1.6em;display:flex;flex-direction:column;gap:6px}
 .passos li::marker{font-weight:800;color:var(--brand-2)}
 .proc-comp{border-left:4px solid var(--alarm)}
+
+/* ---------- medicamentos por classe ---------- */
+.med-grupo{margin-top:20px}
+.med-grupo h3{font-size:1rem;font-weight:800;color:var(--brand-2);padding-bottom:6px;border-bottom:1px solid var(--line)}
+.med-grupo .med-lista{margin-top:10px}
+.med-detalhe{display:grid;gap:12px;margin-top:12px}
+.mchip{display:inline-flex;align-items:center;gap:6px}
+.rx-dot{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--muted)}
+.rx-tag{font-size:.72rem;font-weight:800;padding:2px 8px;border-radius:999px;background:var(--surface-2);color:var(--muted);white-space:nowrap}
+.rx-atb{background:var(--info-soft);color:var(--info)} .rx-dot.rx-atb{background:var(--info)}
+.rx-c1{background:var(--warn-soft);color:var(--warn)} .rx-dot.rx-c1{background:var(--warn)}
+.rx-b1{background:#e3ecfb;color:#1f4f9a} .rx-dot.rx-b1{background:#2f6fd6}
+.rx-a{background:#fbf3c9;color:#7a5a00} .rx-dot.rx-a{background:#d4a400}
+.rx-hosp{background:var(--alarm-soft);color:var(--alarm)} .rx-dot.rx-hosp{background:var(--alarm)}
+:root[data-theme="dark"] .rx-b1{background:#1b2a44;color:#9cc0ff}
+:root[data-theme="dark"] .rx-a{background:#3a3112;color:#f0d36a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rx-b1{background:#1b2a44;color:#9cc0ff}:root:not([data-theme="light"]) .rx-a{background:#3a3112;color:#f0d36a}}
+.mp-classe{color:var(--muted);font-size:.88rem;margin:0}
+.mp-receita{font-size:.88rem;margin:0;padding:8px 10px;border-radius:8px;background:var(--surface-2)}
+.med-presc .card{box-shadow:none;background:var(--surface-2)}
+#med-classes{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+#med-classes .esp-chip{flex:none}
+.dois-col>*{min-width:0}
+.so-mob{display:none}
+@media (max-width:900px){.med-page>div:first-child{order:2}.so-mob{display:inline-block;margin-bottom:8px}}

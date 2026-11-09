@@ -10,6 +10,11 @@
    - gestacao: { nivel: "compativel" | "cautela" | "evitar" | "contraindicado", texto }
    - alergia: classes de alergia que contraindicam
    - contra: contraindicações e cuidados principais
+   - classe: função (lista CLASSES_MED) · receita: tipo de receituário (RECEITAS)
+   - prescrever: [{ contexto, texto }] modelos prontos para copiar (receita / prescrição)
+   - usos: principais indicações (texto curto)
+   Os arquivos js/medicamentos/*.js completam esta base: adicionarMedicamentos([...]) para
+   remédios novos e complementarMedicamentos({ id: {...} }) para acrescentar campos aos daqui.
    CONFERIR SEMPRE com a bula e o protocolo local. Valores de referência, não substituem julgamento clínico. */
 
 const MEDICAMENTOS = [
@@ -481,6 +486,66 @@ const INTERACOES = [
   { a: ["metronidazol"], b: ["varfarina"], g: "grave", t: "Aumenta muito o INR." }
 ];
 
+/* Classes (função) na ordem em que aparecem na página Medicamentos. */
+const CLASSES_MED = [
+  ["antibioticos", "Antibióticos"], ["antivirais", "Antivirais"], ["antifungicos", "Antifúngicos"],
+  ["antiparasitarios", "Antiparasitários"], ["analgesicos", "Analgésicos, antitérmicos e antienxaqueca"],
+  ["aine", "Anti-inflamatórios (AINE)"], ["opioides", "Opioides"], ["antiemeticos", "Antieméticos e procinéticos"],
+  ["antiacidos", "Protetores gástricos"], ["intestinais", "Laxantes, antidiarreicos e antiespasmódicos"],
+  ["anti-histaminicos", "Anti-histamínicos (antialérgicos)"], ["corticoides", "Corticoides"],
+  ["respiratorio", "Broncodilatadores e asma/DPOC"], ["ansioliticos", "Ansiolíticos e hipnóticos"],
+  ["antidepressivos", "Antidepressivos"], ["antipsicoticos", "Antipsicóticos"],
+  ["anticonvulsivantes", "Anticonvulsivantes e estabilizadores do humor"], ["anti-hipertensivos", "Anti-hipertensivos"],
+  ["diureticos", "Diuréticos"], ["cardio", "Antiarrítmicos, antianginosos e insuficiência cardíaca"],
+  ["anticoagulantes", "Anticoagulantes e antiagregantes"], ["hipolipemiantes", "Hipolipemiantes"],
+  ["antidiabeticos", "Antidiabéticos e insulinas"], ["tireoide", "Tireoide"], ["hormonios", "Contraceptivos e hormônios"],
+  ["vitaminas", "Vitaminas, minerais e eletrólitos"], ["reumato", "Gota e reumatologia"],
+  ["urologia", "Urologia e saúde do homem"], ["emergencia", "Emergência e antídotos"]
+];
+
+/* Tipo de receituário (Portaria SVS/MS 344/1998 e RDC 471/2021 — conferir a norma vigente). */
+const RECEITAS = {
+  simples: ["Receita simples", "Receituário comum."],
+  antimicrobiano: ["Antimicrobiano", "Receita em 2 vias (1 retida na farmácia), validade de 10 dias (RDC 471/2021)."],
+  C1: ["Controle especial", "Receita de controle especial em 2 vias (lista C1 e similares), validade de 30 dias."],
+  B1: ["Notificação B (azul)", "Notificação de receita B azul + receita; validade de 30 dias, até 60 dias de tratamento."],
+  A: ["Notificação A (amarela)", "Notificação de receita A amarela + receita; validade de 30 dias, até 30 dias de tratamento."],
+  hospitalar: ["Uso hospitalar", "Prescrição de internação / sala de emergência."]
+};
+
+/* Classe dos medicamentos desta base. */
+const CLASSE_BASE = {
+  analgesicos: ["dipirona", "paracetamol", "sumatriptana"], aine: ["ibuprofeno", "diclofenaco", "cetoprofeno", "naproxeno"],
+  anticoagulantes: ["aas", "enoxaparina", "varfarina", "rivaroxabana", "apixabana", "clopidogrel"],
+  antibioticos: ["amoxicilina", "amoxicilina-clavulanato", "cefalexina", "ceftriaxona", "azitromicina", "claritromicina", "smx-tmp",
+    "ciprofloxacino", "levofloxacino", "nitrofurantoina", "fosfomicina", "metronidazol", "penicilina-benzatina", "doxiciclina", "rifampicina"],
+  antivirais: ["aciclovir", "oseltamivir"], antifungicos: ["fluconazol"], antiparasitarios: ["ivermectina", "albendazol"],
+  corticoides: ["prednisolona", "prednisona", "dexametasona"], respiratorio: ["salbutamol"],
+  antiemeticos: ["ondansetrona", "metoclopramida"], "anti-histaminicos": ["prometazina", "dexclorfeniramina", "loratadina"],
+  "anti-hipertensivos": ["iecabra"], diureticos: ["espironolactona", "furosemida", "hidroclorotiazida"],
+  cardio: ["amiodarona", "digoxina", "nitrato"], urologia: ["sildenafil"], hipolipemiantes: ["sinvastatina", "atorvastatina", "rosuvastatina"],
+  antidiabeticos: ["metformina", "sulfonilureia"], tireoide: ["levotiroxina"], vitaminas: ["sulfato-ferroso", "calcio"],
+  antiacidos: ["ibp", "pantoprazol"], antidepressivos: ["isrs"], opioides: ["tramadol", "codeina", "morfina"],
+  ansioliticos: ["benzodiazepinico"], anticonvulsivantes: ["fenitoina", "levetiracetam", "valproato", "litio"],
+  hormonios: ["anticoncepcional"], reumato: ["colchicina", "alopurinol"], emergencia: ["adrenalina"]
+};
+for (const [classe, ids] of Object.entries(CLASSE_BASE))
+  for (const id of ids) { const m = MEDICAMENTOS.find(x => x.id === id); if (m) m.classe = classe; }
+
+/* Usadas pelos arquivos js/medicamentos/*.js. */
+function adicionarMedicamentos(lista) {
+  for (const m of lista) {
+    if (MED_POR_ID[m.id]) { console.error(`Medicamento "${m.id}" repetido`); continue; }
+    MEDICAMENTOS.push(m); MED_POR_ID[m.id] = m;
+  }
+}
+function complementarMedicamentos(mapa) {
+  for (const [id, campos] of Object.entries(mapa)) {
+    if (!MED_POR_ID[id]) { console.error(`Medicamento "${id}" não existe para complementar`); continue; }
+    Object.assign(MED_POR_ID[id], campos);
+  }
+}
+
 /* ---------- utilidades ---------- */
 const normTxt = s => String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 const MED_POR_ID = Object.fromEntries(MEDICAMENTOS.map(m => [m.id, m]));
@@ -557,4 +622,4 @@ function faixaFixa(m, peso, idadeAnos) {
   return null;
 }
 
-if (typeof module !== "undefined") module.exports = { MEDICAMENTOS, INTERACOES, calcularDose, interacoesCom, alertasAlergia, faixaRenal, medicamentosDaFicha, MED_POR_ID };
+if (typeof module !== "undefined") module.exports = { MEDICAMENTOS, INTERACOES, ALERGIAS, CLASSES_MED, RECEITAS, adicionarMedicamentos, complementarMedicamentos, calcularDose, interacoesCom, alertasAlergia, faixaRenal, medicamentosDaFicha, MED_POR_ID };

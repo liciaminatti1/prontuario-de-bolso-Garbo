@@ -364,6 +364,8 @@ function telaDocumentos(docId, contexto = {}) {
   const destinoImportacao = doc.importar === "ambulatorial" ? "usoInterno" : "medicacoes";
   const fichaInicial = contexto.ficha && comPrescricao.find(f => f.id === contexto.ficha);
   if (fichaInicial) valores[destinoImportacao] = fichaInicial.prescricao[doc.importar];
+  // Modelo vindo da página Medicamentos: soma ao que já estiver no campo.
+  if (contexto.texto && doc.importar) valores[destinoImportacao] = contexto.texto;
 
   const pacienteCampos = doc.campos.filter(c => !c.medico);
   $app.innerHTML = `<div class="view">

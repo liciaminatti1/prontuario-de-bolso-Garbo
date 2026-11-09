@@ -273,34 +273,100 @@ function contarAlertasFicha(f) {
 }
 
 /* ---------- página Medicamentos ---------- */
+const RX_COR = { simples: "", antimicrobiano: "rx-atb", C1: "rx-c1", B1: "rx-b1", A: "rx-a", hospitalar: "rx-hosp" };
+const etiquetaReceita = m => m.receita && m.receita !== "simples"
+  ? `<span class="rx-tag ${RX_COR[m.receita] || ""}" title="${esc(RECEITAS[m.receita][1])}">${esc(RECEITAS[m.receita][0])}</span>` : "";
+
+/* Cartão "como prescrever": tipo de receituário + modelos prontos para copiar. */
+function prescricaoMedHTML(m) {
+  const rec = RECEITAS[m.receita];
+  const classe = (CLASSES_MED.find(c => c[0] === m.classe) || [, ""])[1];
+  return `<div class="card med-presc">
+    <div class="card-h"><b>${esc(m.nomes[0])}</b><span class="badges">${etiquetaReceita(m)}</span></div>
+    <p class="mp-classe">${esc(classe)}${m.usos ? ` · ${esc(m.usos)}` : ""}</p>
+    ${rec ? `<p class="mp-receita"><b>Receituário:</b> ${esc(rec[0])}. ${esc(rec[1])}</p>` : ""}
+    ${(m.prescrever || []).map((p, i) => blocoCopiavel(p.texto, p.contexto) +
+      `<button class="link-btn" data-modelo="${m.id}:${i}">Abrir ${/hospitalar|PS|IV|IM/i.test(p.contexto) || m.receita === "hospitalar" ? "na prescrição hospitalar" : "no receituário"} →</button>`).join("")
+      || `<p class="empty">Modelo de prescrição ainda não cadastrado.</p>`}
+  </div>`;
+}
+
 function telaMedicamentos() {
-  const grupos = [...MEDICAMENTOS].sort((a, b) => a.nomes[0].localeCompare(b.nomes[0], "pt-BR"));
+  let classe = "todas", busca = "";
+  try { classe = localStorage.getItem("pb-med-classe") || "todas"; } catch (e) {}
+  const nomeClasse = Object.fromEntries(CLASSES_MED);
+  if (classe !== "todas" && !nomeClasse[classe]) classe = "todas";
   $app.innerHTML = `<div class="view">
-    <div class="f-head"><h2>Medicamentos</h2><p>Dose por peso, ajuste renal, gestação, alergias e interações. Escolha um medicamento ou filtre pelo nome.</p></div>
-    <div class="dois-col">
+    <div class="f-head"><h2>Medicamentos</h2><p>Por classe, com o modelo de prescrição pronto para copiar, o tipo de receituário e os alertas de gestação, rim, alergia e interações para o paciente informado.</p></div>
+    <div class="dois-col med-page">
       <div>${painelPacienteHTML("med")}</div>
       <div>
-        <label class="campo" for="filtro-med"><span>Buscar medicamento</span><input id="filtro-med" type="search" placeholder="Ex.: amoxicilina, enoxaparina, AINE"></label>
-        <div class="med-lista" id="med-lista">${grupos.map(m => `<button class="mchip" data-abrir="${m.id}">${esc(m.nomes[0])}</button>`).join("")}</div>
-        <div id="med-detalhe" class="gap-top"><p class="empty">Selecione um medicamento.</p></div>
+        <button class="link-btn so-mob" id="ir-pac-med">Informar paciente (doses e alertas) ↓</button>
+        <label class="campo" for="filtro-med"><span>Buscar medicamento ou classe</span><input id="filtro-med" type="search" placeholder="Ex.: amoxicilina, antiemético, clonazepam"></label>
+        <div class="esp gap-top" id="med-classes" role="group" aria-label="Classe"></div>
+        <div id="med-grupos"></div>
       </div>
     </div>
-    <p class="disclaimer">Base de referência resumida. Confira sempre a bula e o protocolo da instituição.</p>
+    <p class="disclaimer">Base de referência resumida. Confira sempre a bula, a apresentação disponível e o protocolo da instituição.</p>
   </div>`;
   ligarPainelPaciente($app);
-  const detalhe = document.getElementById("med-detalhe");
-  const abrir = id => {
-    detalhe.innerHTML = cartaoSegurancaHTML(MED_POR_ID[id], "m0");
-    $app.querySelectorAll("[data-abrir]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.abrir === id)));
-  };
-  ligarCartoes(detalhe);
-  $app.querySelectorAll("[data-abrir]").forEach(b => b.onclick = () => abrir(b.dataset.abrir));
+  document.getElementById("ir-pac-med").onclick = () => $app.querySelector('[data-pac="med"]').scrollIntoView({ behavior: "smooth" });
+  const $grupos = document.getElementById("med-grupos");
+  const $classes = document.getElementById("med-classes");
+  const casa = m => !busca || normTxt([...m.nomes, ...(m.tags || []), nomeClasse[m.classe] || "", m.usos || ""].join(" ")).includes(busca);
+  const ordenados = [...MEDICAMENTOS].sort((a, b) => a.nomes[0].localeCompare(b.nomes[0], "pt-BR"));
+
+  function desenhar() {
+    const visiveis = ordenados.filter(casa);
+    const usadas = CLASSES_MED.filter(([k]) => visiveis.some(m => m.classe === k));
+    $classes.innerHTML = [["todas", "Todas", visiveis.length], ...usadas.map(([k, n]) => [k, n, visiveis.filter(m => m.classe === k).length])]
+      .map(([k, n, q]) => `<button class="esp-chip" data-classe="${k}" aria-pressed="${classe === k}">${esc(n)} <small>${q}</small></button>`).join("");
+    const grupos = usadas.filter(([k]) => classe === "todas" || classe === k);
+    $grupos.innerHTML = grupos.length ? grupos.map(([k, n]) => `<section class="med-grupo" data-grupo="${k}">
+        <h3>${esc(n)}</h3>
+        <div class="med-lista">${visiveis.filter(m => m.classe === k).map(m =>
+          `<button class="mchip" data-abrir="${m.id}" aria-expanded="false">${esc(m.nomes[0])}${m.receita && m.receita !== "simples" ? ` <i class="rx-dot ${RX_COR[m.receita]}" title="${esc(RECEITAS[m.receita][0])}"></i>` : ""}</button>`).join("")}</div>
+        <div class="med-det" data-det="${k}"></div>
+      </section>`).join("")
+      : `<p class="empty">Nenhum medicamento encontrado${busca ? ` para “${esc(document.getElementById("filtro-med").value)}”` : ""}.</p>`;
+  }
+
+  function abrir(id) {
+    const m = MED_POR_ID[id];
+    const botao = $grupos.querySelector(`[data-abrir="${id}"]`);
+    const aberto = botao.getAttribute("aria-expanded") === "true";
+    $grupos.querySelectorAll(".med-det").forEach(d => d.innerHTML = "");
+    $grupos.querySelectorAll("[data-abrir]").forEach(b => { b.setAttribute("aria-expanded", "false"); b.setAttribute("aria-pressed", "false"); });
+    if (aberto) return;
+    botao.setAttribute("aria-expanded", "true"); botao.setAttribute("aria-pressed", "true");
+    const det = $grupos.querySelector(`[data-det="${m.classe}"]`);
+    det.innerHTML = `<div class="med-detalhe">${prescricaoMedHTML(m)}${cartaoSegurancaHTML(m, "m0")}</div>`;
+    ligarCopias(det);
+    det.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }
+
+  desenhar();
+  ligarCartoes($grupos);
+  $grupos.addEventListener("click", e => {
+    const b = e.target.closest("[data-abrir]");
+    if (b) { abrir(b.dataset.abrir); return; }
+    const mod = e.target.closest("[data-modelo]");
+    if (mod) {
+      const [id, i] = mod.dataset.modelo.split(":");
+      const m = MED_POR_ID[id], p = m.prescrever[+i];
+      const hosp = /hospitalar|PS|IV|IM/i.test(p.contexto) || m.receita === "hospitalar";
+      ir(hosp ? "doc-prescricao-hospitalar" : "doc-receita", { texto: p.texto });
+    }
+  });
+  $classes.addEventListener("click", e => {
+    const b = e.target.closest("[data-classe]"); if (!b) return;
+    classe = b.dataset.classe; try { localStorage.setItem("pb-med-classe", classe); } catch (err) {}
+    desenhar();
+  });
   document.getElementById("filtro-med").addEventListener("input", e => {
-    const q = normTxt(e.target.value);
-    $app.querySelectorAll("[data-abrir]").forEach(b => {
-      const m = MED_POR_ID[b.dataset.abrir];
-      b.hidden = q && !normTxt([...m.nomes, ...(m.tags || [])].join(" ")).includes(q);
-    });
+    busca = normTxt(e.target.value.trim());
+    if (busca) classe = "todas";
+    desenhar();
   });
 }
 
