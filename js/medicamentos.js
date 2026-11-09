@@ -365,7 +365,7 @@ const MEDICAMENTOS = [
     adulto: "40 mg/dia", renal: [], gestacao: { nivel: "compativel", texto: "Compatível." }, alergia: [], contra: [] },
 
   /* ---------- neuro / psiquiatria / dor ---------- */
-  { id: "isrs", nomes: ["Sertralina", "Fluoxetina", "Escitalopram", "Citalopram", "Paroxetina"], tags: ["isrs", "serotoninergico"],
+  { id: "isrs", nomes: ["Sertralina"], tags: ["isrs", "serotoninergico"],
     adulto: "Sertralina 50–200 mg · fluoxetina 20–60 mg · escitalopram 10–20 mg",
     renal: [],
     gestacao: { nivel: "cautela", texto: "Pode ser mantido (sertralina preferida); evitar paroxetina no 1º trimestre." },
@@ -386,7 +386,7 @@ const MEDICAMENTOS = [
     renal: [{ abaixo: 30, texto: "Evitar ou reduzir dose e aumentar intervalo (metabólitos ativos acumulam)." }],
     gestacao: { nivel: "cautela", texto: "Usar com indicação; depressão respiratória neonatal perto do parto." },
     alergia: ["opioides"], contra: ["Depressão respiratória, hipotensão"] },
-  { id: "benzodiazepinico", nomes: ["Diazepam", "Midazolam", "Clonazepam", "Lorazepam", "Alprazolam"], tags: ["benzo"],
+  { id: "benzodiazepinico", nomes: ["Diazepam"], tags: ["benzo"],
     ped: { dose: 0.2, faixa: "Convulsão: diazepam 0,2–0,3 mg/kg IV · midazolam 0,2 mg/kg IM/IN", intervalo: "repetir 1× após 5 min", maxDose: 10 },
     apres: [{ rotulo: "diazepam injetável 5 mg/mL", mgPorMl: 5 }, { rotulo: "midazolam injetável 5 mg/mL", mgPorMl: 5 }],
     adulto: "Convulsão: diazepam 10 mg IV ou midazolam 10 mg IM",
