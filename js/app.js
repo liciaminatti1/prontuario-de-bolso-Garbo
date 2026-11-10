@@ -3,7 +3,7 @@
    + conteúdo (#app). A navegação usa o hash da URL: #fichas, #favoritos, #calculadoras, #sca...
    Documentos: js/documentos.js · calculadoras e segurança: js/calculadoras.js. */
 
-const VERSAO = "3.2";
+const VERSAO = "3.3";
 const $app = document.getElementById("app");
 const $busca = document.getElementById("q");
 const estado = { caminho: "todos", publico: "todos", especialidade: "todas", busca: "" };
@@ -123,6 +123,7 @@ function desenharMenu() {
     <nav aria-label="Principal">
       ${item("", "inicio", "Início")}
       ${item("pacientes", "usuario", "Pacientes")}
+      ${item("hipoteses", "lampada", "Hipóteses diagnósticas")}
       ${item("vagazero", "ambulancia", "Vaga Zero")}
       ${item("favoritos", "estrela", "Favoritos")}
       ${item("historico", "relogio", "Histórico")}
@@ -283,6 +284,7 @@ function telaInicio() {
         ${card("calculadoras", "calculadora", "Calculadoras", "Função renal, peso, hidratação e escores", "c3")}
         ${card("documentos", "documento", "Documentos", "Atestado, receita, admissão e evolução", "c4")}
         ${card("pacientes", "usuario", "Pacientes", "Prontuário de acompanhamento com exames, medicações e alertas", "c5")}
+        <a class="mod-card c8" href="#hipoteses"><span class="mod-ic">${ic("lampada")}</span><b>Hipóteses diagnósticas</b><span>Sintomas, sinais vitais ou anamnese → diagnósticos e condutas</span></a>
         <a class="mod-card c7" href="#vagazero"><span class="mod-ic">${ic("ambulancia")}</span><b>Vaga Zero</b><span>Transporte inter-hospitalar: riscos, checklist, doses e SBAR</span></a>
         <a class="mod-card c6" href="#fichas" data-esp-card="procedimentos"><span class="mod-ic">${ic("bisturi")}</span><b>Procedimentos</b><span>Passo a passo, materiais e checagens</span></a>
       </div>
@@ -633,6 +635,7 @@ function rota() {
   contextoDocumento = {};
   if (h === "pacientes") { telaPacientes(); return; }
   if (h === "vagazero") { telaVagaZero(); return; }
+  if (h === "hipoteses") { telaHipoteses(); return; }
   if (h.startsWith("pac-")) { telaPaciente(h.slice(4)); return; }
   const f = fichaPorId(h);
   if (f) { Historico.registrar(f.id); telaFicha(f); return; }

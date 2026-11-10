@@ -17,6 +17,10 @@ Toda ficha traz **prescrição ambulatorial e/ou hospitalar pronta para copiar**
 
 ---
 
+## Hipóteses diagnósticas
+
+Menu **Hipóteses diagnósticas** (`#hipoteses`): o médico digita (ou dita) sinais, sintomas, sinais vitais ou a anamnese. O motor (`js/hipoteses.js`) reconhece achados com sinônimos populares e negações ("nega febre"), deduz idade/sexo/gestação do texto, aponta **sinais de gravidade** pelos sinais vitais ajustados à idade, lista os diagnósticos graves **"não deixe passar"** por regras explícitas (com o motivo) e ordena as fichas por afinidade, mostrando por que combinam, sinais de alarme, primeira conduta, próxima decisão e exames. Afinidade não é probabilidade. Testes com casos clínicos: `node ferramentas/testar-hipoteses.js`.
+
 ## Vaga Zero — transporte inter-hospitalar
 
 Menu **Vaga Zero** (`#vagazero`): assistente de apoio à decisão para transferências de urgência. Abas: Painel, Dados do paciente, ABCDE, Preparação da saída (checklist), Riscos e complicações, Medicamentos e doses (calculadora com dupla checagem), Via aérea e ventilação (cânula, peso predito, autonomia do cilindro), Monitorização (linha do tempo), Contingência ("se acontecer X, faça Y") e Relatório SBAR (copiar/PDF).
