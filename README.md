@@ -17,6 +17,16 @@ Toda ficha traz **prescrição ambulatorial e/ou hospitalar pronta para copiar**
 
 ---
 
+## Exames
+
+Menu **Exames** (`#exames`), com quatro abas:
+
+- **Interpretar resultados**: anexe foto ou PDF de exame (lido neste aparelho por pdf.js/OCR, nada é enviado a servidor), cole o texto ou digite os valores. O motor (`js/exames/motor.js`) reconhece exame, valor, unidade e o intervalo de referência impresso no laudo (sem ele, usa o do catálogo ajustado a idade, sexo e gestação), classifica (baixo/normal/alto/crítico), cruza os resultados em padrões (anemia por VCM, LRA, ânion gap, padrão hepático pelo fator R, CAD, microangiopatia, ITU...) e aponta as fichas. Laudos de imagem/ECG/endoscopia: identifica os achados (respeitando negações como "sem derrame") e sugere as HD. As imagens em si não são interpretadas, só o texto do laudo.
+- **Laboratoriais** e **Imagem e gráficos**: catálogo com valores de referência, valores críticos, quando pedir, quando não pedir, cuidados, preparo, como escrever o pedido, exemplos e causas de cada alteração.
+- **Solicitação**: monta o pedido (exames, HD, CID, justificativa, preparo) para copiar ou imprimir.
+
+Contrato dos dados em `docs/EXAMES.md`; validação e testes: `node ferramentas/validar-exames.js`.
+
 ## Hipóteses diagnósticas
 
 Menu **Hipóteses diagnósticas** (`#hipoteses`): o médico digita (ou dita) sinais, sintomas, sinais vitais ou a anamnese. O motor (`js/hipoteses.js`) reconhece achados com sinônimos populares e negações ("nega febre"), deduz idade/sexo/gestação do texto, aponta **sinais de gravidade** pelos sinais vitais ajustados à idade, lista os diagnósticos graves **"não deixe passar"** por regras explícitas (com o motivo) e ordena as fichas por afinidade, mostrando por que combinam, sinais de alarme, primeira conduta, próxima decisão e exames. Afinidade não é probabilidade. Testes com casos clínicos: `node ferramentas/testar-hipoteses.js`.

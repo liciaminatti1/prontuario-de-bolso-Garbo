@@ -546,12 +546,12 @@ function vzAbaRelatorio(a) {
 }
 
 /* ---------- impressão ---------- */
-function vzImprimir(html) {
+function vzImprimir(html, titulo = "Vaga Zero", rodape = "Apoio à decisão clínica. Não autoriza transporte; conferir doses e protocolos institucionais.") {
   let el = document.getElementById("vz-print");
   if (!el) { el = document.createElement("div"); el.id = "vz-print"; document.body.appendChild(el); }
   const medico = typeof Perfil !== "undefined" ? `${Perfil.nomeCompleto()} · ${Perfil.ler().crm}` : "";
-  el.innerHTML = `<header class="vz-print-h"><b>Licia Minatti · Prontuário de Bolso — Vaga Zero</b><span>${new Date().toLocaleString("pt-BR")} · ${esc(medico)}</span></header>${html}
-    <footer class="vz-print-f">Apoio à decisão clínica. Não autoriza transporte; conferir doses e protocolos institucionais.</footer>`;
+  el.innerHTML = `<header class="vz-print-h"><b>Licia Minatti · Prontuário de Bolso — ${esc(titulo)}</b><span>${new Date().toLocaleString("pt-BR")} · ${esc(medico)}</span></header>${html}
+    ${rodape ? `<footer class="vz-print-f">${esc(rodape)}</footer>` : ""}`;
   document.body.classList.add("vz-imprimindo");
   const fim = () => { document.body.classList.remove("vz-imprimindo"); window.removeEventListener("afterprint", fim); };
   window.addEventListener("afterprint", fim);
