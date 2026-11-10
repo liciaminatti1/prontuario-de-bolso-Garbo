@@ -118,7 +118,7 @@ VZ_GUIAS = {
 ## Regras clínicas do módulo
 
 1. Não inventar dados nem presumir peso, idade, diagnóstico ou sinais vitais; o que falta aparece como "não informado".
-2. Diferenciar a origem: **informado** (digitado), **extraído** (lido do documento, aguardando confirmação), **confirmado**.
+2. Diferenciar a origem: **informado** (digitado) e **do documento** (preenchido automaticamente; amarelo = conferir/conflito). O preenchimento automático nunca sobrescreve valor digitado; em conflito, sinais vitais usam o registro mais recente e os demais campos o primeiro registro, com as alternativas visíveis.
 3. Doses só com peso (quando por kg), faixa etária compatível e concentração confirmada no rótulo.
 4. Alto risco: conferência independente antes de administrar.
 5. Classificação de risco é apoio; o texto da tela diz sempre que não autoriza o transporte.

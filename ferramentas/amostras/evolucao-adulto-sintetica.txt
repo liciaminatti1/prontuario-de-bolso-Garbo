@@ -1,0 +1,15 @@
+AMOSTRA SINTÉTICA PARA TESTE — DADOS INVENTADOS, NÃO CORRESPONDEM A NENHUM PACIENTE
+HOSPITAL DE TESTE C - PRONTO-SOCORRO
+EVOLUÇÃO MÉDICA - 12/04/2030 08:00
+Paciente do sexo masculino, 67 anos, peso 82 kg, altura 1,74 m.
+HDA: dor torácica em aperto há 3 horas, com sudorese. ECG com supradesnivelamento de ST em parede inferior. Feito AAS 300 mg e clopidogrel 300 mg.
+Comorbidades: HAS, DM2, tabagista.
+Medicações em uso: losartana 50 mg 12/12h, metformina 850 mg 12/12h.
+Alergias: dipirona.
+Exame físico: REG, sudoreico, corado, hidratado. AR: MV presente bilateral, sem ruídos adventícios. ACV: RCR 2T, BNF, sem sopros. Abdome flácido, indolor. Extremidades sem edema, TEC 3 s.
+PA: 92x60 mmHg FC: 54 bpm FR: 22 irpm SatO2: 93% em ar ambiente Tax: 36,4 ºC HGT: 182 mg/dL Glasgow: 15
+AVP em MSE calibre 18.
+HD: IAM com supradesnivelamento de ST inferior.
+Conduta: solicitada vaga para hemodinâmica.
+Destino: Hospital de Teste D - Hemodinâmica
+10:30 Reavaliação: PA 84x52 mmHg, FC 48 bpm, SatO2 91%, paciente sonolento, Glasgow 14. Iniciado cateter nasal 3 L/min.

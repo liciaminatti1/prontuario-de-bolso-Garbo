@@ -52,7 +52,18 @@ function vzSecoesHTML(secoes) {
 }
 function vzOrigemTag(caminho) {
   const o = VZ_CASO.origem[caminho];
-  return o === "documento" ? `<span class="vz-tag-origem doc" title="Valor lido do documento e confirmado pelo médico">documento ✓</span>` : "";
+  const auto = VZ_CASO.extracao && VZ_CASO.extracao.auto && VZ_CASO.extracao.auto[caminho];
+  if (o !== "documento") return auto && auto.naoAferido && vzTxt(vzGet(VZ_CASO, caminho)) === "" ? `<span class="vz-tag-origem falta">não aferido no documento</span>` : "";
+  if (auto && auto.conflito) return `<span class="vz-tag-origem conflito" title="O documento traz valores diferentes">conferir: valores diferentes no documento</span>`;
+  if (auto && auto.conferir) return `<span class="vz-tag-origem conferir">do documento · conferir</span>`;
+  return `<span class="vz-tag-origem doc" title="Preenchido automaticamente a partir do documento">do documento</span>`;
+}
+/* Alternativas encontradas no documento para um campo em conflito. */
+function vzAlternativas(caminho) {
+  const auto = VZ_CASO.extracao && VZ_CASO.extracao.auto && VZ_CASO.extracao.auto[caminho];
+  if (!auto || !auto.conflito || VZ_CASO.origem[caminho] !== "documento") return "";
+  const atual = String(vzGet(VZ_CASO, caminho) ?? "");
+  return `<span class="vz-alts">${auto.alternativas.map((x, i) => `<button type="button" class="vz-alt" data-alt="${caminho}|${i}" aria-pressed="${String(x.valor) === atual}">${esc(x.texto)}</button>`).join("")}</span>`;
 }
 /* Campo de formulário ligado ao caso. tipo: text | number | select | textarea */
 function vzCampo(caminho, rotulo, tipo = "text", opcoes = null, extra = {}) {
@@ -64,7 +75,9 @@ function vzCampo(caminho, rotulo, tipo = "text", opcoes = null, extra = {}) {
   else if (tipo === "textarea") ctrl = `<textarea ${att} rows="${extra.linhas || 2}">${esc(v)}</textarea>`;
   else ctrl = `<input ${att} type="${tipo === "number" ? "text" : tipo}" value="${esc(v)}">`;
   const faltando = VZ_ANALISE && VZ_ANALISE.faltando.find(f => f.campo === caminho);
-  return `<label class="campo vz-campo ${extra.largo ? "largo" : ""} ${faltando ? "vz-falta-" + faltando.nivel : ""}" for="${id}"><span>${esc(rotulo)} ${vzOrigemTag(caminho)}${faltando ? `<em class="vz-nao-inf">não informado</em>` : ""}</span>${ctrl}</label>`;
+  const doc = VZ_CASO.origem[caminho] === "documento";
+  const tag = vzOrigemTag(caminho);
+  return `<label class="campo vz-campo ${extra.largo ? "largo" : ""} ${faltando ? "vz-falta-" + faltando.nivel : ""} ${doc ? "vz-do-doc" : ""}" for="${id}"><span>${esc(rotulo)} ${tag}${faltando && !tag.includes("não aferido") ? `<em class="vz-nao-inf">não informado</em>` : ""}</span>${ctrl}${vzAlternativas(caminho)}</label>`;
 }
 
 /* ---------- tela ---------- */
@@ -159,14 +172,15 @@ function vzAbaDados(a) {
   const ex = VZ_CASO.extracao;
   const neo = a.perfil === "neonato", ped = a.perfil === "pediatrico";
   return `${vzCard("Enviar ficha, prontuário ou exames", `
-    <p class="note">A leitura acontece <b>neste aparelho</b> (PDF por pdf.js; foto e PDF escaneado por OCR em português). Nenhum arquivo é enviado a servidor e a imagem não é guardada — só o texto reconhecido. Cada valor reconhecido precisa da sua confirmação.</p>
+    <p class="note">A leitura acontece <b>neste aparelho</b> (PDF por pdf.js; foto e PDF escaneado por OCR em português). Nenhum arquivo é enviado a servidor e a imagem não é guardada — só o texto reconhecido. Os campos são <b>preenchidos automaticamente</b> com o que for reconhecido; confira os marcados em amarelo. O que você já digitou não é sobrescrito.</p>
     <div class="vz-upload">
       <label class="vz-btn-grande" for="vz-arquivo">${ic("documento")} Foto ou PDF<input type="file" id="vz-arquivo" accept="image/*,application/pdf" multiple hidden></label>
       <label class="vz-btn-grande" for="vz-camera">${ic("olho")} Fotografar ficha<input type="file" id="vz-camera" accept="image/*" capture="environment" hidden></label>
     </div>
     <p id="vz-status" class="vz-status" aria-live="polite"></p>
     ${VZ_CASO.anexos.length ? `<p class="note">Lidos: ${VZ_CASO.anexos.map(x => esc(x.nome)).join(", ")}</p>` : ""}
-    ${ex ? vzCandidatosHTML(ex) : ""}`)}
+    ${ex ? vzResumoAutoHTML(ex, a) : ""}
+    ${ex ? `<details class="vz-sec"><summary>Tudo o que foi reconhecido no documento (${ex.candidatos.length})</summary>${vzCandidatosHTML(ex)}</details>` : ""}`)}
   ${neo || ped ? vzCard(neo ? "Fluxo neonatal — obrigatórios" : "Fluxo pediátrico — obrigatórios", `<p class="note">${neo ? "Peso atualizado e idade gestacional são obrigatórios. Doses de adulto nunca se aplicam ao recém-nascido." : "Peso medido é obrigatório (não estimar). Doses sempre por kg, com dose máxima."}</p>
     <div class="form-doc">${vzCampo("pac.peso", "Peso atual (kg)", "number", null, { placeholder: neo ? "ex.: 1,4" : "" })}${neo ? vzCampo("pac.ig", "IG ao nascer (semanas)", "number") + vzCampo("rn.pesoNascimento", "Peso ao nascer (kg)", "number") + vzCampo("rn.apgar", "Apgar (1º/5º)") + vzCampo("rn.pc", "Perímetro cefálico (cm)", "number") : ""}</div>`, "vz-c-info") : ""}
   ${vzCard("Identificação clínica", `<div class="form-doc">
@@ -190,7 +204,9 @@ function vzAbaDados(a) {
     ${vzCampo("transf.distanciaKm", "Distância (km)", "number")}${vzCampo("transf.tempoMin", "Tempo estimado (min)", "number")}
     ${vzCampo("transf.ambulancia", "Tipo de ambulância", "select", [["", "—"], ["basica", "Básica (USB)"], ["avancada", "Avançada (USA)"], ["neonatal", "Neonatal"], ["aeromedico", "Aeromédico"]])}
     ${vzCampo("transf.equipe", "Profissionais que acompanharão", "text", null, { largo: true })}
-    ${vzCampo("transf.pendencias", "Exames e pendências", "textarea", null, { largo: true })}</div>`)}
+    ${vzCampo("transf.pendencias", "Exames e pendências", "textarea", null, { largo: true })}
+    ${vzCampo("transf.destaques", "Pontos importantes", "textarea", null, { largo: true, linhas: 3 })}
+    ${vzCampo("transf.resumo", "Resumo clínico / história / evolução", "textarea", null, { largo: true, linhas: 4 })}</div>`)}
   ${vzCard("Estado clínico atual", `<div class="form-doc vz-sv">
     ${vzCampo("sv.hora", "Horário da aferição", "time")}
     ${vzCampo("sv.pas", "PA sistólica (mmHg)", "number")}${vzCampo("sv.pad", "PA diastólica (mmHg)", "number")}
@@ -199,6 +215,8 @@ function vzAbaDados(a) {
     ${neo ? "" : vzCampo("sv.glasgow", "Glasgow (3–15)", "number")}
     ${vzCampo("sv.dor", "Dor (0–10)", "number")}${vzCampo("sv.diurese", "Diurese")}
     ${vzCampo("sv.perfusao", "Perfusão periférica", "text", null, { placeholder: "ex.: TEC 2 s / lentificada" })}
+    ${vzCampo("sv.exameFisico", "Exame físico", "textarea", null, { largo: true, linhas: 3 })}
+    ${vzCampo("sv.estadoGeral", "Estado geral")}
     ${vzCampo("sv.neuro", "Estado neurológico", "text", null, { largo: true })}
     ${vzCampo("sv.o2", "Oxigênio / suporte", "select", VZ_OPC_O2)}${vzCampo("sv.o2fluxo", "Fluxo de O₂ (L/min)", "number")}${vzCampo("sv.fio2", "FiO₂ (%)", "number")}
     ${vzCampo("sv.vent", "Parâmetros do ventilador", "text", null, { largo: true, placeholder: "modo, VT, FR, PEEP, FiO₂" })}
@@ -215,19 +233,18 @@ function vzCandidatosHTML(ex) {
   if (!ex.candidatos.length) return `<p class="empty">Nenhum campo reconhecido. Confira a qualidade da imagem ou digite os dados.</p>`;
   const fmt = c => c.vazio ? "não aferido no documento" : c.texto || (typeof c.valor === "number" ? VZ_FMT(c.valor, 3) : c.valor) + (c.unidade ? " " + c.unidade : "");
   return `<div class="vz-cand">
-    <div class="painel-h"><h4>Dados reconhecidos — confirme antes de usar</h4>${pend.some(c => !c.conflito && !c.vazio && !c.interpretar) ? `<button class="seg" id="vz-aceitar-todos">Aceitar todos sem conflito</button>` : ""}</div>
+    <p class="note">★ = valor usado no preenchimento. Para trocar, use "Usar este" ou edite o campo.</p>
     <div class="table-wrap"><table><thead><tr><th>Campo</th><th>Valor reconhecido</th><th>Origem no documento</th><th></th></tr></thead><tbody>
-    ${ex.candidatos.map((c, i) => `<tr class="${c.aceito ? "vz-aceito" : c.ignorado ? "vz-ignorado" : c.conflito ? "vz-conflito" : ""}">
+    ${ex.candidatos.map((c, i) => `<tr class="${String(vzGet(VZ_CASO, c.campo) ?? "") === String(vzValorCampo(c)) ? "vz-aceito" : c.conflito ? "vz-conflito" : ""}">
       <td>${esc(VZ_ROTULO_CAMPO[c.campo] || c.campo)}${c.conflito ? ` <span class="tag ci">conflito</span>` : ""}${c.interpretar ? ` <span class="tag adj">conferir</span>` : ""}${c.sugestao ? ` <span class="tag">sugestão</span>` : ""}</td>
-      <td><b>${esc(fmt(c))}</b></td><td><small>${esc((c.trechos || []).join(" | "))}</small></td>
-      <td class="vz-cand-acoes">${c.aceito ? "✓ usado" : c.ignorado ? "ignorado" : c.vazio ? `<button class="link-btn" data-ignorar="${i}">ok</button>` : `<button class="seg" data-aceitar="${i}">Usar</button><button class="link-btn" data-ignorar="${i}">Ignorar</button>`}</td></tr>`).join("")}
+      <td>${c.preferido ? "★ " : ""}<b>${esc(fmt(c))}</b></td><td><small>${esc((c.trechos || []).join(" | "))}</small></td>
+      <td class="vz-cand-acoes">${c.vazio ? "—" : String(vzGet(VZ_CASO, c.campo) ?? "") === String(vzValorCampo(c)) ? "✓ no campo" : `<button class="seg" data-aceitar="${i}">Usar este</button>`}</td></tr>`).join("")}
     </tbody></table></div></div>`;
 }
 function vzAceitarCandidato(i) {
   const ex = VZ_CASO.extracao, c = ex.candidatos[i];
   if (!c || c.vazio) return;
-  let valor = c.valor;
-  if (c.campo === "pac.ig") valor = Math.round(c.valor * 10) / 10;
+  const valor = vzValorCampo(c);
   if (c.campo === "pac.idade") vzSet("pac.idadeUnidade", c.unidade || "anos", "documento");
   if (c.campo.startsWith("rn.") || c.campo.startsWith("pac.") || c.campo.startsWith("sv.") || c.campo.startsWith("transf.")) vzSet(c.campo, valor, "documento");
   c.aceito = true;
@@ -250,10 +267,55 @@ async function vzProcessarArquivos(arquivos) {
   const antigos = (VZ_CASO.extracao && VZ_CASO.extracao.candidatos) || [];
   r.candidatos.forEach(c => { const v = antigos.find(o => o.campo === c.campo && String(o.valor) === String(c.valor)); if (v) { c.aceito = v.aceito; c.ignorado = v.ignorado; c.resolvido = v.resolvido; } });
   VZ_CASO.extracao = { texto, candidatos: r.candidatos, exames: r.exames };
+  vzAutoPreencher(VZ_CASO.extracao);
   vzSalvarRascunho();
   telaVagaZero("dados");
-  const st2 = document.getElementById("vz-status");
-  if (st2) st2.textContent = `${r.candidatos.length} dados reconhecidos${r.candidatos.some(c => c.conflito) ? " (há conflitos)" : ""}. Confira e confirme cada um.`;
+  window.scrollTo(0, 0);
+}
+
+/* Valor do candidato no formato do campo do formulário. */
+function vzValorCampo(c) {
+  if (c.campo === "pac.ig") return Math.round(c.valor * 10) / 10;
+  return c.valor;
+}
+/* Preenche os campos com o valor preferido de cada um (sinais vitais: o mais recente do documento).
+   Não sobrescreve o que o médico digitou. Guarda alternativas para conflitos. */
+function vzAutoPreencher(ex) {
+  const auto = {}; let preenchidos = 0;
+  const campos = [...new Set(ex.candidatos.map(c => c.campo))];
+  const mantidos = [];
+  const fmt = c => c.texto || (typeof c.valor === "number" ? VZ_FMT(c.valor, 3) : String(c.valor)) + (c.unidade ? " " + c.unidade : "");
+  for (const campo of campos) {
+    const cs = ex.candidatos.filter(c => c.campo === campo);
+    const pref = cs.find(c => c.preferido);
+    if (!pref) { if (cs.some(c => c.vazio)) auto[campo] = { naoAferido: true }; continue; }
+    const atual = vzGet(VZ_CASO, campo);
+    if (vzTxt(atual) !== "" && VZ_CASO.origem[campo] !== "documento") { mantidos.push(campo); continue; }
+    auto[campo] = { conflito: pref.conflito, conferir: pref.interpretar || pref.sugestao,
+      alternativas: cs.filter(c => !c.vazio && (!c.sugestao || c === pref)).map(c => ({ valor: vzValorCampo(c), texto: fmt(c), unidade: c.unidade })) };
+    if (campo === "pac.idade") vzSet("pac.idadeUnidade", pref.unidade || "anos", "documento");
+    vzSet(campo, vzValorCampo(pref), "documento");
+    pref.aceito = true; preenchidos++;
+  }
+  /* Exame físico mínimo a partir do que a ficha traz em campos separados. */
+  if (vzTxt(VZ_CASO.sv.exameFisico) === "" && (VZ_CASO.sv.estadoGeral || VZ_CASO.sv.perfusao)) {
+    vzSet("sv.exameFisico", [VZ_CASO.sv.estadoGeral && `Estado geral: ${VZ_CASO.sv.estadoGeral}`, VZ_CASO.sv.perfusao && `Perfusão periférica: ${VZ_CASO.sv.perfusao}`].filter(Boolean).join(". ") + ".", "documento");
+    auto["sv.exameFisico"] = { conferir: true, alternativas: [] };
+  }
+  ex.auto = auto;
+  ex.resumoAuto = { preenchidos, conflitos: Object.values(auto).filter(x => x.conflito).length, mantidos };
+}
+function vzResumoAutoHTML(ex, a) {
+  const R = ex.resumoAuto; if (!R) return "";
+  const conflitos = Object.entries(ex.auto || {}).filter(([, x]) => x.conflito);
+  const naoAf = Object.entries(ex.auto || {}).filter(([k, x]) => x.naoAferido && vzTxt(vzGet(VZ_CASO, k)) === "");
+  return `<div class="vz-auto-res">
+    <p class="vz-auto-ok">✓ ${R.preenchidos} campos preenchidos automaticamente a partir do documento.</p>
+    ${conflitos.length ? `<div class="vz-auto-conf"><b>${conflitos.length} com valores diferentes no documento.</b> Em destaque, o valor usado (nos sinais vitais, o registro mais recente); toque no outro para trocar:<ul>${conflitos.map(([k, x]) => `<li>${esc(VZ_ROTULO_CAMPO[k] || k)}: ${x.alternativas.map((alt, i) => `<button type="button" class="vz-alt" data-alt="${k}|${i}" aria-pressed="${String(alt.valor) === String(vzGet(VZ_CASO, k) ?? "")}">${esc(alt.texto)}</button>`).join(" ")}</li>`).join("")}</ul></div>` : ""}
+    ${naoAf.length ? `<p class="vz-atencao vz-alerta-linha">Não aferido no documento: ${naoAf.map(([k]) => esc(VZ_ROTULO_CAMPO[k] || k)).join(", ")}.</p>` : ""}
+    ${a.faltando.length ? `<p class="note"><b>Não encontrado no documento (completar):</b> ${a.faltando.map(f => esc(f.rotulo)).join(", ")}.</p>` : ""}
+    ${R.mantidos.length ? `<p class="note">Mantidos os valores que você já tinha digitado: ${R.mantidos.map(k => esc(VZ_ROTULO_CAMPO[k] || k)).join(", ")}.</p>` : ""}
+    <button class="seg" data-irpara="painel">Ver o painel do caso →</button></div>`;
 }
 
 /* ---------- ABCDE ---------- */
@@ -561,6 +623,11 @@ function vzLigarAba(k) {
     const t = e.target.closest("button, [data-irpara]"); if (!t) return;
     if (t.dataset.irpara) { VZ_ABA = t.dataset.irpara; telaVagaZero(); const foco = t.dataset.foco && document.getElementById("vz-c-" + t.dataset.foco); if (foco) { foco.open = true; foco.scrollIntoView(); } else window.scrollTo(0, 0); return; }
     if (t.dataset.check) { VZ_CASO.checklist[t.dataset.check] = VZ_CASO.checklist[t.dataset.check] === t.dataset.st ? "" : t.dataset.st; vzSalvarRascunho(); const y = window.scrollY; telaVagaZero(); window.scrollTo(0, y); return; }
+    if (t.dataset.alt) {
+      const [campo, i] = t.dataset.alt.split("|"); const alt = VZ_CASO.extracao.auto[campo].alternativas[+i];
+      vzSet(campo, alt.valor, "documento"); if (campo === "pac.idade" && alt.unidade) vzSet("pac.idadeUnidade", alt.unidade, "documento");
+      const y = window.scrollY; telaVagaZero(); window.scrollTo(0, y); return;
+    }
     if (t.dataset.aceitar !== undefined) { vzAceitarCandidato(+t.dataset.aceitar); const y = window.scrollY; telaVagaZero(); window.scrollTo(0, y); return; }
     if (t.dataset.ignorar !== undefined) { const c = VZ_CASO.extracao.candidatos[+t.dataset.ignorar]; c.ignorado = true; vzSalvarRascunho(); const y = window.scrollY; telaVagaZero(); window.scrollTo(0, y); return; }
     if (t.dataset.calc) { VZ_CALC.farmaco = t.dataset.calc; VZ_CALC.indicacao = t.dataset.calcInd || ""; vzPreencherCalc(); VZ_ABA = "farmacos"; telaVagaZero(); document.querySelector(".vz-calc").scrollIntoView(); return; }

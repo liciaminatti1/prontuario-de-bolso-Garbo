@@ -64,6 +64,20 @@ module.exports = function testes() {
   ok(val("sv.o2") === "cateter" && val("sv.o2fluxo") === 1, "extração: cateter nasal 1 L");
   ok(/hospital de teste B/i.test(val("transf.destino") || ""), "extração: destino autorizado");
 
+  /* ---- extração: evolução de adulto em texto corrido (sintética) ---- */
+  const ex2 = vzExtrairCampos(require("fs").readFileSync(path.join(__dirname, "amostras/evolucao-adulto-sintetica.txt"), "utf8"));
+  const pref = c => (ex2.candidatos.find(x => x.campo === c && x.preferido) || {}).valor;
+  ok(pref("pac.idade") === 67 && pref("pac.sexo") === "M" && pref("pac.peso") === 82 && pref("pac.altura") === 174, "texto corrido: idade, sexo, peso, altura");
+  ok(pref("sv.pas") === 84 && pref("sv.pad") === 52 && pref("sv.fc") === 48 && pref("sv.spo2") === 91 && pref("sv.glasgow") === 14, "conflito de sinais vitais: usa a reavaliação mais recente");
+  ok(pref("sv.fr") === 22 && pref("sv.temp") === 36.4 && pref("sv.glicemia") === 182, "texto corrido: FR, Tax, HGT");
+  ok(pref("sv.o2") === "cateter" && pref("sv.o2fluxo") === 3, "O₂ mais recente: cateter 3 L/min");
+  ok(pref("pac.alergias") === "dipirona" && !ex2.candidatos.find(x => x.campo === "pac.alergias").conflito, "pontuação não gera conflito falso");
+  ok(/MV presente/.test(pref("sv.exameFisico") || "") && /TEC 3 s/.test(pref("sv.exameFisico") || ""), "bloco de exame físico");
+  ok(/IAM/.test(pref("transf.dxPrincipal") || "") && /Hemodinâmica/i.test(pref("transf.destino") || ""), "HD e destino");
+  ok(/HAS/.test(pref("pac.comorbidades") || "") && /losartana/.test(pref("pac.medicacoes") || ""), "comorbidades e medicações em uso");
+  ok(/HDA: dor torácica/.test(pref("transf.destaques") || "") && /Paciente do sexo masculino/.test(pref("transf.resumo") || ""), "pontos importantes e resumo");
+  ok(!ex2.candidatos.some(c => c.campo === "sv.glasgow" && c.valor === 300), "ECG não confundido com Glasgow");
+
   /* ---- motor: RN prematuro ---- */
   const caso = vzCasoVazio();
   Object.assign(caso.pac, { idade: 1, idadeUnidade: "dias", sexo: "M", peso: 1.4, ig: 31 });

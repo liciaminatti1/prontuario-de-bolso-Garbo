@@ -610,3 +610,13 @@ kbd{font-family:var(--f-mono);font-size:.8rem;border:1px solid var(--line);borde
   #vz-print .vz-cont-grid{display:block} #vz-print .vz-se{border:1px solid #999;border-left:5px solid #000;margin:6px 0;page-break-inside:avoid;padding:6px 10px}
 }
 .vz-head{flex-direction:row!important;align-items:flex-end!important;text-align:left}.vz-head>div:first-child{margin-right:auto}
+.vz-tag-origem.conflito{background:var(--warn-soft);color:var(--warn)} .vz-tag-origem.conferir{background:var(--warn-soft);color:var(--warn)}
+.vz-tag-origem.falta{background:var(--alarm-soft);color:var(--alarm)}
+.vz-do-doc input,.vz-do-doc select,.vz-do-doc textarea{background:color-mix(in srgb,var(--info-soft) 55%,var(--surface))}
+.vz-alts{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.vz-alt{border:1.5px solid var(--warn);background:var(--surface);border-radius:999px;padding:3px 10px;font-weight:700;font-size:.8rem;color:var(--fg)}
+.vz-alt[aria-pressed="true"]{background:var(--warn);color:#fff}
+.vz-auto-res{background:var(--ok-soft);border-radius:12px;padding:12px 14px;margin:10px 0;display:flex;flex-direction:column;gap:8px}
+.vz-auto-ok{font-weight:800;color:var(--ok);margin:0}
+.vz-auto-conf{background:var(--warn-soft);border-radius:10px;padding:8px 10px}
+.vz-auto-conf ul{margin:6px 0 0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}

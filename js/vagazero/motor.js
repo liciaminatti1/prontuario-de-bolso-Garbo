@@ -13,9 +13,9 @@ function vzCasoVazio() {
     id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), criadoEm: agora, atualizadoEm: agora,
     pac: { nome: "", idade: "", idadeUnidade: "anos", sexo: "", peso: "", altura: "", gestante: "", ig: "", comorbidades: "", alergias: "", medicacoes: "", nascimento: "", nomeMae: "" },
     rn: { apgar: "", pesoNascimento: "", pc: "" },
-    transf: { motivo: "", dxPrincipal: "", dxSecundarios: "", origem: "", destino: "", distanciaKm: "", tempoMin: "", ambulancia: "", equipe: "", regulacao: "", solicitante: "", pendencias: "" },
+    transf: { resumo: "", destaques: "", motivo: "", dxPrincipal: "", dxSecundarios: "", origem: "", destino: "", distanciaKm: "", tempoMin: "", ambulancia: "", equipe: "", regulacao: "", solicitante: "", pendencias: "" },
     sv: { hora: "", pas: "", pad: "", fc: "", fr: "", spo2: "", temp: "", glicemia: "", glasgow: "", neuro: "", perfusao: "", diurese: "", dor: "", estadoGeral: "",
-      o2: "", o2fluxo: "", fio2: "", vent: "", acessosQtd: "", acessosTipo: "", infusoes: "", dispositivos: "", outros: "" },
+      o2: "", o2fluxo: "", fio2: "", vent: "", acessosQtd: "", acessosTipo: "", infusoes: "", dispositivos: "", exameFisico: "", outros: "" },
     abcde: {}, checklist: {}, checkFarm: {}, monit: [], eventos: [],
     o2calc: { capacidadeL: "", pressao: "", unidadePressao: "bar", pressaoResidual: "", fluxo: "", consumoAdicional: "", fator: "2" },
     anexos: [], extracao: null, origem: {}, log: []
@@ -111,7 +111,7 @@ function vzGatilhos(caso) {
     if (temp >= 40) set("hiperpirexia", `Temperatura ${VZ_FMT(temp, 1)} °C`);
   }
   if (dor !== null && dor >= 7) set("dor-intensa", `Dor ${dor}/10`);
-  const textoClin = vzNorm([sv.outros, sv.neuro, caso.transf.motivo, caso.transf.dxPrincipal, caso.transf.dxSecundarios].join(" "));
+  const textoClin = vzNorm([sv.outros, sv.neuro, sv.exameFisico, caso.transf.resumo, caso.transf.motivo, caso.transf.dxPrincipal, caso.transf.dxSecundarios].join(" "));
   if (/vomit|emese|hematemese/.test(textoClin) || vzResp(caso, "A", "aspiracao").startsWith("alto") || vzResp(caso, "A", "aspiracao").startsWith("moderado")) set("vomitos", "Vômitos / risco de aspiração");
 
   /* suporte em uso */
@@ -214,7 +214,10 @@ const VZ_ROTULO_CAMPO = { "pac.peso": "peso", "pac.ig": "idade gestacional", "sv
   "transf.destino": "destino", "transf.dxPrincipal": "diagnóstico", "transf.motivo": "motivo", "sv.o2": "suporte de O₂", "sv.o2fluxo": "fluxo de O₂",
   "pac.altura": "altura/estatura", "pac.alergias": "alergias", "transf.origem": "origem", "transf.regulacao": "regulação", "pac.nome": "nome",
   "pac.nascimento": "nascimento", "pac.nomeMae": "nome da mãe", "transf.solicitante": "solicitante", "sv.perfusao": "perfusão", "sv.estadoGeral": "estado geral",
-  "rn.apgar": "Apgar", "rn.pesoNascimento": "peso ao nascer", "rn.pc": "perímetro cefálico", "sv.infusoes": "infusões" };
+  "rn.apgar": "Apgar", "rn.pesoNascimento": "peso ao nascer", "rn.pc": "perímetro cefálico", "sv.infusoes": "infusões",
+  "sv.exameFisico": "exame físico", "transf.resumo": "resumo clínico", "transf.destaques": "pontos importantes", "sv.dor": "dor", "sv.diurese": "diurese",
+  "sv.fio2": "FiO₂", "sv.acessosTipo": "acessos", "sv.acessosQtd": "nº de acessos", "sv.dispositivos": "dispositivos", "pac.comorbidades": "comorbidades",
+  "pac.medicacoes": "medicações em uso", "pac.gestante": "gestação" };
 
 /* ---------- ABCDE automático + risco ---------- */
 function vzAvaliarABCDE(caso, g, perfil) {
@@ -493,16 +496,16 @@ Paciente: ${p.nome || "não identificado"} · ${idade} · ${p.sexo === "M" ? "ma
 S — SITUAÇÃO
 Motivo da transferência: ${ni(t.motivo)}
 Diagnóstico principal: ${ni(t.dxPrincipal)}${t.dxSecundarios ? `\nHipóteses secundárias: ${t.dxSecundarios}` : ""}
-Estado atual: ${VZ_NIVEL_NOME[a.risco.nivel]} (apoio à decisão; não autoriza transporte). ${chegada ? "Sinais vitais na chegada: " + svTxt(chegada) : "Sinais vitais atuais: " + svTxt(sv)}
+${t.destaques ? `Pontos importantes:\n${t.destaques}\n` : ""}Estado atual: ${VZ_NIVEL_NOME[a.risco.nivel]} (apoio à decisão; não autoriza transporte). ${chegada ? "Sinais vitais na chegada: " + svTxt(chegada) : "Sinais vitais atuais: " + svTxt(sv)}
 
 B — HISTÓRIA (BACKGROUND)
-Comorbidades: ${ni(p.comorbidades)}
+${t.resumo ? `Resumo clínico: ${t.resumo}\n` : ""}Comorbidades: ${ni(p.comorbidades)}
 Alergias: ${ni(p.alergias)}
 Medicamentos de uso habitual: ${ni(p.medicacoes)}${a.perfil === "neonato" && (caso.rn.apgar || caso.rn.pesoNascimento) ? `\nRN: Apgar ${caso.rn.apgar || "—"} · peso ao nascer ${vzN(caso.rn.pesoNascimento) ? VZ_FMT(vzN(caso.rn.pesoNascimento), 3) + " kg" : "—"} · PC ${caso.rn.pc || "—"} cm` : ""}
 
 A — AVALIAÇÃO
 Sinais vitais iniciais: ${svTxt(sv)}${saida ? `\nNa saída (${saida.hora}): ${svTxt(saida)}` : ""}
-Neurológico: ${ni(sv.neuro)} · Perfusão: ${ni(sv.perfusao)} · Dor: ${sv.dor !== "" ? sv.dor + "/10" : "não informada"} · Diurese: ${ni(sv.diurese)}
+${sv.exameFisico ? `Exame físico: ${sv.exameFisico}\n` : ""}Neurológico: ${ni(sv.neuro)} · Perfusão: ${ni(sv.perfusao)} · Dor: ${sv.dor !== "" ? sv.dor + "/10" : "não informada"} · Diurese: ${ni(sv.diurese)}
 Suporte: ${sv.o2 ? (VZ_O2_NOMES[sv.o2] || sv.o2) : "não informado"}${sv.o2fluxo ? ` ${sv.o2fluxo} L/min` : ""}${sv.fio2 ? ` FiO₂ ${sv.fio2}%` : ""}${sv.vent ? ` · Ventilador: ${sv.vent}` : ""}
 Acessos: ${sv.acessosQtd !== "" ? sv.acessosQtd + (sv.acessosQtd === "2" ? "+" : "") : "não informado"} ${sv.acessosTipo}${sv.dispositivos ? ` · Dispositivos: ${sv.dispositivos}` : ""}
 Infusões em andamento: ${ni(sv.infusoes)}
