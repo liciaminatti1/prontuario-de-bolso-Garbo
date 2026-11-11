@@ -87,7 +87,7 @@ ${assinatura(v)}`
   {
     id: "receita",
     titulo: "Receituário ambulatorial",
-    desc: "Monte a receita ou importe a prescrição pronta de uma ficha.",
+    desc: "Receita no seu timbrado (simples, controle especial, azul, amarela ou digital) com PDF; preenche a partir de prescrições copiadas.",
     importar: "ambulatorial",
     campos: [
       { id: "paciente", rotulo: "Paciente" },

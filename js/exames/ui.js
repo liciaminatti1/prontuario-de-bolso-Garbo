@@ -338,7 +338,7 @@ function exLigarImagem() {
 }
 
 /* ---------- Solicitação ---------- */
-const exSemLacunas = s => String(s || "").replace(/\s*(HD|Hipótese diagnóstica|Justificativa|Dados clínicos|CID)\s*:\s*_+\.?/gi, "").replace(/\s*_{2,}\.?/g, "").trim();
+const exSemLacunas = s => String(s || "").replace(/\s*(HD\/Justificativa|HD|Hipótese diagnóstica|Justificativa|Indicação|Dados clínicos|CID)\s*:\s*_{2,}(\s*\([^)]*\))?\.?/gi, "").trim();
 function exTextoSolicitacao() {
   const e = EX_ESTADO;
   const lab = e.sel.map(exAcharLab).filter(Boolean), img = e.sel.map(exAcharImg).filter(Boolean);
@@ -375,7 +375,7 @@ function exAbaSolicitar() {
       <p class="note">Guias SUS e de convênio costumam exigir HD ou CID e justificativa clínica, principalmente para TC, RM e exames de alto custo. Não inclua dados do paciente que não sejam necessários.</p>
     </section>
     <section class="vz-card"><h3>Texto da solicitação</h3><div id="ex-s-texto">${blocoCopiavel(exTextoSolicitacao(), "Solicitação")}</div>
-      <div class="vz-acoes-linha"><button class="seg" id="ex-s-imprimir" type="button">Imprimir</button></div></section>`;
+      <div class="vz-acoes-linha"><button class="vz-btn-grande" id="ex-s-timbrado" type="button">${ic("documento")} PDF no meu timbrado</button><button class="seg" id="ex-s-imprimir" type="button">Imprimir simples</button></div></section>`;
 }
 function exLigarSolicitar() {
   const atualizar = () => { const d = document.getElementById("ex-s-texto"); d.innerHTML = blocoCopiavel(exTextoSolicitacao(), "Solicitação"); ligarCopias(d); };
@@ -392,6 +392,7 @@ function exLigarSolicitar() {
   document.getElementById("ex-s-add").onclick = add;
   document.getElementById("ex-s-nome").addEventListener("keydown", ev => { if (ev.key === "Enter") { ev.preventDefault(); add(); } });
   const lim = document.getElementById("ex-s-limpar"); if (lim) lim.onclick = () => { EX_ESTADO.sel = []; exSalvar(); telaExames(); };
+  document.getElementById("ex-s-timbrado").onclick = () => ir("receituario", { tipo: "exames" });
   document.getElementById("ex-s-imprimir").onclick = () => {
     const html = `<h1>Solicitação de exames</h1><p>Paciente: ______________________________________ &nbsp; Data: ${new Date().toLocaleDateString("pt-BR")}</p><pre class="ex-print">${esc(exTextoSolicitacao().replace(/^SOLICITAÇÃO DE EXAMES\n+/, ""))}</pre><p style="margin-top:48px">_______________________________<br>Assinatura e carimbo (CRM)</p>`;
     if (typeof vzImprimir === "function") vzImprimir(html, "Solicitação de exames", ""); else window.print();

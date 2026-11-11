@@ -3,7 +3,7 @@
    + conteúdo (#app). A navegação usa o hash da URL: #fichas, #favoritos, #calculadoras, #sca...
    Documentos: js/documentos.js · calculadoras e segurança: js/calculadoras.js. */
 
-const VERSAO = "3.4";
+const VERSAO = "3.5";
 const $app = document.getElementById("app");
 const $busca = document.getElementById("q");
 const estado = { caminho: "todos", publico: "todos", especialidade: "todas", busca: "" };
@@ -59,6 +59,7 @@ const ICONES = {
   seta: '<path d="m9 6 6 6-6 6"/>',
   lampada: '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/>',
   bisturi: '<path d="M3 21 14 10l3 3L8 21z"/><path d="m14 10 5.5-5.5a2.1 2.1 0 0 1 3 3L17 13"/>',
+  receita: '<path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M9 8h2.5a2 2 0 0 1 0 4H9V8zm0 4v4M11 12l3.5 4M15 12l-2 2.5"/>',
   tubo: '<path d="M9 3h6M10 3v6.5L5.2 18A2 2 0 0 0 7 21h10a2 2 0 0 0 1.8-3L14 9.5V3"/><path d="M7.5 14h9"/>',
   usuario: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>'
 };
@@ -126,6 +127,7 @@ function desenharMenu() {
       ${item("pacientes", "usuario", "Pacientes")}
       ${item("hipoteses", "lampada", "Hipóteses diagnósticas")}
       ${item("exames", "tubo", "Exames")}
+      ${item("receituario", "receita", "Receituário e pedidos")}
       ${item("vagazero", "ambulancia", "Vaga Zero")}
       ${item("favoritos", "estrela", "Favoritos")}
       ${item("historico", "relogio", "Histórico")}
@@ -287,6 +289,7 @@ function telaInicio() {
         ${card("documentos", "documento", "Documentos", "Atestado, receita, admissão e evolução", "c4")}
         ${card("pacientes", "usuario", "Pacientes", "Prontuário de acompanhamento com exames, medicações e alertas", "c5")}
         <a class="mod-card c8" href="#hipoteses"><span class="mod-ic">${ic("lampada")}</span><b>Hipóteses diagnósticas</b><span>Sintomas, sinais vitais ou anamnese → diagnósticos e condutas</span></a>
+        <a class="mod-card c10" href="#receituario"><span class="mod-ic">${ic("receita")}</span><b>Receituário e pedidos</b><span>Receita simples, controle especial, azul, amarela, digital e exames no seu timbrado (PDF)</span></a>
         <a class="mod-card c9" href="#exames"><span class="mod-ic">${ic("tubo")}</span><b>Exames</b><span>Referências, interpretação de resultados e laudos (foto/PDF), indicação e solicitação</span></a>
         <a class="mod-card c7" href="#vagazero"><span class="mod-ic">${ic("ambulancia")}</span><b>Vaga Zero</b><span>Transporte inter-hospitalar: riscos, checklist, doses e SBAR</span></a>
         <a class="mod-card c6" href="#fichas" data-esp-card="procedimentos"><span class="mod-ic">${ic("bisturi")}</span><b>Procedimentos</b><span>Passo a passo, materiais e checagens</span></a>
@@ -631,6 +634,7 @@ function rota() {
   marcarMenu(h);
   fecharMenu();
   document.body.dataset.tela = h ? (fichaPorId(h) ? "ficha" : h.split("-")[0]) : "inicio";
+  if (h === "receituario" || h === "doc-receita") { const c = contextoDocumento.alvo === h ? contextoDocumento : {}; contextoDocumento = {}; telaReceituario(c); return; }
   if (h === "documentos" || h.startsWith("doc-")) {
     telaDocumentos(h === "documentos" ? null : h.slice(4), contextoDocumento.alvo === h ? contextoDocumento : {});
     return;
