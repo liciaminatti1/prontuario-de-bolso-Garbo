@@ -94,11 +94,15 @@ function rxExtenso(n, feminino = false) {
 }
 const rxFeminino = unidade => RX_FEMININO.test(rxNorm(unidade));
 /* "21 cápsulas" → "21 (vinte e uma) cápsulas" */
+/* Tira o extenso já escrito ("30 (trinta) comprimidos") para não repetir. */
+const rxSemExtenso = s => String(s || "").replace(/\(\s*[a-zà-úç ]+\s*\)/gi, " ").replace(/\s+/g, " ").trim();
 function rxQuantidadeTexto(item, extenso) {
-  const q = item.qtd === "" || item.qtd === null || item.qtd === undefined ? "" : String(item.qtd).trim();
+  let q = item.qtd === "" || item.qtd === null || item.qtd === undefined ? "" : rxSemExtenso(item.qtd);
   if (!q) return "";
+  let un = rxSemExtenso(item.unidade || "");
+  const mq = q.match(/^(\d+(?:[.,]\d+)?)\s+(.+)$/);   /* "30 comprimidos" digitado no campo da quantidade */
+  if (mq) { q = mq[1]; if (!un) un = mq[2]; }
   const n = Number(q.replace(",", "."));
-  const un = item.unidade || "";
   const unid = n === 1 ? rxSingular(un) : un;
   return extenso && isFinite(n) && Number.isInteger(n) ? `${q} (${rxExtenso(n, rxFeminino(un))}) ${unid}`.trim() : `${q} ${unid}`.trim();
 }
@@ -180,7 +184,7 @@ function rxLerPrescricao(texto) {
     if (mi) {
       let nome = mi[2], qtd = "", unidade = "";
       const partes = nome.split(/\s*[-–—_.]{3,}\s*/);
-      if (partes.length >= 2) { nome = partes[0]; const q = partes.slice(1).join(" ").trim(); const mq = q.match(/^(\d+(?:[.,]\d+)?)\s*(.*)$/); if (mq) { qtd = mq[1]; unidade = rxUnidadeCanon(mq[2] || ""); } else unidade = q; }
+      if (partes.length >= 2) { nome = partes[0]; const q = partes.slice(1).join(" ").trim(); const mq = q.match(/^(\d+(?:[.,]\d+)?)\s*(.*)$/); if (mq) { qtd = mq[1]; unidade = rxUnidadeCanon(rxSemExtenso(mq[2] || "")); } else unidade = q; }
       else {
         const mq = nome.match(/^(.*?)\s+[-–—]\s*(\d+(?:[.,]\d+)?)\s+([a-zA-Zçãéêíóú-]+)\s*$/);
         if (mq) { nome = mq[1]; qtd = mq[2]; unidade = rxUnidadeCanon(mq[3]); }

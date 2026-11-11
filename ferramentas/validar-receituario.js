@@ -45,5 +45,10 @@ ok(/nome completo/.test(av) && /exige/.test(av), "avisos: paciente e tipo insufi
 const avd = r.rxAvisos({ itens, tipo: "digital", paciente: "X", endereco: "Rua", idade: "30", sexo: "F" }).map(a => a.t).join(" | ");
 ok(/notificações A e B não são válidas/.test(avd), "digital não serve para notificação B");
 ok(r.rxAvisos({ itens: [r.rxNovoItem({ nome: "Radiografia de ___ em AP" })], tipo: "exames" }).some(a => /Complete/.test(a.t)), "exames: lacuna");
+const ex = r.rxLerPrescricao("USO ORAL\n1. Clonazepam 2 mg ---------- 30 (trinta) comprimidos\n   Tomar 1 comprimido à noite por 30 dias.");
+ok(ex[0].qtd === "30" && ex[0].unidade === "comprimidos", "modelo com extenso: lê só número e unidade", JSON.stringify(ex[0]));
+ok(r.rxQuantidadeTexto(ex[0], true) === "30 (trinta) comprimidos", "extenso não duplica", r.rxQuantidadeTexto(ex[0], true));
+ok(r.rxQuantidadeTexto({ qtd: "30 (trinta)", unidade: "comprimidos" }, true) === "30 (trinta) comprimidos", "extenso digitado na quantidade não duplica");
+ok(r.rxQuantidadeTexto({ qtd: "20", unidade: "(vinte) comprimidos" }, true) === "20 (vinte) comprimidos", "extenso na unidade não duplica");
 console.log(`Receituário: ${total - falhas}/${total}`);
 process.exit(falhas ? 1 : 0);
