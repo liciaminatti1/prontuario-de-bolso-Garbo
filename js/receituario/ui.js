@@ -51,7 +51,8 @@ function rxCopiaRecente() {
 
 function rxPreencher(texto, origem, substituir) {
   const novos = rxLerPrescricao(texto);
-  if (!novos.length) return 0;
+  if (novos.orientacoes) RX_ESTADO.orientacoes = [RX_ESTADO.orientacoes, novos.orientacoes].filter(Boolean).join("\n");
+  if (!novos.length) return novos.orientacoes ? -1 : 0;
   RX_ESTADO.desfazer = JSON.stringify(RX_ESTADO.itens);
   RX_ESTADO.itens = substituir ? novos : [...RX_ESTADO.itens.filter(i => i.nome.trim()), ...novos];
   if (RX_ESTADO.tipo === "exames") RX_ESTADO.tipo = "auto";
@@ -121,7 +122,8 @@ function rxSecaoItens() {
   return `<section class="vz-card"><h3>Medicamentos</h3>
     ${e.aviso ? `<p class="rx-aviso-fill">${esc(e.aviso)}${e.desfazer !== null ? ` <button class="link-btn" id="rx-desfazer" type="button">Desfazer</button>` : ""}</p>` : ""}
     <div class="ex-manual"><label class="campo"><span>Buscar na base de medicamentos</span><input id="rx-med" list="rx-lista-med" placeholder="Ex.: amoxicilina" autocomplete="off"><datalist id="rx-lista-med">${meds.map(m => `<option value="${esc(m.nomes[0])}">`).join("")}</datalist></label>
-      <button class="seg" id="rx-add-branco" type="button">+ Item em branco</button></div>
+      <button class="seg" id="rx-add-livre" type="button">+ Adicionar</button><button class="seg" id="rx-add-branco" type="button">+ Item em branco</button></div>
+    <p class="note">Não está na base? Escreva o nome (com concentração e forma) e toque em <b>+ Adicionar</b>: ele entra na receita do mesmo jeito.</p>
     <div id="rx-modelos"></div>
     <details class="vz-sec" ${e.itens.length ? "" : "open"}><summary>Colar prescrição pronta</summary>
       <textarea id="rx-colar" rows="5" class="rx-colar" placeholder="USO ORAL&#10;1. Amoxicilina 500 mg ------ 21 cápsulas&#10;   Tomar 1 cápsula de 8 em 8 horas por 7 dias."></textarea>
@@ -195,6 +197,8 @@ function rxLigar() {
         if (k === "qtd") it.qtdAuto = !el.value.trim();
         if (k === "posologia" && !it.diasManual) { const d = rxDiasDaPosologia(it.posologia); if (d) { it.dias = String(d); card.querySelector('[data-it="dias"]').value = it.dias; } }
         if (k === "dias") it.diasManual = true;
+        if (k === "via") it.viaManual = true;
+        if ((k === "nome" || k === "posologia") && !it.viaManual) { const v = rxViaSugerida(it.nome, it.posologia); if (v && v !== it.via) { it.via = v; card.querySelector('[data-it="via"]').value = v; } }
         if (k === "nome") { const m = rxReconhecerMed(it.nome); it.medId = m ? m.id : undefined; }
         rxRecalcular(card, it);
         rxAtualizar();
@@ -210,7 +214,18 @@ function rxLigar() {
   });
   $app.querySelectorAll("[data-exi]").forEach(el => el.addEventListener("input", () => { e.itens[+el.dataset.exi].nome = el.value; rxAtualizar(); }));
   const on = (id, f) => { const el = document.getElementById(id); if (el) el.onclick = f; };
+  const addLivre = () => {
+    const el = document.getElementById("rx-med"); const v = el ? el.value.trim() : ""; if (!v) { rxStatus("Escreva o nome do medicamento no campo de busca."); return; }
+    const m = rxReconhecerMed(v);
+    e.itens.push(rxNovoItem({ nome: v, medId: m ? m.id : undefined, via: rxViaSugerida(v, "") || "USO ORAL" })); e.aviso = "";
+    rxDesenhar(); const ult = $app.querySelector(".rx-item:last-of-type [data-it=posologia]"); if (ult) ult.focus();
+  };
+  on("rx-add-livre", addLivre);
+  const imEnter = document.getElementById("rx-med"); if (imEnter) imEnter.addEventListener("keydown", ev => { if (ev.key === "Enter") { ev.preventDefault(); addLivre(); } });
   on("rx-add-branco", () => { e.itens.push(rxNovoItem()); rxDesenhar(); const ult = $app.querySelector(".rx-item:last-of-type [data-it=nome]"); if (ult) ult.focus(); });
+  const ta = document.getElementById("rx-colar");
+  /* Ao sair do campo, o texto vira itens (com atraso, para não engolir o toque num botão). */
+  if (ta) ta.addEventListener("blur", () => setTimeout(() => { if (document.body.contains(ta) && ta.value.trim() && rxPreencher(ta.value, "texto escrito", false)) { ta.value = ""; rxDesenhar(); } }, 250));
   on("rx-preencher", () => { const t = document.getElementById("rx-colar").value; if (!rxPreencher(t, "texto colado", false)) { rxStatus("Não reconheci itens no texto. Use o formato “1. Medicamento ---- quantidade” e a posologia na linha de baixo."); return; } rxDesenhar(); });
   on("rx-colar-clip", async () => {
     try { const t = await navigator.clipboard.readText(); document.getElementById("rx-colar").value = t; if (rxPreencher(t, "área de transferência", false)) rxDesenhar(); else rxStatus("O texto copiado não parece uma prescrição."); }
@@ -293,6 +308,9 @@ function rxAtualizar() {
 }
 async function rxExportar(modo) {
   const e = RX_ESTADO;
+  /* Texto escrito no campo "colar" e ainda não processado também entra. */
+  const ta = document.getElementById("rx-colar");
+  if (ta && ta.value.trim() && rxPreencher(ta.value, "texto escrito", false)) { ta.value = ""; rxDesenhar(); }
   const janela = modo === "abrir" ? window.open("", "_blank") : null;
   try {
     rxStatus("Gerando PDF…");

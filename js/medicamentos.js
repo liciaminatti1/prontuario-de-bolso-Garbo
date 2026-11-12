@@ -500,7 +500,11 @@ const CLASSES_MED = [
   ["anticoagulantes", "Anticoagulantes e antiagregantes"], ["hipolipemiantes", "Hipolipemiantes"],
   ["antidiabeticos", "Antidiabéticos e insulinas"], ["tireoide", "Tireoide"], ["hormonios", "Contraceptivos e hormônios"],
   ["vitaminas", "Vitaminas, minerais e eletrólitos"], ["reumato", "Gota e reumatologia"],
-  ["urologia", "Urologia e saúde do homem"], ["emergencia", "Emergência e antídotos"]
+  ["urologia", "Urologia e saúde do homem"], ["emergencia", "Emergência e antídotos"],
+  ["oftalmologicos", "Oftalmológicos (colírios e pomadas)"], ["otorrino", "Otológicos e nasais"],
+  ["dermatologicos", "Dermatológicos (uso tópico)"], ["ginecologicos", "Ginecologia, obstetrícia e uso vaginal"],
+  ["neurologia", "Parkinson, demências e outros neurológicos"], ["imunologia", "Imunossupressores, antineoplásicos e imunobiológicos"],
+  ["diversos", "Outros (tabagismo, antídotos específicos, soluções)"]
 ];
 
 /* Tipo de receituário (Portaria SVS/MS 344/1998 e RDC 471/2021 — conferir a norma vigente). */

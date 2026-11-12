@@ -50,5 +50,10 @@ ok(ex[0].qtd === "30" && ex[0].unidade === "comprimidos", "modelo com extenso: l
 ok(r.rxQuantidadeTexto(ex[0], true) === "30 (trinta) comprimidos", "extenso não duplica", r.rxQuantidadeTexto(ex[0], true));
 ok(r.rxQuantidadeTexto({ qtd: "30 (trinta)", unidade: "comprimidos" }, true) === "30 (trinta) comprimidos", "extenso digitado na quantidade não duplica");
 ok(r.rxQuantidadeTexto({ qtd: "20", unidade: "(vinte) comprimidos" }, true) === "20 (vinte) comprimidos", "extenso na unidade não duplica");
+const livre = r.rxLerPrescricao("AMOXICILINA 500MG\nTOMAR 1 CAPSULA DE 8/8H POR 7 DIAS\nColírio Xyz 5 mL - 1 frasco\nPingar 1 gota no olho direito de 4/4h por 7 dias\nLacrimal Abc colírio\nPingar 1 gota 4 vezes ao dia\nOrientações: retorno em 7 dias");
+ok(livre.length === 3 && livre[0].qtd === "21" && livre[2].nome === "Lacrimal Abc colírio", "texto livre (maiúsculas, sem número, fora da base)", JSON.stringify(livre.map(i => i.nome)));
+ok(livre.orientacoes === "retorno em 7 dias", "orientações separadas");
+ok(livre[1].via === "USO OFTÁLMICO" && livre[0].via === "USO ORAL", "via deduzida (colírio → oftálmico)", livre.map(i => i.via).join(","));
+ok(r.rxViaSugerida("Cetoconazol 2% creme", "") === "USO TÓPICO" && r.rxViaSugerida("Ciprofloxacino otológico", "") === "USO OTOLÓGICO" && r.rxViaSugerida("Miconazol creme vaginal", "") === "USO VAGINAL", "vias tópica/otológica/vaginal");
 console.log(`Receituário: ${total - falhas}/${total}`);
 process.exit(falhas ? 1 : 0);

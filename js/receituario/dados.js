@@ -169,39 +169,68 @@ function rxUnidadeCanon(u) {
 function rxNovoItem(campos = {}) {
   return { nome: "", via: "USO ORAL", qtd: "", unidade: "comprimidos", posologia: "", dias: "", nota: "", qtdAuto: true, ...campos };
 }
+/* Via deduzida pela forma farmacêutica ou pela instrução (quando a prescrição não diz). */
+function rxViaSugerida(nome, pos) {
+  const t = rxNorm(`${nome || ""} ${pos || ""}`);
+  if (/colirio|oftalm|\bolhos?\b|pomada oftal|gel oftal/.test(t)) return "USO OFTÁLMICO";
+  if (/otolog|ouvidos?\b|\bconduto/.test(t)) return "USO OTOLÓGICO";
+  if (/nasal|narinas?\b|spray nasal|instilar no nariz/.test(t)) return "USO NASAL";
+  if (/vagina|ovulo|intravaginal|aplicador/.test(t)) return "USO VAGINAL";
+  if (/supositorio|retal|enema|clister/.test(t)) return "USO RETAL";
+  if (/sublingual|debaixo da lingua/.test(t)) return "USO SUBLINGUAL";
+  if (/aerossol|bombinha|inalat|nebuliz|turbuhaler|diskus|capsula inalante|espacador/.test(t)) return "USO INALATÓRIO";
+  if (/adesivo transd|transdermic/.test(t)) return "USO TRANSDÉRMICO";
+  if (/subcut|\bsc\b|caneta/.test(t)) return "USO SUBCUTÂNEO";
+  if (/intramusc|\bim\b|ampola|frasco-ampola/.test(t)) return "USO INTRAMUSCULAR";
+  if (/pomada|creme|\bgel\b|locao|unguento|pasta|xampu|shampoo|sabonete|esmalte|solucao topica|aplicar na pele|nas lesoes|\btopic/.test(t)) return "USO TÓPICO";
+  return null;
+}
+/* Uma linha de item: "Nome dose ---- 21 cápsulas" ou "Nome dose - 21 cápsulas" ou só o nome. */
+function rxItemDeLinha(texto, via) {
+  let nome = texto, qtd = "", unidade = "";
+  const partes = nome.split(/\s*[-–—_.]{3,}\s*/);
+  if (partes.length >= 2) { nome = partes[0]; const q = partes.slice(1).join(" ").trim(); const mq = q.match(/^(\d+(?:[.,]\d+)?)\s*(.*)$/); if (mq) { qtd = mq[1]; unidade = rxUnidadeCanon(rxSemExtenso(mq[2] || "")); } else unidade = q; }
+  else {
+    const mq = nome.match(/^(.*?)\s+[-–—]\s*(\d+(?:[.,]\d+)?)\s+([a-zA-Zçãéêíóú-]+)\s*$/);
+    if (mq) { nome = mq[1]; qtd = mq[2]; unidade = rxUnidadeCanon(mq[3]); }
+  }
+  return rxNovoItem({ nome: nome.trim(), via, qtd, unidade: unidade || "", qtdAuto: !qtd });
+}
+const RX_RE_VERBO = /^(tomar|aplicar|usar|dar|pingar|instilar|inalar|fazer|colocar|passar|lavar|diluir|administrar|ingerir|mastigar|dissolver|gotejar|borrifar|realizar|manter|suspender|evitar|se\s|em caso|ap[oó]s|antes|durante|uso\s|repetir|associar|trocar|retornar|procurar|tomar)/i;
+/* Linha sem número que começa um medicamento novo (tem dose e não é instrução). */
+const rxPareceNovoItem = l => /\d\s*(mg|mcg|µg|g|ml|mL|ui|UI|%|mg\/ml|unidades)\b/i.test(l) && !RX_RE_VERBO.test(l);
+const RX_RE_ORIENT = /^(orienta[cç][oõ]es|obs(erva[cç][aã]o|erva[cç][oõ]es)?|retorno|recomenda[cç][oõ]es|cuidados)\b/i;
 function rxLerPrescricao(texto) {
   const linhas = String(texto || "").replace(/\r/g, "").split("\n");
   const itens = [];
-  let via = "USO ORAL", atual = null;
+  const orient = [];
+  let via = "USO ORAL", atual = null, modoOrient = false, viaExplicita = false;
   for (const bruta of linhas) {
     const l = bruta.trim();
     if (!l) continue;
     const mv = l.match(RX_RE_VIA);
-    if (mv) { via = RX_VIA_CANON[rxNorm(mv[1])] || via; atual = null; continue; }
-    /* Títulos de seção ("ALTA — ANGIOEDEMA", "PRESCRIÇÃO:") não são itens. */
-    if (!/^\d/.test(l) && l.length < 90 && (l === l.toUpperCase() && /[A-ZÁÉÍÓÚÇ]{3}/.test(l) || /:$/.test(l))) { atual = null; continue; }
+    if (mv) { via = RX_VIA_CANON[rxNorm(mv[1])] || via; viaExplicita = true; atual = null; modoOrient = false; continue; }
+    /* "Orientações:" e o que vem depois vão para o campo de orientações. */
+    if (RX_RE_ORIENT.test(l)) { modoOrient = true; atual = null; const resto = l.replace(RX_RE_ORIENT, "").replace(/^[\s:–—-]+/, ""); if (resto) orient.push(resto); continue; }
     const mi = l.match(/^(\d{1,2})\s*[.)-]\s*(.+)$/);
-    if (mi) {
-      let nome = mi[2], qtd = "", unidade = "";
-      const partes = nome.split(/\s*[-–—_.]{3,}\s*/);
-      if (partes.length >= 2) { nome = partes[0]; const q = partes.slice(1).join(" ").trim(); const mq = q.match(/^(\d+(?:[.,]\d+)?)\s*(.*)$/); if (mq) { qtd = mq[1]; unidade = rxUnidadeCanon(rxSemExtenso(mq[2] || "")); } else unidade = q; }
-      else {
-        const mq = nome.match(/^(.*?)\s+[-–—]\s*(\d+(?:[.,]\d+)?)\s+([a-zA-Zçãéêíóú-]+)\s*$/);
-        if (mq) { nome = mq[1]; qtd = mq[2]; unidade = rxUnidadeCanon(mq[3]); }
-      }
-      atual = rxNovoItem({ nome: nome.trim(), via, qtd, unidade: unidade || "", qtdAuto: !qtd });
-      itens.push(atual);
-      continue;
-    }
-    if (atual) {
+    if (modoOrient && !mi) { orient.push(l); continue; }
+    /* Títulos de seção ("ALTA — ANGIOEDEMA", "PRESCRIÇÃO:", "RECEITA") não são itens. Nome de remédio em maiúsculas é item. */
+    const maiusc = l === l.toUpperCase() && /[A-ZÁÉÍÓÚÇ]{3}/.test(l);
+    if (!mi && !/\d/.test(l) && l.length < 90 && (/:$/.test(l) || (maiusc && (/\s[—–]\s|^\S+\s[—–-]\s/.test(l) || /^(ALTA|PRESCRI|RECEIT|CONDUTA|TRATAMENTO|EM CASO|SE\s|ESQUEMA|OP[CÇ][AÃ]O|ALTERNATIVA)/.test(l))))) { atual = null; continue; }
+    if (mi) { modoOrient = false; atual = rxItemDeLinha(mi[2], via); itens.push(atual); continue; }
+    /* Depois da posologia, uma linha com inicial maiúscula que não é instrução começa outro medicamento. */
+    const novoAposPosologia = atual && atual.posologia && /^[A-ZÁÉÍÓÚÂÊÔÃÕÇ]/.test(l) && !RX_RE_VERBO.test(l) && !/^\(/.test(l);
+    if (atual && !rxPareceNovoItem(l) && !novoAposPosologia) {
       if (/^\(.*\)$/.test(l)) atual.nota = (atual.nota ? atual.nota + " " : "") + l.slice(1, -1);
       else atual.posologia = (atual.posologia ? atual.posologia + " " : "") + l;
-    } else if (!/^(receitu|prescri|paciente|data)/i.test(l)) {
-      atual = rxNovoItem({ nome: l, via, unidade: "" });
+    } else if (!/^(receitu|prescri|paciente|data\b)/i.test(l)) {
+      if (!atual && RX_RE_VERBO.test(l) && itens.length) { const ult = itens[itens.length - 1]; ult.posologia = (ult.posologia ? ult.posologia + " " : "") + l; continue; }
+      atual = rxItemDeLinha(l, via);
       itens.push(atual);
     }
   }
   for (const it of itens) {
+    if (!viaExplicita) { const v = rxViaSugerida(it.nome, it.posologia); if (v) it.via = v; }
     const d = rxDiasDaPosologia(it.posologia);
     if (d && !it.dias) it.dias = String(d);
     if (!it.unidade) { const m = rxNorm(it.posologia).match(new RegExp(RX_RE_FORMA)); if (m) it.unidade = rxUnidadeCanon(m[1]); else it.unidade = "unidades"; }
@@ -209,6 +238,7 @@ function rxLerPrescricao(texto) {
     if (med) it.medId = med.id;
     if (!it.qtd) { const q = rxCalcularQuantidade(it); if (q) it.qtd = String(q); }
   }
+  itens.orientacoes = orient.join("\n");
   return itens;
 }
 
@@ -302,4 +332,4 @@ function rxTexto(est, tim) {
   return out.join("\n\n────────────\n\n");
 }
 
-if (typeof module !== "undefined") module.exports = { RX_TIPOS, rxExtenso, rxQuantidadeTexto, rxDiasDaPosologia, rxPorDia, rxCalcularQuantidade, rxLerPrescricao, rxDocumentos, rxAvisos, rxTexto, rxTipoDoMedicamento, rxNovoItem, rxSingular };
+if (typeof module !== "undefined") module.exports = { rxViaSugerida, RX_TIPOS, rxExtenso, rxQuantidadeTexto, rxDiasDaPosologia, rxPorDia, rxCalcularQuantidade, rxLerPrescricao, rxDocumentos, rxAvisos, rxTexto, rxTipoDoMedicamento, rxNovoItem, rxSingular };
