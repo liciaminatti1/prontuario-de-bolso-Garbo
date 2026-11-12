@@ -37,7 +37,8 @@ const RX_TIPOS = {
 const RX_ORDEM_TIPOS = ["simples", "especial", "azul", "amarela"];
 
 const RX_VIAS = ["USO ORAL", "USO SUBLINGUAL", "USO TÓPICO", "USO OFTÁLMICO", "USO OTOLÓGICO", "USO NASAL", "USO INALATÓRIO",
-  "USO RETAL", "USO VAGINAL", "USO INTRAMUSCULAR", "USO SUBCUTÂNEO", "USO ENDOVENOSO", "USO TRANSDÉRMICO", "USO EXTERNO"];
+  "USO RETAL", "USO VAGINAL", "USO INTRAMUSCULAR", "USO SUBCUTÂNEO", "USO ENDOVENOSO", "USO TRANSDÉRMICO", "USO EXTERNO",
+  "USO INTRAUTERINO", "USO SUBDÉRMICO", "PROCEDIMENTO NO SERVIÇO"];
 const RX_UNIDADES = ["comprimidos", "cápsulas", "drágeas", "sachês", "envelopes", "frascos", "frascos-ampola", "ampolas", "bisnagas", "tubos",
   "caixas", "flaconetes", "adesivos", "canetas", "refis", "unidades", "mL", "g"];
 /* Gênero gramatical da unidade (para o número por extenso). */
@@ -154,10 +155,11 @@ function rxCalcularQuantidade(item) {
 }
 
 /* ---------- leitura de uma prescrição em texto ---------- */
-const RX_RE_VIA = /^\s*(?:uso\s+)?(oral|sublingual|t[oó]pico|oft[aá]lmico|otol[oó]gico|nasal|inalat[oó]rio|retal|vaginal|intramuscular|subcut[aâ]neo|endovenoso|intravenoso|transd[eé]rmico|externo|interno)\s*(?:\/.*)?:?\s*$/i;
+const RX_RE_VIA = /^\s*(?:uso\s+)?(oral|sublingual|t[oó]pico|oft[aá]lmico|otol[oó]gico|nasal|inalat[oó]rio|retal|vaginal|intramuscular|subcut[aâ]neo|endovenoso|intravenoso|transd[eé]rmico|externo|interno|intrauterino|subd[eé]rmico|procedimento no servi[cç]o)\s*(?:\/.*)?:?\s*$/i;
 const RX_VIA_CANON = { oral: "USO ORAL", interno: "USO ORAL", sublingual: "USO SUBLINGUAL", topico: "USO TÓPICO", oftalmico: "USO OFTÁLMICO", otologico: "USO OTOLÓGICO", nasal: "USO NASAL",
   inalatorio: "USO INALATÓRIO", retal: "USO RETAL", vaginal: "USO VAGINAL", intramuscular: "USO INTRAMUSCULAR", subcutaneo: "USO SUBCUTÂNEO", endovenoso: "USO ENDOVENOSO",
-  intravenoso: "USO ENDOVENOSO", transdermico: "USO TRANSDÉRMICO", externo: "USO EXTERNO" };
+  intravenoso: "USO ENDOVENOSO", transdermico: "USO TRANSDÉRMICO", externo: "USO EXTERNO",
+  intrauterino: "USO INTRAUTERINO", subdermico: "USO SUBDÉRMICO", "procedimento no servico": "PROCEDIMENTO NO SERVIÇO" };
 function rxUnidadeCanon(u) {
   const t = rxNorm(u);
   const mapa = [[/^comp/, "comprimidos"], [/^caps/, "cápsulas"], [/^drag/, "drágeas"], [/^sach/, "sachês"], [/^envel/, "envelopes"], [/^frascos?-ampolas?/, "frascos-ampola"], [/^fr/, "frascos"],

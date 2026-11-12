@@ -567,4 +567,324 @@ adicionarMedicamentos([
     prescrever: [
       { contexto: "Neuralgia pós-herpética / dor neuropática localizada", texto: "USO TÓPICO\n1. Capsaicina 0,075% creme --------------------- 1 bisnaga\n   Aplicar pequena quantidade na área dolorosa (pele cicatrizada) 3 a 4 vezes ao dia. Lavar as mãos após. O ardor diminui com o uso; avaliar em 4 semanas." }
     ] },
+
+  /* ========== GINECOLÓGICOS: USO VAGINAL ========== */
+  { id: "clotrimazol-vaginal", nomes: ["Clotrimazol creme vaginal", "Gino-Canesten"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Candidíase vulvovaginal (inclusive na gestação).",
+    adulto: "Creme vaginal 1%: 1 aplicador à noite por 7 noites (2%: 3 noites)",
+    gestacao: { nivel: "compativel", texto: "Compatível; na gestação usar o esquema de 7 dias." },
+    alergia: [], contra: ["Antimicrobiano tópico: conferir na RDC 471/2021 se a apresentação exige retenção da receita", "Pode danificar preservativo e diafragma de látex", "Recorrente (≥ 4/ano) ou não albicans: investigar e tratar conforme PCDT"],
+    prescrever: [
+      { contexto: "Candidíase vulvovaginal", texto: "USO VAGINAL\n1. Clotrimazol 1% creme vaginal --------------- 1 bisnaga com aplicadores\n   Introduzir 1 aplicador cheio na vagina à noite, ao deitar, por 7 noites.\n   Não é necessário tratar a parceria assintomática." }
+    ] },
+  { id: "fenticonazol", nomes: ["Fenticonazol", "nitrato de fenticonazol", "Fentizol"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Candidíase vulvovaginal (óvulo dose única ou creme vaginal).",
+    adulto: "Óvulo 600 mg: dose única (repetir em 3 dias se sintomas intensos) · creme vaginal 2%: conforme bula",
+    gestacao: { nivel: "cautela", texto: "Dados limitados; na gestação preferir miconazol, clotrimazol ou nistatina por 7 dias." },
+    alergia: [], contra: ["Antimicrobiano tópico: conferir na RDC 471/2021 se a apresentação exige retenção da receita", "Pode danificar preservativo de látex"],
+    prescrever: [
+      { contexto: "Candidíase vulvovaginal — óvulo", texto: "USO VAGINAL\n1. Nitrato de fenticonazol 600 mg óvulo ------- 1 óvulo\n   Introduzir 1 óvulo profundamente na vagina à noite, ao deitar, dose única." }
+    ] },
+  { id: "tioconazol-tinidazol-vaginal", nomes: ["Tioconazol + tinidazol creme vaginal", "tioconazol + tinidazol", "Gynomax", "Cartrax"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Vulvovaginite mista (candidíase + vaginose bacteriana/tricomoníase) — combinação; preferir tratar cada agente conforme o PCDT.",
+    adulto: "Creme vaginal ou óvulo: conforme bula (creme em geral 1 aplicador à noite por 7 noites)",
+    gestacao: { nivel: "evitar", texto: "Evitar no 1º trimestre; preferir esquemas recomendados no PCDT." },
+    alergia: [], contra: ["Antimicrobiano tópico: conferir na RDC 471/2021 se a apresentação exige retenção da receita", "Tinidazol: evitar álcool durante e até 72 h após", "Tricomoníase exige tratamento oral (e da parceria): o creme não basta"],
+    prescrever: [
+      { contexto: "Vulvovaginite mista", texto: "USO VAGINAL\n1. Tioconazol + tinidazol creme vaginal ------- 1 bisnaga com aplicadores\n   Introduzir 1 aplicador cheio na vagina à noite, ao deitar, pelo número de dias da bula (em geral 7 noites).\n   Não ingerir bebida alcoólica durante o tratamento." }
+    ] },
+  { id: "clindamicina-vaginal", nomes: ["Clindamicina creme vaginal", "Dalacin V"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Vaginose bacteriana (alternativa ao metronidazol).",
+    adulto: "Creme vaginal 2%: 1 aplicador (5 g) à noite por 7 noites",
+    gestacao: { nivel: "cautela", texto: "Na gestação, o PCDT prefere metronidazol oral ou clindamicina oral; creme vaginal com cautela." },
+    alergia: [], contra: ["Antimicrobiano tópico: conferir na RDC 471/2021 se a apresentação exige retenção da receita", "Base oleosa enfraquece preservativo e diafragma (até 5 dias após)", "Raramente colite por C. difficile"],
+    prescrever: [
+      { contexto: "Vaginose bacteriana", texto: "USO VAGINAL\n1. Clindamicina 2% creme vaginal -------------- 1 bisnaga com aplicadores\n   Introduzir 1 aplicador cheio (5 g) na vagina à noite, ao deitar, por 7 noites." }
+    ] },
+  { id: "metronidazol-nistatina-vaginal", nomes: ["Metronidazol + nistatina creme vaginal", "metronidazol + nistatina", "Colpistatin"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Vulvovaginite mista (vaginose bacteriana + candidíase).",
+    adulto: "Creme vaginal (metronidazol 500 mg + nistatina 100.000 UI por aplicação): 1 aplicador à noite por 10 noites (conferir bula)",
+    gestacao: { nivel: "cautela", texto: "Evitar no 1º trimestre; depois, usar se indicado." },
+    alergia: [], contra: ["Antimicrobiano tópico: conferir na RDC 471/2021 se a apresentação exige retenção da receita", "Evitar álcool durante e até 72 h após (metronidazol)", "Tricomoníase: tratamento oral da paciente e da parceria"],
+    prescrever: [
+      { contexto: "Vulvovaginite mista", texto: "USO VAGINAL\n1. Metronidazol + nistatina creme vaginal ------ 1 bisnaga com aplicadores\n   Introduzir 1 aplicador cheio na vagina à noite, ao deitar, por 10 noites (conferir bula).\n   Não ingerir bebida alcoólica durante o tratamento." }
+    ] },
+  { id: "acido-borico-vaginal", nomes: ["Ácido bórico vaginal", "acido borico vaginal", "ácido bórico óvulo"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Candidíase vulvovaginal por espécies não albicans (C. glabrata) ou recorrente resistente aos azóis (manipulado).",
+    adulto: "Cápsula vaginal 600 mg (manipulada): 1 à noite por 14 noites",
+    gestacao: { nivel: "contraindicado", texto: "Contraindicado na gestação." },
+    alergia: [], contra: ["Gestação", "TÓXICO se ingerido: guardar longe de crianças; uso exclusivamente vaginal", "Irritação vulvovaginal; pele lesada"],
+    prescrever: [
+      { contexto: "Candidíase não albicans / recorrente", texto: "USO VAGINAL\n1. Ácido bórico 600 mg cápsula gelatinosa (manipular) ---- 14 cápsulas\n   Introduzir 1 cápsula profundamente na vagina à noite, ao deitar, por 14 noites.\n   NÃO ENGOLIR. Manter fora do alcance de crianças." }
+    ] },
+  { id: "benzidamina-vaginal", nomes: ["Benzidamina vaginal", "cloridrato de benzidamina", "Flogo-Rosa"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Alívio de ardor e prurido vulvovaginal (sintomático), pós-parto e pós-operatório ginecológico (banho de assento).",
+    adulto: "Pó 500 mg: dissolver 1 envelope em 1 L de água morna, banho de assento ou lavagem externa 1–2×/dia",
+    gestacao: { nivel: "cautela", texto: "Uso externo em banho de assento é aceitável; evitar duchas internas." },
+    alergia: [], contra: ["Sintomático: não trata a causa da vulvovaginite", "Duchas vaginais alteram a flora: preferir uso externo"],
+    prescrever: [
+      { contexto: "Banho de assento sintomático", texto: "USO TÓPICO\n1. Cloridrato de benzidamina 500 mg pó (envelope) ---- 10 envelopes\n   Dissolver 1 envelope em 1 litro de água morna e fazer banho de assento por 10 minutos, 1 a 2 vezes ao dia, por até 5 dias." }
+    ] },
+  { id: "estriol", nomes: ["Estriol", "estriol creme vaginal", "Ovestrion"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Síndrome geniturinária da menopausa (atrofia vaginal, dispareunia, ITU de repetição na pós-menopausa); preparo pré-operatório.",
+    adulto: "Creme vaginal 1 mg/g: 0,5 g (0,5 mg) à noite por 2–3 semanas, depois 2×/semana",
+    gestacao: { nivel: "contraindicado", texto: "Sem indicação na gestação." },
+    alergia: [], contra: ["Câncer de mama ou de endométrio, sangramento genital não investigado", "TEV ativo (cautela; absorção sistêmica baixa)", "Não precisa associar progestagênio na dose vaginal baixa"],
+    prescrever: [
+      { contexto: "Atrofia vaginal / síndrome geniturinária", texto: "USO VAGINAL\n1. Estriol 1 mg/g creme vaginal ---------------- 1 bisnaga com aplicador\n   Introduzir 0,5 g (até a marca do aplicador) na vagina à noite, ao deitar, todos os dias por 3 semanas; depois 2 vezes por semana como manutenção." }
+    ] },
+  { id: "promestrieno", nomes: ["Promestrieno", "Colpotrofine"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Atrofia vulvovaginal (estrogênio local de absorção mínima; opção quando se quer evitar absorção sistêmica).",
+    adulto: "Creme vaginal 10 mg/g ou cápsula vaginal 10 mg: 1 aplicação à noite por 20 dias; manutenção conforme resposta",
+    gestacao: { nivel: "contraindicado", texto: "Sem indicação na gestação." },
+    alergia: [], contra: ["Câncer hormônio-dependente (decidir com o oncologista)", "Sangramento genital não investigado"],
+    prescrever: [
+      { contexto: "Atrofia vulvovaginal", texto: "USO VAGINAL\n1. Promestrieno 10 mg/g creme vaginal ---------- 1 bisnaga com aplicador\n   Introduzir 1 aplicador na vagina à noite, ao deitar, por 20 dias. Depois, manutenção 2 vezes por semana se necessário." }
+    ] },
+
+  /* ========== GINECOLÓGICOS: PROGESTAGÊNIOS ========== */
+  { id: "progesterona-micronizada", nomes: ["Progesterona micronizada", "progesterona natural", "progesterona", "Utrogestan", "Evocanil"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Prevenção de parto prematuro (colo curto ou prematuro prévio), proteção endometrial na terapia hormonal, suporte de fase lútea (reprodução assistida).",
+    adulto: "Prematuridade: 200 mg via vaginal à noite até 36 semanas · TH: 200 mg VO à noite 12–14 dias/mês ou 100 mg contínuo",
+    gestacao: { nivel: "compativel", texto: "Usada na gestação nas indicações obstétricas." },
+    alergia: [], contra: ["Sonolência e tontura por via oral (tomar ao deitar)", "Sangramento genital não investigado, câncer de mama, doença hepática grave", "TEV ativo (cautela)"],
+    prescrever: [
+      { contexto: "Prevenção de parto prematuro (colo ≤ 25 mm ou prematuro prévio)", texto: "USO VAGINAL\n1. Progesterona micronizada 200 mg cápsula ---- 30 cápsulas\n   Introduzir 1 cápsula profundamente na vagina à noite, ao deitar, todos os dias, até 36 semanas de gestação.\n   (Início em geral entre 16 e 24 semanas, conforme protocolo do pré-natal de alto risco.)" },
+      { contexto: "Terapia hormonal — proteção endometrial (com estrogênio)", texto: "USO ORAL\n1. Progesterona micronizada 100 mg cápsula ---- 30 cápsulas\n   Tomar 1 cápsula à noite, ao deitar, todos os dias, junto com o estrogênio.\n   (Esquema cíclico: 200 mg à noite do 1º ao 12º–14º dia de cada mês.)" }
+    ] },
+  { id: "didrogesterona", nomes: ["Didrogesterona", "Duphaston"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Sangramento uterino anormal anovulatório, amenorreia secundária, endometriose, proteção endometrial na terapia hormonal.",
+    adulto: "10 mg VO 1–2×/dia por 10–14 dias por ciclo (endometriose: 10 mg 2–3×/dia)",
+    gestacao: { nivel: "cautela", texto: "Usada em ameaça de aborto/aborto de repetição em alguns protocolos; evidência limitada." },
+    alergia: [], contra: ["Sangramento genital não investigado", "Doença hepática grave", "Câncer de mama ou outros tumores dependentes de progestagênio"],
+    prescrever: [
+      { contexto: "Sangramento uterino anovulatório / amenorreia secundária", texto: "USO ORAL\n1. Didrogesterona 10 mg ------------------------ 28 comprimidos\n   Tomar 1 comprimido 2 vezes ao dia por 14 dias (a partir do 11º–14º dia do ciclo). Esperar o sangramento de privação após terminar." },
+      { contexto: "Proteção endometrial na TH", texto: "USO ORAL\n1. Didrogesterona 10 mg ------------------------ 14 comprimidos\n   Tomar 1 comprimido 1 vez ao dia nos últimos 14 dias de cada ciclo de 28 dias, junto com o estrogênio." }
+    ] },
+  { id: "dienogeste", nomes: ["Dienogeste", "dienogest", "Allurene"], classe: "ginecologicos", receita: "simples", tags: ["anticoncepcional"],
+    usos: "Endometriose (dor pélvica); progestagênio contínuo.",
+    adulto: "2 mg VO 1×/dia, contínuo",
+    gestacao: { nivel: "contraindicado", texto: "Suspender se gestação." },
+    alergia: [], contra: ["Não é anticoncepcional registrado: orientar método de barreira", "TEV ativo, doença hepática grave, tumores dependentes de hormônio", "Sangramento irregular e alteração de humor são comuns", "Indutores enzimáticos reduzem o efeito"],
+    prescrever: [
+      { contexto: "Endometriose", texto: "USO ORAL\n1. Dienogeste 2 mg ----------------------------- 28 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, todos os dias, sem pausa. Reavaliar em 3 a 6 meses." }
+    ] },
+
+  /* ========== GINECOLÓGICOS: OBSTETRÍCIA (USO HOSPITALAR) ========== */
+  { id: "ocitocina", nomes: ["Ocitocina", "oxitocina", "Syntocinon"], classe: "ginecologicos", receita: "hospitalar", tags: [],
+    usos: "Prevenção e tratamento da hemorragia pós-parto (1ª escolha); indução e condução do trabalho de parto.",
+    adulto: "Prevenção HPP: 10 UI IM após o nascimento · tratamento HPP: 5 UI IV lento + 20 UI em 500 mL SF 0,9% a 250 mL/h",
+    gestacao: { nivel: "contraindicado", texto: "Uso apenas no trabalho de parto, parto e puerpério imediato, sob monitorização." },
+    alergia: [], contra: ["Indução: contraindicada se desproporção, apresentação anômala, sofrimento fetal, cicatriz uterina clássica, placenta prévia", "Taquissistolia: reduzir ou suspender a infusão", "Doses altas e prolongadas: intoxicação hídrica (hiponatremia)"],
+    prescrever: [
+      { contexto: "Prevenção de HPP (todo parto)", texto: "Ocitocina 10 UI IM imediatamente após o nascimento (1º minuto), dose única." },
+      { contexto: "Tratamento de HPP (OPAS)", texto: "Ocitocina 5 UI IV lento (em 3 minutos)\n+ Ocitocina 20 UI em SF 0,9% 500 mL IV a 250 mL/h.\nManutenção: ocitocina 20 UI em SF 0,9% 500 mL a 125 mL/h por 4 horas (conforme protocolo).\nAssociar ácido tranexâmico 1 g IV nas primeiras 3 horas." },
+      { contexto: "Indução / condução do trabalho de parto", texto: "Ocitocina 5 UI em SF 0,9% (ou SG 5%) 500 mL (10 mUI/mL) em bomba de infusão.\nIniciar 1–2 mUI/min (6–12 mL/h) e aumentar 1–2 mUI/min a cada 30–40 min até 3–5 contrações em 10 min, conforme protocolo da maternidade.\nMonitorizar BCF e contrações." }
+    ] },
+  { id: "metilergometrina", nomes: ["Metilergometrina", "maleato de metilergometrina", "Methergin"], classe: "ginecologicos", receita: "hospitalar", tags: [],
+    usos: "Hemorragia pós-parto por atonia uterina (2ª linha, após ocitocina).",
+    adulto: "0,2 mg IM; repetir conforme protocolo (máx. 5 doses = 1 mg em 24 h)",
+    gestacao: { nivel: "contraindicado", texto: "Contraindicada antes da saída do feto; uso apenas no pós-parto." },
+    alergia: [], contra: ["Hipertensão, pré-eclâmpsia/eclâmpsia", "Cardiopatia, doença vascular periférica, enxaqueca com aura", "Uso de inibidores de CYP3A4 (ritonavir, claritromicina, azóis): ergotismo", "Não fazer IV de rotina (crise hipertensiva)"],
+    prescrever: [
+      { contexto: "HPP por atonia (após ocitocina)", texto: "Metilergometrina 0,2 mg/mL — 1 ampola (0,2 mg) IM.\nRepetir em 20 minutos se necessário; depois a cada 4 a 6 horas (máximo 5 ampolas = 1 mg em 24 h).\nNão usar se PA elevada ou pré-eclâmpsia." }
+    ] },
+  { id: "carbetocina", nomes: ["Carbetocina", "Duratocin"], classe: "ginecologicos", receita: "hospitalar", tags: [],
+    usos: "Prevenção da hemorragia pós-parto (alternativa de ação prolongada à ocitocina, sobretudo na cesárea).",
+    adulto: "100 mcg IV lento (1 min) ou IM, dose única, após o nascimento",
+    gestacao: { nivel: "contraindicado", texto: "Não usar antes do nascimento (não serve para indução)." },
+    alergia: [], contra: ["Não usar para indução ou condução do trabalho de parto", "Doença cardiovascular grave, epilepsia", "Pré-eclâmpsia/eclâmpsia: cautela", "Dose única: não repetir"],
+    prescrever: [
+      { contexto: "Prevenção de HPP (cesárea ou parto vaginal)", texto: "Carbetocina 100 mcg/mL — 1 mL (100 mcg) IV lento em 1 minuto (ou IM), dose única, logo após a extração/nascimento do bebê." }
+    ] },
+  { id: "misoprostol", nomes: ["Misoprostol", "Prostokos"], classe: "ginecologicos", receita: "hospitalar", tags: [],
+    usos: "Indução do trabalho de parto com colo desfavorável, preparo de colo, abortamento legal/retido e esvaziamento uterino, hemorragia pós-parto (quando sem ocitocina).",
+    adulto: "Indução a termo: 25 mcg via vaginal a cada 6 h · HPP: 800 mcg via retal ou sublingual · abortamento: dose conforme idade gestacional e norma técnica",
+    gestacao: { nivel: "contraindicado", texto: "Abortivo/uterotônico: uso apenas nas indicações obstétricas, em hospital." },
+    alergia: [], contra: ["Uso exclusivo hospitalar (Portaria 344/98)", "Cicatriz uterina (cesárea prévia) no 3º trimestre: não usar para indução (risco de rotura)", "Taquissistolia: não repetir; considerar tocólise", "Aguardar ≥ 4 h após a última dose antes de iniciar ocitocina"],
+    prescrever: [
+      { contexto: "Indução do parto — colo desfavorável (gestação a termo)", texto: "Misoprostol 25 mcg — 1 comprimido via vaginal no fundo de saco posterior a cada 6 horas, conforme protocolo da maternidade.\nReavaliar colo, contrações e BCF antes de cada dose; não repetir se ≥ 3 contrações em 10 min." },
+      { contexto: "Hemorragia pós-parto (sem ocitocina ou adjuvante)", texto: "Misoprostol 200 mcg — 4 comprimidos (800 mcg) via retal (ou sublingual), dose única." },
+      { contexto: "Abortamento retido / legal / óbito fetal", texto: "Misoprostol — dose e intervalo conforme idade gestacional, segundo a Norma Técnica de Atenção Humanizada ao Abortamento (MS) e o protocolo da maternidade." }
+    ] },
+  { id: "dinoprostona", nomes: ["Dinoprostona", "prostaglandina E2", "Propess"], classe: "ginecologicos", receita: "hospitalar", tags: [],
+    usos: "Amadurecimento do colo para indução do trabalho de parto a termo.",
+    adulto: "Pessário vaginal 10 mg de liberação controlada: inserir no fundo de saco posterior; retirar em até 24 h",
+    gestacao: { nivel: "contraindicado", texto: "Uso apenas na indução do parto, em hospital." },
+    alergia: [], contra: ["Cesárea ou cirurgia uterina prévia", "Desproporção, apresentação anômala, sofrimento fetal, placenta prévia, sangramento sem diagnóstico", "Retirar se trabalho de parto ativo, ruptura de membranas com taquissistolia ou sofrimento fetal", "Iniciar ocitocina ≥ 30 min após a retirada"],
+    prescrever: [
+      { contexto: "Preparo de colo para indução", texto: "Dinoprostona 10 mg pessário vaginal — inserir no fundo de saco vaginal posterior, com a paciente em repouso por 20–30 min.\nRetirar após 24 h, ou antes se trabalho de parto ativo, taquissistolia ou alteração da frequência cardíaca fetal.\nMonitorização fetal contínua." }
+    ] },
+  { id: "atosibana", nomes: ["Atosibana", "atosiban", "Tractocile"], classe: "ginecologicos", receita: "hospitalar", tags: [],
+    usos: "Tocólise no trabalho de parto prematuro (24–33 semanas), para permitir corticoide e transferência; alternativa ao nifedipino.",
+    adulto: "6,75 mg IV em 1 min; depois 18 mg/h (300 mcg/min) por 3 h; depois 6 mg/h (100 mcg/min) até 45 h no total",
+    gestacao: { nivel: "cautela", texto: "Indicado na gestação para tocólise; poucos efeitos maternos." },
+    alergia: [], contra: ["< 24 ou ≥ 34 semanas", "Ruptura prematura de membranas > 30 semanas, corioamnionite, sofrimento fetal, descolamento de placenta, pré-eclâmpsia grave, óbito fetal", "Duração máxima de 48 h"],
+    prescrever: [
+      { contexto: "Tocólise — trabalho de parto prematuro", texto: "1º passo: Atosibana 7,5 mg/mL — 0,9 mL (6,75 mg) IV em bolus em 1 minuto.\n2º passo: Atosibana 2 frascos de 5 mL (75 mg) em 90 mL de SF 0,9% (0,75 mg/mL) — infundir a 24 mL/h (18 mg/h) por 3 horas.\n3º passo: mesma solução a 8 mL/h (6 mg/h) por até 45 horas (duração total ≤ 48 h).\nAssociar corticoide para maturação pulmonar e sulfato de magnésio se < 32 semanas (neuroproteção)." }
+    ] },
+  { id: "imunoglobulina-anti-d", nomes: ["Imunoglobulina anti-D", "imunoglobulina anti-Rh", "imunoglobulina anti-RhD", "Matergam", "RhoGAM"], classe: "ginecologicos", receita: "hospitalar", tags: [],
+    usos: "Prevenção da aloimunização Rh em gestante/puérpera Rh(D) negativo não sensibilizada (Coombs indireto negativo).",
+    adulto: "300 mcg (1.500 UI) IM: na 28ª semana (profilaxia rotineira, se disponível) e até 72 h após parto de RN Rh+, abortamento, gravidez ectópica, sangramento ou procedimento invasivo",
+    gestacao: { nivel: "compativel", texto: "Indicada na gestação e no pós-parto." },
+    alergia: [], contra: ["Mãe Rh(D) positivo ou já sensibilizada (Coombs indireto positivo): não indicar", "Não aplicar no recém-nascido", "Hemorragia feto-materna volumosa: dose adicional conforme teste (Kleihauer)"],
+    prescrever: [
+      { contexto: "Pós-parto (RN Rh positivo) ou após abortamento/sangramento", texto: "Imunoglobulina anti-D 300 mcg — 1 ampola IM (deltoide), dose única, até 72 horas após o parto ou o evento.\nConfirmar mãe Rh negativo e Coombs indireto negativo." },
+      { contexto: "Profilaxia anteparto (28 semanas)", texto: "Imunoglobulina anti-D 300 mcg — 1 ampola IM na 28ª semana de gestação, em gestante Rh negativo com Coombs indireto negativo e parceiro Rh positivo ou desconhecido (conforme disponibilidade e protocolo local)." }
+    ] },
+
+  /* ========== GINECOLÓGICOS: LACTAÇÃO E PROLACTINA ========== */
+  { id: "bromocriptina", nomes: ["Bromocriptina", "Parlodel"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Hiperprolactinemia e prolactinoma (alternativa à cabergolina, preferida por alguns na intenção de gestar). Não usar para inibir lactação.",
+    adulto: "Iniciar 1,25 mg à noite com alimento e aumentar gradualmente até 2,5 mg 2–3×/dia",
+    gestacao: { nivel: "cautela", texto: "Em geral suspensa ao confirmar gestação; manter só com especialista (macroprolactinoma)." },
+    alergia: [], contra: ["Inibição da lactação: não recomendada (AVC, IAM, convulsão no puerpério)", "Hipertensão não controlada, pré-eclâmpsia", "Náusea e hipotensão postural no início"],
+    prescrever: [
+      { contexto: "Hiperprolactinemia", texto: "USO ORAL\n1. Bromocriptina 2,5 mg ------------------------ 30 comprimidos\n   Tomar meio comprimido (1,25 mg) à noite, com alimento, por 1 semana; depois aumentar conforme orientação médica." }
+    ] },
+  { id: "lanolina", nomes: ["Lanolina", "lanolina purificada", "Lansinoh"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Fissura e dor mamilar na amamentação (adjuvante à correção da pega).",
+    adulto: "Aplicar fina camada nos mamilos após cada mamada",
+    gestacao: { nivel: "compativel", texto: "Compatível com a amamentação; não precisa remover antes de mamar." },
+    alergia: [], contra: ["Corrigir a pega é o tratamento principal", "Dor intensa, fissura que não melhora ou sinais de infecção: reavaliar (candidíase, mastite)"],
+    prescrever: [
+      { contexto: "Fissura mamilar", texto: "USO TÓPICO\n1. Lanolina purificada ------------------------- 1 bisnaga\n   Após cada mamada, passar um pouco do próprio leite e deixar secar; depois aplicar uma camada fina de lanolina nos mamilos. Não precisa retirar antes da mamada.\n   Revisar a pega com a equipe de saúde." }
+    ] },
+
+  /* ========== GINECOLÓGICOS: CONTRACEPÇÃO ========== */
+  { id: "etinilestradiol-gestodeno", nomes: ["Etinilestradiol + gestodeno", "gestodeno", "Gynera", "Minesse", "Adoless", "Harmonet"], classe: "ginecologicos", receita: "simples", tags: ["anticoncepcional"],
+    usos: "Contracepção hormonal combinada oral (doses de 15, 20 ou 30 mcg de etinilestradiol).",
+    adulto: "EE 30 ou 20 mcg + gestodeno 75 mcg: 1 comp/dia por 21 dias + pausa de 7 · EE 15 mcg + gestodeno 60 mcg: 24 ativos + 4 inativos sem pausa",
+    gestacao: { nivel: "contraindicado", texto: "Suspender se gestação confirmada (não é teratogênico)." },
+    alergia: [], contra: ["Critérios de elegibilidade da OMS: enxaqueca com aura, tabagismo ≥ 35 anos (≥ 15 cig/dia), TEV atual/prévio ou trombofilia, HAS não controlada, cardiopatia isquêmica/AVC, < 6 semanas pós-parto amamentando, câncer de mama, hepatopatia grave", "Indutores enzimáticos reduzem a eficácia"],
+    prescrever: [
+      { contexto: "Combinado 21 dias (EE 30 mcg)", texto: "USO ORAL\n1. Gestodeno 0,075 mg + etinilestradiol 0,03 mg ---- 3 cartelas\n   Tomar 1 comprimido ao dia, sempre no mesmo horário, iniciando no 1º dia da menstruação. Ao terminar a cartela de 21, fazer pausa de 7 dias e iniciar a próxima." },
+      { contexto: "Combinado 24/4 (EE 15 mcg)", texto: "USO ORAL\n1. Gestodeno 0,06 mg + etinilestradiol 0,015 mg ---- 3 cartelas\n   Tomar 1 comprimido ao dia, sempre no mesmo horário, iniciando no 1º dia da menstruação. Tomar todos os 28 comprimidos (24 ativos + 4 inativos) e emendar a cartela seguinte, sem pausa." }
+    ] },
+  { id: "etinilestradiol-desogestrel", nomes: ["Etinilestradiol + desogestrel", "Mercilon", "Microdiol", "Femina"], classe: "ginecologicos", receita: "simples", tags: ["anticoncepcional"],
+    usos: "Contracepção hormonal combinada oral.",
+    adulto: "EE 20 ou 30 mcg + desogestrel 150 mcg: 1 comp/dia por 21 dias + pausa de 7",
+    gestacao: { nivel: "contraindicado", texto: "Suspender se gestação confirmada." },
+    alergia: [], contra: ["Mesmos critérios de elegibilidade dos combinados (enxaqueca com aura, tabagismo ≥ 35 anos, TEV, HAS não controlada, < 6 semanas pós-parto amamentando)", "Risco de TEV um pouco maior que com levonorgestrel", "Indutores enzimáticos reduzem a eficácia"],
+    prescrever: [
+      { contexto: "Combinado 21 dias", texto: "USO ORAL\n1. Desogestrel 0,15 mg + etinilestradiol 0,02 mg ---- 3 cartelas\n   Tomar 1 comprimido ao dia, sempre no mesmo horário, iniciando no 1º dia da menstruação. Ao terminar a cartela de 21, fazer pausa de 7 dias e iniciar a próxima." }
+    ] },
+  { id: "etinilestradiol-drospirenona", nomes: ["Etinilestradiol + drospirenona", "drospirenona", "Yasmin", "Yaz", "Elani"], classe: "ginecologicos", receita: "simples", tags: ["anticoncepcional", "poupador-k"],
+    usos: "Contracepção combinada oral; útil na síndrome pré-menstrual/TDPM, acne e retenção hídrica.",
+    adulto: "EE 30 mcg + drospirenona 3 mg: 21 dias + pausa de 7 · EE 20 mcg + drospirenona 3 mg: 24 ativos + 4 inativos sem pausa",
+    gestacao: { nivel: "contraindicado", texto: "Suspender se gestação confirmada." },
+    alergia: [], contra: ["Mesmos critérios de elegibilidade dos combinados", "Drospirenona é antimineralocorticoide: hipercalemia com IECA/BRA, espironolactona, AINE crônico; contraindicado em insuficiência renal ou adrenal", "Risco de TEV maior que com levonorgestrel", "Indutores enzimáticos reduzem a eficácia"],
+    prescrever: [
+      { contexto: "Combinado 24/4 (EE 20 mcg)", texto: "USO ORAL\n1. Drospirenona 3 mg + etinilestradiol 0,02 mg ---- 3 cartelas\n   Tomar 1 comprimido ao dia, sempre no mesmo horário, iniciando no 1º dia da menstruação. Tomar os 28 comprimidos e emendar a cartela seguinte, sem pausa." },
+      { contexto: "Combinado 21 dias (EE 30 mcg)", texto: "USO ORAL\n1. Drospirenona 3 mg + etinilestradiol 0,03 mg ---- 3 cartelas\n   Tomar 1 comprimido ao dia, iniciando no 1º dia da menstruação. Ao terminar a cartela de 21, fazer pausa de 7 dias e iniciar a próxima." }
+    ] },
+  { id: "etinilestradiol-ciproterona", nomes: ["Etinilestradiol + ciproterona", "acetato de ciproterona + etinilestradiol", "ciproterona", "Diane 35", "Selene", "Diclin"], classe: "ginecologicos", receita: "simples", tags: ["anticoncepcional"],
+    usos: "Acne moderada a grave e hirsutismo (inclusive na SOP) em mulheres que também desejam contracepção.",
+    adulto: "EE 35 mcg + ciproterona 2 mg: 1 comp/dia por 21 dias + pausa de 7",
+    gestacao: { nivel: "contraindicado", texto: "Contraindicado (antiandrogênio: risco de feminização de feto masculino)." },
+    alergia: [], contra: ["Risco de TEV maior que outros combinados: usar pelo tempo necessário para o hiperandrogenismo e reavaliar (suspender alguns ciclos após a melhora)", "Mesmos critérios de elegibilidade dos combinados", "Não associar a outro anticoncepcional hormonal", "Meningioma (ciproterona em dose alta)"],
+    prescrever: [
+      { contexto: "Acne / hirsutismo com desejo de contracepção", texto: "USO ORAL\n1. Acetato de ciproterona 2 mg + etinilestradiol 0,035 mg ---- 3 cartelas\n   Tomar 1 comprimido ao dia, sempre no mesmo horário, iniciando no 1º dia da menstruação. Ao terminar a cartela de 21, fazer pausa de 7 dias e iniciar a próxima.\n   Reavaliar em 3 a 6 meses." }
+    ] },
+  { id: "estradiol-dienogeste", nomes: ["Valerato de estradiol + dienogeste", "estradiol + dienogeste", "Qlaira"], classe: "ginecologicos", receita: "simples", tags: ["anticoncepcional"],
+    usos: "Contracepção combinada oral com estradiol (regime quadrifásico); útil no sangramento menstrual intenso.",
+    adulto: "1 comp/dia na ordem da cartela de 28 (26 ativos + 2 inativos), sem pausa",
+    gestacao: { nivel: "contraindicado", texto: "Suspender se gestação confirmada." },
+    alergia: [], contra: ["Mesmos critérios de elegibilidade dos combinados", "Seguir rigorosamente a ordem dos comprimidos; regras de esquecimento próprias (ver bula)", "Indutores enzimáticos reduzem a eficácia"],
+    prescrever: [
+      { contexto: "Contracepção / sangramento menstrual intenso", texto: "USO ORAL\n1. Valerato de estradiol + dienogeste --------- 3 cartelas\n   Tomar 1 comprimido ao dia, no mesmo horário, na ordem indicada na cartela, iniciando no 1º dia da menstruação. Ao fim dos 28 comprimidos, iniciar a próxima cartela sem pausa." }
+    ] },
+  { id: "algestona-estradiol", nomes: ["Algestona + enantato de estradiol", "acetofenido de algestona + enantato de estradiol", "Perlutan", "Ciclovular", "Uno-Ciclo"], classe: "ginecologicos", receita: "simples", tags: ["anticoncepcional"],
+    usos: "Contracepção injetável mensal combinada.",
+    adulto: "Algestona acetofenida 150 mg + enantato de estradiol 10 mg IM mensal; 1ª dose no 8º dia do ciclo (7º–10º), seguintes conforme bula",
+    gestacao: { nivel: "contraindicado", texto: "Suspender se gestação confirmada." },
+    alergia: [], contra: ["Contém estrogênio: mesmos critérios de elegibilidade dos combinados", "Irregularidade menstrual", "Indutores enzimáticos podem reduzir a eficácia"],
+    prescrever: [
+      { contexto: "Injetável mensal", texto: "USO INTRAMUSCULAR\n1. Algestona acetofenida 150 mg + enantato de estradiol 10 mg ---- 1 ampola\n   Aplicar 1 mL IM profunda (glúteo), sem massagear. 1ª dose no 8º dia após o início da menstruação (entre o 7º e o 10º dia); as seguintes conforme o esquema da bula do produto." }
+    ] },
+  { id: "anel-vaginal-contraceptivo", nomes: ["Anel vaginal contraceptivo", "etonogestrel + etinilestradiol anel", "NuvaRing"], classe: "ginecologicos", receita: "simples", tags: ["anticoncepcional"],
+    usos: "Contracepção combinada de uso mensal (alternativa a quem esquece a pílula).",
+    adulto: "1 anel por 3 semanas, retirar e fazer pausa de 7 dias",
+    gestacao: { nivel: "contraindicado", texto: "Suspender se gestação confirmada." },
+    alergia: [], contra: ["Mesmos critérios de elegibilidade dos combinados", "Se ficar fora da vagina > 3 horas (conferir bula): usar preservativo por 7 dias", "Indutores enzimáticos reduzem a eficácia"],
+    prescrever: [
+      { contexto: "Contracepção mensal", texto: "USO VAGINAL\n1. Anel vaginal de etonogestrel + etinilestradiol ---- 3 unidades\n   Introduzir 1 anel na vagina entre o 1º e o 5º dia da menstruação e mantê-lo por 3 semanas. Retirar no mesmo dia da semana em que foi colocado, fazer pausa de 7 dias e colocar um novo anel." }
+    ] },
+  { id: "adesivo-contraceptivo", nomes: ["Adesivo contraceptivo", "norelgestromina + etinilestradiol", "Evra"], classe: "ginecologicos", receita: "simples", tags: ["anticoncepcional"],
+    usos: "Contracepção combinada transdérmica semanal.",
+    adulto: "1 adesivo por semana por 3 semanas + 1 semana sem adesivo",
+    gestacao: { nivel: "contraindicado", texto: "Suspender se gestação confirmada." },
+    alergia: [], contra: ["Mesmos critérios de elegibilidade dos combinados; exposição estrogênica e risco de TEV maiores que a pílula", "Menor eficácia com peso ≥ 90 kg", "Indutores enzimáticos reduzem a eficácia"],
+    prescrever: [
+      { contexto: "Contracepção semanal", texto: "USO TRANSDÉRMICO\n1. Norelgestromina + etinilestradiol adesivo ---- 3 caixas\n   Colar 1 adesivo no 1º dia da menstruação em pele limpa e seca (nádega, abdome, parte externa do braço ou costas; nunca nas mamas). Trocar no mesmo dia da semana por 3 semanas e ficar 1 semana sem adesivo." }
+    ] },
+  { id: "implante-etonogestrel", nomes: ["Implante de etonogestrel", "implante subdérmico", "Implanon"], classe: "ginecologicos", receita: "simples", tags: ["anticoncepcional"],
+    usos: "Contracepção reversível de longa duração (LARC) por 3 anos — o método mais eficaz; opção no pós-parto e amamentação.",
+    adulto: "Implante 68 mg subdérmico no braço não dominante; trocar a cada 3 anos",
+    gestacao: { nivel: "contraindicado", texto: "Retirar se gestação." },
+    alergia: [], contra: ["Câncer de mama atual, doença hepática grave, sangramento genital não investigado", "Sangramento irregular é o efeito mais comum (orientar antes)", "Indutores enzimáticos reduzem a eficácia", "Inserção e retirada por profissional capacitado"],
+    prescrever: [
+      { contexto: "Encaminhamento / prescrição para inserção", texto: "USO SUBDÉRMICO\n1. Implante de etonogestrel 68 mg ------------- 1 unidade\n   Inserção subdérmica na face interna do braço não dominante por profissional capacitado. Validade de 3 anos.\n   (Se fora dos 5 primeiros dias do ciclo: excluir gestação e usar preservativo por 7 dias.)" }
+    ] },
+  { id: "diu-levonorgestrel", nomes: ["DIU de levonorgestrel", "SIU-LNG", "endoceptivo", "Mirena", "Kyleena"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Contracepção de longa duração; sangramento uterino aumentado, dismenorreia, adenomiose/endometriose; proteção endometrial na terapia hormonal.",
+    adulto: "LNG 52 mg (Mirena): 5 anos ou mais conforme bula · LNG 19,5 mg (Kyleena): 5 anos",
+    gestacao: { nivel: "contraindicado", texto: "Gestação: retirar o DIU se fios visíveis (risco de aborto e infecção) e excluir ectópica." },
+    alergia: [], contra: ["Gestação, DIP ou cervicite purulenta atuais, sangramento não investigado", "Malformação uterina que distorce a cavidade, câncer de colo/endométrio", "Câncer de mama atual"],
+    prescrever: [
+      { contexto: "Prescrição / encaminhamento para inserção", texto: "USO INTRAUTERINO\n1. Sistema intrauterino de levonorgestrel 52 mg ---- 1 unidade\n   Inserção por profissional capacitado, preferencialmente nos primeiros 7 dias do ciclo (ou a qualquer momento, excluída gestação).\n   Revisão em 4 a 6 semanas." }
+    ] },
+  { id: "diu-cobre", nomes: ["DIU de cobre", "DIU TCu 380A", "dispositivo intrauterino de cobre"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Contracepção de longa duração sem hormônio (SUS; até 10 anos); contracepção de emergência até 5 dias após a relação.",
+    adulto: "TCu 380A: inserção em qualquer fase do ciclo, excluída gestação; validade de 10 anos",
+    gestacao: { nivel: "contraindicado", texto: "Gestação: retirar se fios visíveis e excluir ectópica." },
+    alergia: [], contra: ["Gestação, DIP ou cervicite purulenta atuais, sangramento não investigado", "Malformação uterina que distorce a cavidade, câncer de colo/endométrio", "Doença de Wilson", "Pode aumentar fluxo e cólica menstrual"],
+    prescrever: [
+      { contexto: "Prescrição / encaminhamento para inserção", texto: "USO INTRAUTERINO\n1. Dispositivo intrauterino de cobre TCu 380A ---- 1 unidade\n   Inserção por profissional capacitado (pode ser no pós-parto imediato, em até 48 h, ou após 4 semanas). Revisão em 4 a 6 semanas.\n   Contracepção de emergência: inserir até 5 dias após a relação desprotegida." }
+    ] },
+
+  /* ========== GINECOLÓGICOS: CLIMATÉRIO ========== */
+  { id: "estradiol", nomes: ["Estradiol", "valerato de estradiol", "estradiol gel", "estradiol transdérmico", "Primogyna", "Oestrogel", "Sandrena"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Terapia hormonal dos sintomas vasomotores e da síndrome geniturinária do climatério; insuficiência ovariana prematura.",
+    adulto: "Valerato de estradiol 1–2 mg VO 1×/dia · gel: 1 dose/sachê diário na pele (conforme produto) · com útero: associar progestagênio",
+    gestacao: { nivel: "contraindicado", texto: "Contraindicado." },
+    alergia: [], contra: ["Câncer de mama ou de endométrio, sangramento genital não investigado", "TEV atual/prévio, AVC, IAM, doença hepática ativa", "Com útero: associar progestagênio (proteção endometrial)", "Iniciar antes dos 60 anos ou até 10 anos da menopausa; via transdérmica preferível se risco de TEV, HAS, obesidade ou hipertrigliceridemia"],
+    prescrever: [
+      { contexto: "Climatério — via transdérmica (gel)", texto: "USO TRANSDÉRMICO\n1. Estradiol gel ------------------------------- 1 frasco (ou caixa de sachês)\n   Aplicar a dose indicada do produto 1 vez ao dia na pele limpa e seca dos braços, ombros ou abdome. Não aplicar nas mamas. Deixar secar antes de vestir.\n   Mulher com útero: associar progestagênio." },
+      { contexto: "Climatério — via oral", texto: "USO ORAL\n1. Valerato de estradiol 1 mg ------------------ 28 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo; reavaliar anualmente.\n   Mulher com útero: associar progestagênio (ex.: progesterona micronizada)." }
+    ] },
+  { id: "estradiol-noretisterona", nomes: ["Estradiol + noretisterona", "estradiol + acetato de noretisterona", "Cliane", "Activelle"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Terapia hormonal combinada contínua no climatério em mulher com útero (sem sangramento cíclico), após 1 ano de amenorreia.",
+    adulto: "1 comp/dia contínuo (estradiol 1 mg + noretisterona 0,5 mg ou estradiol 2 mg + noretisterona 1 mg)",
+    gestacao: { nivel: "contraindicado", texto: "Contraindicado." },
+    alergia: [], contra: ["Câncer de mama ou de endométrio, sangramento genital não investigado", "TEV atual/prévio, AVC, IAM, doença hepática ativa", "Sangramento irregular nos primeiros meses; persistente: investigar"],
+    prescrever: [
+      { contexto: "TH combinada contínua", texto: "USO ORAL\n1. Estradiol 1 mg + acetato de noretisterona 0,5 mg ---- 28 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, sem pausa. Reavaliar anualmente." }
+    ] },
+  { id: "tibolona", nomes: ["Tibolona", "Livial", "Reduclim"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Sintomas vasomotores do climatério e baixa libido, em mulher com ≥ 12 meses de amenorreia (não precisa associar progestagênio).",
+    adulto: "2,5 mg VO 1×/dia, contínuo",
+    gestacao: { nivel: "contraindicado", texto: "Contraindicado." },
+    alergia: [], contra: ["Câncer de mama (atual ou prévio): aumenta recorrência", "TEV, AVC (risco aumentado, sobretudo após 60 anos), IAM, doença hepática ativa", "Sangramento genital não investigado", "Não iniciar antes de 12 meses da última menstruação"],
+    prescrever: [
+      { contexto: "Climatério", texto: "USO ORAL\n1. Tibolona 2,5 mg ----------------------------- 28 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, sempre no mesmo horário. Uso contínuo; reavaliar anualmente." }
+    ] },
+
+  /* ========== GINECOLÓGICOS: INDUÇÃO DE OVULAÇÃO (ESPECIALISTA) ========== */
+  { id: "clomifeno", nomes: ["Clomifeno", "citrato de clomifeno", "Indux", "Clomid"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Indução de ovulação em anovulação (SOP) — de preferência sob acompanhamento do especialista em reprodução.",
+    adulto: "50 mg VO 1×/dia por 5 dias a partir do 3º–5º dia do ciclo; aumentar 50 mg/ciclo se não ovular (máx. 150 mg/dia); até 6 ciclos",
+    gestacao: { nivel: "contraindicado", texto: "Excluir gestação antes de cada ciclo." },
+    alergia: [], contra: ["Gestação, doença hepática, sangramento não investigado, cisto ovariano não-SOP", "Gemelaridade e síndrome de hiperestímulo ovariano: monitorizar (ultrassom)", "Distúrbios visuais: suspender", "Investigar o casal (espermograma, permeabilidade tubária) antes"],
+    prescrever: [
+      { contexto: "Indução de ovulação (SOP)", texto: "USO ORAL\n1. Citrato de clomifeno 50 mg ------------------ 5 comprimidos\n   Tomar 1 comprimido 1 vez ao dia por 5 dias, do 3º ao 7º dia do ciclo menstrual.\n   Relações sexuais em dias alternados do 10º ao 20º dia. Retorno com controle de ovulação." }
+    ] },
+  { id: "letrozol", nomes: ["Letrozol", "Femara"], classe: "ginecologicos", receita: "simples", tags: [],
+    usos: "Indução de ovulação na SOP (1ª linha internacional; uso off-label no Brasil — referir ao especialista); câncer de mama receptor hormonal positivo (oncologia).",
+    adulto: "Indução: 2,5 mg/dia por 5 dias a partir do 3º dia do ciclo, podendo aumentar até 7,5 mg/dia (especialista) · câncer de mama: 2,5 mg/dia",
+    gestacao: { nivel: "contraindicado", texto: "Contraindicado na gestação; excluir gestação antes de cada ciclo." },
+    alergia: [], contra: ["Gestação e lactação", "Uso na infertilidade é off-label: termo de consentimento e acompanhamento especializado", "Uso prolongado (oncologia): perda de massa óssea, artralgia"],
+    prescrever: [
+      { contexto: "Indução de ovulação (especialista)", texto: "USO ORAL\n1. Letrozol 2,5 mg ------------------------------ 5 comprimidos\n   Tomar 1 comprimido 1 vez ao dia por 5 dias, do 3º ao 7º dia do ciclo menstrual, conforme orientação do especialista." }
+    ] },
 ]);
