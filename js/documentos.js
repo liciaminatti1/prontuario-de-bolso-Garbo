@@ -383,6 +383,9 @@ function telaDocumentos(docId, contexto = {}) {
     </form>
     <div class="sec gap-top doc-saida">
       <div class="card-h"><h3>Texto gerado</h3><button class="copy" data-target="saida-doc">Copiar</button></div>
+      ${typeof rxGerarPdf === "function" ? `<div class="vz-acoes-linha doc-pdf"><button class="vz-btn-grande" id="doc-pdf" type="button">${ic("documento")} Baixar PDF no timbrado</button><button class="seg" id="doc-pdf-abrir" type="button">Abrir / imprimir</button></div>
+      ${typeof rxTimbrado === "function" && !rxTimbrado().configurado ? `<p class="note">Telefone, e-mail e endereço do rodapé: configure em <a href="#receituario">Receituário → Dados do timbrado</a> (ficam só neste aparelho).</p>` : ""}
+      <p class="vz-status" id="doc-pdf-status" aria-live="polite"></p>` : ""}
       <p class="aviso" id="aviso-doc" hidden></p>
       <pre class="rx saida" id="saida-doc"></pre>
       <button class="link-btn" id="limpar-doc" type="button">Limpar dados do paciente</button>
@@ -411,6 +414,26 @@ function telaDocumentos(docId, contexto = {}) {
     atualizar();
   };
   document.getElementById("limpar-doc").onclick = () => telaDocumentos(doc.id);
+  /* PDF no timbrado: título = 1ª linha; assinatura do texto vira o bloco de assinatura do timbrado. */
+  const exportar = async modo => {
+    const st = document.getElementById("doc-pdf-status");
+    const janela = modo === "abrir" ? window.open("", "_blank") : null;
+    try {
+      st.textContent = "Gerando PDF…";
+      let texto = doc.gerar(valores).replace(/\n{3,}/g, "\n\n").trim();
+      const ass = assinatura(valores);
+      let local = "";
+      if (texto.endsWith(ass)) { texto = texto.slice(0, -ass.length).trim(); local = ass.split("\n")[0]; }
+      const linhas = texto.split("\n");
+      const titulo = linhas[0] === linhas[0].toUpperCase() ? linhas.shift().trim() : doc.titulo.toUpperCase();
+      const pdf = await rxGerarPdf({ documentoLivre: { titulo, corpo: linhas.join("\n"), local }, itens: [], tipo: "simples" }, rxTimbrado());
+      const nome = `${doc.id}-${normalizar(valores.paciente || "paciente").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").split("-").slice(0, 2).join("-") || "paciente"}-${valores.data || hojeISO()}.pdf`;
+      if (janela) { janela.location.href = pdf.output("bloburl"); st.textContent = "PDF aberto em nova aba."; }
+      else { pdf.save(nome); st.textContent = `PDF salvo: ${nome}`; }
+    } catch (e) { if (janela) janela.close(); st.textContent = "Não foi possível gerar o PDF: " + e.message; }
+  };
+  const bp = document.getElementById("doc-pdf"); if (bp) bp.onclick = () => exportar("baixar");
+  const ba = document.getElementById("doc-pdf-abrir"); if (ba) ba.onclick = () => exportar("abrir");
   document.getElementById("voltar").onclick = () => ir("documentos");
   ligarCopias();
   atualizar();

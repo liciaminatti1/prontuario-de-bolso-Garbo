@@ -29,13 +29,22 @@ async function rxCarregar() {
 }
 
 const rxEspacar = s => String(s || "").trim().toUpperCase().split(/\s+/).map(w => w.split("").join(" ")).join("   ");
+const RX_TROCAS = { "≥": ">=", "≤": "<=", "→": "->", "←": "<-", "↑": "(elevado)", "↓": "(reduzido)", "β": "beta", "Δ": "delta", "≈": "~", "≠": "diferente de", "∞": "infinito", "✓": "OK", "μ": "µ",
+  "₀": "0", "₁": "1", "₂": "2", "₃": "3", "₄": "4", "™": "", "\u00a0": " " };
+const rxSanear = t => String(t).replace(/[≥≤→←↑↓βΔ≈≠∞✓μ₀₁₂₃₄™\u00a0]/g, c => RX_TROCAS[c]);
 const rxDataBR = iso => iso ? iso.split("-").reverse().join("/") : "";
 
 async function rxGerarPdf(est, tim) {
   const JsPDF = await rxCarregar();
   const pdf = new JsPDF({ unit: "mm", format: "a4", compress: true });
   RX_FONTES.forEach(([arq, fam, est2], i) => { pdf.addFileToVFS(arq, rxFontesB64[i]); pdf.addFont(arq, fam, est2); });
-  pdf.setProperties({ title: est.tipo === "exames" ? "Solicitação de exames" : "Receita", creator: "Licia Minatti · Prontuário de Bolso" });
+  /* Símbolos que as fontes do timbrado não têm viram texto equivalente (senão somem no PDF). */
+  const _text = pdf.text.bind(pdf), _split = pdf.splitTextToSize.bind(pdf), _w = pdf.getTextWidth.bind(pdf);
+  const san = t => typeof t === "string" ? rxSanear(t) : Array.isArray(t) ? t.map(rxSanear) : t;
+  pdf.text = (t, ...r) => _text(san(t), ...r);
+  pdf.splitTextToSize = (t, ...r) => _split(san(t), ...r);
+  pdf.getTextWidth = t => _w(san(t));
+  pdf.setProperties({ title: est.documentoLivre ? (est.documentoLivre.titulo || "Documento") : est.tipo === "exames" ? "Solicitação de exames" : "Receita", creator: "Licia Minatti · Prontuário de Bolso" });
   const W = 210, ctx = { pdf, est, tim, primeira: true };
   const fonte = (fam, estilo, tam, cor) => { pdf.setFont(fam, estilo); pdf.setFontSize(tam); pdf.setTextColor(cor || RXP_COR.marrom); };
   const centro = (txt, y) => pdf.text(txt, W / 2 - pdf.getTextWidth(txt) / 2, y);
@@ -50,6 +59,7 @@ async function rxGerarPdf(est, tim) {
     fonte("Montserrat", "medium", 8.5, RXP_COR.texto); const prof = rxEspacar(tim.profissao); centro(prof, 50);
     const wp = pdf.getTextWidth(prof); linha(W / 2 - wp / 2, 51, W / 2 + wp / 2, RXP_COR.texto, 0.2);
     fonte("Montserrat", "normal", 8.5, RXP_COR.texto); centro(rxEspacar([tim.crm, tim.rqe ? `RQE ${tim.rqe}` : ""].filter(Boolean).join("  ·  ")), 55.5);
+    if (est.documentoLivre) return 64;
     /* Linha do paciente */
     fonte("Baskerville", "normal", 11, RXP_COR.marrom);
     pdf.text(`Paciente: ${est.paciente || ""}`, 18, 66, { maxWidth: 130 });
@@ -184,6 +194,27 @@ async function rxGerarPdf(est, tim) {
     }
   }
 
+  /* Documento de texto livre (atestado, declaração, encaminhamento...) no timbrado. */
+  if (est.documentoLivre) {
+    const { titulo, corpo, local } = est.documentoLivre;
+    novaPagina(); let y = cabecalho("", []);
+    if (titulo) { fonte("Baskerville", "bold", 13, RXP_COR.marrom); centro(titulo, y + 4); y += 14; }
+    const quebra = () => { if (y > 252) { rodape(); novaPagina(); y = cabecalho("(continuação)", []); } };
+    for (const bruta of String(corpo || "").replace(/\n{3,}/g, "\n\n").trim().split("\n")) {
+      if (!bruta.trim()) { y += 3.5; continue; }
+      const titLinha = bruta === bruta.toUpperCase() && /[A-ZÁÉÍÓÚÇ]{3}/.test(bruta) && bruta.length < 70;
+      fonte("Baskerville", titLinha ? "bold" : "normal", titLinha ? 10 : 11, titLinha ? RXP_COR.marrom : RXP_COR.texto);
+      const recuo = (bruta.match(/^\s*/)[0].length ? 5 : 0);
+      for (const l of pdf.splitTextToSize(bruta.trim(), 152 - recuo)) { quebra(); pdf.text(l, 29 + recuo, y); y += titLinha ? 5.5 : 5.6; }
+      if (titLinha) y += 0.5;
+    }
+    let ys = Math.max(y + 22, 205);
+    if (ys > 262) { rodape(); novaPagina(); cabecalho("(continuação)", []); ys = 110; }
+    if (local) { fonte("Baskerville", "normal", 11, RXP_COR.texto); pdf.text(local, 186 - pdf.getTextWidth(local), ys - 12); }
+    assinatura(ys);
+    rodape();
+    return pdf;
+  }
   const docs = rxDocumentos(est.itens, est.tipo);
   for (const d of docs) {
     if (d.tipo === "simples") documento(d, "", {});
