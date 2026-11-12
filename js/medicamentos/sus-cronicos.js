@@ -988,4 +988,413 @@ adicionarMedicamentos([
       { contexto: "Adulto — dismenorreia", texto: "USO ORAL\n1. Ácido mefenâmico 500 mg ------------- 12 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após as refeições, nos dias de cólica (máximo 3 a 4 dias por ciclo)." }
     ] },
 
+  /* ---------- vitaminas e minerais ---------- */
+  { id: "piridoxina", nomes: ["Piridoxina", "cloridrato de piridoxina", "vitamina B6"], classe: "vitaminas", receita: "simples", tags: [],
+    usos: "Prevenção de neuropatia com isoniazida (TB e tratamento da infecção latente), náusea e vômitos da gestação, deficiência de B6.",
+    adulto: "Com isoniazida: 25–50 mg VO 1×/dia · náusea da gestação: 10–25 mg VO 8/8h",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Compatível (1ª linha na náusea da gestação, isolada ou com doxilamina)." },
+    alergia: [], contra: ["Uso prolongado > 200 mg/dia: neuropatia sensitiva", "Reduz efeito da levodopa isolada (sem carbidopa/benserazida)"],
+    prescrever: [
+      { contexto: "Adulto — em uso de isoniazida", texto: "USO ORAL\n1. Piridoxina 40 mg ---------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia enquanto usar a isoniazida.\n   (Conferir a apresentação disponível na unidade: 25–50 mg/dia.)" }
+    ] },
+  { id: "vitamina-a", nomes: ["Vitamina A", "palmitato de retinol", "retinol", "megadose de vitamina A"], classe: "vitaminas", receita: "simples", tags: [],
+    usos: "Suplementação profilática em megadose (Programa Nacional de Suplementação de Vitamina A, 6–59 meses); sarampo (OMS); xeroftalmia.",
+    adulto: "Criança: 6–11 meses 100.000 UI VO dose única · 12–59 meses 200.000 UI VO a cada 6 meses · sarampo: mesma dose por idade (< 6 meses 50.000 UI) em 2 dias seguidos",
+    renal: [],
+    gestacao: { nivel: "contraindicado", texto: "Megadoses contraindicadas na gestação (teratogênica); usar apenas a dose dietética." },
+    alergia: [], contra: ["Não repetir antes de 4–6 meses (hipervitaminose A: fontanela abaulada, vômitos)", "Registrar na caderneta da criança"],
+    prescrever: [
+      { contexto: "Criança 6–11 meses (programa)", texto: "USO ORAL\n1. Vitamina A 100.000 UI cápsula -------- 1 cápsula\n   Cortar a ponta da cápsula e espremer o conteúdo na boca da criança, dose única.\n   (Registrar na caderneta.)" },
+      { contexto: "Criança 12–59 meses (programa)", texto: "USO ORAL\n1. Vitamina A 200.000 UI cápsula -------- 1 cápsula\n   Cortar a ponta da cápsula e espremer o conteúdo na boca da criança, dose única; repetir a cada 6 meses até 59 meses." }
+    ] },
+  { id: "zinco", nomes: ["Sulfato de zinco", "zinco", "suplemento de zinco"], classe: "vitaminas", receita: "simples", tags: ["quelante"],
+    usos: "Diarreia aguda na criança (OMS/MS: reduz duração e recorrência), deficiência de zinco, acrodermatite enteropática.",
+    adulto: "Diarreia na criança: < 6 meses 10 mg/dia; ≥ 6 meses 20 mg/dia de zinco elementar, por 10–14 dias",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Compatível em doses de suplementação." },
+    alergia: [], contra: ["Náusea/vômito (dar após alimento)", "Uso prolongado em doses altas: deficiência de cobre", "Separar 2 h de quinolonas e tetraciclinas"],
+    prescrever: [
+      { contexto: "Criança — diarreia aguda", texto: "USO ORAL\n1. Sulfato de zinco solução oral ---------- 1 frasco\n   Dar ___ mL 1 vez ao dia por 10 a 14 dias, mesmo após melhorar a diarreia.\n   (Zinco elementar: < 6 meses 10 mg/dia; ≥ 6 meses 20 mg/dia. Conferir a concentração do produto.)" }
+    ] },
+  { id: "ferro-sacarato", nomes: ["Sacarato de hidróxido férrico", "sacarato de hidroxido ferrico", "ferro sacarato", "ferro endovenoso", "Noripurum EV"], classe: "vitaminas", receita: "hospitalar", tags: [],
+    usos: "Anemia ferropriva com intolerância/falha do ferro oral, má absorção (bariátrica, DII), DRC, gestação 2º/3º trimestres com anemia importante.",
+    apres: [{ rotulo: "ampola 100 mg/5 mL (20 mg/mL)", mgPorMl: 20 }],
+    adulto: "Dose total (Ganzoni): peso (kg) × (Hb alvo − Hb atual) × 2,4 + 500 mg; dar 100–200 mg por aplicação, até 3×/semana (máx 200 mg por dose)",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Evitar no 1º trimestre; pode ser usado no 2º e 3º trimestres." },
+    alergia: [], contra: ["Anemia não ferropriva, sobrecarga de ferro", "Reação de hipersensibilidade: aplicar com observação por 30 min e material de emergência", "Extravasamento mancha a pele", "Infecção ativa (bacteremia)"],
+    prescrever: [
+      { contexto: "Ambulatório de infusão / hospital", texto: "Sacarato de hidróxido férrico 100 mg (5 mL) + SF 0,9% 100 mL IV em 15–30 min.\n(200 mg: diluir em até 200 mL e infundir em ≥ 30 min.) Repetir até 3×/semana até completar a dose total.\nObservar por 30 min após a infusão." }
+    ] },
+  { id: "ferripolimaltose", nomes: ["Ferripolimaltose", "hidróxido férrico polimaltosado", "ferro polimaltosado", "Noripurum", "Ultrafer"], classe: "vitaminas", receita: "simples", tags: ["ferro"],
+    usos: "Anemia ferropriva e profilaxia de deficiência de ferro (melhor tolerância gastrointestinal; absorção menor que sulfato ferroso).",
+    ped: { dose: 3, faixa: "Tratamento 3–5 mg/kg/dia de ferro elementar", porDia: true, divisoes: 1, intervalo: "1×/dia", maxDia: 200, unidade: "mg de ferro elementar" },
+    apres: [{ rotulo: "gotas 50 mg/mL (2,5 mg/gota)", mgPorMl: 50, mgPorGota: 2.5 }, { rotulo: "xarope 10 mg/mL", mgPorMl: 10 }, { rotulo: "comprimido mastigável 100 mg", mgPorComp: 100 }],
+    adulto: "100–200 mg de ferro elementar VO/dia, durante ou após refeição, por 3–6 meses",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Compatível." },
+    alergia: [], contra: ["Sobrecarga de ferro, anemia não ferropriva", "Fezes escuras (esperado)"],
+    prescrever: [
+      { contexto: "Adulto — anemia ferropriva", texto: "USO ORAL\n1. Ferripolimaltose 100 mg comprimido mastigável ---- 60 comprimidos\n   Mastigar 1 comprimido no almoço e 1 no jantar por 30 dias; depois reavaliar (tratamento total de 3 a 6 meses)." },
+      { contexto: "Criança — anemia ferropriva (3–5 mg/kg/dia)", texto: "USO ORAL\n1. Ferripolimaltose gotas 50 mg/mL ------- 1 frasco\n   Dar ___ gotas 1 vez ao dia, durante ou após a refeição, por 3 meses.\n   (3–5 mg/kg/dia de ferro; 1 gota = 2,5 mg.)" }
+    ] },
+  { id: "polivitaminico-gestante", nomes: ["Polivitamínico para gestante", "polivitaminico pre-natal", "polivitamínico pré-natal", "Materna", "Natele", "Ogestan"], classe: "vitaminas", receita: "simples", tags: ["ferro", "calcio", "quelante"],
+    usos: "Suplementação na gestação/lactação com dieta insuficiente (no SUS, ácido fólico + sulfato ferroso já cobrem o essencial).",
+    adulto: "1 comprimido/cápsula VO 1×/dia",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Indicado para gestação; conferir o teor de ácido fólico (≥ 400 mcg) e de vitamina A (evitar > 10.000 UI/dia)." },
+    alergia: [], contra: ["Não somar com outros produtos com vitamina A", "Ferro do polivitamínico pode ser insuficiente para tratar anemia"],
+    prescrever: [
+      { contexto: "Gestante", texto: "USO ORAL\n1. Polivitamínico para gestante --------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, após uma refeição, durante a gestação e a amamentação." }
+    ] },
+
+  /* ---------- neurologia: Parkinson e distúrbios do movimento ---------- */
+  { id: "levodopa-carbidopa", nomes: ["Levodopa + carbidopa", "carbidopa + levodopa", "Sinemet", "Carbidol", "Cronomet"], classe: "neurologia", receita: "simples", tags: [],
+    usos: "Doença de Parkinson (sintomático mais eficaz) — RENAME 250/25 mg e 200/50 mg LP.",
+    apres: [{ rotulo: "comprimido 250 mg + 25 mg" }, { rotulo: "comprimido liberação prolongada 200 mg + 50 mg" }],
+    adulto: "Iniciar 1/2 comprimido 250/25 mg 2–3×/dia; aumentar a cada 1–2 semanas conforme resposta (habitual 300–800 mg/dia de levodopa)",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Dados limitados; usar só se necessário." },
+    alergia: [], contra: ["Glaucoma de ângulo fechado, melanoma", "Uso de IMAO não seletivo (crise hipertensiva)", "Tomar 30–60 min antes das refeições (proteína reduz absorção)", "Não suspender abruptamente (síndrome tipo neuroléptica maligna)", "Alucinação, hipotensão ortostática, discinesias"],
+    prescrever: [
+      { contexto: "Adulto — Parkinson (início)", texto: "USO ORAL\n1. Levodopa 250 mg + carbidopa 25 mg ---- 45 comprimidos\n   Tomar meio comprimido 3 vezes ao dia, 30 minutos antes do café, do almoço e do jantar. Uso contínuo.\n   (Aumentar conforme resposta a cada 1–2 semanas.)" }
+    ] },
+  { id: "levodopa-benserazida", nomes: ["Levodopa + benserazida", "benserazida + levodopa", "Prolopa"], classe: "neurologia", receita: "simples", tags: [],
+    usos: "Doença de Parkinson (RENAME 100/25 mg e 200/50 mg; BD/HBS de liberação lenta; dispersível para ação rápida).",
+    apres: [{ rotulo: "comprimido/cápsula 100 mg + 25 mg (Prolopa 125)" }, { rotulo: "comprimido 200 mg + 50 mg (Prolopa 250)" }, { rotulo: "comprimido dispersível 100 mg + 25 mg" }, { rotulo: "cápsula HBS 100 mg + 25 mg" }],
+    adulto: "Iniciar 50–100 mg de levodopa 2–3×/dia (1/2 a 1 comprimido de 100/25); aumentar a cada 1–2 semanas (habitual 300–800 mg/dia)",
+    renal: [],
+    gestacao: { nivel: "contraindicado", texto: "Benserazida: contraindicada na gestação (bula)." },
+    alergia: [], contra: ["Glaucoma de ângulo fechado", "IMAO não seletivo", "< 25 anos", "Tomar 30 min antes ou 1 h após as refeições", "Não suspender abruptamente"],
+    prescrever: [
+      { contexto: "Adulto — Parkinson (início)", texto: "USO ORAL\n1. Levodopa 100 mg + benserazida 25 mg comprimido dispersível ---- 45 comprimidos\n   Tomar meio comprimido 3 vezes ao dia, 30 minutos antes das refeições. Uso contínuo.\n   (Aumentar conforme resposta.)" }
+    ] },
+  { id: "pramipexol", nomes: ["Pramipexol", "dicloridrato de pramipexol", "Sifrol"], classe: "neurologia", receita: "simples", tags: [],
+    usos: "Doença de Parkinson (monoterapia inicial ou adjuvante) — RENAME; síndrome das pernas inquietas.",
+    apres: [{ rotulo: "comprimido 0,125 mg (sal)", mgPorComp: 0.125 }, { rotulo: "comprimido 0,25 mg (sal)", mgPorComp: 0.25 }, { rotulo: "comprimido 1 mg (sal)", mgPorComp: 1 }],
+    adulto: "Parkinson: 0,125 mg 8/8h, dobrar semanalmente até 0,5–1,5 mg 8/8h (máx 4,5 mg/dia) · pernas inquietas: 0,125 mg 2–3 h antes de deitar (máx 0,75 mg)",
+    renal: [{ abaixo: 20, texto: "Dose 1×/dia." }, { abaixo: 50, texto: "Dose dividida 2×/dia." }],
+    gestacao: { nivel: "evitar", texto: "Evitar (inibe a lactação)." },
+    alergia: [], contra: ["Sonolência súbita (não dirigir no ajuste)", "Jogo/compras/sexualidade compulsivos: perguntar ativamente", "Alucinação, hipotensão ortostática", "Pernas inquietas: aumento (augmentation) com o tempo; dosar ferritina"],
+    prescrever: [
+      { contexto: "Adulto — síndrome das pernas inquietas", texto: "USO ORAL\n1. Pramipexol 0,125 mg ------------------- 30 comprimidos\n   Tomar 1 comprimido 2 a 3 horas antes de deitar. Uso contínuo." },
+      { contexto: "Adulto — Parkinson (início)", texto: "USO ORAL\n1. Pramipexol 0,125 mg ------------------- 90 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas na 1ª semana; depois aumentar conforme orientação." }
+    ] },
+  { id: "rasagilina", nomes: ["Rasagilina", "mesilato de rasagilina", "Azilect"], classe: "neurologia", receita: "simples", tags: ["serotoninergico"],
+    usos: "Doença de Parkinson (monoterapia inicial leve ou adjuvante à levodopa) — inibidor da MAO-B.",
+    apres: [{ rotulo: "comprimido 1 mg", mgPorComp: 1 }],
+    adulto: "1 mg VO 1×/dia (0,5 mg com ciprofloxacino ou hepatopatia leve)",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Evitar (sem dados)." },
+    alergia: [], contra: ["Meperidina, tramadol, metadona, dextrometorfano, outros IMAO (contraindicados)", "ISRS/IRSN/tricíclicos: síndrome serotoninérgica (cautela, doses baixas)", "Hepatopatia moderada/grave", "Hipotensão ortostática, alucinação"],
+    prescrever: [
+      { contexto: "Adulto — Parkinson", texto: "USO ORAL\n1. Rasagilina 1 mg ---------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, pela manhã. Uso contínuo." }
+    ] },
+  { id: "amantadina", nomes: ["Amantadina", "cloridrato de amantadina", "Mantidan"], classe: "neurologia", receita: "simples", tags: ["anticolinergico"],
+    usos: "Doença de Parkinson (discinesia induzida por levodopa, sintomas leves) — RENAME; fadiga na esclerose múltipla (fora de bula).",
+    apres: [{ rotulo: "comprimido 100 mg", mgPorComp: 100 }],
+    adulto: "100 mg VO 1×/dia; após 1 semana, 100 mg 12/12h (máx 300–400 mg/dia); última dose antes das 16 h",
+    renal: [{ abaixo: 15, texto: "Evitar." }, { abaixo: 50, texto: "Reduzir: 100 mg/dia a 100 mg em dias alternados (conferir bula)." }],
+    gestacao: { nivel: "contraindicado", texto: "Evitar (teratogênica em animais)." },
+    alergia: [], contra: ["Confusão/alucinação em idosos", "Livedo reticular e edema de tornozelos", "Epilepsia, glaucoma de ângulo fechado", "Não suspender abruptamente"],
+    prescrever: [
+      { contexto: "Adulto — Parkinson", texto: "USO ORAL\n1. Amantadina 100 mg -------------------- 60 comprimidos\n   Tomar 1 comprimido no café e 1 comprimido no almoço (não tomar à noite). Uso contínuo." }
+    ] },
+  { id: "biperideno", nomes: ["Biperideno", "cloridrato de biperideno", "lactato de biperideno", "Akineton"], classe: "neurologia", receita: "C1", tags: ["anticolinergico"],
+    usos: "Parkinsonismo e distonia aguda induzidos por antipsicótico; Parkinson com tremor em jovens (RENAME).",
+    apres: [{ rotulo: "comprimido 2 mg", mgPorComp: 2 }, { rotulo: "comprimido liberação prolongada 4 mg", mgPorComp: 4 }, { rotulo: "ampola 5 mg/mL", mgPorMl: 5 }],
+    adulto: "1–2 mg VO 2–3×/dia (máx 16 mg/dia) · distonia aguda: 2,5–5 mg IM/IV lento, repetir em 30 min se necessário",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Usar só se necessário (distonia aguda: dose única aceitável)." },
+    alergia: [], contra: ["Glaucoma de ângulo fechado, retenção urinária/HPB, íleo", "Idosos e demência (confusão, piora cognitiva): evitar uso crônico", "Taquiarritmia", "Potencial de abuso"],
+    prescrever: [
+      { contexto: "PS — distonia aguda por antipsicótico/metoclopramida", texto: "Biperideno 5 mg/mL — 1 mL (5 mg) IM ou IV lento, dose única; repetir em 30 min se necessário." },
+      { contexto: "Adulto — parkinsonismo por antipsicótico", texto: "USO ORAL\n1. Biperideno 2 mg --------------------- 60 (sessenta) comprimidos\n   Tomar 1 comprimido de 12 em 12 horas.\n   (Receita de controle especial em 2 vias. Reavaliar necessidade em 3 meses.)" }
+    ] },
+  { id: "triexifenidil", nomes: ["Triexifenidil", "cloridrato de triexifenidil", "Artane"], classe: "neurologia", receita: "C1", tags: ["anticolinergico"],
+    usos: "Parkinson com tremor predominante em jovens, parkinsonismo/distonia induzidos por fármacos, distonia (RENAME).",
+    apres: [{ rotulo: "comprimido 2 mg", mgPorComp: 2 }, { rotulo: "comprimido 5 mg", mgPorComp: 5 }],
+    adulto: "1 mg/dia VO, aumentar 2 mg a cada 3–5 dias até 2 mg 8/8h (máx 15 mg/dia; distonia pode exigir mais)",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Usar só se necessário." },
+    alergia: [], contra: ["Glaucoma de ângulo fechado, retenção urinária/HPB", "Idosos e demência: evitar (confusão)", "Potencial de abuso", "Não suspender abruptamente"],
+    prescrever: [
+      { contexto: "Adulto — Parkinson / parkinsonismo", texto: "USO ORAL\n1. Triexifenidil 2 mg ------------------ 90 (noventa) comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após as refeições.\n   (Iniciar 1 mg/dia e aumentar a cada 3–5 dias. Receita de controle especial em 2 vias.)" }
+    ] },
+  { id: "entacapona", nomes: ["Entacapona", "Comtan", "levodopa + carbidopa + entacapona", "Stalevo"], classe: "neurologia", receita: "simples", tags: [],
+    usos: "Parkinson com flutuação motora de fim de dose (sempre junto com cada dose de levodopa) — RENAME.",
+    apres: [{ rotulo: "comprimido 200 mg", mgPorComp: 200 }],
+    adulto: "200 mg VO junto com cada dose de levodopa (máx 1.600 mg/dia = 8 tomadas)",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Evitar (sem dados)." },
+    alergia: [], contra: ["Hepatopatia, feocromocitoma", "Pode exigir redução de 10–30% da levodopa (discinesia)", "Urina alaranjada (inofensivo), diarreia"],
+    prescrever: [
+      { contexto: "Adulto — Parkinson com flutuação", texto: "USO ORAL\n1. Entacapona 200 mg -------------------- 120 comprimidos\n   Tomar 1 comprimido junto com cada dose de levodopa (4 vezes ao dia). Uso contínuo." }
+    ] },
+
+  /* ---------- neurologia: demências e outros ---------- */
+  { id: "donepezila", nomes: ["Donepezila", "cloridrato de donepezila", "Eranz", "Aricept"], classe: "neurologia", receita: "simples", tags: [],
+    usos: "Doença de Alzheimer leve a grave (PCDT/componente especializado); demência vascular/mista e por corpos de Lewy (fora de bula).",
+    apres: [{ rotulo: "comprimido 5 mg", mgPorComp: 5 }, { rotulo: "comprimido 10 mg", mgPorComp: 10 }],
+    adulto: "5 mg VO à noite por 4–6 semanas; depois 10 mg à noite",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Não se aplica habitualmente; evitar." },
+    alergia: [], contra: ["Bradicardia, BAV, síncope (ECG antes se cardiopata ou em uso de betabloqueador)", "Úlcera péptica, asma/DPOC grave", "Náusea, diarreia, pesadelos (tomar pela manhã se insônia)", "Anticolinérgicos anulam o efeito"],
+    prescrever: [
+      { contexto: "Adulto — Alzheimer", texto: "USO ORAL\n1. Donepezila 5 mg ---------------------- 30 comprimidos\n   Tomar 1 comprimido à noite, antes de deitar, por 4 a 6 semanas.\n   (Depois 10 mg à noite se bem tolerado.)" }
+    ] },
+  { id: "rivastigmina", nomes: ["Rivastigmina", "tartarato de rivastigmina", "Exelon", "Exelon Patch"], classe: "neurologia", receita: "simples", tags: [],
+    usos: "Doença de Alzheimer leve a moderada e demência da doença de Parkinson (PCDT); adesivo melhora a tolerância.",
+    apres: [{ rotulo: "cápsula 1,5/3/4,5/6 mg" }, { rotulo: "solução oral 2 mg/mL", mgPorMl: 2 }, { rotulo: "adesivo 4,6 mg/24h (5 cm²), 9,5 mg/24h (10 cm²), 13,3 mg/24h (15 cm²)" }],
+    adulto: "Oral: 1,5 mg 12/12h com refeições; aumentar 1,5 mg por dose a cada ≥ 2 semanas até 3–6 mg 12/12h · adesivo: 4,6 mg/24h por 4 semanas → 9,5 mg/24h (máx 13,3 mg/24h)",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Não se aplica habitualmente; evitar." },
+    alergia: [], contra: ["Bradicardia, BAV, síncope", "Náusea, vômitos, perda de peso (oral > adesivo)", "Se interromper > 3 dias, reiniciar na menor dose", "Adesivo: trocar o local diariamente; tirar o anterior"],
+    prescrever: [
+      { contexto: "Adulto — adesivo (início)", texto: "USO TRANSDÉRMICO\n1. Rivastigmina adesivo 4,6 mg/24h (5 cm²) ---- 30 adesivos\n   Aplicar 1 adesivo por dia na pele limpa das costas, braço ou peito, trocando o local; retirar o adesivo do dia anterior.\n   (Após 4 semanas, passar para 9,5 mg/24h se bem tolerado.)" }
+    ] },
+  { id: "galantamina", nomes: ["Galantamina", "bromidrato de galantamina", "Reminyl"], classe: "neurologia", receita: "simples", tags: [],
+    usos: "Doença de Alzheimer leve a moderada (PCDT).",
+    apres: [{ rotulo: "cápsula liberação prolongada 8 mg", mgPorComp: 8 }, { rotulo: "cápsula liberação prolongada 16 mg", mgPorComp: 16 }, { rotulo: "cápsula liberação prolongada 24 mg", mgPorComp: 24 }],
+    adulto: "ER 8 mg VO 1×/dia pela manhã por 4 semanas → 16 mg → (após 4 semanas) 24 mg",
+    renal: [{ abaixo: 9, texto: "Contraindicada." }, { abaixo: 60, texto: "Máximo 16 mg/dia." }],
+    gestacao: { nivel: "evitar", texto: "Não se aplica habitualmente; evitar." },
+    alergia: [], contra: ["Bradicardia, BAV, síncope", "Hepatopatia moderada: máximo 16 mg; grave: contraindicada", "Náusea e perda de peso; tomar com alimento e líquidos"],
+    prescrever: [
+      { contexto: "Adulto — Alzheimer (início)", texto: "USO ORAL\n1. Galantamina 8 mg cápsula de liberação prolongada ---- 30 cápsulas\n   Tomar 1 cápsula pela manhã, com o café, por 4 semanas.\n   (Depois 16 mg/dia.)" }
+    ] },
+  { id: "memantina", nomes: ["Memantina", "cloridrato de memantina", "Ebix", "Alois"], classe: "neurologia", receita: "simples", tags: [],
+    usos: "Doença de Alzheimer moderada a grave (isolada ou com anticolinesterásico) — PCDT.",
+    apres: [{ rotulo: "comprimido 10 mg", mgPorComp: 10 }, { rotulo: "comprimido 20 mg", mgPorComp: 20 }],
+    adulto: "5 mg/dia VO; aumentar 5 mg por semana até 20 mg/dia (10 mg 12/12h ou 20 mg 1×/dia)",
+    renal: [{ abaixo: 30, texto: "Máximo 10 mg/dia." }],
+    gestacao: { nivel: "evitar", texto: "Não se aplica habitualmente; evitar." },
+    alergia: [], contra: ["Epilepsia (cautela)", "Tontura, cefaleia, constipação, agitação", "Amantadina e dextrometorfano (mesmo mecanismo)"],
+    prescrever: [
+      { contexto: "Adulto — Alzheimer (titulação)", texto: "USO ORAL\n1. Memantina 10 mg ---------------------- 60 comprimidos\n   1ª semana: meio comprimido pela manhã. 2ª semana: meio comprimido 2 vezes ao dia.\n   3ª semana: 1 comprimido pela manhã e meio à noite. A partir da 4ª semana: 1 comprimido 2 vezes ao dia. Uso contínuo." }
+    ] },
+  { id: "piridostigmina", nomes: ["Piridostigmina", "brometo de piridostigmina", "Mestinon"], classe: "neurologia", receita: "simples", tags: [],
+    usos: "Miastenia gravis (sintomático) — RENAME; hipotensão ortostática neurogênica (fora de bula).",
+    apres: [{ rotulo: "comprimido 60 mg", mgPorComp: 60 }],
+    adulto: "Iniciar 30 mg VO 3–4×/dia (vigília) e ajustar pela força e efeitos colinérgicos, conforme neurologia (habitual 60 mg a cada 4–6 h)",
+    renal: [{ abaixo: 50, texto: "Reduzir a dose (eliminação renal)." }],
+    gestacao: { nivel: "compativel", texto: "Compatível (miastenia: manter)." },
+    alergia: [], contra: ["Obstrução intestinal ou urinária mecânica", "Asma, bradicardia", "Crise colinérgica (excesso): fraqueza, sudorese, salivação, diarreia, bradicardia", "Fármacos que pioram miastenia: aminoglicosídeos, quinolonas, macrolídeos, betabloqueadores, magnésio IV"],
+    prescrever: [
+      { contexto: "Adulto — miastenia gravis", texto: "USO ORAL\n1. Piridostigmina 60 mg ----------------- 120 comprimidos\n   Tomar meio comprimido (30 mg) de 6 em 6 horas durante o dia, cerca de 30 a 60 minutos antes das refeições. Uso contínuo.\n   (Ajustar conforme neurologia.)" }
+    ] },
+  { id: "betaistina", nomes: ["Betaistina", "dicloridrato de betaistina", "Betaserc", "Labirin"], classe: "neurologia", receita: "simples", tags: [],
+    usos: "Doença de Ménière (vertigem, zumbido); vertigem de origem vestibular periférica (benefício incerto fora de Ménière).",
+    apres: [{ rotulo: "comprimido 16 mg", mgPorComp: 16 }, { rotulo: "comprimido 24 mg", mgPorComp: 24 }],
+    adulto: "16 mg VO 8/8h ou 24 mg 12/12h (24–48 mg/dia), com alimento",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Evitar (dados insuficientes)." },
+    alergia: [], contra: ["Feocromocitoma", "Úlcera péptica ativa", "Asma (cautela)", "Anti-histamínicos reduzem o efeito"],
+    prescrever: [
+      { contexto: "Adulto — Ménière / vertigem", texto: "USO ORAL\n1. Betaistina 24 mg --------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas, após as refeições, por 30 dias. Reavaliar." }
+    ] },
+  { id: "flunarizina", nomes: ["Flunarizina", "dicloridrato de flunarizina", "Vertix"], classe: "neurologia", receita: "simples", tags: ["antidopaminergico", "sedativo"],
+    usos: "Profilaxia de enxaqueca (inclusive em crianças); vertigem vestibular (sintomático).",
+    apres: [{ rotulo: "comprimido/cápsula 10 mg", mgPorComp: 10 }, { rotulo: "gotas 5 mg/mL", mgPorMl: 5 }],
+    adulto: "10 mg VO à noite (idosos ou < 40 kg: 5 mg); reavaliar em 2–3 meses e fazer pausas a cada 6 meses",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Evitar." },
+    alergia: [], contra: ["Depressão atual ou prévia", "Parkinsonismo/extrapiramidais (especialmente idosos)", "Ganho de peso, sonolência", "Não associar a outros antidopaminérgicos"],
+    prescrever: [
+      { contexto: "Adulto — profilaxia de enxaqueca", texto: "USO ORAL\n1. Flunarizina 10 mg -------------------- 30 comprimidos\n   Tomar 1 comprimido à noite por 3 meses. Reavaliar." }
+    ] },
+  { id: "riluzol", nomes: ["Riluzol", "Rilutek"], classe: "neurologia", receita: "simples", tags: [],
+    usos: "Esclerose lateral amiotrófica (prolonga sobrevida) — PCDT/componente especializado.",
+    apres: [{ rotulo: "comprimido 50 mg", mgPorComp: 50 }],
+    adulto: "50 mg VO 12/12h, 1 h antes ou 2 h após as refeições",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Evitar (sem dados)." },
+    alergia: [], contra: ["Hepatopatia: TGO/TGP mensal nos 3 primeiros meses e depois a cada 3 meses (suspender se > 5× LSN)", "Neutropenia: orientar febre", "Doença pulmonar intersticial (tosse/dispneia)"],
+    prescrever: [
+      { contexto: "Adulto — ELA", texto: "USO ORAL\n1. Riluzol 50 mg ------------------------ 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas, 1 hora antes do café e do jantar. Uso contínuo." }
+    ] },
+
+  /* ---------- psiquiatria: antidepressivos ---------- */
+  { id: "sertralina", nomes: ["Sertralina", "cloridrato de sertralina", "Zoloft", "Assert"], classe: "antidepressivos", receita: "C1", tags: ["isrs", "serotoninergico"],
+    usos: "Depressão, ansiedade generalizada, pânico, TOC, TEPT, fobia social, TDPM; ISRS preferido na gestação, lactação e cardiopatia.",
+    apres: [{ rotulo: "comprimido 25 mg", mgPorComp: 25 }, { rotulo: "comprimido 50 mg", mgPorComp: 50 }, { rotulo: "comprimido 100 mg", mgPorComp: 100 }],
+    adulto: "50 mg VO 1×/dia (pânico/TEPT/ansiedade: 25 mg na 1ª semana); aumentar 50 mg a cada 2–4 semanas (máx 200 mg/dia)",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "ISRS de escolha na gestação e lactação; manter se necessário (avaliar risco de recaída)." },
+    alergia: [], contra: ["Uso de IMAO (14 dias de intervalo), linezolida", "Tramadol, triptanos, outros serotoninérgicos (síndrome serotoninérgica)", "Risco de sangramento com AINE/anticoagulante", "Hiponatremia em idosos", "Ideação suicida em < 25 anos no início; virada maníaca no bipolar"],
+    prescrever: [
+      { contexto: "Adulto — depressão / ansiedade", texto: "USO ORAL\n1. Sertralina 50 mg --------------------- 30 (trinta) comprimidos\n   Tomar 1 comprimido pela manhã, todos os dias.\n   (Reavaliar em 4 semanas. Pânico: iniciar com meio comprimido por 1 semana.)" }
+    ] },
+  { id: "clomipramina", nomes: ["Clomipramina", "cloridrato de clomipramina", "Anafranil"], classe: "antidepressivos", receita: "C1", tags: ["qt", "anticolinergico", "serotoninergico", "convulsivante"],
+    usos: "TOC (inclusive refratário), depressão, pânico; cataplexia; ejaculação precoce (fora de bula, dose baixa).",
+    apres: [{ rotulo: "comprimido 10 mg", mgPorComp: 10 }, { rotulo: "comprimido 25 mg", mgPorComp: 25 }, { rotulo: "comprimido liberação prolongada 75 mg", mgPorComp: 75 }],
+    adulto: "25 mg VO à noite; aumentar gradualmente até 100–150 mg/dia (máx 250 mg/dia)",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Usar se necessário; sintomas de abstinência/adaptação neonatal." },
+    alergia: [], contra: ["IAM recente, BAV, QT longo (ECG antes se > 40–50 anos ou cardiopata)", "Glaucoma de ângulo fechado, retenção urinária/HPB", "IMAO; ISRS (síndrome serotoninérgica)", "Epilepsia (reduz limiar)", "Letal em superdosagem: dispensar quantidades pequenas se risco de suicídio"],
+    prescrever: [
+      { contexto: "Adulto — TOC / depressão", texto: "USO ORAL\n1. Clomipramina 25 mg ------------------ 30 (trinta) comprimidos\n   Tomar 1 comprimido à noite.\n   (Aumentar 25 mg a cada 4–7 dias conforme tolerância, até 100–150 mg/dia.)" }
+    ] },
+  { id: "imipramina", nomes: ["Imipramina", "cloridrato de imipramina", "Tofranil"], classe: "antidepressivos", receita: "C1", tags: ["qt", "anticolinergico", "serotoninergico", "convulsivante"],
+    usos: "Depressão, pânico, enurese noturna em crianças ≥ 6 anos (2ª linha), dor neuropática.",
+    apres: [{ rotulo: "comprimido 10 mg", mgPorComp: 10 }, { rotulo: "comprimido 25 mg", mgPorComp: 25 }],
+    adulto: "25–75 mg/dia VO, aumentar até 150–200 mg/dia (máx 300 mg/dia) · enurese (≥ 6 anos): 25 mg 1 h antes de deitar (máx 50 mg até 12 anos)",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Usar se necessário; sintomas neonatais." },
+    alergia: [], contra: ["IAM recente, BAV, QT longo", "Glaucoma de ângulo fechado, retenção urinária", "IMAO", "Letal em superdosagem (inclusive crianças que ingerem por acidente)"],
+    prescrever: [
+      { contexto: "Criança ≥ 6 anos — enurese noturna", texto: "USO ORAL\n1. Imipramina 25 mg -------------------- 30 (trinta) comprimidos\n   Dar 1 comprimido 1 hora antes de deitar, por 3 meses; depois reduzir gradualmente.\n   (Guardar fora do alcance de crianças: tóxico em superdosagem.)" },
+      { contexto: "Adulto — depressão", texto: "USO ORAL\n1. Imipramina 25 mg -------------------- 90 (noventa) comprimidos\n   Tomar 1 comprimido à noite na 1ª semana; depois aumentar conforme orientação até 3 comprimidos à noite." }
+    ] },
+  { id: "vortioxetina", nomes: ["Vortioxetina", "bromidrato de vortioxetina", "Brintellix"], classe: "antidepressivos", receita: "C1", tags: ["serotoninergico"],
+    usos: "Depressão maior (inclusive com queixa cognitiva; menos disfunção sexual e ganho de peso).",
+    apres: [{ rotulo: "comprimido 5 mg", mgPorComp: 5 }, { rotulo: "comprimido 10 mg", mgPorComp: 10 }, { rotulo: "comprimido 15 mg", mgPorComp: 15 }, { rotulo: "comprimido 20 mg", mgPorComp: 20 }],
+    adulto: "10 mg VO 1×/dia (5–20 mg; idoso: iniciar 5 mg)",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Dados limitados; preferir sertralina." },
+    alergia: [], contra: ["IMAO", "Náusea no início (tomar com alimento)", "Bupropiona e fluoxetina/paroxetina aumentam o nível (máx 10 mg)", "Risco de sangramento e hiponatremia como ISRS"],
+    prescrever: [
+      { contexto: "Adulto — depressão", texto: "USO ORAL\n1. Vortioxetina 10 mg ------------------ 30 (trinta) comprimidos\n   Tomar 1 comprimido 1 vez ao dia, com alimento." }
+    ] },
+  { id: "agomelatina", nomes: ["Agomelatina", "Valdoxan"], classe: "antidepressivos", receita: "C1", tags: [],
+    usos: "Depressão maior (agonista melatoninérgico; pouca disfunção sexual, melhora o sono).",
+    apres: [{ rotulo: "comprimido 25 mg", mgPorComp: 25 }],
+    adulto: "25 mg VO ao deitar; após 2 semanas, 50 mg ao deitar se necessário",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Evitar (dados limitados)." },
+    alergia: [], contra: ["Hepatopatia ou TGP > 3× LSN: contraindicada; TGO/TGP no início, 3, 6, 12 e 24 semanas e ao aumentar a dose", "Fluvoxamina e ciprofloxacino (inibidores de CYP1A2): contraindicados", "≥ 75 anos: não recomendada", "Etilismo"],
+    prescrever: [
+      { contexto: "Adulto — depressão", texto: "USO ORAL\n1. Agomelatina 25 mg ------------------- 30 (trinta) comprimidos\n   Tomar 1 comprimido ao deitar.\n   (TGO/TGP antes de iniciar e em 3, 6, 12 e 24 semanas.)" }
+    ] },
+
+  /* ---------- psiquiatria: antipsicóticos ---------- */
+  { id: "levomepromazina", nomes: ["Levomepromazina", "Neozine"], classe: "antipsicoticos", receita: "C1", tags: ["qt", "sedativo", "anticolinergico", "antidopaminergico"],
+    usos: "Psicose com agitação, insônia/agitação em pacientes psiquiátricos; cuidados paliativos (náusea refratária, delirium agitado, sedação).",
+    apres: [{ rotulo: "comprimido 25 mg", mgPorComp: 25 }, { rotulo: "comprimido 100 mg", mgPorComp: 100 }, { rotulo: "gotas 4% (40 mg/mL; 1 gota = 1 mg)", mgPorMl: 40, mgPorGota: 1 }, { rotulo: "ampola 25 mg/mL", mgPorMl: 25 }],
+    adulto: "Sedação/insônia em psicose: 25–50 mg VO à noite · psicose: doses maiores divididas, conforme bula/psiquiatria · paliativos: 6,25–25 mg à noite",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Usar só se necessário; sedação e extrapiramidais no RN." },
+    alergia: [], contra: ["Hipotensão ortostática intensa (quedas em idosos)", "QT longo", "Glaucoma, retenção urinária", "Parkinson, demência com corpos de Lewy", "Idoso com demência: aumento de mortalidade"],
+    prescrever: [
+      { contexto: "Adulto — insônia/agitação em quadro psicótico", texto: "USO ORAL\n1. Levomepromazina 4% gotas -------------- 1 (um) frasco\n   Tomar 25 gotas (25 mg) à noite.\n   (1 gota = 1 mg. Levantar devagar: risco de queda da pressão.)" }
+    ] },
+  { id: "clozapina", nomes: ["Clozapina", "Leponex"], classe: "antipsicoticos", receita: "C1", tags: ["sedativo", "anticolinergico", "convulsivante"],
+    usos: "Esquizofrenia refratária (≥ 2 antipsicóticos sem resposta) ou com risco de suicídio; psicose da doença de Parkinson (dose baixa) — PCDT.",
+    apres: [{ rotulo: "comprimido 25 mg", mgPorComp: 25 }, { rotulo: "comprimido 100 mg", mgPorComp: 100 }],
+    adulto: "12,5 mg 1–2×/dia no 1º dia; aumentar 25–50 mg/dia até 300–450 mg/dia em 2–3 semanas (máx 900 mg/dia)",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Usar se necessário (não teratogênica conhecida); monitorar RN. Evitar na lactação (agranulocitose no lactente)." },
+    alergia: [], contra: ["Agranulocitose: hemograma antes, semanal nas 18 primeiras semanas e depois mensal (suspender se neutrófilos < 1.500)", "Miocardite nas primeiras 8 semanas (febre, taquicardia, dor torácica: troponina/PCR)", "Constipação grave/íleo: laxante profilático", "Convulsão (dose > 600 mg), sialorreia, ganho de peso/DM", "Tabagismo reduz o nível; parar de fumar aumenta (toxicidade)", "Se interromper > 48 h, reiniciar a titulação"],
+    prescrever: [
+      { contexto: "Adulto — esquizofrenia refratária (início)", texto: "USO ORAL\n1. Clozapina 25 mg --------------------- 30 (trinta) comprimidos\n   Dia 1: meio comprimido à noite. Dia 2: 1 comprimido à noite. Depois aumentar conforme orientação.\n   (Hemograma semanal. Procurar atendimento se febre, dor de garganta, dor no peito.)" }
+    ] },
+  { id: "ziprasidona", nomes: ["Ziprasidona", "cloridrato de ziprasidona", "Geodon"], classe: "antipsicoticos", receita: "C1", tags: ["qt", "antidopaminergico"],
+    usos: "Esquizofrenia, mania bipolar (pouco ganho de peso; maior efeito no QT) — PCDT.",
+    apres: [{ rotulo: "cápsula 40 mg", mgPorComp: 40 }, { rotulo: "cápsula 80 mg", mgPorComp: 80 }],
+    adulto: "40 mg VO 12/12h com refeição (≥ 500 kcal); aumentar até 80 mg 12/12h",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Dados limitados; usar se necessário." },
+    alergia: [], contra: ["QT longo, IAM recente, IC descompensada, arritmias: contraindicada; ECG antes", "Outros fármacos que prolongam QT; hipocalemia/hipomagnesemia", "Tomar SEMPRE com refeição (absorção cai à metade em jejum)", "Idoso com demência: aumento de mortalidade"],
+    prescrever: [
+      { contexto: "Adulto — esquizofrenia / mania", texto: "USO ORAL\n1. Ziprasidona 40 mg ------------------- 60 (sessenta) cápsulas\n   Tomar 1 cápsula de 12 em 12 horas, junto com o almoço e o jantar." }
+    ] },
+  { id: "lurasidona", nomes: ["Lurasidona", "cloridrato de lurasidona", "Latuda"], classe: "antipsicoticos", receita: "C1", tags: ["antidopaminergico"],
+    usos: "Esquizofrenia; depressão bipolar (monoterapia ou com lítio/valproato). Perfil metabólico favorável.",
+    apres: [{ rotulo: "comprimido 20 mg", mgPorComp: 20 }, { rotulo: "comprimido 40 mg", mgPorComp: 40 }, { rotulo: "comprimido 80 mg", mgPorComp: 80 }],
+    adulto: "Esquizofrenia: 40–160 mg VO 1×/dia · depressão bipolar: 20–120 mg 1×/dia; sempre com refeição (≥ 350 kcal), à noite",
+    renal: [{ abaixo: 50, texto: "Iniciar 20 mg; máximo 80 mg/dia." }],
+    gestacao: { nivel: "cautela", texto: "Dados limitados; usar se necessário." },
+    alergia: [], contra: ["Inibidores fortes de CYP3A4 (claritromicina, cetoconazol, ritonavir) e indutores fortes (rifampicina, carbamazepina): contraindicados", "Acatisia, sonolência", "Idoso com demência: aumento de mortalidade"],
+    prescrever: [
+      { contexto: "Adulto — depressão bipolar", texto: "USO ORAL\n1. Lurasidona 20 mg -------------------- 30 (trinta) comprimidos\n   Tomar 1 comprimido à noite, junto com o jantar." }
+    ] },
+  { id: "paliperidona", nomes: ["Paliperidona", "palmitato de paliperidona", "Invega", "Xeplion"], classe: "antipsicoticos", receita: "C1", tags: ["qt", "antidopaminergico"],
+    usos: "Esquizofrenia e transtorno esquizoafetivo; injetável mensal de depósito para má adesão.",
+    apres: [{ rotulo: "comprimido liberação prolongada 3 mg", mgPorComp: 3 }, { rotulo: "comprimido liberação prolongada 6 mg", mgPorComp: 6 }, { rotulo: "comprimido liberação prolongada 9 mg", mgPorComp: 9 }, { rotulo: "injetável de depósito mensal (palmitato)" }],
+    adulto: "Oral: 6 mg VO 1×/dia pela manhã (3–12 mg) · palmitato IM: 150 mg no dia 1 e 100 mg no dia 8 (deltoide), depois manutenção mensal (habitual 75 mg; 25–150 mg)",
+    renal: [{ abaixo: 10, texto: "Não recomendada." }, { abaixo: 50, texto: "Oral: máximo 3 mg/dia." }, { abaixo: 80, texto: "Oral: máximo 6 mg/dia; injetável com doses reduzidas (conferir bula)." }],
+    gestacao: { nivel: "cautela", texto: "Usar se necessário; extrapiramidais/abstinência no RN." },
+    alergia: [], contra: ["Hiperprolactinemia (galactorreia, amenorreia)", "QT longo", "Extrapiramidais", "Alergia a risperidona (é seu metabólito)", "Idoso com demência: aumento de mortalidade"],
+    prescrever: [
+      { contexto: "Adulto — esquizofrenia (oral)", texto: "USO ORAL\n1. Paliperidona 6 mg comprimido de liberação prolongada ---- 30 (trinta) comprimidos\n   Tomar 1 comprimido pela manhã, inteiro, sem mastigar." }
+    ] },
+
+  /* ---------- psiquiatria: ansiolíticos e hipnóticos ---------- */
+  { id: "diazepam", nomes: ["Diazepam", "Valium", "diazepam oral"], classe: "ansioliticos", receita: "B1", tags: ["benzo", "sedativo"],
+    usos: "Ansiedade (curto prazo), abstinência alcoólica, espasmo muscular, crise convulsiva (IV/retal — ver item de emergência) — RENAME.",
+    apres: [{ rotulo: "comprimido 5 mg", mgPorComp: 5 }, { rotulo: "comprimido 10 mg", mgPorComp: 10 }, { rotulo: "ampola 5 mg/mL", mgPorMl: 5 }],
+    adulto: "Ansiedade: 5–10 mg VO 1–3×/dia (curto prazo, até 2–4 semanas) · abstinência alcoólica: 10–20 mg VO a cada 6 h guiado por sintomas (CIWA-Ar), reduzir em 3–5 dias",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Evitar uso crônico, sobretudo no 3º trimestre (hipotonia e abstinência neonatal)." },
+    alergia: [], contra: ["Insuficiência respiratória grave, apneia do sono, miastenia", "Hepatopatia grave (preferir lorazepam)", "Idosos: meia-vida muito longa (quedas, delirium) — evitar", "Opioides e álcool (depressão respiratória)", "Retirada gradual após uso prolongado"],
+    prescrever: [
+      { contexto: "Adulto — ansiedade (curto prazo)", texto: "USO ORAL\n1. Diazepam 5 mg ----------------------- 30 (trinta) comprimidos\n   Tomar 1 comprimido até 2 vezes ao dia, se ansiedade intensa, por até 2 semanas.\n   (Notificação B azul. Causa sonolência: não dirigir nem ingerir álcool.)" },
+      { contexto: "Adulto — abstinência alcoólica leve (ambulatorial)", texto: "USO ORAL\n1. Diazepam 10 mg ---------------------- 20 (vinte) comprimidos\n   Dias 1 e 2: 1 comprimido de 6 em 6 horas. Dia 3: 1 comprimido de 8 em 8 horas.\n   Dia 4: 1 comprimido de 12 em 12 horas. Dia 5: 1 comprimido à noite. Suspender.\n   (Associar tiamina. Não usar com bebida alcoólica.)" }
+    ] },
+  { id: "clobazam", nomes: ["Clobazam", "Frisium", "Urbanil"], classe: "ansioliticos", receita: "B1", tags: ["benzo", "sedativo"],
+    usos: "Epilepsia (adjuvante; síndrome de Lennox-Gastaut; profilaxia de crises catameniais) — PCDT; ansiedade.",
+    apres: [{ rotulo: "comprimido 10 mg", mgPorComp: 10 }, { rotulo: "comprimido 20 mg", mgPorComp: 20 }],
+    adulto: "Ansiedade: 10 mg 2–3×/dia (até 30 mg/dia) · epilepsia: iniciar 5–10 mg à noite e ajustar conforme neurologia",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Evitar no 1º trimestre e no fim da gestação (hipotonia/abstinência neonatal)." },
+    alergia: [], contra: ["Insuficiência respiratória grave, apneia do sono, miastenia", "Tolerância ao efeito anticonvulsivante com o tempo", "Retirada gradual (risco de crise)", "Opioides e álcool"],
+    prescrever: [
+      { contexto: "Adulto — epilepsia (adjuvante)", texto: "USO ORAL\n1. Clobazam 10 mg ---------------------- 30 (trinta) comprimidos\n   Tomar 1 comprimido à noite.\n   (Notificação B azul. Ajustar conforme neurologia; não suspender de repente.)" }
+    ] },
+  { id: "buspirona", nomes: ["Buspirona", "cloridrato de buspirona", "Buspar", "Ansitec"], classe: "ansioliticos", receita: "C1", tags: ["serotoninergico"],
+    usos: "Transtorno de ansiedade generalizada (não benzodiazepínico, sem dependência; efeito em 2–4 semanas); potencialização de ISRS.",
+    apres: [{ rotulo: "comprimido 5 mg", mgPorComp: 5 }, { rotulo: "comprimido 10 mg", mgPorComp: 10 }],
+    adulto: "5 mg VO 8/8h (ou 7,5 mg 12/12h); aumentar 5 mg/dia a cada 2–3 dias até 20–30 mg/dia (máx 60 mg/dia)",
+    renal: [{ abaixo: 30, texto: "Evitar / reduzir." }],
+    gestacao: { nivel: "evitar", texto: "Evitar (dados limitados)." },
+    alergia: [], contra: ["IMAO (crise hipertensiva)", "Inibidores fortes de CYP3A4 e suco de toranja", "Não serve para crise aguda de ansiedade nem para abstinência de benzodiazepínico", "Tontura, náusea, cefaleia"],
+    prescrever: [
+      { contexto: "Adulto — ansiedade generalizada", texto: "USO ORAL\n1. Buspirona 5 mg ---------------------- 90 (noventa) comprimidos\n   Tomar 1 comprimido de 8 em 8 horas; após 1 semana, aumentar conforme orientação.\n   (Efeito em 2 a 4 semanas.)" }
+    ] },
+
+  /* ---------- psiquiatria: TDAH ---------- */
+  { id: "metilfenidato", nomes: ["Metilfenidato", "cloridrato de metilfenidato", "Ritalina", "Ritalina LA", "Concerta"], classe: "neurologia", receita: "A", tags: [],
+    usos: "TDAH (≥ 6 anos e adultos); narcolepsia. Lista A3 (notificação A amarela).",
+    apres: [{ rotulo: "comprimido 10 mg (ação curta)", mgPorComp: 10 }, { rotulo: "cápsula LA 10/20/30/40 mg" }, { rotulo: "comprimido liberação prolongada 18/36/54 mg (Concerta)" }],
+    adulto: "Ação curta: 5 mg 1–2×/dia (café e almoço), aumentar 5–10 mg por semana (máx 60 mg/dia; última dose até 16 h) · LA/Concerta: dose única pela manhã",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Evitar; avaliar risco-benefício." },
+    alergia: [], contra: ["Cardiopatia estrutural, arritmia, HAS não controlada (PA/FC a cada consulta; investigar história de morte súbita)", "Glaucoma, hipertireoidismo, feocromocitoma", "IMAO (14 dias)", "Psicose, anorexia, abuso de substâncias, tiques (cautela)", "Insônia, perda de apetite: peso e altura em crianças"],
+    prescrever: [
+      { contexto: "Criança ≥ 6 anos / adulto — TDAH (início)", texto: "USO ORAL\n1. Metilfenidato 10 mg ----------------- 30 (trinta) comprimidos\n   Tomar meio comprimido (5 mg) no café da manhã e meio comprimido no almoço.\n   (Notificação de receita A. Aumentar 5–10 mg por semana conforme resposta.)" }
+    ] },
+  { id: "lisdexanfetamina", nomes: ["Lisdexanfetamina", "dimesilato de lisdexanfetamina", "Venvanse"], classe: "neurologia", receita: "A", tags: [],
+    usos: "TDAH (≥ 6 anos e adultos); transtorno de compulsão alimentar moderado a grave em adultos. Lista A3.",
+    apres: [{ rotulo: "cápsula 30 mg", mgPorComp: 30 }, { rotulo: "cápsula 50 mg", mgPorComp: 50 }, { rotulo: "cápsula 70 mg", mgPorComp: 70 }],
+    adulto: "30 mg VO pela manhã; aumentar 20 mg por semana conforme resposta (máx 70 mg/dia)",
+    renal: [{ abaixo: 30, texto: "Máximo 50 mg/dia." }],
+    gestacao: { nivel: "evitar", texto: "Evitar." },
+    alergia: [], contra: ["Cardiopatia estrutural, arritmia, HAS não controlada", "Glaucoma, hipertireoidismo", "IMAO (14 dias)", "História de abuso de substâncias", "Insônia, perda de apetite: peso e altura em crianças"],
+    prescrever: [
+      { contexto: "Criança ≥ 6 anos / adulto — TDAH", texto: "USO ORAL\n1. Lisdexanfetamina 30 mg --------------- 30 (trinta) cápsulas\n   Tomar 1 cápsula pela manhã (pode abrir e dissolver em água ou iogurte).\n   (Notificação de receita A.)" }
+    ] },
+
+  /* ---------- dependência química ---------- */
+  { id: "naltrexona", nomes: ["Naltrexona", "cloridrato de naltrexona", "Revia"], classe: "diversos", receita: "C1", tags: [],
+    usos: "Dependência de álcool (reduz fissura e recaída em consumo pesado); dependência de opioide após desintoxicação.",
+    apres: [{ rotulo: "comprimido 50 mg", mgPorComp: 50 }],
+    adulto: "50 mg VO 1×/dia (iniciar 25 mg nos primeiros dias se náusea), por 3–12 meses",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Evitar (dados limitados)." },
+    alergia: [], contra: ["Uso atual de opioide ou < 7–10 dias sem opioide (abstinência precipitada)", "Bloqueia analgesia opioide: avisar em caso de dor/cirurgia", "Hepatite aguda ou insuficiência hepática (TGO/TGP antes e periodicamente)"],
+    prescrever: [
+      { contexto: "Adulto — dependência de álcool", texto: "USO ORAL\n1. Naltrexona 50 mg -------------------- 30 (trinta) comprimidos\n   Tomar meio comprimido por dia nos primeiros 3 dias; depois 1 comprimido por dia.\n   (Não usar se estiver tomando medicamento à base de opioide.)" }
+    ] },
+  { id: "dissulfiram", nomes: ["Dissulfiram", "Antietanol"], classe: "diversos", receita: "C1", tags: [],
+    usos: "Dependência de álcool em paciente motivado, com abstinência e consentimento informado (efeito aversivo).",
+    apres: [{ rotulo: "comprimido 250 mg", mgPorComp: 250 }],
+    adulto: "Após ≥ 24 h sem álcool: 250–500 mg VO 1×/dia por 1–2 semanas; manutenção 250 mg/dia",
+    renal: [],
+    gestacao: { nivel: "contraindicado", texto: "Contraindicado." },
+    alergia: [], contra: ["Nunca dar sem o conhecimento e consentimento do paciente", "Reação com álcool (inclusive em xaropes, enxaguantes, perfumes) até 14 dias após a última dose", "Cardiopatia, psicose, hepatopatia (TGO/TGP), gestação", "Metronidazol, varfarina (aumenta INR), fenitoína (aumenta nível)"],
+    prescrever: [
+      { contexto: "Adulto — dependência de álcool", texto: "USO ORAL\n1. Dissulfiram 250 mg ------------------ 30 (trinta) comprimidos\n   Tomar 1 comprimido pela manhã. Não ingerir nenhuma bebida ou produto com álcool durante o tratamento e até 2 semanas após parar.\n   (Termo de consentimento assinado.)" }
+    ] },
+
 ]);
