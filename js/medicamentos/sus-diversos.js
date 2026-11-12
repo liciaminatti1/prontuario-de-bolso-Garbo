@@ -763,4 +763,157 @@ adicionarMedicamentos([
     prescrever: [
       { contexto: "Disúria intensa (adulto)", texto: "USO ORAL\n1. Fenazopiridina 200 mg ------------------------ 6 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após as refeições, por 2 dias.\n   A urina fica laranja (normal)." }
     ] },
+
+  /* ---------- imunologia, imunossupressores e oncologia oral ---------- */
+  { id: "azatioprina", nomes: ["Azatioprina", "imuran"], classe: "imunologia", receita: "simples", tags: [],
+    usos: "Doença inflamatória intestinal, hepatite autoimune, LES, vasculites, miastenia, poupador de corticoide; transplante",
+    apres: [{ rotulo: "comprimido 50 mg", mgPorComp: 50 }],
+    adulto: "1–3 mg/kg/dia VO (iniciar 50 mg/dia e aumentar a cada 2–4 semanas)",
+    renal: [{ abaixo: 50, texto: "Reduzir a dose (ClCr 10–50: ~75%; < 10: ~50%)." }],
+    gestacao: { nivel: "cautela", texto: "Pode ser mantida na gestação (DII, LES, transplante) com especialista; não suspender abruptamente." },
+    alergia: [], contra: ["Alopurinol/febuxostate: toxicidade medular grave (reduzir azatioprina a 25% ou evitar)", "Dosar TPMT se disponível; hemograma e TGO/TGP a cada 1–2 semanas no início, depois a cada 3 meses", "Infecções, câncer de pele (fotoproteção), vacinas vivas contraindicadas", "Conferir exigência de receituário/LME do Componente Especializado"],
+    prescrever: [
+      { contexto: "Adulto — início", texto: "USO ORAL\n1. Azatioprina 50 mg ---------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, após refeição.\n   (Aumentar conforme especialista até 2–2,5 mg/kg/dia; hemograma e transaminases em 2 semanas.)" }
+    ] },
+  { id: "ciclosporina", nomes: ["Ciclosporina", "sandimmun neoral"], classe: "imunologia", receita: "simples", tags: ["hipercalemia"],
+    usos: "Transplante de órgãos, psoríase grave, dermatite atópica grave, síndrome nefrótica, artrite reumatoide, uveíte (especialista)",
+    adulto: "Psoríase/DA: 2,5–5 mg/kg/dia VO divididos de 12/12h · transplante: conforme nível sérico e protocolo",
+    renal: [{ abaixo: 60, texto: "Nefrotóxica: evitar em doença autoimune com DRC; reduzir 25–50% se a creatinina subir > 25% do basal." }],
+    gestacao: { nivel: "cautela", texto: "Pode ser mantida em transplantadas com especialista (risco de prematuridade/baixo peso)." },
+    alergia: [], contra: ["Nefrotoxicidade e HAS: creatinina e PA a cada 2 semanas no início", "Muitas interações (CYP3A4): azóis, macrolídeos, diltiazem, verapamil aumentam; rifampicina, carbamazepina, fenitoína reduzem; estatinas (miopatia)", "Hipercalemia, hipomagnesemia, hiperplasia gengival, hirsutismo", "Não alternar marcas sem controle de nível", "Conferir exigência de receituário/LME do Componente Especializado"],
+    prescrever: [
+      { contexto: "Psoríase / dermatite atópica grave (ex.: 70 kg)", texto: "USO ORAL\n1. Ciclosporina 100 mg ---------------------------- 60 cápsulas\n   Tomar 1 cápsula de 12 em 12 horas (≈ 3 mg/kg/dia), sempre no mesmo horário.\n   (Ajustar 2,5–5 mg/kg/dia; creatinina, K, Mg e PA a cada 2 semanas no início.)" }
+    ] },
+  { id: "tacrolimo", nomes: ["Tacrolimo", "tacrolimus", "prograf"], classe: "imunologia", receita: "simples", tags: ["qt", "hipercalemia"],
+    usos: "Imunossupressão no transplante de órgãos; nefrite lúpica e síndrome nefrótica refratária (especialista)",
+    adulto: "Conforme nível sérico (vale) e protocolo do transplante, VO 12/12h em jejum",
+    renal: [{ abaixo: 60, texto: "Nefrotóxico: ajustar pelo nível sérico e creatinina." }],
+    gestacao: { nivel: "cautela", texto: "Mantido em transplantadas com especialista; controle de nível e glicemia." },
+    alergia: [], contra: ["Interações CYP3A4 (azóis, macrolídeos, diltiazem, rifampicina, fenitoína, toranja): nível pode subir ou cair muito", "Nefrotoxicidade, diabetes pós-transplante, tremor, hipercalemia, hipomagnesemia", "Não trocar marca/formulação (12/12h × 1 vez ao dia) sem orientação", "Conferir exigência de receituário/LME do Componente Especializado"],
+    prescrever: [
+      { contexto: "Transplantado — manutenção", texto: "USO ORAL\n1. Tacrolimo 1 mg -------------------------------- ___ cápsulas\n   Tomar ___ cápsula(s) de 12 em 12 horas (ex.: 8 h e 20 h), 1 hora antes ou 2 horas depois das refeições.\n   (Dose conforme nível sérico — colher antes da dose da manhã.)" }
+    ] },
+  { id: "micofenolato", nomes: ["Micofenolato de mofetila", "micofenolato de sódio", "micofenolato", "cellcept", "myfortic"], classe: "imunologia", receita: "simples", tags: [],
+    usos: "Transplante de órgãos, nefrite lúpica (indução e manutenção), doenças autoimunes (vasculites, miosites, DPI de esclerose sistêmica)",
+    adulto: "Mofetila: 1 g VO 12/12h (nefrite lúpica: 2–3 g/dia) · micofenolato de sódio: 720 mg 12/12h",
+    renal: [{ abaixo: 25, texto: "Evitar > 1 g 12/12h (mofetila) fora do pós-transplante imediato." }],
+    gestacao: { nivel: "contraindicado", texto: "Teratogênico (malformações e abortamento): 2 métodos contraceptivos; suspender ≥ 6 semanas antes de engravidar." },
+    alergia: [], contra: ["Gestação; teste de gravidez antes de iniciar", "Leucopenia e infecções: hemograma semanal no 1º mês", "Diarreia e intolerância GI (dividir doses)", "500 mg de mofetila ≈ 360 mg de micofenolato de sódio (não intercambiar sem conversão)", "Conferir exigência de receituário/LME do Componente Especializado"],
+    prescrever: [
+      { contexto: "Adulto — mofetila", texto: "USO ORAL\n1. Micofenolato de mofetila 500 mg ---------------- 120 comprimidos\n   Tomar 2 comprimidos (1 g) de 12 em 12 horas. Uso contínuo conforme especialista.\n   Usar 2 métodos para evitar gravidez." }
+    ] },
+  { id: "ciclofosfamida", nomes: ["Ciclofosfamida", "genuxal"], classe: "imunologia", receita: "simples", tags: [],
+    usos: "Nefrite lúpica e vasculites graves (pulsoterapia IV), neoplasias (oncologia); síndrome nefrótica (especialista)",
+    adulto: "Pulso IV: 500–1.000 mg/m² mensal (NIH) ou 500 mg a cada 15 dias × 6 (Euro-Lupus), conforme especialista",
+    renal: [{ abaixo: 30, texto: "Reduzir a dose (cerca de 25%) e ajustar pela leucometria; conferir protocolo." }],
+    gestacao: { nivel: "contraindicado", texto: "Teratogênica; causa falência ovariana/testicular (discutir preservação de fertilidade)." },
+    alergia: [], contra: ["Cistite hemorrágica: hidratação vigorosa e mesna; esvaziar a bexiga", "Mielossupressão: hemograma no nadir (10–14 dias)", "Infecções (profilaxia de Pneumocystis conforme protocolo), câncer de bexiga a longo prazo", "Pulsoterapia em hospital-dia; uso sob especialista"],
+    prescrever: [
+      { contexto: "Hospital-dia — pulsoterapia (conforme especialista)", texto: "Ondansetrona 8 mg IV 30 min antes.\nCiclofosfamida ___ mg (500–1.000 mg/m²) + SF 0,9% 250–500 mL IV em 1–2 h.\nMesna conforme protocolo; SF 0,9% 1.000 mL antes/depois; urinar com frequência nas 24 h seguintes.\nHemograma em 10–14 dias." }
+    ] },
+  { id: "tamoxifeno", nomes: ["Tamoxifeno", "citrato de tamoxifeno", "nolvadex"], classe: "imunologia", receita: "simples", tags: [],
+    usos: "Câncer de mama com receptor hormonal positivo (adjuvância 5–10 anos, pré e pós-menopausa); redução de risco em alto risco",
+    adulto: "20 mg VO 1 vez ao dia",
+    renal: [],
+    gestacao: { nivel: "contraindicado", texto: "Teratogênico: contracepção não hormonal (DIU de cobre/barreira) durante e até 2 meses após." },
+    alergia: [], contra: ["TEV atual ou prévio; avaliar risco (imobilização, cirurgia)", "Câncer de endométrio: investigar sangramento vaginal na pós-menopausa", "Fluoxetina, paroxetina e bupropiona reduzem o efeito (CYP2D6): preferir venlafaxina/escitalopram", "Fogachos, catarata", "Varfarina: aumenta INR"],
+    prescrever: [
+      { contexto: "Câncer de mama — hormonioterapia", texto: "USO ORAL\n1. Tamoxifeno 20 mg ------------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo conforme oncologista.\n   Procurar o médico se sangramento vaginal, dor/inchaço na perna ou falta de ar." }
+    ] },
+  { id: "anastrozol", nomes: ["Anastrozol", "arimidex"], classe: "imunologia", receita: "simples", tags: [],
+    usos: "Câncer de mama com receptor hormonal positivo na pós-menopausa (inibidor da aromatase)",
+    adulto: "1 mg VO 1 vez ao dia",
+    renal: [],
+    gestacao: { nivel: "contraindicado", texto: "Uso apenas na pós-menopausa." },
+    alergia: [], contra: ["Pré-menopausa (ineficaz sem supressão ovariana)", "Osteoporose: densitometria inicial e a cada 1–2 anos, cálcio + vitamina D", "Artralgia, dislipidemia", "Não associar a tamoxifeno ou estrogênio"],
+    prescrever: [
+      { contexto: "Câncer de mama — pós-menopausa", texto: "USO ORAL\n1. Anastrozol 1 mg -------------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo conforme oncologista." }
+    ] },
+  { id: "bicalutamida", nomes: ["Bicalutamida", "casodex"], classe: "imunologia", receita: "simples", tags: [],
+    usos: "Câncer de próstata avançado: com análogo do GnRH (bloqueio androgênico; previne o flare) ou monoterapia em casos selecionados",
+    adulto: "50 mg VO 1 vez ao dia com análogo do GnRH (iniciar junto ou antes) · monoterapia: 150 mg/dia",
+    renal: [],
+    gestacao: { nivel: "contraindicado", texto: "Uso masculino; contraindicada em mulheres." },
+    alergia: [], contra: ["Hepatotoxicidade: TGO/TGP antes e periodicamente nos primeiros meses", "Ginecomastia e mastalgia", "Varfarina: aumenta INR", "QT longo"],
+    prescrever: [
+      { contexto: "Câncer de próstata (com análogo do GnRH)", texto: "USO ORAL\n1. Bicalutamida 50 mg ----------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, sempre no mesmo horário. Uso contínuo conforme urologista/oncologista." }
+    ] },
+  { id: "hidroxiureia", nomes: ["Hidroxiureia", "hidroxicarbamida", "hydrea"], classe: "imunologia", receita: "simples", tags: [],
+    usos: "Doença falciforme (reduz crises, síndrome torácica e transfusões — PCDT MS); policitemia vera, trombocitemia essencial, LMC (hematologia)",
+    apres: [{ rotulo: "cápsula 500 mg", mgPorComp: 500 }],
+    ped: { dose: 15, faixa: "Doença falciforme: iniciar 15–20 mg/kg/dia; aumentar 5 mg/kg a cada 8 semanas até máx 35 mg/kg/dia", porDia: true, divisoes: 1, intervalo: "1 vez ao dia", maxDia: 2000, idadeMin: "≥ 9 meses (doença falciforme, PCDT)" },
+    adulto: "Doença falciforme: 15 mg/kg/dia VO, aumentando 5 mg/kg/dia a cada 8 semanas até dose máxima tolerada (35 mg/kg/dia)",
+    renal: [{ abaixo: 60, texto: "Reduzir a dose inicial em 50%." }],
+    gestacao: { nivel: "contraindicado", texto: "Teratogênica: contracepção eficaz; suspender antes de engravidar." },
+    alergia: [], contra: ["Mielossupressão: hemograma a cada 2–4 semanas no ajuste (neutrófilos > 2.000, plaquetas > 80 mil)", "Úlceras de perna, hiperpigmentação de unhas", "Contracepção para homens e mulheres", "Componente Especializado: LME e PCDT"],
+    prescrever: [
+      { contexto: "Doença falciforme (ex.: 70 kg)", texto: "USO ORAL\n1. Hidroxiureia 500 mg ----------------------------- 60 cápsulas\n   Tomar 2 cápsulas (1 g ≈ 15 mg/kg) 1 vez ao dia, todos os dias.\n   (Hemograma a cada 2–4 semanas; aumentar 5 mg/kg/dia a cada 8 semanas, conforme PCDT.)" }
+    ] },
+  { id: "talidomida", nomes: ["Talidomida"], classe: "imunologia", receita: "C1", tags: ["sedativo"],
+    usos: "Eritema nodoso hansênico (reação tipo 2); mieloma múltiplo; lúpus cutâneo e aftas graves (protocolos específicos)",
+    adulto: "Eritema nodoso hansênico: 100–400 mg VO à noite, conforme gravidade, com redução gradual",
+    renal: [],
+    gestacao: { nivel: "contraindicado", texto: "Teratógeno potente (focomelia): proibida na gestação; mulheres em idade fértil só com 2 métodos contraceptivos e β-hCG negativo." },
+    alergia: [], contra: ["Talidomida: Notificação de Receita específica (lista C3, RDC 11/2011) + termo de responsabilidade/esclarecimento", "Mulher em idade fértil: 2 métodos contraceptivos (um de alta eficácia) desde 4 semanas antes até 4 semanas após", "Neuropatia periférica, TEV (profilaxia no mieloma), sonolência, constipação", "Homens: preservativo (passa ao sêmen)"],
+    prescrever: [
+      { contexto: "Eritema nodoso hansênico", texto: "Notificação de Receita de Talidomida + Termo de Responsabilidade/Esclarecimento\nUSO ORAL\n1. Talidomida 100 mg ------------------------------ 30 (trinta) comprimidos\n   Tomar 1 a 3 comprimidos à noite, conforme orientação, com redução gradual.\n   (Dose e duração conforme PCDT de hanseníase; contracepção dupla obrigatória em mulheres em idade fértil.)" }
+    ] },
+  { id: "imunoglobulina-humana-iv", nomes: ["Imunoglobulina humana intravenosa", "imunoglobulina humana", "IGIV", "IVIG"], classe: "imunologia", receita: "hospitalar", tags: [],
+    usos: "Doença de Kawasaki, PTI grave, síndrome de Guillain-Barré, miastenia (crise), imunodeficiências primárias",
+    adulto: "Kawasaki: 2 g/kg em 10–12 h · PTI: 1 g/kg/dia por 1–2 dias · SGB: 0,4 g/kg/dia por 5 dias · reposição: 0,4–0,6 g/kg a cada 3–4 semanas",
+    renal: [{ abaixo: 50, texto: "Risco de LRA (sobretudo preparações com sacarose): infusão mais lenta e hidratação." }],
+    gestacao: { nivel: "compativel", texto: "Pode ser usada quando indicada." },
+    alergia: [], contra: ["Deficiência de IgA com anticorpo anti-IgA (anafilaxia)", "Reações à infusão: iniciar lento e aumentar; pré-medicação conforme protocolo", "Trombose (idoso, hiperviscosidade), meningite asséptica, hemólise", "Adiar vacinas vivas por meses após o uso"],
+    prescrever: [
+      { contexto: "Doença de Kawasaki", texto: "Imunoglobulina humana IV — 2 g/kg IV em dose única, em 10–12 h, em bomba de infusão (iniciar lento e aumentar conforme bula).\nAssociar AAS conforme protocolo. Sinais vitais a cada 15 min na 1ª hora." },
+      { contexto: "Síndrome de Guillain-Barré", texto: "Imunoglobulina humana IV — 0,4 g/kg/dia IV por 5 dias, velocidade conforme bula.\nMonitorar capacidade vital e função autonômica." }
+    ] },
+  { id: "anti-tnf", nomes: ["Adalimumabe", "infliximabe", "etanercepte", "anti-TNF", "humira", "remicade", "enbrel"], classe: "imunologia", receita: "simples", tags: [],
+    usos: "Artrite reumatoide, espondiloartrites, artrite psoriásica, psoríase, doença de Crohn e RCU, AIJ (Componente Especializado — PCDT)",
+    adulto: "Adalimumabe 40 mg SC a cada 14 dias · etanercepte 50 mg SC semanal · infliximabe 5 mg/kg IV nas semanas 0, 2 e 6 e depois a cada 8 semanas",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Pode ser mantido em parte da gestação com especialista; RN exposto não recebe vacinas vivas (BCG, rotavírus) até 6 meses (infliximabe/adalimumabe)." },
+    alergia: [], contra: ["Rastrear TB latente (PPD/IGRA + RX) antes; tratar ILTB", "Hepatite B e C, HIV antes de iniciar", "Infecção ativa grave; vacinas vivas contraindicadas", "IC classe III–IV, doença desmielinizante", "Dispensação pelo Componente Especializado: LME + receita + exames do PCDT"],
+    prescrever: [
+      { contexto: "Componente Especializado (LME) — modelo informativo", texto: "Laudo para Solicitação, Avaliação e Autorização de Medicamentos (LME) + receita + exames exigidos pelo PCDT (PPD/IGRA, RX de tórax, HBsAg, anti-HCV, anti-HIV, hemograma, TGO/TGP).\nUSO SUBCUTÂNEO\n1. Adalimumabe 40 mg seringa preenchida ------------------ 2 seringas\n   Aplicar 1 seringa (40 mg) no subcutâneo a cada 14 dias.\n(Medicamento e posologia conforme PCDT da doença e prescrição do especialista.)" }
+    ] },
+  { id: "omalizumabe", nomes: ["Omalizumabe", "xolair"], classe: "imunologia", receita: "simples", tags: [],
+    usos: "Asma alérgica grave não controlada (Componente Especializado/PCDT); urticária crônica espontânea refratária a anti-histamínico em dose alta",
+    adulto: "Asma: 75–600 mg SC a cada 2 ou 4 semanas conforme IgE total e peso (tabela da bula) · urticária crônica: 300 mg SC a cada 4 semanas",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Dados de registro sem aumento de malformações; manter se benefício claro." },
+    alergia: [], contra: ["Anafilaxia (inclusive tardia): observar após as primeiras doses em serviço com adrenalina", "Não trata crise aguda", "Parasitoses intestinais em áreas endêmicas", "Asma: dispensação via LME/Componente Especializado"],
+    prescrever: [
+      { contexto: "Urticária crônica espontânea refratária", texto: "USO SUBCUTÂNEO\n1. Omalizumabe 150 mg ------------------------------ 2 seringas/frascos\n   Aplicar 300 mg (2 × 150 mg) no subcutâneo a cada 4 semanas, em serviço de saúde.\n   Observar 2 h nas 3 primeiras aplicações (30 min nas seguintes)." }
+    ] },
+  { id: "dupilumabe", nomes: ["Dupilumabe", "dupixent"], classe: "imunologia", receita: "simples", tags: [],
+    usos: "Dermatite atópica moderada a grave, asma grave eosinofílica/T2, rinossinusite crônica com pólipos (especialista)",
+    adulto: "Dermatite atópica: 600 mg SC (ataque) e depois 300 mg a cada 14 dias · asma: 400 mg e depois 200 mg a cada 14 dias (ou 600/300)",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Dados limitados; usar se benefício claro." },
+    alergia: [], contra: ["Conjuntivite e ceratite (frequentes)", "Tratar helmintíase antes", "Eosinofilia transitória", "Vacinas vivas contraindicadas", "Disponibilidade no SUS: conferir incorporação/PCDT vigente"],
+    prescrever: [
+      { contexto: "Dermatite atópica moderada a grave (adulto)", texto: "USO SUBCUTÂNEO\n1. Dupilumabe 300 mg seringa preenchida -------------- 4 seringas\n   Aplicar 2 seringas (600 mg) no subcutâneo na 1ª dose;\n   depois, 1 seringa (300 mg) a cada 14 dias." }
+    ] },
+
+  /* ---------- tabagismo ---------- */
+  { id: "nicotina-adesivo", nomes: ["Nicotina adesivo", "adesivo de nicotina", "terapia de reposição de nicotina", "TRN", "niquitin", "nicotinell"], classe: "diversos", receita: "simples", tags: [],
+    usos: "Cessação do tabagismo (PNCT/SUS), associada à abordagem cognitivo-comportamental; pode combinar com goma/pastilha e bupropiona",
+    adulto: "> 20 cig/dia: 21 mg/dia por 4 sem → 14 mg por 4 sem → 7 mg por 4 sem · 10–20 cig/dia: iniciar em 14 mg",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Preferir abordagem comportamental; TRN pode ser considerada se falhar (menos danosa que fumar), de preferência formas intermitentes." },
+    alergia: [], contra: ["IAM, arritmia grave ou AVC recentes (2 semanas): avaliar caso a caso", "Dermatite no local: trocar o local diariamente", "Insônia/pesadelos: retirar o adesivo à noite", "Não fumar usando o adesivo"],
+    prescrever: [
+      { contexto: "Fumante > 20 cigarros/dia (PNCT)", texto: "USO TRANSDÉRMICO\n1. Nicotina adesivo 21 mg ------------------------ 28 adesivos\n2. Nicotina adesivo 14 mg ------------------------ 28 adesivos\n3. Nicotina adesivo 7 mg ------------------------- 28 adesivos\n   Semanas 1–4: aplicar 1 adesivo de 21 mg por dia, ao acordar, em pele sem pelos (trocar o local a cada dia).\n   Semanas 5–8: 1 adesivo de 14 mg por dia. Semanas 9–12: 1 adesivo de 7 mg por dia.\n   Parar de fumar no dia de início." },
+      { contexto: "Fumante 10–20 cigarros/dia (PNCT)", texto: "USO TRANSDÉRMICO\n1. Nicotina adesivo 14 mg ------------------------ 28 adesivos\n2. Nicotina adesivo 7 mg ------------------------- 28 adesivos\n   Semanas 1–4: aplicar 1 adesivo de 14 mg por dia, ao acordar (trocar o local a cada dia).\n   Semanas 5–8: 1 adesivo de 7 mg por dia." }
+    ] },
+  { id: "nicotina-goma-pastilha", nomes: ["Nicotina goma", "goma de nicotina", "nicotina pastilha", "pastilha de nicotina", "nicorette"], classe: "diversos", receita: "simples", tags: [],
+    usos: "Cessação do tabagismo (PNCT/SUS): alívio da fissura, isolada ou associada ao adesivo",
+    adulto: "Goma ou pastilha 2 mg: 1 unidade na fissura, até a cada 1–2 h; reduzir gradualmente em 12 semanas (máximo diário conforme bula)",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Forma intermitente é preferível ao adesivo se TRN for usada na gestação." },
+    alergia: [], contra: ["Goma: problemas de ATM/prótese dentária", "Técnica: mastigar até sentir sabor/formigamento e 'estacionar' entre a bochecha e a gengiva; pastilha: deixar dissolver, sem mastigar", "Não comer nem beber (café, refrigerante) 15 min antes e durante o uso", "Soluço, náusea e irritação de garganta"],
+    prescrever: [
+      { contexto: "Fissura (isolada ou com adesivo)", texto: "USO ORAL\n1. Nicotina goma de mascar 2 mg (ou pastilha 2 mg) ---------- 1 caixa\n   Se vontade forte de fumar: mascar 1 goma devagar até sentir o sabor, deixar parada entre a bochecha e a gengiva e repetir por cerca de 30 minutos.\n   Usar até a cada 1–2 horas, reduzindo ao longo de 12 semanas." }
+    ] },
 ]);
