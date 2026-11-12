@@ -19,3 +19,4 @@ Carregados só quando a tela Receituário gera a pré-visualização ou o PDF; t
 | `jspdf/` | jsPDF | 2.5.2 | MIT |
 | `fontes/` | Libre Baskerville (subconjunto latino) | Google Fonts | SIL Open Font License 1.1 |
 | `fontes/` | Montserrat (subconjunto latino) | Google Fonts | SIL Open Font License 1.1 |
+| `fontes/` | EB Garamond (subconjunto latino) | Google Fonts | SIL Open Font License 1.1 |

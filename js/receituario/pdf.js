@@ -1,11 +1,18 @@
 /* Receituário — geração do PDF no timbrado (jsPDF, no próprio aparelho) e pré-visualização (pdf.js).
-   Fontes: Libre Baskerville e Montserrat (SIL Open Font License), em vendor/fontes. */
+   Fontes: Libre Baskerville, EB Garamond e Montserrat (SIL Open Font License), em vendor/fontes. */
 
-const RXP_COR = { marrom: "#5B392D", rose: "#BC917F", linha: "#B88A78", rodape: "#91695B", assinatura: "#E2CDC3", texto: "#3B2A24", cinza: "#7A6A64" };
+/* Cores e medidas (mm) copiadas do modelo de timbrado da médica (A4). */
+const RXP_COR = { marrom: "#5B392D", marrom2: "#5C3D30", rose: "#BC917F", linha: "#B88A78", rodape: "#5C3D30", assinatura: "#AD8F85", texto: "#000000", cinza: "#7A6A64" };
+const RXP = {
+  lm: { y: 37.9, tam: 37.3 }, nome: { y: 51.3, tam: 16.35 }, prof: { y: 58.35, tam: 10, sub: 58.7 }, crm: { y: 63.25, tam: 9.73 },
+  pac: { y: 72.45, x: 17.2, xd: 184.1, tam: 12 }, regua: { y: 74.3, x1: 9.7, x2: 200.1 },
+  titulo: { y: 85.45 }, corpo: { y: 99.95, x: 30, larg: 150, passo: 5.5, paragrafo: 1.7, tam: 12 },
+  ass: { y: 240.9, x1: 121.8, x2: 181.2, cx: 151.5 }, rod: { linhaY: 278.2, x1: 56, x2: 154, y: 283.05, tam: 8 }
+};
 const RX_URL = p => new URL(p, document.baseURI).href;
 const RX_FONTES = [
-  ["LibreBaskerville_400Regular.ttf", "Baskerville", "normal"], ["LibreBaskerville_400Regular_Italic.ttf", "Baskerville", "italic"],
-  ["LibreBaskerville_700Bold.ttf", "Baskerville", "bold"], ["Montserrat_400Regular.ttf", "Montserrat", "normal"],
+  ["EBGaramond_400Regular.ttf", "Garamond", "normal"], ["EBGaramond_400Regular_Italic.ttf", "Garamond", "italic"], ["EBGaramond_600SemiBold.ttf", "Garamond", "bold"],
+  ["LibreBaskerville_400Regular.ttf", "Baskerville", "normal"], ["Montserrat_400Regular.ttf", "Montserrat", "normal"],
   ["Montserrat_400Regular_Italic.ttf", "Montserrat", "italic"], ["Montserrat_500Medium.ttf", "Montserrat", "medium"], ["Montserrat_600SemiBold.ttf", "Montserrat", "bold"]
 ];
 let rxJsPdf = null, rxFontesB64 = null;
@@ -53,41 +60,41 @@ async function rxGerarPdf(est, tim) {
   function novaPagina() { if (ctx.primeira) ctx.primeira = false; else pdf.addPage(); }
   function cabecalho(rotulo, extraPaciente) {
     let y = 12;
-    if (rotulo) { fonte("Baskerville", "normal", 8.5, RXP_COR.marrom); pdf.splitTextToSize(rotulo, 180).forEach(l => { pdf.text(l, 15, y); y += 4; }); }
-    fonte("Baskerville", "normal", 42, RXP_COR.rose); centro(tim.monograma || "", 33);
-    fonte("Baskerville", "normal", 17, RXP_COR.marrom); centro(rxEspacar(tim.nomeTimbrado), 44);
-    fonte("Montserrat", "medium", 8.5, RXP_COR.texto); const prof = rxEspacar(tim.profissao); centro(prof, 50);
-    const wp = pdf.getTextWidth(prof); linha(W / 2 - wp / 2, 51, W / 2 + wp / 2, RXP_COR.texto, 0.2);
-    fonte("Montserrat", "normal", 8.5, RXP_COR.texto); centro(rxEspacar([tim.crm, tim.rqe ? `RQE ${tim.rqe}` : ""].filter(Boolean).join("  ·  ")), 55.5);
-    if (est.documentoLivre) return 64;
-    /* Linha do paciente */
-    fonte("Baskerville", "normal", 11, RXP_COR.marrom);
-    pdf.text(`Paciente: ${est.paciente || ""}`, 18, 66, { maxWidth: 130 });
-    const dt = `Data: ${rxDataBR(est.data) || "___/___/______"}`;
-    pdf.text(dt, 192 - pdf.getTextWidth(dt), 66);
-    linha(15, 68, 195, RXP_COR.linha, 0.35);
-    let yb = 68;
+    if (rotulo) { fonte("Garamond", "normal", 9.5, RXP_COR.marrom); pdf.splitTextToSize(rotulo, 180).forEach(l => { pdf.text(l, 15, y); y += 4; }); }
+    fonte("Baskerville", "normal", RXP.lm.tam, RXP_COR.rose); centro(tim.monograma || "", RXP.lm.y);
+    fonte("Baskerville", "normal", RXP.nome.tam, RXP_COR.marrom); centro(rxEspacar(tim.nomeTimbrado), RXP.nome.y);
+    fonte("Montserrat", "normal", RXP.prof.tam, "#000000"); const prof = rxEspacar(tim.profissao); centro(prof, RXP.prof.y);
+    const wp = pdf.getTextWidth(prof); linha(W / 2 - wp / 2, RXP.prof.sub, W / 2 + wp / 2, "#000000", 0.18);
+    fonte("Montserrat", "normal", RXP.crm.tam, RXP_COR.marrom2); centro(rxEspacar([tim.crm, tim.rqe ? `RQE ${tim.rqe}` : ""].filter(Boolean).join("  ·  ")), RXP.crm.y);
+    /* Linha do paciente e data */
+    fonte("Garamond", "normal", RXP.pac.tam, RXP_COR.marrom2);
+    pdf.text(`Paciente: ${est.paciente || ""}`, RXP.pac.x, RXP.pac.y, { maxWidth: 125 });
+    const dt = `Data: ${rxDataBR(est.data) || "____/____/______"}`;
+    pdf.text(dt, RXP.pac.xd - pdf.getTextWidth(dt), RXP.pac.y);
+    linha(RXP.regua.x1, RXP.regua.y, RXP.regua.x2, RXP_COR.linha, 0.25);
+    let yb = RXP.regua.y;
     if (extraPaciente && extraPaciente.length) {
-      fonte("Baskerville", "normal", 9.5, RXP_COR.marrom);
-      for (const l of extraPaciente) { yb += 5.5; pdf.text(l, 18, yb, { maxWidth: 174 }); }
-      yb += 2; linha(15, yb, 195, RXP_COR.linha, 0.2);
+      fonte("Garamond", "normal", 11, RXP_COR.marrom2);
+      for (const l of extraPaciente) { yb += 5.5; pdf.text(l, RXP.pac.x, yb, { maxWidth: 180 }); }
+      yb += 2; linha(RXP.regua.x1, yb, RXP.regua.x2, RXP_COR.linha, 0.15);
     }
     return yb + 9;
   }
   function rodape() {
     const partes = [tim.telefone, tim.email, tim.cidade].filter(Boolean);
     if (!partes.length && !tim.endereco) return;
-    linha(55, 281, 155, RXP_COR.assinatura, 0.3);
-    fonte("Montserrat", "normal", 7.5, RXP_COR.rodape);
-    centro(partes.join("     |     "), 285.5);
-    if (tim.endereco) centro(tim.endereco, 289.5);
+    linha(RXP.rod.x1, RXP.rod.linhaY, RXP.rod.x2, RXP_COR.linha, 0.25);
+    fonte("Montserrat", "normal", RXP.rod.tam, RXP_COR.rodape);
+    if (partes.length) centro(partes.join("     |     "), RXP.rod.y);
+    if (tim.endereco) centro(tim.endereco, RXP.rod.y + (partes.length ? 4 : 0));
   }
   function assinatura(y, digital) {
-    linha(118, y, 186, RXP_COR.assinatura, 0.3);
-    if (digital) { fonte("Montserrat", "normal", 6.5, RXP_COR.cinza); const t = "Assinado digitalmente (ICP-Brasil)"; pdf.text(t, 152 - pdf.getTextWidth(t) / 2, y - 1.5); }
-    fonte("Montserrat", "italic", 11, RXP_COR.marrom); let t = tim.nomeCompleto || tim.nomeTimbrado || ""; pdf.text(t, 152 - pdf.getTextWidth(t) / 2, y + 5.5);
-    fonte("Baskerville", "normal", 8.5, RXP_COR.marrom); t = tim.profissao || ""; pdf.text(t, 152 - pdf.getTextWidth(t) / 2, y + 10);
-    t = [tim.crm, tim.rqe ? `RQE ${tim.rqe}` : ""].filter(Boolean).join(" · "); pdf.text(t, 152 - pdf.getTextWidth(t) / 2, y + 14);
+    const cx = RXP.ass.cx, c = t => pdf.text(t, cx - pdf.getTextWidth(t) / 2, pdf.__y);
+    linha(RXP.ass.x1, y, RXP.ass.x2, RXP_COR.assinatura, 0.17);
+    if (digital) { fonte("Montserrat", "normal", 6.5, RXP_COR.cinza); pdf.__y = y - 1.5; c("Assinado digitalmente (ICP-Brasil)"); }
+    fonte("Garamond", "italic", 13, RXP_COR.marrom2); pdf.__y = y + 8.6; c(tim.nomeCompleto || tim.nomeTimbrado || "");
+    fonte("Garamond", "normal", 9.5, RXP_COR.marrom2); pdf.__y = y + 13.75; c(tim.profissao || "");
+    fonte("Garamond", "normal", 9, RXP_COR.marrom2); pdf.__y = y + 18; c([tim.crm, tim.rqe ? `RQE ${tim.rqe}` : ""].filter(Boolean).join(" · "));
   }
 
   /* Blocos do corpo: medem e desenham, com quebra de página. */
@@ -110,20 +117,20 @@ async function rxGerarPdf(est, tim) {
   }
   function medir(b) {
     if (b.t === "via") return 8;
-    if (b.t === "par") { fonte("Baskerville", "normal", 10.5); return 6 + pdf.splitTextToSize(b.txt, 145).length * 5 + 3; }
-    fonte("Baskerville", "normal", 11.5); const wq = b.qtd ? pdf.getTextWidth(b.qtd) + 8 : 0;
+    if (b.t === "par") { fonte("Garamond", "normal", 11.5); return 6 + pdf.splitTextToSize(b.txt, 145).length * 5 + 3; }
+    fonte("Garamond", "normal", 12); const wq = b.qtd ? pdf.getTextWidth(b.qtd) + 8 : 0;
     b._nome = pdf.splitTextToSize(b.nome, 140 - wq);
-    fonte("Baskerville", "normal", 10.5); b._pos = b.pos ? pdf.splitTextToSize(b.pos, 136) : [];
+    fonte("Garamond", "normal", 11.5); b._pos = b.pos ? pdf.splitTextToSize(b.pos, 136) : [];
     return b._nome.length * 5.5 + b._pos.length * 5 + 4;
   }
   function desenhar(b, y) {
-    if (b.t === "via") { fonte("Baskerville", "bold", 10.5, RXP_COR.marrom); pdf.text(b.txt, 30, y); return y + 8; }
+    if (b.t === "via") { fonte("Garamond", "bold", 12, RXP_COR.marrom2); pdf.text(b.txt, 30, y); return y + 8; }
     if (b.t === "par") {
       fonte("Montserrat", "bold", 8.5, RXP_COR.marrom); pdf.text(b.tit.toUpperCase(), 30, y); y += 5.5;
-      fonte("Baskerville", "normal", 10.5, RXP_COR.texto); pdf.splitTextToSize(b.txt, 145).forEach(l => { pdf.text(l, 30, y); y += 5; });
+      fonte("Garamond", "normal", 11.5, RXP_COR.texto); pdf.splitTextToSize(b.txt, 145).forEach(l => { pdf.text(l, 30, y); y += 5; });
       return y + 3;
     }
-    fonte("Baskerville", "normal", 11.5, RXP_COR.texto);
+    fonte("Garamond", "normal", 12, RXP_COR.texto);
     pdf.text(`${b.n}.`, 34, y);
     b._nome.forEach((l, i) => pdf.text(l, 40, y + i * 5.5));
     if (b.qtd) {
@@ -135,7 +142,7 @@ async function rxGerarPdf(est, tim) {
       pdf.setLineDashPattern([], 0);
     }
     y += b._nome.length * 5.5;
-    fonte("Baskerville", "normal", 10.5, RXP_COR.texto);
+    fonte("Garamond", "normal", 11.5, RXP_COR.texto);
     b._pos.forEach(l => { pdf.text(l, 40, y); y += 5; });
     return y + 4;
   }
@@ -145,17 +152,18 @@ async function rxGerarPdf(est, tim) {
     if (opc.endereco) extra.push(`Endereço: ${est.endereco || "_______________________________________________"}`);
     if (opc.idadeSexo) extra.push(`Idade: ${est.idade || "_____"}     Sexo: ${est.sexo === "F" ? "feminino" : est.sexo === "M" ? "masculino" : "_____"}${est.documento ? `     Documento: ${est.documento}` : ""}`);
     else if (opc.documento && est.documento) extra.push(`Documento: ${est.documento}`);
-    const limite = opc.caixas ? 168 : 252;
+    const limite = opc.caixas ? 168 : 228;
     novaPagina(); let y = cabecalho(rotulo, extra);
     for (const b of blocos(d, opc.extenso)) {
       const h = medir(b);
       if (y + h > limite) { rodape(); novaPagina(); y = cabecalho(rotulo ? rotulo + " (continuação)" : "(continuação)", extra); }
       y = desenhar(b, y);
     }
-    let ys = Math.max(y + 14, opc.caixas ? 158 : 205);
-    if (ys > limite + 12) { rodape(); novaPagina(); cabecalho(rotulo, extra); ys = opc.caixas ? 158 : 205; }
+    const yFixo = opc.caixas ? 158 : RXP.ass.y;
+    let ys = Math.max(y + 12, yFixo);
+    if (ys > yFixo + 0.1) { rodape(); novaPagina(); cabecalho(rotulo ? rotulo + " (continuação)" : "", extra); ys = yFixo; }
     assinatura(ys, opc.digital);
-    if (opc.validade) { fonte("Montserrat", "normal", 7.5, RXP_COR.cinza); pdf.text(opc.validade, 30, ys + 14); }
+    if (opc.validade) { fonte("Montserrat", "normal", 7.5, RXP_COR.cinza); pdf.text(opc.validade, 30, ys + 22); }
     if (opc.caixas) caixas();
     rodape();
   }
@@ -163,14 +171,14 @@ async function rxGerarPdf(est, tim) {
     /* Identificação do comprador e do fornecedor (Portaria 344/1998). */
     const x = 18, w = 174; let y = 186;
     pdf.setDrawColor(RXP_COR.marrom); pdf.setLineWidth(0.3); pdf.rect(x, y, w, 46);
-    fonte("Baskerville", "bold", 8.5, RXP_COR.marrom); centro("IDENTIFICAÇÃO DO COMPRADOR", y + 5);
+    fonte("Garamond", "bold", 9.5, RXP_COR.marrom); centro("IDENTIFICAÇÃO DO COMPRADOR", y + 5);
     linha(x, y + 7, x + w, RXP_COR.marrom, 0.2);
-    fonte("Baskerville", "normal", 8.5, RXP_COR.marrom);
+    fonte("Garamond", "normal", 9.5, RXP_COR.marrom);
     const lin = [["Nome:"], ["Identidade:", "Órgão emissor:"], ["Endereço:", "Telefone:"], ["Cidade:", "UF:"]];
     lin.forEach((l, i) => { const yy = y + 13 + i * 9; pdf.text(l[0], x + 2, yy); if (l[1]) pdf.text(l[1], x + 105, yy); if (i < 3) linha(x, yy + 3.5, x + w, RXP_COR.linha, 0.15); });
     y = 240;
-    fonte("Baskerville", "bold", 8.5, RXP_COR.marrom); pdf.text("IDENTIFICAÇÃO DO FORNECEDOR", x, y);
-    linha(x, y + 17, x + 70, RXP_COR.assinatura, 0.3); fonte("Baskerville", "normal", 8.5, RXP_COR.marrom); pdf.text("Assinatura do farmacêutico", x + 12, y + 21.5);
+    fonte("Garamond", "bold", 9.5, RXP_COR.marrom); pdf.text("IDENTIFICAÇÃO DO FORNECEDOR", x, y);
+    linha(x, y + 17, x + 70, RXP_COR.assinatura, 0.3); fonte("Garamond", "normal", 9.5, RXP_COR.marrom); pdf.text("Assinatura do farmacêutico", x + 12, y + 21.5);
     pdf.text("Data de fornecimento: ____/____/______", x + 100, y + 17);
   }
   function roteiro(d, nomeNotif) {
@@ -188,7 +196,7 @@ async function rxGerarPdf(est, tim) {
     campos.push(["Prescritor", `${tim.nomeCompleto || ""} — ${tim.crm || ""}`], ["Endereço do prescritor", tim.endereco || tim.cidade || ""]);
     for (const [r, v] of campos) {
       fonte("Montserrat", "bold", 8, RXP_COR.marrom); pdf.text(r.toUpperCase(), 18, y); y += 4.5;
-      fonte("Baskerville", "normal", 10.5, RXP_COR.texto); const ls = pdf.splitTextToSize(v || "—", 174); ls.forEach(l => { pdf.text(l, 18, y); y += 5; });
+      fonte("Garamond", "normal", 11.5, RXP_COR.texto); const ls = pdf.splitTextToSize(v || "—", 174); ls.forEach(l => { pdf.text(l, 18, y); y += 5; });
       linha(18, y - 2.5, 192, RXP_COR.assinatura, 0.15); y += 2.5;
       if (y > 275) { novaPagina(); y = 20; }
     }
@@ -196,22 +204,26 @@ async function rxGerarPdf(est, tim) {
 
   /* Documento de texto livre (atestado, declaração, encaminhamento...) no timbrado. */
   if (est.documentoLivre) {
-    const { titulo, corpo, local } = est.documentoLivre;
-    novaPagina(); let y = cabecalho("", []);
-    if (titulo) { fonte("Baskerville", "bold", 13, RXP_COR.marrom); centro(titulo, y + 4); y += 14; }
-    const quebra = () => { if (y > 252) { rodape(); novaPagina(); y = cabecalho("(continuação)", []); } };
+    const { titulo, corpo } = est.documentoLivre;
+    const C = RXP.corpo;
+    novaPagina(); cabecalho("", []);
+    if (titulo) { fonte("Garamond", "normal", 12, RXP_COR.marrom2); centro(titulo, RXP.titulo.y); }
+    let y = titulo ? C.y : RXP.titulo.y;
+    const quebra = () => { if (y > 266) { rodape(); novaPagina(); cabecalho("(continuação)", []); y = RXP.titulo.y; } };
+    let vazio = false;
     for (const bruta of String(corpo || "").replace(/\n{3,}/g, "\n\n").trim().split("\n")) {
-      if (!bruta.trim()) { y += 3.5; continue; }
+      /* Como no Word: cada linha é um parágrafo com espaço depois; linha em branco = parágrafo vazio. */
+      if (!bruta.trim()) { if (!vazio) y += C.passo; vazio = true; continue; }
+      vazio = false;
       const titLinha = bruta === bruta.toUpperCase() && /[A-ZÁÉÍÓÚÇ]{3}/.test(bruta) && bruta.length < 70;
-      fonte("Baskerville", titLinha ? "bold" : "normal", titLinha ? 10 : 11, titLinha ? RXP_COR.marrom : RXP_COR.texto);
+      fonte("Garamond", titLinha ? "bold" : "normal", C.tam, titLinha ? RXP_COR.marrom2 : RXP_COR.texto);
       const recuo = (bruta.match(/^\s*/)[0].length ? 5 : 0);
-      for (const l of pdf.splitTextToSize(bruta.trim(), 152 - recuo)) { quebra(); pdf.text(l, 29 + recuo, y); y += titLinha ? 5.5 : 5.6; }
-      if (titLinha) y += 0.5;
+      for (const l of pdf.splitTextToSize(bruta.trim(), C.larg - recuo)) { quebra(); pdf.text(l, C.x + recuo, y); y += C.passo; }
+      y += C.paragrafo;
     }
-    let ys = Math.max(y + 22, 205);
-    if (ys > 262) { rodape(); novaPagina(); cabecalho("(continuação)", []); ys = 110; }
-    if (local) { fonte("Baskerville", "normal", 11, RXP_COR.texto); pdf.text(local, 186 - pdf.getTextWidth(local), ys - 12); }
-    assinatura(ys);
+    /* Assinatura sempre no mesmo lugar do modelo; se o texto passar, vai para a página seguinte. */
+    if (y > RXP.ass.y - 12) { rodape(); novaPagina(); cabecalho("(continuação)", []); }
+    assinatura(RXP.ass.y);
     rodape();
     return pdf;
   }

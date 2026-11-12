@@ -426,7 +426,7 @@ function telaDocumentos(docId, contexto = {}) {
       if (texto.endsWith(ass)) { texto = texto.slice(0, -ass.length).trim(); local = ass.split("\n")[0]; }
       const linhas = texto.split("\n");
       const titulo = linhas[0] === linhas[0].toUpperCase() ? linhas.shift().trim() : doc.titulo.toUpperCase();
-      const pdf = await rxGerarPdf({ documentoLivre: { titulo, corpo: linhas.join("\n"), local }, itens: [], tipo: "simples" }, rxTimbrado());
+      const pdf = await rxGerarPdf({ documentoLivre: { titulo, corpo: linhas.join("\n") }, paciente: valores.paciente || "", data: valores.data || hojeISO(), itens: [], tipo: "simples" }, rxTimbrado());
       const nome = `${doc.id}-${normalizar(valores.paciente || "paciente").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").split("-").slice(0, 2).join("-") || "paciente"}-${valores.data || hojeISO()}.pdf`;
       if (janela) { janela.location.href = pdf.output("bloburl"); st.textContent = "PDF aberto em nova aba."; }
       else { pdf.save(nome); st.textContent = `PDF salvo: ${nome}`; }
