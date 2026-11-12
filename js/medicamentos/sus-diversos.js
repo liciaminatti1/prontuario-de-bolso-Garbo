@@ -552,4 +552,215 @@ adicionarMedicamentos([
     prescrever: [
       { contexto: "Acidente por Lonomia com coagulopatia", texto: "Soro antilonômico — ___ ampolas IV (moderado 5 / grave 10) em 20–60 min.\nTC antes e 12–24 h após. Conforme Guia de Animais Peçonhentos do MS/CIATox (0800 722 6001)." }
     ] },
+
+  /* ---------- tétano e raiva ---------- */
+  { id: "vacina-dt", nomes: ["Vacina dupla adulto (dT)", "vacina dT", "vacina antitetânica", "dupla adulto", "dTpa"], classe: "imunologia", receita: "simples", tags: [],
+    usos: "Profilaxia do tétano em ferimentos e vacinação de rotina do adulto (reforço a cada 10 anos); dTpa na gestação",
+    adulto: "0,5 mL IM no deltoide; esquema básico 3 doses (0, 60 e 120 dias) e reforço a cada 10 anos",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Gestante: dTpa a partir de 20 semanas em toda gestação (completar esquema com dT se necessário)." },
+    alergia: [], contra: ["Anafilaxia a dose anterior", "Ferimento: reforço se última dose > 5 anos (alto risco) ou > 10 anos (baixo risco)", "Registrar na caderneta e no sistema de informação"],
+    prescrever: [
+      { contexto: "Ferimento — profilaxia do tétano", texto: "USO INTRAMUSCULAR\n1. Vacina dupla adulto (dT) ----------------------- 1 dose\n   Aplicar 0,5 mL IM no deltoide, na sala de vacina.\n   (Vacinação incompleta/desconhecida: iniciar ou completar 3 doses; ferimento de alto risco nessa situação: associar imunoglobulina antitetânica.)" }
+    ] },
+  { id: "imunoglobulina-antitetanica", nomes: ["Imunoglobulina humana antitetânica", "IGHAT", "soro antitetânico", "SAT"], classe: "imunologia", receita: "hospitalar", tags: [],
+    usos: "Ferimento de alto risco para tétano em pessoa com vacinação incompleta ou desconhecida; tratamento do tétano",
+    adulto: "Profilaxia: IGHAT 250 UI IM (ou SAT 5.000 UI IM) · tratamento do tétano: IGHAT 3.000–6.000 UI IM (ou SAT 20.000 UI IV)",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Pode e deve ser usada quando indicada." },
+    alergia: [], contra: ["IGHAT é preferida (menos reações); SAT (heterólogo): risco de anafilaxia e doença do soro", "Aplicar em local diferente da vacina", "Limpeza e desbridamento do ferimento são essenciais"],
+    prescrever: [
+      { contexto: "Profilaxia — ferimento de alto risco", texto: "Imunoglobulina humana antitetânica (IGHAT) — 250 UI IM, dose única, em grupo muscular diferente da vacina dT.\n(Na falta: soro antitetânico 5.000 UI IM, em serviço com suporte para anafilaxia.)" },
+      { contexto: "Tratamento do tétano", texto: "Imunoglobulina humana antitetânica — 3.000 a 6.000 UI IM, dividida em 2 grupos musculares, dose única\n(ou soro antitetânico 20.000 UI IV). Associar metronidazol, sedação e suporte em UTI." }
+    ] },
+  { id: "vacina-antirrabica", nomes: ["Vacina antirrábica", "vacina raiva (inativada)", "verorab"], classe: "imunologia", receita: "simples", tags: [],
+    usos: "Profilaxia pós-exposição da raiva (mordedura/arranhadura por cão, gato, morcego e outros mamíferos) e pré-exposição",
+    adulto: "Pós-exposição IM: 4 doses (dias 0, 3, 7 e 14) no deltoide (< 2 anos: vasto lateral); esquema intradérmico conforme nota técnica do MS",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Gestação não contraindica a profilaxia da raiva." },
+    alergia: [], contra: ["Nunca aplicar no glúteo", "Cão/gato observável: conduta conforme protocolo (observar 10 dias)", "Imunodeprimido: esquema específico e sorologia", "Notificar no SINAN (atendimento antirrábico)"],
+    prescrever: [
+      { contexto: "Profilaxia pós-exposição (IM)", texto: "USO INTRAMUSCULAR\n1. Vacina antirrábica (inativada) ------------------- 4 doses\n   Aplicar 1 dose IM no deltoide nos dias 0, 3, 7 e 14, na sala de vacina.\n   Indicação de soro/imunoglobulina e conduta com o animal conforme protocolo do MS." }
+    ] },
+  { id: "imunoglobulina-antirrabica", nomes: ["Imunoglobulina humana antirrábica", "IGHAR", "soro antirrábico", "SAR"], classe: "imunologia", receita: "hospitalar", tags: [],
+    usos: "Profilaxia pós-exposição da raiva em exposição grave (mordedura profunda/múltipla, cabeça, mãos, pés, mucosas; morcego), junto da vacina",
+    adulto: "IGHAR 20 UI/kg (máx 1.500 UI) ou SAR 40 UI/kg (máx 3.000 UI), dose única, infiltrando nas lesões",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Gestação não contraindica." },
+    alergia: [], contra: ["Infiltrar o máximo possível na(s) lesão(ões); restante IM em local diferente da vacina", "Até 7 dias após a 1ª dose da vacina (depois não é indicado)", "SAR (heterólogo): risco de anafilaxia — aplicar em serviço com suporte", "IGHAR: preferir se reação prévia a soro heterólogo ou imunodepressão"],
+    prescrever: [
+      { contexto: "Exposição grave", texto: "Soro antirrábico — 40 UI/kg (máx 3.000 UI) ou Imunoglobulina humana antirrábica — 20 UI/kg (máx 1.500 UI)\ninfiltrados ao redor das lesões; o que sobrar, IM em grupo muscular diferente da vacina. Dose única, junto com a vacina (D0)." }
+    ] },
+
+  /* ---------- anestésicos locais (injetáveis) ---------- */
+  { id: "lidocaina-injetavel", nomes: ["Lidocaína injetável", "lidocaína com epinefrina", "lidocaína sem vasoconstritor", "xylocaína", "xilocaína"], classe: "analgesicos", receita: "hospitalar", tags: [],
+    usos: "Anestesia local infiltrativa e bloqueios (suturas, drenagens, procedimentos); antiarrítmico IV na TV/FV refratária (alternativa à amiodarona)",
+    apres: [{ rotulo: "1% (10 mg/mL)", mgPorMl: 10 }, { rotulo: "2% (20 mg/mL)", mgPorMl: 20 }],
+    adulto: "Anestesia: máx 4,5 mg/kg (300 mg) sem vasoconstritor e 7 mg/kg (500 mg) com · antiarrítmico: 1–1,5 mg/kg IV, depois 0,5–0,75 mg/kg",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Anestesia local é segura na gestação." },
+    alergia: [], contra: ["Toxicidade (zumbido, gosto metálico, perioral, convulsão, arritmia): parar e tratar com emulsão lipídica 20%", "Aspirar antes de injetar (evitar injeção intravascular)", "Com vasoconstritor: evitar em extremidades com circulação comprometida (conduta atual permite em dedos saudáveis) e em cardiopatas graves", "Antiarrítmico: usar solução SEM vasoconstritor"],
+    prescrever: [
+      { contexto: "Anestesia local — sutura", texto: "Lidocaína 1% (ou 2%) sem vasoconstritor — infiltrar ___ mL na borda da ferida com agulha fina, aspirando antes.\nDose máxima: 4,5 mg/kg (1% = 0,45 mL/kg; 2% = 0,22 mL/kg), até 300 mg.\nCom epinefrina 1:200.000: até 7 mg/kg (500 mg)." },
+      { contexto: "PCR — TV/FV refratária", texto: "Lidocaína 2% sem vasoconstritor (20 mg/mL) — 1–1,5 mg/kg IV em bolus (ex.: 70 kg = 100 mg = 5 mL).\nRepetir 0,5–0,75 mg/kg a cada 5–10 min (máx 3 mg/kg). Após o retorno da circulação: 1–4 mg/min IV contínua." }
+    ] },
+  { id: "bupivacaina", nomes: ["Bupivacaína", "bupivacaina", "neocaína", "marcaína", "bupivacaína pesada"], classe: "analgesicos", receita: "hospitalar", tags: [],
+    usos: "Anestesia regional de longa duração: bloqueios periféricos, infiltração de ferida operatória, raquianestesia (solução hiperbárica) e peridural",
+    adulto: "Máx 2 mg/kg (175 mg) sem vasoconstritor e 2,5 mg/kg (225 mg) com vasoconstritor",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Usada em analgesia/anestesia obstétrica (concentração 0,75% contraindicada na peridural obstétrica)." },
+    alergia: [], contra: ["Muito cardiotóxica: injeção intravascular pode causar PCR refratária — emulsão lipídica 20% disponível", "Nunca IV nem em bloqueio de Bier", "Injetar fracionado, aspirando a cada 3–5 mL", "Raquianestesia: usar bupivacaína pesada (hiperbárica) 0,5%"],
+    prescrever: [
+      { contexto: "Infiltração / bloqueio periférico", texto: "Bupivacaína 0,25% (2,5 mg/mL) ou 0,5% (5 mg/mL), com ou sem epinefrina — ___ mL infiltrados/injetados em doses fracionadas, aspirando.\nDose máxima: 2 mg/kg sem vasoconstritor (0,25% = 0,8 mL/kg), até 175 mg." }
+    ] },
+  { id: "ropivacaina", nomes: ["Ropivacaína", "ropivacaina", "naropin"], classe: "analgesicos", receita: "hospitalar", tags: [],
+    usos: "Bloqueios periféricos e peridural (anestesia e analgesia pós-operatória/de parto), com menor cardiotoxicidade e bloqueio motor que a bupivacaína",
+    adulto: "Máx cerca de 3 mg/kg por bolus (≈ 200–225 mg); analgesia peridural contínua 0,2% conforme anestesiologista",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Usada em analgesia de parto." },
+    alergia: [], contra: ["Toxicidade sistêmica (convulsão, arritmia): emulsão lipídica 20%", "Aspirar e injetar fracionado", "Apresentações 2, 7,5 e 10 mg/mL: conferir antes de aspirar"],
+    prescrever: [
+      { contexto: "Bloqueio periférico", texto: "Ropivacaína 0,5%–0,75% (5–7,5 mg/mL) — ___ mL guiados por ultrassom, em doses fracionadas com aspiração.\nDose máxima ≈ 3 mg/kg." }
+    ] },
+  { id: "prilocaina-felipressina", nomes: ["Prilocaína + felipressina", "prilocaína", "prilocaina", "citanest"], classe: "analgesicos", receita: "simples", tags: [],
+    usos: "Anestesia local odontológica (tubetes 1,8 mL), alternativa à lidocaína com epinefrina em cardiopatas e hipertensos",
+    adulto: "Máx cerca de 6 mg/kg (até 400 mg) por sessão — tubete de 1,8 mL a 3% = 54 mg",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Felipressina pode ter efeito ocitócico: preferir lidocaína com epinefrina na gestante." },
+    alergia: [], contra: ["Meta-hemoglobinemia (doses altas, lactentes, deficiência de G6PD, uso de dapsona/nitratos): azul de metileno", "Aspirar antes de injetar"],
+    prescrever: [
+      { contexto: "Odontologia / procedimento", texto: "Prilocaína 3% + felipressina 0,03 UI/mL (tubete 1,8 mL) — ___ tubetes infiltrados, aspirando antes.\nDose máxima ≈ 6 mg/kg (adulto 70 kg: até 7 tubetes)." }
+    ] },
+
+  /* ---------- anti-histamínicos ---------- */
+  { id: "levocetirizina", nomes: ["Levocetirizina", "dicloridrato de levocetirizina", "zyxem"], classe: "anti-histaminicos", receita: "simples", tags: [],
+    usos: "Rinite alérgica, urticária crônica, prurido alérgico (2ª geração, pouco sedativo)",
+    adulto: "5 mg VO 1 vez ao dia (≥ 6 anos)",
+    renal: [{ abaixo: 50, texto: "ClCr 30–49: 5 mg em dias alternados; 10–29: a cada 3 dias; < 10: contraindicada." }],
+    gestacao: { nivel: "cautela", texto: "Dados limitados; preferir loratadina ou cetirizina." },
+    alergia: [], contra: ["Sonolência leve em alguns pacientes", "IR grave (ClCr < 10)", "Pediatria < 6 anos: conferir apresentação e bula"],
+    prescrever: [
+      { contexto: "Adulto e criança ≥ 6 anos", texto: "USO ORAL\n1. Levocetirizina 5 mg -------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, à noite, por 30 dias." }
+    ] },
+  { id: "ebastina", nomes: ["Ebastina", "ebastel"], classe: "anti-histaminicos", receita: "simples", tags: [],
+    usos: "Rinite alérgica e urticária (2ª geração, não sedativo)",
+    adulto: "10–20 mg VO 1 vez ao dia",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Dados limitados; preferir loratadina." },
+    alergia: [], contra: ["Prolongamento de QT com azóis/macrolídeos (cetoconazol, eritromicina): evitar associação", "Hepatopatia grave: máx 10 mg"],
+    prescrever: [
+      { contexto: "Adulto e > 12 anos", texto: "USO ORAL\n1. Ebastina 10 mg ------------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia por 30 dias (urticária/rinite grave: 2 comprimidos ao dia)." },
+      { contexto: "Criança 2–11 anos (xarope 1 mg/mL)", texto: "USO ORAL\n1. Ebastina xarope 1 mg/mL ------------------------ 1 frasco\n   2–5 anos: dar 2,5 mL 1 vez ao dia; 6–11 anos: dar 5 mL 1 vez ao dia, por até 30 dias.\n   (Conferir bula da apresentação.)" }
+    ] },
+  { id: "bilastina", nomes: ["Bilastina", "alektos"], classe: "anti-histaminicos", receita: "simples", tags: [],
+    usos: "Rinite alérgica e urticária crônica (2ª geração, não sedativo)",
+    adulto: "20 mg VO 1 vez ao dia, em jejum (≥ 12 anos)",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Sem dados suficientes; preferir loratadina." },
+    alergia: [], contra: ["Tomar 1 h antes ou 2 h depois de refeição ou suco de fruta (reduz a absorção)", "Cetoconazol, eritromicina, ciclosporina, diltiazem aumentam o nível"],
+    prescrever: [
+      { contexto: "Adulto e ≥ 12 anos", texto: "USO ORAL\n1. Bilastina 20 mg ------------------------------ 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, em jejum (1 hora antes ou 2 horas depois de comer), por 30 dias." }
+    ] },
+  { id: "rupatadina", nomes: ["Rupatadina", "fumarato de rupatadina", "rupafin"], classe: "anti-histaminicos", receita: "simples", tags: [],
+    usos: "Rinite alérgica e urticária crônica (anti-histamínico e antagonista do PAF)",
+    adulto: "10 mg VO 1 vez ao dia (≥ 12 anos)",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Sem dados suficientes; preferir loratadina." },
+    alergia: [], contra: ["Inibidores de CYP3A4 (cetoconazol, eritromicina, suco de toranja): evitar", "QT longo", "Sonolência ocasional"],
+    prescrever: [
+      { contexto: "Adulto e ≥ 12 anos", texto: "USO ORAL\n1. Rupatadina 10 mg ------------------------------ 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia por 30 dias." }
+    ] },
+  { id: "epinastina-oral", nomes: ["Epinastina oral", "cloridrato de epinastina", "talerc"], classe: "anti-histaminicos", receita: "simples", tags: [],
+    usos: "Rinite alérgica, urticária e prurido alérgico (2ª geração)",
+    adulto: "10–20 mg VO 1 vez ao dia",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Sem dados suficientes; preferir loratadina." },
+    alergia: [], contra: ["Sonolência ocasional", "Hepatopatia: cautela", "Pediatria: conferir bula da apresentação"],
+    prescrever: [
+      { contexto: "Adulto — rinite / urticária", texto: "USO ORAL\n1. Epinastina 20 mg ----------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia por 30 dias (rinite leve: 10 mg)." }
+    ] },
+  { id: "cetotifeno", nomes: ["Cetotifeno", "fumarato de cetotifeno", "zaditen", "asmalergin"], classe: "anti-histaminicos", receita: "simples", tags: ["sedativo"],
+    usos: "Rinite e conjuntivite alérgicas, urticária, dermatite atópica (adjuvante); profilaxia de atopia em crianças (eficácia modesta)",
+    adulto: "1 mg VO 12/12h (até 2 mg 12/12h)",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Dados limitados; preferir loratadina." },
+    alergia: [], contra: ["Sedação e aumento de apetite/peso", "Antidiabéticos orais: rara trombocitopenia", "Efeito pleno após semanas", "Convulsões (reduz limiar)"],
+    prescrever: [
+      { contexto: "Adulto", texto: "USO ORAL\n1. Cetotifeno 1 mg ------------------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas por 30 dias. Pode dar sono." },
+      { contexto: "Criança ≥ 3 anos (xarope 0,2 mg/mL)", texto: "USO ORAL\n1. Cetotifeno xarope 0,2 mg/mL ----------------------- 1 frasco\n   Dar 5 mL (1 mg) de 12 em 12 horas.\n   (6 meses–3 anos: 0,05 mg/kg = 0,25 mL/kg de 12 em 12 horas.)" }
+    ] },
+
+  /* ---------- urologia ---------- */
+  { id: "solifenacina", nomes: ["Solifenacina", "succinato de solifenacina", "vesicare"], classe: "urologia", receita: "simples", tags: ["anticolinergico"],
+    usos: "Bexiga hiperativa (urgência, polaciúria, incontinência de urgência) após medidas comportamentais",
+    adulto: "5 mg VO 1 vez ao dia (até 10 mg)",
+    renal: [{ abaixo: 30, texto: "Máximo 5 mg/dia." }],
+    gestacao: { nivel: "evitar", texto: "Sem dados suficientes." },
+    alergia: [], contra: ["Retenção urinária, glaucoma de ângulo fechado não tratado, miastenia, megacólon", "Idoso: efeito anticolinérgico cognitivo (preferir mirabegrona)", "Inibidores fortes de CYP3A4: máx 5 mg", "Boca seca e constipação"],
+    prescrever: [
+      { contexto: "Bexiga hiperativa", texto: "USO ORAL\n1. Solifenacina 5 mg ----------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo; reavaliar em 4–8 semanas." }
+    ] },
+  { id: "tolterodina", nomes: ["Tolterodina", "tartarato de tolterodina", "detrusitol"], classe: "urologia", receita: "simples", tags: ["anticolinergico"],
+    usos: "Bexiga hiperativa (urgência, polaciúria, incontinência de urgência)",
+    adulto: "2 mg VO 12/12h ou 4 mg de liberação prolongada 1 vez ao dia",
+    renal: [{ abaixo: 30, texto: "1 mg 12/12h (ou 2 mg LP/dia)." }],
+    gestacao: { nivel: "evitar", texto: "Sem dados suficientes." },
+    alergia: [], contra: ["Retenção urinária, glaucoma de ângulo fechado, miastenia", "Idoso: risco cognitivo (anticolinérgico)", "Hepatopatia ou inibidor de CYP3A4: 1 mg 12/12h", "QT longo"],
+    prescrever: [
+      { contexto: "Bexiga hiperativa", texto: "USO ORAL\n1. Tolterodina 4 mg liberação prolongada ------------ 30 cápsulas\n   Tomar 1 cápsula 1 vez ao dia. Uso contínuo; reavaliar em 4–8 semanas." }
+    ] },
+  { id: "mirabegrona", nomes: ["Mirabegrona", "myrbetric"], classe: "urologia", receita: "simples", tags: [],
+    usos: "Bexiga hiperativa, sobretudo em idosos ou intolerância a anticolinérgicos (agonista beta-3)",
+    adulto: "25 mg VO 1 vez ao dia; pode aumentar para 50 mg após 4–8 semanas",
+    renal: [{ abaixo: 30, texto: "ClCr 15–29: máximo 25 mg/dia; < 15 ou diálise: não recomendada." }],
+    gestacao: { nivel: "evitar", texto: "Sem dados suficientes." },
+    alergia: [], contra: ["HAS grave não controlada (≥ 180/110): contraindicada; medir PA no seguimento", "Aumenta nível de digoxina e de substratos do CYP2D6 (metoprolol, tricíclicos)", "Hepatopatia moderada: máx 25 mg"],
+    prescrever: [
+      { contexto: "Bexiga hiperativa", texto: "USO ORAL\n1. Mirabegrona 25 mg ----------------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, inteiro. Uso contínuo; medir a pressão no retorno." }
+    ] },
+  { id: "dutasterida", nomes: ["Dutasterida", "avodart"], classe: "urologia", receita: "simples", tags: [],
+    usos: "Hiperplasia prostática benigna com próstata aumentada (> 30–40 mL), reduz risco de retenção e cirurgia",
+    adulto: "0,5 mg VO 1 vez ao dia (efeito pleno em 6 meses)",
+    renal: [],
+    gestacao: { nivel: "contraindicado", texto: "Uso masculino. Gestantes não devem manipular cápsulas rompidas (feminização de feto masculino)." },
+    alergia: [], contra: ["Reduz o PSA em ~50% após 6 meses: dobrar o valor para rastreio", "Disfunção sexual, ginecomastia", "Não doar sangue até 6 meses após a última dose"],
+    prescrever: [
+      { contexto: "HPB", texto: "USO ORAL\n1. Dutasterida 0,5 mg ---------------------------- 30 cápsulas\n   Tomar 1 cápsula 1 vez ao dia, inteira. Uso contínuo." }
+    ] },
+  { id: "dutasterida-tansulosina", nomes: ["Dutasterida + tansulosina", "dutasterida/tansulosina", "combodart"], classe: "urologia", receita: "simples", tags: [],
+    usos: "HPB sintomática moderada a grave com próstata aumentada (terapia combinada)",
+    adulto: "1 cápsula (0,5 mg + 0,4 mg) VO 1 vez ao dia, 30 min após a mesma refeição",
+    renal: [],
+    gestacao: { nivel: "contraindicado", texto: "Uso masculino. Gestantes não devem manipular cápsulas rompidas." },
+    alergia: [], contra: ["Hipotensão postural (1ª dose: tomar à noite)", "Avisar o oftalmologista antes de cirurgia de catarata (íris flácida)", "PSA cai ~50% (dobrar o valor)", "Não doar sangue até 6 meses após"],
+    prescrever: [
+      { contexto: "HPB", texto: "USO ORAL\n1. Dutasterida 0,5 mg + tansulosina 0,4 mg ----------- 30 cápsulas\n   Tomar 1 cápsula 1 vez ao dia, 30 minutos após a mesma refeição. Uso contínuo.\n   Levantar devagar (pode causar tontura)." }
+    ] },
+  { id: "alfuzosina", nomes: ["Alfuzosina", "cloridrato de alfuzosina", "xatral"], classe: "urologia", receita: "simples", tags: [],
+    usos: "HPB sintomática; terapia expulsiva de cálculo ureteral distal (alternativa à tansulosina)",
+    adulto: "10 mg (liberação prolongada) VO 1 vez ao dia, após o jantar",
+    renal: [{ abaixo: 30, texto: "Usar com cautela (dados limitados)." }],
+    gestacao: { nivel: "evitar", texto: "Uso masculino (HPB); na litíase da gestante, não é a escolha." },
+    alergia: [], contra: ["Hepatopatia moderada/grave", "Hipotensão postural; inibidores fortes de CYP3A4", "Síndrome da íris flácida na cirurgia de catarata", "QT longo (cautela)"],
+    prescrever: [
+      { contexto: "HPB", texto: "USO ORAL\n1. Alfuzosina 10 mg liberação prolongada ---------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, logo após o jantar, inteiro. Uso contínuo.\n   Levantar devagar (pode causar tontura)." }
+    ] },
+  { id: "citrato-potassio", nomes: ["Citrato de potássio", "citrato de potassio", "litocit"], classe: "urologia", receita: "simples", tags: ["hipercalemia"],
+    usos: "Prevenção de cálculos renais com hipocitratúria, cálculos de ácido úrico e cistina, acidose tubular renal distal",
+    adulto: "30–60 mEq/dia VO divididos em 2–3 tomadas com as refeições (alvo: pH urinário 6,0–7,0)",
+    renal: [{ abaixo: 30, texto: "Risco de hipercalemia: evitar ou usar com K sérico frequente." }],
+    gestacao: { nivel: "cautela", texto: "Pode ser usado se indicado, com controle de K." },
+    alergia: [], contra: ["Hipercalemia; IECA/BRA, espironolactona, AINE: dosar K", "Úlcera péptica ou retardo de esvaziamento gástrico (comprimido de cera)", "ITU por germe produtor de urease (cálculo de estruvita)"],
+    prescrever: [
+      { contexto: "Litíase com hipocitratúria", texto: "USO ORAL\n1. Citrato de potássio 10 mEq --------------------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas, junto das refeições, com bastante água. Uso contínuo.\n   (Ajustar até 60 mEq/dia pelo citrato urinário e pH; dosar potássio.)" }
+    ] },
+  { id: "fenazopiridina", nomes: ["Fenazopiridina", "cloridrato de fenazopiridina", "pyridium"], classe: "urologia", receita: "simples", tags: [],
+    usos: "Alívio sintomático da disúria (cistite, pós-procedimento urológico) por no máximo 2 dias, junto do tratamento da causa",
+    adulto: "200 mg VO 8/8h após as refeições, por até 2 dias",
+    renal: [{ abaixo: 50, texto: "Evitar (acúmulo, toxicidade)." }],
+    gestacao: { nivel: "cautela", texto: "Dados limitados; uso curto se necessário." },
+    alergia: [], contra: ["Não trata infecção (associar antibiótico na cistite)", "Urina e lentes de contato alaranjadas", "Deficiência de G6PD (hemólise, meta-hemoglobinemia)", "Hepatopatia"],
+    prescrever: [
+      { contexto: "Disúria intensa (adulto)", texto: "USO ORAL\n1. Fenazopiridina 200 mg ------------------------ 6 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após as refeições, por 2 dias.\n   A urina fica laranja (normal)." }
+    ] },
 ]);

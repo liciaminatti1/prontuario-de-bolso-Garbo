@@ -690,4 +690,302 @@ adicionarMedicamentos([
       { contexto: "Adulto — tosse seca", texto: "USO ORAL\n1. Levodropropizina xarope 6 mg/mL -------- 1 frasco\n   Tomar 10 mL de 8 em 8 horas, se tosse seca, por até 7 dias." }
     ] },
 
+  /* ---------- gastro: IBP e antiespasmódicos ---------- */
+  { id: "esomeprazol", nomes: ["Esomeprazol", "esomeprazol magnésico", "Nexium"], classe: "antiacidos", receita: "simples", tags: ["ibp", "ibp-cyp2c19"],
+    usos: "DRGE/esofagite, úlcera péptica, erradicação de H. pylori, proteção gástrica com AINE.",
+    apres: [{ rotulo: "comprimido 20 mg", mgPorComp: 20 }, { rotulo: "comprimido 40 mg", mgPorComp: 40 }],
+    adulto: "20–40 mg VO 1×/dia, 30 min antes do café · H. pylori: 20 mg 12/12h (ou 40 mg 12/12h) com os antibióticos",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Compatível (omeprazol tem mais dados)." },
+    alergia: [], contra: ["Reduz o efeito do clopidogrel (preferir pantoprazol)", "Uso prolongado: B12, magnésio, fraturas, C. difficile — reavaliar necessidade (desprescrever)"],
+    prescrever: [
+      { contexto: "Adulto — DRGE / esofagite", texto: "USO ORAL\n1. Esomeprazol 40 mg -------------------- 28 comprimidos\n   Tomar 1 comprimido em jejum, 30 minutos antes do café, por 4 a 8 semanas." }
+    ] },
+  { id: "lansoprazol", nomes: ["Lansoprazol", "Prazol", "Ogastro"], classe: "antiacidos", receita: "simples", tags: ["ibp"],
+    usos: "DRGE, úlcera péptica, H. pylori, proteção gástrica.",
+    apres: [{ rotulo: "cápsula 15 mg", mgPorComp: 15 }, { rotulo: "cápsula 30 mg", mgPorComp: 30 }],
+    adulto: "15–30 mg VO 1×/dia em jejum · H. pylori: 30 mg 12/12h",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Compatível (omeprazol tem mais dados)." },
+    alergia: [], contra: ["Uso prolongado: B12, magnésio, fraturas — reavaliar necessidade"],
+    prescrever: [
+      { contexto: "Adulto — DRGE", texto: "USO ORAL\n1. Lansoprazol 30 mg --------------------- 28 cápsulas\n   Tomar 1 cápsula em jejum, 30 minutos antes do café, por 4 a 8 semanas." }
+    ] },
+  { id: "rabeprazol", nomes: ["Rabeprazol", "rabeprazol sódico", "Pariet"], classe: "antiacidos", receita: "simples", tags: ["ibp"],
+    usos: "DRGE, úlcera péptica, H. pylori.",
+    apres: [{ rotulo: "comprimido 10 mg", mgPorComp: 10 }, { rotulo: "comprimido 20 mg", mgPorComp: 20 }],
+    adulto: "10–20 mg VO 1×/dia · H. pylori: 20 mg 12/12h",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Dados limitados; preferir omeprazol." },
+    alergia: [], contra: ["Uso prolongado: B12, magnésio, fraturas — reavaliar necessidade"],
+    prescrever: [
+      { contexto: "Adulto — DRGE", texto: "USO ORAL\n1. Rabeprazol 20 mg ---------------------- 28 comprimidos\n   Tomar 1 comprimido antes do café, por 4 a 8 semanas." }
+    ] },
+  { id: "trimebutina", nomes: ["Trimebutina", "maleato de trimebutina", "Debridat"], classe: "intestinais", receita: "simples", tags: [],
+    usos: "Síndrome do intestino irritável, dor e distensão abdominal funcional (regulador da motilidade).",
+    apres: [{ rotulo: "cápsula 200 mg", mgPorComp: 200 }],
+    adulto: "100–200 mg VO 8/8h, antes das refeições",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Evitar no 1º trimestre (dados limitados)." },
+    alergia: [], contra: ["Sinais de alarme (perda de peso, sangue nas fezes, anemia, > 50 anos com início recente): investigar antes"],
+    prescrever: [
+      { contexto: "Adulto — SII", texto: "USO ORAL\n1. Trimebutina 200 mg ------------------- 90 cápsulas\n   Tomar 1 cápsula de 8 em 8 horas, antes das refeições, por 30 dias." }
+    ] },
+  { id: "mebeverina", nomes: ["Mebeverina", "cloridrato de mebeverina", "Duspatalin"], classe: "intestinais", receita: "simples", tags: [],
+    usos: "Síndrome do intestino irritável (antiespasmódico musculotrópico, sem efeito anticolinérgico).",
+    apres: [{ rotulo: "cápsula liberação prolongada 200 mg", mgPorComp: 200 }],
+    adulto: "200 mg VO 12/12h, 20 min antes das refeições",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Evitar (dados insuficientes)." },
+    alergia: [], contra: ["Íleo paralítico", "Investigar sinais de alarme antes"],
+    prescrever: [
+      { contexto: "Adulto — SII", texto: "USO ORAL\n1. Mebeverina 200 mg -------------------- 60 cápsulas\n   Tomar 1 cápsula de 12 em 12 horas, 20 minutos antes do café e do jantar, por 30 dias." }
+    ] },
+  { id: "pinaverio", nomes: ["Brometo de pinavério", "pinaverio", "pinavério", "Dicetel"], classe: "intestinais", receita: "simples", tags: [],
+    usos: "Síndrome do intestino irritável (dor e cólica); preparo para exames baritados.",
+    apres: [{ rotulo: "comprimido 50 mg", mgPorComp: 50 }, { rotulo: "comprimido 100 mg", mgPorComp: 100 }],
+    adulto: "50 mg 8/8h ou 100 mg 12/12h VO, durante a refeição, com 1 copo de água",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Evitar (dados insuficientes)." },
+    alergia: [], contra: ["Engolir inteiro, com água, sentado, durante a refeição (risco de lesão esofágica)", "Não tomar deitado ou ao deitar"],
+    prescrever: [
+      { contexto: "Adulto — SII", texto: "USO ORAL\n1. Brometo de pinavério 100 mg ---------- 60 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas, durante o almoço e o jantar, com 1 copo de água, sem mastigar. Não deitar logo após. Por 30 dias." }
+    ] },
+
+  /* ---------- gastro: doença inflamatória, fígado, laxantes e outros ---------- */
+  { id: "mesalazina", nomes: ["Mesalazina", "mesalamina", "5-ASA", "Asalit", "Mesacol", "Pentasa"], classe: "intestinais", receita: "simples", tags: [],
+    usos: "Retocolite ulcerativa leve a moderada: indução e manutenção (PCDT/componente especializado); proctite (supositório).",
+    apres: [{ rotulo: "comprimido 400/500/800 mg" }, { rotulo: "supositório 500 mg e 1 g" }, { rotulo: "enema" }],
+    adulto: "Indução: 2,4–4,8 g/dia VO (em 1–3 tomadas) · manutenção: 1,2–2,4 g/dia · proctite: supositório 1 g à noite",
+    renal: [{ abaixo: 30, texto: "Evitar (nefrite intersticial); creatinina antes e periodicamente." }],
+    gestacao: { nivel: "compativel", texto: "Compatível; manter a remissão é prioridade." },
+    alergia: [], contra: ["Alergia a salicilatos", "Função renal (nefrite intersticial) e hemograma periódicos", "Piora paradoxal da colite (rara)"],
+    prescrever: [
+      { contexto: "Adulto — RCU (indução)", texto: "USO ORAL\n1. Mesalazina 800 mg -------------------- 90 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas (2,4 g/dia), sem mastigar, por 6 a 8 semanas.\n   (Atividade moderada: até 4,8 g/dia; reavaliar resposta em 4–8 semanas.)" },
+      { contexto: "Adulto — proctite", texto: "USO RETAL\n1. Mesalazina supositório 1 g ----------- 30 supositórios\n   Aplicar 1 supositório no reto à noite, ao deitar, por 4 a 6 semanas." }
+    ] },
+  { id: "sulfassalazina", nomes: ["Sulfassalazina", "sulfasalazina", "Azulfin"], classe: "reumato", receita: "simples", tags: ["sulfonamida"],
+    usos: "Artrite reumatoide e espondiloartrite periférica (DMARD); retocolite ulcerativa (RENAME/componente especializado).",
+    apres: [{ rotulo: "comprimido 500 mg", mgPorComp: 500 }],
+    adulto: "AR: 500 mg/dia, aumentar 500 mg por semana até 1 g 12/12h (máx 3 g/dia) · RCU: 3–4 g/dia em 3–4 tomadas; manutenção 2 g/dia",
+    renal: [{ abaixo: 30, texto: "Evitar." }],
+    gestacao: { nivel: "compativel", texto: "Compatível com ácido fólico 2–5 mg/dia (é antifolato)." },
+    alergia: ["sulfonamidas"], contra: ["Alergia a sulfa ou salicilatos", "Deficiência de G6PD, porfiria", "Hemograma e TGO/TGP a cada 2–4 semanas nos 3 primeiros meses", "Oligospermia reversível; urina/suor alaranjados"],
+    prescrever: [
+      { contexto: "Adulto — AR (escalonamento)", texto: "USO ORAL\n1. Sulfassalazina 500 mg ---------------- 120 comprimidos\n   1ª semana: 1 comprimido no jantar. 2ª semana: 1 no café e 1 no jantar.\n   3ª semana: 1 no café e 2 no jantar. A partir da 4ª semana: 2 no café e 2 no jantar. Uso contínuo, após as refeições." }
+    ] },
+  { id: "budesonida-oral", nomes: ["Budesonida oral", "budesonida cápsula", "Entocort"], classe: "corticoides", receita: "simples", tags: ["corticoide"],
+    usos: "Doença de Crohn ileal/cólon direito leve a moderada; colite microscópica (corticoide com alta metabolização hepática).",
+    apres: [{ rotulo: "cápsula 3 mg", mgPorComp: 3 }],
+    adulto: "9 mg VO 1×/dia pela manhã por 8 semanas; depois reduzir (6 mg, 3 mg) em 2–4 semanas",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Usar se necessário (dados razoáveis com budesonida)." },
+    alergia: [], contra: ["Cirrose (mais efeito sistêmico)", "Inibidores fortes de CYP3A4 (cetoconazol, ritonavir) e suco de toranja", "Infecções ativas"],
+    prescrever: [
+      { contexto: "Adulto — Crohn / colite microscópica", texto: "USO ORAL\n1. Budesonida 3 mg ---------------------- 90 cápsulas\n   Tomar 3 cápsulas (9 mg) juntas pela manhã, sem mastigar, por 8 semanas.\n   (Depois reduzir conforme orientação.)" }
+    ] },
+  { id: "ursodesoxicolico", nomes: ["Ácido ursodesoxicólico", "acido ursodesoxicolico", "ursodiol", "Ursacol"], classe: "intestinais", receita: "simples", tags: [],
+    usos: "Colangite biliar primária, colestase intra-hepática da gestação, dissolução de cálculos biliares de colesterol pequenos, prevenção de litíase na perda rápida de peso.",
+    apres: [{ rotulo: "comprimido 50 mg", mgPorComp: 50 }, { rotulo: "comprimido 150 mg", mgPorComp: 150 }, { rotulo: "comprimido 300 mg", mgPorComp: 300 }],
+    adulto: "CBP: 13–15 mg/kg/dia VO em 2–3 tomadas · litíase: 8–10 mg/kg/dia · colestase gestacional: 10–15 mg/kg/dia",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Usado na colestase intra-hepática da gestação (2º/3º trimestres)." },
+    alergia: [], contra: ["Cálculos calcificados/radiopacos, vesícula excluída, colecistite aguda", "Separar 2 h de antiácidos com alumínio e colestiramina", "Diarreia"],
+    prescrever: [
+      { contexto: "Adulto — colangite biliar primária (≈ 70 kg)", texto: "USO ORAL\n1. Ácido ursodesoxicólico 300 mg -------- 105 comprimidos\n   Tomar 1 comprimido no café, 1 no almoço e 1 e meio no jantar. Uso contínuo.\n   (13–15 mg/kg/dia; ajustar ao peso.)" }
+    ] },
+  { id: "picossulfato", nomes: ["Picossulfato de sódio", "picossulfato", "Guttalax"], classe: "intestinais", receita: "simples", tags: [],
+    usos: "Constipação (laxante estimulante, curto prazo ou resgate).",
+    apres: [{ rotulo: "gotas 7,5 mg/mL" }],
+    adulto: "10–20 gotas (5–10 mg) VO à noite",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Preferir fibras, lactulose ou macrogol; uso pontual aceitável." },
+    alergia: [], contra: ["Abdome agudo, obstrução intestinal, desidratação grave", "Uso crônico: hipocalemia, dependência", "Criança: dose conforme bula/idade"],
+    prescrever: [
+      { contexto: "Adulto — constipação", texto: "USO ORAL\n1. Picossulfato de sódio 7,5 mg/mL gotas --- 1 frasco\n   Tomar 10 a 20 gotas em água à noite, se intestino preso, por até 7 dias seguidos." }
+    ] },
+  { id: "psyllium", nomes: ["Psyllium", "Plantago ovata", "ispágula", "Metamucil", "fibra de psyllium"], classe: "intestinais", receita: "simples", tags: [],
+    usos: "Constipação crônica, SII com constipação, hemorroidas/fissura (fibra formadora de massa); diarreia leve (regula consistência).",
+    adulto: "1 dose (sachê ou colher medida, cerca de 3,5–6 g) 1–3×/dia em 240 mL de líquido",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Compatível (1ª escolha na constipação da gestação, com água)." },
+    alergia: [], contra: ["Obstrução intestinal, impactação fecal, disfagia/estenose esofágica", "Sempre com bastante líquido", "Separar 2 h de outros medicamentos"],
+    prescrever: [
+      { contexto: "Adulto — constipação", texto: "USO ORAL\n1. Psyllium pó (sachê) ------------------ 30 sachês\n   Dissolver 1 sachê em 1 copo cheio de água (240 mL) e tomar logo, 1 a 2 vezes ao dia. Beber bastante água ao longo do dia." }
+    ] },
+  { id: "saccharomyces-boulardii", nomes: ["Saccharomyces boulardii", "Floratil", "Repoflor"], classe: "intestinais", receita: "simples", tags: [],
+    usos: "Prevenção de diarreia associada a antibiótico; adjuvante na diarreia aguda infecciosa (benefício modesto).",
+    adulto: "200 mg VO 12/12h (adulto e criança)",
+    renal: [],
+    gestacao: { nivel: "cautela", texto: "Provavelmente seguro; dados limitados." },
+    alergia: [], contra: ["Cateter venoso central, imunossupressão grave, críticos (fungemia)", "Não abrir a cápsula perto de pacientes com cateter", "Antifúngicos sistêmicos inativam"],
+    prescrever: [
+      { contexto: "Adulto / criança — diarreia ou durante antibiótico", texto: "USO ORAL\n1. Saccharomyces boulardii 200 mg ------- 10 cápsulas (ou envelopes)\n   Tomar 1 cápsula (ou 1 envelope dissolvido em água/suco) de 12 em 12 horas por 5 dias.\n   Não misturar com líquidos quentes ou alcoólicos." }
+    ] },
+  { id: "pancreatina", nomes: ["Pancreatina", "pancrelipase", "enzimas pancreáticas", "Creon"], classe: "intestinais", receita: "simples", tags: [],
+    usos: "Insuficiência pancreática exócrina (fibrose cística, pancreatite crônica, pós-pancreatectomia) — PCDT/componente especializado.",
+    adulto: "Iniciar 25.000–40.000 U de lipase em cada refeição principal e metade nos lanches; ajustar pela esteatorreia (máx 10.000 U/kg/dia)",
+    renal: [],
+    gestacao: { nivel: "compativel", texto: "Compatível (não absorvida)." },
+    alergia: [], contra: ["Colonopatia fibrosante com doses muito altas (> 10.000 U lipase/kg/dia)", "Tomar no início da refeição; não mastigar os microgrânulos", "Alergia a proteína suína"],
+    prescrever: [
+      { contexto: "Adulto — insuficiência pancreática", texto: "USO ORAL\n1. Pancreatina 25.000 U cápsula --------- 150 cápsulas\n   Tomar 1 a 2 cápsulas no início de cada refeição principal e 1 cápsula nos lanches. Uso contínuo." }
+    ] },
+
+  /* ---------- reumatologia: DMARD e osteoartrite ---------- */
+  { id: "hidroxicloroquina", nomes: ["Hidroxicloroquina", "sulfato de hidroxicloroquina", "Plaquinol", "Reuquinol"], classe: "reumato", receita: "simples", tags: ["qt"],
+    usos: "Lúpus (todos os pacientes, salvo contraindicação), artrite reumatoide, síndrome de Sjögren, SAAF (adjuvante).",
+    apres: [{ rotulo: "comprimido 400 mg", mgPorComp: 400 }],
+    adulto: "200–400 mg VO 1×/dia, sem passar de 5 mg/kg/dia do peso real",
+    renal: [{ abaixo: 30, texto: "Reduzir a dose (risco de retinopatia)." }],
+    gestacao: { nivel: "compativel", texto: "Compatível; manter no lúpus (reduz atividade e bloqueio cardíaco congênito)." },
+    alergia: [], contra: ["Retinopatia: exame oftalmológico no início e anual após 5 anos (antes se fatores de risco)", "QT longo, outros fármacos que prolongam QT", "Deficiência de G6PD, psoríase (pode piorar)", "Hipoglicemia"],
+    prescrever: [
+      { contexto: "Adulto — lúpus / AR", texto: "USO ORAL\n1. Hidroxicloroquina 400 mg ------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, após uma refeição. Uso contínuo.\n   (Máximo 5 mg/kg/dia: pacientes < 80 kg podem precisar de 200–300 mg/dia. Avaliação oftalmológica.)" }
+    ] },
+  { id: "metotrexato", nomes: ["Metotrexato", "methotrexate", "MTX"], classe: "reumato", receita: "simples", tags: [],
+    usos: "Artrite reumatoide (DMARD âncora), artrite psoriásica, psoríase, lúpus e vasculites (PCDT). Doses oncológicas e abortamento/ectópica seguem protocolo próprio.",
+    apres: [{ rotulo: "comprimido 2,5 mg", mgPorComp: 2.5 }, { rotulo: "injetável 25 mg/mL" }],
+    adulto: "AR: 7,5–15 mg 1×/SEMANA VO, aumentar 2,5–5 mg a cada 2–4 semanas até 20–25 mg/semana (doses > 15 mg: considerar SC); ácido fólico 5 mg 1×/semana 24–48 h após",
+    renal: [{ abaixo: 30, texto: "Contraindicado." }, { abaixo: 60, texto: "Reduzir a dose em ~50%." }],
+    gestacao: { nivel: "contraindicado", texto: "Contraindicado (abortivo/teratogênico): contracepção; suspender 3 meses antes de engravidar (também homens)." },
+    alergia: [], contra: ["DOSE SEMANAL: erro de tomada diária é fatal — escrever o dia da semana", "SMX-TMP e AINE em dose alta: toxicidade grave", "Hepatopatia, etilismo, doença pulmonar intersticial", "Hemograma, TGO/TGP e creatinina a cada 4–8 semanas no início, depois a cada 3 meses", "Vacinas de vírus vivo"],
+    prescrever: [
+      { contexto: "Adulto — artrite reumatoide", texto: "USO ORAL\n1. Metotrexato 2,5 mg ------------------- 24 comprimidos\n   Tomar 6 comprimidos (15 mg) juntos, 1 VEZ POR SEMANA, toda segunda-feira. NÃO tomar todos os dias.\n2. Ácido fólico 5 mg -------------------- 4 comprimidos\n   Tomar 1 comprimido 1 vez por semana, toda quarta-feira." }
+    ] },
+  { id: "leflunomida", nomes: ["Leflunomida", "Arava"], classe: "reumato", receita: "simples", tags: [],
+    usos: "Artrite reumatoide e artrite psoriásica (alternativa ou associação ao metotrexato) — PCDT.",
+    apres: [{ rotulo: "comprimido 20 mg", mgPorComp: 20 }],
+    adulto: "20 mg VO 1×/dia (10 mg se intolerância)",
+    renal: [],
+    gestacao: { nivel: "contraindicado", texto: "Contraindicada; antes de engravidar, eliminação com colestiramina 8 g 8/8h por 11 dias e nível sérico." },
+    alergia: [], contra: ["Hepatopatia; TGO/TGP, hemograma e PA mensais nos 6 primeiros meses", "HAS (pode elevar), diarreia, perda de peso", "Imunodeficiência, infecção grave", "Vacinas de vírus vivo"],
+    prescrever: [
+      { contexto: "Adulto — AR", texto: "USO ORAL\n1. Leflunomida 20 mg -------------------- 30 comprimidos\n   Tomar 1 comprimido 1 vez ao dia. Uso contínuo." }
+    ] },
+  { id: "diacereina", nomes: ["Diacereína", "diacereina", "Artrodar"], classe: "reumato", receita: "simples", tags: [],
+    usos: "Osteoartrite de joelho/quadril (sintomático de ação lenta; benefício modesto).",
+    apres: [{ rotulo: "cápsula 50 mg", mgPorComp: 50 }],
+    adulto: "50 mg VO 1×/dia no jantar por 2–4 semanas; depois 50 mg 12/12h com refeições",
+    renal: [{ abaixo: 30, texto: "Reduzir à metade." }],
+    gestacao: { nivel: "contraindicado", texto: "Não usar na gestação/lactação." },
+    alergia: [], contra: ["Diarreia frequente (suspender se ocorrer)", "Hepatopatia", "> 65 anos: evitar (diarreia/desidratação)", "Urina amarelo-escura (inofensivo)"],
+    prescrever: [
+      { contexto: "Adulto — osteoartrite", texto: "USO ORAL\n1. Diacereína 50 mg ---------------------- 60 cápsulas\n   Tomar 1 cápsula no jantar nas primeiras 2 semanas; depois 1 cápsula no café e 1 no jantar.\n   Suspender se diarreia. Reavaliar em 3 meses." }
+    ] },
+  { id: "glucosamina-condroitina", nomes: ["Glucosamina + condroitina", "sulfato de glicosamina", "glucosamina", "condroitina", "Condroflex"], classe: "reumato", receita: "simples", tags: [],
+    usos: "Osteoartrite (sintomático de ação lenta; evidência inconsistente).",
+    adulto: "Glucosamina 1,5 g + condroitina 1,2 g VO 1×/dia (sachê ou cápsulas)",
+    renal: [],
+    gestacao: { nivel: "evitar", texto: "Evitar (sem dados)." },
+    alergia: [], contra: ["Alergia a crustáceos (origem da glucosamina)", "Pode elevar o INR com varfarina", "Reavaliar em 3–6 meses e suspender se sem benefício"],
+    prescrever: [
+      { contexto: "Adulto — osteoartrite", texto: "USO ORAL\n1. Sulfato de glicosamina 1,5 g + sulfato de condroitina 1,2 g pó (sachê) ---- 30 sachês\n   Dissolver 1 sachê em água e tomar 1 vez ao dia. Reavaliar em 3 meses." }
+    ] },
+
+  /* ---------- relaxantes musculares de uso crônico ---------- */
+  { id: "baclofeno", nomes: ["Baclofeno", "baclofen", "Lioresal"], classe: "neurologia", receita: "simples", tags: ["sedativo"],
+    usos: "Espasticidade (AVC, lesão medular, esclerose múltipla, paralisia cerebral) — RENAME; soluço persistente (fora de bula).",
+    apres: [{ rotulo: "comprimido 10 mg", mgPorComp: 10 }],
+    adulto: "5 mg VO 8/8h; aumentar 5 mg por dose a cada 3 dias até 20 mg 8/8h (máx 80 mg/dia)",
+    renal: [{ abaixo: 30, texto: "Evitar ou dose muito reduzida (encefalopatia)." }, { abaixo: 60, texto: "Reduzir a dose (5 mg 2–3×/dia)." }],
+    gestacao: { nivel: "cautela", texto: "Usar se necessário; abstinência neonatal descrita." },
+    alergia: [], contra: ["NÃO suspender abruptamente (alucinação, convulsão, hipertermia): reduzir em 1–2 semanas", "Sonolência, quedas em idosos", "Epilepsia (reduz limiar)"],
+    prescrever: [
+      { contexto: "Adulto — espasticidade", texto: "USO ORAL\n1. Baclofeno 10 mg ---------------------- 45 comprimidos\n   Tomar meio comprimido (5 mg) de 8 em 8 horas; a cada 3 dias aumentar meio comprimido por dose, até 1 comprimido de 8 em 8 horas.\n   Não parar de repente." }
+    ] },
+  { id: "tizanidina", nomes: ["Tizanidina", "cloridrato de tizanidina", "Sirdalud"], classe: "neurologia", receita: "simples", tags: ["sedativo"],
+    usos: "Espasticidade; contratura muscular dolorosa (curto prazo).",
+    apres: [{ rotulo: "comprimido 2 mg", mgPorComp: 2 }],
+    adulto: "2 mg VO à noite; aumentar 2 mg a cada 3–4 dias até 2–4 mg 8/8h (máx 36 mg/dia)",
+    renal: [{ abaixo: 25, texto: "Iniciar 2 mg/dia; aumentar devagar." }],
+    gestacao: { nivel: "evitar", texto: "Evitar (dados insuficientes)." },
+    alergia: [], contra: ["Ciprofloxacino e fluvoxamina: CONTRAINDICADO (hipotensão grave)", "Hepatopatia (TGO/TGP no 1º, 3º e 6º mês)", "Hipotensão, bradicardia, sonolência", "Retirada gradual (rebote hipertensivo)"],
+    prescrever: [
+      { contexto: "Adulto — espasticidade / contratura", texto: "USO ORAL\n1. Tizanidina 2 mg ---------------------- 30 comprimidos\n   Tomar 1 comprimido à noite; se necessário, 1 comprimido de 8 em 8 horas a partir do 4º dia." }
+    ] },
+  { id: "carisoprodol-associacao", nomes: ["Carisoprodol + diclofenaco + paracetamol + cafeína", "carisoprodol", "Torsilax", "Trilax"], classe: "analgesicos", receita: "simples", tags: ["aine", "sedativo"],
+    usos: "Lombalgia/cervicalgia aguda com contratura muscular (curto prazo). Contém AINE (diclofenaco).",
+    adulto: "1 comprimido (carisoprodol 125 mg + paracetamol 300 mg + diclofenaco 50 mg + cafeína 30 mg) VO de 12/12h, por no máximo 5–7 dias (conferir bula)",
+    renal: [{ abaixo: 30, texto: "Evitar (diclofenaco)." }],
+    gestacao: { nivel: "contraindicado", texto: "Evitar (AINE: contraindicado no 3º trimestre; carisoprodol sem dados)." },
+    alergia: ["aine"], contra: ["Todas as contraindicações de AINE (úlcera, DRC, IC, anticoagulante)", "Sonolência: não dirigir; não associar a álcool, benzodiazepínico ou opioide", "Porfiria; dependência do carisoprodol com uso prolongado", "Não somar com outro paracetamol/AINE"],
+    prescrever: [
+      { contexto: "Adulto — lombalgia aguda", texto: "USO ORAL\n1. Carisoprodol 125 mg + diclofenaco 50 mg + paracetamol 300 mg + cafeína 30 mg ---- 10 comprimidos\n   Tomar 1 comprimido de 12 em 12 horas, após as refeições, por até 5 dias.\n   Causa sonolência: não dirigir." }
+    ] },
+
+  /* ---------- analgésicos combinados e AINE ---------- */
+  { id: "paracetamol-codeina", nomes: ["Paracetamol + codeína", "paracetamol + codeina", "codeína + paracetamol", "Tylex"], classe: "opioides", receita: "C1", tags: ["opioide"],
+    usos: "Dor moderada sem resposta a analgésico comum/AINE (curto prazo).",
+    apres: [{ rotulo: "comprimido 500 mg + 30 mg" }, { rotulo: "comprimido 500 mg + 7,5 mg" }],
+    adulto: "1 comprimido 500/30 mg VO 4/4h a 6/6h se dor (máx 8 comprimidos/dia: 4 g de paracetamol e 240 mg de codeína)",
+    renal: [{ abaixo: 30, texto: "Evitar (metabólitos acumulam); se usar, intervalo ≥ 8 h." }],
+    gestacao: { nivel: "evitar", texto: "Evitar no fim da gestação e na lactação (depressão respiratória do RN)." },
+    alergia: ["opioides"], contra: ["< 12 anos e pós-amigdalectomia < 18 anos (contraindicado)", "Metabolizadores ultrarrápidos (CYP2D6)", "Associação com benzodiazepínico/álcool", "Não somar com outro paracetamol; hepatopatia", "Constipação: associar laxante se > 3 dias"],
+    prescrever: [
+      { contexto: "Adulto — dor moderada", texto: "USO ORAL\n1. Paracetamol 500 mg + codeína 30 mg --- 20 (vinte) comprimidos\n   Tomar 1 comprimido de 6 em 6 horas, se dor, por até 5 dias.\n   (Receita de controle especial em 2 vias. Não tomar com outro paracetamol nem álcool.)" }
+    ] },
+  { id: "tramadol-paracetamol", nomes: ["Tramadol + paracetamol", "paracetamol + tramadol", "Ultracet"], classe: "opioides", receita: "C1", tags: ["opioide", "serotoninergico", "convulsivante"],
+    usos: "Dor aguda moderada a forte (curto prazo); dor crônica selecionada.",
+    apres: [{ rotulo: "comprimido 37,5 mg + 325 mg" }],
+    adulto: "1–2 comprimidos VO 6/6h se dor (máx 8 comprimidos/dia)",
+    renal: [{ abaixo: 30, texto: "Intervalo de 12 h; máximo 2 comprimidos por dose." }],
+    gestacao: { nivel: "evitar", texto: "Evitar (abstinência neonatal; paracetamol isolado é preferível)." },
+    alergia: ["opioides"], contra: ["< 12 anos", "Epilepsia não controlada", "IMAO, ISRS/IRSN, tricíclicos (síndrome serotoninérgica, convulsão)", "Não somar com outro paracetamol; hepatopatia grave", "Náusea e tontura comuns no início"],
+    prescrever: [
+      { contexto: "Adulto — dor aguda", texto: "USO ORAL\n1. Tramadol 37,5 mg + paracetamol 325 mg ---- 20 (vinte) comprimidos\n   Tomar 1 comprimido de 6 em 6 horas, se dor, por até 5 dias (máximo 8 comprimidos por dia).\n   (Receita de controle especial em 2 vias.)" }
+    ] },
+  { id: "etoricoxibe", nomes: ["Etoricoxibe", "etoricoxib", "Arcoxia"], classe: "aine", receita: "simples", tags: ["aine"],
+    usos: "Osteoartrite, artrite reumatoide, espondilite, crise de gota, dor aguda/dismenorreia (COX-2 seletivo: menos gastrite).",
+    apres: [{ rotulo: "comprimido 60 mg", mgPorComp: 60 }, { rotulo: "comprimido 90 mg", mgPorComp: 90 }, { rotulo: "comprimido 120 mg", mgPorComp: 120 }],
+    adulto: "Osteoartrite 30–60 mg/dia · AR/espondilite 60–90 mg/dia · gota aguda 120 mg/dia por até 8 dias · dor aguda 90 mg/dia",
+    renal: [{ abaixo: 30, texto: "Contraindicado." }],
+    gestacao: { nivel: "contraindicado", texto: "Evitar; contraindicado no 3º trimestre." },
+    alergia: ["aine"], contra: ["HAS não controlada (> 140/90): contraindicado", "Doença coronariana, AVC, IC, doença arterial periférica", "DRC, hepatopatia grave", "Asma por AINE: cautela (em geral tolerado, testar com supervisão)"],
+    prescrever: [
+      { contexto: "Adulto — crise de gota", texto: "USO ORAL\n1. Etoricoxibe 120 mg -------------------- 7 comprimidos\n   Tomar 1 comprimido 1 vez ao dia por até 7 dias." },
+      { contexto: "Adulto — osteoartrite (curto prazo)", texto: "USO ORAL\n1. Etoricoxibe 60 mg --------------------- 14 comprimidos\n   Tomar 1 comprimido 1 vez ao dia por 14 dias." }
+    ] },
+  { id: "celecoxibe", nomes: ["Celecoxibe", "celecoxib", "Celebra"], classe: "aine", receita: "simples", tags: ["aine"],
+    usos: "Osteoartrite, artrite reumatoide, espondilite, dor aguda, dismenorreia (COX-2 seletivo).",
+    apres: [{ rotulo: "cápsula 100 mg", mgPorComp: 100 }, { rotulo: "cápsula 200 mg", mgPorComp: 200 }],
+    adulto: "100 mg 12/12h ou 200 mg 1×/dia · dor aguda: 400 mg no 1º dia, depois 200 mg 12/12h",
+    renal: [{ abaixo: 30, texto: "Evitar." }],
+    gestacao: { nivel: "contraindicado", texto: "Evitar; contraindicado no 3º trimestre." },
+    alergia: ["aine", "sulfonamidas"], contra: ["Alergia a sulfonamida (contraindicado em bula)", "Doença cardiovascular estabelecida, IC", "DRC, hepatopatia grave", "Com AAS perde a vantagem gástrica"],
+    prescrever: [
+      { contexto: "Adulto — osteoartrite / dor", texto: "USO ORAL\n1. Celecoxibe 200 mg -------------------- 10 cápsulas\n   Tomar 1 cápsula 1 vez ao dia, após refeição, por 10 dias." }
+    ] },
+  { id: "piroxicam", nomes: ["Piroxicam", "Feldene"], classe: "aine", receita: "simples", tags: ["aine"],
+    usos: "Osteoartrite, artrite, dor musculoesquelética (meia-vida longa; alto risco gastrointestinal).",
+    apres: [{ rotulo: "cápsula 20 mg", mgPorComp: 20 }, { rotulo: "comprimido sublingual 20 mg", mgPorComp: 20 }, { rotulo: "injetável 40 mg/2 mL IM" }],
+    adulto: "20 mg VO/SL 1×/dia (máx 20 mg/dia), curto prazo",
+    renal: [{ abaixo: 30, texto: "Evitar." }],
+    gestacao: { nivel: "contraindicado", texto: "Evitar; contraindicado no 3º trimestre." },
+    alergia: ["aine"], contra: ["Úlcera/sangramento, idosos (risco gastrointestinal alto: preferir outro AINE)", "DRC, IC, anticoagulante", "Reações cutâneas graves (SSJ/NET)"],
+    prescrever: [
+      { contexto: "Adulto — dor musculoesquelética", texto: "USO SUBLINGUAL\n1. Piroxicam 20 mg comprimido sublingual ---- 5 comprimidos\n   Dissolver 1 comprimido embaixo da língua 1 vez ao dia por até 5 dias." }
+    ] },
+  { id: "tenoxicam", nomes: ["Tenoxicam", "Tilatil"], classe: "aine", receita: "simples", tags: ["aine"],
+    usos: "Dor musculoesquelética, crise de gota, osteoartrite; forma injetável no PS (IM/IV).",
+    apres: [{ rotulo: "comprimido 20 mg", mgPorComp: 20 }, { rotulo: "frasco-ampola 20 mg e 40 mg (IM/IV)" }],
+    adulto: "20 mg VO 1×/dia · injetável 20–40 mg IM/IV 1×/dia",
+    renal: [{ abaixo: 25, texto: "Evitar." }],
+    gestacao: { nivel: "contraindicado", texto: "Evitar; contraindicado no 3º trimestre." },
+    alergia: ["aine"], contra: ["Úlcera/sangramento, DRC, IC, anticoagulante", "Meia-vida longa (cerca de 3 dias): cautela em idosos"],
+    prescrever: [
+      { contexto: "PS — dor aguda", texto: "Tenoxicam 40 mg — 1 frasco-ampola reconstituído, IV lento ou IM, dose única." },
+      { contexto: "Adulto — ambulatorial", texto: "USO ORAL\n1. Tenoxicam 20 mg ---------------------- 5 comprimidos\n   Tomar 1 comprimido 1 vez ao dia, após refeição, por 5 dias." }
+    ] },
+  { id: "acido-mefenamico", nomes: ["Ácido mefenâmico", "acido mefenamico", "Ponstan"], classe: "aine", receita: "simples", tags: ["aine"],
+    usos: "Dismenorreia primária e sangramento menstrual aumentado; dor leve a moderada.",
+    apres: [{ rotulo: "comprimido 500 mg", mgPorComp: 500 }],
+    adulto: "500 mg VO 8/8h, após refeição, por até 7 dias (dismenorreia: iniciar no 1º dia de sintomas, 2–3 dias)",
+    renal: [{ abaixo: 30, texto: "Contraindicado." }],
+    gestacao: { nivel: "contraindicado", texto: "Evitar; contraindicado no 3º trimestre." },
+    alergia: ["aine"], contra: ["Úlcera/doença inflamatória intestinal", "Diarreia (suspender)", "DRC, IC, anticoagulante"],
+    prescrever: [
+      { contexto: "Adulto — dismenorreia", texto: "USO ORAL\n1. Ácido mefenâmico 500 mg ------------- 12 comprimidos\n   Tomar 1 comprimido de 8 em 8 horas, após as refeições, nos dias de cólica (máximo 3 a 4 dias por ciclo)." }
+    ] },
+
 ]);
