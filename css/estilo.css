@@ -1,18 +1,18 @@
 /* Licia Minatti · layout de painel: menu lateral fixo + barra superior + conteúdo.
-   Celular: menu vira gaveta; conteúdo em uma coluna. Paleta verde-azulada clínica. */
+   Celular: menu vira gaveta; conteúdo em uma coluna. Paleta da marca: bege elegante, verde sálvia, taupe e verde profundo. */
 :root{
-  --bg:#f3f7f6; --surface:#ffffff; --surface-2:#eef4f2; --line:#dbe6e3;
-  --fg:#17302c; --muted:#5d716d;
-  --brand:#0f7b73; --brand-2:#0a5f59; --brand-soft:#dff2ee;
-  --ubs:#0f7b73; --ubs-soft:#e1f2ee;
-  --ps:#c3343c; --ps-soft:#fce9ea;
-  --alarm:#c3343c; --alarm-soft:#fdeeee;
-  --warn:#8a5a00; --warn-soft:#fbf1d9;
-  --ok:#137a55; --ok-soft:#e2f3ec;
-  --info:#2a5d9c; --info-soft:#e7eff9;
-  --c1:#4b7fc0; --c1-soft:#eaf2fb; --c2:#3c9a7c; --c2-soft:#e6f4ef; --c3:#6c62c2; --c3-soft:#efedfa; --c4:#bf8752; --c4-soft:#fbf2e7;
-  --focus:#2a5d9c;
-  --shadow:0 1px 2px rgba(15,60,55,.06),0 4px 14px rgba(15,60,55,.05);
+  --bg:#f6f0e8; --surface:#fffdfa; --surface-2:#f2e8de; --line:#e6d8c9;
+  --fg:#33372f; --muted:#776e64;
+  --brand:#7e6450; --brand-2:#5d6457; --brand-soft:#efe3d5;
+  --ubs:#5d6457; --ubs-soft:#e7eae1;
+  --ps:#b43c3c; --ps-soft:#f8e9e6;
+  --alarm:#b43c3c; --alarm-soft:#f9ecea;
+  --warn:#8a5a00; --warn-soft:#f8efd9;
+  --ok:#4f6b47; --ok-soft:#e6ede1;
+  --info:#55657a; --info-soft:#e9edf1;
+  --c1:#6f7a64; --c1-soft:#eceee6; --c2:#8b6f55; --c2-soft:#f2e8de; --c3:#4f574a; --c3-soft:#e4e8df; --c4:#a07c58; --c4-soft:#f6ecdf;
+  --focus:#5d6457;
+  --shadow:0 1px 2px rgba(93,80,64,.06),0 4px 14px rgba(93,80,64,.06);
   --f-display:"Nunito Sans","Atkinson Hyperlegible",system-ui,sans-serif;
   --f-body:"Nunito Sans","Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
@@ -20,24 +20,24 @@
   --r:12px; --side:272px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0e1614; --surface:#15201d; --surface-2:#1b2925; --line:#2a3b37;
-  --fg:#e3eeeb; --muted:#9db3ae;
-  --brand:#4cc3b5; --brand-2:#7fd8cc; --brand-soft:#163a35;
-  --ubs:#4cc3b5; --ubs-soft:#163a35; --ps:#ff8187; --ps-soft:#3a1c1f;
-  --alarm:#ff8187; --alarm-soft:#371b1d; --warn:#f0c062; --warn-soft:#33290f;
-  --ok:#54cf9c; --ok-soft:#14302a; --info:#8db8ee; --info-soft:#18273a;
-  --c1:#8db8ee; --c1-soft:#18273a; --c2:#5fd0aa; --c2-soft:#14302a; --c3:#a89ff0; --c3-soft:#241f3d; --c4:#e2b07f; --c4-soft:#33261a;
-  --focus:#8db8ee; --shadow:none; color-scheme:dark;
+  --bg:#1c1f1a; --surface:#252922; --surface-2:#2d322a; --line:#3b4137;
+  --fg:#efe7dc; --muted:#b4aa9d;
+  --brand:#d6bda3; --brand-2:#e9d8c4; --brand-soft:#3a332b;
+  --ubs:#b9c2ac; --ubs-soft:#2e3529; --ps:#f08a84; --ps-soft:#3a201d;
+  --alarm:#f08a84; --alarm-soft:#371d1b; --warn:#e8c06a; --warn-soft:#33290f;
+  --ok:#a9c49a; --ok-soft:#263022; --info:#aebccd; --info-soft:#262d35;
+  --c1:#b9c2ac; --c1-soft:#2e3529; --c2:#d6bda3; --c2-soft:#3a332b; --c3:#a3b39a; --c3-soft:#283026; --c4:#e2c3a0; --c4-soft:#3b3025;
+  --focus:#d6bda3; --shadow:none; color-scheme:dark;
 }}
 :root[data-theme="dark"]{
-  --bg:#0e1614; --surface:#15201d; --surface-2:#1b2925; --line:#2a3b37;
-  --fg:#e3eeeb; --muted:#9db3ae;
-  --brand:#4cc3b5; --brand-2:#7fd8cc; --brand-soft:#163a35;
-  --ubs:#4cc3b5; --ubs-soft:#163a35; --ps:#ff8187; --ps-soft:#3a1c1f;
-  --alarm:#ff8187; --alarm-soft:#371b1d; --warn:#f0c062; --warn-soft:#33290f;
-  --ok:#54cf9c; --ok-soft:#14302a; --info:#8db8ee; --info-soft:#18273a;
-  --c1:#8db8ee; --c1-soft:#18273a; --c2:#5fd0aa; --c2-soft:#14302a; --c3:#a89ff0; --c3-soft:#241f3d; --c4:#e2b07f; --c4-soft:#33261a;
-  --focus:#8db8ee; --shadow:none; color-scheme:dark;
+  --bg:#1c1f1a; --surface:#252922; --surface-2:#2d322a; --line:#3b4137;
+  --fg:#efe7dc; --muted:#b4aa9d;
+  --brand:#d6bda3; --brand-2:#e9d8c4; --brand-soft:#3a332b;
+  --ubs:#b9c2ac; --ubs-soft:#2e3529; --ps:#f08a84; --ps-soft:#3a201d;
+  --alarm:#f08a84; --alarm-soft:#371d1b; --warn:#e8c06a; --warn-soft:#33290f;
+  --ok:#a9c49a; --ok-soft:#263022; --info:#aebccd; --info-soft:#262d35;
+  --c1:#b9c2ac; --c1-soft:#2e3529; --c2:#d6bda3; --c2-soft:#3a332b; --c3:#a3b39a; --c3-soft:#283026; --c4:#e2c3a0; --c4-soft:#3b3025;
+  --focus:#d6bda3; --shadow:none; color-scheme:dark;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
@@ -53,10 +53,15 @@ h1,h2,h3,h4{font-family:var(--f-display);line-height:1.2;text-wrap:balance;margi
 /* ---------- estrutura ---------- */
 .shell{display:grid;grid-template-columns:var(--side) minmax(0,1fr);min-height:100vh}
 .sidebar{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--surface);border-right:1px solid var(--line);padding:18px 12px 18px;display:flex;flex-direction:column;gap:14px;scrollbar-width:thin;padding-left:max(12px,env(safe-area-inset-left,0px))}
-.logo{display:flex;align-items:center;gap:10px;padding:2px 10px 8px}
+.logo{display:flex;flex-direction:column;align-items:center;gap:6px;padding:4px 10px 10px;text-decoration:none}
+.logo-img{width:min(190px,80%);height:auto;display:block}
+.logo-img.escuro,.marca-mob .escuro,.hero-logo.escuro{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo-img.claro,:root:not([data-theme="light"]) .marca-mob .claro,:root:not([data-theme="light"]) .hero-logo.claro{display:none}:root:not([data-theme="light"]) .logo-img.escuro,:root:not([data-theme="light"]) .marca-mob .escuro,:root:not([data-theme="light"]) .hero-logo.escuro{display:block}}
+:root[data-theme="dark"] .logo-img.claro,:root[data-theme="dark"] .marca-mob .claro,:root[data-theme="dark"] .hero-logo.claro{display:none}
+:root[data-theme="dark"] .logo-img.escuro,:root[data-theme="dark"] .marca-mob .escuro,:root[data-theme="dark"] .hero-logo.escuro{display:block}
 .logo-ic{width:40px;height:40px;fill:none;stroke:var(--brand);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .logo b{display:block;font-family:var(--f-display);font-size:1.35rem;white-space:nowrap;font-weight:800;color:var(--brand);letter-spacing:.01em;line-height:1}
-.logo small{display:block;color:var(--muted);font-size:.86rem}
+.logo small{display:block;color:var(--muted);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
 .menu{display:flex;flex-direction:column;gap:2px;flex:1}
 .menu nav{display:flex;flex-direction:column;gap:2px}
 .nav-titulo{margin:14px 10px 4px;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
@@ -87,7 +92,8 @@ h1,h2,h3,h4{font-family:var(--f-display);line-height:1.2;text-wrap:balance;margi
 .rodape{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px max(24px,env(safe-area-inset-right,0px)) calc(14px + env(safe-area-inset-bottom,0px)) 24px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted)}
 .rodape b{color:var(--fg)}
 .fundo-menu{display:none}
-.marca-mob{display:none;font-family:var(--f-display);font-weight:800;color:var(--brand);font-size:1.05rem;white-space:nowrap}
+.marca-mob{display:none;align-items:center}
+.marca-mob img{height:34px;width:auto}
 .view{overflow-wrap:break-word}
 
 /* ---------- início ---------- */
@@ -97,7 +103,8 @@ h1,h2,h3,h4{font-family:var(--f-display);line-height:1.2;text-wrap:balance;margi
 .hero::after{content:"";position:absolute;inset:auto -10% -40px 30%;height:90px;background:radial-gradient(60% 100% at 50% 100%,color-mix(in srgb,var(--brand) 18%,transparent),transparent);pointer-events:none}
 .hero h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:800}
 .hero p{margin:6px 0 0;color:var(--muted);font-size:1.05rem}
-.hero-frase{font-family:var(--f-hand);font-size:1.35rem!important;color:var(--brand-2)!important;max-width:220px;text-align:center;transform:rotate(-4deg);line-height:1.15}
+.hero-frase{font-family:var(--f-hand);font-size:1.25rem!important;color:var(--brand)!important;margin-top:10px!important;line-height:1.15}
+.hero-logo{width:clamp(150px,22vw,250px);height:auto;flex-shrink:0;position:relative;z-index:1}
 .mod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
 .mod-card{display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:16px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow);transition:transform .15s}
 .mod-card:hover{transform:translateY(-2px)}
@@ -409,9 +416,9 @@ kbd{font-family:var(--f-mono);font-size:.8rem;border:1px solid var(--line);borde
   .shell{grid-template-columns:1fr}
   .sidebar{position:fixed;inset:0 auto 0 0;width:min(86vw,var(--side));z-index:50;transform:translateX(-102%);transition:transform .2s ease;box-shadow:0 0 40px rgba(0,0,0,.2);padding-top:calc(18px + env(safe-area-inset-top,0px))}
   body.menu-aberto .sidebar{transform:none}
-  body.menu-aberto .fundo-menu{display:block;position:fixed;inset:0;background:rgba(10,25,22,.4);z-index:40}
+  body.menu-aberto .fundo-menu{display:block;position:fixed;inset:0;background:rgba(40,34,28,.4);z-index:40}
   .icon-btn{display:inline-flex}
-  .marca-mob{display:inline}
+  .marca-mob{display:inline-flex}
   .topbar{flex-wrap:wrap;gap:10px;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px))}
   .busca{order:5;flex-basis:100%;max-width:none}
   .cenario-toggle{margin-left:auto}
@@ -427,7 +434,7 @@ kbd{font-family:var(--f-mono);font-size:.8rem;border:1px solid var(--line);borde
   .topbar{gap:8px}
   .cenario-toggle button[data-c="todos"]{display:none}
   .hero{padding:20px;flex-direction:column;align-items:flex-start}
-  .hero-frase{display:none}
+  .hero-logo{width:min(220px,70%);align-self:center;order:-1}
   .mod-grid{grid-template-columns:1fr 1fr;gap:10px}
   .mod-card{padding:14px}
   .mod-ic{width:44px;height:44px}
@@ -706,3 +713,6 @@ kbd{font-family:var(--f-mono);font-size:.8rem;border:1px solid var(--line);borde
 .rx-timbrado>summary small{color:var(--muted);margin-left:6px}
 .rx-acoes{flex-wrap:wrap}
 .rx-item textarea{font-family:inherit;font-size:.95rem}
+/* Modo escuro: ícones dos cartões com traço escuro sobre os tons claros da marca. */
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .mod-ic{color:#1c1f1a}}
+:root[data-theme="dark"] .mod-ic{color:#1c1f1a}

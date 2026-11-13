@@ -279,8 +279,9 @@ function telaInicio() {
   $app.innerHTML = `<div class="view inicio">
     <div class="ini-principal">
       <section class="hero">
-        <div><h2>${saudacao()}, ${esc(Perfil.primeiroNome())}!</h2><p>Seu apoio rápido e seguro na prática clínica.</p></div>
-        <p class="hero-frase">“Conhecimento no momento certo faz toda a diferença.”</p>
+        <div><h2>${saudacao()}, ${esc(Perfil.primeiroNome())}!</h2><p>Seu apoio rápido e seguro na prática clínica.</p>
+          <p class="hero-frase">“Conhecimento no momento certo faz toda a diferença.”</p></div>
+        <img class="hero-logo claro" src="img/logo.png" alt="Licia Minatti" width="640" height="298"><img class="hero-logo escuro" src="img/logo-claro.png" alt="" width="640" height="298">
       </section>
       <div class="mod-grid">
         ${card("fichas", "estetoscopio", "Busca clínica", "Sintomas, diagnósticos e diferenciais", "c1")}
