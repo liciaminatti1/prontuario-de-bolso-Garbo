@@ -12,11 +12,9 @@ Carregadas só quando o médico anexa um arquivo.
 
 ## Receituário (PDF no timbrado)
 
-Carregados só quando a tela Receituário gera a pré-visualização ou o PDF; tudo no aparelho.
+Carregados só quando a tela Receituário gera a pré-visualização ou o PDF; tudo no aparelho. O fundo das páginas é o próprio timbrado da médica (`img/timbrado/`).
 
 | Pasta | Biblioteca / fonte | Versão | Licença |
 |---|---|---|---|
 | `jspdf/` | jsPDF | 2.5.2 | MIT |
-| `fontes/` | Libre Baskerville (subconjunto latino) | Google Fonts | SIL Open Font License 1.1 |
-| `fontes/` | Montserrat (subconjunto latino) | Google Fonts | SIL Open Font License 1.1 |
 | `fontes/` | EB Garamond (subconjunto latino) | Google Fonts | SIL Open Font License 1.1 |

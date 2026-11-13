@@ -384,7 +384,6 @@ function telaDocumentos(docId, contexto = {}) {
     <div class="sec gap-top doc-saida">
       <div class="card-h"><h3>Texto gerado</h3><button class="copy" data-target="saida-doc">Copiar</button></div>
       ${typeof rxGerarPdf === "function" ? `<div class="vz-acoes-linha doc-pdf"><button class="vz-btn-grande" id="doc-pdf" type="button">${ic("documento")} Baixar PDF no timbrado</button><button class="seg" id="doc-pdf-abrir" type="button">Abrir / imprimir</button></div>
-      ${typeof rxTimbrado === "function" && !rxTimbrado().configurado ? `<p class="note">Telefone, e-mail e endereço do rodapé: configure em <a href="#receituario">Receituário → Dados do timbrado</a> (ficam só neste aparelho).</p>` : ""}
       <p class="vz-status" id="doc-pdf-status" aria-live="polite"></p>` : ""}
       <p class="aviso" id="aviso-doc" hidden></p>
       <pre class="rx saida" id="saida-doc"></pre>

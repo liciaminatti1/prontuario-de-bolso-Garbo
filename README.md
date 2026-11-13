@@ -19,11 +19,11 @@ Toda ficha traz **prescrição ambulatorial e/ou hospitalar pronta para copiar**
 
 ## Receituário e pedidos
 
-Menu **Receituário e pedidos** (`#receituario`): receita e solicitação de exames no timbrado do(a) médico(a) (monograma, nome espaçado, profissão, CRM, linha do paciente, assinatura e rodapé de contato), com **PDF gerado no aparelho** (jsPDF) e pré-visualização.
+Menu **Receituário e pedidos** (`#receituario`): receita e solicitação de exames sobre o **timbrado original da médica** (`img/timbrado/receita.png` e `controle-especial.png`, montados a partir dos arquivos dela), preenchendo só os campos (Paciente, Data, via, título, itens e identificação do comprador), com **PDF gerado no aparelho** (jsPDF) e pré-visualização.
 
 - Tipos: receita branca simples; controle especial em 2 vias (C1/C2/C4, retinoides, imunossupressores, antirretrovirais, antimicrobianos — com identificação do comprador e do fornecedor e validade); azul (Notificação B) e amarela (Notificação A) — gera a via de orientação ao paciente e um roteiro para transcrever no talonário oficial numerado, que continua obrigatório; prescrição eletrônica (assinatura ICP-Brasil); solicitação de exames. "Automático" separa os itens no receituário exigido por cada medicamento (campo `receita` da base).
 - Preenchimento automático: prescrição copiada no app (botões Copiar ou seleção), texto colado, modelos da base de medicamentos, botão "Abrir no receituário" das fichas e seleção da aba Exames. Quantidade calculada pela posologia e escrita por extenso nos controlados.
-- Dados do timbrado (telefone, e-mail, endereço) ficam só no navegador do(a) médico(a), não no site público. Dados do paciente só na memória da aba.
+- Dados do paciente só na memória da aba.
 - Os **Documentos** (atestado, declaração, prescrição hospitalar, admissão, evolução, passagem de plantão, encaminhamento, transferência) também geram PDF no mesmo timbrado.
 - Testes: `node ferramentas/validar-receituario.js`.
 

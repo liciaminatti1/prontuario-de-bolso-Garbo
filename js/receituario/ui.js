@@ -11,7 +11,7 @@ function rxTimbrado() {
   const nome = salvo.nomeTimbrado || p.nome || "";
   const iniciais = nome.split(/\s+/).filter(w => w.length > 2 || /^[A-ZÁÉÍÓÚ]/.test(w)).map(w => w[0]).filter(Boolean);
   return {
-    nomeTimbrado: nome, nomeCompleto: salvo.nomeCompleto || nome,
+    nomeTimbrado: nome, nomeCompleto: salvo.nomeCompleto || (nome === "Licia Minatti" ? "Licia Lara Garbo Minatti" : nome),
     monograma: salvo.monograma ?? (iniciais.length > 1 ? iniciais[0] + iniciais[iniciais.length - 1] : iniciais.join("")).toUpperCase(),
     profissao: salvo.profissao || (/^dra/i.test(p.tratamento || "") ? "Médica" : p.tratamento ? "Médico" : "Médica"),
     crm: salvo.crm || p.crm || "", rqe: salvo.rqe ?? p.rqe ?? "",
@@ -25,7 +25,7 @@ const RX_CAMPOS_TIMBRADO = [["nomeTimbrado", "Nome no timbrado", "Ex.: Licia Min
 
 let RX_ESTADO = rxEstadoVazio();
 function rxEstadoVazio() {
-  return { tipo: "auto", paciente: "", documento: "", endereco: "", idade: "", sexo: "", data: typeof hojeISO === "function" ? hojeISO() : new Date().toISOString().slice(0, 10),
+  return { tipo: "auto", paciente: "", documento: "", orgao: "", telefone: "", cidade: "", uf: "", compradorPaciente: true, endereco: "", idade: "", sexo: "", data: typeof hojeISO === "function" ? hojeISO() : new Date().toISOString().slice(0, 10),
     itens: [], orientacoes: "", hd: "", cid: "", justificativa: "", aviso: "", desfazer: null };
 }
 
@@ -81,7 +81,6 @@ function rxDesenhar() {
   const campo = (k, rot, attrs = "") => `<label class="campo"><span>${rot}</span><input data-rx="${k}" value="${esc(e[k])}" ${attrs}></label>`;
   $app.innerHTML = `<div class="view receituario">
     <div class="f-head"><h2>Receituário e pedidos</h2><p>Receita e solicitação de exames no seu timbrado, com PDF para baixar ou imprimir. Ao copiar uma prescrição no app (fichas, medicamentos), ela é preenchida aqui automaticamente.</p></div>
-    ${!tim.configurado ? `<div class="vz-aviso" role="note">${ic("alerta")}<span><b>Configure o timbrado uma vez neste aparelho</b> (telefone, e-mail, cidade, endereço). Esses dados não ficam no site público: ficam só neste navegador. <button class="link-btn" id="rx-ir-timbrado" type="button">Configurar agora</button></span></div>` : ""}
     <section class="vz-card"><h3>Tipo de documento</h3>
       <div class="rx-tipos" role="radiogroup">${tipos.map(([k, n, u]) => `<button type="button" role="radio" aria-checked="${e.tipo === k}" class="rx-tipo ${e.tipo === k ? "on" : ""}" data-rxtipo="${k}"><b>${esc(n)}</b><small>${esc(u)}</small></button>`).join("")}</div>
       ${RX_TIPOS[e.tipo] ? `<p class="note rx-regra">${esc(RX_TIPOS[e.tipo].regra)}</p>` : ""}
@@ -92,9 +91,14 @@ function rxDesenhar() {
         ${campo("data", "Data", 'type="date"')}
         ${campo("idade", "Idade", 'inputmode="numeric" placeholder="anos"')}
         <label class="campo"><span>Sexo</span><select data-rx="sexo">${[["", "—"], ["F", "Feminino"], ["M", "Masculino"]].map(([v, t]) => `<option value="${v}" ${e.sexo === v ? "selected" : ""}>${t}</option>`).join("")}</select></label>
-        ${campo("documento", "CPF / CNS (opcional)", 'inputmode="numeric"')}
-        <label class="campo largo"><span>Endereço completo ${exames ? "(opcional)" : "(obrigatório no controle especial e notificações)"}</span><input data-rx="endereco" value="${esc(e.endereco)}" autocomplete="off"></label>
+        ${campo("documento", "RG ou CPF")}
+        ${campo("orgao", "Órgão emissor")}
+        ${campo("telefone", "Telefone", 'inputmode="tel"')}
+        ${campo("cidade", "Cidade")}
+        ${campo("uf", "UF", 'maxlength="2"')}
+        <label class="campo largo"><span>Endereço ${exames ? "(opcional)" : "(vai no quadro do comprador no controle especial)"}</span><input data-rx="endereco" value="${esc(e.endereco)}" autocomplete="off"></label>
       </div>
+      ${exames ? "" : `<label class="chk"><input type="checkbox" id="rx-comprador" ${e.compradorPaciente !== false ? "checked" : ""}> No controle especial, preencher a “Identificação do comprador” com estes dados (paciente)</label>`}
       <p class="note">Os dados do paciente ficam só nesta aba e não são guardados no aparelho.</p>
     </section>
     ${exames ? rxSecaoExames() : rxSecaoItens()}
@@ -104,11 +108,6 @@ function rxDesenhar() {
       <p id="rx-status" class="vz-status" aria-live="polite"></p>
     </section>
     <section class="vz-card"><h3>Pré-visualização</h3><div id="rx-previa" class="rx-previa"><p class="note">Gerando…</p></div></section>
-    <details class="vz-card rx-timbrado" id="rx-timbrado" ${tim.configurado ? "" : ""}><summary><b>Dados do timbrado</b> <small>guardados só neste navegador</small></summary>
-      <div class="form-doc">${RX_CAMPOS_TIMBRADO.map(([k, r, ph]) => `<label class="campo ${k === "endereco" ? "largo" : ""}"><span>${r}</span><input data-rxtim="${k}" value="${esc(tim[k])}" placeholder="${esc(ph)}"></label>`).join("")}</div>
-      <div class="vz-acoes-linha"><button class="seg" id="rx-salvar-tim" type="button">Salvar timbrado</button></div>
-      <p class="note">O modelo segue o seu receituário: monograma em Baskerville, nome espaçado, profissão e CRM, linha do paciente e rodapé com contato.</p>
-    </details>
   </div>`;
   rxLigar();
   rxAtualizar();
@@ -188,6 +187,7 @@ function rxLigar() {
   });
   $app.querySelectorAll("[data-rx]").forEach(el => el.addEventListener("input", () => { e[el.dataset.rx] = el.value; rxAtualizar(); }));
   $app.querySelectorAll("[data-rx]").forEach(el => el.addEventListener("change", () => { e[el.dataset.rx] = el.value; rxAtualizar(); }));
+  const cb = document.getElementById("rx-comprador"); if (cb) cb.onchange = () => { e.compradorPaciente = cb.checked; rxAtualizar(); };
   /* Itens */
   $app.querySelectorAll(".rx-item").forEach(card => {
     const i = +card.dataset.i, it = e.itens[i];
@@ -262,14 +262,6 @@ function rxLigar() {
   on("rx-imprimir", () => rxExportar("abrir"));
   on("rx-copiar", () => { const t = rxTexto(e, rxTimbrado()); try { navigator.clipboard.writeText(t).then(() => rxStatus("Texto copiado.")); } catch (err) { rxStatus("Não foi possível copiar."); } });
   on("rx-novo", () => { const tipo = e.tipo === "exames" ? "exames" : "auto"; RX_ESTADO = rxEstadoVazio(); RX_ESTADO.tipo = tipo; RX_ESTADO.copiaUsada = e.copiaUsada; rxDesenhar(); window.scrollTo(0, 0); });
-  on("rx-ir-timbrado", () => { const d = document.getElementById("rx-timbrado"); d.open = true; d.scrollIntoView({ behavior: "smooth" }); });
-  on("rx-salvar-tim", () => {
-    const v = { salvoEm: new Date().toISOString() };
-    $app.querySelectorAll("[data-rxtim]").forEach(el => v[el.dataset.rxtim] = el.value.trim());
-    try { localStorage.setItem(RX_TIMBRADO_CHAVE, JSON.stringify(v)); } catch (err) {}
-    rxDesenhar(); rxStatus("Timbrado salvo neste navegador.");
-  });
-  $app.querySelectorAll("[data-rxtim]").forEach(el => el.addEventListener("input", () => rxAtualizar(true)));
 }
 function rxRecalcular(card, it, inicial) {
   const q = rxCalcularQuantidade(it);
@@ -286,7 +278,6 @@ function rxStatus(t) { const s = document.getElementById("rx-status"); if (s) s.
 /* Timbrado em edição (antes de salvar) também aparece na prévia. */
 function rxTimbradoAtual() {
   const t = rxTimbrado();
-  $app.querySelectorAll("[data-rxtim]").forEach(el => t[el.dataset.rxtim] = el.value.trim());
   return t;
 }
 let rxTimer = null, rxSeq = 0;
